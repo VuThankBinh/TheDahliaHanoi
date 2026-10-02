@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dahlia Hanoi — Editorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-home" data-page="home">
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="desktop-nav" aria-label="Chính">
+      <a href="#phong">Phòng</a><span class="dot" aria-hidden="true"></span>
+      <a href="tours.html">Tour</a><span class="dot" aria-hidden="true"></span>
+      <a href="book.html">Book</a><span class="dot" aria-hidden="true"></span>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Mở menu</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Trang chủ</a>
+    <a href="#phong">Phòng</a>
+    <a href="tours.html">Tour</a>
+    <a href="book.html">Book phòng</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+  <main id="content">
+    <section class="hero-media" aria-label="Ảnh mở đầu">
+      <img class="rise-hero" src="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?auto=format&fit=crop&w=2200&q=80" alt="Thành phố lúc hoàng hôn, mây tím và ánh đèn trên các toà nhà" fetchpriority="high">
+    </section>
+    <section class="hero-caption">
+      <div class="hero-caption-inner">
+        <img class="logo caption-logo" src="../assets/logo.png" alt="The Dahlia Hanoi, Hotel & Apartment">
+        <div>
+          <p class="eyebrow seq">Hoàn Kiếm, Hà Nội</p>
+          <h1 class="seq">Một nhà nhỏ, có hoa, đủ yên.</h1>
+          <p class="lede seq">Khách sạn và căn hộ trẻ giữa phố cổ. Check-in 14:00, check-out 12:00 — ở ít phòng, để mỗi buổi sáng đều chậm.</p>
+        </div>
+      </div>
+    </section>
+    <section class="stats" aria-label="Thông tin nhanh">
+      <div class="stats-inner">
+        <div class="stat reveal"><strong>04</strong><span>phòng và căn hộ</span></div>
+        <div class="stat reveal"><strong>04</strong><span>tour cùng hướng dẫn</span></div>
+        <div class="stat reveal"><strong>14:00</strong><span>giờ nhận phòng</span></div>
+      </div>
+    </section>
+    <section class="story wrap">
+      <div>
+        <p class="eyebrow reveal">The Dahlia</p>
+        <h2 class="reveal">Trẻ, có hoa, và giữ nhịp chậm của Hà Nội.</h2>
+        <span class="rule reveal"></span>
+        <p class="reveal">Chúng tôi không làm nhà đông phòng. Mỗi sáng chỉ vài bàn, vài bình thược dược, và cửa sổ mở vừa đủ để nghe phố mà không bị phố chiếm.</p>
+        <p class="reveal">18 Hàng Bông, vài phút đi bộ ra Hồ Hoàn Kiếm. Địa chỉ này dùng cho bản mẫu.</p>
+      </div>
+      <figure class="reveal">
+        <div class="media story-photo">
+          <img src="https://images.unsplash.com/photo-1596438459194-f275f413d6ff?auto=format&fit=crop&w=1200&q=80" alt="Hoa thược dược cánh lớp, tông kem và nâu" loading="lazy">
+        </div>
+        <figcaption>Thược dược trong nhà, đổi mỗi vài ngày.</figcaption>
+      </figure>
+    </section>
+    <section class="section wrap" id="phong">
+      <div class="section-head">
+        <p class="eyebrow">Phòng</p>
+        <h2 class="reveal">Bốn nơi ở</h2>
+        <span class="rule reveal"></span>
+      </div>
+      <div class="room-grid" id="room-grid"></div>
+    </section>
+    <section class="section wrap" id="tour">
+      <div class="section-head">
+        <p class="eyebrow">Tour</p>
+        <h2 class="reveal">Đi gần, về sớm</h2>
+        <span class="rule reveal"></span>
+      </div>
+      <div class="tour-row" id="tour-row"></div>
+    </section>
+    <section class="closing">
+      <div class="wrap closing-grid">
+        <div>
+          <p class="eyebrow">Liên hệ</p>
+          <h2>Viết một dòng cho nhà.</h2>
+          <p class="lede" style="margin-top:12px">Yêu cầu đầy đủ nằm ở trang thư. Ở đây chỉ cần tên, email và điều bạn đang nghĩ.</p>
+        </div>
+        <form id="quick-form" novalidate>
+          <div class="fields">
+            <label>Họ và tên<input name="name" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Lời nhắn<textarea name="message" required></textarea></label>
+            <p class="form-error" hidden></p>
+            <button class="btn" type="submit">Gửi yêu cầu</button>
+          </div>
+          <div class="form-success">
+            <h3>Đã nhận yêu cầu</h3>
+            <p>Thư đã được mở sẵn tới hello@thedahliahanoi.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+      </div>
+      <nav aria-label="Chân trang">
+        <a href="index.html" aria-current="page">Trang chủ</a>
+        <a href="tours.html">Tour</a>
+        <a href="book.html">Book phòng</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+        <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
+        <a href="tel:+842400000000">+84 24 0000 0000</a>
+        <a href="../index.html">Xem mẫu khác</a>
+        <p class="fine">Mẫu Editorial · thông tin liên hệ dùng cho bản mẫu.</p>
+      </div>
+    </div>
+  </footer>
+  <a class="book-bar" href="book.html">Book phòng</a>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/util.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

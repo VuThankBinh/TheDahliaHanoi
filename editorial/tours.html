@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour — The Dahlia Hanoi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tours">
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="desktop-nav" aria-label="Chính">
+      <a href="index.html#phong">Phòng</a><span class="dot" aria-hidden="true"></span>
+      <a href="tours.html" aria-current="page">Tour</a><span class="dot" aria-hidden="true"></span>
+      <a href="book.html">Book</a><span class="dot" aria-hidden="true"></span>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Mở menu</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Trang chủ</a>
+    <a href="index.html#phong">Phòng</a>
+    <a href="tours.html">Tour</a>
+    <a href="book.html">Book phòng</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+  <main id="content" class="wrap page-pad">
+    <div id="tour-list">
+      <p class="eyebrow seq">Tour</p>
+      <h1 class="seq">Chọn một buổi đi.</h1>
+      <p class="lede seq">Bốn hành trình xuất phát từ nhà. Lọc theo ngày, số người và loại tour.</p>
+      <div class="filters">
+        <div class="filter-group" role="group" aria-label="Ngày">
+          <span>Ngày</span>
+          <button type="button" class="chip is-on" data-group="day" data-value="all">Tất cả</button>
+          <button type="button" class="chip" data-group="day" data-value="nua-ngay">Nửa ngày</button>
+          <button type="button" class="chip" data-group="day" data-value="ca-ngay">Cả ngày</button>
+        </div>
+        <div class="filter-group" role="group" aria-label="Số người">
+          <span>Số người</span>
+          <button type="button" class="chip is-on" data-group="people" data-value="all">Tất cả</button>
+          <button type="button" class="chip" data-group="people" data-value="2">1–2</button>
+          <button type="button" class="chip" data-group="people" data-value="4">3–4</button>
+          <button type="button" class="chip" data-group="people" data-value="5">5+</button>
+        </div>
+        <div class="filter-group" role="group" aria-label="Loại tour">
+          <span>Loại tour</span>
+          <button type="button" class="chip is-on" data-group="kind" data-value="all">Tất cả</button>
+          <button type="button" class="chip" data-group="kind" data-value="di-bo">Đi bộ</button>
+          <button type="button" class="chip" data-group="kind" data-value="am-thuc">Ẩm thực</button>
+          <button type="button" class="chip" data-group="kind" data-value="ngoai-thanh">Ngoài thành</button>
+        </div>
+      </div>
+      <div class="tour-list" id="tour-cards"></div>
+      <p id="tour-empty" hidden>Không có tour khớp bộ lọc này.</p>
+    </div>
+    <div id="tour-detail" hidden></div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+      </div>
+      <nav aria-label="Chân trang">
+        <a href="index.html">Trang chủ</a>
+        <a href="tours.html" aria-current="page">Tour</a>
+        <a href="book.html">Book phòng</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+        <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
+        <a href="tel:+842400000000">+84 24 0000 0000</a>
+        <a href="../index.html">Xem mẫu khác</a>
+        <p class="fine">Mẫu Editorial · thông tin liên hệ dùng cho bản mẫu.</p>
+      </div>
+    </div>
+  </footer>
+  <a class="book-bar" href="book.html">Book phòng</a>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/util.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

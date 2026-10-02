@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book phòng — Noir &amp; Clay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="book">
+  <a class="skip" href="#content">Đến nội dung</a>
+  <div class="topbar"><p><span>18 Hàng Bông, Hoàn Kiếm, Hà Nội</span><a href="tel:+842400000000">+84 24 0000 0000</a></p></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="desktop-nav" aria-label="Chính">
+      <a href="index.html#phong">Phòng</a>
+      <a href="tours.html">Tour</a>
+      <a href="book.html" aria-current="page">Book</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Mở menu</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Trang chủ</a>
+    <a href="index.html#phong">Phòng</a>
+    <a href="tours.html">Tour</a>
+    <a href="book.html">Book phòng</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+  <main id="content" class="page">
+    <div class="wrap">
+      <p class="eyebrow seq">Book phòng</p>
+      <h1 class="seq">Ba bước, một yêu cầu.</h1>
+      <p class="lede seq">Nhận phòng 14:00 · Trả phòng 12:00. Giá cập nhật theo số đêm.</p>
+      <ol class="steps">
+        <li><button type="button" data-go="1" class="is-on"><span></span>Ngày</button></li>
+        <li><button type="button" data-go="2"><span></span>Phòng</button></li>
+        <li><button type="button" data-go="3"><span></span>Xác nhận</button></li>
+      </ol>
+      <p class="form-error" id="step-error" hidden></p>
+      <section class="step-panel sheet cream is-on" data-step="1">
+        <h2>Ngày ở</h2>
+        <div class="date-pair">
+          <label>Nhận phòng<input id="in-date" type="date"></label>
+          <label>Trả phòng<input id="out-date" type="date"></label>
+        </div>
+        <label>Số khách
+          <select id="guests">
+            <option value="1">1 khách</option>
+            <option value="2" selected>2 khách</option>
+            <option value="3">3 khách</option>
+            <option value="4">4 khách</option>
+          </select>
+        </label>
+        <button class="btn" type="button" id="to-rooms">Tiếp tục</button>
+      </section>
+      <section class="step-panel sheet white" data-step="2">
+        <h2>Phòng còn chỗ</h2>
+        <div id="room-picks" style="margin-top:12px"></div>
+        <button class="btn" type="button" id="to-confirm" style="margin-top:16px">Tiếp tục</button>
+      </section>
+      <section class="step-panel sheet dark" data-step="3">
+        <h2>Xác nhận</h2>
+        <div id="confirm-body" style="margin-top:12px"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+      </div>
+      <nav aria-label="Chân trang">
+        <a href="index.html">Trang chủ</a>
+        <a href="tours.html">Tour</a>
+        <a href="book.html" aria-current="page">Book phòng</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+      <div class="footer-meta">
+        <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
+        <a href="tel:+842400000000">+84 24 0000 0000</a>
+        <a href="../index.html">Xem mẫu khác</a>
+        <p>Mẫu Noir &amp; Clay · thông tin liên hệ dùng cho bản mẫu.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/util.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

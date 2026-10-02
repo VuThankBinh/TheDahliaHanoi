@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book phòng — Soft Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="book">
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="desktop-nav" aria-label="Chính">
+      <a href="index.html#phong">Phòng</a>
+      <a href="tours.html">Tour</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+    <a class="book-pill" href="book.html" aria-current="page">Book</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Mở menu</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Trang chủ</a>
+    <a href="index.html#phong">Phòng</a>
+    <a href="tours.html">Tour</a>
+    <a href="book.html">Book phòng</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+  <main id="content" class="shell">
+    <div class="page-intro">
+      <h1 class="seq">Giữ một phòng</h1>
+      <p class="lede seq">Nhận phòng 14:00 · Trả phòng 12:00. Chọn phòng, tên và email hiện ngay bên dưới.</p>
+    </div>
+    <div class="stay-pills">
+      <label>Nhận phòng<input id="in-date" type="date"></label>
+      <label>Trả phòng<input id="out-date" type="date"></label>
+      <label>Khách
+        <select id="guests">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </label>
+    </div>
+    <div class="tour-stack" id="room-list"></div>
+    <div class="soft-card inline-book" id="inline-book" style="padding:18px"></div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+      </div>
+      <nav aria-label="Chân trang">
+        <a href="index.html">Trang chủ</a>
+        <a href="tours.html">Tour</a>
+        <a href="book.html" aria-current="page">Book phòng</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+        <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
+        <a href="tel:+842400000000">+84 24 0000 0000</a>
+        <a href="../index.html">Xem mẫu khác</a>
+        <p>Mẫu Soft Atelier · thông tin liên hệ dùng cho bản mẫu.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/util.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
