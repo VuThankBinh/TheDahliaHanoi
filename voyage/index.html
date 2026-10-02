@@ -49,53 +49,54 @@
         <h1 class="seq">Đặt phòng. Chọn tour. Ở chậm giữa phố cổ.</h1>
         <p class="lede seq">The Dahlia Hanoi — Hotel &amp; Apartment. Check-in 14:00, check-out 12:00. Tìm ngày trống rồi giữ chỗ trong vài bước.</p>
       </div>
-      <div class="search-dock">
-        <form class="search-bar" id="search-form" novalidate>
-          <div class="search-tabs" role="tablist" aria-label="Phòng hoặc tour">
-            <button type="button" class="tab is-on" data-tab="phong" role="tab" aria-selected="true">Phòng</button>
-            <button type="button" class="tab" data-tab="tour" role="tab" aria-selected="false">Tour</button>
-          </div>
-          <div class="search-fields is-on" data-panel="phong">
-            <label>Nhận phòng
-              <input type="date" name="checkin" required>
-            </label>
-            <label>Trả phòng
-              <input type="date" name="checkout" required>
-            </label>
-            <label>Số khách
-              <select name="guests">
-                <option value="1">1 khách</option>
-                <option value="2" selected>2 khách</option>
-                <option value="3">3 khách</option>
-                <option value="4">4 khách</option>
-              </select>
-            </label>
-            <label>Địa điểm
-              <input type="text" value="Hoàn Kiếm, Hà Nội" readonly tabindex="-1">
-            </label>
-            <button class="btn" type="submit">Tìm phòng</button>
-          </div>
-          <div class="search-fields search-fields--tour" data-panel="tour">
-            <label>Ngày đi
-              <input type="date" name="date">
-            </label>
-            <label>Số khách
-              <select name="tguests">
-                <option value="1">1 khách</option>
-                <option value="2" selected>2 khách</option>
-                <option value="4">4 khách</option>
-                <option value="6">6 khách</option>
-              </select>
-            </label>
-            <label>Xuất phát
-              <input type="text" value="The Dahlia Hanoi" readonly tabindex="-1">
-            </label>
-            <button class="btn" type="submit">Xem tour</button>
-          </div>
-          <p class="form-error" hidden style="padding:0 8px 4px;margin:0;color:#6B4A32;font-size:13px;font-weight:600"></p>
-        </form>
-      </div>
     </section>
+
+    <div class="search-dock">
+      <form class="search-bar" id="search-form" novalidate>
+        <div class="search-tabs" role="tablist" aria-label="Phòng hoặc tour">
+          <button type="button" class="tab is-on" data-tab="phong" role="tab" aria-selected="true">Phòng</button>
+          <button type="button" class="tab" data-tab="tour" role="tab" aria-selected="false">Tour</button>
+        </div>
+        <div class="search-fields is-on" data-panel="phong">
+          <label>Nhận phòng
+            <input type="date" name="checkin" required>
+          </label>
+          <label>Trả phòng
+            <input type="date" name="checkout" required>
+          </label>
+          <label>Số khách
+            <select name="guests">
+              <option value="1">1 khách</option>
+              <option value="2" selected>2 khách</option>
+              <option value="3">3 khách</option>
+              <option value="4">4 khách</option>
+            </select>
+          </label>
+          <label>Địa điểm
+            <input type="text" value="Hoàn Kiếm, Hà Nội" readonly tabindex="-1">
+          </label>
+          <button class="btn" type="submit">Tìm phòng</button>
+        </div>
+        <div class="search-fields search-fields--tour" data-panel="tour">
+          <label>Ngày đi
+            <input type="date" name="date">
+          </label>
+          <label>Số khách
+            <select name="tguests">
+              <option value="1">1 khách</option>
+              <option value="2" selected>2 khách</option>
+              <option value="4">4 khách</option>
+              <option value="6">6 khách</option>
+            </select>
+          </label>
+          <label>Xuất phát
+            <input type="text" value="The Dahlia Hanoi" readonly tabindex="-1">
+          </label>
+          <button class="btn" type="submit">Xem tour</button>
+        </div>
+        <p class="form-error" hidden style="padding:0 8px 4px;margin:0;color:#6B4A32;font-size:13px;font-weight:600"></p>
+      </form>
+    </div>
 
     <section class="trust">
       <div class="wrap trust-grid" aria-label="Vì sao chọn Dahlia">

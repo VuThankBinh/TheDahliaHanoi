@@ -165,6 +165,7 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
   display: flex; flex-direction: column; justify-content: flex-end;
   background: linear-gradient(160deg, #EFE6DA, #A67C52 55%, #3C2A1E);
   overflow: hidden;
+  padding-bottom: 56px;
 }
 .hero-media {
   position: absolute; inset: 0;
@@ -189,10 +190,11 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
 .hero-copy h1 { color: #fff; max-width: 16ch; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
 .hero-copy .lede { color: rgba(255,255,255,.88); max-width: 42ch; }
 
+/* Sibling of hero (not inside overflow:hidden) — docks over hero, stacks above trust */
 .search-dock {
-  position: relative; z-index: 3;
+  position: relative; z-index: 5;
   width: min(1180px, calc(100% - 48px));
-  margin: 0 auto -36px;
+  margin: -56px auto 0;
 }
 .search-bar {
   background: #fff;
@@ -212,20 +214,22 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
 .search-tabs .tab.is-on { background: var(--brown); color: var(--bg); }
 .search-fields {
   display: none;
-  grid-template-columns: 1.2fr 1fr 1fr 0.85fr auto;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.85fr) auto;
   gap: 8px; align-items: end;
 }
 .search-fields.is-on { display: grid; }
 .search-fields label {
   display: grid; gap: 4px; padding: 8px 12px; border-radius: 14px;
   background: var(--bg); color: var(--body); font-size: 12px; font-weight: 600;
+  min-width: 0;
 }
 .search-fields input, .search-fields select {
   border: 0; background: transparent; min-height: 28px; padding: 0;
+  width: 100%; min-width: 0; max-width: 100%;
   font-size: 15px; font-weight: 500; color: var(--ink); border-radius: 0;
 }
 .search-fields .btn { min-width: 140px; align-self: stretch; }
-.search-fields--tour.is-on { grid-template-columns: 1fr 1fr 1.2fr auto; }
+.search-fields--tour.is-on { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr) auto; }
 
 /* —— Cards —— */
 .media {
@@ -282,9 +286,11 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
 /* —— Trust —— */
 .trust {
   background: #fff; border-top: 1px solid var(--cream); border-bottom: 1px solid var(--cream);
+  /* Clear space below docked search (incl. card shadow) */
+  padding-top: 28px;
 }
 .trust-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 36px 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 12px 0 36px;
 }
 .trust-item {
   padding: 18px 16px; border-radius: var(--radius-sm); background: var(--bg);
@@ -489,11 +495,13 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
   img.logo { height: 52px; }
   .desktop-nav, .cta-nav { display: none; }
   .nav-toggle { display: inline-flex; margin-left: auto; }
-  .hero { min-height: 62vh; }
+  .hero { min-height: 62vh; padding-bottom: 44px; }
   .hero-copy { padding: 100px 0 20px; }
   .hero-copy h1 { font-size: 32px; }
-  .search-dock { margin-bottom: -28px; }
+  .search-dock { margin-top: -44px; margin-bottom: 0; }
   .search-fields.is-on { grid-template-columns: 1fr; }
+  .search-fields .btn { min-width: 0; width: 100%; }
+  .trust { padding-top: 24px; }
   .card-grid, .trust-grid, .gallery, .choices, .footer-grid, .pick { grid-template-columns: 1fr; }
   .section { padding: 36px 0; }
   .section-head { flex-direction: column; align-items: start; }
