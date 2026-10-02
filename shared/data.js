@@ -22,6 +22,8 @@
         atelierHeroAlt: "Phòng ngủ boutique với ga trắng và ánh sáng ấm",
         noirHero: photo("photo-1555921015-5532091f6026", 2000),
         noirHeroAlt: "Phố cổ Hà Nội, nhà ống và nhịp sống ban ngày",
+        voyageHero: photo("photo-1566073771259-6a8506099945", 2200),
+        voyageHeroAlt: "Sảnh khách sạn sáng với ánh đèn ấm và nội thất gỗ",
         flower: photo("photo-1596438459194-f275f413d6ff", 1400),
         flowerAlt: "Hoa thược dược cánh lớp, tông kem và nâu",
         breakfast: photo("photo-1496417263034-38ec4f0b665a", 1400),

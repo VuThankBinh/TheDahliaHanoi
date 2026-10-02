@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <title>Liên hệ — Mixi Voyage · The Dahlia Hanoi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="desktop-nav" aria-label="Chính">
+      <a href="index.html#phong">Phòng</a>
+      <a href="tours.html">Tour</a>
+      <a href="book.html">Book</a>
+      <a href="contact.html" aria-current="page">Liên hệ</a>
+    </nav>
+    <a class="cta-nav" href="book.html">Đặt phòng</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Mở menu</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" type="button" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <a href="index.html">Trang chủ</a>
+    <a href="index.html#phong">Phòng</a>
+    <a href="tours.html">Tour</a>
+    <a href="book.html">Book phòng</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <main id="content" class="wrap page-pad">
+    <div class="mail-layout">
+      <aside class="mail-aside">
+        <div>
+          <p class="eyebrow seq">Liên hệ</p>
+          <h1 class="seq">Gửi yêu cầu đặt chỗ</h1>
+          <p class="lede seq">Form mở thư tới hello@thedahliahanoi.com. Điền đủ để nhà phản hồi nhanh.</p>
+        </div>
+        <div class="aside-card reveal">
+          <p class="eyebrow">The Dahlia Hanoi</p>
+          <p style="margin:0;color:var(--body)">18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+          <p style="margin:10px 0 0"><a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a></p>
+          <p style="margin:4px 0 0"><a href="tel:+842400000000">+84 24 0000 0000</a></p>
+          <p class="hint" style="margin-top:14px">Nhận phòng 14:00 · Trả phòng 12:00</p>
+        </div>
+      </aside>
+
+      <form class="mail-card" id="mail-form" novalidate>
+        <h2 class="seq" style="font-size:24px">Yêu cầu của bạn</h2>
+        <p class="hint seq" style="margin-top:8px">Chọn đặt phòng hoặc đặt tour — phần còn lại đổi theo lựa chọn.</p>
+        <div class="choices">
+          <button type="button" class="choice is-on" data-choice="phong" aria-pressed="true">Đặt phòng</button>
+          <button type="button" class="choice" data-choice="tour" aria-pressed="false">Đặt tour</button>
+        </div>
+        <div class="fields">
+          <div class="choice-panel is-on" data-panel="phong">
+            <label>Phòng<select name="room"></select></label>
+            <label>Nhận phòng<input type="date" name="checkin"></label>
+            <label>Trả phòng<input type="date" name="checkout"></label>
+            <label>Số khách
+              <select name="guests">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+          </div>
+          <div class="choice-panel" data-panel="tour">
+            <label>Tour<select name="tour"></select></label>
+            <label>Ngày đi<input type="date" name="date"></label>
+            <label>Số khách
+              <select name="tguests">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+              </select>
+            </label>
+          </div>
+          <label>Họ và tên<input name="name" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Số điện thoại<input name="phone" type="tel" autocomplete="tel" required></label>
+          <label>Lời nhắn<textarea name="message" required></textarea></label>
+          <p class="form-error" hidden></p>
+          <button class="btn" type="submit">Gửi yêu cầu</button>
+          <p class="hint">Yêu cầu được gửi về mail khách sạn qua ứng dụng thư của bạn.</p>
+        </div>
+        <div class="form-success">
+          <h2>Đã nhận yêu cầu</h2>
+          <p>Thư đã được mở sẵn tới hello@thedahliahanoi.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này hoặc gọi +84 24 0000 0000.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
+        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+      </div>
+      <nav aria-label="Chân trang">
+        <a href="index.html">Trang chủ</a>
+        <a href="tours.html">Tour</a>
+        <a href="book.html">Book phòng</a>
+        <a href="contact.html" aria-current="page">Liên hệ</a>
+      </nav>
+      <div class="footer-meta">
+        <p>18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+        <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
+        <a href="tel:+842400000000">+84 24 0000 0000</a>
+        <a href="../index.html">Xem mẫu khác</a>
+        <p class="fine">Mẫu Mixi Voyage · thông tin liên hệ dùng cho bản mẫu.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../shared/data.js"></script>
+  <script src="../shared/util.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
