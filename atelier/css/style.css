@@ -9,19 +9,31 @@
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --sans: Outfit, "Segoe UI", sans-serif;
   --shadow: 0 16px 40px rgba(60, 42, 30, 0.06);
-  color-scheme: light;
+  color-scheme: only light;
   accent-color: #3C2A1E;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html {
+  color-scheme: only light;
+  background-color: #FBF8F4;
+  color: #1A1A1A;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
 body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--sans); font-size: 17px; line-height: 1.6; overflow-x: hidden;
+  margin: 0;
+  background-color: #FBF8F4;
+  background: var(--bg);
+  color: #1A1A1A;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
 img.logo { height: 84px; width: auto; opacity: 0; }
 img.logo.is-ready { opacity: 1; }
-button, input, select, textarea { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; color-scheme: light; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--flower); outline-offset: 3px; }
@@ -88,7 +100,7 @@ a { color: inherit; text-decoration: none; }
 label { display: grid; gap: 6px; color: var(--body); font-size: 16px; }
 input, select, textarea {
   width: 100%; min-height: 48px; border-radius: 14px; border: 1px solid var(--cream);
-  background: var(--bg); padding: 12px 14px; color: var(--ink);
+  background: #FBF8F4; padding: 12px 14px; color: #1A1A1A; color-scheme: light;
 }
 textarea { min-height: 120px; resize: vertical; }
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--flower); outline-offset: 1px; }

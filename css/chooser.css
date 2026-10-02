@@ -8,16 +8,22 @@
   --cream: #EFE6DA;
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --sans: Outfit, "Segoe UI", sans-serif;
-  color-scheme: light;
+  color-scheme: only light;
   accent-color: #3C2A1E;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; }
-html { overflow-x: clip; }
+html {
+  color-scheme: only light;
+  background-color: #FBF8F4;
+  color: #1A1A1A;
+  overflow-x: clip;
+}
 body {
+  background-color: #FBF8F4;
   background: var(--bg);
-  color: var(--ink);
+  color: #1A1A1A;
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.6;
