@@ -12,7 +12,7 @@
       address: "18 Hàng Bông, Hoàn Kiếm, Hà Nội",
       checkIn: "14:00",
       checkOut: "12:00",
-      line: "Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.",
+      line: "Đến một nơi mới. Sống một trải nghiệm khác.",
       blurb:
         "The Dahlia Hanoi là một nhà nhỏ giữa Hoàn Kiếm: trẻ, có hoa, và đủ yên để nghe thành phố từ xa. Linen, gỗ ấm, và thược dược tươi trong mỗi phòng.",
       images: {

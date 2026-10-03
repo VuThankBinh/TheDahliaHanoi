@@ -4,128 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="only light">
-  <title>The Dahlia Hanoi — Chọn hướng thiết kế</title>
-  <meta name="description" content="Bốn hướng khách sạn và một mẫu web bán tour cho The Dahlia.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/chooser.css">
+  <title>The Dahlia Hanoi — Voyage</title>
+  <meta name="description" content="Đặt tour Việt Nam với The Dahlia — Ninh Bình, Hà Giang, Sapa, Hà Nội, Hạ Long.">
+  <link rel="canonical" href="voyage/index.html">
+  <meta http-equiv="refresh" content="0; url=voyage/index.html">
+  <script>location.replace("voyage/index.html" + location.search + location.hash);</script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #FBF8F4;
+      color: #3C2A1E;
+    }
+    a { color: #3C2A1E; font-weight: 600; }
+  </style>
 </head>
 <body>
-  <main class="chooser">
-    <div class="top-row">
-      <span>The Dahlia Hanoi</span>
-      <span>Hotel &amp; Apartment</span>
-    </div>
-    <header class="mast">
-      <img class="logo" src="assets/logo.png" alt="The Dahlia Hanoi, Hotel & Apartment">
-      <div class="mast-copy">
-        <h1 class="seq">Chọn một nhịp cho nhà hoa.</h1>
-        <p class="seq">Bốn cách kể cùng một khách sạn. Cùng phòng, cùng tour, cùng lời mời — khác bố cục, để chọn hướng trước khi làm bản chính. Mẫu thứ năm chỉ là web bán tour.</p>
-      </div>
-    </header>
-
-    <section class="grid" aria-label="Năm mẫu thiết kế">
-      <a class="concept editorial reveal" href="editorial/index.html">
-        <div class="shot">
-          <img src="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?auto=format&fit=crop&w=1200&q=80" alt="">
-        </div>
-        <div class="body">
-          <span class="index-no">01</span>
-          <h2>Editorial</h2>
-          <span class="rule"></span>
-          <p>Tạp chí. Ảnh full-bleed, khoảng trắng rộng, đường kẻ mảnh. Logo và câu chữ nằm dưới ảnh, không đè mặt người.</p>
-          <span class="go">Mở mẫu Editorial</span>
-        </div>
-      </a>
-
-      <a class="concept atelier reveal" href="atelier/index.html">
-        <div class="atelier-frame">
-          <div class="shot">
-            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80" alt="">
-          </div>
-          <div class="fake-search" aria-hidden="true">
-            <div class="pills"><span class="pill on">Phòng</span><span class="pill">Tour</span></div>
-            <span class="pill">Nhận phòng · Trả phòng · Khách</span>
-            <span class="fake-btn">Book</span>
-          </div>
-          <div class="body">
-            <span class="index-no">02</span>
-            <h2>Soft Atelier</h2>
-            <p>Ấm, bo tròn, đặt nhanh. Thẻ tìm phòng luôn hiện — chọn ngày là thấy phòng.</p>
-            <span class="go">Mở mẫu Atelier</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="concept noir reveal" href="noir/index.html">
-        <div class="shot">
-          <img src="https://images.unsplash.com/photo-1555921015-5532091f6026?auto=format&fit=crop&w=1200&q=80" alt="">
-        </div>
-        <div class="noir-panel">
-          <span class="index-no">03</span>
-          <h2>Noir &amp; Clay</h2>
-          <p>Nền kem, khối nâu đậm. Ảnh một bên, chữ kem một bên. Catalog rõ, tương phản mạnh.</p>
-          <div class="mini-actions" aria-hidden="true">
-            <span class="mini fill">Book phòng</span>
-            <span class="mini line">Xem tour</span>
-          </div>
-          <span class="go">Mở mẫu Noir</span>
-        </div>
-      </a>
-
-      <a class="concept voyage reveal" href="voyage/index.html">
-        <div class="voyage-frame">
-          <div class="shot">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="">
-            <div class="voyage-scrim" aria-hidden="true"></div>
-            <div class="voyage-hero-copy" aria-hidden="true">
-              <span>Đặt phòng · Chọn tour</span>
-            </div>
-          </div>
-          <div class="fake-bookbar" aria-hidden="true">
-            <div class="pills"><span class="pill on">Phòng</span><span class="pill">Tour</span></div>
-            <div class="bar-fields">
-              <span>Nhận</span><span>Trả</span><span>Khách</span>
-              <span class="fake-btn">Tìm</span>
-            </div>
-          </div>
-          <div class="body">
-            <span class="index-no">04</span>
-            <h2>Mixi Voyage</h2>
-            <p class="tagline">Phong cách Mixivivu / Booking travel</p>
-            <p>Hero cảnh quan + thanh tìm đa trường đè dưới ảnh. Thẻ giá, rail tour, trust strip — cảm giác đặt chỗ sản phẩm, vẫn giữ palette Dahlia.</p>
-            <span class="go">Mở mẫu Voyage</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="concept sale reveal" href="tour/index.html">
-        <div class="sale-frame">
-          <div class="shot">
-            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="">
-          </div>
-          <div class="sale-pills" aria-hidden="true">
-            <span>Ninh Bình</span>
-            <span>Hạ Long</span>
-            <span>2.450.000đ</span>
-          </div>
-          <div class="body">
-            <span class="index-no">05</span>
-            <h2>Web bán tour</h2>
-            <p class="tagline">Mixivivu · trắng nâu</p>
-            <p>Web bán tour kiểu Mixivivu: lưới thẻ, lọc điểm đến, đặt chỗ. Trắng nâu, không phòng.</p>
-            <span class="go">Mở web bán tour</span>
-          </div>
-        </div>
-      </a>
-    </section>
-    <p class="foot">Thông tin liên hệ trên các mẫu là dữ liệu trình bày: hello@thedahliahanoi.com · +84 24 0000 0000 · 18 Hàng Bông, Hoàn Kiếm.</p>
-  </main>
-  <script src="shared/util.js?v=2"></script>
-  <script>
-    Dahlia.bindImages(document);
-    Dahlia.initMotion();
-  </script>
+  <p><a href="voyage/index.html">Tiếp tục tới The Dahlia Voyage</a></p>
 </body>
 </html>

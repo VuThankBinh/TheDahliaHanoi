@@ -85,7 +85,7 @@
     "menu.open": { vi: "Mở menu", en: "Open menu" },
     "menu.close": { vi: "Đóng menu", en: "Close menu" },
     "lang.group": { vi: "Ngôn ngữ", en: "Language" },
-    "footer.line": { vi: "Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.", en: "A flower house in the Old Quarter. Quiet, young, and unhurried." },
+    "footer.line": { vi: "Đến một nơi mới. Sống một trải nghiệm khác.", en: "A flower house in the Old Quarter. Quiet, young, and unhurried." },
     "footer.samples": { vi: "Xem mẫu khác", en: "See other samples" },
     "footer.ed": { vi: "Mẫu Editorial · thông tin liên hệ dùng cho bản mẫu.", en: "Editorial sample · contact details are for this mockup." },
     "footer.at": { vi: "Mẫu Soft Atelier · thông tin liên hệ dùng cho bản mẫu.", en: "Soft Atelier sample · contact details are for this mockup." },
@@ -472,7 +472,22 @@
     box.className = "lang-switch";
     box.setAttribute("role", "group");
     box.setAttribute("data-i18n-aria", "lang.group");
-    box.innerHTML = '<button type="button" data-set-lang="vi">VI</button><span aria-hidden="true">|</span><button type="button" data-set-lang="en">EN</button>';
+    box.innerHTML =
+      '<button type="button" class="lang-flag" data-set-lang="vi" aria-label="Tiếng Việt">' +
+        '<svg class="lang-flag-svg" viewBox="0 0 30 20" width="34" height="24" aria-hidden="true" focusable="false">' +
+          '<rect width="30" height="20" fill="#CE1126"/>' +
+          '<polygon points="15,3.2 16.7,8.6 22.4,8.6 17.8,11.9 19.5,17.3 15,14 10.5,17.3 12.2,11.9 7.6,8.6 13.3,8.6" fill="#FFCD00"/>' +
+        "</svg>" +
+      "</button>" +
+      '<button type="button" class="lang-flag" data-set-lang="en" aria-label="English">' +
+        '<svg class="lang-flag-svg" viewBox="0 0 60 40" width="34" height="24" aria-hidden="true" focusable="false">' +
+          '<rect width="60" height="40" fill="#012169"/>' +
+          '<path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>' +
+          '<path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/>' +
+          '<path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/>' +
+          '<path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/>' +
+        "</svg>" +
+      "</button>";
     return box;
   }
 
