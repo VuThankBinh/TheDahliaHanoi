@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script>try{if(localStorage.getItem("dahlia-lang")==="en")document.documentElement.setAttribute("data-lang","en")}catch(e){}</script>
+<style>html[data-lang="en"]:not(.i18n-ready) body{visibility:hidden}</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="only light">
-  <title>The Dahlia Hanoi — Mixi Voyage</title>
-  <meta name="description" content="Đặt phòng và tour tại The Dahlia Hanoi — phong cách booking travel.">
+  <title data-i18n="vo.home.title">The Dahlia Hanoi — Mixi Voyage</title>
+  <meta name="description" content="Đặt phòng và tour tại The Dahlia Hanoi — phong cách booking travel." data-i18n-content="vo.desc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-home" data-page="home">
-  <a class="skip" href="#content">Đến nội dung</a>
+  <a class="skip" href="#content" data-i18n="skip">Đến nội dung</a>
   <header class="site-header">
     <a class="brand" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
-    <nav class="desktop-nav" aria-label="Chính">
-      <a href="#phong">Phòng</a>
-      <a href="tours.html">Tour</a>
-      <a href="book.html">Book</a>
-      <a href="contact.html">Liên hệ</a>
+    <nav class="desktop-nav" aria-label="Chính" data-i18n-aria="nav.main">
+      <a href="#phong" data-i18n="nav.rooms">Phòng</a>
+      <a href="tours.html" data-i18n="nav.tours">Tour</a>
+      <a href="book.html" data-i18n="nav.book">Book</a>
+      <a href="contact.html" data-i18n="nav.contact">Liên hệ</a>
     </nav>
-    <a class="cta-nav" href="book.html">Đặt phòng</a>
+    <a class="cta-nav" href="book.html" data-i18n="nav.bookStay">Đặt phòng</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
-      <span class="sr-only">Mở menu</span>
+      <span class="sr-only" data-i18n="menu.open">Mở menu</span>
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
     </button>
   </header>
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <button class="menu-close" type="button" aria-label="Đóng menu">
+    <button class="menu-close" type="button" aria-label="Đóng menu" data-i18n-aria="menu.close">
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
     </button>
-    <a href="index.html">Trang chủ</a>
-    <a href="#phong">Phòng</a>
-    <a href="tours.html">Tour</a>
-    <a href="book.html">Book phòng</a>
-    <a href="contact.html">Liên hệ</a>
+    <a href="index.html" data-i18n="nav.home">Trang chủ</a>
+    <a href="#phong" data-i18n="nav.rooms">Phòng</a>
+    <a href="tours.html" data-i18n="nav.tours">Tour</a>
+    <a href="book.html" data-i18n="nav.bookRoom">Book phòng</a>
+    <a href="contact.html" data-i18n="nav.contact">Liên hệ</a>
   </div>
 
   <main id="content">
-    <section class="hero" aria-label="Mở đầu">
+    <section class="hero" aria-label="Mở đầu" data-i18n-aria="vo.hero.aria">
       <div class="hero-media">
-        <img class="rise-hero" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80" alt="Sảnh khách sạn sáng với ánh đèn ấm và nội thất gỗ" fetchpriority="high">
+        <img class="rise-hero" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=80" alt="Sảnh khách sạn sáng với ánh đèn ấm và nội thất gỗ" data-i18n-alt="vo.hero.alt" fetchpriority="high">
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow seq">Hoàn Kiếm · Hà Nội</p>
-        <h1 class="seq">Đặt phòng. Chọn tour. Ở chậm giữa phố cổ.</h1>
-        <p class="lede seq">The Dahlia Hanoi — Hotel &amp; Apartment. Check-in 14:00, check-out 12:00. Tìm ngày trống rồi giữ chỗ trong vài bước.</p>
+        <p class="eyebrow seq" data-i18n="vo.kicker">Hoàn Kiếm · Hà Nội</p>
+        <h1 class="seq" data-i18n="vo.h1">Đặt phòng. Chọn tour. Ở chậm giữa phố cổ.</h1>
+        <p class="lede seq" data-i18n="vo.lede">The Dahlia Hanoi — Hotel &amp; Apartment. Check-in 14:00, check-out 12:00. Tìm ngày trống rồi giữ chỗ trong vài bước.</p>
       </div>
     </section>
 
     <div class="search-dock">
       <form class="search-bar" id="search-form" novalidate>
-        <div class="search-tabs" role="tablist" aria-label="Phòng hoặc tour">
-          <button type="button" class="tab is-on" data-tab="phong" role="tab" aria-selected="true">Phòng</button>
-          <button type="button" class="tab" data-tab="tour" role="tab" aria-selected="false">Tour</button>
+        <div class="search-tabs" role="tablist" aria-label="Phòng hoặc tour" data-i18n-aria="vo.tabs">
+          <button type="button" class="tab is-on" data-tab="phong" role="tab" aria-selected="true" data-i18n="nav.rooms">Phòng</button>
+          <button type="button" class="tab" data-tab="tour" role="tab" aria-selected="false" data-i18n="nav.tours">Tour</button>
         </div>
         <div class="search-fields is-on" data-panel="phong">
-          <label>Nhận phòng
+          <label><span data-i18n="label.checkin">Nhận phòng</span>
             <input type="date" name="checkin" required>
           </label>
-          <label>Trả phòng
+          <label><span data-i18n="label.checkout">Trả phòng</span>
             <input type="date" name="checkout" required>
           </label>
-          <label>Số khách
+          <label><span data-i18n="label.guests">Số khách</span>
             <select name="guests">
-              <option value="1">1 khách</option>
-              <option value="2" selected>2 khách</option>
-              <option value="3">3 khách</option>
-              <option value="4">4 khách</option>
+              <option value="1" data-i18n="guest.1">1 khách</option>
+              <option value="2" selected data-i18n="guest.2">2 khách</option>
+              <option value="3" data-i18n="guest.3">3 khách</option>
+              <option value="4" data-i18n="guest.4">4 khách</option>
             </select>
           </label>
-          <label>Địa điểm
+          <label><span data-i18n="label.place">Địa điểm</span>
             <input type="text" value="Hoàn Kiếm, Hà Nội" readonly tabindex="-1">
           </label>
-          <button class="btn" type="submit">Tìm phòng</button>
+          <button class="btn" type="submit" data-i18n="btn.findRoom">Tìm phòng</button>
         </div>
         <div class="search-fields search-fields--tour" data-panel="tour">
-          <label>Ngày đi
+          <label><span data-i18n="label.date">Ngày đi</span>
             <input type="date" name="date">
           </label>
-          <label>Số khách
+          <label><span data-i18n="label.guests">Số khách</span>
             <select name="tguests">
-              <option value="1">1 khách</option>
-              <option value="2" selected>2 khách</option>
-              <option value="4">4 khách</option>
-              <option value="6">6 khách</option>
+              <option value="1" data-i18n="guest.1">1 khách</option>
+              <option value="2" selected data-i18n="guest.2">2 khách</option>
+              <option value="4" data-i18n="guest.4">4 khách</option>
+              <option value="6" data-i18n="guest.6">6 khách</option>
             </select>
           </label>
-          <label>Xuất phát
+          <label><span data-i18n="label.depart">Xuất phát</span>
             <input type="text" value="The Dahlia Hanoi" readonly tabindex="-1">
           </label>
-          <button class="btn" type="submit">Xem tour</button>
+          <button class="btn" type="submit" data-i18n="btn.viewTours">Xem tour</button>
         </div>
         <p class="form-error" hidden style="padding:0 8px 4px;margin:0;color:#6B4A32;font-size:13px;font-weight:600"></p>
       </form>
     </div>
 
     <section class="trust">
-      <div class="wrap trust-grid" aria-label="Vì sao chọn Dahlia">
-        <article class="trust-item reveal"><span class="num">04</span><strong>Phòng &amp; căn hộ</strong><p>Ít phòng, mỗi sáng đủ chậm.</p></article>
-        <article class="trust-item reveal"><span class="num">04</span><strong>Tour ngày</strong><p>Đi gần nhà, về trước tối.</p></article>
-        <article class="trust-item reveal"><span class="num">14:00</span><strong>Nhận phòng</strong><p>Trả phòng 12:00 mỗi ngày.</p></article>
-        <article class="trust-item reveal"><span class="num brand-serif">★</span><strong>Gần Hồ Hoàn Kiếm</strong><p>18 Hàng Bông, vài phút đi bộ.</p></article>
+      <div class="wrap trust-grid" aria-label="Vì sao chọn Dahlia" data-i18n-aria="vo.trust">
+        <article class="trust-item reveal"><span class="num">04</span><strong data-i18n="vo.t1">Phòng &amp; căn hộ</strong><p data-i18n="vo.t1p">Ít phòng, mỗi sáng đủ chậm.</p></article>
+        <article class="trust-item reveal"><span class="num">04</span><strong data-i18n="vo.t2">Tour ngày</strong><p data-i18n="vo.t2p">Đi gần nhà, về trước tối.</p></article>
+        <article class="trust-item reveal"><span class="num">14:00</span><strong data-i18n="vo.t3">Nhận phòng</strong><p data-i18n="vo.t3p">Trả phòng 12:00 mỗi ngày.</p></article>
+        <article class="trust-item reveal"><span class="num brand-serif">★</span><strong data-i18n="vo.t4">Gần Hồ Hoàn Kiếm</strong><p data-i18n="vo.t4p">18 Hàng Bông, vài phút đi bộ.</p></article>
       </div>
     </section>
 
     <section class="section wrap" id="phong">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Phòng nổi bật</p>
-          <h2>Chọn nơi ở</h2>
-          <p>Giá minh họa theo đêm. Chọn ngày trên thanh tìm để giữ chỗ.</p>
+          <p class="eyebrow" data-i18n="vo.rooms.k">Phòng nổi bật</p>
+          <h2 data-i18n="vo.rooms.h">Chọn nơi ở</h2>
+          <p data-i18n="vo.rooms.p">Giá minh họa theo đêm. Chọn ngày trên thanh tìm để giữ chỗ.</p>
         </div>
-        <a class="link-more" href="book.html">Xem tất cả phòng</a>
+        <a class="link-more" href="book.html" data-i18n="btn.allRooms">Xem tất cả phòng</a>
       </div>
       <div class="card-grid" id="room-grid"></div>
     </section>
@@ -122,11 +124,11 @@
     <section class="section wrap" id="tour">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Tour nổi bật</p>
-          <h2>Đi cùng nhà</h2>
-          <p>Cuộn ngang để xem tour — từ bình minh hồ đến Ninh Bình một ngày.</p>
+          <p class="eyebrow" data-i18n="vo.tours.k">Tour nổi bật</p>
+          <h2 data-i18n="vo.tours.h">Đi cùng nhà</h2>
+          <p data-i18n="vo.tours.p">Cuộn ngang để xem tour — từ bình minh hồ đến Ninh Bình một ngày.</p>
         </div>
-        <a class="link-more" href="tours.html">Lọc &amp; đặt tour</a>
+        <a class="link-more" href="tours.html" data-i18n="btn.filterTours">Lọc &amp; đặt tour</a>
       </div>
       <div class="rail-wrap">
         <div class="rail" id="tour-rail"></div>
@@ -136,21 +138,21 @@
     <section class="section wrap">
       <div class="inquiry-band reveal">
         <div>
-          <p class="eyebrow" style="color:#EFE6DA">Liên hệ nhanh</p>
-          <h2>Viết cho nhà trước khi đặt.</h2>
-          <p>Cần phòng dài ngày, tour riêng tư, hoặc hỏi giờ nhận sớm — gửi một dòng, chúng tôi mở sẵn thư tới hello@thedahliahanoi.com.</p>
+          <p class="eyebrow" style="color:#EFE6DA" data-i18n="vo.ask.k">Liên hệ nhanh</p>
+          <h2 data-i18n="vo.ask.h">Viết cho nhà trước khi đặt.</h2>
+          <p data-i18n="vo.ask.p">Cần phòng dài ngày, tour riêng tư, hoặc hỏi giờ nhận sớm — gửi một dòng, chúng tôi mở sẵn thư tới hello@thedahliahanoi.com.</p>
         </div>
         <form class="inquiry-form" id="quick-form" novalidate>
           <div class="fields">
-            <input name="name" autocomplete="name" placeholder="Họ và tên" required>
-            <input name="email" type="email" autocomplete="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Bạn đang nghĩ gì?" required></textarea>
+            <input name="name" autocomplete="name" placeholder="Họ và tên" data-i18n-placeholder="label.name" required>
+            <input name="email" type="email" autocomplete="email" placeholder="Email" data-i18n-placeholder="label.email" required>
+            <textarea name="message" placeholder="Bạn đang nghĩ gì?" data-i18n-placeholder="ph.think" required></textarea>
             <p class="form-error" hidden></p>
-            <button class="btn" type="submit">Gửi yêu cầu</button>
+            <button class="btn" type="submit" data-i18n="btn.send">Gửi yêu cầu</button>
           </div>
           <div class="form-success">
-            <h3 style="color:#fff;margin:0 0 8px">Đã nhận yêu cầu</h3>
-            <p style="margin:0;color:rgba(255,255,255,.9)">Thư đã được mở sẵn tới hello@thedahliahanoi.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này.</p>
+            <h3 style="color:#fff;margin:0 0 8px" data-i18n="success.title">Đã nhận yêu cầu</h3>
+            <p style="margin:0;color:rgba(255,255,255,.9)" data-i18n="success.plain">Thư đã được mở sẵn tới hello@thedahliahanoi.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này.</p>
           </div>
         </form>
       </div>
@@ -161,26 +163,26 @@
     <div class="footer-grid">
       <div>
         <a class="footer-logo" href="index.html"><img class="logo" src="../assets/logo.png" alt="The Dahlia Hanoi"></a>
-        <p>Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
+        <p data-i18n="footer.line">Nhà hoa giữa phố cổ. Yên, trẻ, và đủ chậm.</p>
       </div>
-      <nav aria-label="Chân trang">
-        <a href="index.html" aria-current="page">Trang chủ</a>
-        <a href="tours.html">Tour</a>
-        <a href="book.html">Book phòng</a>
-        <a href="contact.html">Liên hệ</a>
+      <nav aria-label="Chân trang" data-i18n-aria="nav.footer">
+        <a href="index.html" aria-current="page" data-i18n="nav.home">Trang chủ</a>
+        <a href="tours.html" data-i18n="nav.tours">Tour</a>
+        <a href="book.html" data-i18n="nav.bookRoom">Book phòng</a>
+        <a href="contact.html" data-i18n="nav.contact">Liên hệ</a>
       </nav>
       <div class="footer-meta">
         <p>18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
         <a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a>
         <a href="tel:+842400000000">+84 24 0000 0000</a>
-        <a href="../index.html">Xem mẫu khác</a>
-        <p class="fine">Mẫu Mixi Voyage · thông tin liên hệ dùng cho bản mẫu.</p>
+        <a href="../index.html" data-i18n="footer.samples">Xem mẫu khác</a>
+        <p class="fine" data-i18n="footer.voyage">Mẫu Mixi Voyage · thông tin liên hệ dùng cho bản mẫu.</p>
       </div>
     </div>
   </footer>
-  <a class="book-float" href="book.html">Book phòng</a>
-  <script src="../shared/data.js"></script>
-  <script src="../shared/util.js"></script>
-  <script src="js/app.js"></script>
+  <a class="book-float" href="book.html" data-i18n="nav.bookRoom">Book phòng</a>
+  <script src="../shared/data.js?v=2"></script>
+  <script src="../shared/util.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>

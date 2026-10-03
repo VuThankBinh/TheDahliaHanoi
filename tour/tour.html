@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>try{if(localStorage.getItem("dahlia-lang")==="en")document.documentElement.setAttribute("data-lang","en")}catch(e){}</script>
+<style>html[data-lang="en"]:not(.i18n-ready) body{visibility:hidden}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <title>Tour — The Dahlia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion");
+    }
+  </script>
+</head>
+<body data-page="detail">
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-name">The Dahlia</span>
+      <span class="brand-mark">Tour</span>
+    </a>
+    <nav class="nav" aria-label="Điểm đến" data-i18n-aria="nav.dest">
+      <a href="index.html?dest=Ninh Bình" data-dest-label="Ninh Bình">Ninh Bình</a>
+      <a href="index.html?dest=Hà Giang" data-dest-label="Hà Giang">Hà Giang</a>
+      <a href="index.html?dest=Sapa" data-dest-label="Sapa">Sapa</a>
+      <a href="index.html?dest=Hà Nội" data-dest-label="Hà Nội">Hà Nội</a>
+      <a href="index.html?dest=Hạ Long" data-dest-label="Hạ Long">Hạ Long</a>
+      <a href="index.html#lien-he" data-i18n="nav.contact">Liên hệ</a>
+    </nav>
+    <a class="hotline" href="tel:+842400000000">+84 24 0000 0000</a>
+  </header>
+  <main id="stage" class="stage"></main>
+  <footer class="site-foot">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-name">The Dahlia</span>
+          <span class="brand-mark">Tour</span>
+        </a>
+        <p class="foot-address">18 Hàng Bông, Hoàn Kiếm, Hà Nội</p>
+      </div>
+      <div>
+        <h2 data-i18n="foot.dest">Điểm đến</h2>
+        <ul>
+          <li><a href="index.html?dest=Ninh Bình" data-dest-label="Ninh Bình">Ninh Bình</a></li>
+          <li><a href="index.html?dest=Hà Giang" data-dest-label="Hà Giang">Hà Giang</a></li>
+          <li><a href="index.html?dest=Sapa" data-dest-label="Sapa">Sapa</a></li>
+          <li><a href="index.html?dest=Hà Nội" data-dest-label="Hà Nội">Hà Nội</a></li>
+          <li><a href="index.html?dest=Hạ Long" data-dest-label="Hạ Long">Hạ Long</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="foot.contact">Liên hệ</h2>
+        <ul>
+          <li><a href="mailto:hello@thedahliahanoi.com">hello@thedahliahanoi.com</a></li>
+          <li><a href="tel:+842400000000">+84 24 0000 0000</a></li>
+          <li data-i18n="foot.wa">WhatsApp: để số khi đặt tour</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-bar" data-i18n="foot.bar">© 2026 The Dahlia Tour · Bản mẫu giới thiệu</p>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
