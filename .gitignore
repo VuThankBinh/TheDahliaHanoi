@@ -22,3 +22,7 @@ ehthumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Local nested work (not part of Voyage site)
+0.linh/
+
