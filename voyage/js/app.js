@@ -604,7 +604,7 @@
         "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=2200&q=80",
         "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=2200&q=80"
       ],
-      video: "https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4"
+      video: "https://videos.pexels.com/video-files/30574776/13092696_3840_2160_60fps.mp4"
     },
     "Hà Giang": {
       images: [
@@ -620,7 +620,7 @@
         "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=2200&q=80",
         "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2200&q=80"
       ],
-      video: "https://videos.pexels.com/video-files/1448735/1448735-uhd_2560_1440_24fps.mp4"
+      video: "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4"
     },
     "Hà Nội": {
       images: [
@@ -636,7 +636,7 @@
         "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2200&q=80",
         "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=2200&q=80"
       ],
-      video: "https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4"
+      video: "https://videos.pexels.com/video-files/30391309/13024349_3840_2160_60fps.mp4"
     }
   };
 
@@ -1211,8 +1211,12 @@
     function schedule() {
       clearTimeout(timer);
       if (reduce) return;
-      var isVideo = slides[idx].getAttribute("data-type") === "video";
-      timer = setTimeout(function () { go(idx + 1); }, isVideo ? 12000 : 6000);
+      var ms = parseInt(root.getAttribute("data-interval") || "", 10);
+      if (!(ms > 0)) {
+        var isVideo = slides[idx].getAttribute("data-type") === "video";
+        ms = isVideo ? 5000 : 6000;
+      }
+      timer = setTimeout(function () { go(idx + 1); }, ms);
     }
 
     if (prevBtn) prevBtn.addEventListener("click", function (e) {
@@ -1439,16 +1443,18 @@
         '<div class="detail-stage">' +
         '<div class="wrap detail-top">' +
         '<button type="button" class="back" id="tour-back">' + U.escapeHtml(t("back.arrow")) + "</button>" +
+        '<div class="detail-show-caption">' +
+        '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
+        '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
+        (priceNote ? " · " + U.escapeHtml(priceNote) : "") + "</p>" +
+        "</div>" +
         "</div>" +
         detailSlideshowHtml(tour) +
         '<div class="wrap detail-below">' +
         '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         '<div class="detail-body">' +
         '<div class="detail-copy">' +
-        '<h1 class="seq detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
         '<p class="lede seq">' + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
-        '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
-        (priceNote ? " · " + U.escapeHtml(priceNote) : "") + "</p>" +
         desc.map(function (line) { return "<p>" + U.escapeHtml(line) + "</p>"; }).join("") +
         '<div class="when">' +
         "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
