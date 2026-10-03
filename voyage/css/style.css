@@ -201,6 +201,52 @@ h3 { font-family: var(--sans); font-weight: 650; font-size: 20px; line-height: 1
   display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 22px;
 }
 .section-head p { margin: 8px 0 0; color: var(--body); max-width: 42ch; }
+.section-head-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.page-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.page-title-row h1 { margin: 0; }
+.desc-mode-btn {
+  min-height: 40px;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid var(--cream);
+  background: #fff;
+  color: var(--brown);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+}
+.desc-mode-btn:hover { border-color: #C4A484; }
+.desc-mode-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.desc-mode-opt {
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--body);
+  white-space: nowrap;
+}
+.desc-mode-opt.is-on {
+  background: var(--brown);
+  color: #FFF9F2;
+}
 .link-more {
   min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--cream);
   background: #fff; color: var(--brown); font-weight: 600; font-size: 14px;
@@ -640,7 +686,18 @@ select option { color: var(--ink); background: #fff; }
 .v-card .media { aspect-ratio: 16 / 10; }
 .v-card .body { padding: 16px 18px 18px; display: grid; gap: 6px; flex: 1; }
 .v-card .meta { color: var(--flower); font-size: 13px; font-weight: 600; }
-.v-card .desc { margin: 0; color: var(--body); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.v-card .desc { margin: 0; color: var(--body); font-size: 14px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.v-card .desc.is-lines,
+.card-line.is-lines {
+  display: grid;
+  gap: 4px;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.v-card .desc.is-lines .desc-line,
+.card-line.is-lines .desc-line {
+  display: block;
+}
 .v-card .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 8px; }
 .v-card .price { font-weight: 700; color: var(--brown); font-size: 16px; }
 .v-card .price span { font-weight: 500; color: var(--body); font-size: 13px; }
@@ -953,6 +1010,8 @@ select option { color: var(--ink); background: #fff; }
   display: grid;
   gap: 10px;
 }
+.detail-back-row { margin-bottom: 2px; }
+.detail-back-row .back { margin: 0; }
 .detail-show-caption {
   display: grid;
   gap: 4px;

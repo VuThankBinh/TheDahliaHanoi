@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/style.css?v=26">
 </head>
 <body data-page="tours">
   <a class="skip" href="#content" data-i18n="skip">Đến nội dung</a>
@@ -49,7 +49,15 @@
   <main id="content" class="page-pad page-tours">
     <div id="tour-list" class="wrap">
       <p class="eyebrow seq" data-i18n="nav.tours">Tour</p>
-      <h1 class="seq" data-i18n="vo.tours.page">Chọn điểm đến, giữ chỗ</h1>
+      <div class="page-title-row">
+        <h1 class="seq" data-i18n="vo.tours.page">Chọn điểm đến, giữ chỗ</h1>
+        <button type="button" class="desc-mode-btn seq" data-desc-toggle aria-label="Đổi kiểu mô tả thẻ" data-i18n-aria="desc.toggle" aria-pressed="false">
+          <span class="desc-mode-track">
+            <span class="desc-mode-opt is-on" data-for="para" data-i18n="desc.para">Đoạn</span>
+            <span class="desc-mode-opt" data-for="lines" data-i18n="desc.lines">3 dòng</span>
+          </span>
+        </button>
+      </div>
       <p class="lede seq" data-i18n="vo.tours.lede">Lọc theo điểm đến và giá. Bấm một tour để xem dịch vụ và đặt chỗ.</p>
 
       <div class="filter-bar" style="margin-top:24px">
@@ -93,7 +101,7 @@
     </div>
   </footer>
   <script src="../shared/util.js?v=3"></script>
-  <script src="js/data.js?v=2"></script>
-  <script src="js/app.js?v=24"></script>
+  <script src="js/data.js?v=3"></script>
+  <script src="js/app.js?v=26"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/style.css?v=26">
 </head>
 <body class="page-home" data-page="home">
   <a class="skip" href="#content" data-i18n="skip">Đến nội dung</a>
@@ -129,7 +129,15 @@
           <h2 data-i18n="vo.tours.h">Chọn chuyến đi</h2>
           <p data-i18n="vo.tours.p">Ba tour nổi bật — Hạ Long, Hà Giang, Sapa. Bấm thẻ để xem chi tiết và đặt.</p>
         </div>
-        <a class="link-more" href="tours.html" data-i18n="btn.filterTours">Xem tất cả tour</a>
+        <div class="section-head-actions">
+          <button type="button" class="desc-mode-btn" data-desc-toggle aria-label="Đổi kiểu mô tả thẻ" data-i18n-aria="desc.toggle" aria-pressed="false">
+            <span class="desc-mode-track">
+              <span class="desc-mode-opt is-on" data-for="para" data-i18n="desc.para">Đoạn</span>
+              <span class="desc-mode-opt" data-for="lines" data-i18n="desc.lines">3 dòng</span>
+            </span>
+          </button>
+          <a class="link-more" href="tours.html" data-i18n="btn.filterTours">Xem tất cả tour</a>
+        </div>
       </div>
       <div class="card-grid card-grid--3" id="tour-grid"></div>
       <p id="tour-empty" class="empty-line" hidden data-i18n="empty.tours">Không có tour khớp điểm đến này.</p>
@@ -254,7 +262,7 @@
   </footer>
   <a class="book-float" href="tours.html" data-i18n="nav.bookTour">Đặt tour</a>
   <script src="../shared/util.js?v=3"></script>
-  <script src="js/data.js?v=2"></script>
-  <script src="js/app.js?v=24"></script>
+  <script src="js/data.js?v=3"></script>
+  <script src="js/app.js?v=26"></script>
 </body>
 </html>

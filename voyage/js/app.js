@@ -5,6 +5,7 @@
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
   var PAY_KEY = "dahliaVoyagePay";
+  var DESC_MODE_KEY = "dahlia-desc-mode";
 
   var DEST_LABEL = {
     "Ninh Bình": { vi: "Ninh Bình", en: "Ninh Binh" },
@@ -81,6 +82,9 @@
     "vo.tours.k": { vi: "Tour nổi bật", en: "Featured tours" },
     "vo.tours.h": { vi: "Chọn chuyến đi", en: "Choose a trip" },
     "vo.tours.p": { vi: "Ba tour nổi bật — Hạ Long, Hà Giang, Sapa. Bấm thẻ để xem chi tiết và đặt.", en: "Three featured trips — Ha Long, Ha Giang, Sapa. Open a card to see details and book." },
+    "desc.para": { vi: "Đoạn", en: "Paragraph" },
+    "desc.lines": { vi: "3 dòng", en: "3 lines" },
+    "desc.toggle": { vi: "Đổi kiểu mô tả thẻ", en: "Change card blurb layout" },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
     "vo.dest.p": { vi: "Ba tour nổi bật tại điểm đến này.", en: "Top three tours for this destination." },
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
@@ -570,10 +574,91 @@
     return true;
   }
 
+  function getDescMode() {
+    try {
+      return localStorage.getItem(DESC_MODE_KEY) === "lines" ? "lines" : "para";
+    } catch (err) {
+      return "para";
+    }
+  }
+
+  function setDescMode(mode) {
+    mode = mode === "lines" ? "lines" : "para";
+    try { localStorage.setItem(DESC_MODE_KEY, mode); } catch (err) {}
+    document.documentElement.setAttribute("data-desc-mode", mode);
+    refreshDescNodes(document);
+    syncDescModeButtons(document);
+  }
+
+  function splitCardLines(text) {
+    var parts = String(text || "").trim().split(/(?<=[.!?…])\s+/).filter(Boolean);
+    if (parts.length <= 3) return parts;
+    return [parts[0], parts[1], parts.slice(2).join(" ")];
+  }
+
+  function formatCardLineHtml(text, mode) {
+    mode = mode || getDescMode();
+    if (mode !== "lines") return U.escapeHtml(text);
+    return splitCardLines(text).map(function (line) {
+      return '<span class="desc-line">' + U.escapeHtml(line) + "</span>";
+    }).join("");
+  }
+
+  function refreshDescNodes(root) {
+    var mode = getDescMode();
+    (root || document).querySelectorAll("[data-card-line]").forEach(function (el) {
+      var raw = el.getAttribute("data-card-line") || "";
+      el.innerHTML = formatCardLineHtml(raw, mode);
+      el.classList.toggle("is-lines", mode === "lines");
+    });
+  }
+
+  function syncDescModeButtons(root) {
+    var mode = getDescMode();
+    (root || document).querySelectorAll("[data-desc-toggle]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", mode === "lines" ? "true" : "false");
+      btn.querySelectorAll(".desc-mode-opt").forEach(function (opt) {
+        opt.classList.toggle("is-on", opt.getAttribute("data-for") === mode);
+      });
+    });
+  }
+
+  function descModeToggleHtml() {
+    var mode = getDescMode();
+    return '<button type="button" class="desc-mode-btn" data-desc-toggle aria-label="' +
+      U.escapeHtml(t("desc.toggle")) + '" aria-pressed="' + (mode === "lines" ? "true" : "false") + '">' +
+      '<span class="desc-mode-track">' +
+      '<span class="desc-mode-opt' + (mode === "para" ? " is-on" : "") + '" data-for="para">' +
+      U.escapeHtml(t("desc.para")) + "</span>" +
+      '<span class="desc-mode-opt' + (mode === "lines" ? " is-on" : "") + '" data-for="lines">' +
+      U.escapeHtml(t("desc.lines")) + "</span>" +
+      "</span></button>";
+  }
+
+  function initDescModeToggle() {
+    document.documentElement.setAttribute("data-desc-mode", getDescMode());
+    syncDescModeButtons(document);
+    if (document.documentElement.dataset.descToggleReady === "1") return;
+    document.documentElement.dataset.descToggleReady = "1";
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-desc-toggle]");
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      var opt = e.target.closest(".desc-mode-opt");
+      var next = opt && opt.getAttribute("data-for")
+        ? opt.getAttribute("data-for")
+        : (getDescMode() === "lines" ? "para" : "lines");
+      setDescMode(next);
+    });
+  }
+
   function tourCardHtml(tour, href) {
     var note = field(tour, "priceNote")
       ? '<p class="price-note">' + U.escapeHtml(field(tour, "priceNote")) + "</p>"
       : "";
+    var line = field(tour, "cardLine");
+    var mode = getDescMode();
     return '<a class="v-card reveal" href="' + href + '">' +
       '<div class="media">' +
       '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
@@ -583,7 +668,8 @@
       '<div class="body">' +
       '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
-      '<p class="desc">' + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
+      '<p class="desc' + (mode === "lines" ? " is-lines" : "") + '" data-card-line="' + U.escapeHtml(line) + '">' +
+      formatCardLineHtml(line, mode) + "</p>" +
       note +
       '<div class="foot-row"><span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>" +
       '<span class="link-more" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + "</span></div>" +
@@ -1442,7 +1528,10 @@
       detail.innerHTML =
         '<div class="detail-stage">' +
         '<div class="wrap detail-top">' +
+        '<div class="page-title-row detail-back-row">' +
         '<button type="button" class="back" id="tour-back">' + U.escapeHtml(t("back.arrow")) + "</button>" +
+        descModeToggleHtml() +
+        "</div>" +
         '<div class="detail-show-caption">' +
         '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
         '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
@@ -1454,7 +1543,9 @@
         '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         '<div class="detail-body">' +
         '<div class="detail-copy">' +
-        '<p class="lede seq">' + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
+        '<p class="lede seq card-line' + (getDescMode() === "lines" ? " is-lines" : "") +
+        '" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +
+        formatCardLineHtml(field(tour, "cardLine")) + "</p>" +
         desc.map(function (line) { return "<p>" + U.escapeHtml(line) + "</p>"; }).join("") +
         '<div class="when">' +
         "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
@@ -1748,6 +1839,7 @@
 
   applyVoI18n(document);
   upgradeLangFlags();
+  initDescModeToggle();
 
   if (page === "home") renderHome();
   if (page === "tours") initTours();
@@ -1758,6 +1850,7 @@
   U.initMenu();
   U.initSolidHeader();
   upgradeLangFlags();
+  syncDescModeButtons(document);
   U.bindImages(document);
   U.initMotion();
 })();
