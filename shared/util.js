@@ -601,7 +601,14 @@
   }
 
   function prepareLogos() {
-    document.querySelectorAll("img.logo:not(.logo-partner)").forEach(function (img) {
+    function fadeIn(img) {
+      function ready() { img.classList.add("is-ready"); }
+      if (img.complete && img.naturalWidth) ready();
+      else img.addEventListener("load", ready);
+      img.addEventListener("error", ready);
+    }
+
+    document.querySelectorAll("img.logo-dahlia").forEach(function (img) {
       function apply() {
         if (img.dataset.cut === "1") {
           img.classList.add("is-ready");
@@ -621,12 +628,8 @@
       else img.addEventListener("load", apply);
       img.addEventListener("error", function () { img.classList.add("is-ready"); });
     });
-    document.querySelectorAll("img.logo-partner").forEach(function (img) {
-      function ready() { img.classList.add("is-ready"); }
-      if (img.complete && img.naturalWidth) ready();
-      else img.addEventListener("load", ready);
-      img.addEventListener("error", ready);
-    });
+
+    document.querySelectorAll("img.logo:not(.logo-dahlia), img.logo-partner:not(.logo-dahlia)").forEach(fadeIn);
   }
 
   function initMenu() {
