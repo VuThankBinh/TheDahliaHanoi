@@ -85,6 +85,8 @@
     "desc.para": { vi: "Đoạn", en: "Paragraph" },
     "desc.lines": { vi: "3 dòng", en: "3 lines" },
     "desc.toggle": { vi: "Đổi kiểu mô tả thẻ", en: "Change card blurb layout" },
+    "partner.label": { vi: "Đối tác", en: "Partner" },
+    "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
     "vo.dest.p": { vi: "Ba tour nổi bật tại điểm đến này.", en: "Top three tours for this destination." },
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
@@ -659,11 +661,11 @@
       : "";
     var line = field(tour, "cardLine");
     var mode = getDescMode();
-    return '<a class="v-card reveal" href="' + href + '">' +
+    return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
       '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
       '<span class="price-badge">' + U.money(tour.price) + "</span>" +
-      '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
+      '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
       "</div>" +
       '<div class="body">' +
       '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
@@ -763,12 +765,13 @@
   function frameHtml(slide, realIndex, opts) {
     opts = opts || {};
     var media = slide.type === "video"
-      ? '<video muted playsinline loop preload="metadata" poster="' + U.escapeHtml(slide.poster || "") + '" aria-label="' + U.escapeHtml(slide.alt || "") + '">' +
+      ? '<video muted playsinline loop preload="metadata" poster="' + U.escapeHtml(slide.poster || "") + '" aria-label="' + U.escapeHtml(slide.alt || "") + '" title="' + U.escapeHtml(slide.alt || "") + '">' +
         '<source src="' + U.escapeHtml(slide.src) + '" type="video/mp4"></video>'
-      : '<img src="' + U.escapeHtml(slide.src) + '" alt="' + U.escapeHtml(slide.alt || "") + '"' +
+      : '<img src="' + U.escapeHtml(slide.src) + '" alt="' + U.escapeHtml(slide.alt || "") + '" title="' + U.escapeHtml(slide.alt || "") + '"' +
         (opts.priority ? ' fetchpriority="high"' : ' loading="lazy"') + ">";
     return '<article class="film-frame' + (opts.active ? " is-active" : "") + '" data-type="' +
-      U.escapeHtml(slide.type || "image") + '" data-real="' + realIndex + '">' +
+      U.escapeHtml(slide.type || "image") + '" data-real="' + realIndex + '"' +
+      (slide.alt ? ' title="' + U.escapeHtml(slide.alt) + '"' : "") + '>' +
       '<div class="film-frame-inner">' + media + "</div></article>";
   }
 
@@ -1643,7 +1646,7 @@
         '<button type="button" class="back" id="book-back">' + U.escapeHtml(t("back.arrow")) + "</button>" +
         '<div class="book-layout">' +
         '<div class="book-summary reveal">' +
-        '<div class="media book-photo"><img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '"></div>' +
+        '<div class="media book-photo"><img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '"></div>' +
         '<p class="eyebrow">' + U.escapeHtml(destLabel(tour.destination)) + "</p>" +
         "<h1>" + U.escapeHtml(field(tour, "name")) + "</h1>" +
         '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +

@@ -562,7 +562,7 @@
   function successText() { return t("success.long"); }
 
   function bindImages(root) {
-    (root || document).querySelectorAll("img:not(.logo)").forEach(function (img) {
+    (root || document).querySelectorAll("img:not(.logo):not(.logo-partner)").forEach(function (img) {
       if (img.dataset.bound) return;
       img.dataset.bound = "1";
       img.addEventListener("error", function () { img.remove(); });
@@ -601,7 +601,7 @@
   }
 
   function prepareLogos() {
-    document.querySelectorAll("img.logo").forEach(function (img) {
+    document.querySelectorAll("img.logo:not(.logo-partner)").forEach(function (img) {
       function apply() {
         if (img.dataset.cut === "1") {
           img.classList.add("is-ready");
@@ -620,6 +620,12 @@
       if (img.complete) apply();
       else img.addEventListener("load", apply);
       img.addEventListener("error", function () { img.classList.add("is-ready"); });
+    });
+    document.querySelectorAll("img.logo-partner").forEach(function (img) {
+      function ready() { img.classList.add("is-ready"); }
+      if (img.complete && img.naturalWidth) ready();
+      else img.addEventListener("load", ready);
+      img.addEventListener("error", ready);
     });
   }
 
