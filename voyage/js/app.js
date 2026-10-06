@@ -1103,30 +1103,6 @@
     return payload + crc16(payload);
   }
 
-  function buffetHtml(menu) {
-    if (!menu) return "";
-    function group(g) {
-      return '<section class="buffet-group"><h3>' + U.escapeHtml(g.name) + "</h3><ul>" +
-        g.items.map(function (item) {
-          var dish = U.lang() === "en" ? item.en : item.vi;
-          var veg = item.veg
-            ? '<span class="veg">' + U.escapeHtml(U.lang() === "en" ? (item.vegEn || item.veg) : item.veg) + "</span>"
-            : "";
-          return "<li><span class=\"dish\">" + U.escapeHtml(dish) + "</span>" + veg + "</li>";
-        }).join("") +
-        "</ul></section>";
-    }
-    var cols = (menu.columns || []).map(function (groups) {
-      return "<div>" + groups.map(group).join("") + "</div>";
-    }).join("");
-    return '<section class="buffet" aria-label="' + U.escapeHtml(field(menu, "title")) + '">' +
-      '<div class="buffet-head"><h2>' + U.escapeHtml(field(menu, "title")) + "</h2></div>" +
-      '<div class="buffet-cols">' + cols + "</div>" +
-      '<p class="buffet-note">' + U.escapeHtml(field(menu, "note")) + "</p>" +
-      '<p class="buffet-note">' + U.escapeHtml(field(menu, "vegNote")) + "</p>" +
-      "</section>";
-  }
-
   function quoteState(tour, guests) {
     var count = parseInt(guests, 10) || 2;
     var total = tour.price * count;
@@ -1808,7 +1784,6 @@
         (serviceNote ? '<p class="hint">' + U.escapeHtml(serviceNote) + "</p>" : "") +
         "<h3>" + U.escapeHtml(t("svc.out")) + "</h3>" + listHtml(excluded) +
         "<h3>" + U.escapeHtml(t("svc.offers")) + "</h3>" + listHtml(offers) +
-        buffetHtml(tour.buffetMenu) +
         "</div>" +
         '<aside class="stay-panel book-aside" id="tour-book">' + bookingFormHtml(tour, { guests: guests, date: date }) +
         "</aside>" +
