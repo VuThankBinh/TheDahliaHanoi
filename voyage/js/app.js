@@ -8,10 +8,38 @@
   var DESC_MODE_KEY = "dahlia-desc-mode";
 
   var DEST_LABEL = {
+    "ha-long": { vi: "Hạ Long", en: "Ha Long" },
+    "ninh-binh": { vi: "Ninh Bình", en: "Ninh Binh" },
+    "ha-noi": { vi: "Hà Nội", en: "Hanoi" },
+    // legacy name keys (still resolve if old links appear)
+    "Hạ Long": { vi: "Hạ Long", en: "Ha Long" },
     "Ninh Bình": { vi: "Ninh Bình", en: "Ninh Binh" },
-    "Hà Nội": { vi: "Hà Nội", en: "Hanoi" },
-    "Hạ Long": { vi: "Hạ Long", en: "Ha Long" }
+    "Hà Nội": { vi: "Hà Nội", en: "Hanoi" }
   };
+
+  var DEST_NAME_TO_ID = {
+    "Hạ Long": "ha-long",
+    "Ninh Bình": "ninh-binh",
+    "Hà Nội": "ha-noi"
+  };
+
+  function resolveDestId(keyOrId) {
+    if (!keyOrId || keyOrId === "all") return keyOrId;
+    if (DATA.destinations && DATA.destinations[keyOrId]) return keyOrId;
+    if (DEST_NAME_TO_ID[keyOrId]) return DEST_NAME_TO_ID[keyOrId];
+    var dests = DATA.destinations || {};
+    var keys = Object.keys(dests);
+    for (var i = 0; i < keys.length; i++) {
+      var d = dests[keys[i]];
+      if (d && (d.id === keyOrId || d.name === keyOrId || d.nameEn === keyOrId)) return keys[i];
+    }
+    return keyOrId;
+  }
+
+  function destRecord(keyOrId) {
+    var id = resolveDestId(keyOrId);
+    return (DATA.destinations && DATA.destinations[id]) || {};
+  }
 
   var VO = {
     "nav.bookStay": { vi: "Đặt tour", en: "Book a tour" },
@@ -46,6 +74,14 @@
     "rev5.meta": { vi: "Đức · Làng hương & Hà Nội · cuối tuần trước", en: "Duc · Incense village & Hanoi · last weekend" },
     "rev5.body": { vi: "Quang Phú Cầu lúc 10 giờ, bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que. Về nội thành ăn Mesdames Linh rồi Hoa Lò — đúng lịch brochure.", en: "Quang Phu Cau at 10 — red and yellow incense stacked like walls. They let us dye one stick. Back in the city for Mesdames Linh then Hoa Lo — matched the brochure." },
     "itin.h": { vi: "Lịch trình", en: "Itinerary" },
+    "stars.label": { vi: "Hạng", en: "Tier" },
+    "stars.of": { vi: "{n} trên 5 sao", en: "{n} out of 5 stars" },
+    "stars.chip": { vi: "Hạng sao", en: "Star tier" },
+    "chip.anyStars": { vi: "Mọi hạng", en: "Any tier" },
+    "chip.stars5": { vi: "5 sao", en: "5 stars" },
+    "chip.stars4": { vi: "Từ 4 sao", en: "4+ stars" },
+    "chip.stars3": { vi: "Từ 3 sao", en: "3+ stars" },
+    "dest.eyebrow": { vi: "Điểm đến", en: "Destination" },
     "star.4": { vi: "4 trên 5 sao", en: "4 out of 5 stars" },
     "star.5": { vi: "5 trên 5 sao", en: "5 out of 5 stars" },
     "detail.start": { vi: "Ngày bắt đầu", en: "Start date" },
@@ -87,7 +123,7 @@
     "partner.label": { vi: "Đối tác", en: "Partner" },
     "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
-    "vo.dest.p": { vi: "Ba tour nổi bật tại điểm đến này.", en: "Top three tours for this destination." },
+    "vo.dest.p": { vi: "Tour nổi bật tại điểm đến này — xem tất cả trên trang Tour.", en: "Featured tours for this destination — see the full list on Tours." },
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
     "vo.hero.prev": { vi: "Slide trước", en: "Previous slide" },
     "vo.hero.next": { vi: "Slide sau", en: "Next slide" },
@@ -116,7 +152,7 @@
     "contact.map.open": { vi: "Mở trên Google Maps", en: "Open in Google Maps" },
     "vo.tours.title": { vi: "Tour — Mixi Voyage · The Dahlia Hanoi", en: "Tours — Mixi Voyage · The Dahlia Hanoi" },
     "vo.tours.page": { vi: "Chọn điểm đến, giữ chỗ", en: "Pick a destination, hold a place" },
-    "vo.tours.lede": { vi: "Lọc theo điểm đến và giá. Bấm một tour để xem dịch vụ và đặt chỗ.", en: "Filter by destination and price. Open a tour for services and booking." },
+    "vo.tours.lede": { vi: "Lọc theo điểm đến, hạng sao và giá. Mỗi địa điểm có tiêu đề riêng ở đầu nhóm tour.", en: "Filter by destination, star tier, and price. Each place opens with its own title above the tours." },
     "vo.book.title": { vi: "Đặt tour — Mixi Voyage · The Dahlia Hanoi", en: "Book a tour — Mixi Voyage · The Dahlia Hanoi" },
     "vo.book.h": { vi: "Chọn tour rồi giữ chỗ", en: "Choose a tour, then hold a place" },
     "vo.contact.title": { vi: "Liên hệ — Mixi Voyage · The Dahlia Hanoi", en: "Contact — Mixi Voyage · The Dahlia Hanoi" },
@@ -211,18 +247,81 @@
   }
 
   function destLabel(key) {
-    var row = DEST_LABEL[key];
+    var id = resolveDestId(key);
+    var rec = destRecord(id);
+    if (rec.name || rec.nameEn) {
+      return U.lang() === "en" ? (rec.nameEn || rec.name || id) : (rec.name || rec.nameEn || id);
+    }
+    var row = DEST_LABEL[id] || DEST_LABEL[key];
     if (!row) return key;
     return U.lang() === "en" ? row.en : row.vi;
   }
 
+  function destMeta(key) {
+    var id = resolveDestId(key);
+    var meta = destRecord(id);
+    var title = U.lang() === "en" && meta.titleEn ? meta.titleEn : (meta.title || destLabel(id));
+    var lead = U.lang() === "en" && meta.leadEn ? meta.leadEn : (meta.lead || "");
+    return { id: id, title: title, lead: lead };
+  }
+
+  function tourStars(tour) {
+    var n = parseInt(tour && tour.stars, 10);
+    if (!(n >= 1 && n <= 5)) n = 0;
+    return n;
+  }
+
+  function starsHtml(tour, opts) {
+    opts = opts || {};
+    var n = tourStars(tour);
+    if (!n) return "";
+    var full = "";
+    var i;
+    for (i = 1; i <= 5; i++) {
+      full += i <= n ? "★" : '<span class="star-off">★</span>';
+    }
+    var label = t("stars.of", { n: n });
+    var tier = opts.showTier
+      ? '<span class="stars-tier">' + U.escapeHtml(t("stars.label")) + " · " + n + "</span>"
+      : "";
+    return '<p class="tour-stars' + (opts.className ? " " + opts.className : "") +
+      '" aria-label="' + U.escapeHtml(label) + '">' +
+      '<span class="stars-glyphs" aria-hidden="true">' + full + "</span>" +
+      tier +
+      "</p>";
+  }
+
+  function destHeadHtml(destKey, opts) {
+    opts = opts || {};
+    var meta = destMeta(destKey);
+    var more = opts.moreHref
+      ? '<a class="link-more" href="' + U.escapeHtml(opts.moreHref) + '">' +
+        U.escapeHtml(t("vo.dest.more")) + "</a>"
+      : "";
+    return '<div class="section-head dest-head">' +
+      "<div>" +
+      '<p class="eyebrow">' + U.escapeHtml(t("dest.eyebrow")) + "</p>" +
+      "<h2>" + U.escapeHtml(meta.title) + "</h2>" +
+      (meta.lead ? "<p>" + U.escapeHtml(meta.lead) + "</p>" : "") +
+      "</div>" + more +
+      "</div>";
+  }
+
   function destinations() {
+    var dests = DATA.destinations || {};
+    var keys = Object.keys(dests);
+    if (keys.length) {
+      return keys.slice().sort(function (a, b) {
+        return destLabel(a).localeCompare(destLabel(b), "vi");
+      });
+    }
     var seen = {};
     var list = [];
     tours.forEach(function (tour) {
-      if (!seen[tour.destination]) {
-        seen[tour.destination] = true;
-        list.push(tour.destination);
+      var id = resolveDestId(tour.destination);
+      if (!seen[id]) {
+        seen[id] = true;
+        list.push(id);
       }
     });
     return list;
@@ -660,14 +759,22 @@
       : "";
     var line = field(tour, "cardLine");
     var mode = getDescMode();
+    var stars = starsHtml(tour);
     return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
       '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
+      (tourStars(tour)
+        ? '<span class="stars-badge" aria-label="' + U.escapeHtml(t("stars.of", { n: tourStars(tour) })) + '">' +
+          "★".repeat(tourStars(tour)) + "</span>"
+        : "") +
       '<span class="price-badge">' + U.money(tour.price) + "</span>" +
       '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
       "</div>" +
       '<div class="body">' +
+      '<div class="card-meta-row">' +
+      stars +
       '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
+      "</div>" +
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
       '<p class="desc' + (mode === "lines" ? " is-lines" : "") + '" data-card-line="' + U.escapeHtml(line) + '">' +
       formatCardLineHtml(line, mode) + "</p>" +
@@ -700,32 +807,24 @@
       }).join("") + "</ol></section>";
   }
 
-  var DEST_MEDIA = {
-    "Ninh Bình": {
-      images: [
-        "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=2200&q=80"
-      ],
-      video: "https://videos.pexels.com/video-files/30574776/13092696_3840_2160_60fps.mp4"
-    },
-    "Hà Nội": {
-      images: [
-        "https://images.unsplash.com/photo-1509023464722-18d996393ca8?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1555921015-5532091f6026?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=2200&q=80"
-      ],
-      video: "https://videos.pexels.com/video-files/2491284/2491284-uhd_2560_1440_24fps.mp4"
-    },
-    "Hạ Long": {
-      images: [
-        "https://images.unsplash.com/photo-1570366583862-f91883984fde?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1559599746-8823b38544c6?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2200&q=80"
-      ],
-      video: "https://videos.pexels.com/video-files/30391309/13024349_3840_2160_60fps.mp4"
-    }
-  };
+  var DEST_MEDIA = (function () {
+    var map = {};
+    var dests = (DATA.destinations) || {};
+    Object.keys(dests).forEach(function (key) {
+      var d = dests[key] || {};
+      var images = (d.media || []).map(function (item) {
+        return typeof item === "string" ? item : (item && item.src) || "";
+      }).filter(Boolean);
+      map[key] = { images: images, video: d.video || "", media: d.media || [] };
+    });
+    return map;
+  })();
+
+  function mediaAlt(item, fallback) {
+    if (!item) return fallback || "";
+    if (typeof item === "string") return fallback || "";
+    return (U.lang() === "en" && item.altEn) ? item.altEn : (item.alt || fallback || "");
+  }
 
   function tourSlides(tour) {
     var name = field(tour, "name");
@@ -736,20 +835,27 @@
           type: item.type || "image",
           src: item.src,
           poster: item.poster || tour.image,
-          alt: item.alt || name
+          alt: mediaAlt(item, name)
         });
       });
       return slides;
     }
-    var pack = DEST_MEDIA[tour.destination] || { images: [], video: "" };
+    var pack = DEST_MEDIA[resolveDestId(tour.destination)] || { images: [], video: "", media: [] };
     var seen = {};
-    function pushImage(src) {
+    function pushImage(src, alt) {
       if (!src || seen[src]) return;
       seen[src] = true;
-      slides.push({ type: "image", src: src, alt: name });
+      slides.push({ type: "image", src: src, alt: alt || name });
     }
-    pushImage(tour.image);
-    (pack.images || []).forEach(pushImage);
+    pushImage(tour.image, name);
+    if (pack.media && pack.media.length) {
+      pack.media.forEach(function (item) {
+        var src = typeof item === "string" ? item : item.src;
+        pushImage(src, mediaAlt(item, name));
+      });
+    } else {
+      (pack.images || []).forEach(function (src) { pushImage(src, name); });
+    }
     if (pack.video) {
       slides.push({
         type: "video",
@@ -1232,20 +1338,83 @@
   }
 
   function toursForDestination(dest) {
-    return tours.filter(function (tour) { return tour.destination === dest; }).slice(0, 3);
+    var destId = resolveDestId(dest);
+    var list = tours
+      .filter(function (tour) { return resolveDestId(tour.destination) === destId; })
+      .slice()
+      .sort(function (a, b) { return tourStars(b) - tourStars(a); });
+    // Homepage teaser: keep three cards; Ninh Binh has a full catalog on tours.html
+    return list.slice(0, destId === "ninh-binh" ? 6 : 3);
   }
 
-  function initHeroSlideshow() {
-    var root = document.getElementById("hero-slideshow");
+  function destMediaSlides(destKey) {
+    var pack = DEST_MEDIA[destKey] || { images: [], video: "", media: [] };
+    var label = destLabel(destKey);
+    var slides = [];
+    var poster = (pack.images && pack.images[0]) || "";
+    if (pack.video) {
+      slides.push({ type: "video", src: pack.video, poster: poster, alt: label });
+    }
+    if (pack.media && pack.media.length) {
+      pack.media.forEach(function (item) {
+        var src = typeof item === "string" ? item : item.src;
+        if (!src) return;
+        slides.push({ type: (item && item.type) || "image", src: src, alt: mediaAlt(item, label) });
+      });
+    } else {
+      (pack.images || []).forEach(function (src) {
+        slides.push({ type: "image", src: src, alt: label });
+      });
+    }
+    return slides;
+  }
+
+  function destHeroHtml(destKey) {
+    var meta = destMeta(destKey);
+    var slides = destMediaSlides(destKey);
+    if (!slides.length) return "";
+    var slidesHtml = slides.map(function (slide, i) {
+      var media = slide.type === "video"
+        ? '<video muted playsinline loop autoplay preload="auto" poster="' + U.escapeHtml(slide.poster || "") +
+          '" aria-label="' + U.escapeHtml(slide.alt || "") + '">' +
+          '<source src="' + U.escapeHtml(slide.src) + '" type="video/mp4"></video>'
+        : '<img src="' + U.escapeHtml(slide.src) + '" alt="' + U.escapeHtml(slide.alt || "") + '" title="' +
+          U.escapeHtml(slide.alt || "") + '"' +
+          (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + ">";
+      return '<div class="hero-slide' + (i === 0 ? " is-active" : "") + '" data-type="' +
+        U.escapeHtml(slide.type || "image") + '">' + media + "</div>";
+    }).join("");
+    return '<section class="hero dest-page-hero" aria-label="' + U.escapeHtml(meta.title) + '">' +
+      '<div class="hero-media hero-slideshow" id="dest-hero-slideshow" aria-roledescription="carousel" data-interval="5000">' +
+      '<div class="hero-slides">' + slidesHtml + "</div>" +
+      '<div class="hero-scrim" aria-hidden="true"></div>' +
+      "</div>" +
+      '<div class="hero-copy">' +
+      '<p class="eyebrow">' + U.escapeHtml(t("dest.eyebrow")) + "</p>" +
+      "<h1>" + U.escapeHtml(meta.title) + "</h1>" +
+      (meta.lead ? '<p class="lede">' + U.escapeHtml(meta.lead) + "</p>" : "") +
+      "</div>" +
+      '<div class="hero-controls" id="dest-hero-controls">' +
+      '<button type="button" class="hero-nav hero-prev" aria-label="Slide trước">' +
+      '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</button>" +
+      '<div class="hero-dots" role="tablist" aria-label="Chọn slide"></div>' +
+      '<button type="button" class="hero-nav hero-next" aria-label="Slide sau">' +
+      '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</button>" +
+      "</div></section>";
+  }
+
+  function bindHeroSlideshow(root) {
     if (!root || root.dataset.ready === "1") return;
     root.dataset.ready = "1";
     var slides = Array.prototype.slice.call(root.querySelectorAll(".hero-slide"));
     if (!slides.length) return;
     var hero = root.closest(".hero") || document;
-    var controls = document.getElementById("hero-controls") || hero.querySelector(".hero-controls");
-    var dotsHost = (controls && controls.querySelector(".hero-dots")) || document.querySelector(".hero-dots");
-    var prevBtn = (controls && controls.querySelector(".hero-prev")) || document.querySelector(".hero-prev");
-    var nextBtn = (controls && controls.querySelector(".hero-next")) || document.querySelector(".hero-next");
+    var controls = hero.querySelector(".hero-controls") || document.getElementById("hero-controls");
+    var dotsHost = (controls && controls.querySelector(".hero-dots")) || null;
+    var prevBtn = (controls && controls.querySelector(".hero-prev")) || null;
+    var nextBtn = (controls && controls.querySelector(".hero-next")) || null;
     var idx = 0;
     var timer = null;
     var reduce = !!(U.reduce || window.matchMedia("(prefers-reduced-motion: reduce)").matches);
@@ -1326,6 +1495,46 @@
     schedule();
   }
 
+  function homeHeroSlideHtml(slide, index) {
+    var alt = mediaAlt(slide, slide.place || "");
+    var poster = slide.poster || "";
+    if (slide.type === "video") {
+      var sources = (slide.sources && slide.sources.length)
+        ? slide.sources
+        : (slide.src ? [slide.src] : []);
+      var sourcesHtml = sources.map(function (src, i) {
+        return '<source src="' + U.escapeHtml(src) + '" type="video/mp4">';
+      }).join("");
+      return '<div class="hero-slide' + (index === 0 ? " is-active" : "") + '" data-type="video"' +
+        (slide.place ? ' data-place="' + U.escapeHtml(slide.place) + '"' : "") + ">" +
+        '<video' + (index === 0 ? ' class="rise-hero" autoplay preload="auto"' : ' preload="metadata"') +
+        ' muted playsinline loop poster="' + U.escapeHtml(poster) + '" aria-label="' + U.escapeHtml(alt) +
+        '" title="' + U.escapeHtml(alt) + '">' + sourcesHtml + "</video></div>";
+    }
+    return '<div class="hero-slide' + (index === 0 ? " is-active" : "") + '" data-type="image"' +
+      (slide.place ? ' data-place="' + U.escapeHtml(slide.place) + '"' : "") + ">" +
+      '<img' + (index === 0 ? ' class="rise-hero" fetchpriority="high"' : ' loading="lazy"') +
+      ' src="' + U.escapeHtml(slide.src || "") + '" alt="' + U.escapeHtml(alt) +
+      '" title="' + U.escapeHtml(alt) + '"></div>';
+  }
+
+  function fillHomeHeroFromData() {
+    var root = document.getElementById("hero-slideshow");
+    if (!root) return;
+    var cfg = DATA.hero || {};
+    var slides = cfg.slides || [];
+    if (!slides.length) return;
+    if (cfg.interval) root.setAttribute("data-interval", String(cfg.interval));
+    var host = root.querySelector(".hero-slides");
+    if (!host) return;
+    host.innerHTML = slides.map(homeHeroSlideHtml).join("");
+  }
+
+  function initHeroSlideshow() {
+    fillHomeHeroFromData();
+    bindHeroSlideshow(document.getElementById("hero-slideshow"));
+  }
+
   function upgradeLangFlags() {
     var FLAG_VI =
       '<svg class="lang-flag" viewBox="0 0 30 20" width="22" height="15" aria-hidden="true" focusable="false" shape-rendering="crispEdges">' +
@@ -1366,7 +1575,7 @@
     if (saved.guests) bar.guests.value = saved.guests;
 
     var q = U.query();
-    if (q.get("dest")) destSelect.value = q.get("dest");
+    if (q.get("dest")) destSelect.value = resolveDestId(q.get("dest"));
     if (q.get("date")) bar.date.value = q.get("date");
     if (q.get("guests")) bar.guests.value = q.get("guests");
 
@@ -1375,22 +1584,23 @@
 
     bar.addEventListener("submit", function (e) {
       e.preventDefault();
+      var destId = resolveDestId(destSelect.value || "");
       writeSearch({
-        destination: destSelect.value,
+        destination: destId,
         date: bar.date.value,
         guests: bar.guests.value
       });
       paint();
-      var dest = destSelect.value;
+      var dest = destId;
       var target = dest
-        ? document.getElementById("dest-" + dest.replace(/\s+/g, "-").toLowerCase())
+        ? document.getElementById("dest-" + dest)
         : document.getElementById("tour");
       if (target) target.scrollIntoView({ behavior: U.reduce ? "auto" : "smooth", block: "start" });
     });
 
     function paint() {
-      fillDestSelect(destSelect, destSelect.value);
-      var dest = destSelect.value;
+      fillDestSelect(destSelect, resolveDestId(destSelect.value || "") || destSelect.value);
+      var dest = resolveDestId(destSelect.value || "") || destSelect.value;
       var featured = featuredTours();
       var grid = document.getElementById("tour-grid");
       var empty = document.getElementById("tour-empty");
@@ -1406,15 +1616,9 @@
         var dests = destinations();
         if (dest) dests = dests.filter(function (d) { return d === dest; });
         host.innerHTML = dests.map(function (d) {
-          var slug = d.replace(/\s+/g, "-").toLowerCase();
           var items = toursForDestination(d);
-          return '<section class="section wrap dest-block" id="dest-' + U.escapeHtml(slug) + '">' +
-            '<div class="section-head"><div>' +
-            '<p class="eyebrow" data-i18n="vo.dest.k">' + U.escapeHtml(t("vo.dest.k")) + "</p>" +
-            "<h2>" + U.escapeHtml(destLabel(d)) + "</h2>" +
-            '<p data-i18n="vo.dest.p">' + U.escapeHtml(t("vo.dest.p")) + "</p>" +
-            '</div><a class="link-more" href="tours.html?dest=' + encodeURIComponent(d) + '" data-i18n="vo.dest.more">' +
-            U.escapeHtml(t("vo.dest.more")) + "</a></div>" +
+          return '<section class="section wrap dest-block" id="dest-' + U.escapeHtml(d) + '">' +
+            destHeadHtml(d, { moreHref: "tours.html?dest=" + encodeURIComponent(d) }) +
             '<div class="card-grid card-grid--3">' +
             items.map(function (tour) {
               return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
@@ -1461,12 +1665,56 @@
     var detail = document.getElementById("tour-detail");
     var cards = document.getElementById("tour-cards");
     var empty = document.getElementById("tour-empty");
-    var state = { dest: "all", price: "all" };
+    var heroHost = document.getElementById("dest-hero-host");
+    var main = document.getElementById("content");
+    var intro = document.getElementById("tours-intro");
+    var destToolbar = document.getElementById("tours-dest-toolbar");
+    var state = { dest: "all", price: "all", stars: "all" };
     var currentId = null;
+    var lastHeroDest = null;
     var saved = readSearch();
     var q = U.query();
-    if (q.get("dest")) state.dest = q.get("dest");
-    else if (saved.destination) state.dest = saved.destination;
+    if (q.get("dest")) state.dest = resolveDestId(q.get("dest"));
+    else if (saved.destination) state.dest = resolveDestId(saved.destination);
+    if (q.get("stars")) state.stars = q.get("stars");
+
+    function listUrl() {
+      var params = new URLSearchParams();
+      if (state.dest !== "all") params.set("dest", state.dest);
+      if (state.stars !== "all") params.set("stars", state.stars);
+      var qs = params.toString();
+      return qs ? "tours.html?" + qs : "tours.html";
+    }
+
+    function syncListUrl() {
+      if (currentId || queryId()) return;
+      history.replaceState({}, "", listUrl());
+    }
+
+    function updateDestHero() {
+      if (!heroHost || !main) return;
+      if (state.dest === "all" || !DEST_MEDIA[state.dest]) {
+        lastHeroDest = null;
+        heroHost.hidden = true;
+        heroHost.innerHTML = "";
+        main.classList.remove("has-dest-hero");
+        if (intro) intro.hidden = false;
+        if (destToolbar) destToolbar.hidden = true;
+        return;
+      }
+      main.classList.add("has-dest-hero");
+      if (intro) intro.hidden = true;
+      if (destToolbar) destToolbar.hidden = false;
+      if (lastHeroDest === state.dest && heroHost.querySelector("#dest-hero-slideshow")) {
+        heroHost.hidden = false;
+        return;
+      }
+      lastHeroDest = state.dest;
+      heroHost.hidden = false;
+      heroHost.innerHTML = destHeroHtml(state.dest);
+      bindHeroSlideshow(document.getElementById("dest-hero-slideshow"));
+      U.bindImages(heroHost);
+    }
 
     function buildDestChips() {
       var row = document.querySelector('.filter-row [data-group="dest"]');
@@ -1486,20 +1734,64 @@
       if (allBtn) allBtn.classList.toggle("is-on", state.dest === "all");
     }
 
+    function starsOk(tour, band) {
+      if (band === "all") return true;
+      var n = tourStars(tour);
+      if (band === "5") return n >= 5;
+      if (band === "4") return n >= 4;
+      if (band === "3") return n >= 3;
+      return true;
+    }
+
     function filtered() {
       return tours.filter(function (tour) {
-        if (state.dest !== "all" && tour.destination !== state.dest) return false;
-        return priceOk(tour, state.price);
+        if (state.dest !== "all" && resolveDestId(tour.destination) !== state.dest) return false;
+        if (!priceOk(tour, state.price)) return false;
+        return starsOk(tour, state.stars);
+      }).slice().sort(function (a, b) {
+        var ds = destLabel(a.destination).localeCompare(destLabel(b.destination), "vi");
+        if (ds) return ds;
+        return tourStars(b) - tourStars(a);
       });
     }
 
     function renderCards() {
       buildDestChips();
+      updateDestHero();
+      syncListUrl();
       var items = filtered();
       empty.hidden = items.length > 0;
-      cards.innerHTML = items.map(function (tour) {
-        return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
-      }).join("");
+      var groups = [];
+      if (state.dest === "all") {
+        destinations().forEach(function (d) {
+          var chunk = items.filter(function (tour) { return resolveDestId(tour.destination) === d; });
+          if (!chunk.length) return;
+          groups.push(
+            '<section class="dest-group reveal">' +
+            destHeadHtml(d) +
+            '<div class="card-grid card-grid--3">' +
+            chunk.map(function (tour) {
+              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
+            }).join("") +
+            "</div></section>"
+          );
+        });
+        cards.className = "tour-groups";
+        cards.innerHTML = groups.join("");
+      } else {
+        cards.className = "tour-groups";
+        if (!items.length) {
+          cards.innerHTML = "";
+        } else {
+          cards.innerHTML =
+            '<section class="dest-group reveal">' +
+            '<div class="card-grid card-grid--3">' +
+            items.map(function (tour) {
+              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
+            }).join("") +
+            "</div></section>";
+        }
+      }
       U.bindImages(cards);
       U.initMotion(cards);
       document.querySelectorAll(".chip").forEach(function (chip) {
@@ -1511,10 +1803,25 @@
 
     function openTour(id, push, silent) {
       var tour = tourById(id);
-      if (!tour) return showList(false);
+      if (!tour) {
+        // Keep ?id in the address bar only when the tour exists; otherwise show list.
+        currentId = null;
+        showList(false);
+        return;
+      }
       currentId = id;
-      if (push) history.pushState({ id: id }, "", "?id=" + encodeURIComponent(id));
+      if (push) history.pushState({ id: id }, "", "tours.html?id=" + encodeURIComponent(id));
+      else if (!silent) {
+        // Ensure deep-link stays on the tour URL after list syncs elsewhere.
+        var want = "tours.html?id=" + encodeURIComponent(id);
+        var here = (location.pathname.split("/").pop() || "tours.html") + (location.search || "");
+        if (here.indexOf("id=" + encodeURIComponent(id)) === -1) {
+          history.replaceState({ id: id }, "", want);
+        }
+      }
       list.hidden = true;
+      if (heroHost) heroHost.hidden = true;
+      if (main) main.classList.remove("has-dest-hero");
       detail.hidden = false;
       var guests = parseInt(saved.guests || q.get("guests") || "2", 10);
       if (!(guests >= 1 && guests <= 8)) guests = 2;
@@ -1526,6 +1833,7 @@
       var offers = field(tour, "offers") || [];
       var serviceNote = field(tour, "serviceNote");
       var priceNote = field(tour, "priceNote");
+      var destInfo = destMeta(tour.destination);
 
       detail.innerHTML =
         '<div class="detail-stage">' +
@@ -1535,7 +1843,10 @@
         descModeToggleHtml() +
         "</div>" +
         '<div class="detail-show-caption">' +
+        '<p class="eyebrow detail-dest-title">' + U.escapeHtml(destInfo.title) + "</p>" +
+        (destInfo.lead ? '<p class="detail-dest-lead">' + U.escapeHtml(destInfo.lead) + "</p>" : "") +
         '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
+        starsHtml(tour, { showTier: true, className: "detail-stars" }) +
         '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
         (priceNote ? " · " + U.escapeHtml(priceNote) : "") + "</p>" +
         "</div>" +
@@ -1569,7 +1880,7 @@
       U.initMotion(detail);
       initDetailSlideshow();
       detail.querySelector("#tour-back").addEventListener("click", function () {
-        history.pushState({}, "", "tours.html");
+        history.pushState({}, "", listUrl());
         showList(true);
       });
       wireBookingForm(tour);
@@ -1598,14 +1909,21 @@
     window.addEventListener("popstate", function () {
       var id = queryId();
       if (id) openTour(id, false);
-      else showList(false);
+      else {
+        var next = U.query();
+        if (next.get("dest")) state.dest = resolveDestId(next.get("dest"));
+        else state.dest = "all";
+        if (next.get("stars")) state.stars = next.get("stars");
+        showList(false);
+      }
     });
 
-    renderCards();
     var initial = queryId();
     if (initial) openTour(initial, false);
+    else renderCards();
     U.setRepaint(function () {
       applyVoI18n(document);
+      lastHeroDest = null;
       if (currentId) openTour(currentId, false, true);
       else renderCards();
     });

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=32">
+  <link rel="stylesheet" href="css/style.css?v=35">
 </head>
 <body data-page="tours">
   <a class="skip" href="#content" data-i18n="skip">Đến nội dung</a>
@@ -47,23 +47,43 @@
   </div>
 
   <main id="content" class="page-pad page-tours">
+    <div id="dest-hero-host" hidden></div>
     <div id="tour-list" class="wrap">
-      <p class="eyebrow seq" data-i18n="nav.tours">Tour</p>
-      <div class="page-title-row">
-        <h1 class="seq" data-i18n="vo.tours.page">Chọn điểm đến, giữ chỗ</h1>
-        <button type="button" class="desc-mode-btn seq" data-desc-toggle aria-label="Đổi kiểu mô tả thẻ" data-i18n-aria="desc.toggle" aria-pressed="false">
+      <div id="tours-intro">
+        <p class="eyebrow seq" data-i18n="nav.tours">Tour</p>
+        <div class="page-title-row">
+          <h1 class="seq" data-i18n="vo.tours.page">Chọn điểm đến, giữ chỗ</h1>
+          <button type="button" class="desc-mode-btn seq" data-desc-toggle aria-label="Đổi kiểu mô tả thẻ" data-i18n-aria="desc.toggle" aria-pressed="false">
+            <span class="desc-mode-track">
+              <span class="desc-mode-opt is-on" data-for="para" data-i18n="desc.para">Đoạn</span>
+              <span class="desc-mode-opt" data-for="lines" data-i18n="desc.lines">3 dòng</span>
+            </span>
+          </button>
+        </div>
+        <p class="lede seq" data-i18n="vo.tours.lede">Lọc theo điểm đến, hạng sao và giá. Mỗi địa điểm có tiêu đề riêng ở đầu nhóm tour.</p>
+      </div>
+
+      <div id="tours-dest-toolbar" class="page-title-row" hidden style="margin-top:8px">
+        <p class="eyebrow" style="margin:0" data-i18n="nav.tours">Tour</p>
+        <button type="button" class="desc-mode-btn" data-desc-toggle aria-label="Đổi kiểu mô tả thẻ" data-i18n-aria="desc.toggle" aria-pressed="false">
           <span class="desc-mode-track">
             <span class="desc-mode-opt is-on" data-for="para" data-i18n="desc.para">Đoạn</span>
             <span class="desc-mode-opt" data-for="lines" data-i18n="desc.lines">3 dòng</span>
           </span>
         </button>
       </div>
-      <p class="lede seq" data-i18n="vo.tours.lede">Lọc theo điểm đến và giá. Bấm một tour để xem dịch vụ và đặt chỗ.</p>
 
       <div class="filter-bar" style="margin-top:24px">
         <div class="filter-row" role="group" aria-label="Điểm đến" data-i18n-aria="label.dest">
           <span class="label" data-i18n="label.dest">Điểm đến</span>
           <button type="button" class="chip is-on" data-group="dest" data-value="all" data-i18n="chip.all">Tất cả</button>
+        </div>
+        <div class="filter-row" role="group" aria-label="Hạng sao" data-i18n-aria="stars.chip">
+          <span class="label" data-i18n="stars.chip">Hạng sao</span>
+          <button type="button" class="chip is-on" data-group="stars" data-value="all" data-i18n="chip.anyStars">Mọi hạng</button>
+          <button type="button" class="chip" data-group="stars" data-value="5" data-i18n="chip.stars5">5 sao</button>
+          <button type="button" class="chip" data-group="stars" data-value="4" data-i18n="chip.stars4">Từ 4 sao</button>
+          <button type="button" class="chip" data-group="stars" data-value="3" data-i18n="chip.stars3">Từ 3 sao</button>
         </div>
         <div class="filter-row" role="group" aria-label="Giá" data-i18n-aria="label.price">
           <span class="label" data-i18n="label.price">Giá</span>
@@ -74,7 +94,7 @@
         </div>
       </div>
 
-      <div class="card-grid card-grid--3" id="tour-cards"></div>
+      <div class="tour-groups" id="tour-cards"></div>
       <p id="tour-empty" class="empty-line" hidden data-i18n="empty.toursMore">Không có tour khớp bộ lọc này. Thử bỏ bớt điều kiện.</p>
     </div>
     <div id="tour-detail" class="detail" hidden></div>
@@ -100,8 +120,8 @@
       </div>
     </div>
   </footer>
-  <script src="../shared/util.js?v=5"></script>
-  <script src="js/data.js?v=4"></script>
-  <script src="js/app.js?v=30"></script>
+  <script src="../shared/util.js?v=6"></script>
+  <script src="../shared/data.js?v=11"></script>
+  <script src="js/app.js?v=34"></script>
 </body>
 </html>

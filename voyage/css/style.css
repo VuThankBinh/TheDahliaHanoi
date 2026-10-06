@@ -196,6 +196,15 @@ a { color: inherit; text-decoration: none; }
 /* —— Layout —— */
 .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .page-pad { padding: 36px 0 48px; }
+.page-tours.has-dest-hero {
+  padding-top: 0;
+}
+.page-tours.has-dest-hero #tour-list {
+  padding-top: 28px;
+}
+.page-tours .dest-page-hero {
+  margin-bottom: 0;
+}
 
 h1, h2, h3 { margin: 0; color: var(--brown); letter-spacing: -0.02em; }
 h1 {
@@ -680,6 +689,65 @@ select option { color: var(--ink); background: #fff; }
   font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   padding: 5px 10px; border-radius: 999px;
 }
+.stars-badge {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  background: rgba(255,255,255,.95); color: #B8860B;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+  padding: 5px 9px; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(60,42,30,.12);
+}
+.card-meta-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+}
+.tour-stars {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #B8860B;
+  font-size: 14px;
+  line-height: 1;
+}
+.tour-stars .stars-glyphs { letter-spacing: 0.06em; }
+.tour-stars .star-off { color: rgba(60, 42, 30, 0.22); }
+.tour-stars .stars-tier {
+  color: var(--brown);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.detail-stars { margin: 8px 0 4px; font-size: 18px; }
+.detail-dest-title {
+  margin: 0 0 4px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  color: var(--brown);
+  letter-spacing: 0.01em;
+}
+.detail-dest-lead {
+  margin: 0 0 10px;
+  max-width: 52ch;
+  color: var(--body);
+  font-size: 14px;
+}
+.tour-groups {
+  display: grid;
+  gap: 36px;
+  margin-top: 28px;
+}
+.dest-group .dest-head,
+.dest-block .dest-head {
+  margin-bottom: 18px;
+}
+.dest-head h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 600;
+  color: var(--ink);
+}
 
 .card-grid {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;
@@ -809,7 +877,7 @@ select option { color: var(--ink); background: #fff; }
   inset: 0;
   background:
     linear-gradient(120deg, rgba(60, 42, 30, 0.88) 0%, rgba(107, 74, 50, 0.72) 48%, rgba(60, 42, 30, 0.55) 100%),
-    url("https://images.unsplash.com/photo-1570366583862-f91883984fde?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
+    url("../img/destinations/ha-long/bay-overview.jpg") center/cover no-repeat;
 }
 .contact-hero-copy {
   position: relative;

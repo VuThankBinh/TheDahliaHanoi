@@ -1,0 +1,13 @@
+{
+  "source": "https://heritagevietnamtravel.com/",
+  "data_js_image_refs": 64,
+  "mapped": 64,
+  "missing": 0,
+  "downloaded_raw_ok": 194,
+  "scripts": [
+    "scripts/download-heritage-images.py",
+    "scripts/map-heritage-to-data.py",
+    "scripts/fill-missing-heritage.py"
+  ],
+  "note": "All shared/data.js image paths under voyage/img are filled from Heritage Vietnam Travel assets."
+}

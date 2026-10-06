@@ -47,15 +47,20 @@
   }
 
   function roomById(id) {
-    return window.DAHLIA.rooms.find(function (r) { return r.id === id; }) || null;
+    var rooms = (window.DAHLIA && window.DAHLIA.rooms) || [];
+    return rooms.find(function (r) { return r.id === id; }) || null;
   }
 
   function tourById(id) {
-    return window.DAHLIA.tours.find(function (t) { return t.id === id; }) || null;
+    var list = (window.TOUR_DATA && window.TOUR_DATA.tours) ||
+      (window.DAHLIA && window.DAHLIA.tours) || [];
+    return list.find(function (t) { return t.id === id; }) || null;
   }
 
   function sendMail(subject, lines) {
-    var email = window.DAHLIA.hotel.email;
+    var email = (window.TOUR_DATA && window.TOUR_DATA.email) ||
+      (window.DAHLIA && window.DAHLIA.hotel && window.DAHLIA.hotel.email) ||
+      "hello@thedahliahanoi.com";
     var href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
     var a = document.createElement("a");
     a.href = href;
