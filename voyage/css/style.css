@@ -36,9 +36,18 @@ body {
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
-img.logo { height: 72px; width: auto; opacity: 0; }
-img.logo.is-ready { opacity: 1; }
-img.logo-partner { height: 48px; width: auto; opacity: 0; }
+img.logo,
+img.logo-partner {
+  width: auto;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0;
+}
+img.logo { max-height: 72px; }
+img.logo-partner { max-height: 48px; }
+img.logo.is-ready,
 img.logo-partner.is-ready { opacity: 1; }
 .brand-lockup {
   display: inline-flex;
@@ -48,6 +57,8 @@ img.logo-partner.is-ready { opacity: 1; }
   border-radius: 12px;
   padding: 4px 10px;
   line-height: 0;
+  flex-shrink: 0;
+  max-width: none;
 }
 .brand-lockup .brand-divider {
   width: 1px;
@@ -84,7 +95,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom-color: var(--cream);
   box-shadow: 0 6px 20px rgba(60, 42, 30, 0.06);
 }
-.brand { display: inline-flex; line-height: 0; }
+.brand { display: inline-flex; line-height: 0; flex-shrink: 0; }
 .page-home .site-header:not(.is-solid) .brand-lockup { box-shadow: 0 8px 24px rgba(60, 42, 30, 0.12); }
 .desktop-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .desktop-nav a {
@@ -1401,6 +1412,12 @@ select option { color: var(--ink); background: #fff; }
   padding: 6px 12px;
   border-radius: 12px;
   line-height: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.footer-logo img.logo,
+.footer-logo img.logo-partner {
+  flex-shrink: 0;
 }
 .footer-logo .brand-divider {
   width: 1px;
@@ -1457,11 +1474,13 @@ select option { color: var(--ink); background: #fff; }
 
 @media (max-width: 720px) {
   .wrap, .footer-grid, .hero-copy, .search-dock { width: calc(100% - 32px); }
-  .site-header { padding: 8px 12px; }
-  img.logo { height: 52px; }
-  img.logo-partner { height: 38px; }
-  .brand-lockup { gap: 8px; padding: 4px 8px; }
-  .brand-lockup .brand-divider { height: 28px; }
+  .site-header { padding: 8px 12px; gap: 8px; }
+  img.logo { max-height: 44px; }
+  img.logo-partner { max-height: 32px; }
+  .brand-lockup { gap: 6px; padding: 3px 6px; }
+  .brand-lockup .brand-divider { height: 24px; }
+  .footer-logo img.logo { max-height: 44px; }
+  .footer-logo img.logo-partner { max-height: 32px; }
   .desktop-nav, .cta-nav { display: none; }
   .hotline-nav {
     margin-left: auto;
