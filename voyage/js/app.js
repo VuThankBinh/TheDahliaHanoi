@@ -5,7 +5,6 @@
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
   var PAY_KEY = "dahliaVoyagePay";
-  var DESC_MODE_KEY = "dahlia-desc-mode";
 
   var DEST_LABEL = {
     "ha-long": { vi: "Hạ Long", en: "Ha Long" },
@@ -91,7 +90,6 @@
     "pay.home": { vi: "Về trang chủ", en: "Back home" },
     "pay.h": { vi: "Thanh toán", en: "Payment" },
     "pay.guests": { vi: " khách", en: " guests" },
-    "pay.discount": { vi: "Giảm giá: ", en: "Discount: " },
     "pay.qr": { vi: "Mã QR chuyển khoản", en: "Bank transfer QR" },
     "pay.honest": { vi: "Bản mẫu, quét QR chỉ để xem. Chưa trừ tiền thật.", en: "Sample only — scan to preview. No real charge." },
     "pay.qrFailLib": { vi: "Không tải được thư viện QR.", en: "Could not load the QR library." },
@@ -110,16 +108,13 @@
     "vo.t1p": { vi: "Hạ Long, Ninh Bình, Hà Nội — đối tác Heritage.", en: "Ha Long, Ninh Binh, Hanoi — Heritage partner." },
     "vo.t2": { vi: "Ngày đi", en: "Trip length" },
     "vo.t2p": { vi: "Trong ngày hoặc 2 ngày 1 đêm Ninh Bình.", en: "Day trips or Ninh Binh 2 days 1 night." },
-    "vo.t3": { vi: "Mã DAHLIA10", en: "Code DAHLIA10" },
-    "vo.t3p": { vi: "Giảm khi đặt trên trang.", en: "A discount when you book here." },
+    "vo.t3": { vi: "Buffet trên tour", en: "Buffet on tour" },
+    "vo.t3p": { vi: "Buffet hoặc set lunch đặc sản đã gồm trong giá.", en: "Buffet or specialty set lunch included in the price." },
     "vo.t4": { vi: "Xuất phát Hà Nội", en: "Depart from Hanoi" },
     "vo.t4p": { vi: "Limousine đón phố cổ, lịch theo brochure.", en: "Limousine from the Old Quarter, schedule per brochure." },
     "vo.tours.k": { vi: "Tour nổi bật", en: "Featured tours" },
     "vo.tours.h": { vi: "Chọn chuyến đi", en: "Choose a trip" },
     "vo.tours.p": { vi: "Ba tour nổi bật — Heritage Luxury, Signature, Ninh Bình. Bấm thẻ để xem lịch trình và đặt.", en: "Three featured trips — Heritage Luxury, Signature, Ninh Binh. Open a card for the itinerary and booking." },
-    "desc.para": { vi: "Đoạn", en: "Paragraph" },
-    "desc.lines": { vi: "3 dòng", en: "3 lines" },
-    "desc.toggle": { vi: "Đổi kiểu mô tả thẻ", en: "Change card blurb layout" },
     "partner.label": { vi: "Đối tác", en: "Partner" },
     "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
@@ -127,7 +122,7 @@
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
     "vo.hero.prev": { vi: "Slide trước", en: "Previous slide" },
     "vo.hero.next": { vi: "Slide sau", en: "Next slide" },
-    "vo.book.lede": { vi: "Tour Heritage: Hạ Long, Ninh Bình, Hà Nội. Chọn một thẻ để mở form đặt — mã DAHLIA10 giảm 10%.", en: "Heritage tours: Ha Long, Ninh Binh, Hanoi. Open a card to book — code DAHLIA10 for 10% off." },
+    "vo.book.lede": { vi: "Tour Heritage: Hạ Long, Ninh Bình, Hà Nội. Chọn một thẻ để mở form đặt.", en: "Heritage tours: Ha Long, Ninh Binh, Hanoi. Open a card to book." },
     "vo.ask.k": { vi: "Liên hệ nhanh", en: "A quick note" },
     "vo.ask.h": { vi: "Hỏi trước khi đặt tour.", en: "Ask before you book a tour." },
     "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — gửi một dòng, chúng tôi mở sẵn thư tới hello@thedahliahanoi.com.", en: "A private tour, a date change, or a larger group — send a line. A draft opens to hello@thedahliahanoi.com." },
@@ -158,27 +153,22 @@
     "vo.contact.title": { vi: "Liên hệ — Mixi Voyage · The Dahlia Hanoi", en: "Contact — Mixi Voyage · The Dahlia Hanoi" },
     "vo.contact.h": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
     "vo.contact.lede": { vi: "Form mở thư tới hello@thedahliahanoi.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to hello@thedahliahanoi.com. Fill it in so we can answer quickly." },
-    "vo.contact.hours": { vi: "Chỉ đặt tour · mã DAHLIA10 giảm 10%", en: "Tours only · code DAHLIA10 for 10% off" },
+    "vo.contact.hours": { vi: "Chỉ đặt tour · phản hồi trong giờ hành chính", en: "Tours only · replies in business hours" },
     "vo.contact.h2": { vi: "Yêu cầu tour của bạn", en: "Your tour request" },
     "vo.contact.hint": { vi: "Chọn tour, ngày đi và số khách — rồi gửi lời nhắn.", en: "Choose a tour, date, and guests — then send a note." },
     "svc.in": { vi: "Đã gồm", en: "Included" },
     "svc.out": { vi: "Không gồm", en: "Not included" },
-    "svc.offers": { vi: "Ưu đãi", en: "Offers" },
+    "svc.offers": { vi: "Điểm nổi bật", en: "Highlights" },
     "svc.h": { vi: "Dịch vụ của tour", en: "Tour services" },
     "book.h": { vi: "Đặt tour", en: "Book tour" },
     "book.unit": { vi: "Giá ", en: "Price " },
     "book.name": { vi: "Họ và tên", en: "Full name" },
     "book.wa": { vi: "Số WhatsApp", en: "WhatsApp number" },
     "book.note": { vi: "Ghi chú", en: "Note" },
-    "book.code": { vi: "Mã giảm giá", en: "Promo code" },
     "book.guests": { vi: "Số khách", en: "Guests" },
     "book.date": { vi: "Ngày đi", en: "Depart" },
     "book.total": { vi: "Tổng tiền tour", en: "Tour total" },
     "book.email": { vi: "Email", en: "Email" },
-    "promo.ok": { vi: "Giảm 10%", en: "10% off" },
-    "promo.bad": { vi: "Mã không hợp lệ", en: "Invalid code" },
-    "promo.okLine": { vi: "DAHLIA10 · giảm 10%", en: "DAHLIA10 · 10% off" },
-    "promo.none": { vi: "Không", en: "None" },
     "err.bookName": { vi: "Vui lòng điền họ tên.", en: "Please enter your name." },
     "err.bookWa": { vi: "Nhập số WhatsApp.", en: "Enter a WhatsApp number." },
     "confirm.title": { vi: "Đã ghi nhận đặt tour", en: "Tour request recorded" },
@@ -674,83 +664,16 @@
     return true;
   }
 
-  function getDescMode() {
-    try {
-      return localStorage.getItem(DESC_MODE_KEY) === "lines" ? "lines" : "para";
-    } catch (err) {
-      return "para";
-    }
-  }
-
-  function setDescMode(mode) {
-    mode = mode === "lines" ? "lines" : "para";
-    try { localStorage.setItem(DESC_MODE_KEY, mode); } catch (err) {}
-    document.documentElement.setAttribute("data-desc-mode", mode);
-    refreshDescNodes(document);
-    syncDescModeButtons(document);
-  }
-
   function splitCardLines(text) {
     var parts = String(text || "").trim().split(/(?<=[.!?…])\s+/).filter(Boolean);
     if (parts.length <= 3) return parts;
     return [parts[0], parts[1], parts.slice(2).join(" ")];
   }
 
-  function formatCardLineHtml(text, mode) {
-    mode = mode || getDescMode();
-    if (mode !== "lines") return U.escapeHtml(text);
+  function formatCardLineHtml(text) {
     return splitCardLines(text).map(function (line) {
       return '<span class="desc-line">' + U.escapeHtml(line) + "</span>";
     }).join("");
-  }
-
-  function refreshDescNodes(root) {
-    var mode = getDescMode();
-    (root || document).querySelectorAll("[data-card-line]").forEach(function (el) {
-      var raw = el.getAttribute("data-card-line") || "";
-      el.innerHTML = formatCardLineHtml(raw, mode);
-      el.classList.toggle("is-lines", mode === "lines");
-    });
-  }
-
-  function syncDescModeButtons(root) {
-    var mode = getDescMode();
-    (root || document).querySelectorAll("[data-desc-toggle]").forEach(function (btn) {
-      btn.setAttribute("aria-pressed", mode === "lines" ? "true" : "false");
-      btn.querySelectorAll(".desc-mode-opt").forEach(function (opt) {
-        opt.classList.toggle("is-on", opt.getAttribute("data-for") === mode);
-      });
-    });
-  }
-
-  function descModeToggleHtml() {
-    var mode = getDescMode();
-    return '<button type="button" class="desc-mode-btn" data-desc-toggle aria-label="' +
-      U.escapeHtml(t("desc.toggle")) + '" aria-pressed="' + (mode === "lines" ? "true" : "false") + '">' +
-      '<span class="desc-mode-track">' +
-      '<span class="desc-mode-opt' + (mode === "para" ? " is-on" : "") + '" data-for="para">' +
-      U.escapeHtml(t("desc.para")) + "</span>" +
-      '<span class="desc-mode-opt' + (mode === "lines" ? " is-on" : "") + '" data-for="lines">' +
-      U.escapeHtml(t("desc.lines")) + "</span>" +
-      "</span></button>";
-  }
-
-  function initDescModeToggle() {
-    document.documentElement.setAttribute("data-desc-mode", getDescMode());
-    syncDescModeButtons(document);
-    if (document.documentElement.dataset.descToggleReady === "1") return;
-    document.documentElement.dataset.descToggleReady = "1";
-    document.addEventListener("click", function (e) {
-      var btn = e.target.closest("[data-desc-toggle]");
-      if (!btn) return;
-      e.preventDefault();
-      e.stopPropagation();
-      var opt = e.target.closest(".desc-mode-opt");
-      var next = opt && opt.getAttribute("data-for")
-        ? opt.getAttribute("data-for")
-        : (getDescMode() === "lines" ? "para" : "lines");
-      setDescMode(next);
-    });
   }
 
   function tourCardHtml(tour, href) {
@@ -758,7 +681,6 @@
       ? '<p class="price-note">' + U.escapeHtml(field(tour, "priceNote")) + "</p>"
       : "";
     var line = field(tour, "cardLine");
-    var mode = getDescMode();
     var stars = starsHtml(tour);
     return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
@@ -776,8 +698,8 @@
       '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
       "</div>" +
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
-      '<p class="desc' + (mode === "lines" ? " is-lines" : "") + '" data-card-line="' + U.escapeHtml(line) + '">' +
-      formatCardLineHtml(line, mode) + "</p>" +
+      '<p class="desc is-lines" data-card-line="' + U.escapeHtml(line) + '">' +
+      formatCardLineHtml(line) + "</p>" +
       note +
       '<div class="foot-row"><span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>" +
       '<span class="link-more" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + "</span></div>" +
@@ -1205,24 +1127,10 @@
       "</section>";
   }
 
-  function quoteState(tour, guests, code) {
+  function quoteState(tour, guests) {
     var count = parseInt(guests, 10) || 2;
-    var sub = tour.price * count;
-    var off = 0;
-    var msg = "";
-    var state = "none";
-    var trimmed = String(code || "").trim();
-    if (trimmed) {
-      if (trimmed.toUpperCase() === "DAHLIA10") {
-        off = Math.round(sub * 0.1);
-        msg = t("promo.ok");
-        state = "ok";
-      } else {
-        msg = t("promo.bad");
-        state = "bad";
-      }
-    }
-    return { count: count, sub: sub, off: off, total: sub - off, code: trimmed, state: state, msg: msg };
+    var total = tour.price * count;
+    return { count: count, total: total };
   }
 
   function bookingFormHtml(tour, opts) {
@@ -1242,10 +1150,8 @@
       "<label><span>" + U.escapeHtml(t("book.wa")) + '</span><input id="book-phone" name="phone" type="tel" autocomplete="tel" required></label>' +
       "<label><span>" + U.escapeHtml(t("book.email")) + '</span><input id="book-email" name="email" type="email" autocomplete="email" required></label>' +
       "<label><span>" + U.escapeHtml(t("book.note")) + '</span><textarea id="book-note" name="note" rows="3"></textarea></label>' +
-      "<label><span>" + U.escapeHtml(t("book.code")) + '</span><input id="book-code" name="code" type="text" autocomplete="off" spellcheck="false" placeholder="DAHLIA10"></label>' +
       "<label><span>" + U.escapeHtml(t("book.guests")) + '</span><select id="book-guests" name="guests">' + guestOptions + "</select></label>" +
       '<p id="sum-math" class="math"></p>' +
-      '<p id="promo-note" class="promo-note"></p>' +
       '<p class="sum" aria-live="polite"><span>' + U.escapeHtml(t("book.total")) + '</span> <strong id="tour-total"></strong></p>' +
       '<p id="form-error" class="form-error" role="alert" hidden></p>' +
       '<button class="btn block" type="submit">' + U.escapeHtml(t("btn.pay")) + "</button>" +
@@ -1257,7 +1163,6 @@
     if (!form) return;
     var totalEl = document.getElementById("tour-total");
     var mathEl = document.getElementById("sum-math");
-    var promoEl = document.getElementById("promo-note");
     var errorEl = document.getElementById("form-error");
     var dateStart = document.getElementById("date-start");
     var dateEnd = document.getElementById("date-end");
@@ -1276,12 +1181,10 @@
     }
 
     function quote() {
-      var q = quoteState(tour, document.getElementById("book-guests").value, document.getElementById("book-code").value);
+      var q = quoteState(tour, document.getElementById("book-guests").value);
       totalEl.textContent = U.money(q.total);
       totalEl.dataset.amount = String(q.total);
-      mathEl.textContent = q.count + " × " + U.money(tour.price) + (q.off ? " − " + U.money(q.off) : "");
-      promoEl.textContent = q.msg;
-      promoEl.classList.toggle("is-bad", q.state === "bad");
+      mathEl.textContent = q.count + " × " + U.money(tour.price);
       syncEnd();
       return q;
     }
@@ -1303,9 +1206,6 @@
       if (!U.isEmail(email)) return showErr(errorEl, "err.email");
       errorEl.hidden = true;
       var q = quote();
-      var discountText = t("promo.none");
-      if (q.state === "ok") discountText = t("promo.okLine");
-      else if (q.state === "bad") discountText = t("promo.bad");
       var start = date || U.isoOffset(1);
       var end = addDays(start, tour.nightsOffset || 0);
       var payload = {
@@ -1318,7 +1218,6 @@
         whatsapp: phone,
         email: email,
         note: noteText,
-        discount: discountText,
         amount: q.total
       };
       try {
@@ -1669,6 +1568,8 @@
     var main = document.getElementById("content");
     var intro = document.getElementById("tours-intro");
     var destToolbar = document.getElementById("tours-dest-toolbar");
+    var bookFloat = document.getElementById("detail-book-float");
+    var bookFloatObserver = null;
     var state = { dest: "all", price: "all", stars: "all" };
     var currentId = null;
     var lastHeroDest = null;
@@ -1677,6 +1578,45 @@
     if (q.get("dest")) state.dest = resolveDestId(q.get("dest"));
     else if (saved.destination) state.dest = resolveDestId(saved.destination);
     if (q.get("stars")) state.stars = q.get("stars");
+
+    function hideBookFloat() {
+      if (!bookFloat) return;
+      bookFloat.hidden = true;
+      bookFloat.classList.remove("is-near");
+      if (bookFloatObserver) {
+        bookFloatObserver.disconnect();
+        bookFloatObserver = null;
+      }
+    }
+
+    function showBookFloat() {
+      if (!bookFloat) return;
+      bookFloat.hidden = false;
+      bookFloat.classList.remove("is-near");
+      if (bookFloatObserver) bookFloatObserver.disconnect();
+      var target = document.getElementById("book-form") || detail.querySelector(".book-aside");
+      if (!target || !("IntersectionObserver" in window)) return;
+      bookFloatObserver = new IntersectionObserver(function (entries) {
+        var entry = entries[0];
+        if (!entry) return;
+        bookFloat.classList.toggle("is-near", entry.isIntersecting);
+      }, { root: null, threshold: 0.15, rootMargin: "0px 0px -12% 0px" });
+      bookFloatObserver.observe(target);
+    }
+
+    if (bookFloat) {
+      bookFloat.addEventListener("click", function () {
+        var target = document.getElementById("book-form") || detail.querySelector(".book-aside");
+        if (!target) return;
+        target.scrollIntoView({ behavior: U.reduce ? "auto" : "smooth", block: "start" });
+        var focusEl = target.querySelector("#book-date, #book-name, input, select, textarea, button");
+        if (focusEl) {
+          window.setTimeout(function () {
+            try { focusEl.focus({ preventScroll: true }); } catch (e) { focusEl.focus(); }
+          }, U.reduce ? 0 : 420);
+        }
+      });
+    }
 
     function listUrl() {
       var params = new URLSearchParams();
@@ -1840,7 +1780,6 @@
         '<div class="wrap detail-top">' +
         '<div class="page-title-row detail-back-row">' +
         '<button type="button" class="back" id="tour-back">' + U.escapeHtml(t("back.arrow")) + "</button>" +
-        descModeToggleHtml() +
         "</div>" +
         '<div class="detail-show-caption">' +
         '<p class="eyebrow detail-dest-title">' + U.escapeHtml(destInfo.title) + "</p>" +
@@ -1856,8 +1795,7 @@
         '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         '<div class="detail-body">' +
         '<div class="detail-copy">' +
-        '<p class="lede seq card-line' + (getDescMode() === "lines" ? " is-lines" : "") +
-        '" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +
+        '<p class="lede seq card-line is-lines" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +
         formatCardLineHtml(field(tour, "cardLine")) + "</p>" +
         desc.map(function (line) { return "<p>" + U.escapeHtml(line) + "</p>"; }).join("") +
         '<div class="when">' +
@@ -1872,7 +1810,7 @@
         "<h3>" + U.escapeHtml(t("svc.offers")) + "</h3>" + listHtml(offers) +
         buffetHtml(tour.buffetMenu) +
         "</div>" +
-        '<aside class="stay-panel book-aside">' + bookingFormHtml(tour, { guests: guests, date: date }) +
+        '<aside class="stay-panel book-aside" id="tour-book">' + bookingFormHtml(tour, { guests: guests, date: date }) +
         "</aside>" +
         "</div></div></div>";
 
@@ -1884,11 +1822,13 @@
         showList(true);
       });
       wireBookingForm(tour);
+      showBookFloat();
       if (!silent) window.scrollTo({ top: 0, behavior: U.reduce ? "auto" : "smooth" });
     }
 
     function showList(scroll) {
       currentId = null;
+      hideBookFloat();
       detail.hidden = true;
       detail.innerHTML = "";
       list.hidden = false;
@@ -2056,7 +1996,6 @@
         '<p class="pay-tour">' + U.escapeHtml(pay.tourName) + "</p>" +
         '<p class="pay-meta">' + U.escapeHtml(showVN(pay.start)) + " – " + U.escapeHtml(showVN(pay.end)) +
         " · " + U.escapeHtml(String(pay.guests)) + U.escapeHtml(t("pay.guests")) + "</p>" +
-        '<p class="pay-discount">' + U.escapeHtml(t("pay.discount")) + U.escapeHtml(pay.discount || t("promo.none")) + "</p>" +
         '<div class="qr-box" id="qr-box" role="img" aria-label="' + U.escapeHtml(t("pay.qr")) + '"></div>' +
         '<div class="pay-bank">' +
         "<p>" + U.escapeHtml(bank.name) + "</p>" +
@@ -2160,7 +2099,6 @@
 
   applyVoI18n(document);
   upgradeLangFlags();
-  initDescModeToggle();
 
   if (page === "home") renderHome();
   if (page === "tours") initTours();
@@ -2171,7 +2109,6 @@
   U.initMenu();
   U.initSolidHeader();
   upgradeLangFlags();
-  syncDescModeButtons(document);
   U.bindImages(document);
   U.initMotion();
 })();

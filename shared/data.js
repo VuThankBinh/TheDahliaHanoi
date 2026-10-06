@@ -33,28 +33,26 @@ window.TOUR_DATA = {
 
   /* Banner trang chủ — mỗi phần tử: type image|video, src (hoặc sources[]), poster?, alt?, altEn?, place? */
   hero: {
-    interval: 5000,
+    interval: 10000,
     slides: [
       {
         type: "video",
         place: "ha-long",
-        poster: "img/destinations/ha-long/bay-overview.jpg",
+        poster: "img/destinations/ha-long/tuan-chau-port.jpg",
         alt: "Highlight Hạ Long",
         altEn: "Ha Long highlight",
         sources: [
-          "https://videos.pexels.com/video-files/2169880/2169880-hd_1280_720_30fps.mp4",
-          "https://videos.pexels.com/video-files/30391309/13024349_3840_2160_60fps.mp4"
+          "img/video/2169880-hd_1280_720_30fps.mp4"
         ]
       },
       {
         type: "video",
         place: "ninh-binh",
-        poster: "img/destinations/ninh-binh/tam-coc-boat.jpg",
+        poster: "img/destinations/ninh-binh/hoa-lu.jpg",
         alt: "Highlight Ninh Bình",
         altEn: "Ninh Binh highlight",
         sources: [
-          "https://videos.pexels.com/video-files/3571264/3571264-hd_1280_720_30fps.mp4",
-          "https://videos.pexels.com/video-files/30574776/13092696_3840_2160_60fps.mp4"
+          "img/video/3571264-hd_1280_720_30fps.mp4"
         ]
       },
       {
@@ -64,7 +62,7 @@ window.TOUR_DATA = {
         alt: "Highlight Hà Nội",
         altEn: "Hanoi highlight",
         sources: [
-          "https://videos.pexels.com/video-files/2491284/2491284-uhd_2560_1440_24fps.mp4"
+          "img/video/16092120_2560_1440_30fps.mp4"
         ]
       }
     ]
@@ -218,8 +216,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages not listed as included", "Tips and personal expenses", "Anything not listed as included", "Public holiday / Tet surcharge: 15 USD/guest"],
       serviceNote: "Buffet trưa trên tàu, món Việt và Âu. Thực đơn có thể đổi theo mùa.",
       serviceNoteEn: "Lunch buffet on board — Vietnamese and Western. Menu may change by season.",
-      offers: ["Buffet đã gồm trong giá", "Welcome drink", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Buffet included in the price", "Welcome drink", "Code DAHLIA10 for 10% off"],
+      offers: ["Buffet đã gồm trong giá", "Welcome drink", "Limousine khứ hồi Hà Nội"],
+      offersEn: ["Buffet included in the price", "Welcome drink", "Round-trip limousine from Hanoi"],
       buffetMenu: {
         title: "Thực đơn buffet",
         titleEn: "Buffet menu",
@@ -384,8 +382,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages not listed as included", "Tips and personal expenses", "Public holiday / Tet surcharge: 15 USD/guest"],
       serviceNote: "Giá hiển thị theo limousine nhóm 19–22 khách ($119). Shuttle 30 khách: $109.",
       serviceNoteEn: "Listed price is limousine group 19–22 ($119). Shuttle bus 30 guests: $109.",
-      offers: ["Tàu Signature 5 sao", "Có set menu Ấn Độ", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Signature 5-star cruise", "Indian set menus available", "Code DAHLIA10 for 10% off"],
+      offers: ["Tàu Signature 5 sao", "Có set menu Ấn Độ", "Jacuzzi bốn mùa"],
+      offersEn: ["Signature 5-star cruise", "Indian set menus available", "Four-season jacuzzi"],
       buffetMenu: {
         title: "Thực đơn buffet Signature",
         titleEn: "Signature buffet menu",
@@ -530,8 +528,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips for guide & driver", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       serviceNote: "Giá hiển thị theo limousine nhóm 19–22 ($79, buffet). Dcar 7–9 khách: $99 set menu. Shuttle 26–30: $69.",
       serviceNoteEn: "Listed price is limousine group 19–22 ($79, buffet). Dcar 7–9: $99 set menu. Shuttle 26–30: $69.",
-      offers: ["Nón lá & áo mưa miễn phí", "Buffet hoặc set menu", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Free hat & raincoat", "Buffet or set menu", "Code DAHLIA10 for 10% off"]
+      offers: ["Nón lá & áo mưa miễn phí", "Buffet hoặc set menu", "Limousine nhóm"],
+      offersEn: ["Free hat & raincoat", "Buffet or set menu", "Group limousine"]
     },
     {
       id: "ninh-binh-tam-coc",
@@ -607,8 +605,8 @@ window.TOUR_DATA = {
       ],
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu Tết: 15 USD/khách"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
-      offers: ["Về sớm hơn (không Hang Múa)", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Earlier return (no Mua Cave)", "Code DAHLIA10 for 10% off"]
+      offers: ["Về sớm hơn (không Hang Múa)", "Buffet/set lunch Heritage Garden"],
+      offersEn: ["Earlier return (no Mua Cave)", "Buffet/set lunch at Heritage Garden"]
     },
     {
       id: "ninh-binh-bai-dinh",
@@ -684,8 +682,8 @@ window.TOUR_DATA = {
       ],
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu Tết: 15 USD/khách"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
-      offers: ["Xe điện Bái Đính đã gồm", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Bai Dinh electric car included", "Code DAHLIA10 for 10% off"]
+      offers: ["Xe điện Bái Đính đã gồm", "Buffet/set lunch Heritage Garden"],
+      offersEn: ["Bai Dinh electric car included", "Buffet/set lunch at Heritage Garden"]
     },
     {
       id: "ninh-binh-2d1n",
@@ -772,8 +770,8 @@ window.TOUR_DATA = {
       ],
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu phòng đơn 15 USD", "Phụ thu Tết: 15 USD/khách/đêm"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Single supplement 15 USD", "Tet surcharge: 15 USD/guest/night"],
-      offers: ["Nghỉ tại Trang An Heritage Garden", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Stay at Trang An Heritage Garden", "Code DAHLIA10 for 10% off"]
+      offers: ["Nghỉ tại Trang An Heritage Garden", "Hồ bơi mùa hè"],
+      offersEn: ["Stay at Trang An Heritage Garden", "Summer swimming pool"]
     },
     {
       id: "ninh-binh-bai-dinh-trang-an",
@@ -846,8 +844,8 @@ window.TOUR_DATA = {
       ],
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu Tết: 15 USD/khách"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
-      offers: ["Không leo Hang Múa", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["No Mua Cave climb", "Code DAHLIA10 for 10% off"]
+      offers: ["Không leo Hang Múa", "Buffet trưa Heritage Garden"],
+      offersEn: ["No Mua Cave climb", "Buffet lunch at Heritage Garden"]
     },
     {
       id: "ninh-binh-2d1n-pagoda",
@@ -925,8 +923,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Single supplement 15 USD", "Tet surcharge: 15 USD/guest/night"],
       serviceNote: "Limousine từ 2 khách: $189. Shuttle: $179. 1 khách limousine: $229.",
       serviceNoteEn: "Limousine from 2 guests: $189. Shuttle: $179. Solo limousine: $229.",
-      offers: ["Thung Nham + Bích Động", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Thung Nham + Bich Dong", "Code DAHLIA10 for 10% off"]
+      offers: ["Thung Nham + Bích Động", "Nghỉ đêm Heritage Garden"],
+      offersEn: ["Thung Nham + Bich Dong", "Overnight at Heritage Garden"]
     },
     {
       id: "ninh-binh-2d1n-cuc-phuong",
@@ -1002,8 +1000,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Single supplement 15 USD", "Tet surcharge: 15 USD/guest/night"],
       serviceNote: "Limousine từ 2 khách: $195. Shuttle: $185. 1 khách limousine: $239.",
       serviceNoteEn: "Limousine from 2 guests: $195. Shuttle: $185. Solo limousine: $239.",
-      offers: ["Cúc Phương + cố đô", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Cuc Phuong + ancient capital", "Code DAHLIA10 for 10% off"]
+      offers: ["Cúc Phương + cố đô", "Nghỉ đêm Heritage Garden"],
+      offersEn: ["Cuc Phuong + ancient capital", "Overnight at Heritage Garden"]
     },
     {
       id: "ninh-binh-2d1n-halong",
@@ -1077,8 +1075,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Single supplement 15 USD", "Tet surcharge: 15 USD/guest/night"],
       serviceNote: "Limousine từ 2 khách: $199. 1 khách: $219.",
       serviceNoteEn: "Limousine from 2 guests: $199. Solo: $219.",
-      offers: ["Ninh Bình + Hạ Long một đặt chỗ", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Ninh Binh + Ha Long in one booking", "Code DAHLIA10 for 10% off"]
+      offers: ["Ninh Bình + Hạ Long một đặt chỗ", "Limousine xuyên suốt"],
+      offersEn: ["Ninh Binh + Ha Long in one booking", "Limousine throughout"]
     },
     {
       id: "ninh-binh-thung-nham",
@@ -1156,8 +1154,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       serviceNote: "Private: $145/2 khách · $129/3 · $119/4 · từ $109/5–8 · Dcar cao hơn.",
       serviceNoteEn: "Private: $145/2 guests · $129/3 · $119/4 · from $109/5–8 · Dcar higher.",
-      offers: ["Tour riêng tư", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Private tour", "Code DAHLIA10 for 10% off"]
+      offers: ["Tour riêng tư", "Lịch trình linh hoạt"],
+      offersEn: ["Private tour", "Flexible itinerary"]
     },
     {
       id: "ninh-binh-incense",
@@ -1231,8 +1229,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       serviceNote: "Private: $149/2 khách · $139/3 · $125/4 · từ $119/5–6 · Dcar cao hơn.",
       serviceNoteEn: "Private: $149/2 guests · $139/3 · $125/4 · from $119/5–6 · Dcar higher.",
-      offers: ["Làng hương + Ninh Bình", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Incense village + Ninh Binh", "Code DAHLIA10 for 10% off"]
+      offers: ["Làng hương + Ninh Bình", "Tour private"],
+      offersEn: ["Incense village + Ninh Binh", "Private tour"]
     },
 
     /* —— Hà Nội —— */
@@ -1328,8 +1326,8 @@ window.TOUR_DATA = {
       ],
       serviceNote: "Nhóm: limousine $76 · Dcar $86. Private sedan/CUV/van từ $119/2 khách · Dcar private từ $135/2 khách. Không lunch: −$10. Trẻ 1–4 tuổi: miễn phí 1 em đi cùng 2 người lớn (chung ghế); em thứ 2 và trẻ 5–8 tuổi: 75%; từ 9 tuổi: 100%.",
       serviceNoteEn: "Group: limousine $76 · Dcar $86. Private sedan/CUV/van from $119/2 guests · private Dcar from $135/2 guests. No lunch: −$10. Child 1–4: 1st free with 2 adults (shared seat); 2nd child and ages 5–8: 75%; 9+: 100%.",
-      offers: ["Set lunch Mesdames Linh đã gồm", "Private & group", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Mesdames Linh set lunch included", "Private & group", "Code DAHLIA10 for 10% off"],
+      offers: ["Set lunch Mesdames Linh đã gồm", "Private & group", "Limousine hoặc Dcar"],
+      offersEn: ["Mesdames Linh set lunch included", "Private & group", "Limousine or Dcar"],
       buffetMenu: {
         title: "Set menu trưa Mesdames Linh",
         titleEn: "Mesdames Linh set-menu lunch",
@@ -1449,8 +1447,8 @@ window.TOUR_DATA = {
       servicesExcludedEn: ["VAT", "Lunch (unless added)", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       serviceNote: "Group half day: limousine $59 · Dcar $69. Trẻ em: 1–4 tuổi miễn phí 1 em/2 người lớn; 5–8 tuổi 75%; từ 9 tuổi 100%.",
       serviceNoteEn: "Group half day: limousine $59 · Dcar $69. Children: ages 1–4 first child free with 2 adults; 5–8: 75%; 9+: 100%.",
-      offers: ["Sáng hoặc chiều", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Morning or afternoon", "Code DAHLIA10 for 10% off"]
+      offers: ["Sáng hoặc chiều", "Limousine hoặc Dcar"],
+      offersEn: ["Morning or afternoon", "Limousine or Dcar"]
     },
     {
       id: "ha-noi-incense",
@@ -1540,8 +1538,8 @@ window.TOUR_DATA = {
       ],
       serviceNote: "Group Dcar $86. Private: $125/2 · $109/3 · $105/4 · $99/5–6 · $95/7–8 · $80/9–10 · $75/11–12. Dcar private: $139/2 · $119/3 · $109/4 · $105/5–6 · $99/7–8 · $86/9. Trẻ em theo chính sách brochure.",
       serviceNoteEn: "Group Dcar $86. Private: $125/2 · $109/3 · $105/4 · $99/5–6 · $95/7–8 · $80/9–10 · $75/11–12. Private Dcar: $139/2 · $119/3 · $109/4 · $105/5–6 · $99/7–8 · $86/9. Children per brochure policy.",
-      offers: ["Làng hương + city tour", "Lunch Mesdames Linh", "Mã DAHLIA10 giảm 10%"],
-      offersEn: ["Incense village + city tour", "Mesdames Linh lunch", "Code DAHLIA10 for 10% off"],
+      offers: ["Làng hương + city tour", "Lunch Mesdames Linh", "Dcar nhóm nhỏ"],
+      offersEn: ["Incense village + city tour", "Mesdames Linh lunch", "Small-group Dcar"],
       buffetMenu: {
         title: "Set menu trưa Mesdames Linh",
         titleEn: "Mesdames Linh set-menu lunch",
