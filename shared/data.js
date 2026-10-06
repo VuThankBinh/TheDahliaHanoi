@@ -218,77 +218,16 @@ window.TOUR_DATA = {
       serviceNoteEn: "Lunch buffet on board — Vietnamese and Western. Menu may change by season.",
       offers: ["Buffet đã gồm trong giá", "Welcome drink", "Limousine khứ hồi Hà Nội"],
       offersEn: ["Buffet included in the price", "Welcome drink", "Round-trip limousine from Hanoi"],
-      buffetMenu: {
+      menuGallery: {
         title: "Thực đơn buffet",
         titleEn: "Buffet menu",
-        columns: [
-          [
-            {
-              name: "Starter",
-              items: [
-                { vi: "Súp hải sản", en: "Seafood soup" },
-                { vi: "Súp bí ngô kem", en: "Pumpkin cream soup", veg: "Chay", vegEn: "Veg" }
-              ]
-            },
-            {
-              name: "Salad & cold",
-              items: [
-                { vi: "Salad sứa trộn xoài xanh", en: "Salad mixed jellyfish with green mango" },
-                { vi: "Salad rau trộn xốt Mayonnaise", en: "Salad mixed vegetables with mayonnaise", veg: "Chay", vegEn: "Veg" },
-                { vi: "Nem tươi cuốn (chay + mặn)", en: "Fresh spring rolls", veg: "Chay + mặn", vegEn: "Veg + non-veg" },
-                { vi: "Cơm cuộn thập cẩm (chay + mặn)", en: "Seaweed rice roll", veg: "Chay + mặn", vegEn: "Veg + non-veg" },
-                { vi: "Khoai tây chiên lắc phô mai", en: "French fries", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cà ri rau củ chay", en: "Vegetables in curry sauce", veg: "Chay", vegEn: "Veg" },
-                { vi: "Bánh mì cắt lát", en: "Sliced bread", veg: "Chay", vegEn: "Veg" },
-                { vi: "Xúc xích bỏ lò", en: "Fried sausage" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Hot station",
-              items: [
-                { vi: "Nem rế Hạ Long", en: "Halong spring roll" },
-                { vi: "Bò xào ớt chuông", en: "Stir-fried beef with bell pepper" },
-                { vi: "Ức gà sốt cà ri", en: "Chicken breast in curry sauce" },
-                { vi: "Tôm biển hấp bia tươi", en: "Steamed shrimp with beer" },
-                { vi: "Cá sốt ngũ vị", en: "Steamed fish sweet and sour sauce" },
-                { vi: "Mực xào ngũ sắc", en: "Stir-fried squid with vegetables" },
-                { vi: "Mì xào thập cẩm chay", en: "Stir-fried noodles mixed vegetable", veg: "Chay", vegEn: "Veg" },
-                { vi: "Rau cải thìa xào nấm hương", en: "Stir-fried bok choy with mushroom", veg: "Chay", vegEn: "Veg" },
-                { vi: "Bánh bao hấp", en: "Steamed dumplings", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cơm tám thơm hảo hạng", en: "Steamed rice", veg: "Chay", vegEn: "Veg" },
-                { vi: "Đậu sốt cà chua hoặc chiên mắm tiêu", en: "Tofu in sauce", veg: "Chay", vegEn: "Veg" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Dessert",
-              items: [
-                { vi: "Bánh ngọt", en: "Cake" },
-                { vi: "Chè đậu xanh hoa cau", en: "Green beans sweet gruel", veg: "Chay", vegEn: "Veg" },
-                { vi: "Dứa", en: "Pineapple", veg: "Chay", vegEn: "Veg" },
-                { vi: "Thanh long", en: "Dragon fruit", veg: "Chay", vegEn: "Veg" },
-                { vi: "Dưa hấu", en: "Watermelon", veg: "Chay", vegEn: "Veg" }
-              ]
-            },
-            {
-              name: "Sunset party",
-              items: [
-                { vi: "Bánh ngọt", en: "Cake" },
-                { vi: "Thanh long, dưa hấu, dưa vàng", en: "Seasonal fruits" },
-                { vi: "Nước chanh leo", en: "Passion fruit" },
-                { vi: "Trà chanh sả", en: "Lemon tea" }
-              ]
-            }
-          ]
-        ],
-        note: "Thực đơn có thể thay đổi mà không báo trước, tùy mùa, thời tiết hoặc yêu cầu khác.",
-        noteEn: "The menu may change without notice, depending on season, weather, or other needs.",
-        vegNote: "(*) Món chay · Vegetarian dishes",
-        vegNoteEn: "(*) Vegetarian dishes"
-      }
+        images: [
+          { src: "img/menus/bufferHL/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/bufferHL/anh5.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/bufferHL/anh6.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/bufferHL/anh7.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ha-long-signature",
@@ -384,67 +323,16 @@ window.TOUR_DATA = {
       serviceNoteEn: "Listed price is limousine group 19–22 ($119). Shuttle bus 30 guests: $109.",
       offers: ["Tàu Signature 5 sao", "Có set menu Ấn Độ", "Jacuzzi bốn mùa"],
       offersEn: ["Signature 5-star cruise", "Indian set menus available", "Four-season jacuzzi"],
-      buffetMenu: {
-        title: "Thực đơn buffet Signature",
-        titleEn: "Signature buffet menu",
-        columns: [
-          [
-            {
-              name: "Starter",
-              items: [
-                { vi: "Súp hải sản", en: "Seafood soup" },
-                { vi: "Súp bí ngô kem", en: "Pumpkin cream soup", veg: "Chay", vegEn: "Veg" }
-              ]
-            },
-            {
-              name: "Salad & cold",
-              items: [
-                { vi: "Salad sứa trộn xoài xanh", en: "Salad mixed jellyfish with green mango" },
-                { vi: "Salad rau trộn xốt Mayonnaise", en: "Salad mixed vegetables with mayonnaise", veg: "Chay", vegEn: "Veg" },
-                { vi: "Salad nui trộn củ quả", en: "Macaroni salad with vegetables", veg: "Chay", vegEn: "Veg" },
-                { vi: "Nem tươi cuốn (chay + mặn)", en: "Fresh spring rolls", veg: "Chay + mặn", vegEn: "Veg + non-veg" },
-                { vi: "Cơm cuộn thập cẩm", en: "Seaweed rice roll", veg: "Chay + mặn", vegEn: "Veg + non-veg" },
-                { vi: "Khoai tây chiên lắc phô mai", en: "French fries", veg: "Chay", vegEn: "Veg" },
-                { vi: "Bánh mì cắt lát", en: "Sliced bread", veg: "Chay", vegEn: "Veg" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Hot station",
-              items: [
-                { vi: "Hàu nướng mỡ hành Hạ Long", en: "Halong grilled oyster with scallion oil" },
-                { vi: "Bò hầm sốt vang", en: "Stew beef with wine sauce" },
-                { vi: "Gà xào nấm", en: "Stir-fried chicken with mushrooms" },
-                { vi: "Tôm biển hấp bia tươi", en: "Steamed shrimp with beer" },
-                { vi: "Cá sốt ngũ vị", en: "Steamed fish sweet and sour" },
-                { vi: "Chả mực Halong", en: "Halong squid cake" },
-                { vi: "Mực xào ngũ sắc", en: "Stir-fried squid with vegetables" },
-                { vi: "Mì xào thập cẩm chay", en: "Stir-fried noodles mixed vegetable", veg: "Chay", vegEn: "Veg" },
-                { vi: "Rau cải thìa xào nấm hương", en: "Stir-fried bok choy with mushroom", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cơm tám thơm", en: "Steamed rice", veg: "Chay", vegEn: "Veg" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Dessert & sunset",
-              items: [
-                { vi: "Bánh ngọt", en: "Cake" },
-                { vi: "Chè đậu xanh hoa cau", en: "Green beans sweet gruel", veg: "Chay", vegEn: "Veg" },
-                { vi: "Trái cây theo mùa", en: "Seasonal fruits", veg: "Chay", vegEn: "Veg" },
-                { vi: "Bánh phồng tôm", en: "Vietnamese prawn crackers" },
-                { vi: "Nước chanh leo", en: "Passion fruit" },
-                { vi: "Trà chanh sả", en: "Lemon tea" }
-              ]
-            }
-          ]
-        ],
-        note: "Thực đơn có thể thay đổi mà không báo trước, tùy mùa hoặc thời tiết.",
-        noteEn: "Menu may change without notice depending on season or weather.",
-        vegNote: "(*) Món chay · Vegetarian dishes",
-        vegNoteEn: "(*) Vegetarian dishes"
-      }
+      menuGallery: {
+        title: "Thực đơn Signature",
+        titleEn: "Signature menu",
+        images: [
+          { src: "img/menus/bufferHL/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/bufferHL/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/bufferHL/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/bufferHL/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
 
     /* —— Ninh Bình —— */
@@ -529,7 +417,17 @@ window.TOUR_DATA = {
       serviceNote: "Giá hiển thị theo limousine nhóm 19–22 ($79, buffet). Dcar 7–9 khách: $99 set menu. Shuttle 26–30: $69.",
       serviceNoteEn: "Listed price is limousine group 19–22 ($79, buffet). Dcar 7–9: $99 set menu. Shuttle 26–30: $69.",
       offers: ["Nón lá & áo mưa miễn phí", "Buffet hoặc set menu", "Limousine nhóm"],
-      offersEn: ["Free hat & raincoat", "Buffet or set menu", "Group limousine"]
+      offersEn: ["Free hat & raincoat", "Buffet or set menu", "Group limousine"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-tam-coc",
@@ -606,7 +504,17 @@ window.TOUR_DATA = {
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu Tết: 15 USD/khách"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       offers: ["Về sớm hơn (không Hang Múa)", "Buffet/set lunch Heritage Garden"],
-      offersEn: ["Earlier return (no Mua Cave)", "Buffet/set lunch at Heritage Garden"]
+      offersEn: ["Earlier return (no Mua Cave)", "Buffet/set lunch at Heritage Garden"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-bai-dinh",
@@ -771,7 +679,17 @@ window.TOUR_DATA = {
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu phòng đơn 15 USD", "Phụ thu Tết: 15 USD/khách/đêm"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Single supplement 15 USD", "Tet surcharge: 15 USD/guest/night"],
       offers: ["Nghỉ tại Trang An Heritage Garden", "Hồ bơi mùa hè"],
-      offersEn: ["Stay at Trang An Heritage Garden", "Summer swimming pool"]
+      offersEn: ["Stay at Trang An Heritage Garden", "Summer swimming pool"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-bai-dinh-trang-an",
@@ -845,7 +763,17 @@ window.TOUR_DATA = {
       servicesExcluded: ["VAT", "Đồ uống", "Tip", "Chi tiêu cá nhân", "Phụ thu Tết: 15 USD/khách"],
       servicesExcludedEn: ["VAT", "Beverages", "Tips", "Personal expenses", "Tet surcharge: 15 USD/guest"],
       offers: ["Không leo Hang Múa", "Buffet trưa Heritage Garden"],
-      offersEn: ["No Mua Cave climb", "Buffet lunch at Heritage Garden"]
+      offersEn: ["No Mua Cave climb", "Buffet lunch at Heritage Garden"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-2d1n-pagoda",
@@ -924,7 +852,17 @@ window.TOUR_DATA = {
       serviceNote: "Limousine từ 2 khách: $189. Shuttle: $179. 1 khách limousine: $229.",
       serviceNoteEn: "Limousine from 2 guests: $189. Shuttle: $179. Solo limousine: $229.",
       offers: ["Thung Nham + Bích Động", "Nghỉ đêm Heritage Garden"],
-      offersEn: ["Thung Nham + Bich Dong", "Overnight at Heritage Garden"]
+      offersEn: ["Thung Nham + Bich Dong", "Overnight at Heritage Garden"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-2d1n-cuc-phuong",
@@ -1001,7 +939,17 @@ window.TOUR_DATA = {
       serviceNote: "Limousine từ 2 khách: $195. Shuttle: $185. 1 khách limousine: $239.",
       serviceNoteEn: "Limousine from 2 guests: $195. Shuttle: $185. Solo limousine: $239.",
       offers: ["Cúc Phương + cố đô", "Nghỉ đêm Heritage Garden"],
-      offersEn: ["Cuc Phuong + ancient capital", "Overnight at Heritage Garden"]
+      offersEn: ["Cuc Phuong + ancient capital", "Overnight at Heritage Garden"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-2d1n-halong",
@@ -1076,7 +1024,17 @@ window.TOUR_DATA = {
       serviceNote: "Limousine từ 2 khách: $199. 1 khách: $219.",
       serviceNoteEn: "Limousine from 2 guests: $199. Solo: $219.",
       offers: ["Ninh Bình + Hạ Long một đặt chỗ", "Limousine xuyên suốt"],
-      offersEn: ["Ninh Binh + Ha Long in one booking", "Limousine throughout"]
+      offersEn: ["Ninh Binh + Ha Long in one booking", "Limousine throughout"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-thung-nham",
@@ -1155,7 +1113,17 @@ window.TOUR_DATA = {
       serviceNote: "Private: $145/2 khách · $129/3 · $119/4 · từ $109/5–8 · Dcar cao hơn.",
       serviceNoteEn: "Private: $145/2 guests · $129/3 · $119/4 · from $109/5–8 · Dcar higher.",
       offers: ["Tour riêng tư", "Lịch trình linh hoạt"],
-      offersEn: ["Private tour", "Flexible itinerary"]
+      offersEn: ["Private tour", "Flexible itinerary"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
     {
       id: "ninh-binh-incense",
@@ -1230,7 +1198,17 @@ window.TOUR_DATA = {
       serviceNote: "Private: $149/2 khách · $139/3 · $125/4 · từ $119/5–6 · Dcar cao hơn.",
       serviceNoteEn: "Private: $149/2 guests · $139/3 · $125/4 · from $119/5–6 · Dcar higher.",
       offers: ["Làng hương + Ninh Bình", "Tour private"],
-      offersEn: ["Incense village + Ninh Binh", "Private tour"]
+      offersEn: ["Incense village + Ninh Binh", "Private tour"],
+      menuGallery: {
+        title: "Thực đơn Đặc sản Ninh Bình",
+        titleEn: "Ninh Binh specialties menu",
+        images: [
+          { src: "img/menus/NinhBinh/anh1.jpg", alt: "Buffet hải sản", altEn: "Seafood buffet" },
+          { src: "img/menus/NinhBinh/anh2.jpg", alt: "Buffet trên tàu", altEn: "Onboard buffet" },
+          { src: "img/menus/NinhBinh/anh3.jpg", alt: "Nhà hàng trên tàu", altEn: "Cruise restaurant" },
+          { src: "img/menus/NinhBinh/anh4.jpg", alt: "Không gian nhà hàng", altEn: "Restaurant space" }
+        ]
+      },
     },
 
     /* —— Hà Nội —— */
@@ -1328,63 +1306,17 @@ window.TOUR_DATA = {
       serviceNoteEn: "Group: limousine $76 · Dcar $86. Private sedan/CUV/van from $119/2 guests · private Dcar from $135/2 guests. No lunch: −$10. Child 1–4: 1st free with 2 adults (shared seat); 2nd child and ages 5–8: 75%; 9+: 100%.",
       offers: ["Set lunch Mesdames Linh đã gồm", "Private & group", "Limousine hoặc Dcar"],
       offersEn: ["Mesdames Linh set lunch included", "Private & group", "Limousine or Dcar"],
-      buffetMenu: {
-        title: "Set menu trưa Mesdames Linh",
-        titleEn: "Mesdames Linh set-menu lunch",
-        columns: [
-          [
-            {
-              name: "Set mặn (Lunch)",
-              items: [
-                { vi: "Mesdames Linh Cuisine Welcome", en: "Mesdames Linh Cuisine Welcome" },
-                { vi: "Xúp nấm rừng Sapa", en: "Sapa wild mushroom soup" },
-                { vi: "Xa lát đu đủ xanh song vị", en: "Green papaya salad with dual flavors" },
-                { vi: "Nem rán Hà Nội", en: "Hanoi fried spring rolls" },
-                { vi: "Cải chíp om nấm đông cô", en: "Braised bok choy with shiitake" },
-                { vi: "Tôm chiên hoàng bào", en: "Deep-fried sea tiger prawns with taro" },
-                { vi: "Gà nướng hạt mắc khén Tây Bắc", en: "Northwest grilled chicken with mac khen" },
-                { vi: "Bò xào ngũ sắc", en: "Stir-fried five-color beef" },
-                { vi: "Cơm tám hấp lá thơm", en: "Fragrant steamed rice with aromatic leaves" },
-                { vi: "Trái cây theo mùa", en: "Fresh seasonal fruit" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Set chay (Lunch)",
-              items: [
-                { vi: "Mesdames Linh Cuisine Welcome", en: "Mesdames Linh Cuisine Welcome", veg: "Chay", vegEn: "Veg" },
-                { vi: "Xúp nấm rừng Sapa", en: "Sapa wild mushroom soup", veg: "Chay", vegEn: "Veg" },
-                { vi: "Xa lát đu đủ xanh song vị", en: "Green papaya salad with dual flavors", veg: "Chay", vegEn: "Veg" },
-                { vi: "Nem chay", en: "Vegetarian spring rolls", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cải chíp om nấm đông cô", en: "Braised bok choy with shiitake", veg: "Chay", vegEn: "Veg" },
-                { vi: "Nấm chiên tempura", en: "Tempura mushrooms", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cà tím om + rau thơm", en: "Braised eggplant with fresh herbs", veg: "Chay", vegEn: "Veg" },
-                { vi: "Đậu phụ hầm rau củ", en: "Vietnamese tofu in tomato sauce", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cơm tám hấp lá thơm", en: "Fragrant steamed rice with aromatic leaves", veg: "Chay", vegEn: "Veg" },
-                { vi: "Trái cây theo mùa", en: "Fresh seasonal fruit", veg: "Chay", vegEn: "Veg" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Set tối (đặt thêm)",
-              items: [
-                { vi: "Set 1: Bún chả Hà Nội…", en: "Set 1: Hanoi bun cha…" },
-                { vi: "Set 2: Sườn BBQ & cơm rang cá hồi", en: "Set 2: BBQ ribs & salmon fried rice" },
-                { vi: "Set 3: Bò lá lốt & phở gà", en: "Set 3: Lolot beef & chicken pho" },
-                { vi: "Set 4: Chả cá Hà Nội & bò lúc lắc", en: "Set 4: Hanoi grilled fish & shaken beef" },
-                { vi: "Set 5 chay: Nem chay & phở xốt me", en: "Set 5 veg: Spring rolls & tamarind pho", veg: "Chay", vegEn: "Veg" },
-                { vi: "420.000đ/khách · chưa VAT 10%", en: "420,000 VND/pax · excl. 10% VAT" }
-              ]
-            }
-          ]
-        ],
-        note: "Set lunch tour đã gồm trong giá. Set Lunch & Dinner đặt thêm tại tour desk: 420.000đ/khách, chưa gồm 10% VAT. Thực đơn có thể đổi theo mùa.",
-        noteEn: "Tour set lunch is included. Extra Lunch & Dinner sets via tour desk: 420,000 VND/pax, excl. 10% VAT. Menu may change by season.",
-        vegNote: "(*) Có set chay · Vegetarian set available",
-        vegNoteEn: "(*) Vegetarian set available"
-      }
+      menuGallery: {
+        title: "Set lunch Mesdames Linh",
+        titleEn: "Mesdames Linh set lunch",
+        images: [
+          { src: "img/menus/madameLinh/anh1.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh2.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh3.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh4.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh5.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+        ]
+      },
     },
     {
       id: "ha-noi-half",
@@ -1448,7 +1380,18 @@ window.TOUR_DATA = {
       serviceNote: "Group half day: limousine $59 · Dcar $69. Trẻ em: 1–4 tuổi miễn phí 1 em/2 người lớn; 5–8 tuổi 75%; từ 9 tuổi 100%.",
       serviceNoteEn: "Group half day: limousine $59 · Dcar $69. Children: ages 1–4 first child free with 2 adults; 5–8: 75%; 9+: 100%.",
       offers: ["Sáng hoặc chiều", "Limousine hoặc Dcar"],
-      offersEn: ["Morning or afternoon", "Limousine or Dcar"]
+      offersEn: ["Morning or afternoon", "Limousine or Dcar"],
+      menuGallery: {
+        title: "Set lunch Mesdames Linh",
+        titleEn: "Mesdames Linh set lunch",
+        images: [
+          { src: "img/menus/madameLinh/anh1.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh2.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh3.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh4.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh5.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+        ]
+      },
     },
     {
       id: "ha-noi-incense",
@@ -1540,44 +1483,17 @@ window.TOUR_DATA = {
       serviceNoteEn: "Group Dcar $86. Private: $125/2 · $109/3 · $105/4 · $99/5–6 · $95/7–8 · $80/9–10 · $75/11–12. Private Dcar: $139/2 · $119/3 · $109/4 · $105/5–6 · $99/7–8 · $86/9. Children per brochure policy.",
       offers: ["Làng hương + city tour", "Lunch Mesdames Linh", "Dcar nhóm nhỏ"],
       offersEn: ["Incense village + city tour", "Mesdames Linh lunch", "Small-group Dcar"],
-      buffetMenu: {
-        title: "Set menu trưa Mesdames Linh",
-        titleEn: "Mesdames Linh set-menu lunch",
-        columns: [
-          [
-            {
-              name: "Set mặn",
-              items: [
-                { vi: "Welcome Mesdames Linh", en: "Mesdames Linh Welcome" },
-                { vi: "Xúp nấm rừng Sapa", en: "Sapa wild mushroom soup" },
-                { vi: "Xa lát đu đủ xanh song vị", en: "Green papaya dual-flavor salad" },
-                { vi: "Nem rán Hà Nội", en: "Hanoi fried spring rolls" },
-                { vi: "Tôm chiên hoàng bào", en: "Tiger prawns with taro" },
-                { vi: "Gà nướng mắc khén", en: "Mac-khen grilled chicken" },
-                { vi: "Bò xào ngũ sắc", en: "Five-color stir-fried beef" },
-                { vi: "Cơm tám hấp lá thơm", en: "Fragrant steamed rice" },
-                { vi: "Trái cây theo mùa", en: "Seasonal fruit" }
-              ]
-            }
-          ],
-          [
-            {
-              name: "Set chay",
-              items: [
-                { vi: "Nem chay", en: "Vegetarian spring rolls", veg: "Chay", vegEn: "Veg" },
-                { vi: "Nấm chiên tempura", en: "Tempura mushrooms", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cà tím om rau thơm", en: "Braised eggplant with herbs", veg: "Chay", vegEn: "Veg" },
-                { vi: "Đậu phụ hầm rau củ", en: "Tofu with vegetables", veg: "Chay", vegEn: "Veg" },
-                { vi: "Cơm tám hấp lá thơm", en: "Fragrant steamed rice", veg: "Chay", vegEn: "Veg" }
-              ]
-            }
-          ]
-        ],
-        note: "Set lunch đã gồm trong giá tour. Đặt set tối thêm: 420.000đ/khách (chưa VAT 10%) tại tour desk.",
-        noteEn: "Set lunch included in the tour price. Extra dinner sets: 420,000 VND/pax (excl. 10% VAT) at the tour desk.",
-        vegNote: "(*) Set chay có sẵn · Vegetarian set available",
-        vegNoteEn: "(*) Vegetarian set available"
-      }
+      menuGallery: {
+        title: "Set lunch Mesdames Linh",
+        titleEn: "Mesdames Linh set lunch",
+        images: [
+          { src: "img/menus/madameLinh/anh1.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh2.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh3.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh4.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+          { src: "img/menus/madameLinh/anh5.jpg", alt: "Mesdames Linh", altEn: "Mesdames Linh" },
+        ]
+      },
     }
   ]
 };
