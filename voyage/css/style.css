@@ -1164,6 +1164,59 @@ select option { color: var(--ink); background: #fff; }
 .book-aside .book-form h2 { margin-top: 0; }
 .price-line { margin: 0; color: var(--body); }
 .price-line strong { font-size: 28px; color: var(--brown); font-weight: 700; }
+.itinerary {
+  margin: 20px 0 8px;
+}
+.itinerary h2 {
+  margin: 0 0 12px;
+}
+.itin-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid color-mix(in srgb, var(--brown) 28%, transparent);
+}
+.itin-list li {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  gap: 10px 14px;
+  padding: 0 0 16px 16px;
+  position: relative;
+}
+.itin-list li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brown);
+}
+.itin-time {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--brown);
+  padding-top: 2px;
+}
+.itin-body strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.itin-body p {
+  margin: 0;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--ink) 78%, transparent);
+}
+@media (max-width: 640px) {
+  .itin-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
 .svc-list {
   margin: 0; padding: 0 0 0 1.1em; color: var(--body); display: grid; gap: 4px;
 }

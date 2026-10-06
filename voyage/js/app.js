@@ -9,8 +9,6 @@
 
   var DEST_LABEL = {
     "Ninh Bình": { vi: "Ninh Bình", en: "Ninh Binh" },
-    "Hà Giang": { vi: "Hà Giang", en: "Ha Giang" },
-    "Sapa": { vi: "Sapa", en: "Sapa" },
     "Hà Nội": { vi: "Hà Nội", en: "Hanoi" },
     "Hạ Long": { vi: "Hạ Long", en: "Ha Long" }
   };
@@ -37,16 +35,17 @@
     "reviews.k": { vi: "Đánh giá", en: "Reviews" },
     "reviews.h": { vi: "Khách đã đi", en: "Guests who went" },
     "reviews.p": { vi: "Một vài chuyến gần đây — chi tiết cụ thể, không lời khen chung chung.", en: "A few recent trips — specific notes, not generic praise." },
-    "rev1.meta": { vi: "Lan · Du thuyền Hạ Long · tuần trước", en: "Lan · Ha Long cruise · last week" },
+    "rev1.meta": { vi: "Lan · Heritage Luxury Day Cruise · tuần trước", en: "Lan · Heritage Luxury Day Cruise · last week" },
     "rev1.body": { vi: "Đợi tàu ở bến Tuần Châu gần 40 phút, hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế, jacuzzi ngoài boong thì mát thật.", en: "Waited nearly 40 minutes at Tuan Chau; the guide only texted “almost docking.” On board the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool." },
-    "rev2.meta": { vi: "Quân · Vòng Hà Giang · tháng 3/2026", en: "Quan · Ha Giang Loop · March 2026" },
-    "rev2.body": { vi: "Ngày hai sương kín Mã Pí Lèng, bác tài đi số thấp chứ không cố vượt. Tối ở Đồng Văn có bát thắng dền nóng. Ba ngày khớp file họ gửi lúc đặt.", en: "Day two fog sealed Ma Pi Leng; the driver stayed in low gear instead of forcing it. Dinner in Dong Van was a hot thang den. The three days matched the file they sent when we booked." },
-    "rev3.meta": { vi: "Hà · Tam Cốc & Tràng An · tháng trước", en: "Ha · Tam Coc & Trang An · last month" },
-    "rev3.body": { vi: "Thuyền ra lúc 7 rưỡi, lúa hai bên còn xanh, đoạn sông đó đẹp. Vào hang thì bậc đá trơn, mình phải vịn người phía trước mới xuống hết. Cơm trưa cá kho, bình thường.", en: "Boat out at 7:30, rice still green on both sides — that stretch was lovely. Inside the cave the stone steps were slick; I had to hold the person ahead. Lunch was braised fish, ordinary." },
-    "rev4.meta": { vi: "Linh · Sapa bản Cát Cát · tháng 2/2026", en: "Linh · Sapa Cat Cat · February 2026" },
-    "rev4.body": { vi: "Xuống bản lúc 8 giờ, đường đá khô, mới có vài đoàn. Trưa được thịt lợn cắp nách. Xe đón lại trước nhà thờ đá lúc 15h30.", en: "Into the village at 8, dry stone path, only a few groups. Lunch was black pig. Pickup in front of the stone church at 15:30." },
-    "rev5.meta": { vi: "Đức · Phố cổ Hà Nội · cuối tuần trước", en: "Duc · Hanoi Old Quarter · last weekend" },
-    "rev5.body": { vi: "Sáu người đi bộ từ Hàng Bạc sang Văn Miếu, khoảng hai tiếng rưỡi cả lúc ngồi. Không ai kéo vào shop. Cuối chiều trà đá một quán ở Hàng Bông rồi giải tán.", en: "Six of us walked from Hang Bac to the Temple of Literature — about two and a half hours including sits. Nobody pulled us into shops. Late afternoon iced tea on Hang Bong, then we parted." },
+    "rev2.meta": { vi: "Quân · Heritage Signature · tháng 3/2026", en: "Quan · Heritage Signature · March 2026" },
+    "rev2.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm, về khách sạn khoảng 20h40.", en: "Signature felt roomier, sundeck had a bar. Afternoon kayak at Luon then Titov — steep steps but a clear bay view. Sunset party had prawn crackers; hotel around 20:40." },
+    "rev3.meta": { vi: "Hà · Hoa Lư – Tam Cốc – Hang Múa · tháng trước", en: "Ha · Hoa Lu – Tam Coc – Mua Cave · last month" },
+    "rev3.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Hang Múa 500 bậc — mệt nhưng nhìn xuống sông rõ.", en: "About ninety minutes on Tam Coc, rice still green. Buffet at Heritage Garden had steamed goat. Mua Cave’s 500 steps were hard, but the river view from the top was clear." },
+    "rev4.meta": { vi: "Linh · Hà Nội City Tour · tháng 2/2026", en: "Linh · Hanoi City Tour · February 2026" },
+    "rev4.body": { vi: "Sáng Trấn Quốc và Lăng Bác, trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách nước ngoài. Xe trả đúng trước khách sạn lúc 16h20.", en: "Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch — fried spring rolls and mac khen chicken. Temple of Literature busy with foreigners. Drop-off right at the hotel at 16:20." },
+    "rev5.meta": { vi: "Đức · Làng hương & Hà Nội · cuối tuần trước", en: "Duc · Incense village & Hanoi · last weekend" },
+    "rev5.body": { vi: "Quang Phú Cầu lúc 10 giờ, bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que. Về nội thành ăn Mesdames Linh rồi Hoa Lò — đúng lịch brochure.", en: "Quang Phu Cau at 10 — red and yellow incense stacked like walls. They let us dye one stick. Back in the city for Mesdames Linh then Hoa Lo — matched the brochure." },
+    "itin.h": { vi: "Lịch trình", en: "Itinerary" },
     "star.4": { vi: "4 trên 5 sao", en: "4 out of 5 stars" },
     "star.5": { vi: "5 trên 5 sao", en: "5 out of 5 stars" },
     "detail.start": { vi: "Ngày bắt đầu", en: "Start date" },
@@ -67,21 +66,21 @@
     "vo.desc": { vi: "Đặt tour Việt Nam với The Dahlia — phong cách booking travel.", en: "Book Vietnam tours with The Dahlia — travel-booking style." },
     "vo.hero.aria": { vi: "Mở đầu", en: "Opening" },
     "vo.hero.alt": { vi: "Du thuyền trên vịnh Hạ Long lúc sáng sớm", en: "A cruise on Ha Long Bay at dawn" },
-    "vo.kicker": { vi: "Tour · Việt Nam", en: "Tours · Vietnam" },
-    "vo.h1": { vi: "Du thuyền & tour — chọn điểm đến, giữ chỗ.", en: "Cruises & tours — pick a place, hold a seat." },
-    "vo.lede": { vi: "Ninh Bình, Hà Giang, Sapa, Hà Nội, Hạ Long. Tìm ngày đi và số khách, rồi đặt tour trong vài bước.", en: "Ninh Binh, Ha Giang, Sapa, Hanoi, Ha Long. Pick a date and guests, then book in a few steps." },
+    "vo.kicker": { vi: "Heritage · The Dahlia", en: "Heritage · The Dahlia" },
+    "vo.h1": { vi: "Du thuyền Heritage & tour miền Bắc — giữ chỗ từ Hà Nội.", en: "Heritage cruises & Northern tours — hold a seat from Hanoi." },
+    "vo.lede": { vi: "Hạ Long Luxury & Signature, Ninh Bình Heritage Premium, Hà Nội City Tour. Chọn ngày và số khách, rồi đặt trong vài bước.", en: "Ha Long Luxury & Signature, Ninh Binh Heritage Premium, Hanoi City Tour. Pick a date and guests, then book in a few steps." },
     "vo.trust": { vi: "Vì sao chọn Dahlia", en: "Why Dahlia" },
     "vo.t1": { vi: "Tour nổi bật", en: "Featured tours" },
-    "vo.t1p": { vi: "Năm điểm đến khắp miền Bắc.", en: "Five destinations across the North." },
+    "vo.t1p": { vi: "Hạ Long, Ninh Bình, Hà Nội — đối tác Heritage.", en: "Ha Long, Ninh Binh, Hanoi — Heritage partner." },
     "vo.t2": { vi: "Ngày đi", en: "Trip length" },
-    "vo.t2p": { vi: "Từ trong ngày đến vòng Hà Giang.", en: "From day trips to the Ha Giang loop." },
+    "vo.t2p": { vi: "Trong ngày hoặc 2 ngày 1 đêm Ninh Bình.", en: "Day trips or Ninh Binh 2 days 1 night." },
     "vo.t3": { vi: "Mã DAHLIA10", en: "Code DAHLIA10" },
     "vo.t3p": { vi: "Giảm khi đặt trên trang.", en: "A discount when you book here." },
     "vo.t4": { vi: "Xuất phát Hà Nội", en: "Depart from Hanoi" },
-    "vo.t4p": { vi: "Xe đón và lịch rõ trên mỗi tour.", en: "Pickup and a clear schedule on every tour." },
+    "vo.t4p": { vi: "Limousine đón phố cổ, lịch theo brochure.", en: "Limousine from the Old Quarter, schedule per brochure." },
     "vo.tours.k": { vi: "Tour nổi bật", en: "Featured tours" },
     "vo.tours.h": { vi: "Chọn chuyến đi", en: "Choose a trip" },
-    "vo.tours.p": { vi: "Ba tour nổi bật — Hạ Long, Hà Giang, Sapa. Bấm thẻ để xem chi tiết và đặt.", en: "Three featured trips — Ha Long, Ha Giang, Sapa. Open a card to see details and book." },
+    "vo.tours.p": { vi: "Ba tour nổi bật — Heritage Luxury, Signature, Ninh Bình. Bấm thẻ để xem lịch trình và đặt.", en: "Three featured trips — Heritage Luxury, Signature, Ninh Binh. Open a card for the itinerary and booking." },
     "desc.para": { vi: "Đoạn", en: "Paragraph" },
     "desc.lines": { vi: "3 dòng", en: "3 lines" },
     "desc.toggle": { vi: "Đổi kiểu mô tả thẻ", en: "Change card blurb layout" },
@@ -92,7 +91,7 @@
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
     "vo.hero.prev": { vi: "Slide trước", en: "Previous slide" },
     "vo.hero.next": { vi: "Slide sau", en: "Next slide" },
-    "vo.book.lede": { vi: "Mười lăm tour miền Bắc. Chọn một thẻ để mở form đặt — mã DAHLIA10 giảm 10%.", en: "Fifteen Northern tours. Open a card to book — code DAHLIA10 for 10% off." },
+    "vo.book.lede": { vi: "Tour Heritage: Hạ Long, Ninh Bình, Hà Nội. Chọn một thẻ để mở form đặt — mã DAHLIA10 giảm 10%.", en: "Heritage tours: Ha Long, Ninh Binh, Hanoi. Open a card to book — code DAHLIA10 for 10% off." },
     "vo.ask.k": { vi: "Liên hệ nhanh", en: "A quick note" },
     "vo.ask.h": { vi: "Hỏi trước khi đặt tour.", en: "Ask before you book a tour." },
     "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — gửi một dòng, chúng tôi mở sẵn thư tới hello@thedahliahanoi.com.", en: "A private tour, a date change, or a larger group — send a line. A draft opens to hello@thedahliahanoi.com." },
@@ -685,6 +684,22 @@
     }).join("") + "</ul>";
   }
 
+  function itineraryHtml(tour) {
+    var items = U.lang() === "en" && tour.itineraryEn && tour.itineraryEn.length
+      ? tour.itineraryEn
+      : tour.itinerary;
+    if (!items || !items.length) return "";
+    return '<section class="itinerary" aria-label="' + U.escapeHtml(t("itin.h")) + '">' +
+      "<h2>" + U.escapeHtml(t("itin.h")) + "</h2>" +
+      '<ol class="itin-list">' + items.map(function (step) {
+        return "<li>" +
+          (step.time ? '<span class="itin-time">' + U.escapeHtml(step.time) + "</span>" : "") +
+          '<div class="itin-body"><strong>' + U.escapeHtml(step.title || "") + "</strong>" +
+          (step.text ? "<p>" + U.escapeHtml(step.text) + "</p>" : "") +
+          "</div></li>";
+      }).join("") + "</ol></section>";
+  }
+
   var DEST_MEDIA = {
     "Ninh Bình": {
       images: [
@@ -693,22 +708,6 @@
         "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=2200&q=80"
       ],
       video: "https://videos.pexels.com/video-files/30574776/13092696_3840_2160_60fps.mp4"
-    },
-    "Hà Giang": {
-      images: [
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=80"
-      ],
-      video: "https://videos.pexels.com/video-files/2887463/2887463-uhd_2560_1440_24fps.mp4"
-    },
-    "Sapa": {
-      images: [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2200&q=80"
-      ],
-      video: "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4"
     },
     "Hà Nội": {
       images: [
@@ -721,8 +720,8 @@
     "Hạ Long": {
       images: [
         "https://images.unsplash.com/photo-1570366583862-f91883984fde?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2200&q=80",
-        "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=2200&q=80"
+        "https://images.unsplash.com/photo-1559599746-8823b38544c6?auto=format&fit=crop&w=2200&q=80",
+        "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2200&q=80"
       ],
       video: "https://videos.pexels.com/video-files/30391309/13024349_3840_2160_60fps.mp4"
     }
@@ -1224,7 +1223,7 @@
     quote();
   }
 
-  var FEATURED_IDS = ["ha-long", "ha-giang", "sapa"];
+  var FEATURED_IDS = ["ha-long", "ha-long-signature", "ninh-binh"];
 
   function featuredTours() {
     var marked = tours.filter(function (tour) { return tour.featured; });
@@ -1554,6 +1553,7 @@
         "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
         "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
         "</div>" +
+        itineraryHtml(tour) +
         "<h2>" + U.escapeHtml(t("svc.h")) + "</h2>" +
         "<h3>" + U.escapeHtml(t("svc.in")) + "</h3>" + listHtml(included) +
         (serviceNote ? '<p class="hint">' + U.escapeHtml(serviceNote) + "</p>" : "") +
