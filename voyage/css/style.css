@@ -751,6 +751,7 @@ select option { color: var(--ink); background: #fff; }
 .v-card .media { aspect-ratio: 16 / 10; }
 .v-card .body { padding: 16px 18px 18px; display: grid; gap: 6px; flex: 1; }
 .v-card .meta { color: var(--flower); font-size: 13px; font-weight: 600; }
+.v-card .op-meta { margin-left: auto; font-size: 12px; letter-spacing: 0.02em; }
 .v-card .desc { margin: 0; color: var(--body); font-size: 14px; line-height: 1.45; }
 .v-card .desc.is-lines,
 .card-line.is-lines {
@@ -1224,6 +1225,14 @@ select option { color: var(--ink); background: #fff; }
   min-height: 1.15em;
 }
 .detail-copy h2 { margin-top: 12px; }
+.policy-block {
+  margin-top: 22px;
+  padding: 16px 18px 18px;
+  border-radius: 16px;
+  background: var(--cream);
+}
+.policy-block h2 { margin: 0 0 8px; }
+.policy-block .hint { margin: 0 0 8px; }
 .detail-copy h3 { margin: 8px 0 4px; font-size: 16px; color: var(--brown); }
 .detail-hero { border-radius: 20px; overflow: hidden; aspect-ratio: 21/9; }
 .detail-hero .media { height: 100%; aspect-ratio: auto; }
