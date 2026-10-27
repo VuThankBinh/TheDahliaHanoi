@@ -5,7 +5,9 @@
     operatorId: null,
     tourId: null,
     destId: null,
-    dirty: false
+    dirty: false,
+    folders: { media: "tours", menu: "menus/menu" },
+    folderTour: null
   };
 
   var panel = document.getElementById("panel");
@@ -321,6 +323,213 @@
       '<textarea name="' + esc(name) + '">' + esc(value) + "</textarea></label>";
   }
 
+  function previewUrl(src) {
+    var value = String(src || "").trim();
+    if (!value) return "";
+    if (/^(https?:|data:|blob:)/i.test(value)) return value;
+    return "../voyage/" + value.replace(/^\.\//, "");
+  }
+
+  function folderChoices(menuId) {
+    var rows = [
+      ["tours", "img/tours"],
+      ["venues", "img/venues"],
+      ["food", "img/food"],
+      ["fleet", "img/fleet"],
+      ["experiences", "img/experiences"]
+    ];
+    Object.keys(state.catalogue.destinations || {}).forEach(function (id) {
+      rows.push(["destinations/" + id, "img/destinations/" + id]);
+    });
+    rows.push(["menus/" + (slug(menuId) || "menu"), "img/menus/" + (slug(menuId) || "menu")]);
+    return rows;
+  }
+
+  function rememberFolders(tour) {
+    if (!tour || state.folderTour === tour.id) return;
+    state.folderTour = tour.id;
+    state.folders.media = (state.catalogue.destinations || {})[tour.destination]
+      ? "destinations/" + tour.destination
+      : "tours";
+    state.folders.menu = "menus/" + tour.id;
+  }
+
+  function folderSelect(key, menuId) {
+    var selected = state.folders[key];
+    var options = folderChoices(menuId);
+    if (!options.some(function (row) { return row[0] === selected; })) selected = options[0][0];
+    state.folders[key] = selected;
+    return '<label>Thư mục<select data-folder="' + esc(key) + '">' +
+      options.map(function (row) {
+        return '<option value="' + esc(row[0]) + '"' + (row[0] === selected ? " selected" : "") + ">" + esc(row[1]) + "</option>";
+      }).join("") +
+      "</select></label>";
+  }
+
+  function mediaSrc(item) {
+    if (!item) return "";
+    if (typeof item === "string") return item;
+    return item.src || item.poster || "";
+  }
+
+  function thumbHtml(item, index, kind) {
+    var src = mediaSrc(item);
+    var url = previewUrl(src);
+    var video = item && item.type === "video";
+    return '<figure class="thumb">' +
+      (url && !video ? '<img src="' + esc(url) + '" alt="">' : '<span class="thumb-empty">' + (video ? "Video" : "Không xem được") + "</span>") +
+      "<figcaption>" + esc(src || "") + "</figcaption>" +
+      '<button type="button" class="thumb-x" data-remove="' + esc(kind) + '" data-index="' + index + '" aria-label="Gỡ ảnh">×</button>' +
+      "</figure>";
+  }
+
+  function uploadTools(kind, folderKey, menuId) {
+    return '<div class="media-tools">' +
+      folderSelect(folderKey, menuId) +
+      '<label class="btn ghost file-btn">Tải ảnh lên<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple data-upload="' + esc(kind) + '" data-folder-key="' + esc(folderKey) + '"></label>' +
+      "</div>";
+  }
+
+  function cardBoard(src) {
+    var url = previewUrl(src);
+    return '<fieldset class="media-field"><legend>Ảnh thẻ</legend>' +
+      '<div class="media-tools"><p class="hint">Lưu vào <code>voyage/img/tours/</code>. Trang tour đọc đường dẫn <code>img/tours/…</code>.</p>' +
+      '<label class="btn ghost file-btn">Tải ảnh lên<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" data-upload="card"></label>' +
+      (src ? '<button type="button" class="btn ghost" data-remove="card" data-index="0">Gỡ ảnh</button>' : "") +
+      "</div>" +
+      '<div class="media-board">' +
+      '<div class="thumb thumb-single">' +
+      (url ? '<img src="' + esc(url) + '" alt="">' : '<span class="thumb-empty">Chưa có ảnh</span>') +
+      "</div>" +
+      '<label>Đường dẫn trong JSON<textarea name="image" class="json-side">' + esc(src || "") + "</textarea></label>" +
+      "</div></fieldset>";
+  }
+
+  function listBoard(legend, kind, items, folderKey, menuId, hint) {
+    var list = Array.isArray(items) ? items : [];
+    var thumbs = list.map(function (item, i) { return thumbHtml(item, i, kind); }).join("");
+    var fixedFolder = kind === "dest-media" || kind === "media";
+    var tools = fixedFolder
+      ? '<div class="media-tools"><p class="hint">Thư mục: <code>voyage/img/destinations/' + esc(menuId) + '/</code></p>' +
+        '<label class="btn ghost file-btn">Tải ảnh lên<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple data-upload="' + esc(kind) + '"></label></div>'
+      : uploadTools(kind, folderKey, menuId);
+    return '<fieldset class="media-field"><legend>' + esc(legend) + "</legend>" +
+      tools +
+      (hint ? '<p class="hint">' + hint + "</p>" : "") +
+      '<div class="media-board">' +
+      '<div class="thumbs">' + (thumbs || '<p class="hint">Chưa có ảnh.</p>') + "</div>" +
+      '<label>JSON<textarea name="' + esc(kind === "dest-media" ? "media" : kind) + '" class="json-side">' +
+      esc(JSON.stringify(list, null, 2)) + "</textarea></label>" +
+      "</div></fieldset>";
+  }
+
+  function menuBoard(gallery, tourId) {
+    var data = gallery && typeof gallery === "object" && !Array.isArray(gallery) ? gallery : null;
+    var images = data && Array.isArray(data.images) ? data.images : [];
+    var thumbs = images.map(function (item, i) { return thumbHtml(item, i, "menu"); }).join("");
+    return '<fieldset class="media-field"><legend>Gallery menu</legend>' +
+      uploadTools("menu", "menu", tourId) +
+      '<p class="hint">Ảnh mới vào <code>voyage/img/menus/' + esc(slug(tourId) || "menu") + '/</code>. Tiêu đề giữ trong JSON bên cạnh.</p>' +
+      '<div class="media-board">' +
+      '<div class="thumbs">' + (thumbs || '<p class="hint">Chưa có ảnh menu.</p>') + "</div>" +
+      '<label>JSON<textarea name="menuGallery" class="json-side">' +
+      esc(data ? JSON.stringify(data, null, 2) : "") + "</textarea></label>" +
+      "</div></fieldset>";
+  }
+
+  function fileToBase64(file) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var raw = String(reader.result || "");
+        var comma = raw.indexOf(",");
+        resolve(comma >= 0 ? raw.slice(comma + 1) : raw);
+      };
+      reader.onerror = function () { reject(new Error("Không đọc được file.")); };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function uploadOne(file, folder) {
+    var data = await fileToBase64(file);
+    var res = await fetch("/api/upload", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ folder: folder, filename: file.name, data: data })
+    });
+    var body = await res.json().catch(function () { return {}; });
+    if (!res.ok || !body.ok) throw new Error((body.errors || ["Không lưu được ảnh."]).join(" "));
+    return body.src;
+  }
+
+  function plainName(file) {
+    return String(file.name || "image").replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").trim();
+  }
+
+  async function handleUploads(kind, folderKey, files) {
+    var picked = "";
+    if (kind !== "card" && kind !== "dest-media" && kind !== "media") {
+      var sel = panel.querySelector('[data-folder="' + folderKey + '"]');
+      picked = sel ? sel.value : state.folders[folderKey];
+    }
+    if (!commit()) return;
+    var folder = kind === "card" ? "tours"
+      : kind === "media" ? "destinations/" + state.tourId
+      : kind === "dest-media" ? "destinations/" + state.destId
+      : picked;
+    setStatus("Đang lưu ảnh vào thư mục…");
+    try {
+      var srcs = [];
+      for (var i = 0; i < files.length; i++) srcs.push(await uploadOne(files[i], folder));
+      if (kind === "card") {
+        findTour(state.tourId).image = srcs[srcs.length - 1];
+      } else if (kind === "media") {
+        var tour = findTour(state.tourId);
+        tour.media = Array.isArray(tour.media) ? tour.media : [];
+        srcs.forEach(function (src, i) {
+          var name = plainName(files[i]);
+          tour.media.push({ type: "image", src: src, alt: name, altEn: name });
+        });
+      } else if (kind === "menu") {
+        var current = findTour(state.tourId);
+        if (!current.menuGallery || typeof current.menuGallery !== "object" || Array.isArray(current.menuGallery)) {
+          current.menuGallery = { title: "", titleEn: "", images: [] };
+        }
+        current.menuGallery.images = Array.isArray(current.menuGallery.images) ? current.menuGallery.images : [];
+        srcs.forEach(function (src, i) {
+          var name = plainName(files[i]);
+          current.menuGallery.images.push({ src: src, alt: name, altEn: name });
+        });
+      } else if (kind === "dest-media") {
+        var dest = state.catalogue.destinations[state.destId];
+        dest.media = Array.isArray(dest.media) ? dest.media : [];
+        srcs.forEach(function (src, i) {
+          var name = plainName(files[i]);
+          dest.media.push({ type: "image", src: src, alt: name, altEn: name });
+        });
+      }
+      markDirty();
+      var y = window.scrollY;
+      render();
+      window.scrollTo(0, y);
+      setStatus("Đã lưu " + srcs.length + " ảnh vào voyage/img/" + folder + "/. Bấm Lưu và ghi đè để trang tour dùng đường dẫn này.");
+    } catch (err) {
+      setStatus(err.message || "Không lưu được ảnh. Chạy npm start rồi mở http://127.0.0.1:4173/admin/", true);
+    }
+  }
+
+  function removeImage(kind, index) {
+    if (!commit()) return;
+    if (kind === "card") findTour(state.tourId).image = "";
+    else if (kind === "media") findTour(state.tourId).media.splice(index, 1);
+    else if (kind === "menu") findTour(state.tourId).menuGallery.images.splice(index, 1);
+    else if (kind === "dest-media") state.catalogue.destinations[state.destId].media.splice(index, 1);
+    markDirty();
+    var y = window.scrollY;
+    render();
+    window.scrollTo(0, y);
+  }
+
   function renderOperators() {
     var op = findOp(state.operatorId) || ops()[0];
     state.operatorId = op ? op.id : null;
@@ -359,6 +568,7 @@
   function renderTours() {
     var tour = findTour(state.tourId) || tours()[0];
     state.tourId = tour ? tour.id : null;
+    if (tour) rememberFolders(tour);
     var list = tours().map(function (item) {
       var op = findOp(item.operatorId);
       return '<button type="button" class="pick' + (item.id === state.tourId ? " is-on" : "") + '" data-tour="' + esc(item.id) + '">' +
@@ -393,7 +603,7 @@
         field("Ghi chú giá (English)", "priceNoteEn", tour.priceNoteEn) +
         "</div>" +
         '<label class="check"><input type="checkbox" name="featured"' + (tour.featured ? " checked" : "") + "> Tour nổi bật trên trang chủ</label>" +
-        field("Ảnh thẻ", "image", tour.image) +
+        cardBoard(tour.image) +
         area("Mô tả ngắn", "cardLine", tour.cardLine) +
         area("Mô tả ngắn (English)", "cardLineEn", tour.cardLineEn) +
         area("Mô tả", "description", linesToText(tour.description), "Mỗi dòng một đoạn.") +
@@ -410,8 +620,8 @@
         area("Ghi chú giá / dịch vụ (English)", "serviceNoteEn", tour.serviceNoteEn || "") +
         area("Children Policy riêng", "childrenPolicy", linesToText(tour.childrenPolicy), "Để trống để dùng chính sách của đơn vị. Mỗi dòng một ý.") +
         area("Children Policy riêng (English)", "childrenPolicyEn", linesToText(tour.childrenPolicyEn), "Để trống để dùng bản tiếng Anh của đơn vị.") +
-        area("Ảnh slideshow (JSON)", "media", JSON.stringify(tour.media || [], null, 2)) +
-        area("Gallery menu (JSON)", "menuGallery", tour.menuGallery ? JSON.stringify(tour.menuGallery, null, 2) : "") +
+        listBoard("Ảnh slideshow", "media", tour.media || [], "media", tour.id, "Mỗi tour một thư mục theo id. JSON bên cạnh là đường dẫn <code>src</code>.") +
+        menuBoard(tour.menuGallery, tour.id) +
         '<div class="row-actions"><button type="button" class="btn danger" id="delete-tour">Xóa tour</button></div>' +
         "</form>";
     }
@@ -446,7 +656,7 @@
         area("Lead", "lead", dest.lead || "") +
         area("Lead (English)", "leadEn", dest.leadEn || "") +
         field("Video", "video", dest.video || "") +
-        area("Ảnh (JSON)", "media", JSON.stringify(dest.media || [], null, 2)) +
+        listBoard("Ảnh điểm đến", "dest-media", dest.media || [], "media", current, "JSON bên cạnh là mảng ảnh đang gắn với điểm đến.") +
         '<div class="row-actions"><button type="button" class="btn danger" id="delete-dest">Xóa điểm đến</button></div>' +
         "</form>";
     }
@@ -526,6 +736,32 @@
         if (!commit()) return;
         state.destId = btn.dataset.dest;
         render();
+      });
+    });
+    panel.querySelectorAll("[data-folder]").forEach(function (sel) {
+      sel.addEventListener("change", function () {
+        state.folders[sel.dataset.folder] = sel.value;
+      });
+    });
+    panel.querySelectorAll("[data-upload]").forEach(function (input) {
+      input.addEventListener("change", function () {
+        var files = Array.prototype.slice.call(input.files || []);
+        input.value = "";
+        if (!files.length) return;
+        handleUploads(input.dataset.upload, input.dataset.folderKey, files);
+      });
+    });
+    panel.querySelectorAll("[data-remove]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        removeImage(btn.dataset.remove, Number(btn.dataset.index));
+      });
+    });
+    panel.querySelectorAll("textarea.json-side").forEach(function (el) {
+      el.addEventListener("change", function () {
+        if (!commit()) return;
+        var y = window.scrollY;
+        render();
+        window.scrollTo(0, y);
       });
     });
     var search = document.getElementById("tour-q");

@@ -1226,13 +1226,19 @@ select option { color: var(--ink); background: #fff; }
 }
 .detail-copy h2 { margin-top: 12px; }
 .policy-block {
-  margin-top: 22px;
-  padding: 16px 18px 18px;
+  margin-top: 8px;
+  padding: 18px 18px 16px;
   border-radius: 16px;
-  background: var(--cream);
+  background: #fff;
+  border: 1px solid var(--cream);
 }
-.policy-block h2 { margin: 0 0 8px; }
-.policy-block .hint { margin: 0 0 8px; }
+.policy-kicker {
+  margin: 0 0 4px;
+  letter-spacing: 0.16em;
+}
+.policy-block h2 { margin: 0 0 8px; font-size: 28px; }
+.policy-block .hint { margin: 0 0 10px; font-size: 13px; }
+.policy-block .svc-list { color: var(--ink); }
 .detail-copy h3 { margin: 8px 0 4px; font-size: 16px; color: var(--brown); }
 .detail-hero { border-radius: 20px; overflow: hidden; aspect-ratio: 21/9; }
 .detail-hero .media { height: 100%; aspect-ratio: auto; }

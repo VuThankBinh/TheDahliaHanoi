@@ -126,7 +126,8 @@
     "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
     "label.operator": { vi: "Đơn vị", en: "Operator" },
     "policy.h": { vi: "Chính sách trẻ em", en: "Children Policy" },
-    "policy.by": { vi: "Theo đơn vị {name}.", en: "Policy of {name}." },
+    "policy.kicker": { vi: "Children Policy", en: "Children Policy" },
+    "policy.by": { vi: "Áp dụng chính sách của {name}. Tour này không ghi riêng.", en: "Using the {name} policy. This tour has no separate note." },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
     "vo.dest.p": { vi: "Tour nổi bật tại điểm đến này — xem tất cả trên trang Tour.", en: "Featured tours for this destination — see the full list on Tours." },
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
@@ -376,7 +377,11 @@
     var by = !own.length && op
       ? '<p class="hint">' + U.escapeHtml(t("policy.by", { name: field(op, "name") })) + "</p>"
       : "";
+    var kicker = U.lang() === "en"
+      ? ""
+      : '<p class="eyebrow policy-kicker">' + U.escapeHtml(t("policy.kicker")) + "</p>";
     return '<section class="policy-block" aria-label="' + U.escapeHtml(t("policy.h")) + '">' +
+      kicker +
       "<h2>" + U.escapeHtml(t("policy.h")) + "</h2>" +
       by +
       listHtml(lines) +
@@ -2151,8 +2156,8 @@
         "<h3>" + U.escapeHtml(t("svc.in")) + "</h3>" + listHtml(included) +
         (serviceNote ? '<p class="hint">' + U.escapeHtml(serviceNote) + "</p>" : "") +
         "<h3>" + U.escapeHtml(t("svc.out")) + "</h3>" + listHtml(excluded) +
-        "<h3>" + U.escapeHtml(t("svc.offers")) + "</h3>" + listHtml(offers) +
         childrenPolicyHtml(tour) +
+        "<h3>" + U.escapeHtml(t("svc.offers")) + "</h3>" + listHtml(offers) +
         menuGalleryHtml(tour) +
         "</div>" +
         '<aside class="stay-panel book-aside" id="tour-book">' + bookingFormHtml(tour, { guests: guests, date: date }) +

@@ -38,6 +38,26 @@
         "Age 9 and over: 100% of the adult fare.",
         "Children must travel with an adult for the whole programme."
       ]
+    },
+    {
+      "id": "may",
+      "name": "Sapa May Travel",
+      "nameEn": "Sapa May Travel",
+      "hotline": "",
+      "hotlineHref": "",
+      "website": "",
+      "address": "",
+      "active": true,
+      "childrenPolicy": [
+        "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ).",
+        "Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ).",
+        "Trẻ em từ 9 tuổi trở lên tính như người lớn."
+      ],
+      "childrenPolicyEn": [
+        "Children under 5 years are free (sharing bed with parents).",
+        "Children 5-8 years old charged 75% of price.",
+        "Children 9 years old charged as adults."
+      ]
     }
   ],
   "hero": {
