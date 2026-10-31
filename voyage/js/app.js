@@ -17,11 +17,13 @@
     "sapa": { vi: "Sa Pa", en: "Sapa" },
     "Sa Pa": { vi: "Sa Pa", en: "Sapa" },
     "Sapa": { vi: "Sa Pa", en: "Sapa" },
-    "ha-long": { vi: "Hạ Long", en: "Ha Long" },
+    "ha-long": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
+    "lan-ha": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
     "ninh-binh": { vi: "Ninh Bình", en: "Ninh Binh" },
     "ha-noi": { vi: "Hà Nội", en: "Hanoi" },
     // legacy name keys (still resolve if old links appear)
-    "Hạ Long": { vi: "Hạ Long", en: "Ha Long" },
+    "Hạ Long": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
+    "Hạ Long – Lan Hạ": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
     "Ninh Bình": { vi: "Ninh Bình", en: "Ninh Binh" },
     "Hà Nội": { vi: "Hà Nội", en: "Hanoi" }
   };
@@ -30,6 +32,9 @@
     "Sa Pa": "sapa",
     "Sapa": "sapa",
     "Hạ Long": "ha-long",
+    "Hạ Long – Lan Hạ": "ha-long",
+    "Ha Long": "ha-long",
+    "Ha Long – Lan Ha": "ha-long",
     "Ninh Bình": "ninh-binh",
     "Hà Nội": "ha-noi"
   };

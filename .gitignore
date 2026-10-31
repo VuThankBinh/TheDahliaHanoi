@@ -26,3 +26,15 @@ npm-debug.log*
 # Local nested work (not part of Voyage site)
 0.linh/
 
+
+# Source raw assets (>1GB camera dumps & word docs, not used by web runtime)
+raw_docs/
+
+# Large media files exceeding GitHub 100MB limit
+*.mp4
+!voyage/img/video/*.mp4
+!voyage/img/tours/halong-cozy-bay-premium/video/*.mp4
+
+# Python cache & build junk
+__pycache__/
+*.pyc

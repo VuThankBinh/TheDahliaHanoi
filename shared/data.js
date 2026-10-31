@@ -64,34 +64,28 @@
     "interval": 10000,
     "slides": [
       {
-        "type": "video",
-        "place": "ha-long",
-        "poster": "img/destinations/ha-long/tuan-chau-port.jpg",
-        "alt": "Highlight Hạ Long",
-        "altEn": "Ha Long highlight",
-        "sources": [
-          "img/video/2169880-hd_1280_720_30fps.mp4"
-        ]
-      },
-      {
-        "type": "video",
-        "place": "ninh-binh",
-        "poster": "img/destinations/ninh-binh/hoa-lu.jpg",
-        "alt": "Highlight Ninh Bình",
-        "altEn": "Ninh Binh highlight",
-        "sources": [
-          "img/video/3571264-hd_1280_720_30fps.mp4"
-        ]
-      },
-      {
-        "type": "video",
+        "type": "image",
         "place": "ha-noi",
-        "poster": "img/destinations/hanoi/tran-quoc-pagoda.jpg",
-        "alt": "Highlight Hà Nội",
-        "altEn": "Hanoi highlight",
-        "sources": [
-          "img/video/16092120_2560_1440_30fps.mp4"
-        ]
+        "poster": "img/tours/dest-hanoi-1.jpg",
+        "src": "img/tours/dest-hanoi-1.jpg",
+        "alt": "Hà Nội ngàn năm văn hiến",
+        "altEn": "Hanoi thousand years of culture"
+      },
+      {
+        "type": "image",
+        "place": "ha-long",
+        "poster": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+        "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+        "alt": "Du thuyền Hạ Long & Lan Hạ",
+        "altEn": "Ha Long & Lan Ha Cruise"
+      },
+      {
+        "type": "image",
+        "place": "ninh-binh",
+        "poster": "img/destinations/ninh-binh/trang-an-boat.jpg",
+        "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
+        "alt": "Quần thể danh thắng Tràng An Ninh Bình",
+        "altEn": "Trang An Landscape Complex Ninh Binh"
       },
       {
         "type": "image",
@@ -106,43 +100,25 @@
   "destinations": {
     "ha-long": {
       "id": "ha-long",
-      "name": "Hạ Long",
-      "nameEn": "Ha Long",
-      "title": "Vịnh Hạ Long",
-      "titleEn": "Ha Long Bay",
-      "lead": "Di sản UNESCO — du thuyền Heritage Luxury và Signature trong ngày từ Hà Nội.",
-      "leadEn": "UNESCO heritage — Heritage Luxury and Signature day cruises from Hanoi.",
-      "video": "https://videos.pexels.com/video-files/30391309/13024349_3840_2160_60fps.mp4",
+      "name": "Hạ Long – Lan Hạ",
+      "nameEn": "Ha Long – Lan Ha Bay",
+      "title": "Hạ Long & Lan Hạ – Kỳ quan vịnh biển & Du thuyền đẳng cấp",
+      "titleEn": "Ha Long & Lan Ha – Marine Wonders & Luxury Cruises",
+      "lead": "Trải nghiệm du thuyền ngủ đêm 4 sao Cozy Bay Grand, siêu du thuyền 5 sao Cozy Bay Premium & Sea Lion, và hải trình độc bản 7 tiếng Tropical Cruise khám phá vịnh Lan Hạ, đảo Cát Bà.",
+      "leadEn": "Experience 4-star Cozy Bay Grand overnight cruise, 5-star day cruises Cozy Bay Premium & Sea Lion, and exclusive 7-hour Tropical Cruise across Lan Ha Bay and Cat Ba Island.",
+      "video": "img/video/16092120_2560_1440_30fps.mp4",
       "media": [
         {
           "type": "image",
-          "src": "img/destinations/ha-long/bay-overview.jpg",
-          "alt": "Toàn cảnh vịnh Hạ Long",
-          "altEn": "Ha Long Bay overview"
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+          "alt": "Du thuyền Cozy Bay Grand",
+          "altEn": "Cozy Bay Grand cruise"
         },
         {
           "type": "image",
-          "src": "img/venues/cruise-exterior.jpg",
-          "alt": "Du thuyền Heritage",
-          "altEn": "Heritage cruise"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/titov-beach.jpg",
-          "alt": "Bãi tắm đảo Titov",
-          "altEn": "Titov Island beach"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-sundeck.jpg",
-          "alt": "Sundeck tiệc hoàng hôn",
-          "altEn": "Sunset party sundeck"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/tuan-chau-port.jpg",
-          "alt": "Cảng Tuần Châu",
-          "altEn": "Tuan Chau port"
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+          "alt": "Du thuyền Tropical Cruise vịnh Lan Hạ",
+          "altEn": "Tropical Cruise Lan Ha Bay"
         }
       ]
     },
@@ -150,41 +126,23 @@
       "id": "ninh-binh",
       "name": "Ninh Bình",
       "nameEn": "Ninh Binh",
-      "title": "Ninh Bình Heritage Premium",
-      "titleEn": "Ninh Binh Heritage Premium",
-      "lead": "Mười tour: Hoa Lư, Bái Đính, Tam Cốc / Tràng An, Hang Múa, 2N1Đ Heritage Garden, Cúc Phương, combo Hạ Long và tour private.",
-      "leadEn": "Ten tours: Hoa Lu, Bai Dinh, Tam Coc / Trang An, Mua Cave, 2D1N Heritage Garden, Cuc Phuong, Ha Long combo, and private days.",
-      "video": "https://videos.pexels.com/video-files/30574776/13092696_3840_2160_60fps.mp4",
+      "title": "Ninh Bình – Non nước Tràng An & Cố đô Hoa Lư",
+      "titleEn": "Ninh Binh – Trang An Landscape & Ancient Capital",
+      "lead": "Khám phá quần thể danh thắng Tràng An di sản UNESCO, chèo thuyền Tam Cốc, chinh phục đỉnh Hang Múa, đại tự Bái Đính và đạp xe xuyên làng quê thanh bình.",
+      "leadEn": "Explore UNESCO World Heritage Trang An, Tam Coc boat tour, Mua Cave viewpoint, historic Bai Dinh Pagoda, and serene countryside cycling.",
+      "video": "img/video/2169880-hd_1280_720_30fps.mp4",
       "media": [
         {
           "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền Tam Cốc",
-          "altEn": "Tam Coc boat"
-        },
-        {
-          "type": "image",
           "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-          "alt": "Thuyền Tràng An",
-          "altEn": "Trang An boat"
+          "alt": "Danh thắng Tràng An",
+          "altEn": "Trang An Landscape Complex"
         },
         {
           "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
-          "alt": "Đỉnh Hang Múa",
-          "altEn": "Mua Cave peak"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Heritage Garden",
-          "altEn": "Heritage Garden"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Cố đô Hoa Lư",
-          "altEn": "Hoa Lu ancient capital"
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe làng quê Ninh Bình",
+          "altEn": "Ninh Binh countryside cycling"
         }
       ]
     },
@@ -250,2694 +208,6 @@
     }
   },
   "tours": [
-    {
-      "id": "ha-long",
-      "destination": "ha-long",
-      "featured": true,
-      "stars": 5,
-      "name": "Heritage Luxury Day Cruise",
-      "nameEn": "Heritage Luxury Day Cruise",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 2450000,
-      "priceNote": "$99/khách",
-      "priceNoteEn": "$99/guest",
-      "image": "img/tours/ha-long.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/venues/cruise-exterior.jpg",
-          "alt": "Du thuyền Heritage trên vịnh Hạ Long",
-          "altEn": "Heritage cruise on Ha Long Bay"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/bay-overview.jpg",
-          "alt": "Toàn cảnh vịnh Hạ Long",
-          "altEn": "Ha Long Bay overview"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/sung-sot-cave.jpg",
-          "alt": "Hang Sửng Sốt",
-          "altEn": "Surprising Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/luon-cave.jpg",
-          "alt": "Hang Luồn",
-          "altEn": "Luon Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/titov-beach.jpg",
-          "alt": "Bãi tắm đảo Titov",
-          "altEn": "Titov Island beach"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-sundeck.jpg",
-          "alt": "Sundeck tiệc hoàng hôn",
-          "altEn": "Sunset party sundeck"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-jacuzzi.jpg",
-          "alt": "Jacuzzi ngoài trời trên tàu",
-          "altEn": "Onboard outdoor jacuzzi"
-        },
-        {
-          "type": "image",
-          "src": "img/food/halong-seafood-buffet.jpg",
-          "alt": "Buffet hải sản trên tàu",
-          "altEn": "Seafood buffet on board"
-        },
-        {
-          "type": "image",
-          "src": "img/fleet/limousine-mid.jpg",
-          "alt": "Limousine đưa đón Hà Nội",
-          "altEn": "Limousine transfer from Hanoi"
-        }
-      ],
-      "cardLine": "Du thuyền một ngày Heritage Luxury trên vịnh Hạ Long. Buffet trưa, hang Sửng Sốt, kayak hang Luồn, đảo Titop và tiệc hoàng hôn trên sundeck. Limousine khứ hồi Hà Nội, hướng dẫn tiếng Anh. Giá 2.450.000đ/khách — $99/khách.",
-      "cardLineEn": "A Heritage Luxury day cruise on Ha Long Bay. Lunch buffet, Surprising Cave, kayak at Luon Cave, Titop Island, and a sunset party on the sundeck. Round-trip limousine from Hanoi and an English-speaking guide. 2,450,000đ per guest — $99/guest.",
-      "description": [
-        "Tàu Heritage Luxury Day Cruise — capacity 99 khách, 3 boong, jacuzzi và sundeck.",
-        "Lịch trình: Sửng Sốt → hang Luồn → Titov, tiệc hoàng hôn trên đường về Tuần Châu.",
-        "Đón khách phố cổ Hà Nội buổi sáng, trả khách tối cùng ngày."
-      ],
-      "descriptionEn": [
-        "Heritage Luxury Day Cruise — 99 guests, 3 decks, jacuzzi and sundeck.",
-        "Route: Surprising Cave → Luon Cave → Titov, then a sunset party back to Tuan Chau.",
-        "Pickup in Hanoi Old Quarter in the morning, drop-off the same evening."
-      ],
-      "itinerary": [
-        {
-          "time": "07:45–08:30",
-          "title": "Đón khách — limousine",
-          "text": "Hướng dẫn và tài xế đón tại khách sạn phố cổ Hà Nội, lên limousine đi Hạ Long."
-        },
-        {
-          "time": "10:30–10:45",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 20–25 phút dọc đường để ra xe, vệ sinh hoặc ăn nhẹ."
-        },
-        {
-          "time": "11:30–11:45",
-          "title": "Lên tàu Heritage",
-          "text": "Đón tại cảng quốc tế Tuần Châu, check-in, welcome drink."
-        },
-        {
-          "time": "12:00–13:15",
-          "title": "Buffet trên tàu",
-          "text": "Buffet hải sản Hạ Long. Tàu đi qua Hòn Chó Đá, Đỉnh Hương, Hòn Gà Chọi…"
-        },
-        {
-          "time": "13:30–14:15",
-          "title": "Hang Sửng Sốt",
-          "text": "Tham quan hang Sửng Sốt — một trong những hang lớn và đẹp nhất vịnh."
-        },
-        {
-          "time": "14:30–15:15",
-          "title": "Hang Luồn",
-          "text": "Kayak hoặc thuyền tre do người địa phương chèo vào hang Luồn."
-        },
-        {
-          "time": "15:30–16:30",
-          "title": "Đảo Titov",
-          "text": "Lên đỉnh ngắm toàn cảnh vịnh, bơi biển Titov, hoặc thư giãn jacuzzi trên tàu."
-        },
-        {
-          "time": "16:45",
-          "title": "Tiệc hoàng hôn",
-          "text": "Trà, nước ép, trái cây, bánh trên sundeck khi tàu về Tuần Châu."
-        },
-        {
-          "time": "17:45–18:00",
-          "title": "Xuống tàu — limousine",
-          "text": "Lên limousine về Hà Nội."
-        },
-        {
-          "time": "20:30–20:45",
-          "title": "Trả khách",
-          "text": "Đưa về khách sạn phố cổ Hà Nội."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:45–08:30",
-          "title": "Hotel pickup — limousine",
-          "text": "Guide and driver pick you up at your Old Quarter hotel for the transfer to Ha Long."
-        },
-        {
-          "time": "10:30–10:45",
-          "title": "Short break",
-          "text": "A 20–25 minute stop to stretch, use facilities, or grab a snack."
-        },
-        {
-          "time": "11:30–11:45",
-          "title": "Welcome aboard",
-          "text": "Check-in at Tuan Chau International Port and enjoy a welcome drink."
-        },
-        {
-          "time": "12:00–13:15",
-          "title": "Lunch on board",
-          "text": "Seafood buffet while cruising past Stone Dog, Incense Burner, and Kissing Rocks."
-        },
-        {
-          "time": "13:30–14:15",
-          "title": "Surprising Cave",
-          "text": "Visit Sung Sot Cave — one of the largest and most beautiful caves in the bay."
-        },
-        {
-          "time": "14:30–15:15",
-          "title": "Luon Cave",
-          "text": "Kayak or take a bamboo boat rowed by locals into Luon Cave."
-        },
-        {
-          "time": "15:30–16:30",
-          "title": "Titov Island",
-          "text": "Climb for panoramic views, swim at Titov beach, or use the onboard jacuzzi."
-        },
-        {
-          "time": "16:45",
-          "title": "Sunset party",
-          "text": "Tea, juice, fruit, and cake on the sundeck as the cruise returns to Tuan Chau."
-        },
-        {
-          "time": "17:45–18:00",
-          "title": "Disembark — limousine",
-          "text": "Board the limousine back to Hanoi."
-        },
-        {
-          "time": "20:30–20:45",
-          "title": "Hotel drop-off",
-          "text": "Drop-off at your hotel in Hanoi Old Quarter."
-        }
-      ],
-      "servicesIncluded": [
-        "Buffet trưa trên tàu",
-        "Nước lọc miễn phí trong bữa trưa",
-        "Welcome drink",
-        "Tham quan hang Sửng Sốt",
-        "Kayak hoặc thuyền tre hang Luồn",
-        "Bơi và leo đảo Titov",
-        "Jacuzzi và khăn",
-        "Tiệc hoàng hôn: trà, nước ép, trái cây, bánh",
-        "Vé thắng cảnh và phí vào cửa",
-        "Hướng dẫn viên tiếng Anh",
-        "Limousine khứ hồi 19 & 22 chỗ",
-        "2 chai nước khoáng/khách trên limousine"
-      ],
-      "servicesIncludedEn": [
-        "Buffet lunch on boat",
-        "Complimentary filtered water at lunch",
-        "Welcome drink",
-        "Surprising Cave visit",
-        "Kayak or bamboo boat at Luon Cave",
-        "Swim and hike on Titov Island",
-        "Jacuzzi and towel",
-        "Sunset party: tea, juice, fresh fruit & cakes",
-        "Entrance and sightseeing fees",
-        "English-speaking guide",
-        "Round-trip limousine, 19 & 22 seats",
-        "2 mineral waters per guest on the limousine"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống không nêu ở phần bao gồm",
-        "Tip và chi tiêu cá nhân",
-        "Dịch vụ không ghi trong mục bao gồm",
-        "Phụ thu ngày lễ / Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages not listed as included",
-        "Tips and personal expenses",
-        "Anything not listed as included",
-        "Public holiday / Tet surcharge: 15 USD/guest"
-      ],
-      "serviceNote": "Buffet trưa trên tàu, món Việt và Âu. Thực đơn có thể đổi theo mùa.",
-      "serviceNoteEn": "Lunch buffet on board — Vietnamese and Western. Menu may change by season.",
-      "offers": [
-        "Buffet đã gồm trong giá",
-        "Welcome drink",
-        "Limousine khứ hồi Hà Nội"
-      ],
-      "offersEn": [
-        "Buffet included in the price",
-        "Welcome drink",
-        "Round-trip limousine from Hanoi"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn buffet",
-        "titleEn": "Buffet menu",
-        "images": [
-          {
-            "src": "img/menus/bufferHL/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/bufferHL/anh5.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/bufferHL/anh6.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/bufferHL/anh7.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ha-long-signature",
-      "destination": "ha-long",
-      "featured": true,
-      "stars": 5,
-      "name": "Heritage Signature Day Cruise",
-      "nameEn": "Heritage Signature Day Cruise",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 2945000,
-      "priceNote": "$119 limousine · $109 shuttle",
-      "priceNoteEn": "$119 limousine · $109 shuttle",
-      "image": "img/tours/ha-long-signature.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/venues/cruise-exterior.jpg",
-          "alt": "Du thuyền Signature trên vịnh",
-          "altEn": "Signature cruise on the bay"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-restaurant.jpg",
-          "alt": "Nhà hàng kính tràn viền trên tàu",
-          "altEn": "Glass-walled cruise restaurant"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-lounge.jpg",
-          "alt": "Sofa Lounge trên tàu",
-          "altEn": "Cruise sofa lounge"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-sundeck.jpg",
-          "alt": "Sundeck & cổng check-in",
-          "altEn": "Sundeck and check-in gate"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-jacuzzi.jpg",
-          "alt": "Jacuzzi bốn mùa",
-          "altEn": "Four-season jacuzzi"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/kissing-rocks.jpg",
-          "alt": "Hòn Gà Chọi trên vịnh",
-          "altEn": "Kissing Rocks on the bay"
-        },
-        {
-          "type": "image",
-          "src": "img/food/indian-set.jpg",
-          "alt": "Set menu Ấn Độ trên tàu",
-          "altEn": "Indian set menu on board"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/sunset-party.jpg",
-          "alt": "Sunset Party trên sundeck",
-          "altEn": "Sunset party on the sundeck"
-        }
-      ],
-      "cardLine": "Du thuyền 5 sao Heritage Signature (ra mắt 2026): 168 khách, buffet hoặc set Ấn Độ, jacuzzi bốn mùa và bar sundeck. Lịch hang Luồn, Sửng Sốt, Titov và tiệc hoàng hôn. Limousine 19–22 chỗ $119 hoặc shuttle 30 chỗ $109.",
-      "cardLineEn": "Heritage Signature 5-star day cruise (launched 2026): 168 guests, buffet or Indian set menus, four-season jacuzzi, and sundeck bar. Luon Cave, Surprising Cave, Titov, and sunset party. Limousine 19–22 seats $119 or shuttle bus 30 seats $109.",
-      "description": [
-        "Tàu thép Heritage Signature — dài 50m, 3 boong, sức chứa 168 khách.",
-        "Buffet hoặc set menu chay / không chay kiểu Ấn (từ 2 khách).",
-        "Cùng tuyến vịnh như Luxury Day Cruise, dịch vụ và không gian rộng hơn."
-      ],
-      "descriptionEn": [
-        "Steel cruise Heritage Signature — 50m, 3 decks, 168 guests.",
-        "Buffet or Indian vegetarian / non-vegetarian set menus (from 2 guests).",
-        "Same bay highlights as the Luxury Day Cruise, with a larger luxury layout."
-      ],
-      "itinerary": [
-        {
-          "time": "07:45–08:30",
-          "title": "Đón khách — limousine / shuttle",
-          "text": "Đón tại khách sạn phố cổ Hà Nội bằng limousine hoặc xe shuttle."
-        },
-        {
-          "time": "10:30–10:45",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 20–25 phút dọc đường."
-        },
-        {
-          "time": "11:30–11:45",
-          "title": "Lên tàu Signature",
-          "text": "Check-in cảng Tuần Châu, welcome drink."
-        },
-        {
-          "time": "12:00–13:15",
-          "title": "Buffet / set menu trên tàu",
-          "text": "Bữa trưa trên tàu khi đi qua các điểm đá nổi tiếng trên vịnh."
-        },
-        {
-          "time": "13:30–14:15",
-          "title": "Hang Luồn",
-          "text": "Kayak hoặc thuyền tre khám phá hang Luồn."
-        },
-        {
-          "time": "14:30–15:15",
-          "title": "Hang Sửng Sốt",
-          "text": "Tham quan hang Sửng Sốt cùng hướng dẫn viên."
-        },
-        {
-          "time": "15:30–16:30",
-          "title": "Đảo Titov",
-          "text": "Bơi, leo núi Titov, hoặc jacuzzi trên tàu."
-        },
-        {
-          "time": "16:45",
-          "title": "Tiệc hoàng hôn",
-          "text": "Trà, nước ép, trái cây, bánh (và bánh phồng tôm) trên sundeck."
-        },
-        {
-          "time": "17:45–18:00",
-          "title": "Xuống tàu",
-          "text": "Limousine / shuttle về Hà Nội."
-        },
-        {
-          "time": "20:30–20:45",
-          "title": "Trả khách",
-          "text": "Đưa về khách sạn phố cổ Hà Nội."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:45–08:30",
-          "title": "Pickup — limousine / shuttle",
-          "text": "Pickup at your Old Quarter hotel by limousine or shuttle bus."
-        },
-        {
-          "time": "10:30–10:45",
-          "title": "Short break",
-          "text": "A 20–25 minute stop on the way."
-        },
-        {
-          "time": "11:30–11:45",
-          "title": "Welcome aboard Signature",
-          "text": "Check-in at Tuan Chau Port and a welcome drink."
-        },
-        {
-          "time": "12:00–13:15",
-          "title": "Lunch on board",
-          "text": "Buffet or set menu while cruising the bay’s landmark rocks."
-        },
-        {
-          "time": "13:30–14:15",
-          "title": "Luon Cave",
-          "text": "Kayak or bamboo boat into Luon Cave."
-        },
-        {
-          "time": "14:30–15:15",
-          "title": "Surprising Cave",
-          "text": "Guided visit to Sung Sot Cave."
-        },
-        {
-          "time": "15:30–16:30",
-          "title": "Titov Island",
-          "text": "Swim, climb Titov, or use the onboard jacuzzi."
-        },
-        {
-          "time": "16:45",
-          "title": "Sunset party",
-          "text": "Tea, juice, fruit, cake, and prawn crackers on the sundeck."
-        },
-        {
-          "time": "17:45–18:00",
-          "title": "Disembark",
-          "text": "Limousine or shuttle back to Hanoi."
-        },
-        {
-          "time": "20:30–20:45",
-          "title": "Hotel drop-off",
-          "text": "Drop-off at your Old Quarter hotel."
-        }
-      ],
-      "servicesIncluded": [
-        "Buffet trưa trên tàu (hoặc set menu Ấn Độ)",
-        "Nước lọc miễn phí trong bữa trưa",
-        "Welcome drink",
-        "Tham quan hang Sửng Sốt",
-        "Kayak hoặc thuyền tre hang Luồn",
-        "Bơi và leo đảo Titov",
-        "Jacuzzi và khăn",
-        "Tiệc hoàng hôn: trà, nước ép, trái cây, bánh",
-        "Vé thắng cảnh",
-        "Hướng dẫn viên tiếng Anh",
-        "Limousine 19–22 chỗ hoặc shuttle 30 chỗ khứ hồi",
-        "2 chai nước khoáng/khách trên xe"
-      ],
-      "servicesIncludedEn": [
-        "Buffet lunch on boat (or Indian set menu)",
-        "Complimentary filtered water at lunch",
-        "Welcome drink",
-        "Surprising Cave visit",
-        "Kayak or bamboo boat at Luon Cave",
-        "Swim and hike on Titov Island",
-        "Jacuzzi and towel",
-        "Sunset party: tea, juice, fruit & cakes",
-        "Entrance and sightseeing fees",
-        "English-speaking guide",
-        "Round-trip limousine (19–22) or shuttle bus (30)",
-        "2 mineral waters per guest on the coach"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống không nêu ở phần bao gồm",
-        "Tip và chi tiêu cá nhân",
-        "Phụ thu ngày lễ / Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages not listed as included",
-        "Tips and personal expenses",
-        "Public holiday / Tet surcharge: 15 USD/guest"
-      ],
-      "serviceNote": "Giá hiển thị theo limousine nhóm 19–22 khách ($119). Shuttle 30 khách: $109.",
-      "serviceNoteEn": "Listed price is limousine group 19–22 ($119). Shuttle bus 30 guests: $109.",
-      "offers": [
-        "Tàu Signature 5 sao",
-        "Có set menu Ấn Độ",
-        "Jacuzzi bốn mùa"
-      ],
-      "offersEn": [
-        "Signature 5-star cruise",
-        "Indian set menus available",
-        "Four-season jacuzzi"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Signature",
-        "titleEn": "Signature menu",
-        "images": [
-          {
-            "src": "img/menus/bufferHL/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/bufferHL/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/bufferHL/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/bufferHL/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh",
-      "destination": "ninh-binh",
-      "featured": true,
-      "stars": 5,
-      "name": "Hoa Lư – Tam Cốc/Tràng An – Hang Múa",
-      "nameEn": "Hoa Lu – Tam Coc/Trang An – Mua Cave",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 1955000,
-      "priceNote": "$79 limousine · $99 Dcar · $69 shuttle",
-      "priceNoteEn": "$79 limousine · $99 Dcar · $69 shuttle",
-      "image": "img/tours/ninh-binh.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Cố đô Hoa Lư",
-          "altEn": "Hoa Lu ancient capital"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền Tam Cốc sông Ngô Đồng",
-          "altEn": "Tam Coc boat on Ngo Dong River"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-rice.jpg",
-          "alt": "Cánh đồng lúa Tam Cốc",
-          "altEn": "Tam Coc rice fields"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
-          "alt": "Đỉnh Hang Múa nhìn thung lũng",
-          "altEn": "Mua Cave peak over the valley"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-steps.jpg",
-          "alt": "500 bậc đá Hang Múa",
-          "altEn": "500 stone steps at Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Trang An Heritage Garden",
-          "altEn": "Trang An Heritage Garden"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/cycling-village.jpg",
-          "alt": "Đạp xe làng quê Ninh Bình",
-          "altEn": "Cycling through Ninh Binh villages"
-        },
-        {
-          "type": "image",
-          "src": "img/food/ninh-binh-goat.jpg",
-          "alt": "Đặc sản Ninh Bình",
-          "altEn": "Ninh Binh specialties"
-        }
-      ],
-      "cardLine": "Tour Ninh Bình Heritage Premium cả ngày: cố đô Hoa Lư, đạp xe 30 phút hoặc thư giãn tại Trang An Heritage Garden, thuyền Tam Cốc hoặc Tràng An, leo Hang Múa. Buffet/set lunch đặc sản. Limousine nhóm $79/khách.",
-      "cardLineEn": "Full-day Ninh Binh Heritage Premium: Hoa Lu ancient capital, 30-minute cycling or relax at Trang An Heritage Garden, boat at Tam Coc or Trang An, climb Mua Cave. Local specialty lunch. Limousine group from $79/guest.",
-      "description": [
-        "Chọn thuyền Tam Cốc (Hạ Long trên cạn) hoặc Tràng An UNESCO.",
-        "Ăn trưa tại Trang An Heritage Garden — có lựa chọn chay.",
-        "Nón lá và áo mưa miễn phí trong chuyến."
-      ],
-      "descriptionEn": [
-        "Choose a Tam Coc boat (“Ha Long on land”) or UNESCO Trang An.",
-        "Lunch at Trang An Heritage Garden — vegetarian option available.",
-        "Free conical hat and raincoat during the trip."
-      ],
-      "itinerary": [
-        {
-          "time": "07:15–08:00",
-          "title": "Đón khách Hà Nội",
-          "text": "Hướng dẫn và tài xế đón tại khách sạn phố cổ, đi Ninh Bình."
-        },
-        {
-          "time": "09:15",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 15–20 phút dọc đường."
-        },
-        {
-          "time": "10:30",
-          "title": "Cố đô Hoa Lư",
-          "text": "Tham quan đền thờ Vua Đinh và Vua Lê, lịch sử triều Đinh – Lê – Lý."
-        },
-        {
-          "time": "11:15–11:45",
-          "title": "Đạp xe / thư giãn",
-          "text": "Đạp xe 30 phút quanh làng, hoặc nghỉ nhà hàng ngắm hồ, thác, thung lũng. Mùa hè có hồ bơi."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Đặc sản Ninh Bình tại khu riêng Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Thuyền Tam Cốc hoặc Tràng An",
-          "text": "Khoảng 1,5 giờ trên sông — hang động và cánh đồng lúa / hệ thống hang Tràng An."
-        },
-        {
-          "time": "15:30",
-          "title": "Hang Múa",
-          "text": "Leo khoảng 500 bậc lên đỉnh Núi Ngọa Long, nhìn xuống Tam Cốc."
-        },
-        {
-          "time": "16:30–17:00",
-          "title": "Về Hà Nội",
-          "text": "Lên xe về phố cổ."
-        },
-        {
-          "time": "19:00–19:30",
-          "title": "Trả khách",
-          "text": "Đưa về khách sạn phố cổ Hà Nội."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:15–08:00",
-          "title": "Hanoi pickup",
-          "text": "Guide and driver pick you up at your Old Quarter hotel for Ninh Binh."
-        },
-        {
-          "time": "09:15",
-          "title": "Short break",
-          "text": "A 15–20 minute stop on the way."
-        },
-        {
-          "time": "10:30",
-          "title": "Hoa Lu ancient capital",
-          "text": "Visit the temples of Kings Dinh and Le; history under the Dinh, Le, and Ly dynasties."
-        },
-        {
-          "time": "11:15–11:45",
-          "title": "Cycling / relax",
-          "text": "30 minutes of cycling through local life, or stay at the restaurant with lake and valley views. Pool in summer."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Local specialties in the private area of Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Tam Coc or Trang An boat",
-          "text": "About 1.5 hours on the water — caves and paddies, or the Trang An tunnel system."
-        },
-        {
-          "time": "15:30",
-          "title": "Mua Cave",
-          "text": "Climb about 500 steps to Ngoa Long peak overlooking Tam Coc."
-        },
-        {
-          "time": "16:30–17:00",
-          "title": "Return to Hanoi",
-          "text": "Transfer back to the Old Quarter."
-        },
-        {
-          "time": "19:00–19:30",
-          "title": "Hotel drop-off",
-          "text": "Drop-off at your Old Quarter hotel."
-        }
-      ],
-      "servicesIncluded": [
-        "Bữa trưa đặc sản địa phương",
-        "Hoạt động đạp xe (tuỳ chọn)",
-        "Vé vào cửa & thuyền chung Tam Cốc (2–3 khách/thuyền) hoặc Tràng An (4 khách/thuyền)",
-        "Xe limousine / shuttle Hà Nội – Ninh Bình – Hà Nội",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi miễn phí, 01 chai nước/chiều trên xe",
-        "Nón lá & áo mưa miễn phí trong chuyến"
-      ],
-      "servicesIncludedEn": [
-        "Lunch with local specialties",
-        "Optional bicycle activity",
-        "Entrance & sharing boat — Tam Coc 2–3/pax boat or Trang An 4/pax boat",
-        "Hanoi – Ninh Binh – Hanoi limousine / shuttle",
-        "English-speaking guide",
-        "Free Wi‑Fi, 1 mineral water each way on the coach",
-        "Free conical hat & raincoat during the trip"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip hướng dẫn & tài xế",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips for guide & driver",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "serviceNote": "Giá hiển thị theo limousine nhóm 19–22 ($79, buffet). Dcar 7–9 khách: $99 set menu. Shuttle 26–30: $69.",
-      "serviceNoteEn": "Listed price is limousine group 19–22 ($79, buffet). Dcar 7–9: $99 set menu. Shuttle 26–30: $69.",
-      "offers": [
-        "Nón lá & áo mưa miễn phí",
-        "Buffet hoặc set menu",
-        "Limousine nhóm"
-      ],
-      "offersEn": [
-        "Free hat & raincoat",
-        "Buffet or set menu",
-        "Group limousine"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-tam-coc",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Hoa Lư – Tam Cốc/Tràng An",
-      "nameEn": "Hoa Lu – Tam Coc/Trang An",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 1807000,
-      "priceNote": "$73 limousine · $93 Dcar · $63 shuttle",
-      "priceNoteEn": "$73 limousine · $93 Dcar · $63 shuttle",
-      "image": "img/tours/ninh-binh-tam-coc.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Đền vua Đinh – Lê Hoa Lư",
-          "altEn": "Hoa Lu royal temples"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền nan Tam Cốc",
-          "altEn": "Tam Coc sampan"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-          "alt": "Thuyền Tràng An",
-          "altEn": "Trang An boat"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden-restaurant.jpg",
-          "alt": "Nhà hàng Heritage Garden",
-          "altEn": "Heritage Garden restaurant"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/cycling-village.jpg",
-          "alt": "Đạp xe quanh làng",
-          "altEn": "Village cycling"
-        },
-        {
-          "type": "image",
-          "src": "img/fleet/limousine-mid.jpg",
-          "alt": "Xe limousine Hà Nội – Ninh Bình",
-          "altEn": "Limousine Hanoi – Ninh Binh"
-        }
-      ],
-      "cardLine": "Cùng khung Hoa Lư và thuyền Tam Cốc hoặc Tràng An, không leo Hang Múa — về Hà Nội sớm hơn. Đạp xe, buffet/set lunch tại Trang An Heritage Garden. Limousine $73/khách.",
-      "cardLineEn": "Same Hoa Lu and Tam Coc or Trang An boat day, without Mua Cave — earlier return to Hanoi. Cycling and lunch at Trang An Heritage Garden. Limousine from $73/guest.",
-      "description": [
-        "Phù hợp ai muốn thuyền và cố đô mà không leo 500 bậc Hang Múa.",
-        "Về khách sạn khoảng 18:30–19:00.",
-        "Chọn Tam Cốc hoặc Tràng An theo lịch đoàn."
-      ],
-      "descriptionEn": [
-        "For guests who want the boat and ancient capital without climbing Mua Cave.",
-        "Back at the hotel around 18:30–19:00.",
-        "Tam Coc or Trang An depending on the group plan."
-      ],
-      "itinerary": [
-        {
-          "time": "07:15–08:00",
-          "title": "Đón khách",
-          "text": "Đón tại phố cổ Hà Nội đi Ninh Bình."
-        },
-        {
-          "time": "09:15",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 15–20 phút."
-        },
-        {
-          "time": "10:30",
-          "title": "Hoa Lư",
-          "text": "Đền Vua Đinh và Vua Lê."
-        },
-        {
-          "time": "11:15–11:45",
-          "title": "Đạp xe / thư giãn",
-          "text": "30 phút đạp xe hoặc nghỉ tại Heritage Garden."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Đặc sản tại Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Thuyền",
-          "text": "1,5 giờ Tam Cốc hoặc Tràng An."
-        },
-        {
-          "time": "16:00–16:30",
-          "title": "Về Hà Nội",
-          "text": "Không đi Hang Múa — về sớm hơn."
-        },
-        {
-          "time": "18:30–19:00",
-          "title": "Trả khách",
-          "text": "Khách sạn phố cổ Hà Nội."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:15–08:00",
-          "title": "Pickup",
-          "text": "Pickup in Hanoi Old Quarter for Ninh Binh."
-        },
-        {
-          "time": "09:15",
-          "title": "Short break",
-          "text": "15–20 minutes on the way."
-        },
-        {
-          "time": "10:30",
-          "title": "Hoa Lu",
-          "text": "Temples of Kings Dinh and Le."
-        },
-        {
-          "time": "11:15–11:45",
-          "title": "Cycling / relax",
-          "text": "30 minutes cycling or rest at Heritage Garden."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Local specialties at Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Boat",
-          "text": "1.5 hours at Tam Coc or Trang An."
-        },
-        {
-          "time": "16:00–16:30",
-          "title": "Return",
-          "text": "No Mua Cave — earlier return to Hanoi."
-        },
-        {
-          "time": "18:30–19:00",
-          "title": "Drop-off",
-          "text": "Old Quarter hotel."
-        }
-      ],
-      "servicesIncluded": [
-        "Bữa trưa đặc sản",
-        "Hoạt động đạp xe (tuỳ chọn)",
-        "Vé & thuyền chung Tam Cốc / Tràng An",
-        "Xe khứ hồi Hà Nội – Ninh Bình",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi, nước suối trên xe",
-        "Nón lá & áo mưa miễn phí"
-      ],
-      "servicesIncludedEn": [
-        "Lunch with local specialties",
-        "Optional bicycle activity",
-        "Entrance & sharing boat Tam Coc / Trang An",
-        "Round-trip Hanoi – Ninh Binh transfer",
-        "English-speaking guide",
-        "Wi‑Fi and bottled water on the coach",
-        "Free conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "offers": [
-        "Về sớm hơn (không Hang Múa)",
-        "Buffet/set lunch Heritage Garden"
-      ],
-      "offersEn": [
-        "Earlier return (no Mua Cave)",
-        "Buffet/set lunch at Heritage Garden"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-bai-dinh",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Bái Đính – Tràng An – Hang Múa",
-      "nameEn": "Bai Dinh – Trang An – Mua Cave",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 2054000,
-      "priceNote": "$83 limousine · $73 shuttle",
-      "priceNoteEn": "$83 limousine · $73 shuttle",
-      "image": "img/tours/ninh-binh-bai-dinh.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/bich-dong.jpg",
-          "alt": "Quần thể chùa núi Ninh Bình",
-          "altEn": "Mountain pagoda complex"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-          "alt": "Thuyền Tràng An xuyên hang",
-          "altEn": "Trang An cave boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-cave.jpg",
-          "alt": "Hang động Tràng An",
-          "altEn": "Trang An caves"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
-          "alt": "Toàn cảnh từ Hang Múa",
-          "altEn": "Panorama from Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Trang An Heritage Garden",
-          "altEn": "Trang An Heritage Garden"
-        },
-        {
-          "type": "image",
-          "src": "img/food/ninh-binh-com-chay.jpg",
-          "alt": "Cơm cháy & đặc sản",
-          "altEn": "Scorched rice and local dishes"
-        }
-      ],
-      "cardLine": "Chùa Bái Đính với xe điện hai chiều, thuyền Tràng An UNESCO và leo Hang Múa. Ăn trưa đặc sản tại Trang An Heritage Garden. Limousine $83/khách.",
-      "cardLineEn": "Bai Dinh Pagoda with round-trip electric car, UNESCO Trang An boat, and Mua Cave climb. Specialty lunch at Trang An Heritage Garden. Limousine from $83/guest.",
-      "description": [
-        "Bái Đính: 500 tượng La Hán đá, chuông đồng lớn, tượng Quan Âm.",
-        "Thuyền Tràng An khoảng 1,5 giờ qua hệ thống hang.",
-        "Xe điện hai chiều trong khuôn viên Bái Đính đã gồm."
-      ],
-      "descriptionEn": [
-        "Bai Dinh: 500 stone Arhat statues, great bronze bells, Goddess of Mercy statue.",
-        "About 1.5 hours on the Trang An boat through the cave system.",
-        "Round-trip electric car inside Bai Dinh included."
-      ],
-      "itinerary": [
-        {
-          "time": "07:15–08:00",
-          "title": "Đón khách",
-          "text": "Đón phố cổ Hà Nội đi Ninh Bình."
-        },
-        {
-          "time": "09:15",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 15–20 phút."
-        },
-        {
-          "time": "10:30",
-          "title": "Chùa Bái Đính",
-          "text": "Tham quan quần thể chùa; xe điện hai chiều trong khuôn viên."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Đặc sản tại Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Tràng An",
-          "text": "1,5 giờ thuyền qua hang động UNESCO."
-        },
-        {
-          "time": "15:30",
-          "title": "Hang Múa",
-          "text": "Leo 500 bậc ngắm toàn cảnh."
-        },
-        {
-          "time": "17:00",
-          "title": "Về Hà Nội",
-          "text": "Lên xe về phố cổ."
-        },
-        {
-          "time": "19:00–19:30",
-          "title": "Trả khách",
-          "text": "Khách sạn phố cổ."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:15–08:00",
-          "title": "Pickup",
-          "text": "Pickup in Hanoi Old Quarter."
-        },
-        {
-          "time": "09:15",
-          "title": "Short break",
-          "text": "15–20 minutes on the way."
-        },
-        {
-          "time": "10:30",
-          "title": "Bai Dinh Pagoda",
-          "text": "Explore the complex; round-trip electric car on site."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Specialties at Trang An Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Trang An",
-          "text": "1.5-hour UNESCO boat through the caves."
-        },
-        {
-          "time": "15:30",
-          "title": "Mua Cave",
-          "text": "Climb 500 steps for the view."
-        },
-        {
-          "time": "17:00",
-          "title": "Return",
-          "text": "Transfer back to Hanoi."
-        },
-        {
-          "time": "19:00–19:30",
-          "title": "Drop-off",
-          "text": "Old Quarter hotel."
-        }
-      ],
-      "servicesIncluded": [
-        "Bữa trưa đặc sản",
-        "Xe điện hai chiều tại Bái Đính",
-        "Vé & thuyền chung Tràng An",
-        "Xe khứ hồi Hà Nội – Ninh Bình",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi & nước suối trên xe",
-        "Nón lá & áo mưa miễn phí"
-      ],
-      "servicesIncludedEn": [
-        "Lunch with local specialties",
-        "Round-trip electric car at Bai Dinh",
-        "Entrance & sharing boat at Trang An",
-        "Round-trip Hanoi – Ninh Binh",
-        "English-speaking guide",
-        "Wi‑Fi & bottled water on the coach",
-        "Free conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "offers": [
-        "Xe điện Bái Đính đã gồm",
-        "Buffet/set lunch Heritage Garden"
-      ],
-      "offersEn": [
-        "Bai Dinh electric car included",
-        "Buffet/set lunch at Heritage Garden"
-      ],
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-2d1n",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Khám phá cố đô Ninh Bình 2N1Đ",
-      "nameEn": "Discover Ninh Binh ancient capital 2D1N",
-      "durationLabel": "2 ngày 1 đêm",
-      "durationLabelEn": "2 days 1 night",
-      "nightsOffset": 1,
-      "price": 4184000,
-      "priceNote": "$169 limousine từ 2 khách",
-      "priceNoteEn": "$169 limousine from 2 guests",
-      "image": "img/tours/ninh-binh-2d1n.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Khu nghỉ Trang An Heritage Garden",
-          "altEn": "Trang An Heritage Garden stay"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden-pool.jpg",
-          "alt": "Bể bơi mùa hè Heritage Garden",
-          "altEn": "Heritage Garden summer pool"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-          "alt": "Thuyền Tràng An",
-          "altEn": "Trang An boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Cố đô Hoa Lư ngày 2",
-          "altEn": "Hoa Lu on day 2"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Tam Cốc ngày 2",
-          "altEn": "Tam Coc on day 2"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-steps.jpg",
-          "alt": "Leo Hang Múa",
-          "altEn": "Climbing Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/food/ninh-binh-goat.jpg",
-          "alt": "Buffet đặc sản Ninh Bình",
-          "altEn": "Ninh Binh specialty buffet"
-        }
-      ],
-      "cardLine": "Hai ngày một đêm tại Trang An Heritage Garden: ngày 1 Bái Đính – Tràng An, nghỉ đêm và hồ bơi; ngày 2 Hoa Lư – đạp xe – Tam Cốc – Hang Múa. Limousine từ $169/khách (2 khách trở lên).",
-      "cardLineEn": "Two days one night at Trang An Heritage Garden: day 1 Bai Dinh – Trang An, overnight with pool; day 2 Hoa Lu – cycling – Tam Coc – Mua Cave. Limousine from $169/guest (from 2 guests).",
-      "description": [
-        "Nghỉ 1 đêm tại Trang An Heritage Garden (2–3 khách/phòng).",
-        "Gồm 2 buffet trưa, 1 set tối, 1 bữa sáng.",
-        "Phụ thu phòng đơn: 15 USD/phòng."
-      ],
-      "descriptionEn": [
-        "1 night at Trang An Heritage Garden (2–3 guests/room).",
-        "Includes 2 buffet lunches, 1 set dinner, 1 breakfast.",
-        "Single supplement: 15 USD/room."
-      ],
-      "itinerary": [
-        {
-          "time": "Ngày 1 · 07:30–08:00",
-          "title": "Đón khách",
-          "text": "Đón Hà Nội đi Ninh Bình."
-        },
-        {
-          "time": "Ngày 1 · 10:30",
-          "title": "Bái Đính",
-          "text": "Tham quan chùa Bái Đính."
-        },
-        {
-          "time": "Ngày 1 · 12:15",
-          "title": "Ăn trưa",
-          "text": "Buffet tại Trang An Heritage."
-        },
-        {
-          "time": "Ngày 1 · 13:30",
-          "title": "Tràng An",
-          "text": "Thuyền 1,5 giờ."
-        },
-        {
-          "time": "Ngày 1 · 16:00",
-          "title": "Check-in",
-          "text": "Về Heritage Garden, hồ bơi mùa hè, ăn tối, nghỉ đêm."
-        },
-        {
-          "time": "Ngày 2 · 07:30",
-          "title": "Ăn sáng",
-          "text": "Buffet sáng, check-out."
-        },
-        {
-          "time": "Ngày 2 · 10:30",
-          "title": "Hoa Lư",
-          "text": "Cố đô và đền Vua Đinh – Lê."
-        },
-        {
-          "time": "Ngày 2 · 11:15",
-          "title": "Đạp xe",
-          "text": "30 phút đạp xe quanh làng."
-        },
-        {
-          "time": "Ngày 2 · 12:00",
-          "title": "Ăn trưa",
-          "text": "Buffet tại Heritage Garden."
-        },
-        {
-          "time": "Ngày 2 · 13:15",
-          "title": "Tam Cốc",
-          "text": "Thuyền 1,5 giờ trên sông Ngô Đồng."
-        },
-        {
-          "time": "Ngày 2 · 15:30",
-          "title": "Hang Múa",
-          "text": "Leo 500 bậc."
-        },
-        {
-          "time": "Ngày 2 · 17:00",
-          "title": "Về Hà Nội",
-          "text": "Trả khách khoảng 19:30–19:45."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "Day 1 · 07:30–08:00",
-          "title": "Pickup",
-          "text": "Hanoi to Ninh Binh."
-        },
-        {
-          "time": "Day 1 · 10:30",
-          "title": "Bai Dinh",
-          "text": "Visit Bai Dinh Pagoda."
-        },
-        {
-          "time": "Day 1 · 12:15",
-          "title": "Lunch",
-          "text": "Buffet at Trang An Heritage."
-        },
-        {
-          "time": "Day 1 · 13:30",
-          "title": "Trang An",
-          "text": "1.5-hour boat."
-        },
-        {
-          "time": "Day 1 · 16:00",
-          "title": "Check-in",
-          "text": "Heritage Garden, summer pool, dinner, overnight."
-        },
-        {
-          "time": "Day 2 · 07:30",
-          "title": "Breakfast",
-          "text": "Breakfast then check-out."
-        },
-        {
-          "time": "Day 2 · 10:30",
-          "title": "Hoa Lu",
-          "text": "Ancient capital and royal temples."
-        },
-        {
-          "time": "Day 2 · 11:15",
-          "title": "Cycling",
-          "text": "30 minutes through local life."
-        },
-        {
-          "time": "Day 2 · 12:00",
-          "title": "Lunch",
-          "text": "Buffet at Heritage Garden."
-        },
-        {
-          "time": "Day 2 · 13:15",
-          "title": "Tam Coc",
-          "text": "1.5 hours on the Ngo Dong River."
-        },
-        {
-          "time": "Day 2 · 15:30",
-          "title": "Mua Cave",
-          "text": "Climb 500 steps."
-        },
-        {
-          "time": "Day 2 · 17:00",
-          "title": "Return",
-          "text": "Drop-off around 19:30–19:45."
-        }
-      ],
-      "servicesIncluded": [
-        "2 buffet trưa; 1 set menu tối; 1 bữa sáng",
-        "1 đêm Trang An Heritage Garden (2–3 khách/phòng)",
-        "Đạp xe (tuỳ chọn)",
-        "Xe điện hai chiều Bái Đính",
-        "Vé & thuyền Tam Cốc / Tràng An",
-        "Limousine / shuttle khứ hồi Hà Nội",
-        "Hướng dẫn tiếng Anh",
-        "Wifi, nước suối, nón lá & áo mưa"
-      ],
-      "servicesIncludedEn": [
-        "2 buffet lunches; 1 set dinner; 1 breakfast",
-        "1 night at Trang An Heritage Garden (2–3/room)",
-        "Optional bicycle activity",
-        "Round-trip electric car at Bai Dinh",
-        "Entrance & boat Tam Coc / Trang An",
-        "Round-trip limousine / shuttle from Hanoi",
-        "English-speaking guide",
-        "Wi‑Fi, water, conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu phòng đơn 15 USD",
-        "Phụ thu Tết: 15 USD/khách/đêm"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Single supplement 15 USD",
-        "Tet surcharge: 15 USD/guest/night"
-      ],
-      "offers": [
-        "Nghỉ tại Trang An Heritage Garden",
-        "Hồ bơi mùa hè"
-      ],
-      "offersEn": [
-        "Stay at Trang An Heritage Garden",
-        "Summer swimming pool"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-bai-dinh-trang-an",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Bái Đính – Tràng An",
-      "nameEn": "Bai Dinh – Trang An",
-      "durationLabel": "1 ngày",
-      "durationLabelEn": "1 day",
-      "nightsOffset": 0,
-      "price": 1881000,
-      "priceNote": "$76 limousine · $66 shuttle",
-      "priceNoteEn": "$76 limousine · $66 shuttle",
-      "image": "img/tours/ninh-binh-bai-dinh-trang-an.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/bich-dong.jpg",
-          "alt": "Chùa Bái Đính / quần thể chùa",
-          "altEn": "Bai Dinh / pagoda complex"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-          "alt": "Thuyền Tràng An",
-          "altEn": "Trang An boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/trang-an-cave.jpg",
-          "alt": "Hang xuyên thủy Tràng An",
-          "altEn": "Trang An water caves"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden-restaurant.jpg",
-          "alt": "Buffet Heritage Garden",
-          "altEn": "Heritage Garden buffet"
-        },
-        {
-          "type": "image",
-          "src": "img/fleet/shuttle-bus.jpg",
-          "alt": "Shuttle bus đưa đón",
-          "altEn": "Shuttle bus transfer"
-        }
-      ],
-      "cardLine": "Chùa Bái Đính (xe điện hai chiều) và thuyền Tràng An UNESCO — không leo Hang Múa, về Hà Nội sớm hơn. Buffet trưa tại Trang An Heritage Garden. Limousine $76/khách.",
-      "cardLineEn": "Bai Dinh Pagoda (round-trip electric car) and UNESCO Trang An boat — no Mua Cave climb, earlier return to Hanoi. Buffet lunch at Trang An Heritage Garden. Limousine from $76/guest.",
-      "description": [
-        "Bái Đính: tượng La Hán đá, chuông đồng lớn, tượng Quan Âm.",
-        "Thuyền Tràng An khoảng 1,5 giờ qua hệ thống hang.",
-        "Không gồm Hang Múa — lịch nhẹ hơn tour đủ ba điểm."
-      ],
-      "descriptionEn": [
-        "Bai Dinh: stone Arhats, great bronze bells, Goddess of Mercy.",
-        "About 1.5 hours on the Trang An boat through the caves.",
-        "No Mua Cave — a lighter day than the three-stop version."
-      ],
-      "itinerary": [
-        {
-          "time": "07:30–08:00",
-          "title": "Đón khách",
-          "text": "Đón phố cổ Hà Nội đi Ninh Bình."
-        },
-        {
-          "time": "09:15",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 15–20 phút."
-        },
-        {
-          "time": "10:30",
-          "title": "Chùa Bái Đính",
-          "text": "Tham quan quần thể; xe điện hai chiều trong khuôn viên."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Buffet đặc sản tại Trang An Heritage Garden."
-        },
-        {
-          "time": "13:30",
-          "title": "Tràng An",
-          "text": "1,5 giờ thuyền UNESCO."
-        },
-        {
-          "time": "16:00–16:30",
-          "title": "Về Hà Nội",
-          "text": "Không đi Hang Múa."
-        },
-        {
-          "time": "18:30–19:00",
-          "title": "Trả khách",
-          "text": "Khách sạn phố cổ."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:30–08:00",
-          "title": "Pickup",
-          "text": "Pickup in Hanoi Old Quarter."
-        },
-        {
-          "time": "09:15",
-          "title": "Short break",
-          "text": "15–20 minutes on the way."
-        },
-        {
-          "time": "10:30",
-          "title": "Bai Dinh Pagoda",
-          "text": "Explore the complex; round-trip electric car on site."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Buffet at Trang An Heritage Garden."
-        },
-        {
-          "time": "13:30",
-          "title": "Trang An",
-          "text": "1.5-hour UNESCO boat."
-        },
-        {
-          "time": "16:00–16:30",
-          "title": "Return",
-          "text": "No Mua Cave — earlier return."
-        },
-        {
-          "time": "18:30–19:00",
-          "title": "Drop-off",
-          "text": "Old Quarter hotel."
-        }
-      ],
-      "servicesIncluded": [
-        "Buffet trưa đặc sản",
-        "Xe điện hai chiều tại Bái Đính",
-        "Vé & thuyền chung Tràng An",
-        "Xe khứ hồi Hà Nội – Ninh Bình",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi & nước suối trên xe",
-        "Nón lá & áo mưa miễn phí"
-      ],
-      "servicesIncludedEn": [
-        "Buffet lunch with local specialties",
-        "Round-trip electric car at Bai Dinh",
-        "Entrance & sharing boat at Trang An",
-        "Round-trip Hanoi – Ninh Binh",
-        "English-speaking guide",
-        "Wi‑Fi & bottled water on the coach",
-        "Free conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "offers": [
-        "Không leo Hang Múa",
-        "Buffet trưa Heritage Garden"
-      ],
-      "offersEn": [
-        "No Mua Cave climb",
-        "Buffet lunch at Heritage Garden"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-2d1n-pagoda",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Cố đô & chùa Ninh Bình 2N1Đ",
-      "nameEn": "Ancient capital & pagodas 2D1N",
-      "durationLabel": "2 ngày 1 đêm",
-      "durationLabelEn": "2 days 1 night",
-      "nightsOffset": 1,
-      "price": 4677000,
-      "priceNote": "$189 limousine từ 2 khách",
-      "priceNoteEn": "$189 limousine from 2 guests",
-      "image": "img/tours/ninh-binh-2d1n-pagoda.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Hoa Lư ngày 1",
-          "altEn": "Hoa Lu day 1"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/bich-dong.jpg",
-          "alt": "Chùa Bích Động",
-          "altEn": "Bich Dong Pagoda"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/thai-vi.jpg",
-          "alt": "Đền Thái Vi",
-          "altEn": "Thai Vi Temple"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/thung-nham.jpg",
-          "alt": "Vườn chim Thung Nham",
-          "altEn": "Thung Nham bird valley"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
-          "alt": "Hang Múa",
-          "altEn": "Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden-pool.jpg",
-          "alt": "Nghỉ đêm Heritage Garden",
-          "altEn": "Overnight at Heritage Garden"
-        }
-      ],
-      "cardLine": "Ngày 1: Hoa Lư – thuyền Tam Cốc/Tràng An – Hang Múa, nghỉ Trang An Heritage Garden. Ngày 2: đền Thái Vi, chùa Bích Động, thung chim Thung Nham. Limousine từ $189/khách.",
-      "cardLineEn": "Day 1: Hoa Lu – Tam Coc/Trang An boat – Mua Cave, overnight at Trang An Heritage Garden. Day 2: Thai Vi temple, Bich Dong pagoda, Thung Nham bird valley. Limousine from $189/guest.",
-      "description": [
-        "Đêm tại Trang An Heritage Garden (2–3 khách/phòng).",
-        "Ngày 2 có thuyền Thung Nham (10–12 khách/thuyền).",
-        "Phụ thu phòng đơn: 15 USD/phòng."
-      ],
-      "descriptionEn": [
-        "Overnight at Trang An Heritage Garden (2–3 guests/room).",
-        "Day 2 includes Thung Nham boat (10–12 guests/boat).",
-        "Single supplement: 15 USD/room."
-      ],
-      "itinerary": [
-        {
-          "time": "Ngày 1 · sáng",
-          "title": "Hoa Lư & đạp xe",
-          "text": "Cố đô Hoa Lư, đạp xe 30 phút hoặc thư giãn tại Heritage Garden."
-        },
-        {
-          "time": "Ngày 1 · trưa",
-          "title": "Buffet & thuyền",
-          "text": "Buffet trưa, rồi Tam Cốc hoặc Tràng An khoảng 1,5 giờ."
-        },
-        {
-          "time": "Ngày 1 · chiều",
-          "title": "Hang Múa & check-in",
-          "text": "Leo Hang Múa, về Heritage Garden, ăn tối, nghỉ đêm."
-        },
-        {
-          "time": "Ngày 2 · sáng",
-          "title": "Thái Vi & Bích Động",
-          "text": "Đền Thái Vi triều Trần và chùa Bích Động ba tầng."
-        },
-        {
-          "time": "Ngày 2 · trưa",
-          "title": "Ăn trưa",
-          "text": "Set menu tại Heritage Garden."
-        },
-        {
-          "time": "Ngày 2 · chiều",
-          "title": "Thung Nham",
-          "text": "Thuyền hang Bụt và thung chim — hàng nghìn chim, khoảng 40 loài."
-        },
-        {
-          "time": "Ngày 2 · tối",
-          "title": "Về Hà Nội",
-          "text": "Trả khách khoảng 19:30–19:45."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "Day 1 · morning",
-          "title": "Hoa Lu & cycling",
-          "text": "Ancient capital and 30 minutes cycling or rest at Heritage Garden."
-        },
-        {
-          "time": "Day 1 · midday",
-          "title": "Buffet & boat",
-          "text": "Buffet lunch, then Tam Coc or Trang An for about 1.5 hours."
-        },
-        {
-          "time": "Day 1 · afternoon",
-          "title": "Mua Cave & check-in",
-          "text": "Climb Mua Cave, return to Heritage Garden for dinner and overnight."
-        },
-        {
-          "time": "Day 2 · morning",
-          "title": "Thai Vi & Bich Dong",
-          "text": "Tran-dynasty Thai Vi temple and three-level Bich Dong pagoda."
-        },
-        {
-          "time": "Day 2 · midday",
-          "title": "Lunch",
-          "text": "Set menu at Heritage Garden."
-        },
-        {
-          "time": "Day 2 · afternoon",
-          "title": "Thung Nham",
-          "text": "Buddhist Cave sampan and bird valley — thousands of birds, ~40 species."
-        },
-        {
-          "time": "Day 2 · evening",
-          "title": "Return",
-          "text": "Drop-off around 19:30–19:45."
-        }
-      ],
-      "servicesIncluded": [
-        "1 buffet trưa; 1 set tối + 1 set trưa; 1 bữa sáng",
-        "1 đêm Trang An Heritage Garden (2–3 khách/phòng)",
-        "Đạp xe (tuỳ chọn)",
-        "Vé & thuyền Tam Cốc / Tràng An",
-        "Thuyền chung Thung Nham (10–12 khách/thuyền)",
-        "Xe limousine / shuttle khứ hồi + minivan nội tuyến",
-        "Hướng dẫn tiếng Anh",
-        "Wifi, nước suối, nón lá & áo mưa"
-      ],
-      "servicesIncludedEn": [
-        "1 buffet lunch; 1 set dinner + 1 set lunch; 1 breakfast",
-        "1 night at Trang An Heritage Garden (2–3/room)",
-        "Optional bicycle activity",
-        "Entrance & boat Tam Coc / Trang An",
-        "Sharing boat at Thung Nham (10–12/boat)",
-        "Round-trip limousine / shuttle + local minivan",
-        "English-speaking guide",
-        "Wi‑Fi, water, conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu phòng đơn 15 USD",
-        "Phụ thu Tết: 15 USD/khách/đêm"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Single supplement 15 USD",
-        "Tet surcharge: 15 USD/guest/night"
-      ],
-      "serviceNote": "Limousine từ 2 khách: $189. Shuttle: $179. 1 khách limousine: $229.",
-      "serviceNoteEn": "Limousine from 2 guests: $189. Shuttle: $179. Solo limousine: $229.",
-      "offers": [
-        "Thung Nham + Bích Động",
-        "Nghỉ đêm Heritage Garden"
-      ],
-      "offersEn": [
-        "Thung Nham + Bich Dong",
-        "Overnight at Heritage Garden"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-2d1n-cuc-phuong",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Cố đô & Cúc Phương 2N1Đ",
-      "nameEn": "Ancient capital & Cuc Phuong 2D1N",
-      "durationLabel": "2 ngày 1 đêm",
-      "durationLabelEn": "2 days 1 night",
-      "nightsOffset": 1,
-      "price": 4826000,
-      "priceNote": "$195 limousine từ 2 khách",
-      "priceNoteEn": "$195 limousine from 2 guests",
-      "image": "img/tours/ninh-binh-2d1n-cuc-phuong.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/cuc-phuong.jpg",
-          "alt": "Vườn quốc gia Cúc Phương",
-          "altEn": "Cuc Phuong National Park"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
-          "alt": "Cố đô Hoa Lư",
-          "altEn": "Hoa Lu ancient capital"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền Tam Cốc",
-          "altEn": "Tam Coc boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-steps.jpg",
-          "alt": "Hang Múa",
-          "altEn": "Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Heritage Garden",
-          "altEn": "Heritage Garden"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/mua-climbing.jpg",
-          "alt": "Trekking rừng nguyên sinh",
-          "altEn": "Primary forest trekking"
-        }
-      ],
-      "cardLine": "Ngày 1: Hoa Lư – thuyền – Hang Múa, nghỉ Heritage Garden. Ngày 2: Vườn quốc gia Cúc Phương — trung tâm cứu hộ linh trưởng & rùa, cây nghìn năm, hang người tiền sử. Limousine từ $195/khách.",
-      "cardLineEn": "Day 1: Hoa Lu – boat – Mua Cave, overnight Heritage Garden. Day 2: Cuc Phuong National Park — primate & turtle rescue centers, thousand-year trees, prehistoric cave. Limousine from $195/guest.",
-      "description": [
-        "Ngày 2 trekking nhẹ trong rừng nguyên sinh Cúc Phương.",
-        "Nên mang mũ, giày, kem chống nắng và thuốc chống côn trùng.",
-        "Phụ thu phòng đơn: 15 USD/phòng."
-      ],
-      "descriptionEn": [
-        "Day 2 is a light trek in Cuc Phuong primary forest.",
-        "Bring a hat, shoes, sunscreen, and insect spray.",
-        "Single supplement: 15 USD/room."
-      ],
-      "itinerary": [
-        {
-          "time": "Ngày 1",
-          "title": "Hoa Lư – thuyền – Hang Múa",
-          "text": "Giống lịch cố đô: Hoa Lư, đạp xe, buffet, Tam Cốc/Tràng An, Hang Múa, check-in Heritage Garden."
-        },
-        {
-          "time": "Ngày 2 · 08:30",
-          "title": "Đi Cúc Phương",
-          "text": "Minivan vào Vườn quốc gia Cúc Phương."
-        },
-        {
-          "time": "Ngày 2 · 09:15",
-          "title": "Trung tâm cứu hộ",
-          "text": "Endangered Primate Rescue Center và Turtle Conservation Center."
-        },
-        {
-          "time": "Ngày 2 · 11:00",
-          "title": "Vào lõi rừng",
-          "text": "Khoảng 20 km qua rừng nguyên sinh tới trung tâm vườn."
-        },
-        {
-          "time": "Ngày 2 · 12:00",
-          "title": "Ăn trưa",
-          "text": "Bữa trưa đặc sản tại trung tâm vườn."
-        },
-        {
-          "time": "Ngày 2 · 13:00",
-          "title": "Trekking",
-          "text": "Cây nghìn năm, cây cổ thụ và Hang Người Tiền Sử."
-        },
-        {
-          "time": "Ngày 2 · 17:00",
-          "title": "Về Hà Nội",
-          "text": "Trả khách khoảng 19:30–19:45."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "Day 1",
-          "title": "Hoa Lu – boat – Mua Cave",
-          "text": "Ancient-capital day: Hoa Lu, cycling, buffet, Tam Coc/Trang An, Mua Cave, check-in at Heritage Garden."
-        },
-        {
-          "time": "Day 2 · 08:30",
-          "title": "To Cuc Phuong",
-          "text": "Minivan to Cuc Phuong National Park."
-        },
-        {
-          "time": "Day 2 · 09:15",
-          "title": "Rescue centers",
-          "text": "Endangered Primate Rescue Center and Turtle Conservation Center."
-        },
-        {
-          "time": "Day 2 · 11:00",
-          "title": "Into the forest",
-          "text": "About 20 km through primary forest to the park center."
-        },
-        {
-          "time": "Day 2 · 12:00",
-          "title": "Lunch",
-          "text": "Local lunch at the park center."
-        },
-        {
-          "time": "Day 2 · 13:00",
-          "title": "Trekking",
-          "text": "Thousand-year trees, ancient trees, and the Cave of Prehistoric Man."
-        },
-        {
-          "time": "Day 2 · 17:00",
-          "title": "Return",
-          "text": "Drop-off around 19:30–19:45."
-        }
-      ],
-      "servicesIncluded": [
-        "1 buffet trưa; 1 set tối + 1 set trưa; 1 bữa sáng",
-        "1 đêm Trang An Heritage Garden (2–3 khách/phòng)",
-        "Đạp xe (tuỳ chọn)",
-        "Vé & thuyền Tam Cốc / Tràng An",
-        "Xe limousine / shuttle khứ hồi + minivan Cúc Phương",
-        "Hướng dẫn tiếng Anh",
-        "Wifi, nước suối, nón lá & áo mưa"
-      ],
-      "servicesIncludedEn": [
-        "1 buffet lunch; 1 set dinner + 1 set lunch; 1 breakfast",
-        "1 night at Trang An Heritage Garden (2–3/room)",
-        "Optional bicycle activity",
-        "Entrance & boat Tam Coc / Trang An",
-        "Round-trip limousine / shuttle + Cuc Phuong minivan",
-        "English-speaking guide",
-        "Wi‑Fi, water, conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu phòng đơn 15 USD",
-        "Phụ thu Tết: 15 USD/khách/đêm"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Single supplement 15 USD",
-        "Tet surcharge: 15 USD/guest/night"
-      ],
-      "serviceNote": "Limousine từ 2 khách: $195. Shuttle: $185. 1 khách limousine: $239.",
-      "serviceNoteEn": "Limousine from 2 guests: $195. Shuttle: $185. Solo limousine: $239.",
-      "offers": [
-        "Cúc Phương + cố đô",
-        "Nghỉ đêm Heritage Garden"
-      ],
-      "offersEn": [
-        "Cuc Phuong + ancient capital",
-        "Overnight at Heritage Garden"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-2d1n-halong",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Ninh Bình & Hạ Long Luxury 2N1Đ",
-      "nameEn": "Ninh Binh & Ha Long Luxury 2D1N",
-      "durationLabel": "2 ngày 1 đêm",
-      "durationLabelEn": "2 days 1 night",
-      "nightsOffset": 1,
-      "price": 4925000,
-      "priceNote": "$199 limousine từ 2 khách",
-      "priceNoteEn": "$199 limousine from 2 guests",
-      "image": "img/tours/ninh-binh-2d1n-halong.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Ngày 1 Ninh Bình – thuyền",
-          "altEn": "Day 1 Ninh Binh boat"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Nghỉ Heritage Garden",
-          "altEn": "Heritage Garden overnight"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/cruise-exterior.jpg",
-          "alt": "Ngày 2 du thuyền Hạ Long",
-          "altEn": "Day 2 Ha Long cruise"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ha-long/sung-sot-cave.jpg",
-          "alt": "Hang Sửng Sốt",
-          "altEn": "Surprising Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/kayak.jpg",
-          "alt": "Kayak hang Luồn",
-          "altEn": "Kayak at Luon Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/sunset-party.jpg",
-          "alt": "Tiệc hoàng hôn trên vịnh",
-          "altEn": "Sunset party on the bay"
-        }
-      ],
-      "cardLine": "Ngày 1 Ninh Bình: Hoa Lư – thuyền – Hang Múa, nghỉ Heritage Garden. Ngày 2 du thuyền Heritage Luxury trên vịnh Hạ Long (buffet, Sửng Sốt, Luồn, Titov, tiệc hoàng hôn), về Hà Nội tối. Từ $199/khách.",
-      "cardLineEn": "Day 1 Ninh Binh: Hoa Lu – boat – Mua Cave, overnight Heritage Garden. Day 2 Heritage Luxury day cruise on Ha Long Bay (buffet, Surprising Cave, Luon, Titov, sunset party), back to Hanoi at night. From $199/guest.",
-      "description": [
-        "Kết hợp cố đô Ninh Bình và du thuyền Hạ Long một ngày.",
-        "Ngày 2 khởi hành sớm từ Heritage Garden sang Tuần Châu (~3,5–4 giờ).",
-        "Phụ thu phòng đơn: 15 USD/phòng."
-      ],
-      "descriptionEn": [
-        "Combines Ninh Binh’s ancient capital with a Ha Long day cruise.",
-        "Day 2 early transfer from Heritage Garden to Tuan Chau (~3.5–4 hours).",
-        "Single supplement: 15 USD/room."
-      ],
-      "itinerary": [
-        {
-          "time": "Ngày 1",
-          "title": "Ninh Bình Heritage",
-          "text": "Hoa Lư, đạp xe, buffet, Tam Cốc/Tràng An, Hang Múa, check-in và ăn tối tại Heritage Garden."
-        },
-        {
-          "time": "Ngày 2 · 06:15",
-          "title": "Check-out",
-          "text": "Ăn sáng nhẹ, lên xe đi Hạ Long."
-        },
-        {
-          "time": "Ngày 2 · 11:15",
-          "title": "Lên tàu Luxury",
-          "text": "Cảng Tuần Châu, welcome drink."
-        },
-        {
-          "time": "Ngày 2 · 12:00",
-          "title": "Buffet & vịnh",
-          "text": "Buffet trên tàu, hang Sửng Sốt, kayak hang Luồn, đảo Titov, tiệc hoàng hôn."
-        },
-        {
-          "time": "Ngày 2 · 17:45",
-          "title": "Về Hà Nội",
-          "text": "Limousine từ Tuần Châu; trả khách khoảng 20:30–20:45."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "Day 1",
-          "title": "Ninh Binh Heritage",
-          "text": "Hoa Lu, cycling, buffet, Tam Coc/Trang An, Mua Cave, check-in and dinner at Heritage Garden."
-        },
-        {
-          "time": "Day 2 · 06:15",
-          "title": "Check-out",
-          "text": "Light breakfast, transfer to Ha Long."
-        },
-        {
-          "time": "Day 2 · 11:15",
-          "title": "Board Luxury cruise",
-          "text": "Tuan Chau Port and welcome drink."
-        },
-        {
-          "time": "Day 2 · 12:00",
-          "title": "Buffet & bay",
-          "text": "Buffet, Surprising Cave, Luon kayak, Titov, sunset party."
-        },
-        {
-          "time": "Day 2 · 17:45",
-          "title": "Back to Hanoi",
-          "text": "Limousine from Tuan Chau; drop-off around 20:30–20:45."
-        }
-      ],
-      "servicesIncluded": [
-        "Ngày 1: buffet trưa, set tối, bữa sáng; 1 đêm Heritage Garden",
-        "Đạp xe, vé & thuyền Tam Cốc / Tràng An",
-        "Limousine Hà Nội – Ninh Bình",
-        "Ngày 2: du thuyền Luxury 6 giờ, buffet trên tàu, welcome drink",
-        "Hang Sửng Sốt, kayak/thuyền tre hang Luồn, Titov, jacuzzi, tiệc hoàng hôn",
-        "Vé thắng cảnh Hạ Long",
-        "Hướng dẫn tiếng Anh",
-        "Limousine Tuần Châu – Hà Nội"
-      ],
-      "servicesIncludedEn": [
-        "Day 1: buffet lunch, set dinner, breakfast; 1 night Heritage Garden",
-        "Cycling, entrance & boat Tam Coc / Trang An",
-        "Limousine Hanoi – Ninh Binh",
-        "Day 2: 6-hour Luxury cruise, buffet on board, welcome drink",
-        "Surprising Cave, Luon kayak/bamboo boat, Titov, jacuzzi, sunset party",
-        "Ha Long sightseeing fees",
-        "English-speaking guide",
-        "Limousine Tuan Chau – Hanoi"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu phòng đơn 15 USD",
-        "Phụ thu Tết: 15 USD/khách/đêm"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Single supplement 15 USD",
-        "Tet surcharge: 15 USD/guest/night"
-      ],
-      "serviceNote": "Limousine từ 2 khách: $199. 1 khách: $219.",
-      "serviceNoteEn": "Limousine from 2 guests: $199. Solo: $219.",
-      "offers": [
-        "Ninh Bình + Hạ Long một đặt chỗ",
-        "Limousine xuyên suốt"
-      ],
-      "offersEn": [
-        "Ninh Binh + Ha Long in one booking",
-        "Limousine throughout"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-thung-nham",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Tam Cốc – Bích Động – Thung Nham (Private)",
-      "nameEn": "Tam Coc – Bich Dong – Thung Nham (Private)",
-      "durationLabel": "1 ngày · private",
-      "durationLabelEn": "1 day · private",
-      "nightsOffset": 0,
-      "price": 3588000,
-      "priceNote": "Private từ $145/2 khách",
-      "priceNoteEn": "Private from $145/2 guests",
-      "image": "img/tours/ninh-binh-thung-nham.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền Tam Cốc buổi sáng",
-          "altEn": "Morning Tam Coc boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/bich-dong.jpg",
-          "alt": "Chùa Bích Động",
-          "altEn": "Bich Dong Pagoda"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/thung-nham.jpg",
-          "alt": "Thung Nham – thung chim",
-          "altEn": "Thung Nham bird valley"
-        },
-        {
-          "type": "image",
-          "src": "img/experiences/sampan-rowing.jpg",
-          "alt": "Thuyền nan khám phá hang",
-          "altEn": "Sampan exploring caves"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden-restaurant.jpg",
-          "alt": "Set lunch Heritage Garden",
-          "altEn": "Heritage Garden set lunch"
-        },
-        {
-          "type": "image",
-          "src": "img/fleet/dcar-limousine.jpg",
-          "alt": "Xe private Dcar",
-          "altEn": "Private Dcar transfer"
-        }
-      ],
-      "cardLine": "Tour riêng: thuyền Tam Cốc buổi sáng, đạp xe, set lunch Heritage Garden, chùa Bích Động và thung chim Thung Nham chiều. Giá private từ $145/khách (2 khách).",
-      "cardLineEn": "Private day: morning Tam Coc boat, cycling, Heritage Garden set lunch, Bich Dong pagoda and Thung Nham bird valley in the afternoon. Private from $145/guest (2 guests).",
-      "description": [
-        "Chỉ mở dạng private — xe và hướng dẫn riêng.",
-        "Thung Nham: hang Bụt ~500m và thung chim chiều tối.",
-        "Set menu trưa (có lựa chọn chay)."
-      ],
-      "descriptionEn": [
-        "Private only — dedicated car and guide.",
-        "Thung Nham: Buddhist Cave ~500m and afternoon bird valley.",
-        "Set-menu lunch (vegetarian option available)."
-      ],
-      "itinerary": [
-        {
-          "time": "07:30–07:45",
-          "title": "Đón khách",
-          "text": "Xe riêng đón phố cổ Hà Nội."
-        },
-        {
-          "time": "09:00",
-          "title": "Nghỉ ngắn",
-          "text": "Dừng 15–20 phút."
-        },
-        {
-          "time": "09:30",
-          "title": "Tam Cốc",
-          "text": "1,5 giờ thuyền sông Ngô Đồng, hang Cá / hang Hai / hang Ba."
-        },
-        {
-          "time": "11:00–11:30",
-          "title": "Đạp xe / thư giãn",
-          "text": "30 phút đạp xe hoặc nghỉ Heritage Garden."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Set menu tại Trang An Heritage Garden."
-        },
-        {
-          "time": "13:00",
-          "title": "Bích Động",
-          "text": "Chùa ba tầng dựng theo chữ 三 trên núi."
-        },
-        {
-          "time": "14:00",
-          "title": "Thung Nham",
-          "text": "Thuyền hang Bụt và thung chim."
-        },
-        {
-          "time": "17:00",
-          "title": "Về Hà Nội",
-          "text": "Trả khách khoảng 19:00–19:30."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:30–07:45",
-          "title": "Pickup",
-          "text": "Private car from Hanoi Old Quarter."
-        },
-        {
-          "time": "09:00",
-          "title": "Short break",
-          "text": "15–20 minutes on the way."
-        },
-        {
-          "time": "09:30",
-          "title": "Tam Coc",
-          "text": "1.5 hours on the Ngo Dong River through Hang Ca, Hang Hai, Hang Ba."
-        },
-        {
-          "time": "11:00–11:30",
-          "title": "Cycling / relax",
-          "text": "30 minutes cycling or rest at Heritage Garden."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Set menu at Trang An Heritage Garden."
-        },
-        {
-          "time": "13:00",
-          "title": "Bich Dong",
-          "text": "Three-level mountain pagoda."
-        },
-        {
-          "time": "14:00",
-          "title": "Thung Nham",
-          "text": "Buddhist Cave sampan and bird valley."
-        },
-        {
-          "time": "17:00",
-          "title": "Return",
-          "text": "Drop-off around 19:00–19:30."
-        }
-      ],
-      "servicesIncluded": [
-        "Set menu trưa đặc sản",
-        "Đạp xe (tuỳ chọn)",
-        "Vé & thuyền Tam Cốc (2–3 khách/thuyền)",
-        "Thuyền chung Thung Nham (10–12 khách/thuyền)",
-        "Xe private khứ hồi Hà Nội – Ninh Bình",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi, nước suối, nón lá & áo mưa"
-      ],
-      "servicesIncludedEn": [
-        "Set-menu lunch with local specialties",
-        "Optional bicycle activity",
-        "Entrance & Tam Coc boat (2–3/boat)",
-        "Sharing boat at Thung Nham (10–12/boat)",
-        "Private round-trip Hanoi – Ninh Binh",
-        "English-speaking guide",
-        "Wi‑Fi, water, conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "serviceNote": "Private: $145/2 khách · $129/3 · $119/4 · từ $109/5–8 · Dcar cao hơn.",
-      "serviceNoteEn": "Private: $145/2 guests · $129/3 · $119/4 · from $109/5–8 · Dcar higher.",
-      "offers": [
-        "Tour riêng tư",
-        "Lịch trình linh hoạt"
-      ],
-      "offersEn": [
-        "Private tour",
-        "Flexible itinerary"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
-    {
-      "id": "ninh-binh-incense",
-      "destination": "ninh-binh",
-      "featured": false,
-      "stars": 5,
-      "name": "Làng hương & Ninh Bình (Private)",
-      "nameEn": "Incense village & Ninh Binh (Private)",
-      "durationLabel": "1 ngày · private",
-      "durationLabelEn": "1 day · private",
-      "nightsOffset": 0,
-      "price": 3687000,
-      "priceNote": "Private từ $149/2 khách",
-      "priceNoteEn": "Private from $149/2 guests",
-      "image": "img/tours/ninh-binh-incense.jpg",
-      "media": [
-        {
-          "type": "image",
-          "src": "img/destinations/hanoi/incense-village.jpg",
-          "alt": "Làng hương Quang Phú Cầu",
-          "altEn": "Quang Phu Cau incense village"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/hanoi/incense-aerial.jpg",
-          "alt": "Góc check-in bó hương từ trên cao",
-          "altEn": "Aerial incense check-in view"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
-          "alt": "Thuyền Tam Cốc / Tràng An",
-          "altEn": "Tam Coc / Trang An boat"
-        },
-        {
-          "type": "image",
-          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
-          "alt": "Hang Múa chiều",
-          "altEn": "Afternoon Mua Cave"
-        },
-        {
-          "type": "image",
-          "src": "img/venues/heritage-garden.jpg",
-          "alt": "Ăn trưa Heritage Garden",
-          "altEn": "Lunch at Heritage Garden"
-        },
-        {
-          "type": "image",
-          "src": "img/fleet/dcar-limousine.jpg",
-          "alt": "Xe private cả ngày",
-          "altEn": "Full-day private car"
-        }
-      ],
-      "cardLine": "Sáng làng hương Quang Phú Cầu, trưa Heritage Garden, chiều thuyền Tam Cốc/Tràng An và Hang Múa. Tour private từ $149/khách (2 khách).",
-      "cardLineEn": "Morning Quang Phu Cau incense village, Heritage Garden lunch, afternoon Tam Coc/Trang An boat and Mua Cave. Private from $149/guest (2 guests).",
-      "description": [
-        "Kết hợp làng nghề hương hơn 100 năm với thắng cảnh Ninh Bình.",
-        "Chọn thuyền Tam Cốc hoặc Tràng An theo lịch.",
-        "Set menu trưa tại Trang An Heritage Garden."
-      ],
-      "descriptionEn": [
-        "Combines a 100-year incense craft village with Ninh Binh highlights.",
-        "Tam Coc or Trang An boat depending on the plan.",
-        "Set-menu lunch at Trang An Heritage Garden."
-      ],
-      "itinerary": [
-        {
-          "time": "07:30–07:45",
-          "title": "Đón khách",
-          "text": "Đón phố cổ Hà Nội."
-        },
-        {
-          "time": "08:00",
-          "title": "Đi Quang Phú Cầu",
-          "text": "Làng hương hơn 100 năm."
-        },
-        {
-          "time": "09:30",
-          "title": "Tham quan làng",
-          "text": "Xem nhuộm và bó hương thủ công, mua quà lưu niệm."
-        },
-        {
-          "time": "10:30",
-          "title": "Sang Ninh Bình",
-          "text": "Xe private tiếp tục hành trình."
-        },
-        {
-          "time": "12:00",
-          "title": "Ăn trưa",
-          "text": "Set menu tại Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Thuyền",
-          "text": "1,5 giờ Tam Cốc hoặc Tràng An."
-        },
-        {
-          "time": "15:30",
-          "title": "Hang Múa",
-          "text": "Leo khoảng 500 bậc."
-        },
-        {
-          "time": "16:30–17:00",
-          "title": "Về Hà Nội",
-          "text": "Trả khách khoảng 19:00–19:30."
-        }
-      ],
-      "itineraryEn": [
-        {
-          "time": "07:30–07:45",
-          "title": "Pickup",
-          "text": "Pickup in Hanoi Old Quarter."
-        },
-        {
-          "time": "08:00",
-          "title": "To Quang Phu Cau",
-          "text": "Incense village with over 100 years of craft."
-        },
-        {
-          "time": "09:30",
-          "title": "Village visit",
-          "text": "Watch dyeing and bundling; take souvenirs."
-        },
-        {
-          "time": "10:30",
-          "title": "To Ninh Binh",
-          "text": "Continue by private car."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch",
-          "text": "Set menu at Heritage Garden."
-        },
-        {
-          "time": "13:15–13:30",
-          "title": "Boat",
-          "text": "1.5 hours at Tam Coc or Trang An."
-        },
-        {
-          "time": "15:30",
-          "title": "Mua Cave",
-          "text": "Climb about 500 steps."
-        },
-        {
-          "time": "16:30–17:00",
-          "title": "Return",
-          "text": "Drop-off around 19:00–19:30."
-        }
-      ],
-      "servicesIncluded": [
-        "Set menu trưa đặc sản",
-        "Vé & thuyền Tam Cốc / Tràng An",
-        "Xe private khứ hồi",
-        "Hướng dẫn viên tiếng Anh",
-        "Wifi, nước suối, nón lá & áo mưa"
-      ],
-      "servicesIncludedEn": [
-        "Set-menu lunch with local specialties",
-        "Entrance & boat Tam Coc / Trang An",
-        "Private round-trip transfer",
-        "English-speaking guide",
-        "Wi‑Fi, water, conical hat & raincoat"
-      ],
-      "servicesExcluded": [
-        "VAT",
-        "Đồ uống",
-        "Tip",
-        "Chi tiêu cá nhân",
-        "Phụ thu Tết: 15 USD/khách"
-      ],
-      "servicesExcludedEn": [
-        "VAT",
-        "Beverages",
-        "Tips",
-        "Personal expenses",
-        "Tet surcharge: 15 USD/guest"
-      ],
-      "serviceNote": "Private: $149/2 khách · $139/3 · $125/4 · từ $119/5–6 · Dcar cao hơn.",
-      "serviceNoteEn": "Private: $149/2 guests · $139/3 · $125/4 · from $119/5–6 · Dcar higher.",
-      "offers": [
-        "Làng hương + Ninh Bình",
-        "Tour private"
-      ],
-      "offersEn": [
-        "Incense village + Ninh Binh",
-        "Private tour"
-      ],
-      "menuGallery": {
-        "title": "Thực đơn Đặc sản Ninh Bình",
-        "titleEn": "Ninh Binh specialties menu",
-        "images": [
-          {
-            "src": "img/menus/NinhBinh/anh1.jpg",
-            "alt": "Buffet hải sản",
-            "altEn": "Seafood buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh2.jpg",
-            "alt": "Buffet trên tàu",
-            "altEn": "Onboard buffet"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh3.jpg",
-            "alt": "Nhà hàng trên tàu",
-            "altEn": "Cruise restaurant"
-          },
-          {
-            "src": "img/menus/NinhBinh/anh4.jpg",
-            "alt": "Không gian nhà hàng",
-            "altEn": "Restaurant space"
-          }
-        ]
-      },
-      "operatorId": "heritage"
-    },
     {
       "id": "ha-noi-city-craft-1d",
       "destination": "ha-noi",
@@ -10010,6 +7280,3509 @@
         ]
       },
       "operatorId": "may"
+    },
+    {
+      "id": "ha-long-cozy-bay-grand-2d1n",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 4,
+      "name": "Du Thuyền 4★ Cozy Bay Grand – Ngủ Đêm Vịnh Hạ Long 2N1Đ",
+      "nameEn": "Cozy Bay Grand 4★ Cruise – Halong Bay Overnight 2 Days 1 Night",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+          "alt": "Du thuyền Cozy Bay Grand 4 sao",
+          "altEn": "Cozy Bay Grand 4-star Cruise"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Sundeck_1.jpg",
+          "alt": "Sundeck ngắm hoàng hôn vịnh Hạ Long",
+          "altEn": "Sundeck sunset view Halong Bay"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floordeluxe-double-balcony/Double_T2_Balcony_1.jpg",
+          "alt": "Cabin Deluxe Balcony có ban công riêng",
+          "altEn": "Deluxe Balcony private cabin"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floorpremium-double-or-twin-terrace/Premium_Terrace_1.jpg",
+          "alt": "Cabin Premium Terrace sân hiên rộng",
+          "altEn": "Premium Terrace spacious cabin"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/restaurant/Restaurant_1.jpg",
+          "alt": "Nhà hàng sang trọng trên du thuyền",
+          "altEn": "Cruise dining restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/activities/Cooking_Class_2.JPG",
+          "alt": "Lớp học làm nem cuốn truyền thống",
+          "altEn": "Traditional cooking class"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/activities/Taichi_2.JPG",
+          "alt": "Thái Cực Quyền đón bình minh trên sundeck",
+          "altEn": "Morning Taichi on sundeck"
+        }
+      ],
+      "cardLine": "Trải nghiệm kỳ nghỉ 2N1Đ đẳng cấp trên du thuyền Cozy Bay Grand 4 sao: phòng nghỉ sang trọng ngắm vịnh, buffet hải sản, kayak Hang Luồn, đảo Titov, lớp học nấu ăn và câu mực đêm.",
+      "cardLineEn": "A memorable 2D1N overnight voyage on Cozy Bay Grand 4-star cruise: luxury bay-view cabins, seafood buffet, Luon Cave kayaking, Titov Island, cooking class, and night squid fishing.",
+      "description": [
+        "DU THUYỀN COZY BAY GRAND CRUISE 4 SAO - 2 NGÀY 1 ĐÊM",
+        "Đảo Titop - Hang Luồn - Hang Sửng Sốt Chèo kayak/ Thuyền nan – Câu mực đêm – Tiệc hoàng hôn – Lớp học nấu ăn",
+        "Trải nghiệm vẻ đẹp của Vịnh Hạ Long trên du thuyền Cozy Bay Grand 4★, nơi thiết kế tinh tế hòa quyện cùng sự yên bình của thiên nhiên. Du thuyền duyên dáng mang đến không gian sang trọng nhưng ấm cúng, lý tưởng cho những du khách tìm kiếm sự thoải mái và trải nghiệm chân thực trên vịnh. Trong hành trình lướt qua những dãy núi đá vôi mang tính biểu tượng, bạn có thể tận hưởng những khoảnh khắc thư giãn, khung cảnh ngoạn mục và dịch vụ hiếu khách. Cozy Bay Grand hứa hẹn mang đến một kỳ nghỉ đáng nhớ giữa một trong những điểm đến tuyệt đẹp nhất thế giới."
+      ],
+      "descriptionEn": [
+        "COZY BAY GRAND 4* - 2 DAYS 1 NIGHT",
+        "Titov Island - Luon Cave - Sung Sot Cave Kayaking/Bamboo boat - Squid Fishing - Sunset Party - Cooking Class",
+        "Experience the beauty of Ha Long Bay aboard the Cozy Bay Grand 4, where elegant design blends harmoniously with the tranquility of nature. The charming cruise offers a luxurious yet cozy atmosphere, ideal for travelers seeking comfort and authentic experiences on the bay. As you sail past the iconic limestone karsts, you can enjoy relaxing moments, breathtaking scenery, and warm hospitality. Cozy Bay Grand promises a memorable getaway in one of the world’s most stunning destinations.",
+        "18:00 - Sunset Party and Cooking Class. Enjoy wine and fresh fruits while taking part in the cooking demonstration. Our chef will show how to make Vietnamese fresh spring rolls, and you will have the chance to taste the dish you prepared yourself.",
+        "Enjoy a romantic dinner served at the restaurant while admiring the sparkling beauty of Ha Long Bay at night.",
+        "20:30 - After dinner: After dinner, guests can relax on the sundeck and enjoy the peaceful night scenery of the bay. You may also join several complimentary evening activities such as watching the traditional cultural fashion show “Heritage Footsteps”, taking souvenir photos, night squid fishing, singing Karaoke, playing board games, and admiring the tranquil night view of the bay.",
+        "Alternatively, guests can enjoy additional paid services such as massage treatments or drinks at the Sky Bar.",
+        "Note: Music will be turned off after 22:30 to maintain a quiet atmosphere on the cruise",
+        "Overnight on Cozy Bay Grand",
+        "DAY 2: HALONG BAY – SUNG SOT CAVE - KAYAKING - HANOI (B/L) Morning activities:",
+        "06:00 - Wake up early to witness the peaceful sunrise over Ha Long Bay.",
+        "06:15 - Refresh your body with a relaxing Tai Chi session on the sundeck.",
+        "06:45 - Enjoy morning tea/coffee and a light buffet breakfast with scenic bay views.",
+        "07:40 - Visit Sung Sot Cave (Surprising Cave), the largest and most famous cave in Halong Bay, renowned for its impressive stalactites and stalagmites.",
+        "09:00 - Return to the cruise, freshen up, and pack your luggage.",
+        "09:30 – Check-out of the room.",
+        "Please put your luggage outside your cabin and leave the room key at the reception desk. Our staff will transfer your luggage to the waiting area.",
+        "10:30 - Enjoy your early Buffet lunch onboard while sailing back to the harbor.",
+        "11:45 - Disembark at Tuan Chau Harbor. Farewell crew members. Thank you for using the service of Cozy Bay Grand 4*.",
+        "We look forward to welcoming you again on our cruise.",
+        "12:15 - Transfer back to Hanoi via expressway. 14:30 - Short stop on the way (20-30 minutes). 16:00 - Arrive at your hotel in Hanoi Old Quarter. The trip ends.",
+        "Good bye and see you on your next trips!"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)",
+          "title": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)",
+          "text": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)"
+        },
+        {
+          "time": "07:45-8:30",
+          "title": "Hướng dẫn viên Cozy Bay Grand đón quý khách tại khách sạn trong khu phố cổ Hà Nội hoặc Nhà Hát Lớn 08:45 - Khởi hành đi Hạ Long theo đường cao tốc hiện đại. 10:15 - Dừng nghỉ giữa đường khoảng 20–30 phút.",
+          "text": "Hướng dẫn viên Cozy Bay Grand đón quý khách tại khách sạn trong khu phố cổ Hà Nội hoặc Nhà Hát Lớn 08:45 - Khởi hành đi Hạ Long theo đường cao tốc hiện đại. 10:15 - Dừng nghỉ giữa đường khoảng 20–30 phút."
+        },
+        {
+          "time": "11:45 - 12:00",
+          "title": "Đến cảng Tuần Châu, Quý khách làm thủ tục check-in tại sảnh chờ du thuyền Cozy Bay Grand",
+          "text": "Đến cảng Tuần Châu, Quý khách làm thủ tục check-in tại sảnh chờ du thuyền Cozy Bay Grand"
+        },
+        {
+          "time": "12:30",
+          "title": "Chào mừng lên du thuyền! Quý khách thưởng thức đồ uống chào mừng, nghe phổ biến lịch trình và nhận phòng.",
+          "text": "Chào mừng lên du thuyền! Quý khách thưởng thức đồ uống chào mừng, nghe phổ biến lịch trình và nhận phòng."
+        },
+        {
+          "time": "13:00",
+          "title": "Quý khách thưởng thức bữa trưa buffet trong khi du thuyền nhẹ nhàng lướt qua những dãy núi đá vôi hùng vĩ của Vịnh Hạ Long.",
+          "text": "Quý khách thưởng thức bữa trưa buffet trong khi du thuyền nhẹ nhàng lướt qua những dãy núi đá vôi hùng vĩ của Vịnh Hạ Long. Hoạt động buổi chiều:"
+        },
+        {
+          "time": "14:30",
+          "title": "Quý khách tham quan Đảo Titop:",
+          "text": "Quý khách tham quan Đảo Titop: Leo lên đỉnh đảo ngắm toàn cảnh Vịnh Hạ Long từ trên cao Hoặc thư giãn và tắm biển tại bãi cát trắng mịn"
+        },
+        {
+          "time": "16:00",
+          "title": "Quý khách tham quan Hang Luồn bằng thuyền nan hoặc chèo kayak, khám phá vùng nước xanh biếc được bao quanh bởi những vách núi đá kỳ vĩ.",
+          "text": "Quý khách tham quan Hang Luồn bằng thuyền nan hoặc chèo kayak, khám phá vùng nước xanh biếc được bao quanh bởi những vách núi đá kỳ vĩ."
+        },
+        {
+          "time": "17:30",
+          "title": "Quý khách trở lại du thuyền, nghỉ ngơi trên boong tắm nắng, ngắm hoàng hôn và lưu lại những khoảnh khắc tuyệt vời.",
+          "text": "Quý khách trở lại du thuyền, nghỉ ngơi trên boong tắm nắng, ngắm hoàng hôn và lưu lại những khoảnh khắc tuyệt vời."
+        },
+        {
+          "time": "17.30",
+          "title": "18.30 Giờ khuyến mãi - MUA 2 ĐỒ UỐNG TẶNG 1 ĐỒ UỐNG",
+          "text": "18.30 Giờ khuyến mãi - MUA 2 ĐỒ UỐNG TẶNG 1 ĐỒ UỐNG Buổi tối đáng nhớ"
+        },
+        {
+          "time": "18:00",
+          "title": "Quý khách tham gia Tiệc hoàng hôn Sunset Party & Lớp học nấu ăn. Quý khách thưởng thức rượu vang, hoa quả và tham gia lớp học nấu ăn. Đầu bếp sẽ hướng dẫn Quý Khách làm món nem cuốn Việt Nam, và quý khách có thể thưởng thức thành quả của chính mình.",
+          "text": "Quý khách tham gia Tiệc hoàng hôn Sunset Party & Lớp học nấu ăn. Quý khách thưởng thức rượu vang, hoa quả và tham gia lớp học nấu ăn. Đầu bếp sẽ hướng dẫn Quý Khách làm món nem cuốn Việt Nam, và quý khách có thể thưởng thức thành quả của chính mình."
+        },
+        {
+          "time": "19:00",
+          "title": "Bữa tối Quý khách thưởng thức Bữa tối lãng mạn được phục vụ tại nhà hàng với khung cảnh Vịnh Hạ Long lung linh về đêm.",
+          "text": "Bữa tối Quý khách thưởng thức Bữa tối lãng mạn được phục vụ tại nhà hàng với khung cảnh Vịnh Hạ Long lung linh về đêm."
+        },
+        {
+          "time": "20:30",
+          "title": "Sau ăn tối:",
+          "text": "Sau ăn tối: Sau khi ăn tối xong, Quý khách sẽ tận hưởng khung cảnh yên bình của Vịnh vào ban đêm trên boong tàu. Quý khách cũng có thể tham gia các hoạt động không tính phí vào buổi tối như xem trình diễn thời trang phong tục truyền thống “Bước chân di sản” và chụp hình kỷ niệm, câu mực đêm, hát Karaoke, chơi Boardgame chiêm ngưỡng khung cảnh yên bình của Vịnh Hạ Long vào ban đêm. Hoặc tham gia các hoạt động có tính phí như mát-xa, thưởng thức đồ uống tại Sky Bar. Lưu ý: Âm nhạc sẽ tắt sau 22:30 để giữ yên tĩnh cho du khách nghỉ ngơi trên tàu Nghỉ đêm trên du thuyền Cozy Bay Grand"
+        },
+        {
+          "time": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa)",
+          "title": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa)",
+          "text": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa) Hoạt động buổi sáng:"
+        },
+        {
+          "time": "06:00",
+          "title": "Quý khách dậy sớm ngắm bình minh tuyệt đẹp trên Vịnh Hạ Long.",
+          "text": "Quý khách dậy sớm ngắm bình minh tuyệt đẹp trên Vịnh Hạ Long."
+        },
+        {
+          "time": "06:15",
+          "title": "Bắt đầu ngày mới với bài tập Thái Cực Quyền nhẹ nhàng trên boong tàu.",
+          "text": "Bắt đầu ngày mới với bài tập Thái Cực Quyền nhẹ nhàng trên boong tàu."
+        },
+        {
+          "time": "06:45",
+          "title": "Quý khách thưởng thức trà/cà phê buổi sáng và ăn bữa sáng buffet trong không gian thiên nhiên yên bình.",
+          "text": "Quý khách thưởng thức trà/cà phê buổi sáng và ăn bữa sáng buffet trong không gian thiên nhiên yên bình."
+        },
+        {
+          "time": "07:40",
+          "title": "Quý khách tham quan Hang Sửng sốt, hang động lớn và nổi tiếng nhất Vịnh Hạ Long với hệ thống thạch nhũ tuyệt đẹp.",
+          "text": "Quý khách tham quan Hang Sửng sốt, hang động lớn và nổi tiếng nhất Vịnh Hạ Long với hệ thống thạch nhũ tuyệt đẹp."
+        },
+        {
+          "time": "09:00",
+          "title": "Quý khách trở lại du thuyền, nghỉ ngơi và chuẩn bị hành lý.",
+          "text": "Quý khách trở lại du thuyền, nghỉ ngơi và chuẩn bị hành lý."
+        },
+        {
+          "time": "10:00",
+          "title": "Quý khách làm thủ tục trả phòng.",
+          "text": "Quý khách làm thủ tục trả phòng. Quý khách vui lòng để hành lý bên ngoài cửa phòng và trả lại chìa khóa phòng tại quầy lễ tân. Nhân viên của chúng tôi sẽ chuyển hành lý của bạn đến khu vực chờ."
+        },
+        {
+          "time": "10:30",
+          "title": "Quý khách thưởng thức bữa trưa sớm Buffet trên du thuyền.",
+          "text": "Quý khách thưởng thức bữa trưa sớm Buffet trên du thuyền."
+        },
+        {
+          "time": "11:45",
+          "title": "Tàu Cập bến Tuần Châu, Quý khách chia tay thủy thủ đoàn.",
+          "text": "Tàu Cập bến Tuần Châu, Quý khách chia tay thủy thủ đoàn. Cảm ơn Quý khách đã sử dụng dịch vụ của Cozy Bay Grand 4★. Chúng tôi rất mong được chào đón Quý khách quay trở lại trên du thuyền."
+        },
+        {
+          "time": "12:15",
+          "title": "Xe đưa quý khách trở về Hà Nội theo đường cao tốc. 14:30 - Quý khách Dừng nghỉ giữa đường khoảng 20-30 phút. 16:00 – Xe xề đến khách sạn tại phố cổ Hà Nội. Kết thúc chuyến đi!",
+          "text": "Xe đưa quý khách trở về Hà Nội theo đường cao tốc. 14:30 - Quý khách Dừng nghỉ giữa đường khoảng 20-30 phút. 16:00 – Xe xề đến khách sạn tại phố cổ Hà Nội. Kết thúc chuyến đi! Tạm biệt và hẹn gặp lại Quý khách trong những chuyến đi tiếp theo!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)",
+          "title": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)",
+          "text": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)"
+        },
+        {
+          "time": "07:45 - 08:30",
+          "title": "Our friendly Cozy Bay Grand tour guide picks you up from your hotel in Hanoi Old Quarter or Hanoi Opera House 08:45 - Departure to Ha Long Bay via the modern expressway. 10:15 - Short break (20–30 minutes) to refresh.",
+          "text": "Our friendly Cozy Bay Grand tour guide picks you up from your hotel in Hanoi Old Quarter or Hanoi Opera House 08:45 - Departure to Ha Long Bay via the modern expressway. 10:15 - Short break (20–30 minutes) to refresh."
+        },
+        {
+          "time": "11:45 - 12:00",
+          "title": "Arrive at Tuan Chau Harbor, check-in at Cozy Bay Grand Cruise Lounge. 12:30 - Welcome aboard! Enjoy a refreshing welcome drink, cruise briefing, and cabin check-in.",
+          "text": "Arrive at Tuan Chau Harbor, check-in at Cozy Bay Grand Cruise Lounge. 12:30 - Welcome aboard! Enjoy a refreshing welcome drink, cruise briefing, and cabin check-in."
+        },
+        {
+          "time": "13:00",
+          "title": "Delight in a Buffet lunch while cruising through the stunning limestone landscapes of Ha Long Bay.",
+          "text": "Delight in a Buffet lunch while cruising through the stunning limestone landscapes of Ha Long Bay. Afternoon Adventures"
+        },
+        {
+          "time": "14:30",
+          "title": "Visit Titov Island:",
+          "text": "Visit Titov Island: Hike to the summit for panoramic views Or relax and swim on the sandy beach"
+        },
+        {
+          "time": "16:00",
+          "title": "Visit Luon Cave",
+          "text": "Visit Luon Cave Visit Luon Cave by bamboo boat or kayak, gliding through calm waters surrounded by majestic cliffs."
+        },
+        {
+          "time": "17:30",
+          "title": "Return to the cruise and unwind on the sundeck with breathtaking sunset views.",
+          "text": "Return to the cruise and unwind on the sundeck with breathtaking sunset views."
+        },
+        {
+          "time": "17:30 - 18:30",
+          "title": "Happy Hour – BUY 2 DRINKS, GET 1 FREE",
+          "text": "Happy Hour – BUY 2 DRINKS, GET 1 FREE"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đời mới đưa đón khứ hồi Hà Nội – Hạ Long – Hà Nội ✔ Vé tham quan: Hang Sửng Sốt, Đảo Titop, Hang Luồn ✔ Hướng dẫn viên tiếng Anh chuyên nghiệp ✔ Bảo hiểm trên du thuyền ✔ Kayak/thuyền nan & dụng cụ câu mực ✔ Các bữa ăn: 2 bữa buffet trưa + 1 bữa tối + 1 buffet sáng",
+        "Chương trình giờ vàng: Mua 2 đồ uống tặng 1 ✔ 1 đêm nghỉ trên du thuyền Cozy Bay Grand",
+        "Tập Thái Cực Quyền buổi sáng ✔ Tiệc hoàng hôn & lớp học nấu ăn ✔ Trà, cà phê buổi sáng ✔ Đồ uống chào mừng ✔ Nước suối miễn phí trên xe 1 chai/người và du thuyền 1 chai/người"
+      ],
+      "servicesIncludedEn": [
+        "Round-trip transfer Hanoi - Ha Long - Hanoi by modern Shuttle Bus Entrance fees: Sung Sot Cave & Titov Island English-speaking tour guide Onboard insurance Kayaking/Bamboo boat & fishing equipment Meals onboard: 2 buffet lunches + 1 dinner + 1 buffet breakfast",
+        "Happy hour: Buy 2 get 1 Free 1-night stay on Cozy Bay Grand private room with full A/C",
+        "Morning Tai-chi Exercise Sunset Party & Cooking Class Tea, coffee at breakfast Welcome drink Complimentary 1 bottled water/person on bus & 1 bottled water/person on cruise"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trên tàu",
+        "Tip cho hướng dẫn viên, thủy thủ đoàn, lái xe",
+        "Chi phí cá nhân",
+        "Dịch vụ không đề cập trong mục bao gồm"
+      ],
+      "servicesExcludedEn": [
+        "Beverages & personal drinks",
+        "Tips for guide, crew, or driver",
+        "Personal expenses",
+        "Services not clearly mentioned",
+        "Holiday surcharge (if applicable)",
+        "HOLIDAY SURCHARGES",
+        "An additional VND 400,000 per person applies for departures on December 24 and December 31.",
+        "An additional VND 300,000 per person applies during the Lunar New Year holiday (Lunar December 30 and Lunar January 1–3).",
+        "An additional VND 200,000 per person applies for departures on April 30, May 1, and September 2."
+      ],
+      "serviceNote": "Có thực đơn món Ấn Độ (Indian Menu) và thực đơn ăn chay (Vegetarian Menu) miễn phí khi đăng ký trước.",
+      "serviceNoteEn": "Indian Menu and Vegetarian Menu available complimentary upon advance request.",
+      "offers": [
+        "Phòng ngủ sang trọng ngắm vịnh",
+        "Buffet hải sản + Menu Ấn Độ",
+        "Chèo Kayak & Câu mực đêm"
+      ],
+      "offersEn": [
+        "Panoramic bay-view cabins",
+        "Seafood buffet & Indian menu",
+        "Kayaking & night squid fishing"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo hạng Cabin (Deluxe T1, Balcony T2, Terrace)",
+        "baseRateEn": "Custom quote based on Cabin tier (Deluxe, Balcony, Terrace)",
+        "options": [
+          {
+            "name": "Hạng phòng Deluxe Double / Twin (Tầng 1)",
+            "nameEn": "Deluxe Double / Twin Cabin (1st Floor)",
+            "price": "Tiêu chuẩn",
+            "priceEn": "Standard"
+          },
+          {
+            "name": "Hạng phòng Deluxe Balcony (Tầng 2 có ban công riêng)",
+            "nameEn": "Deluxe Balcony Cabin (2nd Floor private balcony)",
+            "price": "Theo yêu cầu",
+            "priceEn": "On request"
+          },
+          {
+            "name": "Hạng phòng Premium Terrace (Tầng 2 sân hiên ngắm vịnh)",
+            "nameEn": "Premium Terrace Cabin (2nd Floor private terrace)",
+            "price": "Theo yêu cầu",
+            "priceEn": "On request"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ / Ăn chay",
+            "nameEn": "Indian Set Menu or Vegetarian option",
+            "price": "Miễn phí chọn trước",
+            "priceEn": "Free upon request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu đêm Giáng sinh (24/12) & Đón năm mới (31/12)",
+            "nameEn": "Christmas Eve (Dec 24) & New Year's Eve (Dec 31) surcharge",
+            "price": "400.000đ / khách",
+            "priceEn": "400,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "300.000đ / khách",
+            "priceEn": "300,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9)",
+            "nameEn": "National holidays (Apr 30, May 1, Sep 2)",
+            "price": "200.000đ / khách",
+            "priceEn": "200,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung bố mẹ; tối đa 1 trẻ/2 người lớn; trẻ thứ 2 tính 50%)",
+            "descEn": "Free (sharing bed with parents; max 1 child/2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá người lớn (ngủ chung bố mẹ, hưởng tiêu chuẩn ăn riêng)",
+            "descEn": "75% of adult fare (sharing bed with parents, separate meal)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-cozy-bay-premium-1d",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Cozy Bay Premium – Vịnh Hạ Long Tuyến 2 (1 Ngày)",
+      "nameEn": "Cozy Bay Premium 5★ Cruise – Halong Bay Route 2 (1 Day)",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_1.jpg",
+          "alt": "Siêu du thuyền Cozy Bay Premium 5 sao",
+          "altEn": "Cozy Bay Premium 5-star yacht"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_3.jpg",
+          "alt": "Sundeck tiệc hoàng hôn lãng mạn",
+          "altEn": "Sundeck sunset party"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_6.jpg",
+          "alt": "Nhà hàng buffet sang trọng trên tàu",
+          "altEn": "Luxury dining restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/buffet-lunch/HALONG_DAYTRIP_menu.jpg",
+          "alt": "Thực đơn Buffet hải sản Hạ Long",
+          "altEn": "Halong seafood buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ riêng biệt",
+          "altEn": "Authentic Indian set menu"
+        }
+      ],
+      "video": "img/tours/halong-cozy-bay-premium/video/Cozy_Bay_Cruise_45mb.mp4",
+      "cardLine": "Hành trình 1 ngày trên siêu du thuyền Cozy Bay Premium 5 sao: khám phá Hang Sửng Sốt, chèo kayak Hang Luồn, tắm biển đảo Titov, buffet hải sản và tiệc hoàng hôn trên sundeck.",
+      "cardLineEn": "A full-day luxury experience aboard the 5-star Cozy Bay Premium Cruise: explore Sung Sot Cave, kayak Luon Cave, Titov Island beach, seafood buffet, and sunset party.",
+      "description": [
+        "DU THUYỀN 5-SAO COZY BAY PREMIUM CRUISE",
+        "THĂM QUAN TUYẾN 2: HANG SỬNG SỐT - ĐẢO TITOV - CHÈO KAYAK HOẶC ĐỎ TAY TẠI HANG LUỒN",
+        "Phương tiện di chuyển: Xe thường (30-32 chỗ) / Xe Limousine (17-22 chỗ)",
+        "Từ trên cao nhìn xuống, Vịnh Hạ Long như một bức tranh khổng lồ vô cùng sống động. Ði giữa Hạ Long, ta ngỡ như lạc vào một thế giới cổ tích bị hoá đá, đảo thì giống hình một người đang đứng hướng về đất liền (hòn Ðầu Người), đảo thì giống như một con rồng đang bay lượn trên mặt nước (hòn Rồng), đảo thì giống như một ông lão đang ngồi câu cá (hòn Ông Lã Vọng), hòn Cánh Buồm, hòn Cặp Gà, hòn Lư Hương..."
+      ],
+      "descriptionEn": [
+        "COZY BAY PREMIUM HALONG BAY 5-STAR DAY CRUISE",
+        "ROUTE 2: SURPRISING CAVE - TITOV ISLAND - KAYAKING/BAMBOO BOAT IN LUON CAVE",
+        "Duration: 1 Day | Transportation: Limousine Bus/Shuttle Bus"
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00 – 11:15",
+          "title": "LÊN DU THUYỀN",
+          "text": "LÊN DU THUYỀN Đến Cảng Tuần Châu và làm thủ tục lên du thuyền. Chào mừng quý khách lên tàu."
+        },
+        {
+          "time": "11:30",
+          "title": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN",
+          "text": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN Quý khách dùng bữa trưa buffet trên tàu trong khi bắt đầu hành trình tham quan kéo dài khoảng 6,5 giờ theo tuyến tham quan số 2 – nổi tiếng với những cảnh quan ngoạn mục, các đảo đá và núi đá vôi mang nhiều hình thù độc đáo được người dân địa phương đặt tên theo trí tưởng tượng. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ với lựa chọn ăn chay và không chay (có thịt). Khách đăng ký thực đơn bữa trưa kiểu Ấn Độ sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "THAM QUAN HANG SỬNG SỐT",
+          "text": "THAM QUAN HANG SỬNG SỐT Khám phá Hang Sửng Sốt – một trong những hang động đẹp nhất Vịnh Hạ Long với vô số nhũ đá và măng đá có hình dạng độc đáo, gợi liên tưởng đến nhiều sinh vật biển."
+        },
+        {
+          "time": "14:15 – 14:30",
+          "title": "KHÁM PHÁ HANG LUỒN",
+          "text": "KHÁM PHÁ HANG LUỒN Trải nghiệm chèo kayak hoặc đi thuyền nan để khám phá vẻ đẹp yên bình của đầm nước bên trong Hang Luồn."
+        },
+        {
+          "time": "15:15",
+          "title": "THAM QUAN ĐẢO TITOP",
+          "text": "THAM QUAN ĐẢO TITOP Đến Đảo Titop, nơi có bãi biển cát trắng tuyệt đẹp. Quý khách có thể tắm biển hoặc leo lên đỉnh Titop để chiêm ngưỡng toàn cảnh Vịnh Hạ Long từ trên cao."
+        },
+        {
+          "time": "16:15 – 16:30",
+          "title": "TIỆC HOÀNG HÔN TRÊN SUndeck",
+          "text": "TIỆC HOÀNG HÔN TRÊN SUndeck Du thuyền quay trở về Cảng Tuần Châu. Trong lúc tàu di chuyển, quý khách có thể thư giãn trên boong tàu, tham gia tiệc hoàng hôn với trà, bánh ngọt, nghe nhạc, tắm nắng và tận hưởng khung cảnh thiên nhiên tuyệt đẹp của Vịnh Hạ Long."
+        },
+        {
+          "time": "17:45",
+          "title": "LÊN XE VỀ HÀ NỘI",
+          "text": "LÊN XE VỀ HÀ NỘI Tàu cập bến, quý khách lên xe trở về Hà Nội theo tuyến cao tốc. Trên đường sẽ dừng nghỉ khoảng 20–30 phút."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH TẠI KHÁCH SẠN",
+          "text": "TRẢ KHÁCH TẠI KHÁCH SẠN Về đến khách sạn trong khu vực Phố Cổ Hà Nội. Kết thúc chương trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "CHECK IN CRUISE",
+          "text": "CHECK IN CRUISE Arrive at Tuan Chau Harbor. Welcome to our Cruise."
+        },
+        {
+          "time": "11:30",
+          "title": "BUFFET LUNCH ON BOARD",
+          "text": "BUFFET LUNCH ON BOARD Have a Buffet Lunch. We will take you on a 6.5-hours journey via route 2, which is renowned for its striking passages; uninhabited islets and outcrops have been given imaginative names by the locals due to their perceived shapes while having lunch on cruise. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "VISITING SURPRISING CAVE",
+          "text": "VISITING SURPRISING CAVE Visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea life."
+        },
+        {
+          "time": "14:15-14:30",
+          "title": "EXPLORE LUON CAVE",
+          "text": "EXPLORE LUON CAVE Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "15:15",
+          "title": "VISITING TITOV ISLAND",
+          "text": "VISITING TITOV ISLAND Visit Titov Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "16:15-16:30",
+          "title": "SUNSET PARTY ON SUNDECK",
+          "text": "SUNSET PARTY ON SUNDECK Cruising back to Tuan Chau harbour. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "17:45",
+          "title": "GET BACK ON BUS",
+          "text": "GET BACK ON BUS Arrive at Harbor then get on bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21:00",
+          "title": "HOTEL DROP-OFF",
+          "text": "HOTEL DROP-OFF Arrive at the hotel in Hanoi Old Quarter. The trip ends."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Limousine hoặc xe Shuttle đưa đón khứ hồi theo tuyến cao tốc.",
+        "Đồ uống chào mừng.",
+        "Tham quan Hang Sửng Sốt.",
+        "Chèo kayak hoặc đi thuyền nan tại Hang Luồn.",
+        "Tắm biển và leo núi tại Đảo Titop.",
+        "Sử dụng bể sục Jacuzzi và khăn tắm.",
+        "Vé tham quan theo chương trình.",
+        "Hướng dẫn viên tiếng Anh.",
+        "chai nước trên xe.",
+        "Bữa trưa buffet với các món ăn chay và không chay.",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Tiệc hoàng hôn gồm trà, bánh ngọt, bánh phồng tôm, trái cây tươi và các món ăn nhẹ khác."
+      ],
+      "servicesIncludedEn": [
+        "Expressway Transfer Round Trip by Limousine Bus / Shuttle bus",
+        "Welcome drink",
+        "Visiting Surprising Cave",
+        "Kayaking or Bamboo Boat at Luon cave",
+        "Swimming & hiking at Titov island",
+        "Jacuzzi & towel",
+        "Entrance & sightseeing fees",
+        "English Speaking Tour Guide",
+        "1 Bottle of water on the Bus",
+        "Buffet Lunch with non/vegetarian food",
+        "The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet.",
+        "Sunset Party: Tea, Cakes, Shrimp Chips, Fresh Fruits, …",
+        "Holiday surcharges"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT.",
+        "Đồ uống.",
+        "Chi phí cá nhân.",
+        "Tiền tip cho hướng dẫn viên, lái xe và thủy thủ đoàn.",
+        "Các dịch vụ không được đề cập trong mục \"Giá tour bao gồm\"."
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Personal expenses",
+        "Tips for guide, driver, crews"
+      ],
+      "serviceNote": "Khách lựa chọn thực đơn Ấn Độ (Indian Set Menu) vui lòng thông báo trước khi khởi hành.",
+      "serviceNoteEn": "Guests selecting the Indian Set Menu please inform in advance before departure.",
+      "offers": [
+        "Hang Sửng Sốt & Đảo Titov",
+        "Buffet hải sản + Thực đơn Ấn",
+        "Tiệc hoàng hôn Sunset Party"
+      ],
+      "offersEn": [
+        "Sung Sot Cave & Titov Island",
+        "Seafood buffet & Indian menu",
+        "Sundeck Sunset Party"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe đưa đón",
+        "baseRateEn": "All-inclusive quote with 5-star cruise & transfer",
+        "options": [
+          {
+            "name": "Nâng cấp xe đưa đón Thaco Limousine cao cấp",
+            "nameEn": "Upgrade to Thaco Limousine transfer",
+            "price": "+100.000đ / khách",
+            "priceEn": "+100,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ (Indian Set Menu)",
+            "nameEn": "Indian Set Menu meal option",
+            "price": "Miễn phí đăng ký trước",
+            "priceEn": "Complimentary on request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 0–4 tuổi trên xe Limousine",
+            "nameEn": "Separate seat for child 0–4 on Limousine",
+            "price": "300.000đ / trẻ",
+            "priceEn": "300,000 VND / child"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 0–4 tuổi trên xe Shuttle Bus",
+            "nameEn": "Separate seat for child 0–4 on Shuttle Bus",
+            "price": "200.000đ / trẻ",
+            "priceEn": "200,000 VND / child"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–4 tuổi",
+            "nameEn": "Children 0–4 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child accompanied by 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, dịch vụ như người lớn)",
+            "descEn": "75% of tour price (separate meal, full adult services)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-sea-lion-premium-1d",
+      "destination": "ha-long",
+      "featured": false,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Sea Lion Premium – Vịnh Hạ Long Tuyến 2 (1 Ngày)",
+      "nameEn": "Sea Lion Premium 5★ Cruise – Halong Bay Classic Route 2 (1 Day)",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_1.jpg",
+          "alt": "Du thuyền Sea Lion Premium 5 sao",
+          "altEn": "Sea Lion Premium 5-star yacht"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_.jpg",
+          "alt": "Toàn cảnh du thuyền Sea Lion trên vịnh",
+          "altEn": "Panoramic Sea Lion cruise view"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/buffet-lunch/HALONG_DAYTRIP_menu.jpg",
+          "alt": "Thực đơn buffet trưa trên tàu",
+          "altEn": "Buffet lunch onboard menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ tiêu chuẩn",
+          "altEn": "Indian set menu"
+        }
+      ],
+      "cardLine": "Hành trình 1 ngày cùng du thuyền Sea Lion Premium 5 sao qua các danh thắng kỳ vĩ nhất vịnh Hạ Long: hang Sửng Sốt kỳ ảo, chèo thuyền Hang Luồn, bơi lội đảo Titov.",
+      "cardLineEn": "A full-day 5-star voyage on Sea Lion Premium Cruise through Halong's top landmarks: magical Sung Sot Cave, Luon Cave kayaking, and Titov Island swimming.",
+      "description": [
+        "DU THUYỀN 5-SAO SEA LION PREMIUM CRUISE",
+        "THĂM QUAN TUYẾN 2: HANG SỬNG SỐT - ĐẢO TITOV - CHÈO KAYAK HOẶC ĐỎ TAY TẠI HANG LUỒN",
+        "Phương tiện di chuyển: Xe thường (30-32 chỗ) / Xe Limousine (17-22 chỗ)",
+        "Từ trên cao nhìn xuống, Vịnh Hạ Long như một bức tranh khổng lồ vô cùng sống động. Ði giữa Hạ Long, ta ngỡ như lạc vào một thế giới cổ tích bị hoá đá, đảo thì giống hình một người đang đứng hướng về đất liền (hòn Ðầu Người), đảo thì giống như một con rồng đang bay lượn trên mặt nước (hòn Rồng), đảo thì giống như một ông lão đang ngồi câu cá (hòn Ông Lã Vọng), hòn Cánh Buồm, hòn Cặp Gà, hòn Lư Hương…"
+      ],
+      "descriptionEn": [
+        "SEA LION PREMIUM HALONG BAY 5-STAR DAY CRUISE",
+        "ROUTE 2: SURPRISING CAVE - TITOV ISLAND - KAYAKING/BAMBOO BOAT IN LUON CAVE",
+        "Duration: 1 Day | Transportation: Limousine Bus/Shuttle Bus"
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00 – 11:15",
+          "title": "LÊN DU THUYỀN",
+          "text": "LÊN DU THUYỀN Đến Cảng Tuần Châu và làm thủ tục lên du thuyền. Chào mừng quý khách lên tàu."
+        },
+        {
+          "time": "11:30",
+          "title": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN",
+          "text": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN Quý khách dùng bữa trưa buffet trên tàu trong khi bắt đầu hành trình tham quan kéo dài khoảng 6,5 giờ theo tuyến tham quan số 2 – nổi tiếng với những cảnh quan ngoạn mục, các đảo đá và núi đá vôi mang nhiều hình thù độc đáo được người dân địa phương đặt tên theo trí tưởng tượng. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ với lựa chọn ăn chay và không chay (có thịt). Khách đăng ký thực đơn bữa trưa kiểu Ấn Độ sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "THAM QUAN HANG SỬNG SỐT",
+          "text": "THAM QUAN HANG SỬNG SỐT Khám phá Hang Sửng Sốt – một trong những hang động đẹp nhất Vịnh Hạ Long với vô số nhũ đá và măng đá có hình dạng độc đáo, gợi liên tưởng đến nhiều sinh vật biển."
+        },
+        {
+          "time": "14:15 – 14:30",
+          "title": "KHÁM PHÁ HANG LUỒN",
+          "text": "KHÁM PHÁ HANG LUỒN Trải nghiệm chèo kayak hoặc đi thuyền nan để khám phá vẻ đẹp yên bình của đầm nước bên trong Hang Luồn."
+        },
+        {
+          "time": "15:15",
+          "title": "THAM QUAN ĐẢO TITOP",
+          "text": "THAM QUAN ĐẢO TITOP Đến Đảo Titop, nơi có bãi biển cát trắng tuyệt đẹp. Quý khách có thể tắm biển hoặc leo lên đỉnh Titop để chiêm ngưỡng toàn cảnh Vịnh Hạ Long từ trên cao."
+        },
+        {
+          "time": "16:15 – 16:30",
+          "title": "TIỆC HOÀNG HÔN TRÊN SUndeck",
+          "text": "TIỆC HOÀNG HÔN TRÊN SUndeck Du thuyền quay trở về Cảng Tuần Châu. Trong lúc tàu di chuyển, quý khách có thể thư giãn trên boong tàu, tham gia tiệc hoàng hôn với trà, bánh ngọt, nghe nhạc, tắm nắng và tận hưởng khung cảnh thiên nhiên tuyệt đẹp của Vịnh Hạ Long."
+        },
+        {
+          "time": "17:45",
+          "title": "LÊN XE VỀ HÀ NỘI",
+          "text": "LÊN XE VỀ HÀ NỘI Tàu cập bến, quý khách lên xe trở về Hà Nội theo tuyến cao tốc. Trên đường sẽ dừng nghỉ khoảng 20–30 phút."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH TẠI KHÁCH SẠN",
+          "text": "TRẢ KHÁCH TẠI KHÁCH SẠN Về đến khách sạn trong khu vực Phố Cổ Hà Nội. Kết thúc chương trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:07",
+          "title": "10–07:45",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points:"
+        },
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "CHECK IN CRUISE",
+          "text": "CHECK IN CRUISE Arrive at Tuan Chau Harbor. Welcome to our Cruise."
+        },
+        {
+          "time": "11:30",
+          "title": "BUFFET LUNCH ON BOARD",
+          "text": "BUFFET LUNCH ON BOARD Have a Buffet Lunch. We will take you on a 6.5-hours journey via route 2, which is renowned for its striking passages; uninhabited islets and outcrops have been given imaginative names by the locals due to their perceived shapes while having lunch on cruise. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "VISITING SURPRISING CAVE",
+          "text": "VISITING SURPRISING CAVE Visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea life."
+        },
+        {
+          "time": "14:15-14:30",
+          "title": "EXPLORE LUON CAVE",
+          "text": "EXPLORE LUON CAVE Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "15:15",
+          "title": "VISITING TITOV ISLAND",
+          "text": "VISITING TITOV ISLAND Visit Titov Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "16:15-16:30",
+          "title": "SUNSET PARTY ON SUNDECK",
+          "text": "SUNSET PARTY ON SUNDECK Cruising back to Tuan Chau harbour. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "17:45",
+          "title": "GET BACK ON BUS",
+          "text": "GET BACK ON BUS Arrive at Harbor then get on bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21:00",
+          "title": "HOTEL DROP-OFF",
+          "text": "HOTEL DROP-OFF Arrive at the hotel in Hanoi Old Quarter. The trip ends."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Limousine hoặc xe Shuttle đưa đón khứ hồi theo tuyến cao tốc.",
+        "Đồ uống chào mừng.",
+        "Tham quan Hang Sửng Sốt.",
+        "Chèo kayak hoặc đi thuyền nan tại Hang Luồn.",
+        "Tắm biển và leo núi tại Đảo Titop.",
+        "Sử dụng bể sục Jacuzzi và khăn tắm.",
+        "Vé tham quan theo chương trình.",
+        "Hướng dẫn viên tiếng Anh.",
+        "chai nước trên xe.",
+        "Bữa trưa buffet với các món ăn chay và không chay.",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Tiệc hoàng hôn gồm trà, bánh ngọt, bánh phồng tôm, trái cây tươi và các món ăn nhẹ khác."
+      ],
+      "servicesIncludedEn": [
+        "Expressway Transfer Round Trip by Limousine Bus / Shuttle bus",
+        "Welcome drink",
+        "Visiting Surprising Cave",
+        "Kayaking or Bamboo Boat at Luon cave",
+        "Swimming & hiking at Titov island",
+        "Jacuzzi & towel",
+        "Entrance & sightseeing fees",
+        "English Speaking Tour Guide",
+        "1 Bottle of water on the Bus",
+        "Buffet Lunch with non/vegetarian food",
+        "The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet.",
+        "Sunset Party: Tea, Cakes, Shrimp Chips, Fresh Fruits, …",
+        "Holiday surcharges"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT.",
+        "Đồ uống.",
+        "Chi phí cá nhân.",
+        "Tiền tip cho hướng dẫn viên, lái xe và thủy thủ đoàn.",
+        "Các dịch vụ không được đề cập trong mục \"Giá tour bao gồm\"."
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Personal expenses",
+        "Tips for guide, driver, crews"
+      ],
+      "serviceNote": "Hỗ trợ đoàn khách có nhu cầu ẩm thực chay, Halal hoặc Ấn Độ.",
+      "serviceNoteEn": "Vegetarian, Halal and Indian meal options supported upon booking.",
+      "offers": [
+        "Hang Sửng Sốt & Hang Luồn",
+        "Bữa trưa buffet hải sản phong phú",
+        "Đảo Titov & ngắm toàn cảnh"
+      ],
+      "offersEn": [
+        "Sung Sot Cave & Luon Cave",
+        "Abundant seafood buffet",
+        "Titov Island panoramic view"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe đưa đón",
+        "baseRateEn": "All-inclusive quote with 5-star cruise & transfer",
+        "options": [
+          {
+            "name": "Nâng cấp xe đưa đón Thaco Limousine cao cấp",
+            "nameEn": "Upgrade to Thaco Limousine transfer",
+            "price": "+100.000đ / khách",
+            "priceEn": "+100,000 VND / guest"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–4 tuổi",
+            "nameEn": "Children 0–4 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child accompanied by 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, dịch vụ như người lớn)",
+            "descEn": "75% of tour price (separate meal, full adult services)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-lan-ha-tropical-cruise-1d",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Tropical Cruise – Vịnh Lan Hạ & Đảo Cát Bà (7 Tiếng)",
+      "nameEn": "Tropical Cruise 5★ – Lan Ha Bay & Cat Ba Island Odyssey (7 Hours)",
+      "durationLabel": "1 ngày (7 tiếng)",
+      "durationLabelEn": "1 day (7 hours)",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+          "alt": "Du thuyền Tropical Cruise 5 sao trên vịnh Lan Hạ",
+          "altEn": "5-star Tropical Cruise in Lan Ha Bay"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_04_.jpg",
+          "alt": "Bể sục Jacuzzi và máng trượt nước ngoài trời",
+          "altEn": "Onboard Jacuzzi and water slide"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_07.jpg",
+          "alt": "Chèo kayak giữa làn nước xanh biếc Lan Hạ",
+          "altEn": "Kayaking in turquoise Lan Ha waters"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_12.jpg",
+          "alt": "Xe điện xuyên rừng quốc gia Cát Bà",
+          "altEn": "Electric cart in Cat Ba national park"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/buffet-lunch/TROPICAL_DAYTRIP_menu_.jpg",
+          "alt": "Thực đơn Buffet hải sản Cát Bà",
+          "altEn": "Cat Ba seafood buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ riêng",
+          "altEn": "Dedicated Indian set menu"
+        }
+      ],
+      "video": "img/tours/lanha-tropical-cruise/video/TROPICAL_CRUISE_2.mp4",
+      "cardLine": "Chuyến hải trình 7 tiếng độc bản trên vịnh Lan Hạ và đảo Cát Bà: đi xe điện xuyên rừng quốc gia, khám phá Động Trung Trang, bể sục Jacuzzi, máng trượt nước và kayak giữa biển xanh.",
+      "cardLineEn": "An exclusive 7-hour odyssey across Lan Ha Bay and Cat Ba Island: electric jungle cart, Trung Trang Cave, onboard Jacuzzi, water slide, and ocean kayaking.",
+      "description": [
+        "Giới thiệu Vịnh Lan Hạ & Đảo Cát Bà :",
+        "Hành trình “ĐỘC BẢN”, tham quan Vịnh Lan Hạ - Đảo Cát Bà 1 Ngày – 7 tiếng trên du thuyền 5 sao – TROPICAL CRUISE.",
+        "Không chỉ là một chuyến tham quan, đây là hành trình nghỉ dưỡng đẳng cấp giữa thiên nhiên – nơi du khách được tận hưởng cảm giác thư giãn tuyệt đối trên du thuyền sang trọng, kết hợp trải nghiệm chưa từng có: khám phá đảo Cát Bà bằng xe điện xuyên rừng, thăm hang động kỳ vĩ, chèo kayak giữa vịnh Lan Hạ hoang sơ, bơi lội – cầu trượt nước – bể sục Jacuzzi trên boong tàu và thưởng thức tiệc hoàng hôn đầy lãng mạn.",
+        "Đây không chỉ là một tour, mà là chuyến du ngoạn đỉnh cao dành riêng cho những ai yêu thích sự khác biệt.",
+        "Trải nghiệm ngồi xe điện xuyên rừng đảo Cát Bà – Một trong những cung đường xuyên rừng đẹp nhất Việt Nam.",
+        "Tham quan Hang Động Trung Trang – Hang động kỳ ảo và đẹp nhất đảo Cát Bà.",
+        "Tham quan Bảo Tàng thiên nhiên Vườn Quốc Gia Cát Bà – Nơi trưng bày các hiện vật giá trị và là bằng chứng sống giúp chúng ta hiểu rõ hơn về các loại động vật quý hiếm của vườn quốc gia.",
+        "Chèo xuồng Kayak giữa làn nước trong xanh, vẻ đẹp hoang sơ, tĩnh lặng của Vịnh Lan Hạ chạm đến trái tim của du khách.",
+        "Thỏa thích ngâm mình trong bể Jacuzzi, bơi lội tự do, trượt nước, và vui chơi tại khu phao nổi khổng lồ giữa vịnh.",
+        "Thưởng thức tiệc Sunset Party dưới ánh hoàng hôn lãng mạn cùng điệu nhạc, hòa mình vào thiên nhiên, đất trời trong khi tàu quay về bến."
+      ],
+      "descriptionEn": [
+        "LAN HA BAY & CAT BA ISLAND DAY TOUR",
+        "The “UNIQUE” Journey – Lan Ha Bay & Cat Ba Island 1-Day Tour – 7 Hours on a 5-Star Cruise – TROPICAL CRUISE",
+        "More than just a sightseeing trip, this is a luxury retreat amidst nature – where you can indulge in absolute relaxation on an elegant cruise, combined with exciting activities and memorable experiences while exploring the beauty of Lan Ha Bay and Cat Ba Island.",
+        "This is not just a tour but a premium voyage crafted for those who seek something truly different.",
+        "Highlight Tour Lan Ha Bay– Cat Ba Island 1 day:",
+        "Experience an electric car ride through Cat Ba’s Forest – one of the most beautiful jungle routes in Vietnam.",
+        "Visit Trung Trang Cave – the most magnificent and mysterious cave on Cat Ba Island.",
+        "Explore the Cat Ba National Park Natural History Museum – home to valuable exhibits and living evidence of the island’s rare flora and fauna specimens.",
+        "Paddle a Kayak on the emerald waters of Lan Ha Bay, where the pristine and tranquil beauty touches every traveler’s heart.",
+        "Relax in the Jacuzzi, enjoy free swimming, slide into the sea, and have fun at the giant inflatable playground on the bay.",
+        "Join a Sunset Party under the romantic glow of twilight, with music, wine, and nature blending seamlessly as the cruise comes back to the harbor."
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH"
+        },
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "BẾN CẢNG TUẦN CHÂU",
+          "text": "BẾN CẢNG TUẦN CHÂU Du khách đến bến cảng Tuần Châu – Check-in tàu Tropical, thưởng thức đồ uống chào mừng."
+        },
+        {
+          "time": "11:20",
+          "title": "ĂN TRƯA BUFFET",
+          "text": "ĂN TRƯA BUFFET Thưởng thức bữa trưa buffet 5 sao trên tàu với thực đơn hải sản và ẩm thực đa dạng, phong phú trong khi tàu di chuyển đưa du khách tham quan Vịnh Lan Hạ - Đảo Cát Bà. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ tại bàn với lựa chọn ăn chay hoặc không chay (có thịt). Khách đăng ký thực đơn này sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:15",
+          "title": "ĐẢO CÁT BÀ – XE ĐIỆN XUYÊN RỪNG",
+          "text": "ĐẢO CÁT BÀ – XE ĐIỆN XUYÊN RỪNG Tàu đến đảo Cát Bà, du khách ngồi xe điện để trải nghiệm một trong những cung đường xuyên rừng đẹp nhất Việt Nam, cảnh vật núi non hùng vĩ, mùa hoa rừng nở hai ven đường, du khách sẽ có cơ hội ngắm nhìn những đàn bướm rừng tung tăng bay lượn rợp cả một vùng trời."
+        },
+        {
+          "time": "12:45",
+          "title": "ĐỘNG TRUNG TRANG",
+          "text": "ĐỘNG TRUNG TRANG Du khách đến tham quan Động Trung Trang – hang động kỳ ảo và đẹp nhất đảo Cát Bà. Với hệ thống nhũ đá, măng đá hàng triệu năm, nơi đây được ví như bảo tàng địa chất sống."
+        },
+        {
+          "time": "13:30",
+          "title": "BẢO TÀNG THIÊN NHIÊN VƯỜN QUỐC GIA CÁT BÀ",
+          "text": "BẢO TÀNG THIÊN NHIÊN VƯỜN QUỐC GIA CÁT BÀ Xe điện tiếp tục đưa du khách tới Vườn Quốc Gia Cát Bà – Khu dự trữ sinh quyển của thế giới. Tại đây, du khách sẽ có cơ hội chụp ảnh và tham quan Bảo Tàng Thiên Nhiên Vườn Quốc Gia Cát Bà, nơi trưng bày những hiện vật quý giá, giúp du khách hiểu rõ hơn về các loài sinh vật quý hiếm và kho báu thiên nhiên của hòn đảo."
+        },
+        {
+          "time": "14:00",
+          "title": "XE ĐIỆN XUYÊN RỪNG",
+          "text": "XE ĐIỆN XUYÊN RỪNG Du khách lên xe điện trở lại tàu để tiếp tục hành trình tham quan vịnh Lan Hạ."
+        },
+        {
+          "time": "14:30",
+          "title": "VỊNH LAN HẠ",
+          "text": "VỊNH LAN HẠ Tàu đưa du khách đến khu vực Trà Báu - vùng lõi di sản Vịnh Lan Hạ để ngắm nhìn và chụp ảnh những đảo núi đá vôi hùng vĩ dưới làn nước trong xanh, giống như một bức tranh thủy mặc giữa chốn trần gian."
+        },
+        {
+          "time": "15:15",
+          "title": "KHU VỰC TRÀ BÁU",
+          "text": "KHU VỰC TRÀ BÁU Du khách trải nghiệm các hoạt động độc đáo và thú vị trên Vịnh Lan Hạ - Khu vực Trà Báu: - Chèo xuồng kayak len lỏi qua các vách núi, hang nhỏ đầy kỳ thú. - Tự do bơi lội, thả mình vào làn nước trong xanh trên vịnh. - Trải nghiệm cảm giác mạnh bằng cách chơi cầu trượt nước. - Tận hưởng niềm vui bất tận với bể bơi phao khí khổng lồ trên biển."
+        },
+        {
+          "time": "16:45",
+          "title": "TIỆC HOÀNG HÔN",
+          "text": "TIỆC HOÀNG HÔN Du khách trở lại tàu, thư giãn trong bể sục Jacuzzi trên boong tàu. Khép lại ngày tuyệt vời với tiệc Sunset Party: Nước hoa quả, trà, hoa quả, bánh ngọt, âm nhạc vang lên, cùng nhau nhảy theo điệu nhạc trong không khí hân hoan và hoàng hôn dần buông xuống đầy lãng mạn trên Vịnh Lan Hạ trong khi tàu hành trình quay về bến."
+        },
+        {
+          "time": "18:00",
+          "title": "BẾN CẢNG TUẦN CHÂU",
+          "text": "BẾN CẢNG TUẦN CHÂU Tàu về bến Tuần Châu. Xe đưa Quý khách trở lại Hà Nội."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH",
+          "text": "TRẢ KHÁCH Xe về tới khách sạn tại Phố Cổ, kết thúc hành trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "TUAN CHAU HARBOR",
+          "text": "TUAN CHAU HARBOR Arrive at Tuan Chau Harbor – check in to the Tropical Cruise. You will be greeted with a refreshing welcome drink."
+        },
+        {
+          "time": "11:20",
+          "title": "BUFFET LUNCH",
+          "text": "BUFFET LUNCH Enjoy a 5-star buffet lunch on board, featuring a wide variety of fresh seafood and delicacies, while the cruise sails through Lan Ha Bay – Cat Ba Island. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:15",
+          "title": "CAT BA ISLAND – ELECTRIC CAR",
+          "text": "CAT BA ISLAND – ELECTRIC CAR Arrive at Cat Ba Island. Take an electric car ride along one of the most scenic forest roads in Vietnam."
+        },
+        {
+          "time": "12:45",
+          "title": "TRUNG TRANG CAVE",
+          "text": "TRUNG TRANG CAVE Visit Trung Trang Cave – the most magnificent cave on Cat Ba Island. With millions of years of stalactites and stalagmites, the cave is often described as a “living geological museum.”"
+        },
+        {
+          "time": "13:30",
+          "title": "CAT BA NATIONAL PARK NATUARAL HISTORY MUSEUM",
+          "text": "CAT BA NATIONAL PARK NATUARAL HISTORY MUSEUM Continue by electric car to Cat Ba National Park – a UNESCO World Biosphere Reserve. You can have chance to take photos and visit the Natural History Museum, where valuable exhibits provide deeper insights into the rare species and natural treasures of the island."
+        },
+        {
+          "time": "14:00",
+          "title": "ELECTRIC CAR",
+          "text": "ELECTRIC CAR Return by electric car to the cruise and continue exploring Lan Ha Bay."
+        },
+        {
+          "time": "14:30",
+          "title": "LAN HA BAY",
+          "text": "LAN HA BAY The cruise sails deeper into Tra Bau area - the heart of Lan Ha Bay, where towering limestone mountains rise from emerald waters – a landscape resembling a breathtaking ink-painting masterpiece."
+        },
+        {
+          "time": "15:15",
+          "title": "TRA BAU AREA",
+          "text": "TRA BAU AREA Activities on Lan Ha Bay – Tra Bau Area Kayak through limestone cliffs and mysterious hidden caves. Swim freely in the crystal-clear waters. Slide down the water slide for a thrilling experience. Have endless fun with the giant floating inflatable playground on the bay."
+        },
+        {
+          "time": "16:45",
+          "title": "SUNSET PARTY",
+          "text": "SUNSET PARTY Return to the cruise and relax in the Jacuzzi on the sundeck. End your day with a lively Sunset Party: Juice, Tea, Fresh Fruits, Sweet Cakes, Music, and Dancing as the Sun sets romantically over Lan Ha Bay, while the cruise comes back to the Harbor."
+        },
+        {
+          "time": "18:00",
+          "title": "TUAN CHAU HARBOR",
+          "text": "TUAN CHAU HARBOR The cruise arrives at Tuan Chau Harbor. Transfer back to Hanoi."
+        },
+        {
+          "time": "21:00",
+          "title": "DROP OFF",
+          "text": "DROP OFF Arrive at your hotel in the Old Quarter. End of tour. INCLUSSIONS: Admission to attractions: Trung Trang Cave, Cat Ba National Park Museum, Lan Ha Bay English / Vietnamese-speaking guide Buffet Lunch on the Cruise The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet. Round-trip transfers to and from your hotel in Hanoi Old Quarter or Hanoi Opera House Kayaking, swimming experience Sunset party Welcome drink One bottle of water/person on the bus Kayaking, swimming pool, Jacuzzi, water slide Electric car rides Entrance tickets Freshwater shower Giant inflatable swimming pool (subject to operational conditions) EXCLUSSIONS: Other personal expenses Tips and gratuities Drinks at bar Drinks on meal Holiday surcharges"
+        }
+      ],
+      "servicesIncluded": [
+        "Vé tham quan các điểm: Động Trung Trang, Bảo Tàng Thiên Nhiên Vườn Quốc gia Cát Bà, Vịnh Lan Hạ",
+        "Hướng dẫn viên nói tiếng Anh/Việt",
+        "Bữa trưa Buffet trên du thuyền",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Xe đưa đón khứ hồi từ/đến khách sạn tại Phố Cổ Hà Nội hoặc Nhà Hát Lớn",
+        "Trải nghiệm chèo kayak, bơi lội",
+        "Tiệc hoàng hôn (Sunset Party)",
+        "Đồ uống chào mừng",
+        "chai nước/người trên xe",
+        "Chèo kayak, bể bơi, Jacuzzi, cầu trượt nước",
+        "Xe điện tham quan đảo Cát Bà",
+        "Vé thắng cảnh",
+        "Tắm nước ngọt trên tàu",
+        "Bể bơi phao khổng lồ trên biển (tùy thuộc vào điều kiện vận hành)"
+      ],
+      "servicesIncludedEn": [],
+      "servicesExcluded": [
+        "Chi phí cá nhân",
+        "Tiền tip và bồi dưỡng",
+        "Đồ uống tại quầy bar",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [],
+      "serviceNote": "Quý khách nên chuẩn bị đồ bơi, kem chống nắng và kính râm để tận hưởng máng trượt nước và bể Jacuzzi.",
+      "serviceNoteEn": "Swimwear, sunglasses and sunscreen recommended to enjoy onboard Jacuzzi and water slide.",
+      "offers": [
+        "Xe điện xuyên rừng & Động Trung Trang",
+        "Bể Jacuzzi & Cầu trượt nước",
+        "Buffet trưa & Menu Ấn Độ"
+      ],
+      "offersEn": [
+        "Jungle cart & Trung Trang Cave",
+        "Jacuzzi & Water Slide",
+        "Lunch buffet & Indian menu"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe điện Cát Bà",
+        "baseRateEn": "All-inclusive quote for 5-star cruise & Cat Ba island transfer",
+        "options": [
+          {
+            "name": "Trải nghiệm máng trượt nước & Bể sục Jacuzzi ngoài trời",
+            "nameEn": "Water slide & outdoor Jacuzzi experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Xe điện xuyên rừng quốc gia Cát Bà",
+            "nameEn": "Electric cart ride through Cat Ba National Park",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ (Indian Set Menu)",
+            "nameEn": "Indian Set Menu meal option",
+            "price": "Miễn phí đăng ký trước",
+            "priceEn": "Complimentary on request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu các ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–5 tuổi",
+            "nameEn": "Children 0–5 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child with 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em từ 6 tuổi trở lên",
+            "nameEn": "Children 6+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-mua-1d",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tam Cốc – Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu – Tam Coc – Mua Cave",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/tam-coc-boat.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tam Cốc – Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu – Tam Coc – Mua Cave - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Khám phá cố đô Hoa Lư nghìn năm lịch sử, ngồi thuyền nan xuôi dòng sông Ngô Đồng qua Tam Cốc và chinh phục 500 bậc đá đỉnh Hang Múa ngắm toàn cảnh thung lũng lúa.",
+      "cardLineEn": "Explore historic Hoa Lu ancient capital, take a peaceful Tam Coc sampan boat ride, and conquer 500 stone steps to Mua Cave summit for panoramic valley views.",
+      "description": [
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TAM COC – MUA CAVE – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\".",
+          "text": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century.",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”.",
+          "text": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”."
+        },
+        {
+          "time": "16h00-16:30",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Tam Coc or Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đỉnh Hang Múa ngoạn mục",
+        "Đi thuyền nan Tam Cốc",
+        "Cố đô Hoa Lư lịch sử"
+      ],
+      "offersEn": [
+        "Breathtaking Mua Cave",
+        "Tam Coc sampan boat ride",
+        "Historic Hoa Lu Capital"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-trangan-mua-1d",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tràng An – Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu – Trang An – Mua Cave",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/trang-an-boat.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tràng An – Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu – Trang An – Mua Cave - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình khám phá di sản thế giới Tràng An bằng thuyền nan luồn qua các hang động kỳ ảo, thăm đền vua Đinh - Tiền Lê tại Hoa Lư và ngắm nhìn hoàng hôn trên đỉnh Hang Múa.",
+      "cardLineEn": "Discover UNESCO World Heritage Trang An by sampan boat through magical river caves, visit King Dinh-Le temples at Hoa Lu, and catch the sunset on Mua Cave peak.",
+      "description": [
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TRANG AN – MUA CAVE – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century.",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00-16:30",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Tam Coc or Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Quần thể di sản Tràng An",
+        "Cố đô Hoa Lư",
+        "Đỉnh Hang Múa check-in"
+      ],
+      "offersEn": [
+        "UNESCO Trang An caves",
+        "Hoa Lu Ancient Temples",
+        "Mua Cave summit viewpoint"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đạp Xe & Đi Thuyền Tam Cốc",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Cycling & Tam Coc Boat",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đạp Xe & Đi Thuyền Tam Cốc - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Cycling & Tam Coc Boat - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chuyến đi nhẹ nhàng thư thái: viếng cố đô Hoa Lư, thưởng thức buffet đặc sản và thong dong đạp xe xuyên qua những ngôi làng cổ kính dưới chân núi đá vôi Tam Cốc.",
+      "cardLineEn": "A relaxing cultural day: visit Hoa Lu capital, savor local buffet cuisine, and leisurely cycle through picturesque villages beneath Tam Coc's limestone karsts.",
+      "description": [
+        "TOUR 2. HOA LƯ-TAM CỐC - ĐẠP XE",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TAM COC – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\".",
+          "text": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”.",
+          "text": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive back to Hanoi and drop off at the hotel . The trip ends!",
+          "text": "Arrive back to Hanoi and drop off at the hotel . The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Trang An or Tam Coc",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đi thuyền Tam Cốc",
+        "Thong dong đạp xe làng quê",
+        "Buffet đặc sản Ninh Bình"
+      ],
+      "offersEn": [
+        "Tam Coc boat ride",
+        "Countryside cycling",
+        "Authentic buffet lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-trangan-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đi Thuyền Di Sản Tràng An",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Trang An Boat Trip",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/hoa-lu.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đi Thuyền Di Sản Tràng An - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Trang An Boat Trip - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình trọn vẹn khám phá vùng đất địa linh nhân kiệt: thăm đền thờ hai vị vua triều Đinh - Lê và ngồi thuyền khám phá 4 hang động kỳ vĩ tại quần thể Tràng An.",
+      "cardLineEn": "Complete heritage journey: visit historic Dinh-Le dynastic temples and embark on a scenic sampan boat expedition through Trang An's subterranean river caves.",
+      "description": [
+        "TOUR 2. HOA LƯ- TRÀNG AN - ĐẠP XE",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TRANG AN – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive back to Hanoi and drop off at the hotel . The trip ends!",
+          "text": "Arrive back to Hanoi and drop off at the hotel . The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Trang An or Tam Coc",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Du thuyền di sản Tràng An",
+        "Đền Vua Đinh - Vua Lê",
+        "Ăn trưa buffet phong phú"
+      ],
+      "offersEn": [
+        "Trang An heritage boat",
+        "King Dinh & Le Temples",
+        "Generous buffet lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-baidinh-trangan-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Đại Tượng Phật Chùa Bái Đính – Di Sản Tràng An",
+      "nameEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An Ecotourism",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/ninh-binh-bai-dinh.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh-bai-dinh.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Đại Tượng Phật Chùa Bái Đính – Di Sản Tràng An - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An Ecotourism - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chiêm bái ngôi chùa Bái Đính giữ nhiều kỷ lục nhất Đông Nam Á và du ngoạn bằng thuyền nan khám phá hệ thống hang động nước ngầm lung linh tại Tràng An.",
+      "cardLineEn": "Visit Southeast Asia's most record-holding Buddhist complex at Bai Dinh and cruise through the tranquil emerald waterways of Trang An.",
+      "description": [
+        "TOUR 4. BÁI ĐÍNH-TRÀNG AN",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Du lịch Bái Đính - Tràng An đang là lựa chọn lý tưởng của rất nhiều du khách Việt, Nằm trong quần thể di tích Cố đô Hoa Lư, Đến với khu du lịch sinh thái Tràng An du khách như lạc vào động tiên huyền ảo, cảnh sắc thiên nhiên, núi rừng, sông nước hiền hòa, một bức tranh sơn thủy hữu tình. Các công trình kiến trúc trong quần thể du lịch này chắc chắn sẽ làm Quý khách ngỡ ngàng khi về lại cố đô xưa…"
+      ],
+      "descriptionEn": [
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…",
+          "text": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…"
+        },
+        {
+          "time": "12h30",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet Lunch for Shuttle bus / Thaco Limousine option Buffet lunch is served in a modern and elegant atmosphere with many local foods Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet style"
+        },
+        {
+          "time": "13h30 – 13h45",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "Entrance fee & sharing boat at Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Chùa Bái Đính đồ sộ",
+        "Thuyền nan hang động Tràng An",
+        "Xe điện Bái Đính 2 chiều"
+      ],
+      "offersEn": [
+        "Monumental Bai Dinh Pagoda",
+        "Trang An Cave sampan",
+        "Round-trip electric cart"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-baidinh-trangan-mua-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Bái Đính – Tràng An – Chinh Phục Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An – Mua Cave Summit",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/mua-cave-peak.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Bái Đính – Tràng An – Chinh Phục Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An – Mua Cave Summit - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình kết hợp tam giác danh thắng hàng đầu Ninh Bình: viếng quần thể tâm linh Bái Đính, đi thuyền xuyên lòng hang Tràng An và leo 500 bậc đá lên Vạn Lý Trường Thành thu nhỏ.",
+      "cardLineEn": "The quintessential Ninh Binh trifecta: spiritual wonders at Bai Dinh, subterranean boat voyage through Trang An, and breathtaking dragon-ridge hike atop Mua Cave.",
+      "description": [
+        "TOUR 3. BÁI ĐÍNH-TRÀNG AN-HANG MÚA",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Du lịch Bái Đính - Tràng An đang là lựa chọn lý tưởng của rất nhiều du khách Việt, Nằm trong quần thể di tích Cố đô Hoa Lư, Đến với khu du lịch sinh thái Tràng An du khách như lạc vào động tiên huyền ảo, cảnh sắc thiên nhiên, núi rừng, sông nước hiền hòa, một bức tranh sơn thủy hữu tình. Các công trình kiến trúc trong quần thể du lịch này chắc chắn sẽ làm Quý khách ngỡ ngàng khi về lại cố đô xưa…"
+      ],
+      "descriptionEn": [
+        "BAI DINH – TRANG AN – MUA CAVE",
+        "Duration : 1 Day/ / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…",
+          "text": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…"
+        },
+        {
+          "time": "12h30",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15",
+          "title": "1030 : Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "1030 : Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 – 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "All Entrance fees and sharing boat at Trang an",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đại tự Bái Đính",
+        "Di sản Tràng An",
+        "Đỉnh Ngọa Long Hang Múa"
+      ],
+      "offersEn": [
+        "Grand Bai Dinh Pagoda",
+        "Trang An Grottoes",
+        "Dragon Ridge Mua Cave"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-mua-baidinh-trangan-2d1n",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình Trọn Vẹn 2N1Đ: Hoa Lư – Tam Cốc – Múa – Bái Đính – Tràng An",
+      "nameEn": "Complete Ninh Binh 2D1N: Hoa Lu – Tam Coc – Mua Cave – Bai Dinh – Trang An",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/trang-an-cave.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/trang-an-cave.jpg",
+          "alt": "Tour Ninh Bình Trọn Vẹn 2N1Đ: Hoa Lư – Tam Cốc – Múa – Bái Đính – Tràng An - The Dahlia Hanoi",
+          "altEn": "Complete Ninh Binh 2D1N: Hoa Lu – Tam Coc – Mua Cave – Bai Dinh – Trang An - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Tour 2 ngày 1 đêm lưu trú khách sạn/bungalow thơ mộng, trải nghiệm đầy đủ tất cả danh lam thắng cảnh bậc nhất Ninh Bình: Tam Cốc, Tràng An, Hang Múa, Bái Đính và Hoa Lư.",
+      "cardLineEn": "A comprehensive 2D1N getaway with charming bungalow/hotel stay, covering every hallmark wonder of Ninh Binh: Tam Coc, Trang An, Mua Cave, Bai Dinh, and Hoa Lu.",
+      "description": [
+        "TOUR 5. HOA LƯ-TAM CỐC- HANG MÚA-BÁI ĐÍNH-TRÀNG AN 2 NGÀY",
+        "Thời gian : 2 Ngày 1 Đêm / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine"
+      ],
+      "descriptionEn": [
+        "TOUR 5: HOA LU – TAM COC – MUA CAVE - BAI DINH – TRANG AN",
+        "Duration : 2 Days 1 Night / Stay at : Hotel/Bungalow / Departure : Daily",
+        "Transportation: Shuttle Bus/Thaco Limousine"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "title": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "text": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)"
+        },
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h00 - 13h30",
+          "title": "Visit Tam Coc, by 1.5 hours on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people called “ Halong Bay on land”.",
+          "text": "Visit Tam Coc, by 1.5 hours on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people called “ Halong Bay on land”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc.",
+          "text": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc."
+        },
+        {
+          "time": "17h00",
+          "title": "The minivan will transfer you to Hotel/ Bungalow",
+          "text": "The minivan will transfer you to Hotel/ Bungalow"
+        },
+        {
+          "time": "17h30",
+          "title": "Check in the room.",
+          "text": "Check in the room."
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Have dinner at a Hotel/ Bungalow or Restaurant nearby.",
+          "text": "Have dinner at a Hotel/ Bungalow or Restaurant nearby. Day 2 : BAI DINH PAGODA – TRANG AN BOAT TRIP – HANOI ( B, L )"
+        },
+        {
+          "time": "7h30",
+          "title": "Have breakfast at the Hotel/ Bungalow then be ready for the trip.",
+          "text": "Have breakfast at the Hotel/ Bungalow then be ready for the trip."
+        },
+        {
+          "time": "9h30 – 9h45",
+          "title": "Get picked up by minivan from Hotel/ Bungalow and join our group at Cozy Vietnam Restaurant.",
+          "text": "Get picked up by minivan from Hotel/ Bungalow and join our group at Cozy Vietnam Restaurant."
+        },
+        {
+          "time": "10h30",
+          "title": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h30 - 13h45",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!!"
+        }
+      ],
+      "servicesIncluded": [
+        "bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách) khứ hồi",
+        "đêm tại khách sạn/ Bungalow",
+        "chiều xe điện Bái Đính",
+        "Hướng dẫn viên tiếng Anh/ tiếng Việt",
+        "Hoạt động đạp xe",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Thaco Limousine",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "buffet lunches; 1 dinner:1 breakfast",
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine (17-22 Pax) round trip",
+        "Accommodation: 1 night at Hotel/ Bungalow",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "Bicycle activity",
+        "Entrance fee & sharing boat at Tam Coc and Trang An",
+        "Hanoi - Ninh Binh - Hanoi Shuttle bus/ Thaco Limousine round trip",
+        "Free wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đủ 5 điểm danh thắng lớn",
+        "Nghỉ đêm Bungalow/Khách sạn",
+        "Đạp xe ngắm hoàng hôn"
+      ],
+      "offersEn": [
+        "All 5 top landmarks",
+        "Cozy Bungalow/Hotel night",
+        "Sunset countryside ride"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-halong-2d1n",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Liên Tuyến 2N1Đ: Ninh Bình (Hoa Lư – Tam Cốc / Tràng An) – Vịnh Hạ Long",
+      "nameEn": "2D1N Combo Tour: Ninh Binh (Hoa Lu – Tam Coc / Trang An) & Halong Bay Cruise",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/tam-coc-rice.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-rice.jpg",
+          "alt": "Tour Liên Tuyến 2N1Đ: Ninh Bình (Hoa Lư – Tam Cốc / Tràng An) – Vịnh Hạ Long - The Dahlia Hanoi",
+          "altEn": "2D1N Combo Tour: Ninh Binh (Hoa Lu – Tam Coc / Trang An) & Halong Bay Cruise - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chuyến đi kết hợp hoàn hảo hai di sản hàng đầu miền Bắc: 1 ngày khám phá cố đô và hang động Ninh Bình, 1 ngày du ngoạn vịnh Hạ Long kỳ quan thế giới.",
+      "cardLineEn": "A seamless 2-day dual-heritage combination: day 1 amidst ancient capitals and karst rivers in Ninh Binh, followed by day 2 cruising Halong Bay's wonder seascape.",
+      "description": [
+        "HOA LƯ – TRÀNG AN/ TAM CỐC – HANG MÚA – VỊNH HẠ LONG",
+        "Thời gian : 2 Ngày 1 Đêm / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine"
+      ],
+      "descriptionEn": [
+        "TOUR 8: HOA LU – TRANG AN/TAM COC- MUA CAVE – HALONG BAY",
+        "Duration :2 Days 1 Night / Stay at: Hotel/ Bungalow / Departure: Daily",
+        "Transportation: Shuttle Bus/Thaco Limousine"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "title": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "text": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)"
+        },
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)",
+          "title": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)",
+          "text": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)"
+        },
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "",
+          "text": " Option 1: Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”. Option 2: Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc..",
+          "text": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc.."
+        },
+        {
+          "time": "17h00",
+          "title": "The minivan will transfer you to Hotel/ Bungalow",
+          "text": "The minivan will transfer you to Hotel/ Bungalow"
+        },
+        {
+          "time": "17h30",
+          "title": "Check in the room.",
+          "text": "Check in the room."
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Have dinner at a Hotel/ Bungalow or Restaurant nearby.",
+          "text": "Have dinner at a Hotel/ Bungalow or Restaurant nearby."
+        },
+        {
+          "time": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L )",
+          "title": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L )",
+          "text": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L ) Breakfast at the Bungalow Transfer no escort Tour guide"
+        },
+        {
+          "time": "7h00",
+          "title": "Shuttle bus/ Limousine Bus will pick up from Ninh Binh and transfer to Halong Bay for a full day tour. Enjoy a full-day trip to Halong Bay and get immersed in the beauty of the stone mountains, caves, sandy beach, and more. Board a vehicle from the hotel and enjoy a scenic drive through the green fields.",
+          "text": "Shuttle bus/ Limousine Bus will pick up from Ninh Binh and transfer to Halong Bay for a full day tour. Enjoy a full-day trip to Halong Bay and get immersed in the beauty of the stone mountains, caves, sandy beach, and more. Board a vehicle from the hotel and enjoy a scenic drive through the green fields."
+        },
+        {
+          "time": "11h45- 12h00",
+          "title": "Arrive at Tuan Chau Harbor. Welcome to Cozy Bay Premium Cruise. Have a Buffet Lunch.",
+          "text": "Arrive at Tuan Chau Harbor. Welcome to Cozy Bay Premium Cruise. Have a Buffet Lunch. We will take you on a 5-6 hour journey via route 2 which is renowned for its striking passages, uninhabited islets and outcrops have been given imaginative names by the locals, due to their perceived shapes while having lunch on boat."
+        },
+        {
+          "time": "14h00",
+          "title": "You will visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea lives",
+          "text": "You will visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea lives"
+        },
+        {
+          "time": "15h00",
+          "title": ". Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon",
+          "text": ". Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "16h00",
+          "title": ". Visit Titop Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise",
+          "text": ". Visit Titop Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "17h00",
+          "title": "Back to our Cruise and enjoy Sunset party. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery.",
+          "text": "Back to our Cruise and enjoy Sunset party. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "18h00-18h30",
+          "title": "Back to Halong Harbor and get on the bus back to Hanoi by Expressway, have a short break for 20-30 minutes.",
+          "text": "Back to Halong Harbor and get on the bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21h00",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hạ Long - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách) khứ hồi",
+        "đêm tại khách sạn/ Bungalow",
+        "Hướng dẫn viên tiếng Anh/ tiếng Việt",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Thaco Limousine",
+        "Hoạt động đạp xe",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An"
+      ],
+      "servicesIncludedEn": [
+        "Buffet lunches + 1 dinner + 1 breakfast",
+        "Full transfers by Shuttle Bus/ Thaco Limousine Hanoi - Ninh Binh - Halong - Hanoi",
+        "Accommodation: 1 night at Hotel/ Bungalow",
+        "English Speaking Guide",
+        "bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine",
+        "Cycling activity",
+        "Entrance fee & sharing boat at Trang An/Tam Coc boat trip, kayaking/bamboo boat",
+        "Free usage of rain-coat and conical hat"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Kết hợp Ninh Bình & Hạ Long",
+        "1 đêm khách sạn tiện nghi",
+        "Xe đưa đón khứ hồi trọn gói"
+      ],
+      "offersEn": [
+        "Dual Heritage combo",
+        "Comfortable hotel stay",
+        "Seamless transfers included"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
     }
   ]
 };
