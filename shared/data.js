@@ -1,26 +1,65 @@
 /**
- * Nguồn dữ liệu chính cho Voyage (slideshow, điểm đến, tour, form…).
- * Sửa file này rồi hard-refresh — app đọc từ window.TOUR_DATA.
- *
- * Đường dẫn ảnh: tương đối trang voyage/*.html → dùng "img/..."
+ * Catalogue Voyage — sinh từ shared/catalogue.json.
+ * Sửa bằng trang Quản trị: npm start, rồi mở /admin/. Đừng sửa tay file này.
  */
-window.TOUR_DATA = {
-  "email": "hello@thedahliahanoi.com",
-  "phone": "+84 24 0000 0000",
-  "partner": {
-    "name": "Heritage Vietnam Travel",
-    "hotline": "0879 818 386",
-    "hotlineHref": "tel:+84879818386",
-    "website": "https://heritagevietnamtravel.com",
-    "address": "186 Hồng Tiến, Bồ Đề, Long Biên, Hà Nội"
+(function () {
+  var RAW = {
+  "version": 2,
+  "site": {
+    "email": "hello@thedahliahanoi.com",
+    "phone": "+84 24 0000 0000",
+    "bank": {
+      "name": "MB Bank",
+      "accountName": "Công ty The Dahlia",
+      "accountNumber": "226456789",
+      "note": "Bản mẫu, chưa thanh toán thật",
+      "noteEn": "Sample only — not a real payment"
+    }
   },
-  "bank": {
-    "name": "MB Bank",
-    "accountName": "Công ty The Dahlia",
-    "accountNumber": "226456789",
-    "note": "Bản mẫu, chưa thanh toán thật",
-    "noteEn": "Sample only — not a real payment"
-  },
+  "operators": [
+    {
+      "id": "heritage",
+      "name": "Heritage Vietnam Travel",
+      "nameEn": "Heritage Vietnam Travel",
+      "hotline": "0879 818 386",
+      "hotlineHref": "tel:+84879818386",
+      "website": "https://heritagevietnamtravel.com",
+      "address": "186 Hồng Tiến, Bồ Đề, Long Biên, Hà Nội",
+      "active": true,
+      "childrenPolicy": [
+        "1–4 tuổi: miễn phí 1 trẻ khi đi cùng đủ 2 người lớn, ngồi chung chỗ.",
+        "Trẻ thứ 2 trong độ tuổi 1–4, và trẻ 5–8 tuổi: 75% giá người lớn.",
+        "Từ 9 tuổi: 100% giá người lớn.",
+        "Trẻ em phải có người lớn đi cùng trong suốt chương trình."
+      ],
+      "childrenPolicyEn": [
+        "Ages 1–4: the first child is free with 2 adults and shares a seat.",
+        "A second child aged 1–4, and children aged 5–8: 75% of the adult fare.",
+        "Age 9 and over: 100% of the adult fare.",
+        "Children must travel with an adult for the whole programme."
+      ]
+    },
+    {
+      "id": "may",
+      "name": "Sapa May Travel",
+      "nameEn": "Sapa May Travel",
+      "hotline": "",
+      "hotlineHref": "",
+      "website": "",
+      "address": "",
+      "active": true,
+      "childrenPolicy": [
+        "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ).",
+        "Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ).",
+        "Trẻ em từ 9 tuổi trở lên tính như người lớn."
+      ],
+      "childrenPolicyEn": [
+        "Children under 5 years are free (sharing bed with parents).",
+        "Children 5-8 years old charged 75% of price.",
+        "Children 9 years old charged as adults."
+      ]
+    }
+  ],
   "hero": {
     "interval": 10000,
     "slides": [
@@ -189,6 +228,7 @@ window.TOUR_DATA = {
           "alt": "Mesdames Linh Cuisine",
           "altEn": "Mesdames Linh Cuisine"
         }
+<<<<<<< HEAD
       ]
     },
     "sapa": {
@@ -207,6 +247,8 @@ window.TOUR_DATA = {
           "alt": "Toàn cảnh Sa Pa",
           "altEn": "Panoramic Sapa view"
         }
+=======
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
       ]
     }
   },
@@ -476,7 +518,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ha-long-signature",
@@ -691,6 +738,7 @@ window.TOUR_DATA = {
         "Đồ uống không nêu ở phần bao gồm",
         "Tip và chi tiêu cá nhân",
         "Phụ thu ngày lễ / Tết: 15 USD/khách"
+<<<<<<< HEAD
       ],
       "servicesExcludedEn": [
         "VAT",
@@ -801,6 +849,119 @@ window.TOUR_DATA = {
           "altEn": "Ninh Binh specialties"
         }
       ],
+=======
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Beverages not listed as included",
+        "Tips and personal expenses",
+        "Public holiday / Tet surcharge: 15 USD/guest"
+      ],
+      "serviceNote": "Giá hiển thị theo limousine nhóm 19–22 khách ($119). Shuttle 30 khách: $109.",
+      "serviceNoteEn": "Listed price is limousine group 19–22 ($119). Shuttle bus 30 guests: $109.",
+      "offers": [
+        "Tàu Signature 5 sao",
+        "Có set menu Ấn Độ",
+        "Jacuzzi bốn mùa"
+      ],
+      "offersEn": [
+        "Signature 5-star cruise",
+        "Indian set menus available",
+        "Four-season jacuzzi"
+      ],
+      "menuGallery": {
+        "title": "Thực đơn Signature",
+        "titleEn": "Signature menu",
+        "images": [
+          {
+            "src": "img/menus/bufferHL/anh1.jpg",
+            "alt": "Buffet hải sản",
+            "altEn": "Seafood buffet"
+          },
+          {
+            "src": "img/menus/bufferHL/anh2.jpg",
+            "alt": "Buffet trên tàu",
+            "altEn": "Onboard buffet"
+          },
+          {
+            "src": "img/menus/bufferHL/anh3.jpg",
+            "alt": "Nhà hàng trên tàu",
+            "altEn": "Cruise restaurant"
+          },
+          {
+            "src": "img/menus/bufferHL/anh4.jpg",
+            "alt": "Không gian nhà hàng",
+            "altEn": "Restaurant space"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Hoa Lư – Tam Cốc/Tràng An – Hang Múa",
+      "nameEn": "Hoa Lu – Tam Coc/Trang An – Mua Cave",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 1955000,
+      "priceNote": "$79 limousine · $99 Dcar · $69 shuttle",
+      "priceNoteEn": "$79 limousine · $99 Dcar · $69 shuttle",
+      "image": "img/tours/ninh-binh.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
+          "alt": "Cố đô Hoa Lư",
+          "altEn": "Hoa Lu ancient capital"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
+          "alt": "Thuyền Tam Cốc sông Ngô Đồng",
+          "altEn": "Tam Coc boat on Ngo Dong River"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-rice.jpg",
+          "alt": "Cánh đồng lúa Tam Cốc",
+          "altEn": "Tam Coc rice fields"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
+          "alt": "Đỉnh Hang Múa nhìn thung lũng",
+          "altEn": "Mua Cave peak over the valley"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/mua-cave-steps.jpg",
+          "alt": "500 bậc đá Hang Múa",
+          "altEn": "500 stone steps at Mua Cave"
+        },
+        {
+          "type": "image",
+          "src": "img/venues/heritage-garden.jpg",
+          "alt": "Trang An Heritage Garden",
+          "altEn": "Trang An Heritage Garden"
+        },
+        {
+          "type": "image",
+          "src": "img/experiences/cycling-village.jpg",
+          "alt": "Đạp xe làng quê Ninh Bình",
+          "altEn": "Cycling through Ninh Binh villages"
+        },
+        {
+          "type": "image",
+          "src": "img/food/ninh-binh-goat.jpg",
+          "alt": "Đặc sản Ninh Bình",
+          "altEn": "Ninh Binh specialties"
+        }
+      ],
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
       "cardLine": "Tour Ninh Bình Heritage Premium cả ngày: cố đô Hoa Lư, đạp xe 30 phút hoặc thư giãn tại Trang An Heritage Garden, thuyền Tam Cốc hoặc Tràng An, leo Hang Múa. Buffet/set lunch đặc sản. Limousine nhóm $79/khách.",
       "cardLineEn": "Full-day Ninh Binh Heritage Premium: Hoa Lu ancient capital, 30-minute cycling or relax at Trang An Heritage Garden, boat at Tam Coc or Trang An, climb Mua Cave. Local specialty lunch. Limousine group from $79/guest.",
       "description": [
@@ -976,7 +1137,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-tam-coc",
@@ -1191,7 +1357,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-bai-dinh",
@@ -1380,7 +1551,12 @@ window.TOUR_DATA = {
       "offersEn": [
         "Bai Dinh electric car included",
         "Buffet/set lunch at Heritage Garden"
+<<<<<<< HEAD
       ]
+=======
+      ],
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-2d1n",
@@ -1645,7 +1821,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-bai-dinh-trang-an",
@@ -1844,7 +2025,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-2d1n-pagoda",
@@ -2055,7 +2241,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-2d1n-cuc-phuong",
@@ -2264,7 +2455,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-2d1n-halong",
@@ -2455,7 +2651,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-thung-nham",
@@ -2672,7 +2873,12 @@ window.TOUR_DATA = {
             "altEn": "Restaurant space"
           }
         ]
+<<<<<<< HEAD
       }
+=======
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     },
     {
       "id": "ninh-binh-incense",
@@ -2837,6 +3043,8 @@ window.TOUR_DATA = {
         "Wi‑Fi, water, conical hat & raincoat"
       ],
       "servicesExcluded": [
+<<<<<<< HEAD
+=======
         "VAT",
         "Đồ uống",
         "Tip",
@@ -2850,6 +3058,238 @@ window.TOUR_DATA = {
         "Personal expenses",
         "Tet surcharge: 15 USD/guest"
       ],
+      "serviceNote": "Private: $149/2 khách · $139/3 · $125/4 · từ $119/5–6 · Dcar cao hơn.",
+      "serviceNoteEn": "Private: $149/2 guests · $139/3 · $125/4 · from $119/5–6 · Dcar higher.",
+      "offers": [
+        "Làng hương + Ninh Bình",
+        "Tour private"
+      ],
+      "offersEn": [
+        "Incense village + Ninh Binh",
+        "Private tour"
+      ],
+      "menuGallery": {
+        "title": "Thực đơn Đặc sản Ninh Bình",
+        "titleEn": "Ninh Binh specialties menu",
+        "images": [
+          {
+            "src": "img/menus/NinhBinh/anh1.jpg",
+            "alt": "Buffet hải sản",
+            "altEn": "Seafood buffet"
+          },
+          {
+            "src": "img/menus/NinhBinh/anh2.jpg",
+            "alt": "Buffet trên tàu",
+            "altEn": "Onboard buffet"
+          },
+          {
+            "src": "img/menus/NinhBinh/anh3.jpg",
+            "alt": "Nhà hàng trên tàu",
+            "altEn": "Cruise restaurant"
+          },
+          {
+            "src": "img/menus/NinhBinh/anh4.jpg",
+            "alt": "Không gian nhà hàng",
+            "altEn": "Restaurant space"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "Hà Nội City Tour cả ngày",
+      "nameEn": "Hanoi City Tour full day",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 1881000,
+      "priceNote": "$76 limousine · $86 Dcar",
+      "priceNoteEn": "$76 limousine · $86 Dcar",
+      "image": "img/tours/ha-noi.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/tran-quoc-pagoda.jpg",
+          "alt": "Chùa Trấn Quốc",
+          "altEn": "Tran Quoc Pagoda"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/ho-chi-minh-mausoleum.jpg",
+          "alt": "Khu di tích Chủ tịch Hồ Chí Minh",
+          "altEn": "Ho Chi Minh complex"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/one-pillar-pagoda.jpg",
+          "alt": "Chùa Một Cột",
+          "altEn": "One Pillar Pagoda"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/temple-of-literature.jpg",
+          "alt": "Văn Miếu – Quốc Tử Giám",
+          "altEn": "Temple of Literature"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/hoa-lo-prison.jpg",
+          "alt": "Nhà tù Hỏa Lò",
+          "altEn": "Hoa Lo Prison"
+        },
+        {
+          "type": "image",
+          "src": "img/venues/mesdames-linh.jpg",
+          "alt": "Mesdames Linh Cuisine",
+          "altEn": "Mesdames Linh Cuisine"
+        },
+        {
+          "type": "image",
+          "src": "img/food/hanoi-bun-cha.jpg",
+          "alt": "Set menu Hà Nội",
+          "altEn": "Hanoi set menu"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-mid.jpg",
+          "alt": "Limousine nội thành",
+          "altEn": "Inner-city limousine"
+        }
+      ],
+      "cardLine": "Tour 1 Hanoi Heritage Premium: Trấn Quốc, Lăng Bác & nhà sàn, Một Cột, Bảo tàng Dân tộc học, set lunch Mesdames Linh, Văn Miếu và Hỏa Lò. Limousine nhóm $76 · Dcar $86. Private từ $119/2 khách.",
+      "cardLineEn": "Tour 1 Hanoi Heritage Premium: Tran Quoc, Ho Chi Minh complex & stilt house, One Pillar, Ethnology Museum, Mesdames Linh set lunch, Temple of Literature and Hoa Lo. Group limousine $76 · Dcar $86. Private from $119/2 guests.",
+      "description": [
+        "Mesdames Linh Cuisine — fusion cổ điển & hiện đại; set Việt truyền thống là món nên thử.",
+        "Thứ Hai Bảo tàng Dân tộc học đóng cửa — thay bằng Bảo tàng Phụ nữ.",
+        "Lăng Bác đóng thứ Hai, thứ Sáu và khoảng 15/6–15/8 (bảo trì); vẫn chụp ảnh và tham quan quanh khu vực.",
+        "Mặc kín từ vai đến gối khi vào lăng, chùa, đền. Cuối tuần xe trả gần phố đi bộ.",
+        "Không gồm lunch: trừ 10 USD/khách."
+      ],
+      "descriptionEn": [
+        "Mesdames Linh Cuisine — classic–modern fusion; traditional Hanoi dishes are the must-try.",
+        "On Mondays the Ethnology Museum is closed — Women’s Museum instead.",
+        "Ho Chi Minh Mausoleum closed Mondays, Fridays, and ~15 Jun–15 Aug for maintenance; photos and grounds still possible.",
+        "Dress modestly (shoulders to knees) at the mausoleum, temples, and pagodas. On weekends drop-off is near the walking street.",
+        "Without lunch: minus 10 USD/guest."
+      ],
+      "itinerary": [
+        {
+          "time": "07:45–08:15",
+          "title": "Đón khách",
+          "text": "Hướng dẫn và tài xế đón tại khách sạn khu phố cổ Hà Nội."
+        },
+        {
+          "time": "08:30",
+          "title": "Chùa Trấn Quốc",
+          "text": "Ngôi chùa cổ nhất Hà Nội, khởi dựng thế kỷ 6 dưới thời Lý Nam Đế."
+        },
+        {
+          "time": "09:15",
+          "title": "Khu di tích Chủ tịch Hồ Chí Minh",
+          "text": "Lăng Bác (khi mở cửa), nhà sàn nơi Bác sống và làm việc 1954–1969, chùa Một Cột thờ Quan Âm."
+        },
+        {
+          "time": "11:00",
+          "title": "Bảo tàng Dân tộc học",
+          "text": "54 dân tộc Việt Nam. Thứ Hai: Bảo tàng Phụ nữ thay thế."
+        },
+        {
+          "time": "12:30–12:45",
+          "title": "Ăn trưa Mesdames Linh",
+          "text": "Set menu Việt tại nhà hàng sang trọng Mesdames Linh Cuisine."
+        },
+        {
+          "time": "13:45–14:00",
+          "title": "Văn Miếu – Quốc Tử Giám",
+          "text": "Trường đại học quốc gia đầu tiên của Việt Nam, dựng năm 1070 dưới Lý Thánh Tông."
+        },
+        {
+          "time": "15:00",
+          "title": "Nhà tù Hỏa Lò",
+          "text": "“Maison Centrale” thời Pháp (1886–1901); sau dùng cho tù binh Mỹ thời chiến tranh Việt Nam."
+        },
+        {
+          "time": "16:00–16:30",
+          "title": "Kết thúc",
+          "text": "Đưa về khách sạn phố cổ Hà Nội."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:45–08:15",
+          "title": "Pickup",
+          "text": "Guide and driver pick you up at your Old Quarter hotel."
+        },
+        {
+          "time": "08:30",
+          "title": "Tran Quoc Pagoda",
+          "text": "Hanoi’s oldest pagoda, originally 6th century under Emperor Ly Nam De."
+        },
+        {
+          "time": "09:15",
+          "title": "Ho Chi Minh Complex",
+          "text": "Mausoleum (when open), the stilt house (1954–1969), and One Pillar Pagoda dedicated to the Goddess of Mercy."
+        },
+        {
+          "time": "11:00",
+          "title": "Ethnology Museum",
+          "text": "Vietnam’s 54 ethnic groups. Mondays: Women’s Museum instead."
+        },
+        {
+          "time": "12:30–12:45",
+          "title": "Lunch at Mesdames Linh",
+          "text": "Vietnamese set menu at the luxury restaurant Mesdames Linh Cuisine."
+        },
+        {
+          "time": "13:45–14:00",
+          "title": "Temple of Literature",
+          "text": "Vietnam’s first national university, founded in 1070 under Emperor Ly Thanh Tong."
+        },
+        {
+          "time": "15:00",
+          "title": "Hoa Lo Prison",
+          "text": "French “Maison Centrale” (1886–1901); later held U.S. POWs during the Vietnam War."
+        },
+        {
+          "time": "16:00–16:30",
+          "title": "End",
+          "text": "Drop-off at your Old Quarter hotel."
+        }
+      ],
+      "servicesIncluded": [
+        "Set menu trưa Việt tại Mesdames Linh Cuisine",
+        "Vé vào cửa & thắng cảnh",
+        "Xe limousine (19–20 chỗ) hoặc Dcar (9 chỗ)",
+        "Hướng dẫn viên tiếng Anh",
+        "Wifi miễn phí, 01 chai nước khoáng/chiều trên limousine"
+      ],
+      "servicesIncludedEn": [
+        "Vietnamese set-menu lunch at Mesdames Linh Cuisine",
+        "Entrance & sightseeing fees",
+        "Limousine (19–20 seats) or Dcar (9 seats)",
+        "English-speaking guide",
+        "Free Wi‑Fi, 1 mineral water each way on the limousine"
+      ],
+      "servicesExcluded": [
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
+        "VAT",
+        "Đồ uống",
+        "Tip",
+        "Chi tiêu cá nhân",
+        "Phụ thu Tết: 15 USD/khách"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Beverages",
+        "Tips",
+        "Personal expenses",
+        "Tet surcharge: 15 USD/guest"
+      ],
+<<<<<<< HEAD
       "serviceNote": "Private: $149/2 khách · $139/3 · $125/4 · từ $119/5–6 · Dcar cao hơn.",
       "serviceNoteEn": "Private: $149/2 guests · $139/3 · $125/4 · from $119/5–6 · Dcar higher.",
       "offers": [
@@ -3167,10 +3607,136 @@ window.TOUR_DATA = {
           "time": "17:00 – 17:30",
           "title": "Trả khách",
           "text": "Sau khi chụp hình tại Nhà thờ Lớn Hà Nội, quý khách sẽ được đưa về khách sạn trong khu vực Phố Cổ Hà Nội, kết thúc hành trình khám phá văn hóa Hà Nội và các làng nghề truyền thống trong ngày."
+=======
+      "serviceNote": "Nhóm: limousine $76 · Dcar $86. Private sedan/CUV/van từ $119/2 khách · Dcar private từ $135/2 khách. Không lunch: −$10.",
+      "serviceNoteEn": "Group: limousine $76 · Dcar $86. Private sedan/CUV/van from $119/2 guests · private Dcar from $135/2 guests. No lunch: −$10.",
+      "offers": [
+        "Set lunch Mesdames Linh đã gồm",
+        "Private & group",
+        "Limousine hoặc Dcar"
+      ],
+      "offersEn": [
+        "Mesdames Linh set lunch included",
+        "Private & group",
+        "Limousine or Dcar"
+      ],
+      "menuGallery": {
+        "title": "Set lunch Mesdames Linh",
+        "titleEn": "Mesdames Linh set lunch",
+        "images": [
+          {
+            "src": "img/menus/madameLinh/anh1.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh2.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh3.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh4.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh5.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-half",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "Hà Nội City Tour nửa ngày",
+      "nameEn": "Hanoi City Tour half day",
+      "durationLabel": "Nửa ngày",
+      "durationLabelEn": "Half day",
+      "nightsOffset": 0,
+      "price": 1460000,
+      "priceNote": "$59 limousine · $69 Dcar",
+      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "image": "img/tours/ha-noi-half.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/old-quarter.jpg",
+          "alt": "Phố cổ Hà Nội",
+          "altEn": "Hanoi Old Quarter"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/temple-of-literature.jpg",
+          "alt": "Văn Miếu",
+          "altEn": "Temple of Literature"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/tran-quoc-pagoda.jpg",
+          "alt": "Chùa Trấn Quốc / hồ",
+          "altEn": "Tran Quoc / lake"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/hoa-lo-prison.jpg",
+          "alt": "Hỏa Lò",
+          "altEn": "Hoa Lo"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/dcar-limousine.jpg",
+          "alt": "Dcar nhóm nhỏ",
+          "altEn": "Small-group Dcar"
+        }
+      ],
+      "cardLine": "Tour 1 nửa ngày — chọn buổi sáng hoặc chiều. Limousine $59 · Dcar $69. Có thể thêm set Mesdames Linh (+/- theo lịch). Không lunch mặc định trừ 10$ so với full day có lunch.",
+      "cardLineEn": "Tour 1 half day — morning or afternoon. Limousine $59 · Dcar $69. Mesdames Linh set can be added. Default without lunch (full day without lunch is −$10).",
+      "description": [
+        "Khách chọn buổi sáng hoặc buổi chiều.",
+        "Điểm chính theo khung giờ mở cửa: Trấn Quốc / Lăng Bác / Văn Miếu / Hỏa Lò…",
+        "Mặc kín khi vào lăng và chùa. Lăng Bác đóng T2, T6 và 15/6–15/8."
+      ],
+      "descriptionEn": [
+        "Guests choose morning or afternoon.",
+        "Key stops follow opening hours: Tran Quoc / Mausoleum / Temple of Literature / Hoa Lo…",
+        "Dress modestly at the mausoleum and pagodas. Mausoleum closed Mon, Fri, and 15 Jun–15 Aug."
+      ],
+      "itinerary": [
+        {
+          "time": "Theo lịch",
+          "title": "Đón khách",
+          "text": "Đón tại khách sạn phố cổ — khung sáng hoặc chiều."
+        },
+        {
+          "time": "Theo lịch",
+          "title": "Điểm tham quan",
+          "text": "Các điểm City Tour rút gọn theo giờ mở cửa (Trấn Quốc, khu di tích Bác, Văn Miếu, Hỏa Lò…)."
+        },
+        {
+          "time": "Tuỳ chọn",
+          "title": "Ăn Mesdames Linh",
+          "text": "Có thể đặt set lunch/dinner 420.000đ/khách tại tour desk (chưa VAT 10%)."
+        },
+        {
+          "time": "Kết thúc",
+          "title": "Trả khách",
+          "text": "Đưa về khách sạn phố cổ."
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
         }
       ],
       "itineraryEn": [
         {
+<<<<<<< HEAD
           "time": "7:15",
           "title": "Pickup",
           "text": "Our guide and driver will pick you up at your hotel in Hanoi Old Quarter. If your hotel is outside the Old Quarter, please meet at Hanoi Opera House. Begin your full-day journey to discover Hanoi’s cultural heritage and traditional craft villages."
@@ -3243,6 +3809,37 @@ window.TOUR_DATA = {
       ],
       "servicesIncludedEn": [
         "Round-trip transfer from Hanoi Old Quarter by modern vehicle (Small Group)",
+=======
+          "time": "Per schedule",
+          "title": "Pickup",
+          "text": "Pickup at your Old Quarter hotel — morning or afternoon slot."
+        },
+        {
+          "time": "Per schedule",
+          "title": "Highlights",
+          "text": "Shortened City Tour stops by opening hours (Tran Quoc, Ho Chi Minh complex, Temple of Literature, Hoa Lo…)."
+        },
+        {
+          "time": "Optional",
+          "title": "Mesdames Linh meal",
+          "text": "Set lunch/dinner 420,000 VND/pax via tour desk (excl. 10% VAT)."
+        },
+        {
+          "time": "End",
+          "title": "Drop-off",
+          "text": "Back to your Old Quarter hotel."
+        }
+      ],
+      "servicesIncluded": [
+        "Vé thắng cảnh trong chương trình",
+        "Xe limousine hoặc Dcar",
+        "Hướng dẫn viên tiếng Anh",
+        "Wifi & 01 chai nước/chiều trên xe"
+      ],
+      "servicesIncludedEn": [
+        "Program entrance fees",
+        "Limousine or Dcar transfer",
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
         "English-speaking guide",
         "Entrance fees to all attractions mentioned in the itinerary",
         "Village access and permission fees",
@@ -3253,6 +3850,7 @@ window.TOUR_DATA = {
         "Handmade conical hat to take home"
       ],
       "servicesExcluded": [
+<<<<<<< HEAD
         "Chi phí cá nhân.",
         "Đồ uống trong bữa trưa.",
         "Các hoạt động không được đề cập trong lịch trình.",
@@ -3594,10 +4192,175 @@ window.TOUR_DATA = {
           "time": "12:00",
           "title": "Trả khách",
           "text": "Khi về đến Hà Nội, quý khách sẽ được đưa về khách sạn, kết thúc hành trình khám phá văn hóa và làng nghề truyền thống Hà Nội trong nửa ngày. Lưu ý: Nếu quý khách tham gia tour nửa ngày buổi sáng muốn đặt ăn trưa, xe và HDV sẽ đưa quý khách đến nhà hàng của công ty (79 Hàng Bồ) dùng bữa và sau khi ăn trưa xong, quý khách tự di chuyển về khách sạn."
+=======
+        "VAT",
+        "Bữa trưa (trừ khi đặt thêm)",
+        "Tip",
+        "Chi tiêu cá nhân",
+        "Phụ thu Tết: 15 USD/khách"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Lunch (unless added)",
+        "Tips",
+        "Personal expenses",
+        "Tet surcharge: 15 USD/guest"
+      ],
+      "serviceNote": "Group half day: limousine $59 · Dcar $69.",
+      "serviceNoteEn": "Group half day: limousine $59 · Dcar $69.",
+      "offers": [
+        "Sáng hoặc chiều",
+        "Limousine hoặc Dcar"
+      ],
+      "offersEn": [
+        "Morning or afternoon",
+        "Limousine or Dcar"
+      ],
+      "menuGallery": {
+        "title": "Set lunch Mesdames Linh",
+        "titleEn": "Mesdames Linh set lunch",
+        "images": [
+          {
+            "src": "img/menus/madameLinh/anh1.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh2.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh3.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh4.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh5.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-incense",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "Làng hương Quang Phú Cầu & Hà Nội",
+      "nameEn": "Incense craft village & Hanoi City",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 2128000,
+      "priceNote": "$86 Dcar · Private từ $125/2",
+      "priceNoteEn": "$86 Dcar · Private from $125/2",
+      "image": "img/tours/ha-noi-incense.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/incense-village.jpg",
+          "alt": "Làng hương – nón lá & chân hương đỏ",
+          "altEn": "Incense village – hats and red sticks"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/incense-aerial.jpg",
+          "alt": "Góc chụp từ trên cao",
+          "altEn": "High-angle check-in shot"
+        },
+        {
+          "type": "image",
+          "src": "img/venues/mesdames-linh-cozy.jpg",
+          "alt": "Mesdames Linh ấm cúng",
+          "altEn": "Cozy Mesdames Linh dining"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/temple-of-literature.jpg",
+          "alt": "Văn Miếu chiều",
+          "altEn": "Temple of Literature afternoon"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/hoa-lo-prison.jpg",
+          "alt": "Nhà tù Hỏa Lò",
+          "altEn": "Hoa Lo Prison"
+        },
+        {
+          "type": "image",
+          "src": "img/food/hanoi-spring-rolls.jpg",
+          "alt": "Nem rán / món Hà Nội",
+          "altEn": "Hanoi spring rolls"
+        }
+      ],
+      "cardLine": "Tour 2: sáng làng hương Quang Phú Cầu (hơn 100 năm), trưa Mesdames Linh, chiều Văn Miếu và Hỏa Lò. Chỉ Dcar nhóm nhỏ $86 — không limousine 19–20 chỗ. Private từ $125/2 khách.",
+      "cardLineEn": "Tour 2: morning Quang Phu Cau incense village (100+ years), Mesdames Linh lunch, afternoon Temple of Literature and Hoa Lo. Small-group Dcar only $86 — no 19–20 limousine. Private from $125/2 guests.",
+      "description": [
+        "Làng hương thủ công: nhuộm que, bó hương nhiều màu, gặp gia đình thợ, mua quà tại chỗ.",
+        "Group chỉ mở Dcar 7–9 chỗ ($86). Limousine 19–20 chỗ: N/A.",
+        "Private: sedan/CUV/van từ $125/2 khách · Dcar private từ $139/2 khách.",
+        "Set lunch Mesdames Linh đã gồm. Mặc kín khi vào đền chùa."
+      ],
+      "descriptionEn": [
+        "Artisan incense village: dyeing sticks, colorful bundles, meet a craft family, buy souvenirs on site.",
+        "Group runs on Dcar 7–9 seats only ($86). Limousine 19–20 seats: N/A.",
+        "Private: sedan/CUV/van from $125/2 guests · private Dcar from $139/2 guests.",
+        "Mesdames Linh set lunch included. Dress modestly at temples."
+      ],
+      "itinerary": [
+        {
+          "time": "07:45–08:15",
+          "title": "Đón khách",
+          "text": "Đón tại khách sạn phố cổ Hà Nội."
+        },
+        {
+          "time": "08:30",
+          "title": "Đi Quang Phú Cầu",
+          "text": "Làng hương sản xuất hơn 100 năm."
+        },
+        {
+          "time": "10:00",
+          "title": "Tham quan làng",
+          "text": "Đi bộ xem làm hương thủ công, gia đình nhuộm que, bó hương màu; mua quà lưu niệm."
+        },
+        {
+          "time": "11:00",
+          "title": "Về nội thành",
+          "text": "Lên Dcar về Hà Nội."
+        },
+        {
+          "time": "12:30",
+          "title": "Ăn trưa Mesdames Linh",
+          "text": "Set menu Việt tại Mesdames Linh Cuisine."
+        },
+        {
+          "time": "13:45–14:00",
+          "title": "Văn Miếu – Quốc Tử Giám",
+          "text": "Đại học quốc gia đầu tiên (1070)."
+        },
+        {
+          "time": "15:00",
+          "title": "Nhà tù Hỏa Lò",
+          "text": "“Maison Centrale” — lịch sử tù chính trị và tù binh."
+        },
+        {
+          "time": "16:00–16:30",
+          "title": "Kết thúc",
+          "text": "Trả khách phố cổ Hà Nội."
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
         }
       ],
       "itineraryEn": [
         {
+<<<<<<< HEAD
           "time": "7:15",
           "title": "Pickup",
           "text": "Our guide and driver will pick you up at your hotel in Hanoi Old Quarter, if your hotel is not located in Hanoi Old Quarter, we meet at Hanoi Opera House. Begin your full-day journey to discover Hanoi’s cultural heritage and traditional craft villages."
@@ -3638,6 +4401,59 @@ window.TOUR_DATA = {
       ],
       "servicesIncludedEn": [
         "Round-trip transfer from Hanoi Old Quarter by modern vehicle (Small group)",
+=======
+          "time": "07:45–08:15",
+          "title": "Pickup",
+          "text": "Pickup at your Old Quarter hotel."
+        },
+        {
+          "time": "08:30",
+          "title": "To Quang Phu Cau",
+          "text": "Incense village producing for over 100 years."
+        },
+        {
+          "time": "10:00",
+          "title": "Village visit",
+          "text": "Walk the artisan process, meet a dyeing family, colorful bundles, souvenirs."
+        },
+        {
+          "time": "11:00",
+          "title": "Back to the city",
+          "text": "Dcar return to Hanoi."
+        },
+        {
+          "time": "12:30",
+          "title": "Lunch at Mesdames Linh",
+          "text": "Vietnamese set menu at Mesdames Linh Cuisine."
+        },
+        {
+          "time": "13:45–14:00",
+          "title": "Temple of Literature",
+          "text": "Vietnam’s first national university (1070)."
+        },
+        {
+          "time": "15:00",
+          "title": "Hoa Lo Prison",
+          "text": "“Maison Centrale” — political prisoners and later POW history."
+        },
+        {
+          "time": "16:00–16:30",
+          "title": "End",
+          "text": "Old Quarter hotel drop-off."
+        }
+      ],
+      "servicesIncluded": [
+        "Set menu trưa tại Mesdames Linh Cuisine",
+        "Vé vào cửa & thắng cảnh",
+        "Xe Dcar limousine nhóm nhỏ (7–9 chỗ)",
+        "Hướng dẫn viên tiếng Anh",
+        "Wifi miễn phí, 01 chai nước/chiều trên xe"
+      ],
+      "servicesIncludedEn": [
+        "Set-menu lunch at Mesdames Linh Cuisine",
+        "Entrance & sightseeing fees",
+        "Small-group Dcar limousine (7–9 seats)",
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
         "English-speaking guide",
         "Entrance fees to all attractions mentioned in the itinerary",
         "Bottled water/person",
@@ -3645,17 +4461,32 @@ window.TOUR_DATA = {
         "Handmade conical hat to take home"
       ],
       "servicesExcluded": [
+<<<<<<< HEAD
         "Chi phí cá nhân.",
         "Các hoạt động không được đề cập trong lịch trình.",
         "Tiền boa và tiền tip",
         "Bữa trưa."
       ],
       "servicesExcludedEn": [
+=======
+        "VAT",
+        "Đồ uống trong bữa trưa",
+        "Tip hướng dẫn & tài xế",
+        "Chi tiêu cá nhân",
+        "Dịch vụ không ghi trong mục bao gồm",
+        "Phụ thu Tết: 15 USD/khách (30, mùng 1–3)"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Beverages at lunch",
+        "Tips for guide & driver",
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
         "Personal expenses",
         "Activities not mentioned in the itinerary",
         "Gratuities and tips (optional)",
         "Lunch"
       ],
+<<<<<<< HEAD
       "serviceNote": "VNĐ/khách vào ngày 30/4, 1/5, 2/9, 31/12 và 1/1. VNĐ/khách trong dịp Tết Nguyên đán Việt Nam: 05–08/02/2027.",
       "serviceNoteEn": ",000 VND/person on 30 April, 1 May, 2 September, 31 December, and 1 January ,000 VND/person during Vietnam Lunar New Year: 5–8 February 2027",
       "offers": [
@@ -9934,20 +10765,124 @@ window.TOUR_DATA = {
           }
         ]
       }
+=======
+      "serviceNote": "Group Dcar $86. Private: $125/2 · $109/3 · $105/4 · $99/5–6 · $95/7–8 · $80/9–10 · $75/11–12. Dcar private: $139/2 · $119/3 · $109/4 · $105/5–6 · $99/7–8 · $86/9.",
+      "serviceNoteEn": "Group Dcar $86. Private: $125/2 · $109/3 · $105/4 · $99/5–6 · $95/7–8 · $80/9–10 · $75/11–12. Private Dcar: $139/2 · $119/3 · $109/4 · $105/5–6 · $99/7–8 · $86/9.",
+      "offers": [
+        "Làng hương + city tour",
+        "Lunch Mesdames Linh",
+        "Dcar nhóm nhỏ"
+      ],
+      "offersEn": [
+        "Incense village + city tour",
+        "Mesdames Linh lunch",
+        "Small-group Dcar"
+      ],
+      "menuGallery": {
+        "title": "Set lunch Mesdames Linh",
+        "titleEn": "Mesdames Linh set lunch",
+        "images": [
+          {
+            "src": "img/menus/madameLinh/anh1.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh2.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh3.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh4.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          },
+          {
+            "src": "img/menus/madameLinh/anh5.jpg",
+            "alt": "Mesdames Linh",
+            "altEn": "Mesdames Linh"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+>>>>>>> 099e92da3bc25dad808871b1b53608aa0c4c6c82
     }
   ]
 };
 
-/* Tương thích util.js / trang mẫu cũ — Voyage chỉ dùng TOUR_DATA ở trên */
-window.DAHLIA = window.DAHLIA || {
-  hotel: {
-    name: "The Dahlia Hanoi",
-    email: window.TOUR_DATA.email,
-    phone: window.TOUR_DATA.phone,
-    phoneHref: "tel:+842400000000",
-    address: "18 Hàng Bông, Hoàn Kiếm, Hà Nội",
-    line: "Đến một nơi mới. Sống một trải nghiệm khác."
-  },
-  rooms: [],
-  tours: []
-};
+  function clone(v) {
+    return JSON.parse(JSON.stringify(v));
+  }
+
+  function normalize(raw) {
+    var data = clone(raw || {});
+    data.site = data.site || {};
+    data.hero = data.hero || { interval: 10000, slides: [] };
+    data.destinations = data.destinations || {};
+    data.tours = Array.isArray(data.tours) ? data.tours : [];
+    if (!Array.isArray(data.operators) || !data.operators.length) {
+      var legacy = data.partner || {};
+      data.operators = [{
+        id: "heritage",
+        name: legacy.name || "Heritage Vietnam Travel",
+        nameEn: legacy.nameEn || legacy.name || "Heritage Vietnam Travel",
+        hotline: legacy.hotline || "",
+        hotlineHref: legacy.hotlineHref || "",
+        website: legacy.website || "",
+        address: legacy.address || "",
+        active: true,
+        childrenPolicy: [],
+        childrenPolicyEn: []
+      }];
+    }
+    data.operators.forEach(function (op) {
+      op.childrenPolicy = Array.isArray(op.childrenPolicy) ? op.childrenPolicy : [];
+      op.childrenPolicyEn = Array.isArray(op.childrenPolicyEn) ? op.childrenPolicyEn : [];
+      if (op.active == null) op.active = true;
+    });
+    var fallbackId = data.operators[0].id;
+    data.tours.forEach(function (tour) {
+      if (!tour.operatorId) tour.operatorId = fallbackId;
+    });
+    var primary = null;
+    for (var i = 0; i < data.operators.length; i++) {
+      if (data.operators[i].active !== false) {
+        primary = data.operators[i];
+        break;
+      }
+    }
+    primary = primary || data.operators[0];
+    data.partner = {
+      id: primary.id,
+      name: primary.name || "",
+      hotline: primary.hotline || "",
+      hotlineHref: primary.hotlineHref || "",
+      website: primary.website || "",
+      address: primary.address || ""
+    };
+    data.email = data.site.email || data.email || "";
+    data.phone = data.site.phone || data.phone || "";
+    data.bank = data.site.bank || data.bank || {};
+    return data;
+  }
+
+  window.__CATALOGUE_RAW__ = RAW;
+  window.TOUR_DATA = normalize(RAW);
+  window.DAHLIA = window.DAHLIA || {
+    hotel: {
+      name: "The Dahlia Hanoi",
+      email: window.TOUR_DATA.email,
+      phone: window.TOUR_DATA.phone,
+      phoneHref: "tel:+842400000000",
+      address: "18 Hàng Bông, Hoàn Kiếm, Hà Nội",
+      line: "Đến một nơi mới. Sống một trải nghiệm khác."
+    },
+    rooms: [],
+    tours: []
+  };
+})();

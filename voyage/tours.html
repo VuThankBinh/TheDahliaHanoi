@@ -6,11 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="only light">
-  <title data-i18n="vo.tours.title">Tour — Mixi Voyage · The Dahlia Hanoi</title>
+  <title data-i18n="vo.tours.title">Tour — The Sinh Tourist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=48">
+  <link rel="stylesheet" href="css/style.css?v=50">
 </head>
 <body data-page="tours">
   <a class="skip" href="#content" data-i18n="skip">Đến nội dung</a>
@@ -62,6 +62,10 @@
       </div>
 
       <div class="filter-bar" style="margin-top:24px">
+        <div class="filter-row" id="operator-filters" role="group" aria-label="Đơn vị" data-i18n-aria="label.operator">
+          <span class="label" data-i18n="label.operator">Đơn vị</span>
+          <button type="button" class="chip is-on" data-group="operator" data-value="all" data-i18n="chip.all">Tất cả</button>
+        </div>
         <div class="filter-row" role="group" aria-label="Điểm đến" data-i18n-aria="label.dest">
           <span class="label" data-i18n="label.dest">Điểm đến</span>
           <button type="button" class="chip is-on" data-group="dest" data-value="all" data-i18n="chip.all">Tất cả</button>
@@ -111,7 +115,7 @@
     </div>
   </footer>
   <script src="../shared/util.js?v=6"></script>
-  <script src="../shared/data.js?v=16"></script>
-  <script src="js/app.js?v=46"></script>
+  <script src="../shared/data.js?v=17"></script>
+  <script src="js/app.js?v=49"></script>
 </body>
 </html>

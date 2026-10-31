@@ -1,7 +1,14 @@
 (function () {
   var U = window.Dahlia;
-  var DATA = window.TOUR_DATA || { tours: [], email: "hello@thedahliahanoi.com" };
-  var tours = DATA.tours || [];
+  var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "hello@thedahliahanoi.com" };
+  var tours = (DATA.tours || []).filter(function (tour) {
+    var list = DATA.operators || [];
+    var op = null;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === tour.operatorId) op = list[i];
+    }
+    return !op || op.active !== false;
+  });
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
   var PAY_KEY = "dahliaVoyagePay";
@@ -99,7 +106,7 @@
     "pay.honest": { vi: "Bản mẫu, quét QR chỉ để xem. Chưa trừ tiền thật.", en: "Sample only — scan to preview. No real charge." },
     "pay.qrFailLib": { vi: "Không tải được thư viện QR.", en: "Could not load the QR library." },
     "pay.qrFail": { vi: "Không tạo được mã QR.", en: "Could not create the QR code." },
-    "vo.pay.title": { vi: "Thanh toán — Mixi Voyage · The Dahlia Hanoi", en: "Payment — Mixi Voyage · The Dahlia Hanoi" },
+    "vo.pay.title": { vi: "Thanh toán — The Sinh Tourist", en: "Payment — The Sinh Tourist" },
     "vo.pay.titleMissing": { vi: "Không có thanh toán — Mixi Voyage", en: "No payment — Mixi Voyage" },
     "vo.home.title": { vi: "The Dahlia Hanoi — Mixi Voyage", en: "The Dahlia Hanoi — Mixi Voyage" },
     "vo.desc": { vi: "Đặt tour Việt Nam với The Dahlia — phong cách booking travel.", en: "Book Vietnam tours with The Dahlia — travel-booking style." },
@@ -122,6 +129,10 @@
     "vo.tours.p": { vi: "Ba tour nổi bật — Heritage Luxury, Signature, Ninh Bình. Bấm thẻ để xem lịch trình và đặt.", en: "Three featured trips — Heritage Luxury, Signature, Ninh Binh. Open a card for the itinerary and booking." },
     "partner.label": { vi: "Đối tác", en: "Partner" },
     "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
+    "label.operator": { vi: "Đơn vị", en: "Operator" },
+    "policy.h": { vi: "Chính sách trẻ em", en: "Children Policy" },
+    "policy.kicker": { vi: "Children Policy", en: "Children Policy" },
+    "policy.by": { vi: "Áp dụng chính sách của {name}. Tour này không ghi riêng.", en: "Using the {name} policy. This tour has no separate note." },
     "vo.dest.k": { vi: "Theo địa danh", en: "By destination" },
     "vo.dest.p": { vi: "Tour nổi bật tại điểm đến này — xem tất cả trên trang Tour.", en: "Featured tours for this destination — see the full list on Tours." },
     "vo.dest.more": { vi: "Xem tour địa danh", en: "See destination tours" },
@@ -150,12 +161,12 @@
     "contact.map.p": { vi: "Văn phòng The Dahlia — mở Google Maps để chỉ đường.", en: "The Dahlia office — open Google Maps for directions." },
     "contact.map.dir": { vi: "Chỉ đường Google Maps", en: "Directions on Google Maps" },
     "contact.map.open": { vi: "Mở trên Google Maps", en: "Open in Google Maps" },
-    "vo.tours.title": { vi: "Tour — Mixi Voyage · The Dahlia Hanoi", en: "Tours — Mixi Voyage · The Dahlia Hanoi" },
+    "vo.tours.title": { vi: "Tour — The Sinh Tourist", en: "Tours — The Sinh Tourist" },
     "vo.tours.page": { vi: "Chọn điểm đến, giữ chỗ", en: "Pick a destination, hold a place" },
     "vo.tours.lede": { vi: "Lọc theo điểm đến, hạng sao và giá. Mỗi địa điểm có tiêu đề riêng ở đầu nhóm tour.", en: "Filter by destination, star tier, and price. Each place opens with its own title above the tours." },
-    "vo.book.title": { vi: "Đặt tour — Mixi Voyage · The Dahlia Hanoi", en: "Book a tour — Mixi Voyage · The Dahlia Hanoi" },
+    "vo.book.title": { vi: "Đặt tour — The Sinh Tourist", en: "Book a tour — The Sinh Tourist" },
     "vo.book.h": { vi: "Chọn tour rồi giữ chỗ", en: "Choose a tour, then hold a place" },
-    "vo.contact.title": { vi: "Liên hệ — Mixi Voyage · The Dahlia Hanoi", en: "Contact — Mixi Voyage · The Dahlia Hanoi" },
+    "vo.contact.title": { vi: "Liên hệ — The Sinh Tourist", en: "Contact — The Sinh Tourist" },
     "vo.contact.h": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
     "vo.contact.lede": { vi: "Form mở thư tới hello@thedahliahanoi.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to hello@thedahliahanoi.com. Fill it in so we can answer quickly." },
     "vo.contact.hours": { vi: "Chỉ đặt tour · phản hồi trong giờ hành chính", en: "Tours only · replies in business hours" },
@@ -346,6 +357,50 @@
       if (tours[i].id === id) return tours[i];
     }
     return null;
+  }
+
+  function operators() {
+    return (DATA.operators || []).filter(function (op) { return op && op.active !== false; });
+  }
+
+  function operatorById(id) {
+    var list = DATA.operators || [];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === id) return list[i];
+    }
+    return null;
+  }
+
+  function operatorLabel(tour) {
+    var op = operatorById(tour && tour.operatorId);
+    if (!op) return "";
+    return field(op, "name");
+  }
+
+  function policyLines(entity) {
+    if (!entity) return [];
+    if (U.lang() === "en" && entity.childrenPolicyEn && entity.childrenPolicyEn.length) return entity.childrenPolicyEn;
+    if (entity.childrenPolicy && entity.childrenPolicy.length) return entity.childrenPolicy;
+    return [];
+  }
+
+  function childrenPolicyHtml(tour) {
+    var own = policyLines(tour);
+    var op = operatorById(tour && tour.operatorId);
+    var lines = own.length ? own : policyLines(op);
+    if (!lines.length) return "";
+    var by = !own.length && op
+      ? '<p class="hint">' + U.escapeHtml(t("policy.by", { name: field(op, "name") })) + "</p>"
+      : "";
+    var kicker = U.lang() === "en"
+      ? ""
+      : '<p class="eyebrow policy-kicker">' + U.escapeHtml(t("policy.kicker")) + "</p>";
+    return '<section class="policy-block" aria-label="' + U.escapeHtml(t("policy.h")) + '">' +
+      kicker +
+      "<h2>" + U.escapeHtml(t("policy.h")) + "</h2>" +
+      by +
+      listHtml(lines) +
+      "</section>";
   }
 
   function queryId() {
@@ -731,6 +786,7 @@
       '<div class="card-meta-row">' +
       stars +
       '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
+      (opName ? '<p class="meta op-meta">' + U.escapeHtml(opName) + "</p>" : "") +
       "</div>" +
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
       '<p class="desc is-lines" data-card-line="' + U.escapeHtml(line) + '">' +
@@ -1937,7 +1993,7 @@
     var destToolbar = document.getElementById("tours-dest-toolbar");
     var bookFloat = document.getElementById("detail-book-float");
     var bookFloatObserver = null;
-    var state = { dest: "all", price: "all", stars: "all" };
+    var state = { dest: "all", price: "all", stars: "all", operator: "all" };
     var currentId = null;
     var lastHeroDest = null;
     var saved = readSearch();
@@ -1945,6 +2001,7 @@
     if (q.get("dest")) state.dest = resolveDestId(q.get("dest"));
     else if (saved.destination) state.dest = resolveDestId(saved.destination);
     if (q.get("stars")) state.stars = q.get("stars");
+    if (q.get("op")) state.operator = q.get("op");
 
     function hideBookFloat() {
       if (!bookFloat) return;
@@ -1989,6 +2046,7 @@
       var params = new URLSearchParams();
       if (state.dest !== "all") params.set("dest", state.dest);
       if (state.stars !== "all") params.set("stars", state.stars);
+      if (state.operator !== "all") params.set("op", state.operator);
       var qs = params.toString();
       return qs ? "tours.html?" + qs : "tours.html";
     }
@@ -2041,6 +2099,23 @@
       if (allBtn) allBtn.classList.toggle("is-on", state.dest === "all");
     }
 
+    function buildOperatorChips() {
+      var row = document.getElementById("operator-filters");
+      if (!row) return;
+      var allBtn = row.querySelector('[data-value="all"]');
+      row.querySelectorAll('.chip[data-group="operator"]:not([data-value="all"])').forEach(function (c) { c.remove(); });
+      operators().forEach(function (op) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip";
+        btn.dataset.group = "operator";
+        btn.dataset.value = op.id;
+        btn.textContent = field(op, "name");
+        row.appendChild(btn);
+      });
+      if (allBtn) allBtn.classList.toggle("is-on", state.operator === "all");
+    }
+
     function starsOk(tour, band) {
       if (band === "all") return true;
       var n = tourStars(tour);
@@ -2052,6 +2127,7 @@
 
     function filtered() {
       return tours.filter(function (tour) {
+        if (state.operator !== "all" && tour.operatorId !== state.operator) return false;
         if (state.dest !== "all" && resolveDestId(tour.destination) !== state.dest) return false;
         if (!priceOk(tour, state.price)) return false;
         return starsOk(tour, state.stars);
@@ -2064,6 +2140,7 @@
 
     function renderCards() {
       buildDestChips();
+      buildOperatorChips();
       updateDestHero();
       syncListUrl();
       var items = filtered();
@@ -2162,7 +2239,8 @@
         "</div>" +
         detailSlideshowHtml(tour) +
         '<div class="wrap detail-below">' +
-        '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
+        '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) +
+        (operatorLabel(tour) ? " · " + U.escapeHtml(operatorLabel(tour)) : "") + "</p>" +
         '<div class="detail-body">' +
         '<div class="detail-copy">' +
         '<p class="lede seq card-line is-lines" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +
@@ -2178,6 +2256,7 @@
         "<h3>" + U.escapeHtml(t("svc.in")) + "</h3>" + listHtml(included) +
         (serviceNote ? '<p class="hint">' + U.escapeHtml(serviceNote) + "</p>" : "") +
         "<h3>" + U.escapeHtml(t("svc.out")) + "</h3>" + listHtml(excluded) +
+        childrenPolicyHtml(tour) +
         "<h3>" + U.escapeHtml(t("svc.offers")) + "</h3>" + listHtml(offers) +
         menuGalleryHtml(tour) +
         "</div>" +
@@ -2226,6 +2305,7 @@
         if (next.get("dest")) state.dest = resolveDestId(next.get("dest"));
         else state.dest = "all";
         if (next.get("stars")) state.stars = next.get("stars");
+        state.operator = next.get("op") || "all";
         showList(false);
       }
     });
