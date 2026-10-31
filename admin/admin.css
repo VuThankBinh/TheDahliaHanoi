@@ -1,5 +1,5 @@
 :root {
-  --bg: #FBF8F4;
+  --bg: #FFFFFF;
   --paper: #fff;
   --ink: #1A1A1A;
   --brown: #3C2A1E;
@@ -11,9 +11,13 @@
   --sans: Manrope, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
+html {
+  color-scheme: only light;
+  background: #fff;
+}
 body {
   margin: 0;
-  background: var(--bg);
+  background: #fff;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 15px;
@@ -103,7 +107,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; }
   width: 100%;
   font: inherit;
   color: var(--ink);
-  background: #fffdf9;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 8px 10px;
@@ -129,7 +133,7 @@ label { display: grid; gap: 4px; font-size: 13px; font-weight: 700; color: var(-
 textarea { min-height: 96px; resize: vertical; }
 textarea.tall { min-height: 180px; }
 .json-wrap textarea { min-height: 70vh; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
-.media-field { background: #fffdf9; }
+.media-field { background: #fff; }
 .media-tools {
   display: flex;
   flex-wrap: wrap;
@@ -165,7 +169,7 @@ textarea.tall { min-height: 180px; }
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
-  background: var(--cream);
+  background: #fff;
   min-height: 96px;
 }
 .thumb img, .thumb-single img {
@@ -222,4 +226,16 @@ fieldset {
 @media (max-width: 900px) {
   .top, .split, .grid-2, .media-board { display: grid; grid-template-columns: 1fr; }
   h1 { font-size: 34px; }
+}
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: #fff !important;
+    color: #1A1A1A;
+    color-scheme: only light;
+  }
+  input, select, textarea, option {
+    background-color: #fff !important;
+    color: #1A1A1A;
+    color-scheme: only light;
+  }
 }

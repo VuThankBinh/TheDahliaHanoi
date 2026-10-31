@@ -1,5 +1,5 @@
 :root {
-  --bg: #FBF8F4;
+  --bg: #FFFFFF;
   --paper: #FFFFFF;
   --ink: #1A1A1A;
   --brown: #3C2A1E;
@@ -16,12 +16,12 @@
 html, body { margin: 0; }
 html {
   color-scheme: only light;
-  background-color: #FBF8F4;
+  background-color: #fff;
   color: #1A1A1A;
   overflow-x: clip;
 }
 body {
-  background-color: #FBF8F4;
+  background-color: #fff;
   background: var(--bg);
   color: #1A1A1A;
   font-family: var(--sans);

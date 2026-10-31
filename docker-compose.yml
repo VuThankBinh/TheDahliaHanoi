@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    image: thedahlia-voyage
+    ports:
+      - "4173:4173"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4173
+    volumes:
+      - ./shared:/app/shared
+      - ./voyage/img:/app/voyage/img

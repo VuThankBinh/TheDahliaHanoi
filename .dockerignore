@@ -1,0 +1,14 @@
+.git
+.vscode
+.kilo
+node_modules
+0.catalogue
+0.linh
+raw_docs
+scripts
+css
+js
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore

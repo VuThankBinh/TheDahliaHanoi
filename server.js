@@ -8,7 +8,7 @@ const path = require("path");
 const { writeCatalogue, ROOT } = require("./tools/catalogue-io");
 
 const PORT = Number(process.env.PORT) || 4173;
-const HOST = "127.0.0.1";
+const HOST = process.env.HOST || "127.0.0.1";
 const root = path.resolve(ROOT);
 const MAX_CATALOGUE = 8 * 1024 * 1024;
 const MAX_UPLOAD = 12 * 1024 * 1024;
@@ -204,6 +204,7 @@ const server = http.createServer(function (req, res) {
 });
 
 server.listen(PORT, HOST, function () {
-  console.log("Quản trị: http://" + HOST + ":" + PORT + "/admin/");
-  console.log("Trang tour: http://" + HOST + ":" + PORT + "/voyage/");
+  const shown = HOST === "0.0.0.0" || HOST === "::" ? "127.0.0.1" : HOST;
+  console.log("Quản trị: http://" + shown + ":" + PORT + "/admin/");
+  console.log("Trang tour: http://" + shown + ":" + PORT + "/voyage/");
 });
