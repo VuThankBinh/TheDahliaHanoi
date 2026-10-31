@@ -1,35 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
+const catalogueIo = require('../tools/catalogue-io');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const DATA_JS_PATH = path.join(ROOT_DIR, 'shared', 'data.js');
-const APP_JS_PATH = path.join(ROOT_DIR, 'voyage', 'js', 'app.js');
 const TOURS_JSON_PATH = path.join(ROOT_DIR, 'tours.json');
 
-// Read existing data.js
-let dataJsContent = fs.readFileSync(DATA_JS_PATH, 'utf8');
+// Read existing catalogue.json
+const cat = JSON.parse(fs.readFileSync(catalogueIo.JSON_PATH, 'utf8'));
 
-// Verify existing file evaluates cleanly
-const sandbox = { window: {} };
-vm.createContext(sandbox);
-vm.runInContext(dataJsContent, sandbox);
-const existingData = sandbox.window.TOUR_DATA;
-
-// Filter out legacy Hanoi tours (ha-noi, ha-noi-half, ha-noi-incense)
-// which used old non-folder images and created duplicate entries.
-const preservedTours = existingData.tours.filter(t => {
-  return t.destination !== 'ha-noi' && t.destination !== 'sapa';
-});
-console.log(`Preserved ${preservedTours.length} base tours (Ha Long & Ninh Binh). Removed legacy Hanoi/Sapa tours.`);
-
-// Read fresh tours from tours.json
-const newToursData = JSON.parse(fs.readFileSync(TOURS_JSON_PATH, 'utf8'));
-const newTours = newToursData.tours;
-console.log(`Loaded ${newTours.length} authoritative tours from tours.json.`);
-
-// 1. Add 'sapa' destination to destinations in data.js if not already present
-const sapaDest = {
+// 1. Add sapa destination if missing
+cat.destinations.sapa = cat.destinations.sapa || {
   id: "sapa",
   name: "Sa Pa",
   nameEn: "Sapa",
@@ -43,59 +23,37 @@ const sapaDest = {
   ]
 };
 
-// 2. Add hero slide for Sapa if not present
-const sapaHeroSlide = {
-  type: "image",
-  place: "sapa",
-  poster: "img/tours/sapa-placeholder.jpg",
-  src: "img/tours/sapa-placeholder.jpg",
-  alt: "Highlight Sa Pa",
-  altEn: "Sapa highlight"
-};
-
-existingData.destinations.sapa = existingData.destinations.sapa || sapaDest;
-
-const hasSapaHero = existingData.hero.slides.some(s => s.place === 'sapa');
-if (!hasSapaHero) {
-  existingData.hero.slides.push(sapaHeroSlide);
+// 2. Add sapa hero slide if missing
+if (!cat.hero.slides.some(s => s.place === 'sapa')) {
+  cat.hero.slides.push({
+    type: "image",
+    place: "sapa",
+    poster: "img/tours/sapa-placeholder.jpg",
+    src: "img/tours/sapa-placeholder.jpg",
+    alt: "Highlight Sa Pa",
+    altEn: "Sapa highlight"
+  });
 }
 
-// Combine preserved tours + authoritative tours from tours.json
-existingData.tours = preservedTours.concat(newTours);
-console.log(`Total tours in final catalogue: ${existingData.tours.length}`);
+// 3. Preserve 12 base tours (Halong & Ninh Binh)
+const preservedTours = cat.tours.filter(t => t.destination !== 'ha-noi' && t.destination !== 'sapa');
+console.log(`Preserved ${preservedTours.length} base tours (Ha Long & Ninh Binh).`);
 
-// Construct updated shared/data.js
-const headerComment = `/**
- * Nguồn dữ liệu chính cho Voyage (slideshow, điểm đến, tour, form…).
- * Sửa file này rồi hard-refresh — app đọc từ window.TOUR_DATA.
- *
- * Đường dẫn ảnh: tương đối trang voyage/*.html → dùng "img/..."
- */
-`;
+// 4. Load 25 authoritative tours from tours.json
+const newToursData = JSON.parse(fs.readFileSync(TOURS_JSON_PATH, 'utf8'));
+const newTours = newToursData.tours.map(t => {
+  if (t.destination === 'sapa') {
+    t.operatorId = 'may';
+  } else {
+    t.operatorId = 'heritage';
+  }
+  return t;
+});
 
-const updatedDataJs = `${headerComment}window.TOUR_DATA = ${JSON.stringify(existingData, null, 2)};
+// 5. Combine to 37 tours
+cat.tours = preservedTours.concat(newTours);
+console.log(`Total tours to write: ${cat.tours.length}`);
 
-/* Tương thích util.js / trang mẫu cũ — Voyage chỉ dùng TOUR_DATA ở trên */
-window.DAHLIA = window.DAHLIA || {
-  hotel: {
-    name: "The Dahlia Hanoi",
-    email: window.TOUR_DATA.email,
-    phone: window.TOUR_DATA.phone,
-    phoneHref: "tel:+842400000000",
-    address: "18 Hàng Bông, Hoàn Kiếm, Hà Nội",
-    line: "Đến một nơi mới. Sống một trải nghiệm khác."
-  },
-  rooms: [],
-  tours: []
-};
-`;
-
-// Test the updated dataJs in vm before writing to disk
-const testSandbox = { window: {} };
-vm.createContext(testSandbox);
-vm.runInContext(updatedDataJs, testSandbox);
-console.log(`Verified updated data.js syntax and VM execution: ${testSandbox.window.TOUR_DATA.tours.length} total tours!`);
-
-// Write updated shared/data.js
-fs.writeFileSync(DATA_JS_PATH, updatedDataJs, 'utf8');
-console.log(`Saved updated shared/data.js!`);
+// 6. Write through catalogue-io to update both shared/catalogue.json and shared/data.js
+catalogueIo.writeCatalogue(cat);
+console.log('SUCCESS: Updated shared/catalogue.json and shared/data.js via catalogue-io!');

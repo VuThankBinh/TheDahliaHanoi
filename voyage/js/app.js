@@ -764,6 +764,7 @@
       : "";
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
+    var opName = operatorLabel(tour);
     var contactLabel = noteText || t("contact");
     var priceBadge = !isContact
       ? '<span class="price-badge">' + U.money(tour.price) + "</span>"
