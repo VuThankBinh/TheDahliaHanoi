@@ -1964,3 +1964,101 @@ body.menu-lb-open { overflow: hidden; }
   font-weight: 700;
 }
 
+
+/* Pricing Section & Options Table */
+.pricing-section {
+  margin: 28px 0 20px;
+}
+.pricing-section h2 {
+  margin: 0 0 14px;
+}
+.pricing-card-box {
+  background: #FFFFFF;
+  border: 1px solid var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pricing-banner-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--cream);
+}
+.pricing-banner-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pricing-banner-price {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--brown);
+  font-weight: 700;
+}
+.pricing-subgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pricing-subgroup h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: 0.02em;
+}
+.pricing-table-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pricing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 14px;
+}
+.pricing-row .pricing-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+.pricing-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pricing-pill.pill-option {
+  background: color-mix(in srgb, var(--flower) 15%, transparent);
+  color: var(--brown);
+  border: 1px solid color-mix(in srgb, var(--flower) 35%, transparent);
+}
+.pricing-pill.pill-surcharge {
+  background: #FFF3E0;
+  color: #B76E00;
+  border: 1px solid #FFE0B2;
+}
+.pricing-policy-list {
+  margin: 0;
+  padding-left: 20px;
+}
+.pricing-policy-list li {
+  font-size: 13px;
+  color: var(--body);
+  margin-bottom: 4px;
+}

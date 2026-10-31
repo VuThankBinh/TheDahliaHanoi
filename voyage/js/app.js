@@ -7,6 +7,9 @@
   var PAY_KEY = "dahliaVoyagePay";
 
   var DEST_LABEL = {
+    "sapa": { vi: "Sa Pa", en: "Sapa" },
+    "Sa Pa": { vi: "Sa Pa", en: "Sapa" },
+    "Sapa": { vi: "Sa Pa", en: "Sapa" },
     "ha-long": { vi: "Hạ Long", en: "Ha Long" },
     "ninh-binh": { vi: "Ninh Bình", en: "Ninh Binh" },
     "ha-noi": { vi: "Hà Nội", en: "Hanoi" },
@@ -17,6 +20,8 @@
   };
 
   var DEST_NAME_TO_ID = {
+    "Sa Pa": "sapa",
+    "Sapa": "sapa",
     "Hạ Long": "ha-long",
     "Ninh Bình": "ninh-binh",
     "Hà Nội": "ha-noi"
@@ -192,7 +197,14 @@
     "back.arrow": { vi: "← Quay lại danh sách", en: "← Back to the list" },
     "price.each": { vi: "Giá mỗi khách", en: "Per guest" },
     "price.sample": { vi: "Giá minh họa.", en: "Sample rate." },
-    "choose.tour": { vi: "Chọn tour", en: "Choose a tour" }
+    "choose.tour": { vi: "Chọn tour", en: "Choose a tour" },
+    "price.table": { vi: "Bảng giá chi tiết & Dịch vụ tùy chọn", en: "Pricing Details & Optional Add-ons" },
+    "price.baseRate": { vi: "Giá tour trọn gói", en: "Base package rate" },
+    "price.options": { vi: "Dịch vụ & Tùy chọn trải nghiệm", en: "Optional Experiences" },
+    "price.surcharges": { vi: "Phụ thu ngày lễ & Dịch vụ", en: "Surcharges & Extra Services" },
+    "price.childPolicy": { vi: "Chính sách giá trẻ em", en: "Child Pricing Policy" },
+    "price.onDemand": { vi: "Báo giá theo lịch trình và số khách", en: "Quote based on itinerary and guests" },
+    "contact": { vi: "Liên hệ", en: "Contact" }
   };
 
   var _sharedT = U.t;
@@ -327,6 +339,9 @@
   }
 
   function tourById(id) {
+    if (id === "ha-noi") id = "ha-noi-traditional-1d";
+    else if (id === "ha-noi-half") id = "ha-noi-traditional-half-morning";
+    else if (id === "ha-noi-incense") id = "ha-noi-city-craft-1d";
     for (var i = 0; i < tours.length; i++) {
       if (tours[i].id === id) return tours[i];
     }
@@ -667,6 +682,7 @@
 
   function priceOk(tour, band) {
     if (band === "all") return true;
+    if (!tour.price || tour.price <= 0) return true;
     if (band === "under") return tour.price < 1000000;
     if (band === "mid") return tour.price >= 1000000 && tour.price <= 2500000;
     if (band === "over") return tour.price > 2500000;
@@ -686,11 +702,21 @@
   }
 
   function tourCardHtml(tour, href) {
-    var note = field(tour, "priceNote")
-      ? '<p class="price-note">' + U.escapeHtml(field(tour, "priceNote")) + "</p>"
+    var isContact = !tour.price || tour.price <= 0;
+    var noteText = field(tour, "priceNote");
+    var note = (!isContact && noteText)
+      ? '<p class="price-note">' + U.escapeHtml(noteText) + "</p>"
       : "";
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
+    var contactLabel = noteText || t("contact");
+    var priceBadge = !isContact
+      ? '<span class="price-badge">' + U.money(tour.price) + "</span>"
+      : '<span class="price-badge">' + U.escapeHtml(contactLabel) + "</span>";
+    var priceFoot = !isContact
+      ? '<span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>"
+      : '<span class="price">' + U.escapeHtml(contactLabel) + "</span>";
+
     return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
       '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
@@ -698,7 +724,7 @@
         ? '<span class="stars-badge" aria-label="' + U.escapeHtml(t("stars.of", { n: tourStars(tour) })) + '">' +
           "★".repeat(tourStars(tour)) + "</span>"
         : "") +
-      '<span class="price-badge">' + U.money(tour.price) + "</span>" +
+      priceBadge +
       '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
       "</div>" +
       '<div class="body">' +
@@ -710,7 +736,7 @@
       '<p class="desc is-lines" data-card-line="' + U.escapeHtml(line) + '">' +
       formatCardLineHtml(line) + "</p>" +
       note +
-      '<div class="foot-row"><span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>" +
+      '<div class="foot-row">' + priceFoot +
       '<span class="link-more" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + "</span></div>" +
       "</div></a>";
   }
@@ -720,6 +746,68 @@
     return "<ul class=\"svc-list\">" + items.map(function (line) {
       return "<li>" + U.escapeHtml(line) + "</li>";
     }).join("") + "</ul>";
+  }
+
+    function pricingTableHtml(tour) {
+    var pt = tour.pricingTable;
+    if (!pt) return "";
+    var isEn = U.lang() === "en";
+    var out = '<section class="pricing-section" aria-label="' + U.escapeHtml(t("price.table")) + '">';
+    out += '<h2>' + U.escapeHtml(t("price.table")) + '</h2>';
+    out += '<div class="pricing-card-box">';
+
+    var baseRate = isEn ? (pt.baseRateEn || pt.baseRate) : (pt.baseRate || pt.baseRateEn);
+    if (baseRate) {
+      out += '<div class="pricing-banner-row">' +
+        '<span class="pricing-banner-label">' + U.escapeHtml(t("price.baseRate")) + '</span>' +
+        '<strong class="pricing-banner-price">' + U.escapeHtml(baseRate) + '</strong>' +
+        '</div>';
+    }
+
+    if (pt.options && pt.options.length) {
+      out += '<div class="pricing-subgroup">' +
+        '<h4>' + U.escapeHtml(t("price.options")) + '</h4>' +
+        '<div class="pricing-table-rows">';
+      pt.options.forEach(function (opt) {
+        var name = isEn ? (opt.nameEn || opt.name) : (opt.name || opt.nameEn);
+        var price = isEn ? (opt.priceEn || opt.price) : (opt.price || opt.priceEn);
+        out += '<div class="pricing-row">' +
+          '<span class="pricing-name">' + U.escapeHtml(name) + '</span>' +
+          '<span class="pricing-pill pill-option">' + U.escapeHtml(price) + '</span>' +
+          '</div>';
+      });
+      out += '</div></div>';
+    }
+
+    if (pt.surcharges && pt.surcharges.length) {
+      out += '<div class="pricing-subgroup">' +
+        '<h4>' + U.escapeHtml(t("price.surcharges")) + '</h4>' +
+        '<div class="pricing-table-rows">';
+      pt.surcharges.forEach(function (sur) {
+        var name = isEn ? (sur.nameEn || sur.name) : (sur.name || sur.nameEn);
+        var price = isEn ? (sur.priceEn || sur.price) : (sur.price || sur.priceEn);
+        out += '<div class="pricing-row">' +
+          '<span class="pricing-name">' + U.escapeHtml(name) + '</span>' +
+          '<span class="pricing-pill pill-surcharge">' + U.escapeHtml(price) + '</span>' +
+          '</div>';
+      });
+      out += '</div></div>';
+    }
+
+    if (pt.childPolicy && pt.childPolicy.length) {
+      out += '<div class="pricing-subgroup">' +
+        '<h4>' + U.escapeHtml(t("price.childPolicy")) + '</h4>' +
+        '<ul class="svc-list pricing-policy-list">';
+      pt.childPolicy.forEach(function (cp) {
+        var name = isEn ? (cp.nameEn || cp.name) : (cp.name || cp.nameEn);
+        var desc = isEn ? (cp.descEn || cp.desc) : (cp.desc || cp.descEn);
+        out += '<li><strong>' + U.escapeHtml(name) + ':</strong> ' + U.escapeHtml(desc) + '</li>';
+      });
+      out += '</ul></div>';
+    }
+
+    out += '</div></section>';
+    return out;
   }
 
   function itineraryHtml(tour) {
@@ -1412,9 +1500,12 @@
       guestOptions += '<option value="' + n + '"' + (n === guests ? " selected" : "") + ">" + n + "</option>";
     }
     var note = field(tour, "priceNote") ? " · " + U.escapeHtml(field(tour, "priceNote")) : "";
+    var unitLine = tour.price > 0
+      ? '<p class="unit">' + U.escapeHtml(t("book.unit")) + U.money(tour.price) + U.escapeHtml(t("perGuest")) + note + "</p>"
+      : '<p class="unit"><strong>' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + "</strong></p>";
     return '<form class="book-form" id="book-form" novalidate>' +
       "<h2>" + U.escapeHtml(t("book.h")) + "</h2>" +
-      '<p class="unit">' + U.escapeHtml(t("book.unit")) + U.money(tour.price) + U.escapeHtml(t("perGuest")) + note + "</p>" +
+      unitLine +
       "<label><span>" + U.escapeHtml(t("book.date")) + '</span><input id="book-date" name="date" type="date" value="' + U.escapeHtml(date) + '" min="' + U.isoOffset(0) + '" required></label>' +
       "<label><span>" + U.escapeHtml(t("book.name")) + '</span><input id="book-name" name="name" type="text" autocomplete="name" required></label>' +
       "<label><span>" + U.escapeHtml(t("book.wa")) + '</span><input id="book-phone" name="phone" type="tel" autocomplete="tel" required></label>' +
@@ -1452,9 +1543,15 @@
 
     function quote() {
       var q = quoteState(tour, document.getElementById("book-guests").value);
-      totalEl.textContent = U.money(q.total);
-      totalEl.dataset.amount = String(q.total);
-      mathEl.textContent = q.count + " × " + U.money(tour.price);
+      if (tour.price > 0) {
+        totalEl.textContent = U.money(q.total);
+        totalEl.dataset.amount = String(q.total);
+        mathEl.textContent = q.count + " × " + U.money(tour.price);
+      } else {
+        totalEl.textContent = U.escapeHtml(field(tour, "priceNote") || t("contact"));
+        totalEl.dataset.amount = "0";
+        mathEl.textContent = U.escapeHtml(t("price.onDemand"));
+      }
       syncEnd();
       return q;
     }
@@ -2056,8 +2153,11 @@
         (destInfo.lead ? '<p class="detail-dest-lead">' + U.escapeHtml(destInfo.lead) + "</p>" : "") +
         '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
         starsHtml(tour, { showTier: true, className: "detail-stars" }) +
-        '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
-        (priceNote ? " · " + U.escapeHtml(priceNote) : "") + "</p>" +
+        '<p class="price-line">' +
+        (tour.price > 0
+          ? '<strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" + (priceNote ? " · " + U.escapeHtml(priceNote) : "")
+          : '<strong>' + U.escapeHtml(priceNote || t("contact")) + "</strong>") +
+        "</p>" +
         "</div>" +
         "</div>" +
         detailSlideshowHtml(tour) +
@@ -2073,6 +2173,7 @@
         "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
         "</div>" +
         itineraryHtml(tour) +
+        pricingTableHtml(tour) +
         "<h2>" + U.escapeHtml(t("svc.h")) + "</h2>" +
         "<h3>" + U.escapeHtml(t("svc.in")) + "</h3>" + listHtml(included) +
         (serviceNote ? '<p class="hint">' + U.escapeHtml(serviceNote) + "</p>" : "") +
@@ -2180,7 +2281,11 @@
         "<h1>" + U.escapeHtml(field(tour, "name")) + "</h1>" +
         '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         "<p>" + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
-        '<p class="price-line"><strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span></p>" +
+        '<p class="price-line">' +
+        (tour.price > 0
+          ? '<strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>"
+          : '<strong>' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + "</strong>") +
+        "</p>" +
         '<div class="when">' +
         "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
         "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
