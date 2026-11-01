@@ -1,8 +1,10 @@
 {
   "version": 2,
   "site": {
-    "email": "hello@thedahliahanoi.com",
-    "phone": "+84 24 0000 0000",
+    "email": "thedahliatour@gmail.com",
+    "phone": "0902 271 396",
+    "phoneAlt": "0934 587 078",
+    "address": "23 Lâm Du, Bồ Đề, Hà Nội",
     "bank": {
       "name": "MB Bank",
       "accountName": "Công ty The Dahlia",

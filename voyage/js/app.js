@@ -1,6 +1,6 @@
 (function () {
   var U = window.Dahlia;
-  var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "hello@thedahliahanoi.com" };
+  var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "thedahliatour@gmail.com" };
   var tours = (DATA.tours || []).filter(function (tour) {
     var list = DATA.operators || [];
     var op = null;
@@ -11,7 +11,6 @@
   });
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
-  var PAY_KEY = "dahliaVoyagePay";
 
   var DEST_LABEL = {
     "sapa": { vi: "Sa Pa", en: "Sapa" },
@@ -67,7 +66,6 @@
     "btn.viewTours": { vi: "Xem tour", en: "View tours" },
     "btn.filterTours": { vi: "Xem tất cả tour", en: "See all tours" },
     "btn.bookTour": { vi: "Đặt tour", en: "Book tour" },
-    "btn.pay": { vi: "Thanh toán", en: "Pay" },
     "btn.hold": { vi: "Đặt tour này", en: "Book this tour" },
     "chip.under1m": { vi: "Dưới 1.000.000đ", en: "Under 1,000,000đ" },
     "chip.mid2m": { vi: "1–2.500.000đ", en: "1–2,500,000đ" },
@@ -75,7 +73,7 @@
     "empty.tours": { vi: "Không có tour khớp điểm đến này.", en: "No tours for this destination." },
     "empty.toursMore": { vi: "Không có tour khớp bộ lọc này. Thử bỏ bớt điều kiện.", en: "No tour matches. Try removing a filter." },
     "hint.mailTour": { vi: "Yêu cầu được gửi về mail qua ứng dụng thư của bạn.", en: "The request opens in your mail app." },
-    "footer.voyage": { vi: "The Dahlia Voyage · chỉ tour, không phòng · thông tin liên hệ dùng cho bản mẫu.", en: "The Dahlia Voyage · tours only, no rooms · contact details are for this mockup." },
+    "footer.voyage": { vi: "The Dahlia Voyage · chỉ tour, không phòng.", en: "The Dahlia Voyage · tours only, no rooms." },
     "reviews.k": { vi: "Đánh giá", en: "Reviews" },
     "reviews.h": { vi: "Khách đã đi", en: "Guests who went" },
     "reviews.p": { vi: "Một vài chuyến gần đây — chi tiết cụ thể, không lời khen chung chung.", en: "A few recent trips — specific notes, not generic praise." },
@@ -103,16 +101,6 @@
     "detail.start": { vi: "Ngày bắt đầu", en: "Start date" },
     "detail.end": { vi: "Ngày kết thúc", en: "End date" },
     "detail.default": { vi: "mặc định", en: "default" },
-    "pay.missing": { vi: "Không có thông tin thanh toán.", en: "No payment details." },
-    "pay.home": { vi: "Về trang chủ", en: "Back home" },
-    "pay.h": { vi: "Thanh toán", en: "Payment" },
-    "pay.guests": { vi: " khách", en: " guests" },
-    "pay.qr": { vi: "Mã QR chuyển khoản", en: "Bank transfer QR" },
-    "pay.honest": { vi: "Bản mẫu, quét QR chỉ để xem. Chưa trừ tiền thật.", en: "Sample only — scan to preview. No real charge." },
-    "pay.qrFailLib": { vi: "Không tải được thư viện QR.", en: "Could not load the QR library." },
-    "pay.qrFail": { vi: "Không tạo được mã QR.", en: "Could not create the QR code." },
-    "vo.pay.title": { vi: "Thanh toán — The Sinh Tourist", en: "Payment — The Sinh Tourist" },
-    "vo.pay.titleMissing": { vi: "Không có thanh toán — Mixi Voyage", en: "No payment — Mixi Voyage" },
     "vo.home.title": { vi: "The Dahlia Hanoi — Mixi Voyage", en: "The Dahlia Hanoi — Mixi Voyage" },
     "vo.desc": { vi: "Đặt tour Việt Nam với The Dahlia — phong cách booking travel.", en: "Book Vietnam tours with The Dahlia — travel-booking style." },
     "vo.hero.aria": { vi: "Mở đầu", en: "Opening" },
@@ -146,7 +134,7 @@
     "vo.book.lede": { vi: "Tour Heritage: Hạ Long, Ninh Bình, Hà Nội. Chọn một thẻ để mở form đặt.", en: "Heritage tours: Ha Long, Ninh Binh, Hanoi. Open a card to book." },
     "vo.ask.k": { vi: "Liên hệ nhanh", en: "A quick note" },
     "vo.ask.h": { vi: "Hỏi trước khi đặt tour.", en: "Ask before you book a tour." },
-    "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — gửi một dòng, chúng tôi mở sẵn thư tới hello@thedahliahanoi.com.", en: "A private tour, a date change, or a larger group — send a line. A draft opens to hello@thedahliahanoi.com." },
+    "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — gửi một dòng, chúng tôi mở sẵn thư tới thedahliatour@gmail.com.", en: "A private tour, a date change, or a larger group — send a line. A draft opens to thedahliatour@gmail.com." },
     "ph.name": { vi: "VD: Nguyễn Lan Anh", en: "e.g. Nguyen Lan Anh" },
     "ph.email": { vi: "VD: lananh@email.com", en: "e.g. lananh@email.com" },
     "ph.phone": { vi: "VD: 09xx xxx xxx", en: "e.g. 09xx xxx xxx" },
@@ -155,14 +143,24 @@
     "contact.badge": { vi: "Phản hồi trong ngày", en: "Reply within the day" },
     "contact.mail.title": { vi: "Email", en: "Email" },
     "contact.mail.desc": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
-    "contact.phone.title": { vi: "Hotline", en: "Hotline" },
+    "contact.phone.title": { vi: "Hotline chính", en: "Main line" },
     "contact.phone.desc": { vi: "Gọi trực tiếp tư vấn", en: "Call for advice" },
+    "contact.phone.alt": { vi: "Hotline phụ", en: "Second line" },
+    "contact.phone.altDesc": { vi: "Số dự phòng", en: "Backup number" },
+    "contact.role.main": { vi: "chính", en: "main" },
+    "contact.role.alt": { vi: "phụ", en: "alt" },
+    "contact.zalo.title": { vi: "Zalo", en: "Zalo" },
+    "contact.zalo.desc": { vi: "Nhắn Zalo", en: "Message on Zalo" },
     "contact.wa.title": { vi: "WhatsApp", en: "WhatsApp" },
     "contact.wa.desc": { vi: "Nhắn tin nhanh", en: "Message us quickly" },
     "contact.form.k": { vi: "Form liên hệ", en: "Contact form" },
     "nav.hotline": { vi: "Hotline", en: "Hotline" },
+    "nav.pay": { vi: "Hướng dẫn thanh toán", en: "Payment Guide" },
+    "vo.payguide.title": { vi: "Hướng dẫn thanh toán — LocalPay", en: "Payment Guide — LocalPay" },
+    "payguide.close": { vi: "Đóng quảng cáo LocalPay", en: "Close LocalPay ad" },
+    "payguide.rail": { vi: "LocalPay — quét QR thanh toán tại Việt Nam", en: "LocalPay — scan QR to pay in Vietnam" },
     "contact.map.k": { vi: "Vị trí", en: "Location" },
-    "contact.map.h": { vi: "18 Hàng Bông, Hoàn Kiếm, Hà Nội", en: "18 Hang Bong, Hoan Kiem, Hanoi" },
+    "contact.map.h": { vi: "23 Lâm Du, Bồ Đề, Hà Nội", en: "23 Lam Du, Bo De, Hanoi" },
     "contact.map.p": { vi: "Văn phòng The Dahlia — mở Google Maps để chỉ đường.", en: "The Dahlia office — open Google Maps for directions." },
     "contact.map.dir": { vi: "Chỉ đường Google Maps", en: "Directions on Google Maps" },
     "contact.map.open": { vi: "Mở trên Google Maps", en: "Open in Google Maps" },
@@ -173,7 +171,7 @@
     "vo.book.h": { vi: "Chọn tour rồi giữ chỗ", en: "Choose a tour, then hold a place" },
     "vo.contact.title": { vi: "Liên hệ — The Sinh Tourist", en: "Contact — The Sinh Tourist" },
     "vo.contact.h": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
-    "vo.contact.lede": { vi: "Form mở thư tới hello@thedahliahanoi.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to hello@thedahliahanoi.com. Fill it in so we can answer quickly." },
+    "vo.contact.lede": { vi: "Form mở thư tới thedahliatour@gmail.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to thedahliatour@gmail.com. Fill it in so we can answer quickly." },
     "vo.contact.hours": { vi: "Chỉ đặt tour · phản hồi trong giờ hành chính", en: "Tours only · replies in business hours" },
     "vo.contact.h2": { vi: "Yêu cầu tour của bạn", en: "Your tour request" },
     "vo.contact.hint": { vi: "Chọn tour, ngày đi và số khách — rồi gửi lời nhắn.", en: "Choose a tour, date, and guests — then send a note." },
@@ -202,7 +200,7 @@
     "err.bookName": { vi: "Vui lòng điền họ tên.", en: "Please enter your name." },
     "err.bookWa": { vi: "Nhập số WhatsApp.", en: "Enter a WhatsApp number." },
     "confirm.title": { vi: "Đã ghi nhận đặt tour", en: "Tour request recorded" },
-    "confirm.body": { vi: "Bản mẫu — chưa trừ tiền thật. Thư đã được mở sẵn tới hello@thedahliahanoi.com nếu ứng dụng mail khả dụng.", en: "Sample only — no real charge. A draft opens to hello@thedahliahanoi.com if your mail app is available." },
+    "confirm.body": { vi: "Thư đã được mở sẵn tới thedahliatour@gmail.com. Trang này không thu tiền — chúng tôi sẽ liên hệ để xác nhận tour.", en: "A draft opens to thedahliatour@gmail.com. This page does not take payment — we will contact you to confirm the tour." },
     "confirm.back": { vi: "Xem thêm tour", en: "See more tours" },
     "mail.tourBook": { vi: "Đặt tour — The Dahlia Voyage", en: "Tour booking — The Dahlia Voyage" },
     "mail.tour": { vi: "Yêu cầu tour — The Dahlia Voyage", en: "Tour request — The Dahlia Voyage" },
@@ -428,7 +426,7 @@
   }
 
   function sendMail(subject, lines) {
-    var email = DATA.email || "hello@thedahliahanoi.com";
+    var email = DATA.email || "thedahliatour@gmail.com";
     var href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
     var a = document.createElement("a");
     a.href = href;
@@ -1205,63 +1203,6 @@
     return p[2] + "/" + p[1] + "/" + p[0];
   }
 
-  function tlv(id, value) {
-    var v = String(value);
-    return id + String(v.length).padStart(2, "0") + v;
-  }
-
-  function crc16(str) {
-    var crc = 0xFFFF;
-    for (var i = 0; i < str.length; i++) {
-      crc ^= str.charCodeAt(i) << 8;
-      for (var b = 0; b < 8; b++) {
-        if (crc & 0x8000) crc = ((crc << 1) ^ 0x1021) & 0xFFFF;
-        else crc = (crc << 1) & 0xFFFF;
-      }
-    }
-    return crc.toString(16).toUpperCase().padStart(4, "0");
-  }
-
-  function stripVi(s) {
-    return String(s || "")
-      .replace(/đ/g, "d")
-      .replace(/Đ/g, "D")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^A-Za-z0-9 ]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function transferNote(tourName, customerName) {
-    var who = stripVi(customerName).toUpperCase() || "KHACH";
-    if (who.length > 12) who = who.slice(0, 12).trim();
-    var room = 25 - who.length - 1;
-    var tourPart = stripVi(tourName).toUpperCase();
-    if (tourPart.length > room) tourPart = tourPart.slice(0, Math.max(room, 0)).trim();
-    var note = (tourPart + " " + who).trim();
-    return (note || "THE DAHLIA").slice(0, 25);
-  }
-
-  function vietQr(amount, note) {
-    var bank = DATA.bank || {};
-    var account = String(bank.accountNumber || "226456789").replace(/\s/g, "");
-    var beneficiary = tlv("00", "970422") + tlv("01", account);
-    var merchant = tlv("00", "A000000727") + tlv("01", beneficiary) + tlv("02", "QRIBFTTA");
-    var payload =
-      tlv("00", "01") +
-      tlv("01", "12") +
-      tlv("38", merchant) +
-      tlv("53", "704") +
-      tlv("54", String(amount)) +
-      tlv("58", "VN") +
-      tlv("59", "CONG TY THE DAHLIA") +
-      tlv("60", "HA NOI") +
-      tlv("62", tlv("08", note)) +
-      "6304";
-    return payload + crc16(payload);
-  }
-
   function menuGalleryHtml(tour) {
     var gallery = tour.menuGallery;
     if (!gallery || !gallery.images || !gallery.images.length) return "";
@@ -1577,7 +1518,7 @@
       '<p id="sum-math" class="math"></p>' +
       '<p class="sum" aria-live="polite"><span>' + U.escapeHtml(t("book.total")) + '</span> <strong id="tour-total"></strong></p>' +
       '<p id="form-error" class="form-error" role="alert" hidden></p>' +
-      '<button class="btn block" type="submit">' + U.escapeHtml(t("btn.pay")) + "</button>" +
+      '<button class="btn block" type="submit">' + U.escapeHtml(t("btn.hold")) + "</button>" +
       "</form>";
   }
 
@@ -1637,22 +1578,22 @@
       var q = quote();
       var start = date || U.isoOffset(1);
       var end = addDays(start, tour.nightsOffset || 0);
-      var payload = {
-        tourName: field(tour, "name"),
-        tourNameVi: tour.name,
-        start: start,
-        end: end,
-        guests: q.count,
-        customerName: name,
-        whatsapp: phone,
-        email: email,
-        note: noteText,
-        amount: q.total
-      };
-      try {
-        sessionStorage.setItem(PAY_KEY, JSON.stringify(payload));
-      } catch (err) {}
-      window.location.href = "pay.html";
+      sendMail(t("mail.tourBook"), [
+        t("mail.name") + ": " + name,
+        t("mail.email") + ": " + email,
+        t("mail.phone") + ": " + phone,
+        t("mail.tourField") + ": " + field(tour, "name"),
+        t("mail.date") + ": " + showVN(start) + (end && end !== start ? " – " + showVN(end) : ""),
+        t("mail.guests") + ": " + q.count,
+        t("book.total") + ": " + (q.total > 0 ? U.money(q.total) : (field(tour, "priceNote") || "—")),
+        t("mail.note") + ": " + (noteText || "—")
+      ]);
+      form.innerHTML =
+        '<div class="form-success is-on">' +
+        "<h2>" + U.escapeHtml(t("confirm.title")) + "</h2>" +
+        "<p>" + U.escapeHtml(t("confirm.body")) + "</p>" +
+        '<a class="btn" href="tours.html">' + U.escapeHtml(t("confirm.back")) + "</a>" +
+        "</div>";
     });
     quote();
   }
@@ -2408,101 +2349,6 @@
     });
   }
 
-  function readPay() {
-    try {
-      return JSON.parse(sessionStorage.getItem(PAY_KEY)) || null;
-    } catch (err) {
-      return null;
-    }
-  }
-
-  function payValid(p) {
-    if (!p || typeof p !== "object") return false;
-    if (!p.tourName || !p.customerName || !p.whatsapp || !p.email) return false;
-    if (!parseISO(p.start) || !parseISO(p.end)) return false;
-    var guests = Number(p.guests);
-    if (!(guests >= 1 && guests <= 8)) return false;
-    var amount = Number(p.amount);
-    if (!(amount > 0) || !isFinite(amount)) return false;
-    return true;
-  }
-
-  function initPay() {
-    var stage = document.getElementById("pay-stage");
-    if (!stage) return;
-
-    function render() {
-      var pay = readPay();
-      if (!payValid(pay)) {
-        document.title = t("vo.pay.titleMissing");
-        stage.innerHTML =
-          '<div class="missing reveal"><p>' + U.escapeHtml(t("pay.missing")) +
-          '</p><a class="btn" href="index.html">' + U.escapeHtml(t("pay.home")) + "</a></div>";
-        U.initMotion(stage);
-        return;
-      }
-
-      var bank = DATA.bank || {
-        name: "MB Bank",
-        accountName: "Công ty The Dahlia",
-        accountNumber: "226456789"
-      };
-      var amount = Math.round(Number(pay.amount));
-      var note = transferNote(pay.tourNameVi || pay.tourName, pay.customerName);
-      var payload = vietQr(amount, note);
-      document.title = t("vo.pay.title");
-      stage.innerHTML =
-        '<section class="pay-sheet reveal">' +
-        "<h1>" + U.escapeHtml(t("pay.h")) + "</h1>" +
-        '<p class="pay-amount">' + U.escapeHtml(U.money(amount)) + "</p>" +
-        '<p class="pay-tour">' + U.escapeHtml(pay.tourName) + "</p>" +
-        '<p class="pay-meta">' + U.escapeHtml(showVN(pay.start)) + " – " + U.escapeHtml(showVN(pay.end)) +
-        " · " + U.escapeHtml(String(pay.guests)) + U.escapeHtml(t("pay.guests")) + "</p>" +
-        '<div class="qr-box" id="qr-box" role="img" aria-label="' + U.escapeHtml(t("pay.qr")) + '"></div>' +
-        '<div class="pay-bank">' +
-        "<p>" + U.escapeHtml(bank.name) + "</p>" +
-        "<p>" + U.escapeHtml(bank.accountName) + "</p>" +
-        "<p>" + U.escapeHtml(bank.accountNumber) + "</p>" +
-        "</div>" +
-        '<p class="pay-honest">' + U.escapeHtml(t("pay.honest")) + "</p>" +
-        '<a class="btn" href="index.html">' + U.escapeHtml(t("pay.home")) + "</a>" +
-        "</section>";
-
-      var box = document.getElementById("qr-box");
-      function draw(level) {
-        box.innerHTML = "";
-        return new QRCode(box, {
-          text: payload,
-          width: 192,
-          height: 192,
-          colorDark: "#1A1A1A",
-          colorLight: "#FFFFFF",
-          correctLevel: level
-        });
-      }
-      if (typeof QRCode !== "function") {
-        box.innerHTML = '<p class="form-error">' + U.escapeHtml(t("pay.qrFailLib")) + "</p>";
-      } else {
-        try {
-          draw(QRCode.CorrectLevel.M);
-        } catch (err) {
-          try {
-            draw(QRCode.CorrectLevel.L);
-          } catch (err2) {
-            box.innerHTML = '<p class="form-error">' + U.escapeHtml(t("pay.qrFail")) + "</p>";
-          }
-        }
-      }
-      U.initMotion(stage);
-    }
-
-    render();
-    U.setRepaint(function () {
-      applyVoI18n(document);
-      render();
-    });
-  }
-
   function initContact() {
     var form = document.getElementById("mail-form");
     var q = U.query();
@@ -2559,6 +2405,38 @@
     });
   }
 
+  function mountPayLinks() {
+    var link = '<a href="payment-guide.html" data-i18n="nav.pay"' +
+      (page === "payguide" ? ' aria-current="page"' : "") + ">Hướng dẫn thanh toán</a>";
+    document.querySelectorAll(".desktop-nav, .mobile-menu, .site-footer nav").forEach(function (nav) {
+      if (nav.querySelector('a[href="payment-guide.html"]')) return;
+      var contact = nav.querySelector('a[href="contact.html"]');
+      if (contact) contact.insertAdjacentHTML("beforebegin", link);
+      else nav.insertAdjacentHTML("beforeend", link);
+    });
+  }
+
+  function mountPayRail() {
+    if (page === "payguide") return;
+    try { if (sessionStorage.getItem("lp-rail-off") === "1") return; } catch (err) {}
+    var rail = document.createElement("aside");
+    rail.className = "lp-rail";
+    rail.innerHTML =
+      '<button type="button" class="lp-rail-x" data-i18n-aria="payguide.close" aria-label="Đóng quảng cáo LocalPay">×</button>' +
+      '<a href="payment-guide.html" data-i18n-aria="payguide.rail" aria-label="LocalPay — quét QR thanh toán tại Việt Nam">' +
+      '<img src="../assets/localpay-poster.jpg" alt="LocalPay — Scan QR, pay across Vietnam">' +
+      "</a>";
+    document.body.classList.add("has-lp-rail");
+    document.body.appendChild(rail);
+    rail.querySelector(".lp-rail-x").addEventListener("click", function () {
+      rail.remove();
+      document.body.classList.remove("has-lp-rail");
+      try { sessionStorage.setItem("lp-rail-off", "1"); } catch (err) {}
+    });
+  }
+
+  mountPayLinks();
+  mountPayRail();
   applyVoI18n(document);
   upgradeLangFlags();
 
@@ -2566,7 +2444,7 @@
   if (page === "tours") initTours();
   if (page === "book") initBook();
   if (page === "contact") initContact();
-  if (page === "pay") initPay();
+  if (page === "payguide") U.setRepaint(function () { applyVoI18n(document); });
 
   U.initMenu();
   U.initSolidHeader();

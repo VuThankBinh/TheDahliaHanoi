@@ -6,8 +6,10 @@
   var RAW = {
   "version": 2,
   "site": {
-    "email": "hello@thedahliahanoi.com",
-    "phone": "+84 24 0000 0000",
+    "email": "thedahliatour@gmail.com",
+    "phone": "0902 271 396",
+    "phoneAlt": "0934 587 078",
+    "address": "23 Lâm Du, Bồ Đề, Hà Nội",
     "bank": {
       "name": "MB Bank",
       "accountName": "Công ty The Dahlia",
@@ -10850,8 +10852,10 @@
       name: "The Dahlia Hanoi",
       email: window.TOUR_DATA.email,
       phone: window.TOUR_DATA.phone,
-      phoneHref: "tel:+842400000000",
-      address: "18 Hàng Bông, Hoàn Kiếm, Hà Nội",
+      phoneHref: "tel:+84902271396",
+      phoneAlt: "0934 587 078",
+      phoneAltHref: "tel:+84934587078",
+      address: "23 Lâm Du, Bồ Đề, Hà Nội",
       line: "Đến một nơi mới. Sống một trải nghiệm khác."
     },
     rooms: [],
