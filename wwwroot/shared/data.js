@@ -291,9 +291,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 2450000,
-      "priceNote": "$99/khách",
-      "priceNoteEn": "$99/guest",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ha-long.jpg",
       "media": [
         {
@@ -567,9 +567,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 2945000,
-      "priceNote": "$119 limousine · $109 shuttle",
-      "priceNoteEn": "$119 limousine · $109 shuttle",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ha-long-signature.jpg",
       "media": [
         {
@@ -815,9 +815,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 1955000,
-      "priceNote": "$79 limousine · $99 Dcar · $69 shuttle",
-      "priceNoteEn": "$79 limousine · $99 Dcar · $69 shuttle",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh.jpg",
       "media": [
         {
@@ -1057,9 +1057,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 1807000,
-      "priceNote": "$73 limousine · $93 Dcar · $63 shuttle",
-      "priceNoteEn": "$73 limousine · $93 Dcar · $63 shuttle",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-tam-coc.jpg",
       "media": [
         {
@@ -1273,9 +1273,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 2054000,
-      "priceNote": "$83 limousine · $73 shuttle",
-      "priceNoteEn": "$83 limousine · $73 shuttle",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-bai-dinh.jpg",
       "media": [
         {
@@ -1483,9 +1483,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 4184000,
-      "priceNote": "$169 limousine từ 2 khách",
-      "priceNoteEn": "$169 limousine from 2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-2d1n.jpg",
       "media": [
         {
@@ -1749,9 +1749,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 1881000,
-      "priceNote": "$76 limousine · $66 shuttle",
-      "priceNoteEn": "$76 limousine · $66 shuttle",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-bai-dinh-trang-an.jpg",
       "media": [
         {
@@ -1949,9 +1949,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 4677000,
-      "priceNote": "$189 limousine từ 2 khách",
-      "priceNoteEn": "$189 limousine from 2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-2d1n-pagoda.jpg",
       "media": [
         {
@@ -2161,9 +2161,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 4826000,
-      "priceNote": "$195 limousine từ 2 khách",
-      "priceNoteEn": "$195 limousine from 2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-2d1n-cuc-phuong.jpg",
       "media": [
         {
@@ -2371,9 +2371,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 4925000,
-      "priceNote": "$199 limousine từ 2 khách",
-      "priceNoteEn": "$199 limousine from 2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-2d1n-halong.jpg",
       "media": [
         {
@@ -2563,9 +2563,9 @@
       "durationLabel": "1 ngày · private",
       "durationLabelEn": "1 day · private",
       "nightsOffset": 0,
-      "price": 3588000,
-      "priceNote": "Private từ $145/2 khách",
-      "priceNoteEn": "Private from $145/2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-thung-nham.jpg",
       "media": [
         {
@@ -2781,9 +2781,9 @@
       "durationLabel": "1 ngày · private",
       "durationLabelEn": "1 day · private",
       "nightsOffset": 0,
-      "price": 3687000,
-      "priceNote": "Private từ $149/2 khách",
-      "priceNoteEn": "Private from $149/2 guests",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ninh-binh-incense.jpg",
       "media": [
         {
@@ -2995,9 +2995,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 1881000,
-      "priceNote": "$76 limousine · $86 Dcar",
-      "priceNoteEn": "$76 limousine · $86 Dcar",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ha-noi.jpg",
       "media": [
         {
@@ -3234,9 +3234,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 1460000,
-      "priceNote": "$59 limousine · $69 Dcar",
-      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ha-noi-half.jpg",
       "media": [
         {
@@ -3362,37 +3362,6 @@
         "Morning or afternoon",
         "Limousine or Dcar"
       ],
-      "menuGallery": {
-        "title": "Set lunch Mesdames Linh",
-        "titleEn": "Mesdames Linh set lunch",
-        "images": [
-          {
-            "src": "img/menus/madameLinh/anh1.jpg",
-            "alt": "Mesdames Linh",
-            "altEn": "Mesdames Linh"
-          },
-          {
-            "src": "img/menus/madameLinh/anh2.jpg",
-            "alt": "Mesdames Linh",
-            "altEn": "Mesdames Linh"
-          },
-          {
-            "src": "img/menus/madameLinh/anh3.jpg",
-            "alt": "Mesdames Linh",
-            "altEn": "Mesdames Linh"
-          },
-          {
-            "src": "img/menus/madameLinh/anh4.jpg",
-            "alt": "Mesdames Linh",
-            "altEn": "Mesdames Linh"
-          },
-          {
-            "src": "img/menus/madameLinh/anh5.jpg",
-            "alt": "Mesdames Linh",
-            "altEn": "Mesdames Linh"
-          }
-        ]
-      },
       "operatorId": "heritage"
     },
     {
@@ -3405,9 +3374,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 2128000,
-      "priceNote": "$86 Dcar · Private từ $125/2",
-      "priceNoteEn": "$86 Dcar · Private from $125/2",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/ha-noi-incense.jpg",
       "media": [
         {
@@ -3630,9 +3599,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 2128000,
-      "priceNote": "$86 Dcar · Private từ $125/2",
-      "priceNoteEn": "$86 Dcar · Private from $125/2",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-craft/S1.jpg",
       "media": [
         {
@@ -4084,9 +4053,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 1590000,
-      "priceNote": "$65 Dcar · Nửa ngày",
-      "priceNoteEn": "$65 Dcar · Half day",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-craft/S2.jpg",
       "media": [
         {
@@ -4453,9 +4422,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 1590000,
-      "priceNote": "$65 Dcar · Nửa ngày",
-      "priceNoteEn": "$65 Dcar · Half day",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-craft/S3.jpg",
       "media": [
         {
@@ -4814,9 +4783,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 1881000,
-      "priceNote": "$76 limousine · $86 Dcar",
-      "priceNoteEn": "$76 limousine · $86 Dcar",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-traditional/Activities_1.jpg",
       "media": [
         {
@@ -5222,9 +5191,9 @@
       "durationLabel": "Buổi sáng",
       "durationLabelEn": "Morning",
       "nightsOffset": 0,
-      "price": 1460000,
-      "priceNote": "$59 limousine · $69 Dcar",
-      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-traditional/Activities_2.jpg",
       "media": [
         {
@@ -5571,17 +5540,6 @@
           }
         ]
       },
-      "menuGallery": {
-        "title": "Thực đơn bữa trưa",
-        "titleEn": "Lunch set menu",
-        "images": [
-          {
-            "src": "img/tours/hanoi-traditional/set-menu.jpg",
-            "alt": "Thực đơn nhà hàng",
-            "altEn": "Restaurant set menu"
-          }
-        ]
-      },
       "operatorId": "cozy"
     },
     {
@@ -5594,9 +5552,9 @@
       "durationLabel": "Buổi chiều",
       "durationLabelEn": "Afternoon",
       "nightsOffset": 0,
-      "price": 1460000,
-      "priceNote": "$59 limousine · $69 Dcar",
-      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
       "image": "img/tours/hanoi-traditional/Activities_3.jpg",
       "media": [
         {
@@ -5980,17 +5938,6 @@
             "nameEn": "Children 9+ years",
             "desc": "Tính 100% như người lớn",
             "descEn": "Charged as adults (100%)"
-          }
-        ]
-      },
-      "menuGallery": {
-        "title": "Thực đơn bữa trưa",
-        "titleEn": "Lunch set menu",
-        "images": [
-          {
-            "src": "img/tours/hanoi-traditional/set-menu.jpg",
-            "alt": "Thực đơn nhà hàng",
-            "altEn": "Restaurant set menu"
           }
         ]
       },
@@ -10711,8 +10658,8 @@
         {
           "type": "image",
           "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
-          "alt": "Du thuyền Cozy Bay Grand 4 sao",
-          "altEn": "Cozy Bay Grand 4-star cruise"
+          "alt": "Du thuyền Cozy Bay Grand 4 sao trên vịnh Hạ Long",
+          "altEn": "Cozy Bay Grand 4-star cruise on Ha Long Bay"
         },
         {
           "type": "image",
@@ -10722,21 +10669,39 @@
         },
         {
           "type": "image",
-          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floordeluxe-double-balcony/Double_T2_Balcony_1.jpg",
-          "alt": "Cabin Deluxe Balcony có ban công riêng",
-          "altEn": "Deluxe Balcony cabin with private balcony"
+          "src": "img/tours/halong-cozy-bay-grand/cabins/deluxe_double_t1.jpg",
+          "alt": "Cabin Deluxe Double Tầng 1 (giường đôi lớn)",
+          "altEn": "Deluxe Double Cabin 1st Floor (king bed)"
         },
         {
           "type": "image",
-          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floorpremium-double-or-twin-terrace/Premium_Terrace_1.jpg",
-          "alt": "Cabin Premium Terrace sân hiên rộng",
-          "altEn": "Premium Terrace cabin with spacious sun terrace"
+          "src": "img/tours/halong-cozy-bay-grand/cabins/deluxe_triple_t1.jpg",
+          "alt": "Cabin Deluxe Triple Tầng 1 (cho gia đình 3 khách)",
+          "altEn": "Deluxe Triple Cabin 1st Floor (family 3 guests)"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabins/deluxe_double_t2_balcony.jpg",
+          "alt": "Cabin Deluxe Double Balcony Tầng 2 (ban công riêng view vịnh)",
+          "altEn": "Deluxe Double Balcony Cabin 2nd Floor (private bay view balcony)"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabins/honeymoon_t2_balcony.jpg",
+          "alt": "Cabin Honeymoon Balcony lãng mạn cho cặp đôi",
+          "altEn": "Romantic Honeymoon Balcony Cabin for couples"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabins/premium_terrace.jpg",
+          "alt": "Cabin Premium Terrace Tầng 2 (sân hiên riêng rộng ngắm toàn cảnh)",
+          "altEn": "Premium Terrace Cabin 2nd Floor (large private terrace)"
         },
         {
           "type": "image",
           "src": "img/tours/halong-cozy-bay-grand/activities/Cooking_Class_2.JPG",
-          "alt": "Lớp học làm nem cuốn truyền thống",
-          "altEn": "Traditional spring roll cooking class"
+          "alt": "Lớp học làm nem cuốn truyền thống Việt Nam",
+          "altEn": "Traditional Vietnamese spring roll cooking class"
         },
         {
           "type": "image",
@@ -10747,14 +10712,14 @@
         {
           "type": "image",
           "src": "img/destinations/ha-long/sung-sot-cave.jpg",
-          "alt": "Khám phá Hang Sửng Sốt",
+          "alt": "Khám phá Hang Sửng Sốt tráng lệ",
           "altEn": "Surprising Cave discovery"
         },
         {
           "type": "image",
           "src": "img/destinations/ha-long/titov-beach.jpg",
-          "alt": "Tắm biển và leo đỉnh Titov",
-          "altEn": "Swimming and hiking Titov peak"
+          "alt": "Tắm biển và leo đỉnh ngắm vịnh tại đảo Titov",
+          "altEn": "Swimming & panoramic peak hike at Titov Island"
         }
       ],
       "cardLine": "Trải nghiệm kỳ nghỉ 2N1Đ đẳng cấp trên du thuyền Cozy Bay Grand 4 sao: phòng nghỉ sang trọng ngắm vịnh, buffet hải sản, kayak Hang Luồn, đảo Titov, lớp học nấu ăn và câu mực đêm.",
@@ -11053,13 +11018,38 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn ẩm thực & nhà hàng",
-        "titleEn": "Dining & restaurant menu",
+        "title": "Thực đơn ẩm thực & nhà hàng (Buffet, Chay, Món Ấn)",
+        "titleEn": "Dining & restaurant menu (Buffet, Vegetarian, Indian)",
         "images": [
           {
             "src": "img/tours/halong-cozy-bay-grand/restaurant/Restaurant_1.jpg",
-            "alt": "Nhà hàng sang trọng trên du thuyền",
-            "altEn": "Luxury cruise restaurant"
+            "alt": "Nhà hàng sang trọng trên du thuyền Cozy Bay Grand",
+            "altEn": "Luxury dining restaurant on Cozy Bay Grand cruise"
+          },
+          {
+            "src": "img/tours/halong-cozy-bay-grand/menus/menu_set_1.jpg",
+            "alt": "Thực đơn Set Menu hải sản 2N1Đ - Bữa trưa",
+            "altEn": "2D1N Seafood set menu - Lunch"
+          },
+          {
+            "src": "img/tours/halong-cozy-bay-grand/menus/menu_set_2.jpg",
+            "alt": "Thực đơn Set Menu hải sản 2N1Đ - Bữa tối & sáng",
+            "altEn": "2D1N Seafood set menu - Dinner & breakfast"
+          },
+          {
+            "src": "img/tours/halong-cozy-bay-grand/menus/menu_vegetarian_1.jpg",
+            "alt": "Thực đơn món chay cao cấp (Vegetarian Menu)",
+            "altEn": "Premium Vegetarian Menu"
+          },
+          {
+            "src": "img/tours/halong-cozy-bay-grand/menus/menu_indian_1.jpg",
+            "alt": "Thực đơn món Ấn Độ chuẩn vị (Indian Menu)",
+            "altEn": "Authentic Indian Menu"
+          },
+          {
+            "src": "img/tours/halong-cozy-bay-grand/menus/menu_indian_vegetarian_1.jpg",
+            "alt": "Thực đơn món Ấn Độ chay (Indian Vegetarian Menu)",
+            "altEn": "Indian Vegetarian Menu"
           }
         ]
       }
@@ -12273,8 +12263,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -12282,14 +12272,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -12587,8 +12592,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -12596,14 +12601,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -12886,8 +12906,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -12895,14 +12915,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -13179,8 +13214,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -13188,14 +13223,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -13460,8 +13510,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -13469,14 +13519,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -13759,8 +13824,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -13768,14 +13833,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -14107,8 +14187,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -14116,14 +14196,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }
@@ -14466,8 +14561,8 @@
       },
       "operatorId": "cozy",
       "menuGallery": {
-        "title": "Thực đơn buffet & ẩm thực",
-        "titleEn": "Buffet & dining menu",
+        "title": "Thực đơn buffet & ẩm thực (Buffet, Set menu, Món Ấn, Halal)",
+        "titleEn": "Buffet & dining menu (Buffet, Set menu, Indian, Halal)",
         "images": [
           {
             "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
@@ -14475,14 +14570,29 @@
             "altEn": "Ninh Binh specialty buffet restaurant"
           },
           {
+            "src": "img/tours/ninh-binh/menus/buffet_lunch.jpg",
+            "alt": "Thực đơn Buffet trưa đặc sản Ninh Bình",
+            "altEn": "Ninh Binh specialty buffet lunch menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/set_menu.jpg",
+            "alt": "Thực đơn Set Menu ẩm thực truyền thống",
+            "altEn": "Traditional dining set menu"
+          },
+          {
             "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
-            "alt": "Thực đơn Buffet Ấn Độ phong phú",
+            "alt": "Thực đơn Buffet món Ấn Độ phong phú",
             "altEn": "Rich Indian buffet menu"
           },
           {
-            "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
-            "alt": "Thực đơn món Halal có chứng chỉ",
-            "altEn": "Certified Halal food menu"
+            "src": "img/tours/ninh-binh/menus/halal_menu.jpg",
+            "alt": "Thực đơn món Halal tiêu chuẩn quốc tế",
+            "altEn": "International standard Halal food menu"
+          },
+          {
+            "src": "img/tours/ninh-binh/menus/chung_chi_halal_1.jpg",
+            "alt": "Chứng chỉ chứng nhận Halal chính thức",
+            "altEn": "Official Halal certification"
           }
         ]
       }

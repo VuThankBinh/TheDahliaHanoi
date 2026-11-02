@@ -29,6 +29,7 @@ npm-debug.log*
 
 # Source raw assets (>1GB camera dumps & word docs, not used by web runtime)
 raw_docs/
+raw/
 
 # Large media files exceeding GitHub 100MB limit
 *.mp4
