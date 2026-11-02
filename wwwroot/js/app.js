@@ -1817,9 +1817,17 @@
   var FEATURED_IDS = ["ha-long", "ha-long-signature", "ninh-binh"];
 
   function featuredTours() {
-    var marked = tours.filter(function (tour) { return tour.featured; });
-    if (marked.length) return marked.slice(0, 3);
-    return FEATURED_IDS.map(tourById).filter(Boolean).slice(0, 3);
+    var pinned = FEATURED_IDS.map(tourById).filter(Boolean);
+    if (!tourById("ninh-binh")) {
+      var ninhBinh = tours.filter(function (tour) {
+        return tour.featured && tour.destination === "ninh-binh" && tour.operatorId === "heritage";
+      })[0];
+      if (ninhBinh) pinned.push(ninhBinh);
+    }
+    var rest = tours.filter(function (tour) {
+      return tour.featured && pinned.indexOf(tour) === -1;
+    });
+    return pinned.concat(rest).slice(0, 3);
   }
 
   function toursForDestination(dest) {
