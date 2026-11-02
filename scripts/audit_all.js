@@ -226,3 +226,4 @@ if (issues.length === 0) {
   console.log('STATUS: ' + issues.length + ' ISSUES FOUND:');
   issues.forEach((iss, i) => console.log('  ' + (i+1) + '. ' + iss));
 }
+
