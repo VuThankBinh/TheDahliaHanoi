@@ -2118,7 +2118,7 @@ body.menu-lb-open { overflow: hidden; }
   z-index: 34;
   left: 18px;
   bottom: 78px;
-  width: 148px;
+  width: 180px;
 }
 .lp-rail a {
   display: block;
@@ -2130,9 +2130,9 @@ body.menu-lb-open { overflow: hidden; }
 }
 .lp-rail img {
   display: block;
-  width: 148px;
+  width: 180px;
   height: auto;
-  max-height: 240px;
+  max-height: 290px;
   object-fit: cover;
   object-position: top center;
   background: #fff;
@@ -2155,12 +2155,13 @@ body.menu-lb-open { overflow: hidden; }
   box-shadow: 0 6px 16px rgba(60, 42, 30, 0.12);
 }
 @media (max-width: 720px) {
-  .lp-rail { width: 112px; left: 12px; bottom: 74px; }
-  .lp-rail img { width: 112px; max-height: 168px; }
+  .lp-rail { width: 136px; left: 12px; bottom: 74px; }
+  .lp-rail img { width: 136px; max-height: 210px; }
 }
 .payguide { display: grid; gap: 22px; }
 .payguide-poster {
   margin: 0;
+  width: min(420px, 100%);
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
