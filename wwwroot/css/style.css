@@ -758,6 +758,59 @@ select option { color: var(--ink); background: #fff; }
   font-weight: 600;
   color: var(--ink);
 }
+.op-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 22px;
+  margin: 8px 0 4px;
+  align-items: start;
+}
+.op-info-copy h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+}
+.op-info .lede { max-width: 52ch; }
+.op-note {
+  margin: 12px 0 0;
+  max-width: 58ch;
+  color: var(--brown);
+  font-weight: 600;
+}
+.op-note a { color: var(--brown); }
+.op-facts {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.op-facts li { color: var(--brown); font-weight: 600; }
+.op-facts a { color: var(--brown); }
+.op-count {
+  margin: 14px 0 0;
+  color: var(--flower);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.op-gallery {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 8px;
+  margin: 0;
+}
+.op-gallery figure { margin: 0; border-radius: 16px; overflow: hidden; background: var(--cream); }
+.op-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.op-gallery figure:first-child { grid-row: span 2; min-height: 220px; }
+.op-gallery figure:only-child { grid-column: 1 / -1; grid-row: auto; min-height: 220px; }
+.op-policy { margin-top: 12px; }
+.op-policy h2 { font-size: 18px; margin-bottom: 8px; }
+.op-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 800px) {
+  .op-info { grid-template-columns: 1fr; }
+  .op-gallery figure:first-child { min-height: 180px; }
+}
 
 .card-grid {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;

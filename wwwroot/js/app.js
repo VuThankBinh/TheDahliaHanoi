@@ -140,6 +140,7 @@
     "partner.label": { vi: "Đối tác", en: "Partner" },
     "partner.alt": { vi: "Đối tác TheSinhTourist", en: "Partner TheSinhTourist" },
     "label.operator": { vi: "Đơn vị", en: "Operator" },
+    "op.tours": { vi: "{n} tour", en: "{n} tours" },
     "policy.h": { vi: "Chính sách trẻ em", en: "Children Policy" },
     "policy.kicker": { vi: "Children Policy", en: "Children Policy" },
     "policy.by": { vi: "Áp dụng chính sách của {name}. Tour này không ghi riêng.", en: "Using the {name} policy. This tour has no separate note." },
@@ -395,6 +396,47 @@
     var op = operatorById(tour && tour.operatorId);
     if (!op) return "";
     return field(op, "name");
+  }
+
+  function operatorInfoHtml(op) {
+    if (!op) return "";
+    var about = field(op, "about");
+    var note = field(op, "note");
+    var gallery = Array.isArray(op.gallery) ? op.gallery.filter(function (item) { return item && item.src; }) : [];
+    var facts = [];
+    if (op.address) facts.push("<li>" + U.escapeHtml(op.address) + "</li>");
+    if (op.hotline) {
+      var tel = op.hotlineHref || ("tel:" + String(op.hotline).replace(/\s/g, ""));
+      facts.push('<li><a href="' + U.escapeHtml(tel) + '">' + U.escapeHtml(op.hotline) + "</a></li>");
+    }
+    if (op.website) {
+      var site = String(op.website).replace(/^https?:\/\//, "").replace(/\/$/, "");
+      facts.push('<li><a href="' + U.escapeHtml(op.website) + '" target="_blank" rel="noopener">' + U.escapeHtml(site) + "</a></li>");
+    }
+    var shots = gallery.map(function (item, i) {
+      var alt = mediaAlt(item, field(op, "name"));
+      return "<figure><img src=\"" + U.escapeHtml(item.src) + "\" alt=\"" + U.escapeHtml(alt) + "\"" +
+        (i === 0 ? " fetchpriority=\"high\"" : " loading=\"lazy\"") + "></figure>";
+    }).join("");
+    var lines = policyLines(op);
+    var policy = lines.length
+      ? '<div class="aside-card op-policy"><h2>' + U.escapeHtml(t("policy.h")) + "</h2>" + listHtml(lines) + "</div>"
+      : "";
+    var count = tours.filter(function (tour) { return tour.operatorId === op.id; }).length;
+    return '<div class="op-info-copy">' +
+      '<p class="eyebrow">' + U.escapeHtml(t("label.operator")) + "</p>" +
+      "<h1>" + U.escapeHtml(field(op, "name")) + "</h1>" +
+      (about ? '<p class="lede">' + U.escapeHtml(about) + "</p>" : "") +
+      (note ? '<p class="op-note">' + U.escapeHtml(note) +
+        (op.hotline ? ' <a href="' + U.escapeHtml(op.hotlineHref || ("tel:" + String(op.hotline).replace(/\s/g, ""))) + '">' + U.escapeHtml(op.hotline) + "</a>." : "") +
+        "</p>" : "") +
+      (facts.length ? '<ul class="op-facts">' + facts.join("") + "</ul>" : "") +
+      '<p class="op-count">' + U.escapeHtml(t("op.tours", { n: count })) + "</p>" +
+      "</div>" +
+      "<div>" +
+      (shots ? '<div class="op-gallery">' + shots + "</div>" : "") +
+      policy +
+      "</div>";
   }
 
   function policyLines(entity) {
@@ -2309,10 +2351,28 @@
       });
     }
 
+    function renderOperatorInfo() {
+      var host = document.getElementById("operator-info");
+      var intro = document.getElementById("tours-intro");
+      if (!host) return;
+      var op = state.operator !== "all" ? operatorById(state.operator) : null;
+      if (!op) {
+        host.hidden = true;
+        host.innerHTML = "";
+        if (intro && state.dest === "all") intro.hidden = false;
+        return;
+      }
+      host.hidden = false;
+      host.innerHTML = operatorInfoHtml(op);
+      if (intro) intro.hidden = true;
+      U.bindImages(host);
+    }
+
     function renderCards() {
       buildDestChips();
       buildOperatorChips();
       updateDestHero();
+      renderOperatorInfo();
       syncListUrl();
       var items = filtered();
       empty.hidden = items.length > 0;
@@ -2411,7 +2471,9 @@
         detailSlideshowHtml(tour) +
         '<div class="wrap detail-below">' +
         '<p class="eyebrow seq detail-kicker">' + U.escapeHtml(destLabel(tour.destination)) + " · " + U.escapeHtml(field(tour, "durationLabel")) +
-        (operatorLabel(tour) ? " · " + U.escapeHtml(operatorLabel(tour)) : "") + "</p>" +
+        (operatorLabel(tour)
+          ? ' · <a class="op-link" href="tours.html?op=' + encodeURIComponent(tour.operatorId) + '">' + U.escapeHtml(operatorLabel(tour)) + "</a>"
+          : "") + "</p>" +
         '<div class="detail-body">' +
         '<div class="detail-copy">' +
         '<p class="lede seq card-line is-lines" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +

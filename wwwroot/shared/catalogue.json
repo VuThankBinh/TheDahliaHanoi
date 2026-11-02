@@ -34,14 +34,33 @@
         "A second child aged 1–4, and children aged 5–8: 75% of the adult fare.",
         "Age 9 and over: 100% of the adult fare.",
         "Children must travel with an adult for the whole programme."
+      ],
+      "about": "Du thuyền một ngày Heritage Luxury và Signature trên vịnh Hạ Long, tour Ninh Bình tại Trang An Heritage Garden, và city tour Hà Nội. Đón và trả khách ở phố cổ.",
+      "aboutEn": "Heritage Luxury and Signature day cruises on Ha Long Bay, Ninh Binh tours at Trang An Heritage Garden, and Hanoi city tours. Old Quarter pickup and drop-off.",
+      "gallery": [
+        {
+          "src": "img/tours/ha-long.jpg",
+          "alt": "Du thuyền Heritage Luxury",
+          "altEn": "Heritage Luxury cruise"
+        },
+        {
+          "src": "img/venues/heritage-garden.jpg",
+          "alt": "Trang An Heritage Garden",
+          "altEn": "Trang An Heritage Garden"
+        },
+        {
+          "src": "img/tours/ha-noi.jpg",
+          "alt": "City tour Hà Nội",
+          "altEn": "Hanoi city tour"
+        }
       ]
     },
     {
       "id": "may",
       "name": "Sapa May Travel",
       "nameEn": "Sapa May Travel",
-      "hotline": "",
-      "hotlineHref": "",
+      "hotline": "0902 271 396",
+      "hotlineHref": "tel:+84902271396",
       "website": "",
       "address": "",
       "active": true,
@@ -54,7 +73,18 @@
         "Children under 5 years are free (sharing bed with parents).",
         "Children 5-8 years old charged 75% of price.",
         "Children 9 years old charged as adults."
-      ]
+      ],
+      "about": "Tour Sa Pa của Sapa May Travel: chợ phiên Bắc Hà, cáp treo Fansipan, homestay Tả Van, trekking và xe máy. Xe giường nằm khứ hồi Hà Nội.",
+      "aboutEn": "Sapa May Travel trips cover Bac Ha market, the Fansipan cable car, Ta Van homestay, trekking and motorbike rides, with a sleeper bus to and from Hanoi.",
+      "gallery": [
+        {
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Sa Pa",
+          "altEn": "Sapa"
+        }
+      ],
+      "note": "Nếu khách muốn update lên vé tàu hoả khứ hồi, update khách sạn, update từ đi bản lên đi Fansipan, vui lòng liên hệ hotline",
+      "noteEn": "To upgrade to a round-trip train ticket, upgrade the hotel, or switch from a village walk to Fansipan, please call"
     },
     {
       "id": "cozy",
@@ -65,8 +95,37 @@
       "website": "",
       "address": "",
       "active": true,
-      "childrenPolicy": [],
-      "childrenPolicyEn": []
+      "childrenPolicy": [
+        "Trẻ 1–4 tuổi: miễn phí, ngủ chung với bố mẹ.",
+        "Trẻ 5–8 tuổi: 75% giá người lớn, ngủ chung với bố mẹ.",
+        "Từ 9 tuổi: tính như người lớn.",
+        "Chỉ miễn phí 1 trẻ dưới 4 tuổi khi đi cùng 2 người lớn; trẻ thứ 2 tính 50% giá người lớn."
+      ],
+      "childrenPolicyEn": [
+        "Ages 1–4: free, sharing a bed with parents.",
+        "Ages 5–8: 75% of the adult fare, sharing a bed with parents.",
+        "Age 9 and over: adult fare.",
+        "Only one child under 4 is free with two adults; a second child is charged 50% of the adult fare."
+      ],
+      "about": "Du thuyền ngủ đêm Cozy Bay Grand, Hạ Long một ngày với Cozy Bay Premium và Sea Lion, Tropical Cruise vịnh Lan Hạ, cùng tour Ninh Bình và Hà Nội city tour, làng nghề.",
+      "aboutEn": "Cozy Bay Grand overnight cruise, Cozy Bay Premium and Sea Lion day cruises, the Lan Ha Tropical Cruise, plus Ninh Binh tours and Hanoi city and craft-village tours.",
+      "gallery": [
+        {
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+          "alt": "Du thuyền Cozy Bay Grand",
+          "altEn": "Cozy Bay Grand cruise"
+        },
+        {
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+          "alt": "Tropical Cruise vịnh Lan Hạ",
+          "altEn": "Tropical Cruise on Lan Ha Bay"
+        },
+        {
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Tour Ninh Bình",
+          "altEn": "Ninh Binh tour"
+        }
+      ]
     }
   ],
   "hero": {
