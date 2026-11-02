@@ -327,7 +327,7 @@
     var value = String(src || "").trim();
     if (!value) return "";
     if (/^(https?:|data:|blob:)/i.test(value)) return value;
-    return "../voyage/" + value.replace(/^\.\//, "");
+    return "../wwwroot/" + value.replace(/^\.\//, "");
   }
 
   function folderChoices(menuId) {
@@ -393,7 +393,7 @@
   function cardBoard(src) {
     var url = previewUrl(src);
     return '<fieldset class="media-field"><legend>Ảnh thẻ</legend>' +
-      '<div class="media-tools"><p class="hint">Lưu vào <code>voyage/img/tours/</code>. Trang tour đọc đường dẫn <code>img/tours/…</code>.</p>' +
+      '<div class="media-tools"><p class="hint">Lưu vào <code>wwwroot/img/tours/</code>. Trang tour đọc đường dẫn <code>img/tours/…</code>.</p>' +
       '<label class="btn ghost file-btn">Tải ảnh lên<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" data-upload="card"></label>' +
       (src ? '<button type="button" class="btn ghost" data-remove="card" data-index="0">Gỡ ảnh</button>' : "") +
       "</div>" +
@@ -410,7 +410,7 @@
     var thumbs = list.map(function (item, i) { return thumbHtml(item, i, kind); }).join("");
     var fixedFolder = kind === "dest-media" || kind === "media";
     var tools = fixedFolder
-      ? '<div class="media-tools"><p class="hint">Thư mục: <code>voyage/img/destinations/' + esc(menuId) + '/</code></p>' +
+      ? '<div class="media-tools"><p class="hint">Thư mục: <code>wwwroot/img/destinations/' + esc(menuId) + '/</code></p>' +
         '<label class="btn ghost file-btn">Tải ảnh lên<input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple data-upload="' + esc(kind) + '"></label></div>'
       : uploadTools(kind, folderKey, menuId);
     return '<fieldset class="media-field"><legend>' + esc(legend) + "</legend>" +
@@ -429,7 +429,7 @@
     var thumbs = images.map(function (item, i) { return thumbHtml(item, i, "menu"); }).join("");
     return '<fieldset class="media-field"><legend>Gallery menu</legend>' +
       uploadTools("menu", "menu", tourId) +
-      '<p class="hint">Ảnh mới vào <code>voyage/img/menus/' + esc(slug(tourId) || "menu") + '/</code>. Tiêu đề giữ trong JSON bên cạnh.</p>' +
+      '<p class="hint">Ảnh mới vào <code>wwwroot/img/menus/' + esc(slug(tourId) || "menu") + '/</code>. Tiêu đề giữ trong JSON bên cạnh.</p>' +
       '<div class="media-board">' +
       '<div class="thumbs">' + (thumbs || '<p class="hint">Chưa có ảnh menu.</p>') + "</div>" +
       '<label>JSON<textarea name="menuGallery" class="json-side">' +
@@ -512,7 +512,7 @@
       var y = window.scrollY;
       render();
       window.scrollTo(0, y);
-      setStatus("Đã lưu " + srcs.length + " ảnh vào voyage/img/" + folder + "/. Bấm Lưu và ghi đè để trang tour dùng đường dẫn này.");
+      setStatus("Đã lưu " + srcs.length + " ảnh vào wwwroot/img/" + folder + "/. Bấm Lưu và ghi đè để trang tour dùng đường dẫn này.");
     } catch (err) {
       setStatus(err.message || "Không lưu được ảnh. Chạy npm start rồi mở http://127.0.0.1:4173/admin/", true);
     }

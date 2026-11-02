@@ -32,8 +32,8 @@ raw_docs/
 
 # Large media files exceeding GitHub 100MB limit
 *.mp4
-!voyage/img/video/*.mp4
-!voyage/img/tours/halong-cozy-bay-premium/video/*.mp4
+!wwwroot/img/video/*.mp4
+!wwwroot/img/tours/halong-cozy-bay-premium/video/*.mp4
 
 # Python cache & build junk
 __pycache__/
