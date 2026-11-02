@@ -2118,7 +2118,7 @@ body.menu-lb-open { overflow: hidden; }
   z-index: 34;
   left: 18px;
   bottom: 78px;
-  width: 20%;
+  width: 13%;
 }
 .lp-rail a {
   display: block;
@@ -2157,7 +2157,7 @@ body.menu-lb-open { overflow: hidden; }
 .payguide { display: grid; gap: 22px; }
 .payguide-poster {
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   border-radius: 20px;
   overflow: hidden;
   background: #fff;
