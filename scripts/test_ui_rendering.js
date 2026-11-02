@@ -3,8 +3,8 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const dataCode = fs.readFileSync(path.join(ROOT_DIR, 'shared', 'data.js'), 'utf8');
-const appCode = fs.readFileSync(path.join(ROOT_DIR, 'voyage', 'js', 'app.js'), 'utf8');
+const dataCode = fs.readFileSync(path.join(ROOT_DIR, 'wwwroot', 'shared', 'data.js'), 'utf8');
+const appCode = fs.readFileSync(path.join(ROOT_DIR, 'wwwroot', 'js', 'app.js'), 'utf8');
 
 // Load TOUR_DATA
 const sandbox = { window: {} };

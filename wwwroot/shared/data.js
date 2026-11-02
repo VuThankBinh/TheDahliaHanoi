@@ -1,0 +1,10863 @@
+/**
+ * Catalogue Voyage — sinh từ shared/catalogue.json.
+ * Sửa bằng trang Quản trị: npm start, rồi mở /admin/. Đừng sửa tay file này.
+ */
+(function () {
+  var RAW = {
+  "version": 2,
+  "site": {
+    "email": "linhfromhanam03@gmail.com",
+    "phone": "0902 271 396",
+    "phoneAlt": "0934 587 078",
+    "address": "23 Lâm Du, Bồ Đề, Hà Nội",
+    "bank": {
+      "name": "MB Bank",
+      "accountName": "Công ty The Dahlia",
+      "accountNumber": "226456789",
+      "note": "Bản mẫu, chưa thanh toán thật",
+      "noteEn": "Sample only — not a real payment"
+    }
+  },
+  "operators": [
+    {
+      "id": "heritage",
+      "name": "Heritage Vietnam Travel",
+      "nameEn": "Heritage Vietnam Travel",
+      "hotline": "0879 818 386",
+      "hotlineHref": "tel:+84879818386",
+      "website": "https://heritagevietnamtravel.com",
+      "address": "186 Hồng Tiến, Bồ Đề, Long Biên, Hà Nội",
+      "active": true,
+      "childrenPolicy": [
+        "1–4 tuổi: miễn phí 1 trẻ khi đi cùng đủ 2 người lớn, ngồi chung chỗ.",
+        "Trẻ thứ 2 trong độ tuổi 1–4, và trẻ 5–8 tuổi: 75% giá người lớn.",
+        "Từ 9 tuổi: 100% giá người lớn.",
+        "Trẻ em phải có người lớn đi cùng trong suốt chương trình."
+      ],
+      "childrenPolicyEn": [
+        "Ages 1–4: the first child is free with 2 adults and shares a seat.",
+        "A second child aged 1–4, and children aged 5–8: 75% of the adult fare.",
+        "Age 9 and over: 100% of the adult fare.",
+        "Children must travel with an adult for the whole programme."
+      ]
+    },
+    {
+      "id": "may",
+      "name": "Sapa May Travel",
+      "nameEn": "Sapa May Travel",
+      "hotline": "",
+      "hotlineHref": "",
+      "website": "",
+      "address": "",
+      "active": true,
+      "childrenPolicy": [
+        "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ).",
+        "Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ).",
+        "Trẻ em từ 9 tuổi trở lên tính như người lớn."
+      ],
+      "childrenPolicyEn": [
+        "Children under 5 years are free (sharing bed with parents).",
+        "Children 5-8 years old charged 75% of price.",
+        "Children 9 years old charged as adults."
+      ]
+    }
+  ],
+  "hero": {
+    "interval": 10000,
+    "slides": [
+      {
+        "type": "image",
+        "place": "ha-noi",
+        "poster": "img/tours/dest-hanoi-1.jpg",
+        "src": "img/tours/dest-hanoi-1.jpg",
+        "alt": "Hà Nội ngàn năm văn hiến",
+        "altEn": "Hanoi thousand years of culture"
+      },
+      {
+        "type": "image",
+        "place": "ha-long",
+        "poster": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+        "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+        "alt": "Du thuyền Hạ Long & Lan Hạ",
+        "altEn": "Ha Long & Lan Ha Cruise"
+      },
+      {
+        "type": "image",
+        "place": "ninh-binh",
+        "poster": "img/destinations/ninh-binh/trang-an-boat.jpg",
+        "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
+        "alt": "Quần thể danh thắng Tràng An Ninh Bình",
+        "altEn": "Trang An Landscape Complex Ninh Binh"
+      },
+      {
+        "type": "image",
+        "place": "sapa",
+        "poster": "img/tours/sapa-placeholder.jpg",
+        "src": "img/tours/sapa-placeholder.jpg",
+        "alt": "Highlight Sa Pa",
+        "altEn": "Sapa highlight"
+      }
+    ]
+  },
+  "destinations": {
+    "ha-long": {
+      "id": "ha-long",
+      "name": "Hạ Long – Lan Hạ",
+      "nameEn": "Ha Long – Lan Ha Bay",
+      "title": "Hạ Long & Lan Hạ – Kỳ quan vịnh biển & Du thuyền đẳng cấp",
+      "titleEn": "Ha Long & Lan Ha – Marine Wonders & Luxury Cruises",
+      "lead": "Trải nghiệm du thuyền ngủ đêm 4 sao Cozy Bay Grand, siêu du thuyền 5 sao Cozy Bay Premium & Sea Lion, và hải trình độc bản 7 tiếng Tropical Cruise khám phá vịnh Lan Hạ, đảo Cát Bà.",
+      "leadEn": "Experience 4-star Cozy Bay Grand overnight cruise, 5-star day cruises Cozy Bay Premium & Sea Lion, and exclusive 7-hour Tropical Cruise across Lan Ha Bay and Cat Ba Island.",
+      "video": "img/video/16092120_2560_1440_30fps.mp4",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+          "alt": "Du thuyền Cozy Bay Grand",
+          "altEn": "Cozy Bay Grand cruise"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+          "alt": "Du thuyền Tropical Cruise vịnh Lan Hạ",
+          "altEn": "Tropical Cruise Lan Ha Bay"
+        }
+      ]
+    },
+    "ninh-binh": {
+      "id": "ninh-binh",
+      "name": "Ninh Bình",
+      "nameEn": "Ninh Binh",
+      "title": "Ninh Bình – Non nước Tràng An & Cố đô Hoa Lư",
+      "titleEn": "Ninh Binh – Trang An Landscape & Ancient Capital",
+      "lead": "Khám phá quần thể danh thắng Tràng An di sản UNESCO, chèo thuyền Tam Cốc, chinh phục đỉnh Hang Múa, đại tự Bái Đính và đạp xe xuyên làng quê thanh bình.",
+      "leadEn": "Explore UNESCO World Heritage Trang An, Tam Coc boat tour, Mua Cave viewpoint, historic Bai Dinh Pagoda, and serene countryside cycling.",
+      "video": "img/video/2169880-hd_1280_720_30fps.mp4",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
+          "alt": "Danh thắng Tràng An",
+          "altEn": "Trang An Landscape Complex"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe làng quê Ninh Bình",
+          "altEn": "Ninh Binh countryside cycling"
+        }
+      ]
+    },
+    "ha-noi": {
+      "id": "ha-noi",
+      "name": "Hà Nội",
+      "nameEn": "Hanoi",
+      "title": "Hanoi Heritage Premium Daily Tour",
+      "titleEn": "Hanoi Heritage Premium Daily Tour",
+      "lead": "Thủ đô hơn 1.000 năm — City Tour, làng hương Quang Phú Cầu và set lunch Mesdames Linh Cuisine.",
+      "leadEn": "A capital of 1,000+ years — City Tour, Quang Phu Cau incense village, and Mesdames Linh Cuisine set lunch.",
+      "video": "https://videos.pexels.com/video-files/2491284/2491284-uhd_2560_1440_24fps.mp4",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/tran-quoc-pagoda.jpg",
+          "alt": "Chùa Trấn Quốc",
+          "altEn": "Tran Quoc Pagoda"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/temple-of-literature.jpg",
+          "alt": "Văn Miếu",
+          "altEn": "Temple of Literature"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/old-quarter.jpg",
+          "alt": "Phố cổ Hà Nội",
+          "altEn": "Hanoi Old Quarter"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/hanoi/incense-village.jpg",
+          "alt": "Làng hương Quang Phú Cầu",
+          "altEn": "Quang Phu Cau incense village"
+        },
+        {
+          "type": "image",
+          "src": "img/venues/mesdames-linh.jpg",
+          "alt": "Mesdames Linh Cuisine",
+          "altEn": "Mesdames Linh Cuisine"
+        }
+      ]
+    },
+    "sapa": {
+      "id": "sapa",
+      "name": "Sa Pa",
+      "nameEn": "Sapa",
+      "title": "Sa Pa – Thị trấn trong sương & Bản làng Tây Bắc",
+      "titleEn": "Sapa – Misty Mountain Town & Northwest Villages",
+      "lead": "Chinh phục Nóc nhà Đông Dương Fansipan, thung lũng Mường Hoa, chợ phiên Bắc Hà và trải nghiệm homestay bản làng người H'Mông, Giáy, Dao Đỏ.",
+      "leadEn": "Conquer Fansipan summit, explore Muong Hoa valley, Bac Ha ethnic market, and authentic homestay experiences with local hill tribes.",
+      "video": "",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Toàn cảnh Sa Pa",
+          "altEn": "Panoramic Sapa view"
+        }
+      ]
+    }
+  },
+  "tours": [
+    {
+      "id": "ha-noi-city-craft-1d",
+      "destination": "ha-noi",
+      "featured": true,
+      "stars": 5,
+      "name": "HANOI CITY TOUR TRUYỀN THỐNG & LÀNG HƯƠNG - LÀNG NÓN 1 NGÀY",
+      "nameEn": "FULL-DAY HANOI CULTURAL & TRADITIONAL CRAFT VILLAGES TOUR",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 2128000,
+      "priceNote": "$86 Dcar · Private từ $125/2",
+      "priceNoteEn": "$86 Dcar · Private from $125/2",
+      "image": "img/tours/hanoi-craft/S1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S1.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S10.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S11.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S12.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S13.JPG",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S15.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S16.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S17.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S19.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S2.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S20.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S22.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S3.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S4.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S5.JPG",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S6.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S7.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S8.JPG",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S9.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-1.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-2.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s24.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-1.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-2.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s26.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s27.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s28.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s29.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s30.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s31.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s32.jpg",
+          "alt": "Làng nghề thủ công Hà Nội",
+          "altEn": "Hanoi craft village tour"
+        }
+      ],
+      "cardLine": "Hành trình kết hợp di sản văn hóa Hà Nội và hai làng nghề nổi tiếng: làng hương Quảng Phú Cầu rực rỡ và làng nón Chuông truyền thống, trải nghiệm tự làm nón lá.",
+      "cardLineEn": "A full-day journey combining Hanoi cultural highlights with two famous craft villages: vibrant Quang Phu Cau incense village and traditional Chuong conical hat making.",
+      "description": [
+        "Khám phá nét đẹp văn hóa của Hà Nội trong hành trình trọn ngày kết hợp những danh thắng lịch sử nổi tiếng của thành phố với các làng nghề truyền thống lâu đời của vùng quê Việt Nam.",
+        "Rời xa sự nhộn nhịp của thành phố để ghé thăm Làng hương Quảng Phú Cầu và Làng nón Chuông. Khám phá thế giới đầy màu sắc của nghề làm hương, gặp gỡ các nghệ nhân địa phương, tìm hiểu về những nghề thủ công truyền thống và tham gia trải nghiệm tự tay trang trí chiếc nón lá của riêng mình để mang về làm món quà lưu niệm độc đáo.",
+        "Sau bữa trưa Việt Nam, tiếp tục hành trình khám phá những di sản văn hóa của Hà Nội với Văn Miếu – Quốc Tử Giám, Chùa Trấn Quốc, Phố đường tàu Hà Nội, Chụp hình tại Lăng Chủ tịch Hồ Chí Minh, Nhà Thờ Lớn Hà Nội"
+      ],
+      "descriptionEn": [
+        "Discover the cultural heart of Hanoi on a full-day journey combining the city’s historic landmarks with the traditional craftsmanship of Vietnam’s countryside.",
+        "Escape the busy city and visit Quang Phu Cau Incense Village and Chuong Conical Hat Village. Explore the colorful world of incense-making, meet local artisans, learn about traditional crafts, and join a hands-on workshop to decorate your own nón lá to take home as a unique souvenir.",
+        "After a Vietnamese lunch, continue exploring Hanoi’s cultural heritage at the Temple of Literature, Tran Quoc Pagoda, Hanoi Train Street, and the Ho Chi Minh Mausoleum Complex."
+      ],
+      "itinerary": [
+        {
+          "time": "7:15",
+          "title": "Đón khách",
+          "text": "Hướng dẫn viên và tài xế sẽ đón quý khách tại khách sạn trong khu vực Phố Cổ Hà Nội. Nếu khách sạn nằm ngoài Phố Cổ, vui lòng tập trung tại Nhà hát Lớn Hà Nội. Bắt đầu hành trình trọn ngày khám phá di sản văn hóa Hà Nội và các làng nghề truyền thống."
+        },
+        {
+          "time": "8:45",
+          "title": "Làng hương Quảng Phú Cầu",
+          "text": "Đến Quảng Phú Cầu, ngôi làng nổi tiếng với nghề làm hương truyền thống. Tham quan các xưởng sản xuất địa phương và tìm hiểu quy trình chuẩn bị, nhuộm màu, phơi khô và sắp xếp các que hương. Gặp gỡ các nghệ nhân địa phương, tìm hiểu công việc thường ngày của họ và chụp những bức ảnh đẹp với những bó hương đầy màu sắc."
+        },
+        {
+          "time": "9:45",
+          "title": "Khởi hành từ Quảng Phú Cầu",
+          "text": "Rời làng hương và tiếp tục di chuyển đến Làng nón Chuông."
+        },
+        {
+          "time": "10:10",
+          "title": "Làng nón Chuông",
+          "text": "Tham quan Làng Chuông, nổi tiếng với nghề làm nón lá truyền thống của Việt Nam. Tìm hiểu về lịch sử và kỹ thuật làm nên những chiếc nón lá đặc trưng, gặp gỡ các nghệ nhân địa phương và khám phá quy trình làm nón. Tham gia trải nghiệm tự tay trang trí chiếc nón lá của riêng mình và mang về nhà làm món quà lưu niệm độc đáo."
+        },
+        {
+          "time": "11:10",
+          "title": "Trở về Hà Nội",
+          "text": "Rời Làng Chuông và di chuyển trở lại Hà Nội."
+        },
+        {
+          "time": "12:15",
+          "title": "Ăn trưa",
+          "text": "Thưởng thức bữa trưa Việt Nam tại một nhà hàng địa phương. Có phục vụ lựa chọn món chay."
+        },
+        {
+          "time": "13:15",
+          "title": "Văn Miếu – Quốc Tử Giám",
+          "text": "Tham quan Văn Miếu – Quốc Tử Giám, trường đại học đầu tiên của Việt Nam và là một trong những di tích lịch sử quan trọng nhất Hà Nội. Khám phá kiến trúc truyền thống Việt Nam và tìm hiểu về truyền thống giáo dục lâu đời cũng như ảnh hưởng của văn hóa Khổng giáo tại Việt Nam."
+        },
+        {
+          "time": "14:30",
+          "title": "Chùa Trấn Quốc",
+          "text": "Tham quan Chùa Trấn Quốc, một trong những ngôi chùa Phật giáo cổ nhất Hà Nội, tọa lạc tuyệt đẹp trên một hòn đảo nhỏ giữa Hồ Tây. Khám phá không gian thanh bình, chiêm ngưỡng kiến trúc truyền thống và tìm hiểu về lịch sử của ngôi chùa cũng như văn hóa Phật giáo."
+        },
+        {
+          "time": "15:10",
+          "title": "Phố đường tàu Hà Nội & Cà phê trứng",
+          "text": "Thưởng thức một ly cà phê trứng nổi tiếng của Hà Nội trong khi ngắm nhìn đoàn tàu lướt qua ngay sát bên bạn – một trải nghiệm đầy phấn khích và khó quên!"
+        },
+        {
+          "time": "15:40",
+          "title": "Chụp ảnh tại Lăng Chủ tịch Hồ Chí Minh",
+          "text": "Tiếp tục đến Lăng Chủ tịch Hồ Chí Minh, một địa điểm lịch sử và văn hóa quan trọng của Hà Nội. Quý khách chụp ảnh bên ngoài Lăng Chủ tịch Hồ Chí Minh"
+        },
+        {
+          "time": "16:40",
+          "title": "Chụp ảnh tại Nhà thờ Lớn Hà Nội",
+          "text": "Dành thời gian chiêm ngưỡng kiến trúc Gothic đặc trưng của Nhà thờ Lớn Hà Nội và lưu lại những bức ảnh đáng nhớ."
+        },
+        {
+          "time": "17:00 – 17:30",
+          "title": "Trả khách",
+          "text": "Sau khi chụp hình tại Nhà thờ Lớn Hà Nội, quý khách sẽ được đưa về khách sạn trong khu vực Phố Cổ Hà Nội, kết thúc hành trình khám phá văn hóa Hà Nội và các làng nghề truyền thống trong ngày."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "7:15",
+          "title": "Pickup",
+          "text": "Our guide and driver will pick you up at your hotel in Hanoi Old Quarter. If your hotel is outside the Old Quarter, please meet at Hanoi Opera House. Begin your full-day journey to discover Hanoi’s cultural heritage and traditional craft villages."
+        },
+        {
+          "time": "8:45",
+          "title": "Quang Phu Cau Incense Village",
+          "text": "Arrive at Quang Phu Cau, a village famous for its traditional incense-making craft. Explore local workshops and learn about the process of preparing, coloring, drying, and arranging incense sticks. Meet local artisans, discover their daily work, and capture beautiful photos of the colorful incense bundles."
+        },
+        {
+          "time": "9:45",
+          "title": "Leave Quang Phu Cau",
+          "text": "Leave the incense village and continue to Chuong Conical Hat Village."
+        },
+        {
+          "time": "10:10",
+          "title": "Chuong Conical Hat Village",
+          "text": "Visit Chuong Village, well known for its traditional Vietnamese conical hats, or nón lá. Learn about the history and craftsmanship behind these iconic hats, meet local artisans, and discover how they are made. Join a hands-on workshop to decorate your own conical hat and take it home as a unique souvenir."
+        },
+        {
+          "time": "11:10",
+          "title": "Return to Hanoi",
+          "text": "Depart Chuong Village and travel back to Hanoi."
+        },
+        {
+          "time": "12:15",
+          "title": "Have Lunch",
+          "text": "Enjoy a lunch at a local restaurant. Vegetarian options are available."
+        },
+        {
+          "time": "13:15",
+          "title": "Temple of Literature",
+          "text": "Visit the Temple of Literature, Vietnam’s first national university and one of Hanoi’s most important historical landmarks. Discover its traditional Vietnamese architecture and learn about the country’s long-standing traditions of education and Confucian culture."
+        },
+        {
+          "time": "14:30",
+          "title": "Tran Quoc Pagoda",
+          "text": "Visit Tran Quoc Pagoda, one of the oldest Buddhist pagodas in Hanoi, beautifully located on a small island on West Lake. Explore the peaceful grounds, admire the traditional architecture, and learn about the pagoda’s history and Buddhist culture."
+        },
+        {
+          "time": "15:10",
+          "title": "Hanoi Train Street & Egg Coffee",
+          "text": "Enjoy a cup of Hanoi’s famous egg coffee while watching the train pass just a few feet away from you—a truly thrilling and unforgettable experience!"
+        },
+        {
+          "time": "15:40",
+          "title": "Photo stop at Ho Chi Minh Mausoleum",
+          "text": "Continue to the Ho Chi Minh Mausoleum Complex, an important historical and cultural site in Hanoi. Take photos with the Mausoleum and explore nearby landmarks"
+        },
+        {
+          "time": "16:40",
+          "title": "Photo stop at St. Joseph’s Cathedral.",
+          "text": "Take some time to admire its iconic Gothic architecture and capture memorable photos."
+        },
+        {
+          "time": "17:00 – 17:30",
+          "title": "Drop-off",
+          "text": "After St. Joseph’s Cathedral, you will be dropped off at your hotel in Hanoi Old Quarter, marking the end of your full-day Hanoi cultural and traditional craft village experience."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe ô tô đời mới đưa đón hai chiều từ khu vực Phố Cổ Hà Nội (Nhóm nhỏ)",
+        "Hướng dẫn viên nói tiếng Anh/Việt",
+        "Vé tham quan tất cả các điểm được đề cập trong lịch trình..",
+        "Bữa trưa tại nhà hàng.",
+        "Có lựa chọn món chay.",
+        "Nước uống đóng chai.",
+        "Trải nghiệm trang trí nón lá.",
+        "Một chiếc nón lá thủ công để mang về."
+      ],
+      "servicesIncludedEn": [
+        "Round-trip transfer from Hanoi Old Quarter by modern vehicle (Small Group)",
+        "English-speaking guide",
+        "Entrance fees to all attractions mentioned in the itinerary",
+        "Village access and permission fees",
+        "Lunch at a local restaurant",
+        "Vegetarian meal option available",
+        "Bottled water",
+        "Conical hat decorating workshop",
+        "Handmade conical hat to take home"
+      ],
+      "servicesExcluded": [
+        "Chi phí cá nhân.",
+        "Đồ uống trong bữa trưa.",
+        "Các hoạt động không được đề cập trong lịch trình.",
+        "Tiền boa và tiền tip"
+      ],
+      "servicesExcludedEn": [
+        "Personal expenses",
+        "Drinks during lunch",
+        "Activities not mentioned in the itinerary",
+        "Gratuities and tips (optional)"
+      ],
+      "serviceNote": "Phụ thu ngày lễ: 100.000 VND/người vào các ngày 30/4, 1/5, 2/9, 31/12 và 1/1. 150.000 VND/người trong dịp Tết Nguyên đán Việt Nam",
+      "serviceNoteEn": ",000 VND/person on 30 April, 1 May, 2 September, 31 December, and 1 January ,000 VND/person during Vietnam Lunar New Year: 5–8 February 2027",
+      "offers": [
+        "Làng hương Quảng Phú Cầu",
+        "Làng nón Chuông & tự làm nón",
+        "Bữa trưa đặc sản Việt Nam"
+      ],
+      "offersEn": [
+        "Quang Phu Cau Incense Village",
+        "Chuong Conical Hat Village & workshop",
+        "Authentic Vietnamese Lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "2.128.000đ / khách ($86 Dcar Limousine)",
+        "baseRateEn": "2,128,000 VND / guest ($86 Dcar Limousine)",
+        "options": [
+          {
+            "name": "Trải nghiệm tự làm và trang trí nón lá mang về",
+            "nameEn": "Hands-on conical hat making workshop",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Xe Dcar Limousine nhóm nhỏ đời mới đưa đón",
+            "nameEn": "Small-group Dcar Limousine round-trip",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge (Apr 30, May 1, Sep 2, Dec 31, Jan 1)",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "menuGallery": {
+        "title": "Thực đơn trưa",
+        "titleEn": "Set lunch menu",
+        "images": [
+          {
+            "src": "img/tours/hanoi-craft/set-menu.jpg",
+            "alt": "Set menu bữa trưa làng nghề",
+            "altEn": "Craft tour lunch set menu"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-craft-half-morning",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "TOUR NỬA NGÀY BUỔI SÁNG: LÀNG HƯƠNG QUẢNG PHÚ CẦU & LÀNG NÓN CHUÔNG",
+      "nameEn": "MORNING HALF DAY TOUR: QUANG PHU CAU INCENSE VILLAGE & CHUONG CONICAL HAT VILLAGE",
+      "durationLabel": "Nửa ngày",
+      "durationLabelEn": "Half day",
+      "nightsOffset": 0,
+      "price": 1590000,
+      "priceNote": "$65 Dcar · Nửa ngày",
+      "priceNoteEn": "$65 Dcar · Half day",
+      "image": "img/tours/hanoi-craft/S2.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S1.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S10.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S11.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S12.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S13.JPG",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S15.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S16.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S17.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S19.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S2.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S20.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S22.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S3.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S4.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S5.JPG",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S6.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S7.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S8.JPG",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S9.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-1.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-2.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s24.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-1.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-2.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s26.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s27.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s28.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s29.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s30.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s31.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s32.jpg",
+          "alt": "Làng nghề Hà Nội buổi sáng",
+          "altEn": "Hanoi morning craft tour"
+        }
+      ],
+      "cardLine": "Khám phá sắc đỏ rực rỡ của làng hương Quảng Phú Cầu và nghệ thuật chằm nón tại làng Chuông trong buổi sáng mát lành.",
+      "cardLineEn": "Explore the vibrant colors of Quang Phu Cau incense village and conical hat crafting at Chuong village in the morning.",
+      "description": [
+        "Khám phá nghề thủ công truyền thống của Hà Nội trong hành trình nửa ngày đến Làng hương Quảng Phú Cầu và Làng nón Chuông. Tham quan các xưởng làm hương đầy màu sắc, gặp gỡ các nghệ nhân địa phương, tìm hiểu về những nghề thủ công truyền thống của Việt Nam và trải nghiệm tự tay trang trí nón lá để mang về làm món quà lưu niệm độc đáo."
+      ],
+      "descriptionEn": [
+        "Discover Hanoi’s traditional craftsmanship on a half-day journey to Quang Phu Cau Incense Village and Chuong Conical Hat Village. Explore colorful incense-making workshops, meet local artisans, learn about Vietnam’s traditional crafts, and enjoy a hands-on experience decorating your own nón lá to take home as a unique souvenir.",
+        "Explore the colorful Quang Phu Cau Incense Village and capture stunning photos among vibrant red incense bundles as memorable keepsakes.",
+        "Discover the traditional process of making incense.",
+        "Meet local artisans and explore their workshops.",
+        "Visit Chuong Conical Hat Village.",
+        "Learn how Vietnam’s iconic nón lá is traditionally made.",
+        "Join a hands-on conical hat decorating workshop.",
+        "Take your handmade nón lá home as a special souvenir.",
+        "Experience the peaceful countryside and traditional village life outside Hanoi."
+      ],
+      "itinerary": [
+        {
+          "time": "07:15",
+          "title": "Đón khách",
+          "text": "Hướng dẫn viên và tài xế sẽ đón quý khách tại khách sạn trong khu vực Phố Cổ Hà Nội. Nếu khách sạn không nằm trong khu vực Phố Cổ, quý khách vui lòng tập trung tại Nhà hát Lớn Hà Nội. Bắt đầu hành trình khám phá các làng nghề thủ công truyền thống của Hà Nội."
+        },
+        {
+          "time": "08:45",
+          "title": "Làng hương Quảng Phú Cầu",
+          "text": "Đến Quảng Phú Cầu, ngôi làng nổi tiếng với nghề làm hương truyền thống. Tham quan các xưởng sản xuất địa phương và tìm hiểu quy trình chuẩn bị, nhuộm màu, phơi khô và sắp xếp các que hương. Gặp gỡ các nghệ nhân địa phương, khám phá công việc hàng ngày của họ và chụp những bức ảnh đẹp với những bó hương đầy màu sắc."
+        },
+        {
+          "time": "09:45",
+          "title": "Rời Quảng Phú Cầu",
+          "text": "Rời làng hương và tiếp tục di chuyển đến Làng nón Chuông."
+        },
+        {
+          "time": "10:10",
+          "title": "Làng nón Chuông",
+          "text": "Tham quan Làng Chuông, nổi tiếng với nghề làm nón lá truyền thống của Việt Nam. Tìm hiểu về lịch sử và kỹ thuật làm những chiếc nón lá đặc trưng này, gặp gỡ các nghệ nhân địa phương và khám phá cách nón được tạo ra. Quý khách sẽ được tham gia hoạt động trải nghiệm làm và trang trí nón lá, sau đó mang chiếc nón do mình thực hiện về làm quà lưu niệm độc đáo."
+        },
+        {
+          "time": "11:00",
+          "title": "Trở về Hà Nội",
+          "text": "Rời Làng Chuông và di chuyển trở lại khu vực Phố Cổ Hà Nội."
+        },
+        {
+          "time": "12:00",
+          "title": "Trả khách",
+          "text": "Khi về đến Hà Nội, quý khách sẽ được đưa về khách sạn, kết thúc hành trình khám phá văn hóa và làng nghề truyền thống Hà Nội trong nửa ngày. Lưu ý: Nếu quý khách tham gia tour nửa ngày buổi sáng muốn đặt ăn trưa, xe và HDV sẽ đưa quý khách đến nhà hàng của công ty (79 Hàng Bồ) dùng bữa và sau khi ăn trưa xong, quý khách tự di chuyển về khách sạn."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "7:15",
+          "title": "Pickup",
+          "text": "Our guide and driver will pick you up at your hotel in Hanoi Old Quarter, if your hotel is not located in Hanoi Old Quarter, we meet at Hanoi Opera House. Begin your full-day journey to discover Hanoi’s cultural heritage and traditional craft villages."
+        },
+        {
+          "time": "8:45",
+          "title": "Quang Phu Cau Incense Village",
+          "text": "Arrive at Quang Phu Cau, a village famous for its traditional incense-making craft. Explore local workshops and learn about the process of preparing, coloring, drying, and arranging incense sticks. Meet local artisans, discover their daily work, and capture beautiful photos of the colorful incense bundles."
+        },
+        {
+          "time": "09:45",
+          "title": "Leave Quang Phu Cau",
+          "text": "Leave the incense village and continue to Chuong Conical Hat Village."
+        },
+        {
+          "time": "10:00",
+          "title": "Chuong Conical Hat Village",
+          "text": "Visit Chuong Village, well known for its traditional Vietnamese conical hats, or nón lá. Learn about the history and craftsmanship behind these iconic hats, meet local artisans, and discover how they are made. Join a hands-on workshop to make and decorate your own conical hat, which you can take home as a unique souvenir."
+        },
+        {
+          "time": "11:00",
+          "title": "Return to Hanoi",
+          "text": "Depart Chuong Village and travel back to Hanoi Old Quarter."
+        },
+        {
+          "time": "12:00",
+          "title": "Drop off",
+          "text": "Upon arrival, you will be dropped off at your hotel, marking the end of your half-day Hanoi cultural and craft village experience. Note: If you join the morning half-day tour and choose to add lunch, our vehicle and guide will take you to our restaurant (79 Hang Bo Street) for lunch. After finishing your meal, you will make your own way back to your hotel."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe ô tô đời mới đưa đón hai chiều từ khu vực Phố Cổ Hà Nội (Nhóm nhỏ)",
+        "Hướng dẫn viên nói tiếng Anh/Việt",
+        "Vé tham quan tất cả các điểm được đề cập trong lịch trình.",
+        "chai nước/khách.",
+        "Hoạt động trải nghiệm trang trí nón lá.",
+        "Nón lá thủ công để quý khách mang về."
+      ],
+      "servicesIncludedEn": [
+        "Round-trip transfer from Hanoi Old Quarter by modern vehicle (Small group)",
+        "English-speaking guide",
+        "Entrance fees to all attractions mentioned in the itinerary",
+        "Bottled water/person",
+        "Conical hat-decorating workshop",
+        "Handmade conical hat to take home"
+      ],
+      "servicesExcluded": [
+        "Chi phí cá nhân.",
+        "Các hoạt động không được đề cập trong lịch trình.",
+        "Tiền boa và tiền tip",
+        "Bữa trưa."
+      ],
+      "servicesExcludedEn": [
+        "Personal expenses",
+        "Activities not mentioned in the itinerary",
+        "Gratuities and tips (optional)",
+        "Lunch"
+      ],
+      "serviceNote": "VNĐ/khách vào ngày 30/4, 1/5, 2/9, 31/12 và 1/1. VNĐ/khách trong dịp Tết Nguyên đán Việt Nam: 05–08/02/2027.",
+      "serviceNoteEn": ",000 VND/person on 30 April, 1 May, 2 September, 31 December, and 1 January ,000 VND/person during Vietnam Lunar New Year: 5–8 February 2027",
+      "offers": [
+        "Chụp ảnh check-in rực rỡ",
+        "Tự tay làm nón lá truyền thống",
+        "Xe đưa đón khách sạn phố cổ"
+      ],
+      "offersEn": [
+        "Vibrant photography spots",
+        "Hands-on conical hat workshop",
+        "Old Quarter hotel transfer"
+      ],
+      "pricingTable": {
+        "baseRate": "1.590.000đ / khách ($65 Dcar Limousine)",
+        "baseRateEn": "1,590,000 VND / guest ($65 Dcar Limousine)",
+        "options": [],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-craft-half-afternoon",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "TOUR NỬA NGÀY BUỔI CHIỀU: LÀNG HƯƠNG QUẢNG PHÚ CẦU & LÀNG NÓN CHUÔNG",
+      "nameEn": "AFTERNOON HALF DAY TOUR: QUANG PHU CAU INCENSE VILLAGE & CHUONG CONICAL HAT VILLAGE",
+      "durationLabel": "Nửa ngày",
+      "durationLabelEn": "Half day",
+      "nightsOffset": 0,
+      "price": 1590000,
+      "priceNote": "$65 Dcar · Nửa ngày",
+      "priceNoteEn": "$65 Dcar · Half day",
+      "image": "img/tours/hanoi-craft/S3.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S1.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S10.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S11.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S12.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S13.JPG",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S15.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S16.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S17.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S19.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S2.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S20.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S22.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S3.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S4.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S5.JPG",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S6.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S7.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S8.JPG",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/S9.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-1.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s23-2.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s24.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-1.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25-2.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s25.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s26.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s27.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s28.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s29.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s30.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s31.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-craft/s32.jpg",
+          "alt": "Làng nghề Hà Nội buổi chiều",
+          "altEn": "Hanoi afternoon craft tour"
+        }
+      ],
+      "cardLine": "Khởi hành buổi chiều tham quan xưởng hương Quảng Phú Cầu và làng nón Chuông, lưu giữ những khung hình tuyệt đẹp lúc hoàng hôn.",
+      "cardLineEn": "Afternoon departure to Quang Phu Cau incense village and Chuong conical hat village with beautiful sunset photo ops.",
+      "description": [
+        "Khám phá nghề thủ công truyền thống của Hà Nội trong hành trình nửa ngày đến Làng hương Quảng Phú Cầu và Làng nón Chuông. Tham quan các xưởng làm hương đầy màu sắc, gặp gỡ các nghệ nhân địa phương, tìm hiểu về những nghề thủ công truyền thống của Việt Nam và trải nghiệm tự tay trang trí nón lá để mang về làm món quà lưu niệm độc đáo."
+      ],
+      "descriptionEn": [
+        "Discover Hanoi’s traditional craftsmanship on a half-day journey to Quang Phu Cau Incense Village and Chuong Conical Hat Village. Explore colorful incense-making workshops, meet local artisans, learn about Vietnam’s traditional crafts, and enjoy a hands-on experience decorating your own nón lá to take home as a unique souvenir."
+      ],
+      "itinerary": [
+        {
+          "time": "12:30",
+          "title": "Đón khách",
+          "text": "Hướng dẫn viên và tài xế sẽ đón quý khách tại khách sạn trong khu vực Phố Cổ Hà Nội, bắt đầu hành trình khám phá các làng nghề thủ công truyền thống vào buổi chiều."
+        },
+        {
+          "time": "14:00",
+          "title": "Làng hương Quảng Phú Cầu",
+          "text": "Đến Quảng Phú Cầu, ngôi làng nổi tiếng với nghề làm hương truyền thống. Tham quan các xưởng sản xuất địa phương và tìm hiểu quy trình chuẩn bị, nhuộm màu, phơi khô và sắp xếp các que hương. Gặp gỡ các nghệ nhân địa phương, khám phá công việc hàng ngày của họ và chụp những bức ảnh đẹp với những bó hương đầy màu sắc."
+        },
+        {
+          "time": "15:00",
+          "title": "Rời Quảng Phú Cầu",
+          "text": "Rời làng hương và tiếp tục di chuyển đến Làng nón Chuông."
+        },
+        {
+          "time": "15:30",
+          "title": "Làng nón Chuông",
+          "text": "Tham quan Làng Chuông, nổi tiếng với nghề làm nón lá truyền thống của Việt Nam. Tìm hiểu về lịch sử và kỹ thuật làm nón, gặp gỡ các nghệ nhân địa phương và khám phá quy trình tạo ra những chiếc nón lá. Quý khách sẽ được tham gia hoạt động trải nghiệm làm và trang trí nón lá, sau đó mang chiếc nón do mình thực hiện về làm quà lưu niệm độc đáo."
+        },
+        {
+          "time": "16:15",
+          "title": "Trở về Hà Nội",
+          "text": "Rời Làng Chuông và di chuyển trở lại khu vực Phố Cổ Hà Nội."
+        },
+        {
+          "time": "17:00 - 17:30",
+          "title": "Trả khách",
+          "text": "Khi về đến Hà Nội, quý khách sẽ được đưa về khách sạn, kết thúc hành trình khám phá văn hóa và làng nghề truyền thống Hà Nội trong nửa ngày. Lưu ý : Nếu quý khách tham gia tour nửa ngày buổi chiều muốn đặt ăn trưa, quý khách tự di chuyển đến nhà hàng của công ty (79 Hàng Bồ) lúc 11:30, sau khi ăn trưa xong xe và HDV sẽ đưa Quý khách đi theo chương trình tour"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "12:30",
+          "title": "Pick up",
+          "text": "Our guide and driver will pick you up at your hotel in Hanoi Old Quarter starting your afternoon craft village experience."
+        },
+        {
+          "time": "14:00",
+          "title": "Quang Phu Cau Incense Village",
+          "text": "Arrive at Quang Phu Cau, a village famous for its traditional incense-making craft. Explore local workshops and learn about the process of preparing, coloring, drying, and arranging incense sticks. Meet local artisans, discover their daily work, and capture beautiful photos of the colorful incense bundles."
+        },
+        {
+          "time": "15:00",
+          "title": "Leave Quang Phu Cau",
+          "text": "Leave the incense village and continue to Chuong Conical Hat Village."
+        },
+        {
+          "time": "15:30 PM",
+          "title": "Chuong Conical Hat Village",
+          "text": "Visit Chuong Village, well known for its traditional Vietnamese conical hats, or nón lá. Learn about the history and craftsmanship behind these iconic hats, meet local artisans, and discover how they are made. Join a hands-on workshop to make and decorate your own conical hat, which you can take home as a unique souvenir."
+        },
+        {
+          "time": "16:15 PM",
+          "title": "Return to Hanoi",
+          "text": "Depart Chuong Village and travel back to Hanoi Old Quarter."
+        },
+        {
+          "time": "17:00 - 17:30",
+          "title": "Drop off",
+          "text": "Upon arrival, you will be dropped off at your hotel, marking the end of your half-day Hanoi cultural and craft village experience. Note: If you join the afternoon half-day tour and choose to add lunch, please make your own way to our restaurant (79 Hang Bo Street) at 11:30 AM. After lunch, our vehicle and guide will pick you up and continue the tour according to the itinerary."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe ô tô đời mới đưa đón hai chiều từ khu vực Phố Cổ Hà Nội (nhóm nhỏ)",
+        "Hướng dẫn viên nói tiếng Anh/Việt",
+        "Vé tham quan tất cả các điểm được đề cập trong lịch trình.",
+        "chai nước/khách.",
+        "Hoạt động trải nghiệm trang trí nón lá.",
+        "Nón lá thủ công để quý khách mang về."
+      ],
+      "servicesIncludedEn": [
+        "Round-trip transfer from Hanoi Old Quarter by modern vehicle (Small group)",
+        "English-speaking guide",
+        "Entrance fees to all attractions mentioned in the itinerary",
+        "Bottled water/person",
+        "Conical hat-decorating workshop",
+        "Handmade conical hat to take home"
+      ],
+      "servicesExcluded": [
+        "Chi phí cá nhân.",
+        "Các hoạt động không được đề cập trong lịch trình.",
+        "Tiền boa và tiền tip",
+        "Bữa trưa."
+      ],
+      "servicesExcludedEn": [
+        "Personal expenses",
+        "Activities not mentioned in the itinerary",
+        "Gratuities and tips (optional)",
+        "Lunch"
+      ],
+      "serviceNote": "VNĐ/khách vào ngày 30/4, 1/5, 2/9, 31/12 và 1/1. VNĐ/khách trong dịp Tết Nguyên đán Việt Nam: 05–08/02/2027.",
+      "serviceNoteEn": "Afternoon tour starts around 12:00. Holiday surcharge 100,000 VND/guest.",
+      "offers": [
+        "Check-in xưởng hương hoàng hôn",
+        "Nghệ nhân làng nón hướng dẫn",
+        "Hướng dẫn viên song ngữ"
+      ],
+      "offersEn": [
+        "Incense workshop sunset photos",
+        "Master hat artisan guidance",
+        "Bilingual tour guide"
+      ],
+      "pricingTable": {
+        "baseRate": "1.590.000đ / khách ($65 Dcar Limousine)",
+        "baseRateEn": "1,590,000 VND / guest ($65 Dcar Limousine)",
+        "options": [],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-traditional-1d",
+      "destination": "ha-noi",
+      "featured": true,
+      "stars": 5,
+      "name": "CHƯƠNG TRÌNH TOUR THĂM QUAN HÀ NỘI 1 NGÀY",
+      "nameEn": "HANOI LUXURY CITY FULL-DAY TOUR",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 1881000,
+      "priceNote": "$76 limousine · $86 Dcar",
+      "priceNoteEn": "$76 limousine · $86 Dcar",
+      "image": "img/tours/hanoi-traditional/Activities_1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_1.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_10.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_11.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_12.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_13.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_14.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_15.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_16.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_17.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_18.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_19.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_2.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_20.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_21.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_22.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_23.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_24.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_25.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_26.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_27.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_28.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_29.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_3.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_30.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_31.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_32.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_33.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_34.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_4.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_5.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_6.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_7.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_8.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_9.jpg",
+          "alt": "Hà Nội City Tour truyền thống",
+          "altEn": "Hanoi traditional city tour"
+        }
+      ],
+      "cardLine": "Hành trình trọn vẹn khám phá thủ đô nghìn năm văn hiến: Lăng Bác, Chùa Một Cột, Bảo tàng Dân tộc học, Chùa Trấn Quốc, Văn Miếu Quốc Tử Giám và Nhà tù Hỏa Lò.",
+      "cardLineEn": "A classic comprehensive capital discovery: Ho Chi Minh Mausoleum, One Pillar Pagoda, Museum of Ethnology, Tran Quoc Pagoda, Temple of Literature, and Hoa Lo Prison.",
+      "description": [
+        "Hà Nội thủ đô nghìn năm văn hiến, nơi cất giữ và lưu lại nền lịch sử lâu đời trải qua hàng nghìn năm.",
+        "Vì thế tại sao Hà Nội chính là nơi in đậm nét cổ kính của một thủ đô xưa, thăm quan Hà Nội, quý khách sẽ được đến thăm các danh lam nổi tiếng như: Chùa Trấn Quốc, Lăng Bác, Quảng trường Ba Đình, Văn Miếu Quốc Tử Giám, Bảo Tàng Dân Tộc Học, nhà tù Hỏa Lò…",
+        "Đến với Hà Nội, quý khách không chỉ được ngắm nhìn những công trình kiến trúc mà còn được hòa mình vào nền văn hóa đặc sắc nơi đây."
+      ],
+      "descriptionEn": [
+        "Hanoi is the capital of Vietnam and has been a place to keep and witness more than 1000 years of a long history.",
+        "That is why this place is a solemn ancient city. Visiting around Hanoi, you will see ancient architectures such as Tran Quoc Pagoda, Ho Chi Minh Complex, One Pillar Pagoda, Vietnam Ethnology Museum or Vietnamese Women’s Museum, Temple of Literature, Hoa Lo Prison. All together create an ancient and historic city.",
+        "Coming to Hanoi, you not only see the architectural works but also to immerse yourself in the unique culture here."
+      ],
+      "itinerary": [
+        {
+          "time": "07:50–08:30",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h50 4B Tràng Thi 22 Tràng Thi Giờ đón 8h00 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 8h10 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 8h20 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 8h30 Nhà Hát Lớn Hà Nội"
+        },
+        {
+          "time": "8:45",
+          "title": "Quý khách thăm quan quần thể Lăng Bác",
+          "text": "Điểm đến đầu tiên, Quý khách thăm quan quần thể Lăng Bác, nơi an nghỉ cuối cùng của người cha vĩ đại- chủ tịch Hồ Chí Minh, sau khi thăm quan di hài của vị chủ tịch Hồ Chí Minh vĩ đại, Quý khách sẽ đến thăm nhà sàn, ao cá Bác Hồ, nơi chủ tịch Hồ Chí Minh sống và làm việc từ năm 1954 đến năm1969. Sau đó quý khách tiếp tục thăm quan Chùa Một Cột, đây là ngôi chùa mang những nét kiến trúc độc đáo nhất thế giới. Quý khách nên mặc quần áo dài qua đầu gối khi thăm lăng bác, thăm quan các ngôi chùa. Lăng chủ tịch Hồ Chí Minh đóng cửa vào thứ 2 và thứ 6. Tuy nhiên quý khách có thể chụp ảnh bên ngoài lăng và thăm quan khu quần thể lăng như nhà sàn, áo cá, chùa một cột. Lăng bác được đóng cửa để bảo trì hàng năm từ 15/6 đến 15/8 dương lịch. Trong khoảng thời gian này quý khách vẫn có thể thăm quần thể lăng bác như nhà sàn, áo cá, chùa một cột."
+        },
+        {
+          "time": "10:15",
+          "title": "Tham quan bảo tàng dân tộc học",
+          "text": "Quý khách thăm quan bảo tàng dân tộc học. Đây là bảo tàng mang đầy đủ nét văn hoá của 54 dân tộc Việt Nam. Lưu ý: Bảo Tàng Dân Tộc học đóng cửa vào thứ 2 hàng tuần. Vì vậy quý khách sẽ chuyển sang thăm quan Bảo Tàng Phụ Nữ Việt Nam vào thứ 2."
+        },
+        {
+          "time": "12:15-12:30",
+          "title": "đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng",
+          "text": "Quý khách đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng."
+        },
+        {
+          "time": "12:30",
+          "title": "Tham quan Chùa Trấn Quốc",
+          "text": "HDV và xe sẽ đưa quý khách thăm quan Chùa Trấn Quốc. Chùa trấn quốc nằm trên đảo cá vàng Hồ Tây. Đây là ngôi chùa lâu đời nhất Hà Nội. Được xây dựng vào thế kỷ thứ 6. Khi thăm thủ đô, quý khách không thể bỏ qua ngôi chùa nổi tiếng này."
+        },
+        {
+          "time": "14:30",
+          "title": "Tham quan Văn Miếu Quốc Tử Giám",
+          "text": "Thăm quan Văn Miếu Quốc Tử Giám, được xây dựng vào năm 1070, đây là trường đại học đầu tiên của Việt Nam, là một trong những điểm thăm quan du lịch hấp dẫn nhất mỗi khi đến với thủ đô Hà Nội."
+        },
+        {
+          "time": "15:30",
+          "title": "Sau khi thăm quan Văn Miếu Quốc Tử Giám",
+          "text": "Sau khi thăm quan Văn Miếu Quốc Tử Giám, HDV sẽ đưa quý khách thăm quan nhà tù Hỏa Lò, được pháp xây dựng vào năm 1886-1901 khi Việt Nam vẫn còn thuộc một phần của đông dương, Nhà tù từng được mệnh danh là “Địa ngục trần gian” và giờ đây nhà tù giống như một bảo tàng chiến tranh cho những ai muốn hiểu thêm về cuộc kháng chiến chống Pháp của người dân Việt Nam."
+        },
+        {
+          "time": "16:30",
+          "title": "về khách sạn nghỉ ngơi",
+          "text": "Xe và HDV đưa quý khách về khách sạn nghỉ ngơi. Kết thúc chương trình! Tùy chọn: Chương trình Xích lô hoặc chương trình múa rối nước có thể được sắp xếp theo yêu cầu của quý khách sau khi thăm quan Văn Miếu Quốc Tử Giám với phụ thu. Lựa chọn 1: Thăm quan phố cổ Hà Nội bằng Xích lô 45 phút (100,000 VNĐ/người) sau khi tham quan Nhà tù Hỏa Lò. Lựa chọn 2: Biểu diễn múa rối nước 50 phút (100,000 VNĐ/người). Thời gian nên xem rối nước là 16h10 chiều hoặc 17h20 chiều. Lựa chọn 3: Xích lô 45 phút và Múa rối nước 50 phút (200,000 VNĐ/người). Thời gian nên xem múa rối nước là 17h20 chiều hoặc 18h30 tối."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "7:50 – 8:30",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:50 AM 4B Trang Thi Street 22 Trang Thi Street 08:00 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 08:10 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 08:20 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 08:30 AM Hanoi Opera House"
+        },
+        {
+          "time": "08:45",
+          "title": "Visit Ho Chi Minh Complex",
+          "text": "Visit Ho Chi Minh Complex, the final resting place of Vietnamese great father or Uncle Ho. You have a chance to see the embalmed body of Ho Chi Minh then walk around the garden to see 2 houses where he lived & worked from 1954 to 1969. Then visit One Pillar Pagoda where worships the Goddess of Mercy – It is the most unique pagoda in the world. - Should dress modestly by covering from shoulders to knees when visiting Ho Chi Minh Mausoleum, temples, pagodas, etc. - Ho Chi Minh’s Mausoleum is closed on Mondays and Fridays. But still can take picture of the Mausoleum and visit around that area. - Ho Chi Minh’s Mausoleum is closed at least 2 months (15th June -15th August) for the annual maintaining."
+        },
+        {
+          "time": "10:15",
+          "title": "Visit Vietnam Ethnology Museum to learn about the ",
+          "text": "Visit Vietnam Ethnology Museum to learn about the culture of 54 ethnic groups living in the whole country of Vietnam."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Thường hoặc Limousine sang trọng trong suốt hành trình",
+        "chai nước /khách",
+        "Vé thăm quan theo chương trình",
+        "HDV song ngữ Tiếng Anh/Tiếng Việt",
+        "Ăn trưa tại nhà hàng"
+      ],
+      "servicesIncludedEn": [
+        "Shuttle Bus/Limousine during the trip",
+        "A bottle of water/person",
+        "Entrance tickets",
+        "English speaking guide",
+        "Vietnamese Lunch"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trong bữa ăn trưa",
+        "Tip cho HDV, Lái Xe",
+        "Vé Xích lô 100,000vnđ/khách",
+        "Vé xem Múa Rối Nước (Vé phổ thông) 100,000/khách.",
+        "Chi phí cá nhân hoặc bất kỳ thứ gì không được đề cập ở trên."
+      ],
+      "servicesExcludedEn": [
+        "Drink for lunch",
+        "Cyclo (USD 5/person)",
+        "Water Puppet Show (USD 5/person)",
+        "Tips for tour guide & driver",
+        "Personal expenses or anything not mentioned above"
+      ],
+      "serviceNote": "Lăng chủ tịch Hồ Chí Minh đóng cửa vào thứ 2 và thứ 6. Tuy nhiên quý khách có thể chụp ảnh bên ngoài lăng và thăm quan khu quần thể lăng như nhà sàn, áo cá, chùa một cột. Lăng chủ tịch Hồ Chí Minh được đóng cửa để bảo trì hàng năm từ 15/6 đến 15/8 dương lịch. Trong khoảng thời gian này quý khách vẫn có thể thăm quần thể lăng như nhà sàn, áo cá, chùa một cột. Bảo Tàng Dân Tộc Học đóng cửa vào thứ 2 hàng tuần. Vì vậy quý khách sẽ chuyển sang thăm quan Bảo Tàng Phụ Nữ Việt Nam vào thứ 2. Nên ăn mặc kín đáo từ vai đến đầu gối nơi công cộng như đền, chùa, lăng,... Nên mang theo những thứ cần thiết như: tiền mặt, điện thoại di động hoặc máy ảnh, áo mưa/dù, kem chống nắng… Lịch trình có thể thay đổi (tùy thuộc vào thời tiết)",
+      "serviceNoteEn": "h30-12h45: Have lunch at our restaurant. You have an opportunity to enjoy Vietnamese cuisine. Vegeterian foods are available. h30: Visit Tran Quoc Pagoda located on Golden Fish Island in West Lake. It is the oldest pagoda in Hanoi built in the 6th century. h30: Continue to visit Temple of Literature – the first university of Vietnam, The Temple of Literature (Van Mieu Quoc Tu Giam) is one of the most attractive tourist spots in Northern Vietnam. The Temple of Literature was founded in 1070. h30: Keep going to visit Hoa Lo Prison, the prison was built by the French, from 1886 to 1901, when Vietnam was still a part of French Indochina. The French called the prison Maison Centrale. The prison was called “A Hell on Earth” and now the prison is like a war museum for those who want to understand more about the war against France of Vietnamese people. h30: Our Bus take you back to the Hotel. We finish the trip! Optional: Cyclo or/and Water Puppet Show can be arranged upon your request with additional fee. Option 1: Cyclo 45 minutes (5usd/person) around Hanoi Old Quarter after visiting Hoa Lo Prison Option 2: Water Puppet Show 50 minutes (5usd/person) . Recomended time: 16h10 or 17h20 Option 3: Cyclo 45 minutes and Water Puppet Show 50 minutes (10usd/person). Recommended time for Water Puppet Show 17h20 or 18h30 Ho Chi Minh’s Mausoleum is closed on Monday and Friday. But still can take picture of the Mausoleum and visit around that area. We will visit Vietnamese Women’s Museum instead of Vietnam Ethnology Museum closed on Mondays. Should dress modestly by covering from shoulders to knees in the public places like temples, pagodas, HCM Mausoleum, etc Should bring the necessary things such as: cash, cellphone or cameras, raincoat/ umbrella, sun block, etc (depending on the weather). The order of the itinerary can be changed depending on the situation.",
+      "offers": [
+        "Ăn trưa đặc sản tại nhà hàng",
+        "Vé tham quan trọn gói các điểm",
+        "Tùy chọn xích lô & múa rối nước"
+      ],
+      "offersEn": [
+        "Local lunch at restaurant",
+        "All monument admission tickets",
+        "Optional cyclo & water puppet show"
+      ],
+      "pricingTable": {
+        "baseRate": "1.881.000đ / khách ($76 Limousine · $86 Dcar)",
+        "baseRateEn": "1,881,000 VND / guest ($76 Limousine · $86 Dcar)",
+        "options": [
+          {
+            "name": "Lựa chọn 1: Thăm quan phố cổ Hà Nội bằng Xích lô 45 phút",
+            "nameEn": "Option 1: Cyclo 45 minutes around Hanoi Old Quarter",
+            "price": "+100.000đ / $5",
+            "priceEn": "+100,000 VND / $5"
+          },
+          {
+            "name": "Lựa chọn 2: Xem biểu diễn Múa Rối Nước Thăng Long 50 phút",
+            "nameEn": "Option 2: Water Puppet Show 50 minutes",
+            "price": "+100.000đ / $5",
+            "priceEn": "+100,000 VND / $5"
+          },
+          {
+            "name": "Lựa chọn 3: Combo Xích lô 45p & Múa Rối Nước 50p",
+            "nameEn": "Option 3: Combo Cyclo 45m & Water Puppet Show 50m",
+            "price": "+200.000đ / $10",
+            "priceEn": "+200,000 VND / $10"
+          },
+          {
+            "name": "Không dùng bữa trưa theo tour (đón khách lúc 13h30)",
+            "nameEn": "Without lunch deduction (pickup at hotel at 13:30)",
+            "price": "-100.000đ / -$5",
+            "priceEn": "-100,000 VND / -$5"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "menuGallery": {
+        "title": "Thực đơn bữa trưa",
+        "titleEn": "Lunch set menu",
+        "images": [
+          {
+            "src": "img/tours/hanoi-traditional/set-menu.jpg",
+            "alt": "Thực đơn nhà hàng",
+            "altEn": "Restaurant set menu"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-traditional-half-morning",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "CHƯƠNG TRÌNH TOUR THĂM QUAN HÀ NỘI NỬA NGÀY ( BUỔI SÁNG)",
+      "nameEn": "HANOI LUXURY CITY HALF-DAY TOUR",
+      "durationLabel": "Buổi sáng",
+      "durationLabelEn": "Morning",
+      "nightsOffset": 0,
+      "price": 1460000,
+      "priceNote": "$59 limousine · $69 Dcar",
+      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "image": "img/tours/hanoi-traditional/Activities_2.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_1.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_10.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_11.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_12.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_13.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_14.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_15.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_16.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_17.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_18.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_19.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_2.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_20.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_21.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_22.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_23.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_24.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_25.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_26.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_27.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_28.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_29.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_3.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_30.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_31.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_32.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_33.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_34.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_4.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_5.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_6.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_7.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_8.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_9.jpg",
+          "alt": "Hà Nội sáng truyền thống",
+          "altEn": "Hanoi morning traditional tour"
+        }
+      ],
+      "cardLine": "Tour buổi sáng khám phá quần thể Lăng Bác, Chùa Một Cột, Bảo tàng Dân tộc học hoặc Nhà tù Hỏa Lò cùng bữa trưa tại nhà hàng.",
+      "cardLineEn": "Morning tour visiting Ho Chi Minh Mausoleum complex, One Pillar Pagoda, Museum of Ethnology, and lunch at restaurant.",
+      "description": [
+        "Hà Nội thủ đô nghìn năm văn hiến, nơi cất giữ và lưu lại nền lịch sử lâu đời trải qua hàng nghìn năm.",
+        "Vì thế tại sao Hà Nội chính là nơi in đậm nét cổ kính của một thủ đô xưa, thăm quan Hà Nội, quý khách sẽ được đến thăm các danh lam nổi tiếng như : Chùa Trấn Quốc, Lăng Bác, Quảng trường Ba Đình, Bảo Tàng Dân Tộc Học,...",
+        "Đến với Hà Nội, quý khách không chỉ được ngắm nhìn những công trình kiến trúc mà còn được hòa mình vào nền văn hóa đặc sắc nơi đây."
+      ],
+      "descriptionEn": [
+        "(MORNING)",
+        "Hanoi is the capital of Vietnam and has been a place to keep and witness more than 1000 years of a long history.",
+        "That is why this place is a solemn ancient city. Visiting around Hanoi, you will see ancient architectures such as Tran Quoc Pagoda, Ho Chi Minh Complex, One Pillar Pagoda, Vietnam Ethnology Museum or Vietnamese Women’s Museum. All together create an ancient and historic city.",
+        "Coming to Hanoi, you not only see the architectural works but also to immerse yourself in the unique culture here."
+      ],
+      "itinerary": [
+        {
+          "time": "07:50–08:30",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h50 4B Tràng Thi 22 Tràng Thi Giờ đón 8h00 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 8h10 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 8h20 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 8h30 Nhà Hát Lớn Hà Nội"
+        },
+        {
+          "time": "8:45",
+          "title": "Quý khách thăm quan quần thể Lăng Bác",
+          "text": "Điểm đến đầu tiên, Quý khách thăm quan quần thể Lăng Bác, nơi an nghỉ cuối cùng của người cha vĩ đại- chủ tịch Hồ Chí Minh, sau khi thăm quan di hài của vị chủ tịch Hồ Chí Minh vĩ đại, Quý khách sẽ đến thăm nhà sàn, ao cá Bác Hồ, nơi chủ tịch Hồ Chí Minh sống và làm việc từ năm 1954 đến năm1969. Sau đó quý khách tiếp tục thăm quan Chùa Một Cột, đây là ngôi chùa mang những nét kiến trúc độc đáo nhất thế giới. Quý khách nên mặc quần áo dài qua đầu gối khi thăm lăng bác, thăm quan các ngôi chùa. Lăng chủ tịch Hồ Chí Minh đóng cửa vào thứ 2 và thứ 6. Tuy nhiên quý khách có thể chụp ảnh bên ngoài lăng và thăm quan khu quần thể lăng như nhà sàn, áo cá, chùa một cột. Lăng bác được đóng cửa để bảo trì hàng năm từ 15/6 đến 15/8 dương lịch. Trong khoảng thời gian này quý khách vẫn có thể thăm quần thể lăng bác như nhà sàn, áo cá, chùa một cột."
+        },
+        {
+          "time": "10:15",
+          "title": "Tham quan bảo tàng dân tộc học",
+          "text": "Quý khách thăm quan bảo tàng dân tộc học. Đây là bảo tàng mang đầy đủ nét văn hoá của 54 dân tộc Việt Nam. Lưu ý: Bảo Tàng Dân Tộc học đóng cửa vào thứ 2 hàng tuần. Vì vậy quý khách sẽ chuyển sang thăm quan Bảo Tàng Phụ Nữ Việt Nam vào thứ 2."
+        },
+        {
+          "time": "12:30-12:45",
+          "title": "đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng",
+          "text": "Quý khách đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng."
+        },
+        {
+          "time": "13:30 -13:45",
+          "title": "về tại khách sạn",
+          "text": "Xe và HDV đưa quý khách về tại khách sạn. Chương trình thăm quan kết thúc."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "7:50 – 8:30",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:50 AM 4B Trang Thi Street 22 Trang Thi Street 08:00 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 08:10 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 08:20 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 08:30 AM Hanoi Opera House"
+        },
+        {
+          "time": "08:45",
+          "title": "Visit Ho Chi Minh Complex",
+          "text": "Visit Ho Chi Minh Complex, the final resting place of Vietnamese great father or Uncle Ho. You have a chance to see the embalmed body of Ho Chi Minh then walk around the garden to see 2 houses where he lived & worked from 1954 to 1969. Then visit One Pillar Pagoda where worships the Goddess of Mercy – It is the most unique pagoda in the world. - Should dress modestly by covering from shoulders to knees when visiting Ho Chi Minh Mausoleum, temples, pagodas, etc. - Ho Chi Minh’s Mausoleum is closed on Mondays and Fridays. But still can take picture of the Mausoleum and visit around that area. - Ho Chi Minh’s Mausoleum is closed at least 2 months (15th June -15th August) for the annual maintaining."
+        },
+        {
+          "time": "10:15",
+          "title": "Visit Vietnam Ethnology Museum to learn about the ",
+          "text": "Visit Vietnam Ethnology Museum to learn about the culture of 54 ethnic groups living in the whole country of Vietnam."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Thường hoặc Limousine sang trọng trong suốt hành trình",
+        "chai nước/khách",
+        "Vé thăm quan theo chương trình",
+        "HDV song ngữ Tiếng Anh/Tiếng Việt",
+        "Ăn trưa tại nhà hàng"
+      ],
+      "servicesIncludedEn": [
+        "Shuttle Bus/Limousine during the trip",
+        "A bottle of water / person",
+        "Entrance tickets",
+        "English speaking guide",
+        "Vietnamese Lunch"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trong bữa ăn trưa",
+        "Tip cho HDV, Lái Xe",
+        "Chi phí cá nhân hoặc bất kỳ thứ gì không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "Drink for lunch",
+        "Tips for tour guide & driver",
+        "Personal expenses or anything not mentioned above"
+      ],
+      "serviceNote": "Chương trình buổi sáng nếu Quý Khách không ăn trưa thì sẽ trừ tiền bữa trưa 100,000 VND/ 1 khách và xe sẽ đưa Quý khách về khách sạn sau khi thăm quan Bảo Tàng Dân Tộc Học hoặc Bảo Tàng Phụ Nữ Việt Nam. Lăng chủ tịch Hồ Chí Minh đóng cửa vào thứ 2 và thứ 6. Tuy nhiên quý khách có thể chụp ảnh bên ngoài lăng và thăm quan khu quần thể lăng như nhà sàn, áo cá, chùa một cột. Lăng chủ tịch Hồ Chí Minh được đóng cửa để bảo trì hàng năm từ 15/6 đến 15/8 dương lịch. Trong khoảng thời gian này quý khách vẫn có thể thăm quần thể lăng như nhà sàn, áo cá, chùa một cột. Bảo Tàng Dân Tộc Học đóng cửa vào thứ 2 hàng tuần. Vì vậy quý khách sẽ chuyển sang thăm quan Bảo Tàng Phụ Nữ Việt Nam vào thứ 2. Nên ăn mặc kín đáo từ vai đến đầu gối nơi công cộng như đền, chùa, lăng,... Nên mang theo những thứ cần thiết như: tiền mặt, điện thoại di động hoặc máy ảnh, áo mưa/dù, kem chống nắng… Lịch trình có thể thay đổi (tùy thuộc vào thời tiết)",
+      "serviceNoteEn": "h30-12h45: Have lunch at our restaurant. You have an opportunity to enjoy Vietnamese cuisine. Vegeterian foods are available. h30 -13h45: Our Bus take you back to the Hotel. We finish the trip! For Half-day city tour, if customers don’t have lunch we will deduct USD 5/person and we will drop off at the hotel after visiting Ethnology Museum/ Vietnamese Women’s Museum. Ho Chi Minh’s Mausoleum is closed on Monday and Friday. But still can take picture mausoleum and visit around that area. We will visit Vietnamese Women’s Museum instead of Vietnam Ethnology Museum closed on Mondays. Should dress modestly by covering from shoulders to knees in the public places like temples, pagodas, HCM Mausoleum, etc Should bring the necessary things such as: cash, cellphone or cameras, raincoat/ umbrella, suncream, etc (depending on the weather). The order of the itinerary can be changed depending on the situation.",
+      "offers": [
+        "Lăng Bác & Chùa Một Cột",
+        "Bảo tàng Dân tộc học",
+        "Bữa trưa đặc sản tại nhà hàng"
+      ],
+      "offersEn": [
+        "Mausoleum & One Pillar Pagoda",
+        "Museum of Ethnology",
+        "Local restaurant lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "1.460.000đ / khách ($59 Limousine · $69 Dcar)",
+        "baseRateEn": "1,460,000 VND / guest ($59 Limousine · $69 Dcar)",
+        "options": [
+          {
+            "name": "Không dùng bữa trưa (trả về khách sạn sau khi kết thúc tham quan)",
+            "nameEn": "Without lunch deduction (drop-off after sightseeing)",
+            "price": "-100.000đ / -$5",
+            "priceEn": "-100,000 VND / -$5"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "menuGallery": {
+        "title": "Thực đơn bữa trưa",
+        "titleEn": "Lunch set menu",
+        "images": [
+          {
+            "src": "img/tours/hanoi-traditional/set-menu.jpg",
+            "alt": "Thực đơn nhà hàng",
+            "altEn": "Restaurant set menu"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-noi-traditional-half-afternoon",
+      "destination": "ha-noi",
+      "featured": false,
+      "stars": 5,
+      "name": "CHƯƠNG TRÌNH TOUR THĂM QUAN HÀ NỘI NỬA NGÀY ( BUỔI CHIỀU)",
+      "nameEn": "HANOI LUXURY CITY HALF-DAY TOUR(AFTERNOON)",
+      "durationLabel": "Buổi chiều",
+      "durationLabelEn": "Afternoon",
+      "nightsOffset": 0,
+      "price": 1460000,
+      "priceNote": "$59 limousine · $69 Dcar",
+      "priceNoteEn": "$59 limousine · $69 Dcar",
+      "image": "img/tours/hanoi-traditional/Activities_3.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_1.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_10.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_11.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_12.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_13.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_14.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_15.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_16.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_17.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_18.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_19.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_2.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_20.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_21.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_22.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_23.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_24.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_25.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_26.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_27.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_28.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_29.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_3.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_30.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_31.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_32.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_33.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_34.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_4.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_5.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_6.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_7.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_8.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/hanoi-traditional/Activities_9.jpg",
+          "alt": "Hà Nội chiều truyền thống",
+          "altEn": "Hanoi afternoon traditional tour"
+        }
+      ],
+      "cardLine": "Tour buổi chiều tham quan Chùa Trấn Quốc bên Hồ Tây, Văn Miếu Quốc Tử Giám và Di tích Nhà tù Hỏa Lò lịch sử.",
+      "cardLineEn": "Afternoon tour featuring Tran Quoc Pagoda by West Lake, Temple of Literature, and historic Hoa Lo Prison.",
+      "description": [
+        "Hà Nội thủ đô nghìn năm văn hiến, nơi cất giữ và lưu lại nền lịch sử lâu đời trải qua hàng nghìn năm.",
+        "Vì thế tại sao Hà Nội chính là nơi in đậm nét cổ kính của một thủ đô xưa, thăm quan Hà Nội vào buổi chiều, du khách sẽ được đến thăm các danh lam nổi tiếng như : Văn Miếu Quốc Tử Giám, nhà tù Hỏa Lò…",
+        "Đến với Hà Nội, bạn không chỉ được ngắm nhìn những công trình kiến trúc mà còn được hòa mình vào nền văn hóa đặc sắc nơi đây."
+      ],
+      "descriptionEn": [
+        "Hanoi is the capital of Vietnam and has been a place to keep and witness more than 1000 years of a long history.",
+        "That is why this place is a solemn ancient city. Visiting around Hanoi in the afternoon , you will see ancient architectures such as Temple of Literature, Hoa Lo Prison. All together create an ancient and historic city.",
+        "Coming to Hanoi, you not only see the architectural works but also to immerse yourself in the unique culture here."
+      ],
+      "itinerary": [
+        {
+          "time": "12:15",
+          "title": "Hướng Dẫn Viên và Xe sẽ đến khách sạn đón và đưa D",
+          "text": "Hướng Dẫn Viên và Xe sẽ đến khách sạn đón và đưa Du Khách đến nhà hàng ăn trưa."
+        },
+        {
+          "time": "12:30-12:45",
+          "title": "đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng",
+          "text": "Quý khách đến nhà hàng nghỉ ngơi, ăn trưa tại nhà hàng. Lưu ý: Nếu Du khách không dùng bữa trưa trong tour, xe sẽ đón Du Khách tại khách sạn lúc 13h30."
+        },
+        {
+          "time": "13:30",
+          "title": "Tham quan Chùa Trấn Quốc",
+          "text": "HDV và xe sẽ đưa quý khách thăm quan Chùa Trấn Quốc. Chùa Trấn Quốc nằm trên đảo cá vàng Hồ Tây. Đây là ngôi chùa lâu đời nhất Hà Nội. Được xây dựng vào thế kỷ thứ 6. Khi thăm thủ đô, quý khách không thể bỏ qua ngôi chùa nổi tiếng này."
+        },
+        {
+          "time": "14:30",
+          "title": "Tham quan Văn Miếu Quốc Tử Giám",
+          "text": "Thăm quan Văn Miếu Quốc Tử Giám, được xây dựng vào năm 1070, đây là trường đại học đầu tiên của Việt Nam, là một trong những điểm thăm quan du lịch hấp dẫn nhất mỗi khi đến với thủ đô Hà Nội."
+        },
+        {
+          "time": "15:30",
+          "title": "Sau khi thăm quan Văn Miếu Quốc Tử Giám",
+          "text": "Sau khi thăm quan Văn Miếu Quốc Tử Giám, HDV sẽ đưa quý khách thăm quan nhà tù Hỏa Lò, được pháp xây dựng vào năm 1886-1901 khi Việt Nam vẫn còn thuộc một phần của đông dương, Nhà tù từng được mệnh danh là “Địa ngục trần gian” và giờ đây nhà tù giống như một bảo tàng chiến tranh cho những ai muốn hiểu thêm về cuộc kháng chiến chống Pháp của người dân Việt Nam."
+        },
+        {
+          "time": "16:30",
+          "title": "về khách sạn nghỉ ngơi",
+          "text": "Xe và HDV đưa quý khách về khách sạn nghỉ ngơi. Kết thúc chương trình! Tùy chọn: Chương trình Xích lô hoặc chương trình múa rối nước có thể được sắp xếp theo yêu cầu của quý khách sau khi thăm quan Văn Miếu Quốc Tử Giám với một khoản phí bổ sung. Lựa chọn 1: Thăm quan phố cổ Hà Nội bằng Xích lô 45 phút (100,000 VND/người) sau khi tham quan Nhà tù Hỏa Lò. Lựa chọn 2: Biểu diễn múa rối nước 50 phút (100,000 vnđ/người). Thời gian nên xem rối nước là: 16h10 chiều hoặc 17h20 tối. Lựa chọn 3: Xích lô 45 phút và Múa rối nước 50 phút (200,000 vnđ/người). Thời gian nên xem múa rối nước là 17h20 chiều hoặc 18h30 tối."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "12:15",
+          "title": "at your hotel and go to the restaurant",
+          "text": "Our Tour guide and our Bus pick up at your hotel and go to the restaurant."
+        },
+        {
+          "time": "12:30-12:45",
+          "title": "Have lunch at our restaurant",
+          "text": "Have lunch at our restaurant. You have an opportunity to enjoy Vietnamese cuisine. Vegeterian foods are available. Note: In case, Customers don’t have lunch with the tour, our Bus will pick up at the hotel at around 13h30."
+        },
+        {
+          "time": "13:30",
+          "title": "Visit Tran Quoc Pagoda located on Golden Fish Isla",
+          "text": "Visit Tran Quoc Pagoda located on Golden Fish Island in West Lake. It is the oldest pagoda in Hanoi built in the 6th century."
+        },
+        {
+          "time": "14:30",
+          "title": "visit Temple of Literature",
+          "text": "Continue to visit Temple of Literature – the first university of Vietnam, The Temple of Literature (Van Mieu Quoc Tu Giam) is one of the most attractive tourist spots in Northern Vietnam. The Temple of Literature was founded in 1070."
+        },
+        {
+          "time": "15:30",
+          "title": "visit Hoa Lo Prison",
+          "text": "Keep going to visit Hoa Lo Prison, the prison was built by the French, from 1886 to 1901, when Vietnam was still a part of French Indochina. The French called the prison Maison Centrale. The prison was called “A Hell on Earth” and now the prison is like a war museum for those who want to understand more about the war against France of Vietnamese people."
+        },
+        {
+          "time": "16:30",
+          "title": "back to the Hotel",
+          "text": "Our Bus take you back to the Hotel. We finish the trip! Optional: Cyclo and/or Water Puppet Show can be arranged upon your request with additional fee. Option 1: Cyclo 45 minutes (5usd/person) around Hanoi Old Quarter after visiting Hoa Lo Prison Option 2: Water Puppet Show 50 minutes (5usd/person) . Recomended time: 16h10 or 17h20 Option 3: Cyclo 45 minutes and Water Puppet Show 50 minutes (10usd/person). Recommended time for Water Puppet Show 17h20 or 18h30"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Thường hoặc Limousine sang trọng trong suốt hành trình",
+        "chai nước/khách",
+        "Vé thăm quan theo chương trình",
+        "HDV song ngữ Tiếng Anh/Tiếng Việt",
+        "Ăn trưa tại nhà hàng"
+      ],
+      "servicesIncludedEn": [
+        "Shuttle Bus/Limousine during the trip",
+        "A bottle of water / person",
+        "Entrance tickets",
+        "English speaking guide"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trong bữa ăn trưa",
+        "Tip cho HDV, lái Xe",
+        "Vé Xích lô 100,000 VNĐ/khách",
+        "Vé xem Múa Rối Nước (Vé phổ thông) 100,000 VNĐ/khách",
+        "Chi phí cá nhân hoặc bất kỳ thứ gì không được đề cập ở trên."
+      ],
+      "servicesExcludedEn": [
+        "Drink for lunch",
+        "Cyclo (USD 5/person)",
+        "Water Puppet Show (USD 5/person)",
+        "Tips for tour guide & driver",
+        "Personal expenses or anything not mentioned above"
+      ],
+      "serviceNote": "Chương trình buổi chiều nếu Quý Khách không ăn trưa theo chương trình thì sẽ trừ tiền bữa trưa 100,000 vnđ/1 khách và xe sẽ đón Quý khách tại khách sạn lúc 13h30. Du khách nên mang theo những thứ cần thiết như: tiền mặt, điện thoại di động hoặc máy ảnh, áo mưa/dù, kem chống nắng… Lịch trình có thể thay đổi (tùy thuộc vào thời tiết)",
+      "serviceNoteEn": "For Half-day city tour, if customers don’t have lunch we will deduct USD 5/person and pick up at the hotel at 13h30. Should bring the necessary things such as: cash, cellphone or cameras, raincoat/ umbrella, suncream, etc (depending on the weather). The order of the itinerary can be changed depending on the situation.",
+      "offers": [
+        "Chùa Trấn Quốc Hồ Tây",
+        "Văn Miếu Quốc Tử Giám",
+        "Di tích Nhà tù Hỏa Lò"
+      ],
+      "offersEn": [
+        "Tran Quoc Pagoda",
+        "Temple of Literature",
+        "Historic Hoa Lo Prison"
+      ],
+      "pricingTable": {
+        "baseRate": "1.460.000đ / khách ($59 Limousine · $69 Dcar)",
+        "baseRateEn": "1,460,000 VND / guest ($59 Limousine · $69 Dcar)",
+        "options": [
+          {
+            "name": "Lựa chọn 1: Thăm quan phố cổ bằng Xích lô 45 phút",
+            "nameEn": "Option 1: Cyclo 45 minutes around Old Quarter",
+            "price": "+100.000đ / $5",
+            "priceEn": "+100,000 VND / $5"
+          },
+          {
+            "name": "Lựa chọn 2: Biểu diễn múa rối nước 50 phút",
+            "nameEn": "Option 2: Water Puppet Show 50 minutes",
+            "price": "+100.000đ / $5",
+            "priceEn": "+100,000 VND / $5"
+          },
+          {
+            "name": "Lựa chọn 3: Combo Xích lô 45p & Múa Rối Nước 50p",
+            "nameEn": "Option 3: Combo Cyclo & Water Puppet Show",
+            "price": "+200.000đ / $10",
+            "priceEn": "+200,000 VND / $10"
+          },
+          {
+            "name": "Không dùng bữa trưa (xe đón tại khách sạn 13h30)",
+            "nameEn": "Without lunch deduction (pickup at 13:30)",
+            "price": "-100.000đ / -$5",
+            "priceEn": "-100,000 VND / -$5"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9, 31/12, 1/1)",
+            "nameEn": "Holiday surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em dưới 5 tuổi",
+            "nameEn": "Children under 5 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; bố mẹ tự lo các chi phí phát sinh nếu có)",
+            "descEn": "Free of charge (sharing seat with parents; parents cover personal expenses)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (suất ăn riêng, chỗ ngồi riêng trên xe)",
+            "descEn": "75% of tour rate (separate meal and private seat on coach)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% như người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "menuGallery": {
+        "title": "Thực đơn bữa trưa",
+        "titleEn": "Lunch set menu",
+        "images": [
+          {
+            "src": "img/tours/hanoi-traditional/set-menu.jpg",
+            "alt": "Thực đơn nhà hàng",
+            "altEn": "Restaurant set menu"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "sapa-bac-ha-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa – Chợ Phiên Bắc Hà 2N1Đ (Khách Sạn)",
+      "nameEn": "Sapa – Bac Ha Market Tour 2 Days 1 Night (Hotel)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa – Chợ Phiên Bắc Hà 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
+          "altEn": "Sapa – Bac Ha Market Tour 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Khám phá bản Cát Cát thơ mộng và trải nghiệm không gian văn hóa rực rỡ sắc màu tại chợ phiên Bắc Hà họp vào chủ nhật hàng tuần.",
+      "cardLineEn": "Explore picturesque Cat Cat village and experience the vibrant colors of Bac Ha Sunday market.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "Explore picturesque Cat Cat village and experience the vibrant colors of Bac Ha Sunday market."
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h00 - 06h30",
+          "title": "đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi…",
+          "text": "Xe của Công ty sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 12h30 – 13h00",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Quý khách tới khách sạn, làm thủ tục nhận phòng cho đoàn tại khách sạn và dùng bữa trưa tại nhà hàng ."
+        },
+        {
+          "time": "Ngày 1 · 14h00",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làngTham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 19h00",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng . Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 2 · 06h00",
+          "title": "Quý khách ăn sáng tại khách sạn",
+          "text": "Quý khách ăn sáng tại khách sạn. Sau đó làm thủ tục trả phòng khách sạn"
+        },
+        {
+          "time": "Ngày 2 · 07h00",
+          "title": "Xe và Hướng dẫn viên đón Quý khách tại khách sạn tại…",
+          "text": "Xe và Hướng dẫn viên đón Quý khách tại khách sạn tại Thị trấn Sapa khởi hành đi chợ Bắc Hà. Đoàn sẽ đi thăm chợ Bắc Hà cách Sapa khoảng 110km – một phiên chợ nổi tiếng ở Lào Cai chỉ họp mỗi tuần một phiên vào ngày Chủ nhật."
+        },
+        {
+          "time": "Ngày 2 · 10h30",
+          "title": "Đến Chợ quý khách bách bộ đi tham quan những gian hà…",
+          "text": "Đến Chợ quý khách bách bộ đi tham quan những gian hàng của người dân địa phương, chứng kiến tận mắt khung cảnh thương nhân từ địa phương khác đến trao đổi hàng hóa với đồng bào dân tộc thiểu số, kế tiếp đó quý khách sẽ ghé thăm chợ ngựa, chợ trâu, chợ lợn đặc sắc và náo nhiệt. Tại chợ Bắc Hà, quý khách sẽ có cơ hội thưởng thức các món ăn dân tộc, các loại rượu đặc sản được chế biến từ gạo nếp, sắn, ngô cũng như các loại hoa quả tươi như mận, táo, lê… Đặc biệt quý khách còn có thể nói chuyện cùng đồng bào ở đây qua sự diễn giải của hướng dẫn viên và tự tay mua những đồ lưu niệm được dệt bằng thổ cẩm rất độc đáo"
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Ăn trưa tại chợ Bắc Hà",
+          "text": "Ăn trưa tại chợ Bắc Hà. Sau đó quý khách đến thăm Bản Phố - Với điều kiện tự nhiên là một bản vùng cao của huyện Bắc Hà, nơi đây mang trong mình những nét đặc trưng chẳng nơi nào có được. Những cảnh đẹp từ tạo hóa ban tặng vẫn còn vẹn nguyên hay những chén rượu ngô nồng nàn là những điều bạn sẽ chẳng bao giờ quên khi đến với bản Phố."
+        },
+        {
+          "time": "Ngày 2 · 15h00",
+          "title": "Quý khách lên xe về điểm đón của xe giường nằm để tr…",
+          "text": "Quý khách lên xe về điểm đón của xe giường nằm để trở về Hà Nội."
+        },
+        {
+          "time": "Ngày 2 · 22h – 22h30",
+          "title": "Quý khách về đến Hà Nội, xe trả Quý khách tại Trần Q…",
+          "text": "Quý khách về đến Hà Nội, xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiếm. Kết thúc tour Sapa – chợ Bắc Hà 2 ngày 1 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00- 06h30",
+          "title": "at the meeting point",
+          "text": "Driver will pick you up at the meeting point. After 05 hours on the highway, the car will take you to Sapa"
+        },
+        {
+          "time": "Day 1 · 13h00-13h30",
+          "title": "Arrive to Sapa town",
+          "text": "Arrive to Sapa town. Transfer car pick you up at bus station and then have lunch at the restaurant. Check in at the hotel."
+        },
+        {
+          "time": "Day 1 · 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h30 – 19h00",
+          "title": "Have dinner at the restaurant, free time and explore…",
+          "text": "Have dinner at the restaurant, free time and explore Sapa at night"
+        },
+        {
+          "time": "Day 2 · 6h30",
+          "title": "Have breakfast at hotel",
+          "text": "Have breakfast at hotel. Check-out procedure"
+        },
+        {
+          "time": "Day 2 · 7h00",
+          "title": "Toru guide pick up at hotel",
+          "text": "Toru guide pick up at hotel. It takes 3 hour driving to Bac Ha market. At the market you will also meet Flower Hmong (Red Hmong), Black Dao, Tay, Nung, La Chi, Phu La and other tribal groups who come from far and wide to buy and sell a wide variety of goods and livestock, to exchange news and to renew friendships. In the past the market was a centre for trading horses but now that motorbikes have replaced them it is more common to see buffalo, cows, goats, fish and other."
+        },
+        {
+          "time": "Day 2 · 12h00",
+          "title": "Lunch at local restaurant",
+          "text": "Lunch at local restaurant"
+        },
+        {
+          "time": "Day 2 · 13h30",
+          "title": "Trek to Ban Pho village of the Flower H’Mong people,…",
+          "text": "Trek to Ban Pho village of the Flower H’Mong people, to see their house, the daily life, understand little more about their lifestyle and traditional customs. Especially, we can try homemade wine from corn. Drive back to Sapa, 110 km in about 3 hours ride."
+        },
+        {
+          "time": "Day 2 · 16h30",
+          "title": "Arrival in Lao Cai , the bus stops at the restaurant…",
+          "text": "Arrival in Lao Cai , the bus stops at the restaurant, you wait at the restaurant then the sleeper bus picks you up and returns to Hanoi"
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at bus station. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm đời mới, máy lạnh. ( Không có hương dẫn viên trên xe)",
+        "Khách sạn theo tiêu chuẩn 2-3 người/phòng",
+        "Các bữa ăn theo chương trình: 01 bữa sáng , 02 bữa trưa, 01 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: Bản Cát Cát, chợ Bắc Hà"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "night at hotel",
+        "Lacal English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary.",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT",
+        "Đồ uống trong bữa ăn, chi phí chi tiêu cá nhân",
+        "Cuối tuần phụ thu 100.000đ/khách đối với tour ở khách sạn 4, 5 sao"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Chợ phiên Bắc Hà",
+        "Bản Cát Cát",
+        "Xe giường nằm khứ hồi"
+      ],
+      "offersEn": [
+        "Bac Ha Sunday Market",
+        "Cat Cat Village",
+        "Round-trip sleeper bus"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-bac-ha-3d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa – Núi Hàm Rồng – Chợ Phiên Bắc Hà 3N2Đ (Khách Sạn)",
+      "nameEn": "Sapa – Ham Rong Mountain – Bac Ha Market 3 Days 2 Nights (Hotel)",
+      "durationLabel": "3 ngày 2 đêm",
+      "durationLabelEn": "3 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa – Núi Hàm Rồng – Chợ Phiên Bắc Hà 3N2Đ (Khách Sạn) - The Dahlia Hanoi",
+          "altEn": "Sapa – Ham Rong Mountain – Bac Ha Market 3 Days 2 Nights (Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Hành trình 3 ngày trọn vẹn: trekking bản Cát Cát, ngắm hoa tại núi Hàm Rồng, cáp treo Fansipan và phiên chợ vùng cao Bắc Hà.",
+      "cardLineEn": "Complete 3-day journey: Cat Cat trekking, Ham Rong mountain garden, Fansipan cable car, and famous Bac Ha ethnic market.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "Complete 3-day journey: Cat Cat trekking, Ham Rong mountain garden, Fansipan cable car, and famous Bac Ha ethnic market."
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h – 06h30",
+          "title": "tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa",
+          "text": "Xe đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Xe trung chuyển đón Quý khách tại bến xe về nhà hang ăn trưa . Sau đó nhận phòng khách sạn"
+        },
+        {
+          "time": "Ngày 1 · 14h00 – 14h30",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làngTham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 18h – 18h30",
+          "title": "Đoàn dùng bữa tối tại nhà",
+          "text": "Đoàn dùng bữa tối tại nhà . Nghỉ đêm tại Sapa"
+        },
+        {
+          "time": "Ngày 2 · 07h30",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó, quý khách đi bộ khám phá Khu du lịch Hàm Rồng, từ đây, du khách có thể ngắm nhìn Sa Pa từ trên cao. gồm có: Vườn Lan 1-2, vườn Lê, vườn Táo Mèo, Vườn hoa Trung Tâm, Hòn Đá Gãy, Cổng Trời, Đầu Rồng, Hòn Cá Sấu, Khu Thiên Thách Lâm, Hòn Phật Bà, Sân Mây, tháp truyền hình… Quay về trung tâm, hòa mình vào “Lễ hội trên mây” với những trò chơi dân gian thú vị."
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách dùng bữa trưa",
+          "text": "Qúy khách dùng bữa trưa. Tự do tham quan và mua sắm tại chợ Sapa."
+        },
+        {
+          "time": "Ngày 2 · Buổi chiều",
+          "title": "Quý khách có thể trinh phục đỉnh Fansipan bằng hệ th…",
+          "text": "Quý khách có thể trinh phục đỉnh Fansipan bằng hệ thống cáp treo hiện đại nhất đông nam á hoặc tự thuê xe máy để đi thăm những cảnh đẹp còn sót lại tại thị trấn Sapa mộng mơ như đi thăm thác Tình yêu, thung lũng Mường Hoa… (Chi phí xe + vé tự túc)"
+        },
+        {
+          "time": "Ngày 2 · 18h00",
+          "title": "Quý khách dùng bữa tối tại nhà hàng",
+          "text": "Quý khách dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa"
+        },
+        {
+          "time": "Ngày 3 · 06h00",
+          "title": "Quý khách ăn sáng tại khách sạn",
+          "text": "Quý khách ăn sáng tại khách sạn. Sau đó làm thủ tục trả phòng khách sạn"
+        },
+        {
+          "time": "Ngày 3 · 07h00",
+          "title": "Xe và Hướng dẫn viên đón Quý khách tại khách sạn tại…",
+          "text": "Xe và Hướng dẫn viên đón Quý khách tại khách sạn tại Thị trấn Sapa khởi hành đi chợ Bắc Hà. Đoàn sẽ đi thăm chợ Bắc Hà cách Sapa khoảng 110km – một phiên chợ nổi tiếng ở Lào Cai chỉ họp mỗi tuần một phiên vào ngày Chủ nhật."
+        },
+        {
+          "time": "Ngày 3 · 10h30",
+          "title": "Đến Chợ quý khách bách bộ đi tham quan những gian hà…",
+          "text": "Đến Chợ quý khách bách bộ đi tham quan những gian hàng của người dân địa phương, chứng kiến tận mắt khung cảnh thương nhân từ địa phương khác đến trao đổi hàng hóa với đồng bào dân tộc thiểu số, kế tiếp đó quý khách sẽ ghé thăm chợ ngựa, chợ trâu, chợ lợn đặc sắc và náo nhiệt. Tại chợ Bắc Hà, quý khách sẽ có cơ hội thưởng thức các món ăn dân tộc, các loại rượu đặc sản được chế biến từ gạo nếp, sắn, ngô cũng như các loại hoa quả tươi như mận, táo, lê… Đặc biệt quý khách còn có thể nói chuyện cùng đồng bào ở đây qua sự diễn giải của hướng dẫn viên và tự tay mua những đồ lưu niệm được dệt bằng thổ cẩm rất độc đáo"
+        },
+        {
+          "time": "Ngày 3 · 12h00",
+          "title": "Ăn trưa tại chợ Bắc Hà",
+          "text": "Ăn trưa tại chợ Bắc Hà. Sau đó quý khách đến thăm Bản Phố - Với điều kiện tự nhiên là một bản vùng cao của huyện Bắc Hà, nơi đây mang trong mình những nét đặc trưng chẳng nơi nào có được. Những cảnh đẹp từ tạo hóa ban tặng vẫn còn vẹn nguyên hay những chén rượu ngô nồng nàn là những điều bạn sẽ chẳng bao giờ quên khi đến với bản Phố."
+        },
+        {
+          "time": "Ngày 3 · 15h00",
+          "title": "Quý khách lên xe về điểm đón của xe giường nằm để tr…",
+          "text": "Quý khách lên xe về điểm đón của xe giường nằm để trở về Hà Nội."
+        },
+        {
+          "time": "Ngày 3 · 22h – 22h30",
+          "title": "Quý khách về đến Hà Nội, xe trả khách tại Trần Quang…",
+          "text": "Quý khách về đến Hà Nội, xe trả khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiếm. Kết thúc tour Sapa – chợ Bắc Hà 3 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00- 06h30",
+          "title": "at the meeting point",
+          "text": "Driver will pick you up at the meeting point. After 05 hours on the highway, the car will take you to Sapa"
+        },
+        {
+          "time": "Day 1 · 13h00-13h30",
+          "title": "Arrive to Sapa town",
+          "text": "Arrive to Sapa town. Transfer car pick you up at bus station and then have lunch at the restaurant. Then check in at the hotel"
+        },
+        {
+          "time": "Day 1 · 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h30 – 19h00",
+          "title": "Have dinner at the restaurant, free time and explore…",
+          "text": "Have dinner at the restaurant, free time and explore Sapa at night"
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Having breakfast at the restaurant",
+          "text": "Having breakfast at the restaurant"
+        },
+        {
+          "time": "Day 2 · 08h00",
+          "title": "Trekking to Y Linh Ho village and then start hiking …",
+          "text": "Trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges."
+        },
+        {
+          "time": "Day 2 · 12h30",
+          "title": "Have lunch at Ta Van village then and rest",
+          "text": "Have lunch at Ta Van village then and rest"
+        },
+        {
+          "time": "Day 2 · 14h00",
+          "title": "Bus pick up to hotel in sapa",
+          "text": "Bus pick up to hotel in sapa"
+        },
+        {
+          "time": "Day 2 · 18h30",
+          "title": "You enjoy dinner at restaurant",
+          "text": "You enjoy dinner at restaurant.. Overnight at hotel"
+        },
+        {
+          "time": "Day 3 · 6h30",
+          "title": "Have breakfast at hotel",
+          "text": "Have breakfast at hotel. Check-out procedure."
+        },
+        {
+          "time": "Day 3 · 7h00",
+          "title": "Tour guide pick up at hotel",
+          "text": "Tour guide pick up at hotel. It takes 3 hour driving to Bac Ha market. At the market you will also meet Flower Hmong (Red Hmong), Black Dao, Tay, Nung, La Chi, Phu La and other tribal groups who come from far and wide to buy and sell a wide variety of goods and livestock, to exchange news and to renew friendships. In the past the market was a centre for trading horses but now that motorbikes have replaced them it is more common to see buffalo, cows, goats, fish and other."
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Lunch at local restaurant",
+          "text": "Lunch at local restaurant"
+        },
+        {
+          "time": "Day 3 · 13h30",
+          "title": "Trek to Ban Pho village of the Flower H’Mong people,…",
+          "text": "Trek to Ban Pho village of the Flower H’Mong people, to see their house, the daily life, understand little more about their lifestyle and traditional customs. Especially, we can try homemade wine from corn. Drive back to Sapa, 110 km in about 3 hours ride."
+        },
+        {
+          "time": "Day 3 · 16h30",
+          "title": "Arrival in Lao Cai , the bus stops at the restaurant…",
+          "text": "Arrival in Lao Cai , the bus stops at the restaurant, you wait at the restaurant then the sleeper bus picks you up and returns to Hanoi"
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off Bus station. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm đời mới, máy lạnh. ( Trên xe không có Hướng dẫn viên)",
+        "Khách sạn theo tiêu chuẩn 2-3 người/phòng",
+        "Các bữa ăn theo chương trình: 02 bữa sáng , 03 bữa trưa, 2 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: Bản Cát Cát, Hàm Rồng, chợ Bắc Hà"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "nights at hotel in Sapa town",
+        "Local English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary.",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT",
+        "Xe + vé cáp treo Fansipan",
+        "Đồ uống trong bữa ăn, chi phí chi tiêu cá nhân",
+        "Phụ thu cuối tuần đồi với tour ở khách sạn 4, 5 sao"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Visas",
+        "Other personal expenses (tip, drinks with meals, …)"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Chợ Bắc Hà",
+        "Núi Hàm Rồng & Cát Cát",
+        "2 đêm khách sạn Sa Pa"
+      ],
+      "offersEn": [
+        "Bac Ha Market",
+        "Ham Rong & Cat Cat",
+        "2 nights Sapa hotel"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-catcat-fansipan-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa – Bản Cát Cát – Cáp Treo Fansipan 2N1Đ (Khách Sạn)",
+      "nameEn": "Sapa – Cat Cat Village – Fansipan Peak 2 Days 1 Night (Hotel)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa – Bản Cát Cát – Cáp Treo Fansipan 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
+          "altEn": "Sapa – Cat Cat Village – Fansipan Peak 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Chinh phục Nóc nhà Đông Dương Fansipan hùng vĩ bằng cáp treo và tàu Mường Hoa, hòa mình vào bản làng Cát Cát của người H'Mông.",
+      "cardLineEn": "Conquer the Roof of Indochina via Fansipan cable car and Muong Hoa train, combined with H'mong culture in Cat Cat village.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:",
+        "(Giá áp dụng cho nhóm từ 02 khách)"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h00 – 06h30",
+          "title": "đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi…",
+          "text": "Xe của Công ty sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Xe trung chuyển đón Quý khách tại bến xe về dùng bữa trưa tại nhà hàng. Sau đó Quý khách làm thủ tục nhận phòng."
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làngTham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 19h00",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng . Nghỉ đêm tại Sapa"
+        },
+        {
+          "time": "Ngày 2 · 07h00",
+          "title": "Quý khách dùng bữa sáng tại nhà hang",
+          "text": "Quý khách dùng bữa sáng tại nhà hang. Sau đó làm thủ tục trả phòng, để đồ tại quầy lễ tân khách sạn"
+        },
+        {
+          "time": "Ngày 2 · 08h00 – 08h30",
+          "title": "Quý khách chinh phục đỉnh Fansipan bằng tàu Mường Ho…",
+          "text": "Quý khách chinh phục đỉnh Fansipan bằng tàu Mường Hoa và hệ thống cáp treo"
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách quay lại thị trấn, dùng bữa trưa",
+          "text": "Qúy khách quay lại thị trấn, dùng bữa trưa."
+        },
+        {
+          "time": "Ngày 2 · Buổi chiều",
+          "title": "Tự do tham quan và mua sắm tại chợ Sapa",
+          "text": "Tự do tham quan và mua sắm tại chợ Sapa."
+        },
+        {
+          "time": "Ngày 2 · 15h - 15h30",
+          "title": "Đoàn lên lên xe về Hà Nội",
+          "text": "Đoàn lên lên xe về Hà Nội. Trên đường về quý khách có thể dừng ở sân bay Nội Bài"
+        },
+        {
+          "time": "Ngày 2 · 22h – 22h30",
+          "title": "Xe trả khách tại Trần Quang Khải hoặc Lý Thái Tổ, Ho…",
+          "text": "Xe trả khách tại Trần Quang Khải hoặc Lý Thái Tổ, Hoàn Kiếm. Chia tay và kết thúc chuyến đi du lịch Sapa. Hẹn gặp lại quý khách trong những hành trình tiếp theo."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 06h30",
+          "title": "at the meeting point",
+          "text": "Driver will pick you up at the meeting point. After 05 hours on the highway, the car will take you to Sapa resort."
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Arrive Sapa town",
+          "text": "Arrive Sapa town. Transfer car pick you up at bus station. Having lunch at restaurant and then check – in procedure."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 19h00",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant"
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at hotel in Sapa Town",
+          "text": "Sleeping at hotel in Sapa Town."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Having breakfast Check-out procedure at hotel and yo…",
+          "text": "Having breakfast Check-out procedure at hotel and you will store luggages at the lounge of hotel before visit Fansipan"
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Visit Fansipan by Muong Hoa train and Fansipan Cale …",
+          "text": "Visit Fansipan by Muong Hoa train and Fansipan Cale Car System."
+        },
+        {
+          "time": "Day 2 · 12h00 – 12h30",
+          "title": "Back Sapa town and having lunch",
+          "text": "Back Sapa town and having lunch."
+        },
+        {
+          "time": "Day 2 · 15h00 – 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off bus station. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm đời mới, máy lạnh. ( Không có hướng dẫn viên trên xe)",
+        "Khách sạn tại thị trấn Sapa theo tiêu chuẩn 2-4 người/phòng",
+        "Các bữa ăn theo chương trình: 01 bữa sáng, 02 bữa trưa , 1 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: bản Cát Cát",
+        "Vé Cáp treo Fansipan, tàu điện Mường Hoa khứ hồi",
+        "Bảo hiểm du lịch"
+      ],
+      "servicesIncludedEn": [
+        "Transportation Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on the bus)",
+        "night at hotel in Sapa Town, 2-3 people/room",
+        "Meals according to the program: 01 breakfast, 02 lunch, 01 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets: Cat Cat village.",
+        "Muong Hoa train + Fansipan Cale Car",
+        "Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents).",
+        "Children from 9 years old and above are counted as adults"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí chi tiêu cá nhân",
+        "Đồ uống trong bữa ăn",
+        "Hướng dẫn viên đi Fansipan"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meals",
+        "Tour guide go to Fansipan"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Tour rates apply on regular days; surcharges apply on public holidays.",
+      "offers": [
+        "Vé cáp treo Fansipan",
+        "Tàu hỏa Mường Hoa",
+        "Khách sạn trung tâm Sa Pa"
+      ],
+      "offersEn": [
+        "Fansipan Cable Car",
+        "Muong Hoa Mountain Train",
+        "Central Sapa hotel"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-catcat-hamrong-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa – Bản Cát Cát – Núi Hàm Rồng 2N1Đ (Khách Sạn)",
+      "nameEn": "Sapa – Cat Cat Village – Ham Rong Mountain 2 Days 1 Night (Hotel)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa – Bản Cát Cát – Núi Hàm Rồng 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
+          "altEn": "Sapa – Cat Cat Village – Ham Rong Mountain 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Tour Sa Pa truyền thống 2N1Đ nhẹ nhàng, tham quan thác Cát Cát và ngắm nhìn toàn cảnh thị trấn Sa Pa từ đài quan sát núi Hàm Rồng.",
+      "cardLineEn": "Classic leisure 2D1N tour: Cat Cat waterfall and panoramic Sapa town views from Ham Rong mountain observatory.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h00 – 06h30",
+          "title": "đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi…",
+          "text": "Xe của Công ty sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Xe trung chuyển đón Quý khách tới khách sạn, Quý khách dùng bữa trưa sau đó làm thủ tục nhận phòng"
+        },
+        {
+          "time": "Ngày 1 · 14h00 – 14h30",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làngTham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 19h00",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 2 · 07h00",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó, quý khách đi bộ khám phá Khu du lịch Hàm Rồng, từ đây, du khách có thể ngắm nhìn Sa Pa từ trên cao. gồm có: Vườn Lan 1-2, vườn Lê, vườn Táo Mèo, Vườn hoa Trung Tâm, Hòn Đá Gãy, Cổng Trời, Đầu Rồng, Hòn Cá Sấu, Khu Thiên Thách Lâm, Hòn Phật Bà, Sân Mây, tháp truyền hình… Quay về trung tâm, hòa mình vào “Lễ hội trên mây” với những trò chơi dân gian thú vị."
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách dùng bữa trưa, làm thủ tục trả phòng",
+          "text": "Qúy khách dùng bữa trưa, làm thủ tục trả phòng. Tự do tham quan và mua sắm tại chợ Sapa."
+        },
+        {
+          "time": "Ngày 2 · Buổi chiều",
+          "title": "Quý khách tự do khám phá thị trấn Sapa (Chi phí tự t…",
+          "text": "Quý khách tự do khám phá thị trấn Sapa (Chi phí tự túc vé + xe)"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Đoàn lên lên xe về Hà Nội",
+          "text": "Đoàn lên lên xe về Hà Nội. Trên đường về quý khách có thể dừng ở sân bay Nội Bài"
+        },
+        {
+          "time": "Ngày 2 · 22h – 22h30",
+          "title": "Xe trả khách tại phố Trần Quang Khải / Lý Thái Tổ, H…",
+          "text": "Xe trả khách tại phố Trần Quang Khải / Lý Thái Tổ, Hoàn Kiếm. Chia tay và kết thúc chuyến đi du lịch Sapa. Hẹn gặp lại quý khách trong những hành trình tiếp theo."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 06h30",
+          "title": "at the meeting point",
+          "text": "Driver will pick you up at the meeting point. After 05 hours on the highway, the car will take you to Sapa resort."
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Arrive Sapa town",
+          "text": "Arrive Sapa town. Transfer car pick you up at bus station. Having lunch at restaurant and then check – in procedure."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 19h00",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant"
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at hotel in Sapa Town",
+          "text": "Sleeping at hotel in Sapa Town."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Having breakfast Check-out procedure at hotel and yo…",
+          "text": "Having breakfast Check-out procedure at hotel and you will store luggages at the lounge of hotel before trekking."
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Following breakfast at your hotel, Tour guide pick y…",
+          "text": "Following breakfast at your hotel, Tour guide pick you up at your hotel and start to trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the"
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "village of Black H’mong minority",
+          "text": "village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 12h00 – 12h30",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 13h30 – 14h00",
+          "title": "Come back Sapa Town by car",
+          "text": "Come back Sapa Town by car."
+        },
+        {
+          "time": "Day 2 · 15h00 – 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off bus station. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm đời mới, máy lạnh. ( Trên xe không có hướng dẫn viên)",
+        "Khách sạn theo tiêu chuẩn 2-4 người/phòng",
+        "Các bữa ăn theo chương trình: 01 bữa sáng, 02 bữa trưa, 01 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: bản Cát Cát , núi Hàm Rồng"
+      ],
+      "servicesIncludedEn": [
+        "Transportation Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on the bus)",
+        "night at hotel in Sapa Town, 2-3 people/room",
+        "Meals according to the program: 01 breakfast, 02 lunch, 01 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets: Cat Cat village, Lao Chai Ta Van villages",
+        "Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents).",
+        "Children from 9 years old and above are counted as adults"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí chi tiêu cá nhân",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meals"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Tour rates apply on regular days; surcharges apply on public holidays.",
+      "offers": [
+        "Núi Hàm Rồng",
+        "Bản Cát Cát",
+        "Phù hợp gia đình"
+      ],
+      "offersEn": [
+        "Ham Rong Mountain",
+        "Cat Cat Village",
+        "Family friendly"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-homestay-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa Ngủ Bản 2N1Đ Homestay (Ý Linh Hồ – Lao Chải – Tả Van)",
+      "nameEn": "Sapa Homestay Trekking Tour 2 Days 1 Night (Y Linh Ho – Lao Chai – Ta Van)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa Ngủ Bản 2N1Đ Homestay (Ý Linh Hồ – Lao Chải – Tả Van) - The Dahlia Hanoi",
+          "altEn": "Sapa Homestay Trekking Tour 2 Days 1 Night (Y Linh Ho – Lao Chai – Ta Van) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Trekking qua thung lũng Mường Hoa, ngắm ruộng bậc thang ngoạn mục và trải nghiệm nghỉ đêm ấm cúng tại homestay bản Giáy Tả Van.",
+      "cardLineEn": "Trek through Muong Hoa valley with breathtaking terraced rice fields and enjoy an authentic overnight homestay in Ta Van.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "Trek through Muong Hoa valley with breathtaking terraced rice fields and enjoy an authentic overnight homestay in Ta Van."
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h – 06h30",
+          "title": "Xe của công ty đón Quý khách tại điểm hẹn khởi hành …",
+          "text": "Xe của công ty đón Quý khách tại điểm hẹn khởi hành đi Sapa"
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Qúy khách tới Sapa, xe đưa quý khách về khách sạn để…",
+          "text": "Qúy khách tới Sapa, xe đưa quý khách về khách sạn để hành lý và nghỉ ngơi , Quý khách dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 1 · 14h00 – 14h30",
+          "title": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa",
+          "text": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Van, Hầu Thào và kết thúc ở Bản Hồ. Vào mùa lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ý Linh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ý Linh Hồ và Lao Chải. Ý Linh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "Ngày 1 · 17h00 – 17h30",
+          "title": "Qúy khách tới bản Tả Van, nhận phòng nghỉ ngơi",
+          "text": "Qúy khách tới bản Tả Van, nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 18h30",
+          "title": "Qúy khách dùng bữa tối tại Homestay",
+          "text": "Qúy khách dùng bữa tối tại Homestay. Nghỉ đêm tại bản Tả Van. Note: Đối với khách đoàn có thể tổ chức chương trình đốt lửa, nhảy sạp, cùng các chương trình văn nghệ đặc sắc…"
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại homestay",
+          "text": "Qúy khách dùng bữa sáng tại homestay. Làm thủ tục trả phòng"
+        },
+        {
+          "time": "Ngày 2 · 08h30 – 09h00",
+          "title": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ …",
+          "text": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ CHẢI thuộc xã Tả Văn (Sapa), nằm ở bên kia con suối Mường Hoa. Ngôi làng nằm ẩn khuất dưới bóng những cây cổ thụ, rặng tre xanh mướt là nơi sinh sống của người Dao đỏ. Những nếp nhà đơn sơ được dựng trên những vùng đất đá bên sườn núi. Đặc biệt, đến nơi đây du khách sẽ được dịp chiêm ngưỡng một rừng trúc xanh trong làng với hàng ngàn con bướm màu vàng nhạt bay lượn, đậu khắp một vùng rộng lớn…"
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách dùng bữa trưa tại nhà hang bản địa , sau đ…",
+          "text": "Qúy khách dùng bữa trưa tại nhà hang bản địa , sau đó nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 2 · 13h – 13h30",
+          "title": "Xe đón quý khách từ homestay về lại thị trấn Sapa",
+          "text": "Xe đón quý khách từ homestay về lại thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Qúy khách lên xe về lại Hà Nội, trên đường về quý kh…",
+          "text": "Qúy khách lên xe về lại Hà Nội, trên đường về quý khách có nhu cầu xuống sân bay Nội Bài xe của công ty đưa quý khách vào sân bay Nội Bài từ 19h00 – 19h30"
+        },
+        {
+          "time": "Ngày 2 · 20h00 – 20h30",
+          "title": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Kh…",
+          "text": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ Hoàn Kiếm. Kết thúc chương trình tour sapa 2 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 06h30",
+          "title": "at or your hotel in Hanoi Old Quarter, then depart t…",
+          "text": "Driver will pick you up at or your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Along the way, you will enjoy by the beauty of the northwest mountains, or the terraced fields that sparkle in sunlight and through the fog. We will Stop halfway and take a rest for 20 minutes."
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Arrive at Sapa",
+          "text": "Arrive at Sapa. Have lunch at the restaurant at our hotel. You will leave your luggages at the lounge of our hotel in Sapa town before hiking to villages. You should use small bag with important things."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "When everyone is ready, we will walk about 6 km to t…",
+          "text": "When everyone is ready, we will walk about 6 km to the Southeast of Sapa along the slopes of Muong Hoa valley to Y Linh Ho village of Black H’mong. After that, we will continue walking about 3 km to Lao Chai village of the H’mong people. Tourists need to walk through a small tunnel/over a small bridge leading to Muong Hoa valley to get inside the village. The beginning of Muong Hoa valley"
+        },
+        {
+          "time": "Day 1 · 16h00",
+          "title": "Arrive at Ta Van village; a commune of Sa Pa, 8 km f…",
+          "text": "Arrive at Ta Van village; a commune of Sa Pa, 8 km from the center of the town. It is an area with many ethnic groups, including the Day and the Mong. Ta Van is a tourist area with landmarks such as Ancient Rock Beach, Cau May, Nha San and many ethnic specialties"
+        },
+        {
+          "time": "Day 1 · 17h00 – 17h30",
+          "title": "Check-in at homestay",
+          "text": "Check-in at homestay. You can participate in a cooking class to learn how to make traditional Vietnamese spring rolls."
+        },
+        {
+          "time": "Day 1 · 18h30",
+          "title": "Enjoy local dishes for dinner",
+          "text": "Enjoy local dishes for dinner"
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at homestay in Ta Van village",
+          "text": "Sleeping at homestay in Ta Van village."
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Have breakfast at the Homestay",
+          "text": "Have breakfast at the Homestay. Then check-out procedure"
+        },
+        {
+          "time": "Day 2 · 09h – 09h30",
+          "title": "Giang Ta Chai Village will be place that you will vi…",
+          "text": "Giang Ta Chai Village will be place that you will visit on the morning of the 2nd day. We will walk 8 km to visit 2 villages of Red Dao. Giang Ta Chai is one of the villages of Red Dao. It has become one of the attractive places for travelers who want to experience colorful traditions and customs"
+        },
+        {
+          "time": "Day 2 · 12h00",
+          "title": "Enjoy lunch then rest at the local restaurant",
+          "text": "Enjoy lunch then rest at the local restaurant"
+        },
+        {
+          "time": "Day 2 · 13h – 13h30",
+          "title": "Car pick you up back to Sapa Town",
+          "text": "Car pick you up back to Sapa Town"
+        },
+        {
+          "time": "Day 2 · 15h00 - 15h30",
+          "title": "Get on the bus back to Hanoi",
+          "text": "Get on the bus back to Hanoi"
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi, bus drop off at bus stop",
+          "text": "Arrive in Hanoi, bus drop off at bus stop. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm/ Cabin vip đời mới, máy lạnh ( Trên xe không có hướng dẫn viên)",
+        "Một chiều xe di chuyển từ bản về thị trấn Sapa",
+        "01 đêm ngủ tại Homestay (phòng tập thể / phòng riêng / bungalow)",
+        "Các bữa ăn theo chương trình : 01 bữa sáng , 02 bữa trưa, 01 bữa tối",
+        "Hướng dẫn viên tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: bản Lao Chải – Tả Van"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on the bus)",
+        "night at homestay at Ta Van village",
+        "Local English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary.",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí cá nhân và các dịch vụ khác",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "( Giá tour trên áp dụng cho ngày thường, không áp dụng cho những ngày Lễ, Tết) Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Trekking Mường Hoa",
+        "Nghỉ đêm bản Tả Van",
+        "Ẩm thực người Giáy"
+      ],
+      "offersEn": [
+        "Muong Hoa Valley Trek",
+        "Ta Van Homestay Stay",
+        "Giay traditional cuisine"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N2Đ Xe Giường Nằm (Khách Sạn Cát Cát – Hàm Rồng)",
+      "nameEn": "Sapa 2 Days 2 Nights Sleeper Bus Tour (Cat Cat – Ham Rong Hotel)",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm (Khách Sạn Cát Cát – Hàm Rồng) - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus Tour (Cat Cat – Ham Rong Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Tiết kiệm tối đa thời gian với xe giường nằm đêm từ Hà Nội, có trọn vẹn 2 ngày khám phá bản Cát Cát và đỉnh Hàm Rồng.",
+      "cardLineEn": "Maximize your travel time with night sleeper bus from Hanoi and 2 full days discovering Cat Cat and Ham Rong.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "ĐÊM 01 · 21h00 – 21h30",
+          "title": "Xe sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bà…",
+          "text": "Xe sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 04h30- 05h00",
+          "title": "Quý khách tới thị trấn Sapa",
+          "text": "Quý khách tới thị trấn Sapa. Qúy khách ngủ trên xe đến 6h00, Xe đưa quý khách về khách sạn. Quý khách gửi đồ tại quầy lễ tân khách sạn."
+        },
+        {
+          "time": "Ngày 1 · 07h00 – 08h00",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng"
+        },
+        {
+          "time": "Ngày 1 · 08h00 - 08h30",
+          "title": "Hướng dẫn viên cùng qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làng. Tham quan bản Cát Cát của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 12h00",
+          "title": "Quý khách thưởng thức bữa trưa tại nhà hàng",
+          "text": "Quý khách thưởng thức bữa trưa tại nhà hàng. Sau đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · Buổi chiều",
+          "title": "Tự do nghỉ ngơi",
+          "text": "Tự do nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 18h00 – 18h30",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa"
+        },
+        {
+          "time": "Ngày 2 · 07h30",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó, Hướng dẫn viên đón quý khách đi bộ khám phá Khu du lịch Hàm Rồng. Từ đây, du khách có thể ngắm nhìn Sa Pa từ trên cao, gồm có: Vườn Lan 1-2, Vườn Lê, Vườn Táo Mèo, Vườn hoa Trung Tâm, Hòn Đá Gãy, Cổng Trời, Đầu Rồng, Hòn Cá Sấu, Khu Thiên Thách Lâm, Hòn Phật Bà, Sân Mây, tháp truyền hình… Quay về trung tâm, hòa mình vào “Lễ hội trên mây” với những trò chơi dân gian thú vị."
+        },
+        {
+          "time": "Ngày 2 · 11h30",
+          "title": "Quý khách làm thủ tục trả phòng sau đó dùng bữa trưa…",
+          "text": "Quý khách làm thủ tục trả phòng sau đó dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 2 · 13h30",
+          "title": "Tự do vui chơi khám phá thị trấn Sapa",
+          "text": "Tự do vui chơi khám phá thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Đoàn lên xe về Hà Nội",
+          "text": "Đoàn lên xe về Hà Nội."
+        },
+        {
+          "time": "Ngày 2 · 22h00 – 22h30",
+          "title": "Xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Ho…",
+          "text": "Xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiếm. Chia tay và kết thúc tour Sapa 2 ngày 2 đêm. Hẹn gặp lại quý khách trong những hành trình tiếp theo."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "NIGHT 01 · 21h00 – 21h30",
+          "title": "at the meeting point to go to Sapa",
+          "text": "Driver will pick you up at the meeting point to go to Sapa"
+        },
+        {
+          "time": "Day 1 · 04h30 – 05h00",
+          "title": "After 05 hours on the highway, you are in Sapa town",
+          "text": "After 05 hours on the highway, you are in Sapa town. You will sleep on bus till 6am. Transfer car pick you up at bus station to have breakfast"
+        },
+        {
+          "time": "Day 1 · 07h00",
+          "title": "Having breakfast at the restaurant",
+          "text": "Having breakfast at the restaurant"
+        },
+        {
+          "time": "Day 1 · 08h00 – 08h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 12h30",
+          "title": "Having lunch at restaurant and then check –in proced…",
+          "text": "Having lunch at restaurant and then check –in procedure at hotel"
+        },
+        {
+          "time": "Day 1 · Afternoon",
+          "title": "Free time to explore Sapa Town",
+          "text": "Free time to explore Sapa Town"
+        },
+        {
+          "time": "Day 1 · 18h00",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant. Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Having breakfast at restaurant",
+          "text": "Having breakfast at restaurant. Then check-out procedure at hotel."
+        },
+        {
+          "time": "Day 2 · 0800",
+          "title": "Following breakfast at your hotel, Tour guide pick y…",
+          "text": "Following breakfast at your hotel, Tour guide pick you up at your hotel and start to trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 12h00 – 12h30",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 13h30 -14h00",
+          "title": "Come back Sapa Town by car",
+          "text": "Come back Sapa Town by car."
+        },
+        {
+          "time": "Day 2 · 15h – 15h30",
+          "title": "15h – 15h30",
+          "text": ""
+        },
+        {
+          "time": "Day 2 · 22h- 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at bus station. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển: Xe ôtô giường nằm/ Cabin vip đời mới, máy lạnh. ( Không có hướng dẫn viên trên xe)",
+        "Khách sạn sao theo tiêu chuẩn 02 – 04 người/phòng",
+        "Các bữa ăn theo chương trình: 2 bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động.",
+        "Vé tham quan theo lịch trình: bản Cát Cát, núi Hàm Rồng"
+      ],
+      "servicesIncludedEn": [
+        "Transportation 2 ways Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on bus)",
+        "night at hotel in Sapa Town, 2-3 people/room",
+        "Meals according to the program: 02 breakfast, 02 lunch, 01 dinner",
+        "Local English Tour guide in Sapa town: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets",
+        "Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents).",
+        "Children from 9 years old and above are counted as adults."
+      ],
+      "servicesExcluded": [
+        "Chi phí cá nhân và các dịch vụ khác.",
+        "Đồ uống trong bữa ăn",
+        "Thuế VAT"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meals"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Tour rates apply on regular days; surcharges apply on public holidays.",
+      "offers": [
+        "Khởi hành đêm từ Hà Nội",
+        "2 ngày trọn vẹn tại Sa Pa",
+        "Khách sạn trung tâm"
+      ],
+      "offersEn": [
+        "Night bus from Hanoi",
+        "2 full days in Sapa",
+        "Central hotel stay"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-homestay-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa Ngủ Bản 2N2Đ Xe Giường Nằm (Homestay Tả Van)",
+      "nameEn": "Sapa Homestay Trekking 2 Days 2 Nights Sleeper Bus (Ta Van Village)",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa Ngủ Bản 2N2Đ Xe Giường Nằm (Homestay Tả Van) - The Dahlia Hanoi",
+          "altEn": "Sapa Homestay Trekking 2 Days 2 Nights Sleeper Bus (Ta Van Village) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Khởi hành đêm từ Hà Nội, trekking sâu vào các bản Ý Linh Hồ, Lao Chải, Tả Van, Giàng Tả Chải và nghỉ đêm tại homestay.",
+      "cardLineEn": "Overnight sleeper bus from Hanoi followed by deep trekking across Y Linh Ho, Lao Chai, Ta Van, and Giang Ta Chai.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "Overnight sleeper bus from Hanoi followed by deep trekking across Y Linh Ho, Lao Chai, Ta Van, and Giang Ta Chai."
+      ],
+      "itinerary": [
+        {
+          "time": "ĐÊM 01 · 21h00 – 21h30",
+          "title": "Xe đón Quý khách tại khách sạn trong khu vực Phố cổ …",
+          "text": "Xe đón Quý khách tại khách sạn trong khu vực Phố cổ Hoàn Kiếm hoặc điểm hẹn trước di chuyển đi Sapa Đối với quý khách ở Sân bay Nội Bài, xe đón quý khách từ 22h30 – 23h00"
+        },
+        {
+          "time": "Ngày 1 · ",
+          "title": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ…",
+          "text": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ để tham quan, khám phá về 3 ngôi làng cùng với nhiều nét đẹp văn hóa của 2 dân tộc (H’Mông và Dáy)."
+        },
+        {
+          "time": "Ngày 1 · 05h00",
+          "title": "Qúy khách tới Sapa, Quý khách ngủ trên xe đến 6h00 s…",
+          "text": "Qúy khách tới Sapa, Quý khách ngủ trên xe đến 6h00 sau đó xe đưa quý khách về khách sạn để hành lý và nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại khách sạn",
+          "text": "Qúy khách dùng bữa sáng tại khách sạn"
+        },
+        {
+          "time": "Ngày 1 · 08h30",
+          "title": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa",
+          "text": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Van, Hầu Thào và kết thúc ở Bản Hồ. Vào mùa lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ý Linh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ý Linh Hồ và Lao Chải. Ý Linh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "Ngày 1 · 12h30",
+          "title": "Qúy khách tới bản Tả Van, dùng bữa trưa",
+          "text": "Qúy khách tới bản Tả Van, dùng bữa trưa. Sau sao đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "HDV đưa quý khách thăm quan bản của người H’ MONG và…",
+          "text": "HDV đưa quý khách thăm quan bản của người H’ MONG và bản của người DÁY"
+        },
+        {
+          "time": "Ngày 1 · 16h30",
+          "title": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đ…",
+          "text": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đó quý khách có thể tham gia nấu ăn cùng người dân bản địa với chế biến các món ăn đặc trưng của người dân địa phương"
+        },
+        {
+          "time": "Ngày 1 · 18h30",
+          "title": "Qúy khách dùng bữa tối tại Homestay",
+          "text": "Qúy khách dùng bữa tối tại Homestay. Nghỉ đêm tại bản Tả Van. Note: Đối với khách đoàn có thể tổ chức chương trình đốt lửa, nhảy sạp, cùng các chương trình văn nghệ đặc sắc…"
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại homestay",
+          "text": "Qúy khách dùng bữa sáng tại homestay. Làm thủ tục trả phòng"
+        },
+        {
+          "time": "Ngày 2 · 08h30 – 09h00",
+          "title": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ …",
+          "text": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ CHẢI thuộc xã Tả Văn (Sapa), nằm ở bên kia con suối Mường Hoa. Ngôi làng nằm ẩn khuất dưới bóng những cây cổ thụ, rặng tre xanh mướt là nơi sinh sống của người Dao đỏ. Những nếp nhà đơn sơ được dựng trên những vùng đất đá bên sườn núi. Đặc biệt, đến nơi đây du khách sẽ được dịp chiêm ngưỡng một rừng trúc xanh trong làng với hàng ngàn con bướm màu vàng nhạt bay lượn, đậu khắp một vùng rộng lớn…"
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách dùng bữa trưa tại nhà hang bản địa",
+          "text": "Qúy khách dùng bữa trưa tại nhà hang bản địa"
+        },
+        {
+          "time": "Ngày 2 · 13h30",
+          "title": "Xe đón quý khách từ Giàng Tả Chải về thị trấn Sapa",
+          "text": "Xe đón quý khách từ Giàng Tả Chải về thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Qúy khách lên xe về lại Hà Nội, trên đường về quý kh…",
+          "text": "Qúy khách lên xe về lại Hà Nội, trên đường về quý khách có nhu cầu xuống sân bay Nội Bài xe của công ty đưa quý khách vào sân bay Nội Bài từ 19h30 – 20h00"
+        },
+        {
+          "time": "Ngày 2 · 22h00 – 22h30",
+          "title": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Kh…",
+          "text": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiêm. Kết thúc chương trình tour sapa 2 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "NIGHT 1 · 21h00 – 21h30",
+          "title": "Driver pick you up at or your hotel in Hanoi Old Qua…",
+          "text": "Driver pick you up at or your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. We will Stop halfway and take a rest for 20 minutes."
+        },
+        {
+          "time": "Day 1 · 04h30 – 05h00",
+          "title": "Arrive at Sapa",
+          "text": "Arrive at Sapa. You will sleep on bus until 6 am, transfer car pick you up at bus station to our hotel in Sapa town"
+        },
+        {
+          "time": "Day 1 · 07h00",
+          "title": "Having breakfast at our restaurant",
+          "text": "Having breakfast at our restaurant. You will leave big luggages at the lounge of our hotel before hiking to villages. You should only use small bag with important things."
+        },
+        {
+          "time": "Day 1 · 08h00 – 08h30",
+          "title": "When everyone is ready, we will walk about 6 km to t…",
+          "text": "When everyone is ready, we will walk about 6 km to the Southeast of Sapa along the slopes of Muong Hoa valley to Y Linh Ho village of Black H’mong. After that, we will continue walking about 3 km to Lao Chai village of the H’mong people. Tourists need to walk through a small tunnel/over a small bridge leading to Muong Hoa valley to get inside the village. The beginning of Muong Hoa valley"
+        },
+        {
+          "time": "Day 1 · 12h30",
+          "title": "Having lunch at Ta Van village then check in at home…",
+          "text": "Having lunch at Ta Van village then check in at homestay and rest."
+        },
+        {
+          "time": "Day 1 · 14h30",
+          "title": "Free time to relax at homestay",
+          "text": "Free time to relax at homestay"
+        },
+        {
+          "time": "Day 1 · 17h00 – 17h30",
+          "title": "You can participate in a cooking class to learn how …",
+          "text": "You can participate in a cooking class to learn how to make traditional Vietnamese spring rolls."
+        },
+        {
+          "time": "Day 1 · 18h30",
+          "title": "Enjoy local dishes for dinner",
+          "text": "Enjoy local dishes for dinner. Sleeping at homestay in Ta Van village."
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Have breakfast at the Homestay",
+          "text": "Have breakfast at the Homestay. Check-out procedure."
+        },
+        {
+          "time": "Day 2 · 09h – 09h30",
+          "title": "Giang Ta Chai Village will be place that you will vi…",
+          "text": "Giang Ta Chai Village will be place that you will visit on the morning of the 2nd day. We will walk 8 km to visit 2 villages of Red Dao. Giang Ta Chai is one of the villages of Red Dao. It has become one of the attractive places for travelers who want to experience colorful traditions and customs"
+        },
+        {
+          "time": "Day 2 · 12h00",
+          "title": "Enjoy lunch then rest at the local restaurant",
+          "text": "Enjoy lunch then rest at the local restaurant"
+        },
+        {
+          "time": "Day 2 · 13h – 13h30",
+          "title": "Car pick you up back to Sapa Town",
+          "text": "Car pick you up back to Sapa Town"
+        },
+        {
+          "time": "Day 2 · 15h00 - 15h30",
+          "title": "Get on the bus back to Hanoi",
+          "text": "Get on the bus back to Hanoi"
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi, Bus drop off at bus station",
+          "text": "Arrive in Hanoi, Bus drop off at bus station. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm/ Cabin vip đời mới, máy lạnh (Trên xe không có hướng dẫn viên)",
+        "Một chiều xe di chuyển từ bản về thị trấn Sapa",
+        "01 đêm ngủ tại Homestay (phòng tập thể / phòng riêng / bungalow)",
+        "Các bữa ăn theo chương trình : 02 bữa trưa,. 01 bữa tối, 02 bữa sáng",
+        "Hướng dẫn viên tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: bản Lao Chải – Tả Van"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( Not have tour guide on the bus)",
+        "night at homestay at Ta Van village",
+        "Local English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary.",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí cá nhân và các dịch vụ khác",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks in meals,…)"
+      ],
+      "serviceNote": "( Giá tour trên áp dụng cho ngày thường, không áp dụng cho những ngày Lễ, Tết) Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Trekking bản làng nguyên sơ",
+        "Nấu ăn cùng gia chủ",
+        "Ngắm suối Mường Hoa"
+      ],
+      "offersEn": [
+        "Deep village trekking",
+        "Cooking with locals",
+        "Muong Hoa stream view"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-homestay-fansipan-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N2Đ Homestay Ngủ Bản Kết Hợp Cáp Treo Fansipan",
+      "nameEn": "Sapa 2 Days 2 Nights Homestay & Fansipan Peak Tour",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N2Đ Homestay Ngủ Bản Kết Hợp Cáp Treo Fansipan - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 2 Nights Homestay & Fansipan Peak Tour - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Sự kết hợp hoàn hảo giữa trải nghiệm văn hóa bản địa mộc mạc tại homestay và kỳ quan cáp treo Fansipan hiện đại.",
+      "cardLineEn": "The perfect combo of rustic ethnic homestay immersion and modern Fansipan cable car marvel.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "The perfect combo of rustic ethnic homestay immersion and modern Fansipan cable car marvel."
+      ],
+      "itinerary": [
+        {
+          "time": "ĐÊM 01 · 21h00 – 21h30",
+          "title": "Xe đón Quý khách tại khách sạn trong khu vực Phố cổ …",
+          "text": "Xe đón Quý khách tại khách sạn trong khu vực Phố cổ Hoàn Kiếm hoặc điểm hẹn trước di chuyển đi Sapa Đối với quý khách ở Sân bay Nội Bài, xe đón quý khách từ 22h30 – 23h00"
+        },
+        {
+          "time": "Ngày 1 · ",
+          "title": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ…",
+          "text": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ để tham quan, khám phá về 3 ngôi làng cùng với nhiều nét đẹp văn hóa của 2 dân tộc (H’Mông và Dáy)."
+        },
+        {
+          "time": "Ngày 1 · 05h00",
+          "title": "Qúy khách tới Sapa, Quý khách ngủ trên xe đến 6h00 s…",
+          "text": "Qúy khách tới Sapa, Quý khách ngủ trên xe đến 6h00 sau đó xe đưa quý khách về khách sạn để hành lý và nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại khách sạn",
+          "text": "Qúy khách dùng bữa sáng tại khách sạn"
+        },
+        {
+          "time": "Ngày 1 · 08h30",
+          "title": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa",
+          "text": "Khởi hành trekking 10km xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Van, Hầu Thào và kết thúc ở Bản Hồ. Vào mùa lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ý Linh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ý Linh Hồ và Lao Chải. Ý Linh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "Ngày 1 · 12h30",
+          "title": "Qúy khách tới bản Tả Van, dùng bữa trưa",
+          "text": "Qúy khách tới bản Tả Van, dùng bữa trưa. Sau sao đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "HDV đưa quý khách thăm quan bản của người H’ MONG và…",
+          "text": "HDV đưa quý khách thăm quan bản của người H’ MONG và bản của người DÁY"
+        },
+        {
+          "time": "Ngày 1 · 16h30",
+          "title": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đ…",
+          "text": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đó quý khách có thể tham gia nấu ăn cùng người dân bản địa với chế biến các món ăn đặc trưng của người dân địa phương"
+        },
+        {
+          "time": "Ngày 1 · 18h30",
+          "title": "Qúy khách dùng bữa tối tại Homestay",
+          "text": "Qúy khách dùng bữa tối tại Homestay. Nghỉ đêm tại bản Tả Van. Note: Đối với khách đoàn có thể tổ chức chương trình đốt lửa, nhảy sạp, cùng các chương trình văn nghệ đặc sắc…"
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại homestay",
+          "text": "Qúy khách dùng bữa sáng tại homestay. Làm thủ tục trả phòng"
+        },
+        {
+          "time": "Ngày 2 · 08h30 – 09h00",
+          "title": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ …",
+          "text": "HDV đưa quý khách bắt đầu chuyến thăm quan GIÀNG TẢ CHẢI thuộc xã Tả Văn (Sapa), nằm ở bên kia con suối Mường Hoa. Ngôi làng nằm ẩn khuất dưới bóng những cây cổ thụ, rặng tre xanh mướt là nơi sinh sống của người Dao đỏ. Những nếp nhà đơn sơ được dựng trên những vùng đất đá bên sườn núi. Đặc biệt, đến nơi đây du khách sẽ được dịp chiêm ngưỡng một rừng trúc xanh trong làng với hàng ngàn con bướm màu vàng nhạt bay lượn, đậu khắp một vùng rộng lớn…"
+        },
+        {
+          "time": "Ngày 2 · 12h00",
+          "title": "Qúy khách dùng bữa trưa tại nhà hang bản địa",
+          "text": "Qúy khách dùng bữa trưa tại nhà hang bản địa"
+        },
+        {
+          "time": "Ngày 2 · 13h30",
+          "title": "Xe đón quý khách từ Giàng Tả Chải về thị trấn Sapa",
+          "text": "Xe đón quý khách từ Giàng Tả Chải về thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Qúy khách lên xe về lại Hà Nội, trên đường về quý kh…",
+          "text": "Qúy khách lên xe về lại Hà Nội, trên đường về quý khách có nhu cầu xuống sân bay Nội Bài xe của công ty đưa quý khách vào sân bay Nội Bài từ 19h30 – 20h00"
+        },
+        {
+          "time": "Ngày 2 · 22h00 – 22h30",
+          "title": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Kh…",
+          "text": "Xe về đến Hà Nội, xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiêm. Kết thúc chương trình tour sapa 2 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "NIGHT 1 · 21h00 – 21h30",
+          "title": "at or your hotel in Hanoi Old Quarter, then depart t…",
+          "text": "Driver will pick you up at or your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Bus will Stop halfway and take a rest for 20 minutes."
+        },
+        {
+          "time": "Day 1 · 04h30 – 05h00",
+          "title": "Arrive at Sapa",
+          "text": "Arrive at Sapa. You will sleep on bus until 6 am, Transfer car pick you up at bus station to our hotel in Sapa town"
+        },
+        {
+          "time": "Day 1 · 07h00",
+          "title": "Having breckfast at our hotel",
+          "text": "Having breckfast at our hotel."
+        },
+        {
+          "time": "Day 1 · 08h00",
+          "title": "Visit Fansipan by Cable Car",
+          "text": "Visit Fansipan by Cable Car"
+        },
+        {
+          "time": "Day 1 · 12h00",
+          "title": "Back Sapa town",
+          "text": "Back Sapa town. Having lunch at restaurant. You will leave your luggages at the lounge of hotel in Sapa town before hiking to village. You should only use small bag with important thing."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "When everyone is ready, we will walk about 6 km to t…",
+          "text": "When everyone is ready, we will walk about 6 km to the Southeast of Sapa along the slopes of Muong Hoa valley to Y Linh Ho village of Black H’mong. After that, we will continue walking about 3 km to Lao Chai village of the H’mong people. Tourists need to walk through a small tunnel/over a small bridge leading to Muong Hoa valley to get inside the village. The beginning of Muong Hoa valley"
+        },
+        {
+          "time": "Day 1 · 17h00 – 17h30",
+          "title": "Arrive Ta Van village",
+          "text": "Arrive Ta Van village. Check - in at homestay and rest. You can participate in a cooking class to learn how to make traditional Vietnamese spring rolls."
+        },
+        {
+          "time": "Day 1 · 18h30",
+          "title": "Enjoy local dishes for dinner",
+          "text": "Enjoy local dishes for dinner. Sleeping at homestay in Ta Van village."
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Have breakfast at the Homestay",
+          "text": "Have breakfast at the Homestay. Then check-out procedure."
+        },
+        {
+          "time": "Day 2 · 09h – 09h30",
+          "title": "Giang Ta Chai Village will be place that you will vi…",
+          "text": "Giang Ta Chai Village will be place that you will visit on the morning of the 2nd day. We will walk 8 km to visit 2 villages of Red Dao. Giang Ta Chai is one of the villages of Red Dao. It has become one of the attractive places for travelers who want to experience colorful traditions and customs"
+        },
+        {
+          "time": "Day 2 · 12h00",
+          "title": "Enjoy lunch then rest at the local restaurant",
+          "text": "Enjoy lunch then rest at the local restaurant"
+        },
+        {
+          "time": "Day 2 · 13h30 – 14h00",
+          "title": "Car pick you up back to Sapa Town",
+          "text": "Car pick you up back to Sapa Town"
+        },
+        {
+          "time": "Day 2 · 15h00 - 15h30",
+          "title": "Get on the bus back to Hanoi",
+          "text": "Get on the bus back to Hanoi"
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi, Bus drop off at bus station",
+          "text": "Arrive in Hanoi, Bus drop off at bus station. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm/ Cabin vip đời mới, máy lạnh (Trên xe không có hướng dẫn viên)",
+        "Một chiều xe di chuyển từ bản về thị trấn Sapa",
+        "01 đêm ngủ tại Homestay (phòng tập thể / phòng riêng / bungalow)",
+        "Các bữa ăn theo chương trình : 02 bữa trưa,. 01 bữa tối, 02 bữa sáng",
+        "Hướng dẫn viên tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình: bản Lao Chải – Tả Van"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( Not have tour guide on the bus)",
+        "night at homestay at Ta Van village",
+        "Local English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary.",
+        "Entrance fees",
+        "Fansipan Cable Car + Muong Hoa train ticket"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí cá nhân và các dịch vụ khác",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Guide to Fansipan",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "( Giá tour trên áp dụng cho ngày thường, không áp dụng cho những ngày Lễ, Tết) Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Chinh phục đỉnh Fansipan",
+        "Nghỉ homestay bản Tả Van",
+        "Trekking suối thác"
+      ],
+      "offersEn": [
+        "Conquer Fansipan Summit",
+        "Ta Van Village Homestay",
+        "Waterfalls & Stream Trek"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-fansipan-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N2Đ Khách Sạn – Cát Cát – Lao Chải Tả Van – Fansipan",
+      "nameEn": "Sapa 2 Days 2 Nights Hotel – Fansipan – Cat Cat – Lao Chai Ta Van",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N2Đ Khách Sạn – Cát Cát – Lao Chải Tả Van – Fansipan - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 2 Nights Hotel – Fansipan – Cat Cat – Lao Chai Ta Van - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Chuyến đi trọn gói cao cấp tại khách sạn Sa Pa: chinh phục đỉnh Fansipan hùng vĩ, tham quan bản Cát Cát và thung lũng Lao Chải Tả Van.",
+      "cardLineEn": "A premium all-inclusive Sapa hotel getaway: Fansipan summit ascent, Cat Cat culture, and Lao Chai Ta Van valley vistas.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "ĐÊM 01 · 21h00 – 21h30",
+          "title": "Xe sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bà…",
+          "text": "Xe sẽ đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 04h30- 05h00",
+          "title": "Quý khách tới thị trấn Sapa",
+          "text": "Quý khách tới thị trấn Sapa. Qúy khách ngủ trên xe đến 6h00, Xe đưa quý khách về khách sạn. Quý khách gửi đồ tại quầy lễ tân khách sạn."
+        },
+        {
+          "time": "Ngày 1 · 07h00 – 08h00",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng"
+        },
+        {
+          "time": "Ngày 1 · 08h00 - 08h30",
+          "title": "Hướng dẫn viên cùng qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làng. Tham quan bản Cát Cát của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 12h00",
+          "title": "Quý khách thưởng thức bữa trưa tại nhà hàng",
+          "text": "Quý khách thưởng thức bữa trưa tại nhà hàng. Sau đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · Buổi chiều",
+          "title": "Tự do nghỉ ngơi",
+          "text": "Tự do nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · 18h00 – 18h30",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa"
+        },
+        {
+          "time": "Ngày 2 · 07h30",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó, Hướng dẫn viên đón quý khách đi bộ khám phá Khu du lịch Hàm Rồng. Từ đây, du khách có thể ngắm nhìn Sa Pa từ trên cao, gồm có: Vườn Lan 1-2, Vườn Lê, Vườn Táo Mèo, Vườn hoa Trung Tâm, Hòn Đá Gãy, Cổng Trời, Đầu Rồng, Hòn Cá Sấu, Khu Thiên Thách Lâm, Hòn Phật Bà, Sân Mây, tháp truyền hình… Quay về trung tâm, hòa mình vào “Lễ hội trên mây” với những trò chơi dân gian thú vị."
+        },
+        {
+          "time": "Ngày 2 · 11h30",
+          "title": "Quý khách làm thủ tục trả phòng sau đó dùng bữa trưa…",
+          "text": "Quý khách làm thủ tục trả phòng sau đó dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 2 · 13h30",
+          "title": "Tự do vui chơi khám phá thị trấn Sapa",
+          "text": "Tự do vui chơi khám phá thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 2 · 15h30",
+          "title": "Đoàn lên xe về Hà Nội",
+          "text": "Đoàn lên xe về Hà Nội."
+        },
+        {
+          "time": "Ngày 2 · 22h00 – 22h30",
+          "title": "Xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Ho…",
+          "text": "Xe trả Quý khách tại Trần Quang Khải/ Lý Thái Tổ, Hoàn Kiếm. Chia tay và kết thúc tour Sapa 2 ngày 2 đêm. Hẹn gặp lại quý khách trong những hành trình tiếp theo."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "NIGHT 01 · 21h00 – 21h30",
+          "title": "at the meeting point to go to Sapa",
+          "text": "Driver will pick you up at the meeting point to go to Sapa"
+        },
+        {
+          "time": "Day 1 · 04h30 – 05h00",
+          "title": "After 05 hours on the highway, you are in Sapa town",
+          "text": "After 05 hours on the highway, you are in Sapa town. You will sleep on bus till 6am, transfer car pick you up to our hotel."
+        },
+        {
+          "time": "Day 1 · 07h00",
+          "title": "Having breakfast at the restaurant",
+          "text": "Having breakfast at the restaurant."
+        },
+        {
+          "time": "Day 1 · 08h00",
+          "title": "You conquer Fansipan peak by the most modern cable c…",
+          "text": "You conquer Fansipan peak by the most modern cable car system in Southeast Asia or rent a motorbike by yourself to visit the remaining beautiful scenes in the dreamy town of Sapa such as visiting Love waterfall, the valley. Muong Hoa…"
+        },
+        {
+          "time": "Day 1 · 12h30 – 13h00",
+          "title": "Having lunch at restaurant and then check-in procedu…",
+          "text": "Having lunch at restaurant and then check-in procedure at hotel"
+        },
+        {
+          "time": "Day 1 · Afternoon",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h00",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant. Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Having breakfast",
+          "text": "Having breakfast. Check-out procedure in hotel. You will store your luggages at the lounge of hotel before trekking."
+        },
+        {
+          "time": "Day 2 · 08h00",
+          "title": "Following breakfast at your hotel, Tour guide pick y…",
+          "text": "Following breakfast at your hotel, Tour guide pick you up at your hotel and start to trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 12h00 – 12h30",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 14h00",
+          "title": "Come back Sapa Town by car",
+          "text": "Come back Sapa Town by car."
+        },
+        {
+          "time": "Day 2 · 15h00 – 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 2 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus dropp off at Tran Quang Khai/ Ly Thai To steet. End tour"
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển: Xe ôtô giường nằm/ Cabin vip đời mới, máy lạnh. ( Không có hướng dẫn viên trên xe)",
+        "Khách sạn sao theo tiêu chuẩn 02 – 04 người/phòng",
+        "Các bữa ăn theo chương trình: 2 bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động.",
+        "Vé tham quan theo lịch trình: bản Cát Cát, núi Hàm Rồng"
+      ],
+      "servicesIncludedEn": [
+        "Transportation Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on bus)",
+        "night at hotel in Sapa, 2-3 people/room",
+        "Meals according to the program: 02 breakfast, 02 lunch, 01 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Fansipan Cable car ticket, Muong Hoa train ticket",
+        "Scheduled sightseeing tickets: Cat Cat village, Lao Chair Ta Van",
+        "Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents).",
+        "Children from 9 years old and above are counted as adults"
+      ],
+      "servicesExcluded": [
+        "Chi phí cá nhân và các dịch vụ khác.",
+        "Đồ uống trong bữa ăn",
+        "Thuế VAT"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meal",
+        "Guide to Fansipan"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Tour rates apply on regular days; surcharges apply on public holidays.",
+      "offers": [
+        "Fansipan trọn gói",
+        "Thung lũng ruộng bậc thang",
+        "Khách sạn tiện nghi"
+      ],
+      "offersEn": [
+        "All-inclusive Fansipan",
+        "Terraced valley views",
+        "Comfortable hotel"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-3d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 3N2Đ Khách Sạn (Cát Cát – Núi Hàm Rồng)",
+      "nameEn": "Sapa 3 Days 2 Nights Hotel Tour (Cat Cat – Ham Rong)",
+      "durationLabel": "3 ngày 2 đêm",
+      "durationLabelEn": "3 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 3N2Đ Khách Sạn (Cát Cát – Núi Hàm Rồng) - The Dahlia Hanoi",
+          "altEn": "Sapa 3 Days 2 Nights Hotel Tour (Cat Cat – Ham Rong) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Kỳ nghỉ 3 ngày thư thái tại thị trấn sương mờ Sa Pa: khám phá vườn lan Hàm Rồng, bản Cát Cát và thời gian tự do mua sắm đặc sản.",
+      "cardLineEn": "A leisurely 3-day holiday in misty Sapa: orchid garden on Ham Rong, Cat Cat village, and free time for local delicacies.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "(Giá áp dụng cho nhóm từ 02 khách)"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h – 06h30",
+          "title": "Xe đón quý khách tại điểm hẹn hoặc sân bay Nội Bài k…",
+          "text": "Xe đón quý khách tại điểm hẹn hoặc sân bay Nội Bài khởi hành đi Sapa theo hướng cao tốc Hà Nội – Lào Cai"
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Đến Sapa, xe trung chuyển đón quý khách tại bến xe v…",
+          "text": "Đến Sapa, xe trung chuyển đón quý khách tại bến xe về ăn trưa tại nhà hàng. Sau đó, nhận phòng khách sạn và nghỉ ngơi."
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hà…",
+          "text": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hàm Rồng với vườn Lan Đông Dương, Cổng Trời, Sân Mây và thưởng thức chương trình ca nhạc dân tộc trên núi Hàm Rồng. Giao lưu với người dân tộc bản địa, chụp hình lưu niệm."
+        },
+        {
+          "time": "Ngày 1 · 18h00 – 18h30",
+          "title": "Quý khách dùng bữa tối tại nhà hàng",
+          "text": "Quý khách dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 07h30",
+          "title": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách có…",
+          "text": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách có thể tới ga Cáp Treo Fansipan, Quý khách sẽ được đi cáp treo 3 dây dài nhất thế giới với chiều dài 6.292,5m. Quý khách sẽ được ngắm nhìn thung lũng Mường Hoa và dãy Hoàng Liên Sơn tuyệt đẹp từ trên cao. Sau 25 phút đi cáp treo, Quý khách tiếp tục leo bộ 600 bậc thang để đến với đỉnh Fansipan hùng vĩ (Chi phí tự túc xe + vé)"
+        },
+        {
+          "time": "Ngày 2 · 12h30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "Ăn trưa tại nhà hàng ."
+        },
+        {
+          "time": "Ngày 2 · 14h00",
+          "title": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đ…",
+          "text": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đời sống sinh hoạt của người đồng bào dân tộc H’mông, thăm thác Tiên Sa, thưởng thức chương trình biểu diễn văn nghệ truyền thống tại nhà máy thủy điện cũ. Quay lại thị trấn Sapa, Quý khách có thể đi tắm lá thuốc Dao Đỏ để thư giãn sau một ngày thăm quan."
+        },
+        {
+          "time": "Ngày 2 · 18h00",
+          "title": "Quý khách dùng bữa tối tại nhà hàng Nghỉ đêm tại Sapa",
+          "text": "Quý khách dùng bữa tối tại nhà hàng Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 3 · Sáng",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó tự do vui chơi."
+        },
+        {
+          "time": "Ngày 3 · 11h00",
+          "title": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa t…",
+          "text": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 3 · 13h30",
+          "title": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30…",
+          "text": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30 kết thúc chương trình du lịch khám phá Sapa. Xe có thể dừng trả khách trong sân bay Nội Bài, nếu quý khách có chuyến bay muộn có thể lựa chọn khung giờ phù hợp."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 06h30",
+          "title": "at Hanoi Old Quater",
+          "text": "Driver will pick you up at Hanoi Old Quater. After 05 hours on the highway, the car will take you to Sapa resort."
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Come to Sapa town",
+          "text": "Come to Sapa town. Transfer car pick you up at bus station and have lunch at the restaurant. Then check in at the hotel."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat - Sin Chai village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h00 – 18h30",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant. Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Have breakfast at the restaurant",
+          "text": "Have breakfast at the restaurant."
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Tour guide pick you up at your hotel and start to tr…",
+          "text": "Tour guide pick you up at your hotel and start to trek to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 11h30 – 12h00",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 13h30 – 14h00",
+          "title": "Back to hotel in Sapa Town",
+          "text": "Back to hotel in Sapa Town"
+        },
+        {
+          "time": "Day 2 · 18h00",
+          "title": "Having dinner at restaurant",
+          "text": "Having dinner at restaurant"
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "Sleeping at hotel",
+          "text": "Sleeping at hotel"
+        },
+        {
+          "time": "Day 3 · 07h30",
+          "title": "Have breakfast at the restaurant",
+          "text": "Have breakfast at the restaurant. Free time to explore Sapa town."
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Check out procedures at hotel",
+          "text": "Check out procedures at hotel. Then having lichj at estaurant. Free to visit and shop at Sapa market."
+        },
+        {
+          "time": "Day 3 · Afternoon",
+          "title": "Free time to explore Sapa town",
+          "text": "Free time to explore Sapa town."
+        },
+        {
+          "time": "Day 3 · 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at bus stop. End tour. Hope to see you again in the next journey."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển: Xe ôtô giường nằm / Cabin vip / Tàu hỏa ( Không bao gồm hướng dẫn trên xe)",
+        "Khách sạn tiêu chuẩn 02-04 người/phòng",
+        "Các bữa ăn theo chương trình: 02 bữa sáng, 03 bữa trưa, 2 bữa tối",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình tour Sapa : bản Cát Cát, núi Hàm Rồng"
+      ],
+      "servicesIncludedEn": [
+        "Transportation 2 way Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on bus)",
+        "02 nights at hotel in Sapa, 2-3 people/room",
+        "Meals according to the program: 02 breakfast, 03 lunch, 02 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets: Cat Cat village, Lao Chai Ta Van Village"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí chi tiêu cá nhân",
+        "Xe + Vé Cáp treo Fansipan",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meal"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Children from 1-4 years old are free (parents take care of all expenses for children, do not occupy seats on the car). 02 adults can only be accompanied by 01 child for free, from the second child, 75% of the tour price (standard as charged children). If 01 adult comes with 01 child from 1 to 4 years old, the child must buy 50% of the adult tour price (enjoy half the adult meal and other services included in the tour, sharing a bed with parents). Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents). Children from 9 years old and above are counted as adults.",
+      "offers": [
+        "Lịch trình thư giãn",
+        "2 đêm khách sạn Sa Pa",
+        "Tự do khám phá phố núi"
+      ],
+      "offersEn": [
+        "Relaxed pace",
+        "2 hotel nights in Sapa",
+        "Free time in town"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-catcat-hamrong-fansipan-3d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 3N2Đ Khách Sạn – Cát Cát – Hàm Rồng – Cáp Treo Fansipan",
+      "nameEn": "Sapa 3 Days 2 Nights Hotel – Cat Cat – Ham Rong – Fansipan Peak",
+      "durationLabel": "3 ngày 2 đêm",
+      "durationLabelEn": "3 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 3N2Đ Khách Sạn – Cát Cát – Hàm Rồng – Cáp Treo Fansipan - The Dahlia Hanoi",
+          "altEn": "Sapa 3 Days 2 Nights Hotel – Cat Cat – Ham Rong – Fansipan Peak - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Chương trình tour Sa Pa đầy đủ và được yêu thích nhất: Cát Cát, Hàm Rồng, vé tàu Mường Hoa và cáp treo lên đỉnh Fansipan 3.143m.",
+      "cardLineEn": "The most sought-after full Sapa itinerary: Cat Cat, Ham Rong, Muong Hoa mountain train, and Fansipan summit cable car (3,143m).",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "(Giá áp dụng cho nhóm từ 02 khách)"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h30 – 07h00",
+          "title": "đón quý khách tại điểm hẹn hoặc sân bay Nội Bài khởi…",
+          "text": "Xe của Công ty sẽ đón quý khách tại điểm hẹn hoặc sân bay Nội Bài khởi hành đi Sapa theo hướng cao tốc Hà Nội – Lào Cai"
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Đến Sapa, xe đưa quý khách về ăn trưa tại nhà hàng",
+          "text": "Đến Sapa, xe đưa quý khách về ăn trưa tại nhà hàng. Sau đó, nhận phòng khách sạn và nghỉ ngơi."
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hà…",
+          "text": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hàm Rồng với vườn Lan Đông Dương, Cổng Trời, Sân Mây và thưởng thức chương trình ca nhạc dân tộc trên núi Hàm Rồng. Giao lưu với người dân tộc bản địa, chụp hình lưu niệm."
+        },
+        {
+          "time": "Ngày 1 · 18h00 – 18h30",
+          "title": "Quý khách dùng bữa tối tại nhà hàng",
+          "text": "Quý khách dùng bữa tối tại nhà hàng. Tự do vui chơi và thưởng thức những món đặc sản địa phương, uống cùng rượu San Lùng nổi tiếng để sưởi ấm bớt cái lạnh của Sapa. Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 07h30",
+          "title": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách ch…",
+          "text": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách chinh phục đinh Fansipan bằng hệ thống tàu Mường Hoa và cáp treo."
+        },
+        {
+          "time": "Ngày 2 · 12h30",
+          "title": "Quý khách quay lại thị trấn, Ăn trưa tại nhà hàng",
+          "text": "Quý khách quay lại thị trấn, Ăn trưa tại nhà hàng ."
+        },
+        {
+          "time": "Ngày 2 · 14h00 – 14h30",
+          "title": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đ…",
+          "text": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đời sống sinh hoạt của người đồng bào dân tộc H’mông, thăm thác Tiên Sa, thưởng thức chương trình biểu diễn văn nghệ truyền thống tại nhà máy thủy điện cũ. Quay lại thị trấn Sapa, Quý khách có thể đi tắm lá thuốc Dao Đỏ để thư giãn sau một ngày thăm quan ( Chi phí tự túc)."
+        },
+        {
+          "time": "Ngày 2 · 18h00",
+          "title": "Quý khách dùng bữa tối tại nhà hang",
+          "text": "Quý khách dùng bữa tối tại nhà hang. Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 3 · Sáng",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó tự do vui chơi."
+        },
+        {
+          "time": "Ngày 3 · 11h00",
+          "title": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa t…",
+          "text": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 3 · 13h30",
+          "title": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30…",
+          "text": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30 kết thúc chương trình du lịch khám phá Sapa. Xe có thể dừng trả khách trong sân bay Nội Bài, nếu quý khách có chuyến bay muộn có thể lựa chọn khung giờ phù hợp."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 06h30",
+          "title": "at Hanoi Old Quater",
+          "text": "Driver will pick you up at Hanoi Old Quater. After 05 hours on the highway, the car will take you to Sapa resort."
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Come to Sapa town",
+          "text": "Come to Sapa town. Transfer car pick you up at bus station and have lunch at the restaurant. Then check in at the hotel."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat - Sin Chai village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h00 – 18h30",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant. Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Have breakfast at the restaurant",
+          "text": "Have breakfast at the restaurant."
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Tour guide pick you up at your hotel and start to tr…",
+          "text": "Tour guide pick you up at your hotel and start to trek to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 11h30 – 12h00",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 13h30 – 14h00",
+          "title": "Back to hotel in Sapa Town",
+          "text": "Back to hotel in Sapa Town"
+        },
+        {
+          "time": "Day 2 · 18h00",
+          "title": "Having dinner at restaurant",
+          "text": "Having dinner at restaurant"
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "Sleeping at hotel",
+          "text": "Sleeping at hotel"
+        },
+        {
+          "time": "Day 3 · 07h30",
+          "title": "Have breakfast at the restaurant",
+          "text": "Have breakfast at the restaurant. Free time to explore Sapa town."
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Check out procedures at hotel",
+          "text": "Check out procedures at hotel. Then having lichj at estaurant. Free to visit and shop at Sapa market."
+        },
+        {
+          "time": "Day 3 · Afternoon",
+          "title": "Free time to explore Sapa town",
+          "text": "Free time to explore Sapa town."
+        },
+        {
+          "time": "Day 3 · 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at bus stop. End tour. Hope to see you again in the next journey."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển: Xe ôtô giường nằm / Cabin vip ( Trên xe không có hướng dẫn viên)",
+        "Khách sạn tiêu chuẩn 02-04 người/phòng",
+        "Các bữa ăn theo chương trình: 02 bữa sáng, 03 bữa trưa , 02 bữa tối",
+        "Hướng dẫn viên: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình tour Sapa : bản Cát Cát, núi Hàm Rồng",
+        "Vé tàu Mường Hoa, cáp treo Fansipan"
+      ],
+      "servicesIncludedEn": [
+        "Transportation 2 way Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on bus)",
+        "02 nights at hotel in Sapa, 2-3 people/room",
+        "Meals according to the program: 02 breakfast, 03 lunch, 02 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets: Cat Cat village, Lao Chai Ta Van Village"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí chi tiêu cá nhân",
+        "Hướng dân viên đi Fansipan",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meal"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Children from 1-4 years old are free (parents take care of all expenses for children, do not occupy seats on the car). 02 adults can only be accompanied by 01 child for free, from the second child, 75% of the tour price (standard as charged children). If 01 adult comes with 01 child from 1 to 4 years old, the child must buy 50% of the adult tour price (enjoy half the adult meal and other services included in the tour, sharing a bed with parents). Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents). Children from 9 years old and above are counted as adults.",
+      "offers": [
+        "Trọn gói Fansipan & tàu Mường Hoa",
+        "Vườn hoa Hàm Rồng",
+        "Khách sạn chất lượng"
+      ],
+      "offersEn": [
+        "Fansipan & Muong Hoa train included",
+        "Ham Rong flower garden",
+        "Quality hotel"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-homestay-3d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 3N2Đ Trải Nghiệm (01 Đêm Khách Sạn + 01 Đêm Homestay Bản)",
+      "nameEn": "Sapa 3 Days 2 Nights Combo (01 Night Hotel + 01 Night Homestay)",
+      "durationLabel": "3 ngày 2 đêm",
+      "durationLabelEn": "3 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 3N2Đ Trải Nghiệm (01 Đêm Khách Sạn + 01 Đêm Homestay Bản) - The Dahlia Hanoi",
+          "altEn": "Sapa 3 Days 2 Nights Combo (01 Night Hotel + 01 Night Homestay) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Combo trải nghiệm tuyệt vời: đêm 1 tiện nghi tại khách sạn trung tâm Sa Pa, đêm 2 ngủ bản Tả Van giữa khung cảnh ruộng bậc thang yên bình.",
+      "cardLineEn": "The ultimate combo: first night in comfortable town hotel, second night at a serene village homestay in Ta Van.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "The ultimate combo: first night in comfortable town hotel, second night at a serene village homestay in Ta Van."
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h00 – 06h30",
+          "title": "Xe của Công ty đón Qúy khách tại điểm hẹn hoặc Sân b…",
+          "text": "Xe của Công ty đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Quý khách tới khách sạn, làm thủ tục nhận phòng tại khách sạn và dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làng Tham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 19h00",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng. Nghỉ đêm tại khách sạn"
+        },
+        {
+          "time": "Ngày 2 · ",
+          "title": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ…",
+          "text": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ để tham quan, khám phá về 3 ngôi làng cùng với nhiều nét đẹp văn hóa của 2 dân tộc (H’Mông và Dáy)."
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại khách sạn",
+          "text": "Qúy khách dùng bữa sáng tại khách sạn. Sau đó làm thủ tục trả phòng. Qusy khách sẽ để hành lý tại quầy lễ tân khách sạn, chỉ mang theo những đồ cần thiết nhỏ gọn để thuận tiện việc đi bộ đường dài."
+        },
+        {
+          "time": "Ngày 2 · 08h30",
+          "title": "Khởi hành checkking 12km xuống Thung lũng Mường Hoa",
+          "text": "Khởi hành checkking 12km xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Văn, Hầu thảo và kết thúc ở Bản Hồ. Vào màu lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ylinh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ylinh Hồ và Lao Chải. Ylinh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "Ngày 2 · 12h30",
+          "title": "Qúy khách tới bản Tả Van dùng bữa trưa, sau đó nhận …",
+          "text": "Qúy khách tới bản Tả Van dùng bữa trưa, sau đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 2 · 14h30",
+          "title": "HDV đưa quý khách thăm quan bản của người H’ MONG và…",
+          "text": "HDV đưa quý khách thăm quan bản của người H’ MONG và bản của người DÁY"
+        },
+        {
+          "time": "Ngày 2 · 16h30",
+          "title": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đ…",
+          "text": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đó quý khách có thể tham gia nấu ăn cùng người dân bản địa và chế biến các món ăn đặc trưng của người dân địa phương Note : Đối với khách đoàn có thể tổ chức chương trình đốt lửa trại, nhảy sạp , cùng các chương trình văn nghệ đặc sắc…"
+        },
+        {
+          "time": "Ngày 3 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại homestay",
+          "text": "Qúy khách dùng bữa sáng tại homestay . Làm thủ tục trả phòng"
+        },
+        {
+          "time": "Ngày 3 · 08h30 – 09h00",
+          "title": "HDV đưa quý khách bắt đầu chuyến thăm quan GIàNG TA …",
+          "text": "HDV đưa quý khách bắt đầu chuyến thăm quan GIàNG TA CHẢI thuộc xã Tả Văn (Sapa), nằm ở bên kia con suối Mường Hoa. Ngôi làng nằm ẩn khuất dưới bóng những cây cổ thụ, rặng tre xanh mướt là nơi sinh sống của người Dao đỏ. Những nếp nhà đơn sơ được dựng trên những vùng đất đá bên sườn núi. Đặc biệt, đến nơi đây du khách sẽ được dịp chiêm ngưỡng một rừng trúc xanh trong làng với hàng ngàn con bướm màu vàng nhạt bay lượn, đậu khắp một vùng rộng lớn…"
+        },
+        {
+          "time": "Ngày 3 · 12h00",
+          "title": "Qúy khách dùng bữa trưa tại homestay, sau đó nghỉ ngơi",
+          "text": "Qúy khách dùng bữa trưa tại homestay, sau đó nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 3 · 14h30",
+          "title": "Xe đón quý khách từ homestay về lại thị trấn Sapa",
+          "text": "Xe đón quý khách từ homestay về lại thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 3 · 15h30",
+          "title": "Qúy khách lên xe về lại Hà Nội, trên đường về quý kh…",
+          "text": "Qúy khách lên xe về lại Hà Nội, trên đường về quý khách có nhu cầu xuống sân bay Nội Bài xe của công ty đưa quý khách vào sân bay Nội Bài từ 19h30 – 20h00"
+        },
+        {
+          "time": "Ngày 3 · 22h00 – 22h30",
+          "title": "Xe về đến Hà Nội kết thúc chương trình tour sapa 3 n…",
+          "text": "Xe về đến Hà Nội kết thúc chương trình tour sapa 3 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06h00 – 6h30",
+          "title": "Driver picks you up at the your hotel to depart for …",
+          "text": "Driver picks you up at the your hotel to depart for Sapa. After 05 hours on the highway, the bus will take you to Sapa"
+        },
+        {
+          "time": "Day 1 · 13h00 – 13h30",
+          "title": "Arrive to Sapa town",
+          "text": "Arrive to Sapa town. Transfer car pick you up at bus station and having luch at restaurant. Then check-in procedure at hotel."
+        },
+        {
+          "time": "Day 1 · 14h00 – 14h30",
+          "title": "Tour guide and you walk to visit Cat Cat village, st…",
+          "text": "Tour guide and you walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early twentieth century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 18h30",
+          "title": "Enjoy dinner at the restaurant, then you are free to…",
+          "text": "Enjoy dinner at the restaurant, then you are free to explore Sapa"
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at hotel",
+          "text": "Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Having breakfast at the restaurant",
+          "text": "Having breakfast at the restaurant. Check-out procedure at hotel. You will store your luggage at the lounge of hotel, only bring small bag with important thing."
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Trekking to Y Linh Ho village and then start hiking …",
+          "text": "Trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges."
+        },
+        {
+          "time": "Day 2 · 12h00 -12h30",
+          "title": "Having lunch at Ta Van village then check-in and rest",
+          "text": "Having lunch at Ta Van village then check-in and rest"
+        },
+        {
+          "time": "Day 2 · Afternoon",
+          "title": "Free time to relax at homestay",
+          "text": "Free time to relax at homestay"
+        },
+        {
+          "time": "Day 2 · 17h00 – 17h30",
+          "title": "Prepare to learn how to cook some local dishes",
+          "text": "Prepare to learn how to cook some local dishes."
+        },
+        {
+          "time": "Day 2 · 18h30",
+          "title": "Enjoy dinner with the dishes you have made",
+          "text": "Enjoy dinner with the dishes you have made."
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "Overnight at homestay in Ta Van village",
+          "text": "Overnight at homestay in Ta Van village."
+        },
+        {
+          "time": "Day 3 · 07h00 – 08h00",
+          "title": "Having breakfast at homestay",
+          "text": "Having breakfast at homestay"
+        },
+        {
+          "time": "Day 3 · 09h- 09h30",
+          "title": "Giang Ta Chai Village and Supan Village will be 2 pl…",
+          "text": "Giang Ta Chai Village and Supan Village will be 2 places that we will visit in the morning of the 2nd day. We have to walk 8 km to visit these 2 villages of Red Dao. Giang Ta Chai is one of the villages of Red Dao. It has become one of the attractive places for travelers who want to experience the colorful traditions and customs"
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Enjoy lunch at local restaurant",
+          "text": "Enjoy lunch at local restaurant"
+        },
+        {
+          "time": "Day 3 · 13h30 – 14h00",
+          "title": "Car pick you up back to Sapa",
+          "text": "Car pick you up back to Sapa"
+        },
+        {
+          "time": "Day 3 · 15h30",
+          "title": "You get on the bus back to Hanoi",
+          "text": "You get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at Tran Quang Khai/ Ly Thai To Street. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm / cabin ( không bao gồm hướng dẫn viên trên xe",
+        "Một chiều xe từ bản về thị trấn Sapa",
+        "01 đêm khách sạn 3 sao tại thị trấn Sapa",
+        "01 đêm phòng riêng tại homestay",
+        "Các bữa ăn theo chương trình: 05 bữa chính, 02 bữa sáng",
+        "Hướng dẫn viên tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "night at homestay at Ta Van village",
+        "night at hotel in Sapa town",
+        "Local English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 02 brekfast, 03 lubch, 02 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí cá nhân và các dịch vụ khác",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "1 đêm khách sạn + 1 đêm homestay",
+        "Bản Cát Cát & Tả Van",
+        "Giao lưu văn hóa bản địa"
+      ],
+      "offersEn": [
+        "1 night hotel + 1 night homestay",
+        "Cat Cat & Ta Van",
+        "Cultural interaction"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-3d3n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 3N3Đ Xe Giường Nằm (Khách Sạn Hàm Rồng – Fansipan – Cát Cát)",
+      "nameEn": "Sapa 3 Days 3 Nights Sleeper Bus (Ham Rong – Fansipan – Cat Cat Hotel)",
+      "durationLabel": "3 ngày 3 đêm",
+      "durationLabelEn": "3 days 3 nights",
+      "nightsOffset": 3,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 3N3Đ Xe Giường Nằm (Khách Sạn Hàm Rồng – Fansipan – Cát Cát) - The Dahlia Hanoi",
+          "altEn": "Sapa 3 Days 3 Nights Sleeper Bus (Ham Rong – Fansipan – Cat Cat Hotel) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Chuyến hành trình 3 ngày 3 đêm trọn gói: xe giường nằm đêm khứ hồi Hà Nội, 2 đêm khách sạn Sa Pa, khám phá Hàm Rồng, Fansipan và Cát Cát.",
+      "cardLineEn": "3 days 3 nights package: round-trip night sleeper bus from Hanoi, 2 hotel nights, exploring Ham Rong, Fansipan, and Cat Cat.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "(Giá áp dụng cho nhóm từ 02 khách)"
+      ],
+      "descriptionEn": [
+        "PACKAGE PRICE FOR 01 PERSON:",
+        "(Price applies to groups of 02 guests)"
+      ],
+      "itinerary": [
+        {
+          "time": "ĐÊM 01 · 21h00 – 21h30",
+          "title": "Xe đón Quý khách tại điểm hẹn, khởi hành đi Sapa",
+          "text": "Xe đón Quý khách tại điểm hẹn, khởi hành đi Sapa"
+        },
+        {
+          "time": "Ngày 1 · 05h00",
+          "title": "Quý khách đến thị trấn Sapa, quý khách ngủ trên xe đ…",
+          "text": "Quý khách đến thị trấn Sapa, quý khách ngủ trên xe đến 6h00"
+        },
+        {
+          "time": "Ngày 1 · 06h00",
+          "title": "Xe trung chuyển đón Quý khách tại bến xe, về khách s…",
+          "text": "Xe trung chuyển đón Quý khách tại bến xe, về khách sạn ăn sáng"
+        },
+        {
+          "time": "Ngày 1 · 08h00 – 08h30",
+          "title": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hà…",
+          "text": "HDV đưa quý khách đi bộ thăm quan khu du lịch Núi Hàm Rồng với vườn Lan Đông Dương, Cổng Trời, Sân Mây và thưởng thức chương trình ca nhạc dân tộc trên núi Hàm Rồng. Giao lưu với người dân tộc bản địa, chụp hình lưu niệm."
+        },
+        {
+          "time": "Ngày 1 · 12h00",
+          "title": "Quý khách dùng bữa trưa, Sau đó nhận phòng khách sạn…",
+          "text": "Quý khách dùng bữa trưa, Sau đó nhận phòng khách sạn, nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 1 · Buổi chiều",
+          "title": "Tự do nghỉ ngơi tại khách sạn",
+          "text": "Tự do nghỉ ngơi tại khách sạn."
+        },
+        {
+          "time": "Ngày 1 · 18h00 – 18h30",
+          "title": "Quý khách dùng bữa tối tại nhà hàng",
+          "text": "Quý khách dùng bữa tối tại nhà hàng. Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 07h30",
+          "title": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách có…",
+          "text": "Quý khách ăn sáng tại khách sạn, sau đó Quý khách có thể tới ga Cáp Treo Fansipan, Quý khách sẽ được đi cáp treo 3 dây dài nhất thế giới với chiều dài 6.292,5m. Quý khách sẽ được ngắm nhìn thung lũng Mường Hoa và dãy Hoàng Liên Sơn tuyệt đẹp từ trên cao. Sau 25 phút đi cáp treo, Quý khách tiếp tục leo bộ 600 bậc thang để đến với đỉnh Fansipan hùng vĩ (Chi phí tự túc xe + vé)"
+        },
+        {
+          "time": "Ngày 2 · 12h30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "Ăn trưa tại nhà hàng ."
+        },
+        {
+          "time": "Ngày 2 · 14h00",
+          "title": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đ…",
+          "text": "HDV đưa Quý khách đi bộ thăm bản Cát Cát, tìm hiểu đời sống sinh hoạt của người đồng bào dân tộc H’mông, thăm thác Tiên Sa, thưởng thức chương trình biểu diễn văn nghệ truyền thống tại nhà máy thủy điện cũ. Quay lại thị trấn Sapa, Quý khách có thể đi tắm lá thuốc Dao Đỏ để thư giãn sau một ngày thăm quan."
+        },
+        {
+          "time": "Ngày 2 · 18h00",
+          "title": "Quý khách dùng bữa tối tại nhà hàng Nghỉ đêm tại Sapa",
+          "text": "Quý khách dùng bữa tối tại nhà hàng Nghỉ đêm tại Sapa."
+        },
+        {
+          "time": "Ngày 3 · Sáng",
+          "title": "Quý khách dùng bữa sáng tại nhà hàng",
+          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó tự do vui chơi."
+        },
+        {
+          "time": "Ngày 3 · 11h00",
+          "title": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa t…",
+          "text": "Quý khách trả phòng và gửi đồ tại lễ tân, dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 3 · 13h30",
+          "title": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30…",
+          "text": "Khởi hành từ Sapa về đến Hà Nội khoảng 20h00 – 20h30 kết thúc chương trình du lịch khám phá Sapa. Xe có thể dừng trả khách trong sân bay Nội Bài, nếu quý khách có chuyến bay muộn có thể lựa chọn khung giờ phù hợp."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "NIGHT 1 · 21h00 – 21h30",
+          "title": "at or your hotel in Hanoi Old Quarter, then depart t…",
+          "text": "Driver will pick you up at or your hotel in Hanoi Old Quarter, then depart to Sapa. We will Stop halfway and take a rest for 20 minutes."
+        },
+        {
+          "time": "Day 1 · 04h30 – 05h00",
+          "title": "Arrive at Sapa",
+          "text": "Arrive at Sapa. You will sleep on bus until 6 am, transfer car pick you up at bus station to our hotel."
+        },
+        {
+          "time": "Day 1 · 07h00",
+          "title": "Having breakfast",
+          "text": "Having breakfast."
+        },
+        {
+          "time": "Day 1 · 08h30",
+          "title": "Tour guide and guests walk to visit Cat Cat village,…",
+          "text": "Tour guide and guests walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat - Sin Chai village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early 20th century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 12h00",
+          "title": "Having lunch at restaurant and then check-in procedu…",
+          "text": "Having lunch at restaurant and then check-in procedure at hotel"
+        },
+        {
+          "time": "Day 1 · Afternoon",
+          "title": "Free time to explore Sapa",
+          "text": "Free time to explore Sapa"
+        },
+        {
+          "time": "Day 1 · 18h00 – 18h30",
+          "title": "Have dinner at the restaurant",
+          "text": "Have dinner at the restaurant."
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at hotel in Sapa town",
+          "text": "Sleeping at hotel in Sapa town."
+        },
+        {
+          "time": "Day 2 · 07h00",
+          "title": "Have breakfast at the restaurant",
+          "text": "Have breakfast at the restaurant."
+        },
+        {
+          "time": "Day 2 · 08h00 – 8h30",
+          "title": "Tour guide pick you up at your hotel and start to tr…",
+          "text": "Tour guide pick you up at your hotel and start to trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "Day 2 · 11h20 – 12h30",
+          "title": "Having lunch at Ta Van village and rest",
+          "text": "Having lunch at Ta Van village and rest"
+        },
+        {
+          "time": "Day 2 · 14h00",
+          "title": "Car pick you up back to hotel in Sapa Town",
+          "text": "Car pick you up back to hotel in Sapa Town. Fee time at hotel"
+        },
+        {
+          "time": "Day 2 · 18h00",
+          "title": "Having dinner at restaurant",
+          "text": "Having dinner at restaurant"
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "Sleeping at hotel",
+          "text": "Sleeping at hotel."
+        },
+        {
+          "time": "Day 3 · 07h00",
+          "title": "Having breakfast at restaurant",
+          "text": "Having breakfast at restaurant"
+        },
+        {
+          "time": "Day 3 · Morning",
+          "title": "Free time to explore Sapa Town",
+          "text": "Free time to explore Sapa Town. You can explore Fansipan by Cable Car system"
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Check out procedures at hotel",
+          "text": "Check out procedures at hotel. Then having luch at restaurant. Free to visit and shop at Sapa market."
+        },
+        {
+          "time": "Day 3 · 15h30",
+          "title": "Delegation get on the bus back to Hanoi",
+          "text": "Delegation get on the bus back to Hanoi."
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at Tran Quang Khai/ Ly Thai To street. End tour. Hope to see you again in the next journey."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển: Xe ôtô giường nằm / Cabin vip / Tàu hỏa ( Không bao gồm hướng dẫn viên trên xe)",
+        "Khách sạn tiêu chuẩn 02-04 người/phòng",
+        "Các bữa ăn theo chương trình: 03 bữa trưa, 02 bữa tối, 03 bữa sáng",
+        "Hướng dẫn viên bản địa tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình tour Sapa : bản Cát Cát, núi Hàm Rồng"
+      ],
+      "servicesIncludedEn": [
+        "Transportation 2 ways Hanoi – Sapa - Hanoi: Sleeping bus/ Cabin vip bus ( not have tour guide on the bus)",
+        "02 nights at hotel in Sapa, 2-3 people/room",
+        "Meals according to the program: 03 breakfast, 03 lunch, 02 dinner",
+        "Local English Tour guide in Sapa: enthusiastic, dynamic",
+        "Scheduled sightseeing tickets: Cat Cat village, Lao Chai Ta Van Village"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí chi tiêu cá nhân",
+        "Xe + Vé Cáp treo Fansipan",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "Tax (10%)",
+        "Drinks in the meal",
+        "Fansipan Cable Car tickets + car to Fansipan"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ). Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ). Trẻ em từ 9 tuổi trở lên tính như người lớn.",
+      "serviceNoteEn": "Children from 1-4 years old are free (parents take care of all expenses for children, do not occupy seats on the car). 02 adults can only be accompanied by 01 child for free, from the second child, 75% of the tour price (standard as charged children). If 01 adult comes with 01 child from 1 to 4 years old, the child must buy 50% of the adult tour price (enjoy half the adult meal and other services included in the tour, sharing a bed with parents). Children from 5-8 years old pay 75% of tour price (separate meals, seats in private cars, sharing bed with parents). Children from 9 years old and above are counted as adults.",
+      "offers": [
+        "Khứ hồi xe giường nằm",
+        "Chinh phục đỉnh Fansipan",
+        "Lịch trình trọn vẹn"
+      ],
+      "offersEn": [
+        "Round-trip night sleeper",
+        "Fansipan summit",
+        "Comprehensive itinerary"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-hotel-homestay-3d3n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 3N3Đ (01 Đêm Khách Sạn + 01 Đêm Bản Tả Van + Xe Giường Nằm)",
+      "nameEn": "Sapa 3 Days 3 Nights (01 Night Hotel + 01 Night Homestay + Sleeper Bus)",
+      "durationLabel": "3 ngày 3 đêm",
+      "durationLabelEn": "3 days 3 nights",
+      "nightsOffset": 3,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 3N3Đ (01 Đêm Khách Sạn + 01 Đêm Bản Tả Van + Xe Giường Nằm) - The Dahlia Hanoi",
+          "altEn": "Sapa 3 Days 3 Nights (01 Night Hotel + 01 Night Homestay + Sleeper Bus) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Tour Sa Pa 3N3Đ kết hợp ngủ khách sạn và ngủ bản: di chuyển xe giường nằm, tham quan Cát Cát, trekking Lao Chải – Tả Van – Giàng Tả Chải.",
+      "cardLineEn": "3D3N combined hotel & village homestay: sleeper bus transfer, Cat Cat village, trekking through Lao Chai – Ta Van – Giang Ta Chai.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "3D3N combined hotel & village homestay: sleeper bus transfer, Cat Cat village, trekking through Lao Chai – Ta Van – Giang Ta Chai."
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06h00 – 06h30",
+          "title": "Xe của Công ty đón Qúy khách tại điểm hẹn hoặc Sân b…",
+          "text": "Xe của Công ty đón Qúy khách tại điểm hẹn hoặc Sân bay Nội Bài khởi hành đi Sapa. Sau 05 tiếng trên đường cao tốc, xe sẽ đưa quý khách đến với khu du lịch nghỉ dưỡng Sapa."
+        },
+        {
+          "time": "Ngày 1 · 13h00 – 13h30",
+          "title": "Xe tới thị trấn Sapa",
+          "text": "Xe tới thị trấn Sapa. Quý khách tới khách sạn, làm thủ tục nhận phòng tại khách sạn và dùng bữa trưa tại nhà hàng"
+        },
+        {
+          "time": "Ngày 1 · 14h30",
+          "title": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cá…",
+          "text": "Hướng dẫn viên cùng Qúy khách đi bộ tham quan bản Cát Cát, bắt đầu hành trình khám phá bản làng Tham quan bản Cát Cát – Sín Chải của người H’mong. Du khách sẽ được thăm và tìm hiểu phong tục tập quán của người dân tộc thiểu số. Tham quan thác Cát Cát và nhà máy thuỷ điện do người Pháp xây dựng đầu thế kỷ XX, vui chơi và chụp hình lưu niệm…"
+        },
+        {
+          "time": "Ngày 1 · 19h00",
+          "title": "Đoàn dùng bữa tối tại nhà hàng",
+          "text": "Đoàn dùng bữa tối tại nhà hàng. Nghỉ đêm tại khách sạn"
+        },
+        {
+          "time": "Ngày 2 · ",
+          "title": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ…",
+          "text": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ để tham quan, khám phá về 3 ngôi làng cùng với nhiều nét đẹp văn hóa của 2 dân tộc (H’Mông và Dáy)."
+        },
+        {
+          "time": "Ngày 2 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại khách sạn",
+          "text": "Qúy khách dùng bữa sáng tại khách sạn. Sau đó làm thủ tục trả phòng. Qusy khách sẽ để hành lý tại quầy lễ tân khách sạn, chỉ mang theo những đồ cần thiết nhỏ gọn để thuận tiện việc đi bộ đường dài."
+        },
+        {
+          "time": "Ngày 2 · 08h30",
+          "title": "Khởi hành checkking 12km xuống Thung lũng Mường Hoa",
+          "text": "Khởi hành checkking 12km xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Văn, Hầu thảo và kết thúc ở Bản Hồ. Vào màu lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ylinh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ylinh Hồ và Lao Chải. Ylinh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "Ngày 2 · 12h30",
+          "title": "Qúy khách tới bản Tả Van dùng bữa trưa, sau đó nhận …",
+          "text": "Qúy khách tới bản Tả Van dùng bữa trưa, sau đó nhận phòng nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 2 · 14h30",
+          "title": "HDV đưa quý khách thăm quan bản của người H’ MONG và…",
+          "text": "HDV đưa quý khách thăm quan bản của người H’ MONG và bản của người DÁY"
+        },
+        {
+          "time": "Ngày 2 · 16h30",
+          "title": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đ…",
+          "text": "Qúy khách quay về homestay nghỉ ngơi thư giãn, sau đó quý khách có thể tham gia nấu ăn cùng người dân bản địa và chế biến các món ăn đặc trưng của người dân địa phương Note : Đối với khách đoàn có thể tổ chức chương trình đốt lửa trại, nhảy sạp , cùng các chương trình văn nghệ đặc sắc…"
+        },
+        {
+          "time": "Ngày 3 · 07h00 – 08h00",
+          "title": "Qúy khách dùng bữa sáng tại homestay",
+          "text": "Qúy khách dùng bữa sáng tại homestay . Làm thủ tục trả phòng"
+        },
+        {
+          "time": "Ngày 3 · 08h30 – 09h00",
+          "title": "HDV đưa quý khách bắt đầu chuyến thăm quan GIàNG TA …",
+          "text": "HDV đưa quý khách bắt đầu chuyến thăm quan GIàNG TA CHẢI thuộc xã Tả Văn (Sapa), nằm ở bên kia con suối Mường Hoa. Ngôi làng nằm ẩn khuất dưới bóng những cây cổ thụ, rặng tre xanh mướt là nơi sinh sống của người Dao đỏ. Những nếp nhà đơn sơ được dựng trên những vùng đất đá bên sườn núi. Đặc biệt, đến nơi đây du khách sẽ được dịp chiêm ngưỡng một rừng trúc xanh trong làng với hàng ngàn con bướm màu vàng nhạt bay lượn, đậu khắp một vùng rộng lớn…"
+        },
+        {
+          "time": "Ngày 3 · 12h00",
+          "title": "Qúy khách dùng bữa trưa tại homestay, sau đó nghỉ ngơi",
+          "text": "Qúy khách dùng bữa trưa tại homestay, sau đó nghỉ ngơi"
+        },
+        {
+          "time": "Ngày 3 · 14h30",
+          "title": "Xe đón quý khách từ homestay về lại thị trấn Sapa",
+          "text": "Xe đón quý khách từ homestay về lại thị trấn Sapa"
+        },
+        {
+          "time": "Ngày 3 · 15h30",
+          "title": "Qúy khách lên xe về lại Hà Nội, trên đường về quý kh…",
+          "text": "Qúy khách lên xe về lại Hà Nội, trên đường về quý khách có nhu cầu xuống sân bay Nội Bài xe của công ty đưa quý khách vào sân bay Nội Bài từ 19h30 – 20h00"
+        },
+        {
+          "time": "Ngày 3 · 22h00 – 22h30",
+          "title": "Xe về đến Hà Nội kết thúc chương trình tour sapa 3 n…",
+          "text": "Xe về đến Hà Nội kết thúc chương trình tour sapa 3 ngày 2 đêm"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 21h00 – 21h30",
+          "title": "Our bus will pick you up at or your hotel in Hanoi O…",
+          "text": "Our bus will pick you up at or your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway."
+        },
+        {
+          "time": "Day 1 · 05h00",
+          "title": "Arrive at Sapa town",
+          "text": "Arrive at Sapa town. You will sleep on bus until 6:00 am."
+        },
+        {
+          "time": "Day 1 · 06h00",
+          "title": "Transfer car pick you up from bus stop to hotel and …",
+          "text": "Transfer car pick you up from bus stop to hotel and have breakfast"
+        },
+        {
+          "time": "Day 1 · 08h00 – 8h30",
+          "title": "Tour guide and you walk to visit Cat Cat village, st…",
+          "text": "Tour guide and you walk to visit Cat Cat village, start the journey to discover the village Visit Cat Cat village of the H'mong. Visitors will be able to visit and learn about the customs and habits of ethnic minorities. Visit Cat Cat waterfall and hydroelectric power plant built by the French in the early twentieth century, have fun and take souvenir photos…"
+        },
+        {
+          "time": "Day 1 · 11h30 – 12h00",
+          "title": "Having lunch at the restaurant and check-in procedur…",
+          "text": "Having lunch at the restaurant and check-in procedure at hotel"
+        },
+        {
+          "time": "Day 1 · Afternoon",
+          "title": "Free to explore Sapa town",
+          "text": "Free to explore Sapa town"
+        },
+        {
+          "time": "Day 1 · 18h30",
+          "title": "Enjoy dinner at the restaurant",
+          "text": "Enjoy dinner at the restaurant."
+        },
+        {
+          "time": "Day 1 · ",
+          "title": "Sleeping at hotel",
+          "text": "Sleeping at hotel."
+        },
+        {
+          "time": "Day 2 · 07h00 – 08h00",
+          "title": "Having breakfast at the restaurant",
+          "text": "Having breakfast at the restaurant. Check – out procedure at hotel. You will store your luggage at the lounge of hotel, only bring small bag with important thing."
+        },
+        {
+          "time": "Day 2 · 08h00 – 08h30",
+          "title": "Trekking to Y Linh Ho village and then start hiking …",
+          "text": "Trekking to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges."
+        },
+        {
+          "time": "Day 2 · 12h00 -12h30",
+          "title": "Having lunch at Ta Van village then check-in and rest",
+          "text": "Having lunch at Ta Van village then check-in and rest"
+        },
+        {
+          "time": "Day 2 · Afternoon",
+          "title": "Free time at homestay",
+          "text": "Free time at homestay"
+        },
+        {
+          "time": "Day 2 · 16h00",
+          "title": "Comeback to homestay and rest",
+          "text": "Comeback to homestay and rest. Then prepare to learn how to cook some local dishes."
+        },
+        {
+          "time": "Day 2 · 18h30",
+          "title": "Enjoy dinner with the dishes you have made",
+          "text": "Enjoy dinner with the dishes you have made."
+        },
+        {
+          "time": "Day 2 · ",
+          "title": "Overnight at homestay in Ta Van village",
+          "text": "Overnight at homestay in Ta Van village."
+        },
+        {
+          "time": "Day 3 · 07h00 – 08h00",
+          "title": "Having breakfast at homestay",
+          "text": "Having breakfast at homestay"
+        },
+        {
+          "time": "Day 3 · 09h00",
+          "title": "Giang Ta Chai Village will be place that we will vis…",
+          "text": "Giang Ta Chai Village will be place that we will visit in the morning of the 2nd day. We have to walk 8 km to visit these 2 villages of Red Dao. Giang Ta Chai is one of the villages of Red Dao. It has become one of the attractive places for travelers who want to experience the colorful traditions and customs"
+        },
+        {
+          "time": "Day 3 · 12h00",
+          "title": "Enjoy lunch at local restaurant",
+          "text": "Enjoy lunch at local restaurant"
+        },
+        {
+          "time": "Day 3 · 13h00 – 13h30",
+          "title": "Car pick you up back to Sapa town",
+          "text": "Car pick you up back to Sapa town."
+        },
+        {
+          "time": "Day 3 · 15h30",
+          "title": "You get on the bus back to Hanoi",
+          "text": "You get on the bus back to Hanoi"
+        },
+        {
+          "time": "Day 3 · 22h – 22h30",
+          "title": "Arrive in Hanoi",
+          "text": "Arrive in Hanoi. Bus drop off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Vận chuyển Hà Nội – Sapa – Hà Nội: Xe ôtô giường nằm / cabin ( không bao gồm hướng dẫn viên trên xe",
+        "Một chiều xe từ bản về thị trấn Sapa",
+        "01 đêm khách sạn 3 sao tại thị trấn Sapa",
+        "01 đêm phòng riêng tại homestay",
+        "Các bữa ăn theo chương trình: 05 bữa chính, 02 bữa sáng",
+        "Hướng dẫn viên tại Sapa: nhiệt tình, năng động",
+        "Vé tham quan theo lịch trình"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on the bus)",
+        "night at homestay at Ta Van village",
+        "night at hotel in sapa town",
+        "Local English speaking guide in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 3 breakfast, 3 lunch, 2 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT, chi phí cá nhân và các dịch vụ khác",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Xe giường nằm đêm",
+        "1 đêm KS + 1 đêm bản",
+        "Trekking suối Mường Hoa"
+      ],
+      "offersEn": [
+        "Night sleeper bus",
+        "1 night hotel + 1 night homestay",
+        "Muong Hoa valley trekking"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-trekking-1d",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa Trekking 1 Ngày (Ý Linh Hồ – Lao Chải – Tả Van)",
+      "nameEn": "Sapa 1-Day Trekking Tour (Y Linh Ho – Lao Chai – Ta Van)",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa Trekking 1 Ngày (Ý Linh Hồ – Lao Chải – Tả Van) - The Dahlia Hanoi",
+          "altEn": "Sapa 1-Day Trekking Tour (Y Linh Ho – Lao Chai – Ta Van) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Hành trình trekking 10km tuyệt đẹp qua thung lũng Mường Hoa, tiếp xúc với đồng bào dân tộc H'Mông Đen và Giáy, ăn trưa tại bản.",
+      "cardLineEn": "A scenic 10km day trek through breathtaking Muong Hoa valley, meeting Black H'mong and Giay ethnic communities.",
+      "description": [
+        "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
+        "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
+      ],
+      "descriptionEn": [
+        "A scenic 10km day trek through breathtaking Muong Hoa valley, meeting Black H'mong and Giay ethnic communities."
+      ],
+      "itinerary": [
+        {
+          "time": "",
+          "title": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ…",
+          "text": "Hoạt động diễn ra trong ngày đầu tiên với 10km đi bộ để tham quan, khám phá về 3 ngôi làng cùng với nhiều nét đẹp văn hóa của 2 dân tộc (H’Mông và Dáy)."
+        },
+        {
+          "time": "08h00 – 8h30",
+          "title": "Hướng dẫn viên đón Quý khách tại khách sạn trong thị…",
+          "text": "Hướng dẫn viên đón Quý khách tại khách sạn trong thị trấn Sapa. Khởi hành treckking xuống Thung lũng Mường Hoa. Đây là thung lũng đẹp nhất ở Sapa với hình ảnh đặc trưng là con suối Mường hoa kéo dài 15km dọc theo thung lũng Mường Hoa. Dòng suối ngọt ngào như con trăn khổng lồ ngoằn ngoèo, uốn lượn qua Lao Chải, Tả Van, Hầu Thào và kết thúc ở Bản Hồ. Vào mùa lúa chín, sắc vàng từ những thửa ruộng bậc thang thi nhau tràn xuống soi bóng giữa dòng nước trong xanh, êm đềm làm tôn thêm vẻ đẹp huyền ảo mơ mộng của thung lũng Mường Hoa. Thăm bản Ý Linh Hồ và Lao Chải Tiếp theo, du khách tiếp tục đi bộ khoảng 3,5 giờ để đến bản Ý Linh Hồ và Lao Chải. Ý Linh Hồ hiện lên bên cạnh con suối Mường Hoa. Nơi đây là một xã nhỏ nằm ở phái tây nam cách thị trấn Sapa khoảng 7km. Với địa hình núi khá khắc nghiệt bởi những dãy núi cao và dốc. Dân bản sinh sống ở đây chủ yếu là người dân tộc Mông đen, họ dựng nhà thô sơ bằng đất trộn với tre nứa và canh tác chủ yếu dựa vào trồng trọt là chính. Những bước chân lại tiếp tục men theo cặp sườn núi mà xung quanh đều là ruộng bậc thang để đến Lao Chải cũng giống như YLinh Hồ, là một xã nhỏ thuộc huyện Sapa – Lào Cai. Lao Chải Cách trung tâm thị trấn Sapa 7km, nơi đây đã từ lâu là điểm thu hút đông đảo khách du lịch trong và ngoài nước ghé thăm. Với khung cảnh thiên nhiên thơ mộng, yên bình đến tĩnh lặng bởi những nếp nhà sàn đơn sơ bên cạnh thửa ruộng bậc thang hùng vĩ, những bãi đá cổ với nhiều chạm khắc tinh hoa sống động, hay những mâm cơm buổi xế chiều đầm ấm…"
+        },
+        {
+          "time": "12h00 – 12h30",
+          "title": "Qúy khách tới bản Tả Van, dùng bữa trưa",
+          "text": "Qúy khách tới bản Tả Van, dùng bữa trưa. Nghỉ ngơi tại bản Tả Van"
+        },
+        {
+          "time": "13h30 – 14h00",
+          "title": "Xe đưa Quý khách về lại thị trấn Sapa",
+          "text": "Xe đưa Quý khách về lại thị trấn Sapa. Kết thúc tour Trekking Lao Chải – Tả Van 1 ngày"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "08:00 – 08:30",
+          "title": "Tour guide pick you up at your hotel in Sapa town an…",
+          "text": "Tour guide pick you up at your hotel in Sapa town and start to trek to Y Linh Ho village and then start hiking through the rice terraces along Muong Hoa Stream to Lao Chai, the village of Black H’mong minority. Here you will enjoy the spectacular landscape of Hoang Lien Son mountain ranges. Pass several tribal villages, including Lao Chai and Ta Van, home to the Black H'mong, Dzao and Dzay minority peoples."
+        },
+        {
+          "time": "12:00 - 13:30",
+          "title": "Having lunch at Ta Van village and rest at our homestay",
+          "text": "Having lunch at Ta Van village and rest at our homestay."
+        },
+        {
+          "time": "14:30",
+          "title": "Come back Sapa Town by car",
+          "text": "Come back Sapa Town by car. Finish Sapa 1 day tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Hướng dẫn viên bản địa tại Sapa",
+        "bữa trưa tại bản Tả Van",
+        "chiều xe từ bản Tả Van về thị trấn Sapa",
+        "Vé tham quan"
+      ],
+      "servicesIncludedEn": [
+        "Meal: 01 main meal at lunch - Local English Tour guide in Sapa: enthusiastic, dynamic - Scheduled sightseeing tickets"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trong bữa ăn",
+        "Chi phí chi tiêu cá nhân"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Trẻ em từ 1-4 tuổi miễn phí (bố mẹ tự lo mọi chi phí cho trẻ, không chiếm chỗ trên xe). 02 người lớn chỉ được kèm theo 01 trẻ miễn phí, từ trẻ thứ 2 tính 75% giá tour (tiêu chuẩn như trẻ em tính phí). Nếu 01 người lớn đi kèm 01 trẻ từ 1- 4 tuổi thì trẻ phải mua 50% giá tour của người lớn (được hưởng nửa suất ăn của người lớn và các dịch vụ khác bao gồm trong tour, ngủ chung giường với bố mẹ) Trẻ em từ 5-8 tuổi tính 75% giá tour (ăn suất riêng, chỗ ngồi trên xe riêng, ngủ chung giường bố mẹ) Trẻ em từ 9 tuổi trở lên tính như người lớn",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Trekking 10km phong cảnh đẹp",
+        "Bữa trưa tại bản",
+        "Hướng dẫn viên bản địa"
+      ],
+      "offersEn": [
+        "Scenic 10km day trek",
+        "Local village lunch",
+        "Native local guide"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "options": [
+          {
+            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
+            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
+            "price": "Theo lịch trình tour",
+            "priceEn": "Per itinerary"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu di chuyển đi bản bằng ô tô hoặc xe máy (2 chiều)",
+            "nameEn": "Car/Motorbike transfer surcharge to villages (round trip)",
+            "price": "150.000đ / khách",
+            "priceEn": "150,000 VND / guest"
+          },
+          {
+            "name": "Cuối tuần phụ thu tour ở khách sạn 4, 5 sao",
+            "nameEn": "Weekend surcharge for 4-star and 5-star hotels",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          },
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-motorbike-trekking-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N1Đ Xe Máy & Trekking Bản Làng (Homestay)",
+      "nameEn": "Sapa 2 Days 1 Night by Motorbike and Trekking (Homestay)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N1Đ Xe Máy & Trekking Bản Làng (Homestay) - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 1 Night by Motorbike and Trekking (Homestay) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Khám phá Sa Pa độc đáo: 1 ngày phượt xe máy qua đèo Ô Quy Hồ, bản Khoang, Tả Phìn và 1 ngày trekking ruộng bậc thang Mường Hoa.",
+      "cardLineEn": "Unique Sapa adventure: 1 day motorbike ride through O Quy Ho pass, Ban Khoang, Ta Phin, and 1 day trekking in Muong Hoa valley.",
+      "description": [
+        "Khám phá Sa Pa độc đáo: 1 ngày phượt xe máy qua đèo Ô Quy Hồ, bản Khoang, Tả Phìn và 1 ngày trekking ruộng bậc thang Mường Hoa."
+      ],
+      "descriptionEn": [
+        "( 1 day by motorbike – 1 day trekking)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06:00 – 6:30",
+          "title": "Đón khách khởi hành",
+          "text": "Our bus will pick you up at your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Along the way, you will enjoy by the beauty of the northwest mountains, or the terraced fields that sparkle in sunlight and through the fog. Our bus will stop halfway and take a rest for 30 minutes."
+        },
+        {
+          "time": "Ngày 1 · 13:00 – 13:15",
+          "title": "Đón khách khởi hành",
+          "text": "Arrive in Sapa. Transfer car will pick you up from bus station to hotel. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour. Then, Having lunch at the restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Ngày 1 · 14:00",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Ngày 1 · 17:30",
+          "title": "You come to TA VAN village. Check in procedur",
+          "text": "You come to TA VAN village. Check in procedure and rest at homestay."
+        },
+        {
+          "time": "Ngày 1 · 18:00",
+          "title": "Lớp học nấu ăn cùng gia chủ",
+          "text": "Then prepare to learn how to cooking class with the locals, You can prepare and cook dishes"
+        },
+        {
+          "time": "Ngày 1 · 18:30",
+          "title": "Ăn tối & nghỉ ngơi",
+          "text": "You enjoy dinner with dishes made by yourself"
+        },
+        {
+          "time": "Ngày 2 · 12:00",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "Enjoy lunch then rest at local restaurant in Giang Ta Chai Village."
+        },
+        {
+          "time": "Ngày 2 · 14:00",
+          "title": "Đón khách khởi hành",
+          "text": "Car pick you up back to Sapa town."
+        },
+        {
+          "time": "Ngày 2 · 15:00 - 15:30",
+          "title": "Đến Sa Pa",
+          "text": "You get on the bus back to Hanoi 22h – 22h30: Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06:00 – 6:30",
+          "title": "Our bus will pick you up at your hotel in Han",
+          "text": "Our bus will pick you up at your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Along the way, you will enjoy by the beauty of the northwest mountains, or the terraced fields that sparkle in sunlight and through the fog. Our bus will stop halfway and take a rest for 30 minutes."
+        },
+        {
+          "time": "Day 1 · 13:00 – 13:15",
+          "title": "Arrive in Sapa. Transfer car will pick you up",
+          "text": "Arrive in Sapa. Transfer car will pick you up from bus station to hotel. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour. Then, Having lunch at the restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Day 1 · 14:00",
+          "title": "Tour guide and driver pick you up, start the ",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Day 1 · 17:30",
+          "title": "You come to TA VAN village. Check in procedur",
+          "text": "You come to TA VAN village. Check in procedure and rest at homestay."
+        },
+        {
+          "time": "Day 1 · 18:00",
+          "title": "Then prepare to learn how to cooking class wi",
+          "text": "Then prepare to learn how to cooking class with the locals, You can prepare and cook dishes"
+        },
+        {
+          "time": "Day 1 · 18:30",
+          "title": "You enjoy dinner with dishes made by yourself",
+          "text": "You enjoy dinner with dishes made by yourself"
+        },
+        {
+          "time": "Day 2 · 12:00",
+          "title": "Enjoy lunch then rest at local restaurant in ",
+          "text": "Enjoy lunch then rest at local restaurant in Giang Ta Chai Village."
+        },
+        {
+          "time": "Day 2 · 14:00",
+          "title": "Car pick you up back to Sapa town.",
+          "text": "Car pick you up back to Sapa town."
+        },
+        {
+          "time": "Day 2 · 15:00 - 15:30",
+          "title": "You get on the bus back to Hanoi",
+          "text": "You get on the bus back to Hanoi 22h – 22h30: Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón khứ hồi Hà Nội – Sa Pa",
+        "01 hoặc 02 đêm nghỉ tại homestay bản Tả Van",
+        "Xe máy và tài xế bản địa suốt hành trình",
+        "Hướng dẫn viên tiếng Anh/Việt nhiệt tình",
+        "Các bữa ăn theo chương trình",
+        "Vé thắng cảnh các bản làng"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping or Cabin bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "01 night at homestay at Ta Van village",
+        "Motorcycle with driver in day 1",
+        "English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 1 breakfast, 2 lunches, 1 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT (+10%)",
+        "Bảo hiểm du lịch",
+        "Đồ uống trong các bữa ăn",
+        "Chi tiêu cá nhân và tiền tip"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Chính sách trẻ em: Dưới 5 tuổi miễn phí (ngủ chung bố mẹ); 5-8 tuổi tính 75% giá; từ 9 tuổi tính như người lớn.",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "1 ngày xe máy + 1 ngày trekking",
+        "Đèo Ô Quy Hồ & Tả Phìn",
+        "Homestay bản Tả Van"
+      ],
+      "offersEn": [
+        "1 day bike + 1 day trek",
+        "O Quy Ho Pass & Ta Phin",
+        "Ta Van Village Homestay"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe máy & homestay theo số lượng khách",
+        "baseRateEn": "All-inclusive motorbike & homestay quote based on group size",
+        "options": [
+          {
+            "name": "Xe máy và tài xế bản địa suốt hành trình",
+            "nameEn": "Motorbike with local rider throughout the tour",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Trải nghiệm lớp nấu ăn truyền thống tại homestay",
+            "nameEn": "Traditional homestay cooking class experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-motorbike-2d1n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N1Đ Phượt Xe Máy Khám Phá Các Bản (Homestay)",
+      "nameEn": "Sapa 2 Days 1 Night Motorbike Tour Across Villages (Homestay)",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N1Đ Phượt Xe Máy Khám Phá Các Bản (Homestay) - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 1 Night Motorbike Tour Across Villages (Homestay) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Trọn vẹn 2 ngày khám phá các bản làng người H'Mông, Dao Đỏ, Tày, Giáy bằng xe máy có tài xế địa phương dày dặn kinh nghiệm.",
+      "cardLineEn": "Two full days exploring H'mong, Red Dao, Tay, and Giay villages on motorbikes with experienced local riders.",
+      "description": [
+        "Trọn vẹn 2 ngày khám phá các bản làng người H'Mông, Dao Đỏ, Tày, Giáy bằng xe máy có tài xế địa phương dày dặn kinh nghiệm."
+      ],
+      "descriptionEn": [
+        "( Motorbike tour in Sapa )"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 06:15 – 6:30",
+          "title": "Đón khách khởi hành",
+          "text": "Our bus will pick you up at your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Along the way, you will enjoy by the beauty of the northwest mountains, or the terraced fields that sparkle in sunlight and through the fog. Our bus will stop halfway and take a rest for 30 minutes."
+        },
+        {
+          "time": "Ngày 1 · 13:00 – 13:15",
+          "title": "Đón khách khởi hành",
+          "text": "Arrive in Sapa. Transfer car will pick you up from bus station to hotel. Then, Having lunch at the restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Ngày 1 · 14:00",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Ngày 1 · 17:30",
+          "title": "You come to TA VAN village. Check in procedur",
+          "text": "You come to TA VAN village. Check in procedure and rest at homestay."
+        },
+        {
+          "time": "Ngày 1 · 18:00",
+          "title": "Lớp học nấu ăn cùng gia chủ",
+          "text": "Then prepare to learn how to cooking class with the locals, You can prepare and cook dishes"
+        },
+        {
+          "time": "Ngày 1 · 18:30",
+          "title": "Ăn tối & nghỉ ngơi",
+          "text": "You enjoy dinner with dishes made by yourself"
+        },
+        {
+          "time": "Ngày 2 · 07:00 – 08:00",
+          "title": "Ăn sáng tại homestay",
+          "text": "Having breakfast at Homestay"
+        },
+        {
+          "time": "Ngày 2 · 08:30",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up at homestay and start the trip to visit the villages by motorbike. Departing from TA VAN VILLAGE, first destination GIANG TA CHAI VILLAGE - located halfway up the mountain at an altitude of 1,400m. The village is surrounded by over 50 hectares of primeval forest. Go through SU PAN VILLAGE - a small village consisting of 4 small villages of Black H'mong and Red Dao people looking down at Muong Hoa valley. Continue driving about 6km, you come BAN DEN VILLAGE . There are 5 ethnic groups there: Mong, Dao, Tay, Giay and Nung Next, Arrive to BAN HO – a village far 35km from Sapa town. The road to Ban Ho commune is winding and winding. Passing by Ban Ho to Thanh Phu, continue driving 5km to NAM SAI – NAM CANG with the terrain located on the eastern slope of Hoang Lien Son range, Nam Sai inherits the magnificent picture of the mountains and the winding streams. Along with that are the terraced fields with the same characteristics of the Northwest."
+        },
+        {
+          "time": "Ngày 2 · 12:30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "Back to Ta Van village and have lunch."
+        },
+        {
+          "time": "Ngày 2 · 14:00",
+          "title": "Car take you back to Sapa town.",
+          "text": "Car take you back to Sapa town."
+        },
+        {
+          "time": "Ngày 2 · 15:30",
+          "title": "Đến Sa Pa",
+          "text": "You get on the bus back to Hanoi 22h – 22h30: Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 06:15 – 6:30",
+          "title": "Our bus will pick you up at your hotel in Han",
+          "text": "Our bus will pick you up at your hotel in Hanoi Old Quarter, then depart to Sapa, following Noi Bai – Lao Cai highway. Along the way, you will enjoy by the beauty of the northwest mountains, or the terraced fields that sparkle in sunlight and through the fog. Our bus will stop halfway and take a rest for 30 minutes."
+        },
+        {
+          "time": "Day 1 · 13:00 – 13:15",
+          "title": "Arrive in Sapa. Transfer car will pick you up",
+          "text": "Arrive in Sapa. Transfer car will pick you up from bus station to hotel. Then, Having lunch at the restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Day 1 · 14:00",
+          "title": "Tour guide and driver pick you up, start the ",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Day 1 · 17:30",
+          "title": "You come to TA VAN village. Check in procedur",
+          "text": "You come to TA VAN village. Check in procedure and rest at homestay."
+        },
+        {
+          "time": "Day 1 · 18:00",
+          "title": "Then prepare to learn how to cooking class wi",
+          "text": "Then prepare to learn how to cooking class with the locals, You can prepare and cook dishes"
+        },
+        {
+          "time": "Day 1 · 18:30",
+          "title": "You enjoy dinner with dishes made by yourself",
+          "text": "You enjoy dinner with dishes made by yourself"
+        },
+        {
+          "time": "Day 2 · 07:00 – 08:00",
+          "title": "Having breakfast at Homestay",
+          "text": "Having breakfast at Homestay"
+        },
+        {
+          "time": "Day 2 · 08:30",
+          "title": "Tour guide and driver pick you up at homestay",
+          "text": "Tour guide and driver pick you up at homestay and start the trip to visit the villages by motorbike. Departing from TA VAN VILLAGE, first destination GIANG TA CHAI VILLAGE - located halfway up the mountain at an altitude of 1,400m. The village is surrounded by over 50 hectares of primeval forest. Go through SU PAN VILLAGE - a small village consisting of 4 small villages of Black H'mong and Red Dao people looking down at Muong Hoa valley. Continue driving about 6km, you come BAN DEN VILLAGE . There are 5 ethnic groups there: Mong, Dao, Tay, Giay and Nung Next, Arrive to BAN HO – a village far 35km from Sapa town. The road to Ban Ho commune is winding and winding. Passing by Ban Ho to Thanh Phu, continue driving 5km to NAM SAI – NAM CANG with the terrain located on the eastern slope of Hoang Lien Son range, Nam Sai inherits the magnificent picture of the mountains and the winding streams. Along with that are the terraced fields with the same characteristics of the Northwest."
+        },
+        {
+          "time": "Day 2 · 12:30",
+          "title": "Back to Ta Van village and have lunch.",
+          "text": "Back to Ta Van village and have lunch."
+        },
+        {
+          "time": "Day 2 · 14:00",
+          "title": "Car take you back to Sapa town.",
+          "text": "Car take you back to Sapa town."
+        },
+        {
+          "time": "Day 2 · 15:30",
+          "title": "You get on the bus back to Hanoi",
+          "text": "You get on the bus back to Hanoi 22h – 22h30: Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón khứ hồi Hà Nội – Sa Pa",
+        "01 hoặc 02 đêm nghỉ tại homestay bản Tả Van",
+        "Xe máy và tài xế bản địa suốt hành trình",
+        "Hướng dẫn viên tiếng Anh/Việt nhiệt tình",
+        "Các bữa ăn theo chương trình",
+        "Vé thắng cảnh các bản làng"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping or Cabin bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "01 night at homestay at Ta Van village",
+        "Motorcycle with driver",
+        "English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 01 breakfast, 02 lunch, 02 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT (+10%)",
+        "Bảo hiểm du lịch",
+        "Đồ uống trong các bữa ăn",
+        "Chi tiêu cá nhân và tiền tip"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Chính sách trẻ em: Dưới 5 tuổi miễn phí (ngủ chung bố mẹ); 5-8 tuổi tính 75% giá; từ 9 tuổi tính như người lớn.",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Xe máy kèm tài xế bản địa",
+        "Đi qua hơn 10 bản làng",
+        "Lớp học nấu ăn homestay"
+      ],
+      "offersEn": [
+        "Motorbike with local rider",
+        "10+ mountain villages",
+        "Homestay cooking class"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe máy & homestay theo số lượng khách",
+        "baseRateEn": "All-inclusive motorbike & homestay quote based on group size",
+        "options": [
+          {
+            "name": "Xe máy và tài xế bản địa suốt hành trình",
+            "nameEn": "Motorbike with local rider throughout the tour",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Trải nghiệm lớp nấu ăn truyền thống tại homestay",
+            "nameEn": "Traditional homestay cooking class experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-motorbike-trekking-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Xe Máy & Trekking (Homestay)",
+      "nameEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike & Trekking (Homestay)",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Xe Máy & Trekking (Homestay) - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike & Trekking (Homestay) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Xe giường nằm đêm xuất phát từ Hà Nội, kết hợp 1 ngày phượt xe máy ngắm đại ngàn Tây Bắc và 1 ngày trekking suối Mường Hoa.",
+      "cardLineEn": "Night sleeper bus from Hanoi, combining a 1-day scenic Northwest motorbike ride and a 1-day trek along Muong Hoa stream.",
+      "description": [
+        "Xe giường nằm đêm xuất phát từ Hà Nội, kết hợp 1 ngày phượt xe máy ngắm đại ngàn Tây Bắc và 1 ngày trekking suối Mường Hoa."
+      ],
+      "descriptionEn": [
+        "( 1 day by motorbike – 1 day trekking )"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 07:00 – 07:30",
+          "title": "Ăn sáng tại homestay",
+          "text": "Having breakfast at restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Ngày 1 · 08:30",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Ngày 1 · 12:30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "You come to TA VAN village, having lunch at homestay, check in procedure and rest."
+        },
+        {
+          "time": "Ngày 1 · 14:30",
+          "title": "Tour guide drives you to SEO MY TY village. I",
+          "text": "Tour guide drives you to SEO MY TY village. It takes about 30 minutes to SEO MY TY village - located deep in the core of Hoang Lien National Park, about 25km from Sapa . In Seo My Ty – you can see the highest artificial lake in Indochina at an altitude of more than 1,600m . Then, do to Dragon Waterfall (also known as Bach Long Waterfall). Dragon Waterfall - a white waterfall lying between the cliffs."
+        },
+        {
+          "time": "Ngày 1 · 16:00",
+          "title": "Come back to homestay in TA VAN village.",
+          "text": "Come back to homestay in TA VAN village."
+        },
+        {
+          "time": "Ngày 1 · 16:45 – 17:00",
+          "title": "Lớp học nấu ăn cùng gia chủ",
+          "text": "You are in homestay, Join to cooking class with the locals."
+        },
+        {
+          "time": "Ngày 1 · 18:30",
+          "title": "Ăn tối & nghỉ ngơi",
+          "text": "You enjoy dinner with dishes made by yourself Sleeping at homestay."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 07:00 – 07:30",
+          "title": "Having breakfast at restaurant.",
+          "text": "Having breakfast at restaurant. You will store big luggages at the lounge of our hotel in Sapa town, only use small bag with important things when go tour."
+        },
+        {
+          "time": "Day 1 · 08:30",
+          "title": "Tour guide and driver pick you up, start the ",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Day 1 · 12:30",
+          "title": "You come to TA VAN village, having lunch at h",
+          "text": "You come to TA VAN village, having lunch at homestay, check in procedure and rest."
+        },
+        {
+          "time": "Day 1 · 14:30",
+          "title": "Tour guide drives you to SEO MY TY village. I",
+          "text": "Tour guide drives you to SEO MY TY village. It takes about 30 minutes to SEO MY TY village - located deep in the core of Hoang Lien National Park, about 25km from Sapa . In Seo My Ty – you can see the highest artificial lake in Indochina at an altitude of more than 1,600m . Then, do to Dragon Waterfall (also known as Bach Long Waterfall). Dragon Waterfall - a white waterfall lying between the cliffs."
+        },
+        {
+          "time": "Day 1 · 16:00",
+          "title": "Come back to homestay in TA VAN village.",
+          "text": "Come back to homestay in TA VAN village."
+        },
+        {
+          "time": "Day 1 · 16:45 – 17:00",
+          "title": "You are in homestay, Join to cooking class wi",
+          "text": "You are in homestay, Join to cooking class with the locals."
+        },
+        {
+          "time": "Day 1 · 18:30",
+          "title": "You enjoy dinner with dishes made by yourself",
+          "text": "You enjoy dinner with dishes made by yourself Sleeping at homestay."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón khứ hồi Hà Nội – Sa Pa",
+        "01 hoặc 02 đêm nghỉ tại homestay bản Tả Van",
+        "Xe máy và tài xế bản địa suốt hành trình",
+        "Hướng dẫn viên tiếng Anh/Việt nhiệt tình",
+        "Các bữa ăn theo chương trình",
+        "Vé thắng cảnh các bản làng"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping or Cabin bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on bus)",
+        "01 night at homestay at Ta Van village",
+        "Motorcycle with driver in day 1",
+        "English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 2 breakfasts, 2 lunches, 1 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT (+10%)",
+        "Bảo hiểm du lịch",
+        "Đồ uống trong các bữa ăn",
+        "Chi tiêu cá nhân và tiền tip"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Chính sách trẻ em: Dưới 5 tuổi miễn phí (ngủ chung bố mẹ); 5-8 tuổi tính 75% giá; từ 9 tuổi tính như người lớn.",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Xe giường nằm khứ hồi",
+        "1 ngày xe máy + 1 ngày trekking",
+        "Nghỉ homestay ấm cúng"
+      ],
+      "offersEn": [
+        "Round-trip sleeper bus",
+        "1 day motorbike + 1 day trek",
+        "Cozy village homestay"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe máy & homestay theo số lượng khách",
+        "baseRateEn": "All-inclusive motorbike & homestay quote based on group size",
+        "options": [
+          {
+            "name": "Xe máy và tài xế bản địa suốt hành trình",
+            "nameEn": "Motorbike with local rider throughout the tour",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Trải nghiệm lớp nấu ăn truyền thống tại homestay",
+            "nameEn": "Traditional homestay cooking class experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "sapa-motorbike-2d2n",
+      "destination": "sapa",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Phượt Xe Máy Các Bản Làng (Homestay)",
+      "nameEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike Village Adventure (Homestay)",
+      "durationLabel": "2 ngày 2 đêm",
+      "durationLabelEn": "2 days 2 nights",
+      "nightsOffset": 2,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/sapa-placeholder.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/sapa-placeholder.jpg",
+          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Phượt Xe Máy Các Bản Làng (Homestay) - The Dahlia Hanoi",
+          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike Village Adventure (Homestay) - The Dahlia Hanoi"
+        }
+      ],
+      "cardLine": "Khởi hành xe giường nằm từ Hà Nội, trải nghiệm 2 ngày cưỡi xe máy uốn lượn qua Bản Hồ, Nậm Toóng, Nậm Sài, Nậm Cang sâu trong núi.",
+      "cardLineEn": "Overnight sleeper bus from Hanoi followed by 2 thrilling days motoring through deep valleys of Ban Ho, Nam Toong, Nam Sai, and Nam Cang.",
+      "description": [
+        "Khởi hành xe giường nằm từ Hà Nội, trải nghiệm 2 ngày cưỡi xe máy uốn lượn qua Bản Hồ, Nậm Toóng, Nậm Sài, Nậm Cang sâu trong núi."
+      ],
+      "descriptionEn": [
+        "( Motorbike tour in Sapa)"
+      ],
+      "itinerary": [
+        {
+          "time": "Ngày 1 · 07:00",
+          "title": "Ăn sáng tại homestay",
+          "text": "Having breakfast at restaurant."
+        },
+        {
+          "time": "Ngày 1 · 08:30",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Ngày 1 · 12:30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "You come to TA VAN village, having lunch at homestay, check in procedure and rest."
+        },
+        {
+          "time": "Ngày 1 · 14:30",
+          "title": "Tour guide drives you to SEO MY TY village. I",
+          "text": "Tour guide drives you to SEO MY TY village. It takes about 30 minutes to SEO MY TY village - located deep in the core of Hoang Lien National Park, about 25km from Sapa . In Seo My Ty – you can see the highest artificial lake in Indochina at an altitude of more than 1,600m . Then, do to Dragon Waterfall (also known as Bach Long Waterfall). Dragon Waterfall - a white waterfall lying between the cliffs."
+        },
+        {
+          "time": "Ngày 1 · 16:00",
+          "title": "Come back to homestay in TA VAN village.",
+          "text": "Come back to homestay in TA VAN village."
+        },
+        {
+          "time": "Ngày 1 · 16:45 – 17:00",
+          "title": "Lớp học nấu ăn cùng gia chủ",
+          "text": "You are in homestay, Join to cooking class with the locals."
+        },
+        {
+          "time": "Ngày 1 · 18:30",
+          "title": "Ăn tối & nghỉ ngơi",
+          "text": "You enjoy dinner with dishes made by yourself Sleeping at homestay."
+        },
+        {
+          "time": "Ngày 2 · 07:00 – 08:00",
+          "title": "Ăn sáng tại homestay",
+          "text": "Having breakfast at Homestay"
+        },
+        {
+          "time": "Ngày 2 · 08:30",
+          "title": "Đón khách khởi hành",
+          "text": "Tour guide and driver pick you up at homestay and start the trip to visit the villages by motorbike. Departing from TA VAN VILLAGE, first destination GIANG TA CHAI VILLAGE - located halfway up the mountain at an altitude of 1,400m. The village is surrounded by over 50 hectares of primeval forest. Go through SU PAN VILLAGE - a small village consisting of 4 small villages of Black H'mong and Red Dao people looking down at Muong Hoa valley. Continue driving about 6km, you come BAN DEN VILLAGE . There are 5 ethnic groups there: Mong, Dao, Tay, Giay and Nung Next, Arrive to BAN HO – a village far 35km from Sapa town. The road to Ban Ho commune is winding and winding. Passing by Ban Ho to Thanh Phu, continue driving 5km to NAM SAI – NAM CANG with the terrain located on the eastern slope of Hoang Lien Son range, Nam Sai inherits the magnificent picture of the mountains and the winding streams. Along with that are the terraced fields with the same characteristics of the Northwest."
+        },
+        {
+          "time": "Ngày 2 · 12:30",
+          "title": "Ăn trưa tại nhà hàng",
+          "text": "Back to Ta Van village and have lunch."
+        },
+        {
+          "time": "Ngày 2 · 14:00",
+          "title": "Car take you back to Sapa town.",
+          "text": "Car take you back to Sapa town."
+        },
+        {
+          "time": "Ngày 2 · 15:30",
+          "title": "Lên xe trở về Hà Nội",
+          "text": "You get on the bus back to Hanoi"
+        },
+        {
+          "time": "Ngày 2 · 22:00 – 22:30",
+          "title": "Đến Sa Pa",
+          "text": "Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "Day 1 · 07:00",
+          "title": "Having breakfast at restaurant.",
+          "text": "Having breakfast at restaurant."
+        },
+        {
+          "time": "Day 1 · 08:30",
+          "title": "Tour guide and driver pick you up, start the ",
+          "text": "Tour guide and driver pick you up, start the trip to visit the villages by motorbike. Departing from Sapa town, Driving through CAT CAT village and SIN CHAI villge . It’s about 8km from Sapa town, it is the living area of H'mong people . On the way, you can enjoy the panoramic view of Hoang Lien Son National Park and Muong Hoa Valley. Come to O QUY HO village , then continue driving through to BAN KHOANG village where the Black H'mong people and the Red Dao people live. You can see the small roofs of the people in this village. The next destination, you come TA PHIN village - about 20 km from Sapa town. Visiting Ta Phin Ancient monastery. Continue the journey, go through SA SENG village - Y LINH HO village - LAO CHAI village"
+        },
+        {
+          "time": "Day 1 · 12:30",
+          "title": "You come to TA VAN village, having lunch at h",
+          "text": "You come to TA VAN village, having lunch at homestay, check in procedure and rest."
+        },
+        {
+          "time": "Day 1 · 14:30",
+          "title": "Tour guide drives you to SEO MY TY village. I",
+          "text": "Tour guide drives you to SEO MY TY village. It takes about 30 minutes to SEO MY TY village - located deep in the core of Hoang Lien National Park, about 25km from Sapa . In Seo My Ty – you can see the highest artificial lake in Indochina at an altitude of more than 1,600m . Then, do to Dragon Waterfall (also known as Bach Long Waterfall). Dragon Waterfall - a white waterfall lying between the cliffs."
+        },
+        {
+          "time": "Day 1 · 16:00",
+          "title": "Come back to homestay in TA VAN village.",
+          "text": "Come back to homestay in TA VAN village."
+        },
+        {
+          "time": "Day 1 · 16:45 – 17:00",
+          "title": "You are in homestay, Join to cooking class wi",
+          "text": "You are in homestay, Join to cooking class with the locals."
+        },
+        {
+          "time": "Day 1 · 18:30",
+          "title": "You enjoy dinner with dishes made by yourself",
+          "text": "You enjoy dinner with dishes made by yourself Sleeping at homestay."
+        },
+        {
+          "time": "Day 2 · 07:00 – 08:00",
+          "title": "Having breakfast at Homestay",
+          "text": "Having breakfast at Homestay"
+        },
+        {
+          "time": "Day 2 · 08:30",
+          "title": "Tour guide and driver pick you up at homestay",
+          "text": "Tour guide and driver pick you up at homestay and start the trip to visit the villages by motorbike. Departing from TA VAN VILLAGE, first destination GIANG TA CHAI VILLAGE - located halfway up the mountain at an altitude of 1,400m. The village is surrounded by over 50 hectares of primeval forest. Go through SU PAN VILLAGE - a small village consisting of 4 small villages of Black H'mong and Red Dao people looking down at Muong Hoa valley. Continue driving about 6km, you come BAN DEN VILLAGE . There are 5 ethnic groups there: Mong, Dao, Tay, Giay and Nung Next, Arrive to BAN HO – a village far 35km from Sapa town. The road to Ban Ho commune is winding and winding. Passing by Ban Ho to Thanh Phu, continue driving 5km to NAM SAI – NAM CANG with the terrain located on the eastern slope of Hoang Lien Son range, Nam Sai inherits the magnificent picture of the mountains and the winding streams. Along with that are the terraced fields with the same characteristics of the Northwest."
+        },
+        {
+          "time": "Day 2 · 12:30",
+          "title": "Back to Ta Van village and have lunch.",
+          "text": "Back to Ta Van village and have lunch."
+        },
+        {
+          "time": "Day 2 · 14:00",
+          "title": "Car take you back to Sapa town.",
+          "text": "Car take you back to Sapa town."
+        },
+        {
+          "time": "Day 2 · 15:30",
+          "title": "You get on the bus back to Hanoi",
+          "text": "You get on the bus back to Hanoi"
+        },
+        {
+          "time": "Day 2 · 22:00 – 22:30",
+          "title": "Arrive in Hanoi. Bus drop you off at Tran Qua",
+          "text": "Arrive in Hanoi. Bus drop you off at Tran Quang Khai/ Ly Thai To street. End tour."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón khứ hồi Hà Nội – Sa Pa",
+        "01 hoặc 02 đêm nghỉ tại homestay bản Tả Van",
+        "Xe máy và tài xế bản địa suốt hành trình",
+        "Hướng dẫn viên tiếng Anh/Việt nhiệt tình",
+        "Các bữa ăn theo chương trình",
+        "Vé thắng cảnh các bản làng"
+      ],
+      "servicesIncludedEn": [
+        "Sleeping or Cabin bus transfer Hanoi – Sapa – Hanoi ( not have tour guide on the bus)",
+        "01 night at homestay at Ta Van village",
+        "Motorcycle with driver",
+        "English speaking guide during the tour in Sapa (enthusiastic, experienced)",
+        "Meals as mentioned on itinerary: 2 breakfasts, 2 lunches, 1 dinner",
+        "Entrance fees"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT (+10%)",
+        "Bảo hiểm du lịch",
+        "Đồ uống trong các bữa ăn",
+        "Chi tiêu cá nhân và tiền tip"
+      ],
+      "servicesExcludedEn": [
+        "VAT (+10%)",
+        "Insurance, Visas",
+        "Other personal expenses (tip, drinks with meals,…)"
+      ],
+      "serviceNote": "Chính sách trẻ em: Dưới 5 tuổi miễn phí (ngủ chung bố mẹ); 5-8 tuổi tính 75% giá; từ 9 tuổi tính như người lớn.",
+      "serviceNoteEn": "Children under 5 years are free (sharing bed with parents) Children 5-8 years old charged 75% of price Children 9 years old charged as adults.",
+      "offers": [
+        "Xe giường nằm đêm",
+        "Phượt xe máy vùng sâu Tây Bắc",
+        "Nghỉ đêm homestay Tả Van"
+      ],
+      "offersEn": [
+        "Night sleeper bus",
+        "Deep Northwest motorbike ride",
+        "Ta Van homestay stay"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe máy & homestay theo số lượng khách",
+        "baseRateEn": "All-inclusive motorbike & homestay quote based on group size",
+        "options": [
+          {
+            "name": "Xe máy và tài xế bản địa suốt hành trình",
+            "nameEn": "Motorbike with local rider throughout the tour",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Trải nghiệm lớp nấu ăn truyền thống tại homestay",
+            "nameEn": "Traditional homestay cooking class experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Thuế VAT",
+            "nameEn": "Value Added Tax (VAT)",
+            "price": "+10%",
+            "priceEn": "+10%"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung giường bố mẹ; 02 người lớn kèm 01 trẻ miễn phí, từ trẻ thứ 2 tính 75%)",
+            "descEn": "Free (sharing bed with parents; 2 adults accompanied by 1 child; 2nd child charged 75%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, ghế xe riêng, ngủ chung giường bố mẹ)",
+            "descEn": "75% of tour price (separate meal, seat on bus, sharing bed with parents)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged as adults (100%)"
+          }
+        ]
+      },
+      "operatorId": "may"
+    },
+    {
+      "id": "ha-long-cozy-bay-grand-2d1n",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 4,
+      "name": "Du Thuyền 4★ Cozy Bay Grand – Ngủ Đêm Vịnh Hạ Long 2N1Đ",
+      "nameEn": "Cozy Bay Grand 4★ Cruise – Halong Bay Overnight 2 Days 1 Night",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
+          "alt": "Du thuyền Cozy Bay Grand 4 sao",
+          "altEn": "Cozy Bay Grand 4-star Cruise"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Sundeck_1.jpg",
+          "alt": "Sundeck ngắm hoàng hôn vịnh Hạ Long",
+          "altEn": "Sundeck sunset view Halong Bay"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floordeluxe-double-balcony/Double_T2_Balcony_1.jpg",
+          "alt": "Cabin Deluxe Balcony có ban công riêng",
+          "altEn": "Deluxe Balcony private cabin"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/cabin-2nd-floorpremium-double-or-twin-terrace/Premium_Terrace_1.jpg",
+          "alt": "Cabin Premium Terrace sân hiên rộng",
+          "altEn": "Premium Terrace spacious cabin"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/restaurant/Restaurant_1.jpg",
+          "alt": "Nhà hàng sang trọng trên du thuyền",
+          "altEn": "Cruise dining restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/activities/Cooking_Class_2.JPG",
+          "alt": "Lớp học làm nem cuốn truyền thống",
+          "altEn": "Traditional cooking class"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-grand/activities/Taichi_2.JPG",
+          "alt": "Thái Cực Quyền đón bình minh trên sundeck",
+          "altEn": "Morning Taichi on sundeck"
+        }
+      ],
+      "cardLine": "Trải nghiệm kỳ nghỉ 2N1Đ đẳng cấp trên du thuyền Cozy Bay Grand 4 sao: phòng nghỉ sang trọng ngắm vịnh, buffet hải sản, kayak Hang Luồn, đảo Titov, lớp học nấu ăn và câu mực đêm.",
+      "cardLineEn": "A memorable 2D1N overnight voyage on Cozy Bay Grand 4-star cruise: luxury bay-view cabins, seafood buffet, Luon Cave kayaking, Titov Island, cooking class, and night squid fishing.",
+      "description": [
+        "DU THUYỀN COZY BAY GRAND CRUISE 4 SAO - 2 NGÀY 1 ĐÊM",
+        "Đảo Titop - Hang Luồn - Hang Sửng Sốt Chèo kayak/ Thuyền nan – Câu mực đêm – Tiệc hoàng hôn – Lớp học nấu ăn",
+        "Trải nghiệm vẻ đẹp của Vịnh Hạ Long trên du thuyền Cozy Bay Grand 4★, nơi thiết kế tinh tế hòa quyện cùng sự yên bình của thiên nhiên. Du thuyền duyên dáng mang đến không gian sang trọng nhưng ấm cúng, lý tưởng cho những du khách tìm kiếm sự thoải mái và trải nghiệm chân thực trên vịnh. Trong hành trình lướt qua những dãy núi đá vôi mang tính biểu tượng, bạn có thể tận hưởng những khoảnh khắc thư giãn, khung cảnh ngoạn mục và dịch vụ hiếu khách. Cozy Bay Grand hứa hẹn mang đến một kỳ nghỉ đáng nhớ giữa một trong những điểm đến tuyệt đẹp nhất thế giới."
+      ],
+      "descriptionEn": [
+        "COZY BAY GRAND 4* - 2 DAYS 1 NIGHT",
+        "Titov Island - Luon Cave - Sung Sot Cave Kayaking/Bamboo boat - Squid Fishing - Sunset Party - Cooking Class",
+        "Experience the beauty of Ha Long Bay aboard the Cozy Bay Grand 4, where elegant design blends harmoniously with the tranquility of nature. The charming cruise offers a luxurious yet cozy atmosphere, ideal for travelers seeking comfort and authentic experiences on the bay. As you sail past the iconic limestone karsts, you can enjoy relaxing moments, breathtaking scenery, and warm hospitality. Cozy Bay Grand promises a memorable getaway in one of the world’s most stunning destinations.",
+        "18:00 - Sunset Party and Cooking Class. Enjoy wine and fresh fruits while taking part in the cooking demonstration. Our chef will show how to make Vietnamese fresh spring rolls, and you will have the chance to taste the dish you prepared yourself.",
+        "Enjoy a romantic dinner served at the restaurant while admiring the sparkling beauty of Ha Long Bay at night.",
+        "20:30 - After dinner: After dinner, guests can relax on the sundeck and enjoy the peaceful night scenery of the bay. You may also join several complimentary evening activities such as watching the traditional cultural fashion show “Heritage Footsteps”, taking souvenir photos, night squid fishing, singing Karaoke, playing board games, and admiring the tranquil night view of the bay.",
+        "Alternatively, guests can enjoy additional paid services such as massage treatments or drinks at the Sky Bar.",
+        "Note: Music will be turned off after 22:30 to maintain a quiet atmosphere on the cruise",
+        "Overnight on Cozy Bay Grand",
+        "DAY 2: HALONG BAY – SUNG SOT CAVE - KAYAKING - HANOI (B/L) Morning activities:",
+        "06:00 - Wake up early to witness the peaceful sunrise over Ha Long Bay.",
+        "06:15 - Refresh your body with a relaxing Tai Chi session on the sundeck.",
+        "06:45 - Enjoy morning tea/coffee and a light buffet breakfast with scenic bay views.",
+        "07:40 - Visit Sung Sot Cave (Surprising Cave), the largest and most famous cave in Halong Bay, renowned for its impressive stalactites and stalagmites.",
+        "09:00 - Return to the cruise, freshen up, and pack your luggage.",
+        "09:30 – Check-out of the room.",
+        "Please put your luggage outside your cabin and leave the room key at the reception desk. Our staff will transfer your luggage to the waiting area.",
+        "10:30 - Enjoy your early Buffet lunch onboard while sailing back to the harbor.",
+        "11:45 - Disembark at Tuan Chau Harbor. Farewell crew members. Thank you for using the service of Cozy Bay Grand 4*.",
+        "We look forward to welcoming you again on our cruise.",
+        "12:15 - Transfer back to Hanoi via expressway. 14:30 - Short stop on the way (20-30 minutes). 16:00 - Arrive at your hotel in Hanoi Old Quarter. The trip ends.",
+        "Good bye and see you on your next trips!"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)",
+          "title": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)",
+          "text": "NGÀY 1: HÀ NỘI - VỊNH HẠ LONG - ĐẢO TITOP - HANG LUỒN (Ăn trưa/tối)"
+        },
+        {
+          "time": "07:45-8:30",
+          "title": "Hướng dẫn viên Cozy Bay Grand đón quý khách tại khách sạn trong khu phố cổ Hà Nội hoặc Nhà Hát Lớn 08:45 - Khởi hành đi Hạ Long theo đường cao tốc hiện đại. 10:15 - Dừng nghỉ giữa đường khoảng 20–30 phút.",
+          "text": "Hướng dẫn viên Cozy Bay Grand đón quý khách tại khách sạn trong khu phố cổ Hà Nội hoặc Nhà Hát Lớn 08:45 - Khởi hành đi Hạ Long theo đường cao tốc hiện đại. 10:15 - Dừng nghỉ giữa đường khoảng 20–30 phút."
+        },
+        {
+          "time": "11:45 - 12:00",
+          "title": "Đến cảng Tuần Châu, Quý khách làm thủ tục check-in tại sảnh chờ du thuyền Cozy Bay Grand",
+          "text": "Đến cảng Tuần Châu, Quý khách làm thủ tục check-in tại sảnh chờ du thuyền Cozy Bay Grand"
+        },
+        {
+          "time": "12:30",
+          "title": "Chào mừng lên du thuyền! Quý khách thưởng thức đồ uống chào mừng, nghe phổ biến lịch trình và nhận phòng.",
+          "text": "Chào mừng lên du thuyền! Quý khách thưởng thức đồ uống chào mừng, nghe phổ biến lịch trình và nhận phòng."
+        },
+        {
+          "time": "13:00",
+          "title": "Quý khách thưởng thức bữa trưa buffet trong khi du thuyền nhẹ nhàng lướt qua những dãy núi đá vôi hùng vĩ của Vịnh Hạ Long.",
+          "text": "Quý khách thưởng thức bữa trưa buffet trong khi du thuyền nhẹ nhàng lướt qua những dãy núi đá vôi hùng vĩ của Vịnh Hạ Long. Hoạt động buổi chiều:"
+        },
+        {
+          "time": "14:30",
+          "title": "Quý khách tham quan Đảo Titop:",
+          "text": "Quý khách tham quan Đảo Titop: Leo lên đỉnh đảo ngắm toàn cảnh Vịnh Hạ Long từ trên cao Hoặc thư giãn và tắm biển tại bãi cát trắng mịn"
+        },
+        {
+          "time": "16:00",
+          "title": "Quý khách tham quan Hang Luồn bằng thuyền nan hoặc chèo kayak, khám phá vùng nước xanh biếc được bao quanh bởi những vách núi đá kỳ vĩ.",
+          "text": "Quý khách tham quan Hang Luồn bằng thuyền nan hoặc chèo kayak, khám phá vùng nước xanh biếc được bao quanh bởi những vách núi đá kỳ vĩ."
+        },
+        {
+          "time": "17:30",
+          "title": "Quý khách trở lại du thuyền, nghỉ ngơi trên boong tắm nắng, ngắm hoàng hôn và lưu lại những khoảnh khắc tuyệt vời.",
+          "text": "Quý khách trở lại du thuyền, nghỉ ngơi trên boong tắm nắng, ngắm hoàng hôn và lưu lại những khoảnh khắc tuyệt vời."
+        },
+        {
+          "time": "17.30",
+          "title": "18.30 Giờ khuyến mãi - MUA 2 ĐỒ UỐNG TẶNG 1 ĐỒ UỐNG",
+          "text": "18.30 Giờ khuyến mãi - MUA 2 ĐỒ UỐNG TẶNG 1 ĐỒ UỐNG Buổi tối đáng nhớ"
+        },
+        {
+          "time": "18:00",
+          "title": "Quý khách tham gia Tiệc hoàng hôn Sunset Party & Lớp học nấu ăn. Quý khách thưởng thức rượu vang, hoa quả và tham gia lớp học nấu ăn. Đầu bếp sẽ hướng dẫn Quý Khách làm món nem cuốn Việt Nam, và quý khách có thể thưởng thức thành quả của chính mình.",
+          "text": "Quý khách tham gia Tiệc hoàng hôn Sunset Party & Lớp học nấu ăn. Quý khách thưởng thức rượu vang, hoa quả và tham gia lớp học nấu ăn. Đầu bếp sẽ hướng dẫn Quý Khách làm món nem cuốn Việt Nam, và quý khách có thể thưởng thức thành quả của chính mình."
+        },
+        {
+          "time": "19:00",
+          "title": "Bữa tối Quý khách thưởng thức Bữa tối lãng mạn được phục vụ tại nhà hàng với khung cảnh Vịnh Hạ Long lung linh về đêm.",
+          "text": "Bữa tối Quý khách thưởng thức Bữa tối lãng mạn được phục vụ tại nhà hàng với khung cảnh Vịnh Hạ Long lung linh về đêm."
+        },
+        {
+          "time": "20:30",
+          "title": "Sau ăn tối:",
+          "text": "Sau ăn tối: Sau khi ăn tối xong, Quý khách sẽ tận hưởng khung cảnh yên bình của Vịnh vào ban đêm trên boong tàu. Quý khách cũng có thể tham gia các hoạt động không tính phí vào buổi tối như xem trình diễn thời trang phong tục truyền thống “Bước chân di sản” và chụp hình kỷ niệm, câu mực đêm, hát Karaoke, chơi Boardgame chiêm ngưỡng khung cảnh yên bình của Vịnh Hạ Long vào ban đêm. Hoặc tham gia các hoạt động có tính phí như mát-xa, thưởng thức đồ uống tại Sky Bar. Lưu ý: Âm nhạc sẽ tắt sau 22:30 để giữ yên tĩnh cho du khách nghỉ ngơi trên tàu Nghỉ đêm trên du thuyền Cozy Bay Grand"
+        },
+        {
+          "time": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa)",
+          "title": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa)",
+          "text": "NGÀY 2: VỊNH HẠ LONG - HANG SỬNG SỐT - HÀ NỘI (Ăn sáng/trưa) Hoạt động buổi sáng:"
+        },
+        {
+          "time": "06:00",
+          "title": "Quý khách dậy sớm ngắm bình minh tuyệt đẹp trên Vịnh Hạ Long.",
+          "text": "Quý khách dậy sớm ngắm bình minh tuyệt đẹp trên Vịnh Hạ Long."
+        },
+        {
+          "time": "06:15",
+          "title": "Bắt đầu ngày mới với bài tập Thái Cực Quyền nhẹ nhàng trên boong tàu.",
+          "text": "Bắt đầu ngày mới với bài tập Thái Cực Quyền nhẹ nhàng trên boong tàu."
+        },
+        {
+          "time": "06:45",
+          "title": "Quý khách thưởng thức trà/cà phê buổi sáng và ăn bữa sáng buffet trong không gian thiên nhiên yên bình.",
+          "text": "Quý khách thưởng thức trà/cà phê buổi sáng và ăn bữa sáng buffet trong không gian thiên nhiên yên bình."
+        },
+        {
+          "time": "07:40",
+          "title": "Quý khách tham quan Hang Sửng sốt, hang động lớn và nổi tiếng nhất Vịnh Hạ Long với hệ thống thạch nhũ tuyệt đẹp.",
+          "text": "Quý khách tham quan Hang Sửng sốt, hang động lớn và nổi tiếng nhất Vịnh Hạ Long với hệ thống thạch nhũ tuyệt đẹp."
+        },
+        {
+          "time": "09:00",
+          "title": "Quý khách trở lại du thuyền, nghỉ ngơi và chuẩn bị hành lý.",
+          "text": "Quý khách trở lại du thuyền, nghỉ ngơi và chuẩn bị hành lý."
+        },
+        {
+          "time": "10:00",
+          "title": "Quý khách làm thủ tục trả phòng.",
+          "text": "Quý khách làm thủ tục trả phòng. Quý khách vui lòng để hành lý bên ngoài cửa phòng và trả lại chìa khóa phòng tại quầy lễ tân. Nhân viên của chúng tôi sẽ chuyển hành lý của bạn đến khu vực chờ."
+        },
+        {
+          "time": "10:30",
+          "title": "Quý khách thưởng thức bữa trưa sớm Buffet trên du thuyền.",
+          "text": "Quý khách thưởng thức bữa trưa sớm Buffet trên du thuyền."
+        },
+        {
+          "time": "11:45",
+          "title": "Tàu Cập bến Tuần Châu, Quý khách chia tay thủy thủ đoàn.",
+          "text": "Tàu Cập bến Tuần Châu, Quý khách chia tay thủy thủ đoàn. Cảm ơn Quý khách đã sử dụng dịch vụ của Cozy Bay Grand 4★. Chúng tôi rất mong được chào đón Quý khách quay trở lại trên du thuyền."
+        },
+        {
+          "time": "12:15",
+          "title": "Xe đưa quý khách trở về Hà Nội theo đường cao tốc. 14:30 - Quý khách Dừng nghỉ giữa đường khoảng 20-30 phút. 16:00 – Xe xề đến khách sạn tại phố cổ Hà Nội. Kết thúc chuyến đi!",
+          "text": "Xe đưa quý khách trở về Hà Nội theo đường cao tốc. 14:30 - Quý khách Dừng nghỉ giữa đường khoảng 20-30 phút. 16:00 – Xe xề đến khách sạn tại phố cổ Hà Nội. Kết thúc chuyến đi! Tạm biệt và hẹn gặp lại Quý khách trong những chuyến đi tiếp theo!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)",
+          "title": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)",
+          "text": "DAY 1: HANOI - HALONG BAY - TITOV ISLAND – LUON CAVE (L/D)"
+        },
+        {
+          "time": "07:45 - 08:30",
+          "title": "Our friendly Cozy Bay Grand tour guide picks you up from your hotel in Hanoi Old Quarter or Hanoi Opera House 08:45 - Departure to Ha Long Bay via the modern expressway. 10:15 - Short break (20–30 minutes) to refresh.",
+          "text": "Our friendly Cozy Bay Grand tour guide picks you up from your hotel in Hanoi Old Quarter or Hanoi Opera House 08:45 - Departure to Ha Long Bay via the modern expressway. 10:15 - Short break (20–30 minutes) to refresh."
+        },
+        {
+          "time": "11:45 - 12:00",
+          "title": "Arrive at Tuan Chau Harbor, check-in at Cozy Bay Grand Cruise Lounge. 12:30 - Welcome aboard! Enjoy a refreshing welcome drink, cruise briefing, and cabin check-in.",
+          "text": "Arrive at Tuan Chau Harbor, check-in at Cozy Bay Grand Cruise Lounge. 12:30 - Welcome aboard! Enjoy a refreshing welcome drink, cruise briefing, and cabin check-in."
+        },
+        {
+          "time": "13:00",
+          "title": "Delight in a Buffet lunch while cruising through the stunning limestone landscapes of Ha Long Bay.",
+          "text": "Delight in a Buffet lunch while cruising through the stunning limestone landscapes of Ha Long Bay. Afternoon Adventures"
+        },
+        {
+          "time": "14:30",
+          "title": "Visit Titov Island:",
+          "text": "Visit Titov Island: Hike to the summit for panoramic views Or relax and swim on the sandy beach"
+        },
+        {
+          "time": "16:00",
+          "title": "Visit Luon Cave",
+          "text": "Visit Luon Cave Visit Luon Cave by bamboo boat or kayak, gliding through calm waters surrounded by majestic cliffs."
+        },
+        {
+          "time": "17:30",
+          "title": "Return to the cruise and unwind on the sundeck with breathtaking sunset views.",
+          "text": "Return to the cruise and unwind on the sundeck with breathtaking sunset views."
+        },
+        {
+          "time": "17:30 - 18:30",
+          "title": "Happy Hour – BUY 2 DRINKS, GET 1 FREE",
+          "text": "Happy Hour – BUY 2 DRINKS, GET 1 FREE"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đời mới đưa đón khứ hồi Hà Nội – Hạ Long – Hà Nội ✔ Vé tham quan: Hang Sửng Sốt, Đảo Titop, Hang Luồn ✔ Hướng dẫn viên tiếng Anh chuyên nghiệp ✔ Bảo hiểm trên du thuyền ✔ Kayak/thuyền nan & dụng cụ câu mực ✔ Các bữa ăn: 2 bữa buffet trưa + 1 bữa tối + 1 buffet sáng",
+        "Chương trình giờ vàng: Mua 2 đồ uống tặng 1 ✔ 1 đêm nghỉ trên du thuyền Cozy Bay Grand",
+        "Tập Thái Cực Quyền buổi sáng ✔ Tiệc hoàng hôn & lớp học nấu ăn ✔ Trà, cà phê buổi sáng ✔ Đồ uống chào mừng ✔ Nước suối miễn phí trên xe 1 chai/người và du thuyền 1 chai/người"
+      ],
+      "servicesIncludedEn": [
+        "Round-trip transfer Hanoi - Ha Long - Hanoi by modern Shuttle Bus Entrance fees: Sung Sot Cave & Titov Island English-speaking tour guide Onboard insurance Kayaking/Bamboo boat & fishing equipment Meals onboard: 2 buffet lunches + 1 dinner + 1 buffet breakfast",
+        "Happy hour: Buy 2 get 1 Free 1-night stay on Cozy Bay Grand private room with full A/C",
+        "Morning Tai-chi Exercise Sunset Party & Cooking Class Tea, coffee at breakfast Welcome drink Complimentary 1 bottled water/person on bus & 1 bottled water/person on cruise"
+      ],
+      "servicesExcluded": [
+        "Đồ uống trên tàu",
+        "Tip cho hướng dẫn viên, thủy thủ đoàn, lái xe",
+        "Chi phí cá nhân",
+        "Dịch vụ không đề cập trong mục bao gồm"
+      ],
+      "servicesExcludedEn": [
+        "Beverages & personal drinks",
+        "Tips for guide, crew, or driver",
+        "Personal expenses",
+        "Services not clearly mentioned",
+        "Holiday surcharge (if applicable)",
+        "HOLIDAY SURCHARGES",
+        "An additional VND 400,000 per person applies for departures on December 24 and December 31.",
+        "An additional VND 300,000 per person applies during the Lunar New Year holiday (Lunar December 30 and Lunar January 1–3).",
+        "An additional VND 200,000 per person applies for departures on April 30, May 1, and September 2."
+      ],
+      "serviceNote": "Có thực đơn món Ấn Độ (Indian Menu) và thực đơn ăn chay (Vegetarian Menu) miễn phí khi đăng ký trước.",
+      "serviceNoteEn": "Indian Menu and Vegetarian Menu available complimentary upon advance request.",
+      "offers": [
+        "Phòng ngủ sang trọng ngắm vịnh",
+        "Buffet hải sản + Menu Ấn Độ",
+        "Chèo Kayak & Câu mực đêm"
+      ],
+      "offersEn": [
+        "Panoramic bay-view cabins",
+        "Seafood buffet & Indian menu",
+        "Kayaking & night squid fishing"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá theo hạng Cabin (Deluxe T1, Balcony T2, Terrace)",
+        "baseRateEn": "Custom quote based on Cabin tier (Deluxe, Balcony, Terrace)",
+        "options": [
+          {
+            "name": "Hạng phòng Deluxe Double / Twin (Tầng 1)",
+            "nameEn": "Deluxe Double / Twin Cabin (1st Floor)",
+            "price": "Tiêu chuẩn",
+            "priceEn": "Standard"
+          },
+          {
+            "name": "Hạng phòng Deluxe Balcony (Tầng 2 có ban công riêng)",
+            "nameEn": "Deluxe Balcony Cabin (2nd Floor private balcony)",
+            "price": "Theo yêu cầu",
+            "priceEn": "On request"
+          },
+          {
+            "name": "Hạng phòng Premium Terrace (Tầng 2 sân hiên ngắm vịnh)",
+            "nameEn": "Premium Terrace Cabin (2nd Floor private terrace)",
+            "price": "Theo yêu cầu",
+            "priceEn": "On request"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ / Ăn chay",
+            "nameEn": "Indian Set Menu or Vegetarian option",
+            "price": "Miễn phí chọn trước",
+            "priceEn": "Free upon request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu đêm Giáng sinh (24/12) & Đón năm mới (31/12)",
+            "nameEn": "Christmas Eve (Dec 24) & New Year's Eve (Dec 31) surcharge",
+            "price": "400.000đ / khách",
+            "priceEn": "400,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu dịp Tết Nguyên Đán",
+            "nameEn": "Lunar New Year surcharge",
+            "price": "300.000đ / khách",
+            "priceEn": "300,000 VND / guest"
+          },
+          {
+            "name": "Phụ thu ngày lễ (30/4, 1/5, 2/9)",
+            "nameEn": "National holidays (Apr 30, May 1, Sep 2)",
+            "price": "200.000đ / khách",
+            "priceEn": "200,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngủ chung bố mẹ; tối đa 1 trẻ/2 người lớn; trẻ thứ 2 tính 50%)",
+            "descEn": "Free (sharing bed with parents; max 1 child/2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá người lớn (ngủ chung bố mẹ, hưởng tiêu chuẩn ăn riêng)",
+            "descEn": "75% of adult fare (sharing bed with parents, separate meal)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-cozy-bay-premium-1d",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Cozy Bay Premium – Vịnh Hạ Long Tuyến 2 (1 Ngày)",
+      "nameEn": "Cozy Bay Premium 5★ Cruise – Halong Bay Route 2 (1 Day)",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_1.jpg",
+          "alt": "Siêu du thuyền Cozy Bay Premium 5 sao",
+          "altEn": "Cozy Bay Premium 5-star yacht"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_3.jpg",
+          "alt": "Sundeck tiệc hoàng hôn lãng mạn",
+          "altEn": "Sundeck sunset party"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_6.jpg",
+          "alt": "Nhà hàng buffet sang trọng trên tàu",
+          "altEn": "Luxury dining restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/buffet-lunch/HALONG_DAYTRIP_menu.jpg",
+          "alt": "Thực đơn Buffet hải sản Hạ Long",
+          "altEn": "Halong seafood buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-cozy-bay-premium/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ riêng biệt",
+          "altEn": "Authentic Indian set menu"
+        }
+      ],
+      "video": "img/tours/halong-cozy-bay-premium/video/Cozy_Bay_Cruise_45mb.mp4",
+      "cardLine": "Hành trình 1 ngày trên siêu du thuyền Cozy Bay Premium 5 sao: khám phá Hang Sửng Sốt, chèo kayak Hang Luồn, tắm biển đảo Titov, buffet hải sản và tiệc hoàng hôn trên sundeck.",
+      "cardLineEn": "A full-day luxury experience aboard the 5-star Cozy Bay Premium Cruise: explore Sung Sot Cave, kayak Luon Cave, Titov Island beach, seafood buffet, and sunset party.",
+      "description": [
+        "DU THUYỀN 5-SAO COZY BAY PREMIUM CRUISE",
+        "THĂM QUAN TUYẾN 2: HANG SỬNG SỐT - ĐẢO TITOV - CHÈO KAYAK HOẶC ĐỎ TAY TẠI HANG LUỒN",
+        "Phương tiện di chuyển: Xe thường (30-32 chỗ) / Xe Limousine (17-22 chỗ)",
+        "Từ trên cao nhìn xuống, Vịnh Hạ Long như một bức tranh khổng lồ vô cùng sống động. Ði giữa Hạ Long, ta ngỡ như lạc vào một thế giới cổ tích bị hoá đá, đảo thì giống hình một người đang đứng hướng về đất liền (hòn Ðầu Người), đảo thì giống như một con rồng đang bay lượn trên mặt nước (hòn Rồng), đảo thì giống như một ông lão đang ngồi câu cá (hòn Ông Lã Vọng), hòn Cánh Buồm, hòn Cặp Gà, hòn Lư Hương..."
+      ],
+      "descriptionEn": [
+        "COZY BAY PREMIUM HALONG BAY 5-STAR DAY CRUISE",
+        "ROUTE 2: SURPRISING CAVE - TITOV ISLAND - KAYAKING/BAMBOO BOAT IN LUON CAVE",
+        "Duration: 1 Day | Transportation: Limousine Bus/Shuttle Bus"
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00 – 11:15",
+          "title": "LÊN DU THUYỀN",
+          "text": "LÊN DU THUYỀN Đến Cảng Tuần Châu và làm thủ tục lên du thuyền. Chào mừng quý khách lên tàu."
+        },
+        {
+          "time": "11:30",
+          "title": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN",
+          "text": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN Quý khách dùng bữa trưa buffet trên tàu trong khi bắt đầu hành trình tham quan kéo dài khoảng 6,5 giờ theo tuyến tham quan số 2 – nổi tiếng với những cảnh quan ngoạn mục, các đảo đá và núi đá vôi mang nhiều hình thù độc đáo được người dân địa phương đặt tên theo trí tưởng tượng. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ với lựa chọn ăn chay và không chay (có thịt). Khách đăng ký thực đơn bữa trưa kiểu Ấn Độ sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "THAM QUAN HANG SỬNG SỐT",
+          "text": "THAM QUAN HANG SỬNG SỐT Khám phá Hang Sửng Sốt – một trong những hang động đẹp nhất Vịnh Hạ Long với vô số nhũ đá và măng đá có hình dạng độc đáo, gợi liên tưởng đến nhiều sinh vật biển."
+        },
+        {
+          "time": "14:15 – 14:30",
+          "title": "KHÁM PHÁ HANG LUỒN",
+          "text": "KHÁM PHÁ HANG LUỒN Trải nghiệm chèo kayak hoặc đi thuyền nan để khám phá vẻ đẹp yên bình của đầm nước bên trong Hang Luồn."
+        },
+        {
+          "time": "15:15",
+          "title": "THAM QUAN ĐẢO TITOP",
+          "text": "THAM QUAN ĐẢO TITOP Đến Đảo Titop, nơi có bãi biển cát trắng tuyệt đẹp. Quý khách có thể tắm biển hoặc leo lên đỉnh Titop để chiêm ngưỡng toàn cảnh Vịnh Hạ Long từ trên cao."
+        },
+        {
+          "time": "16:15 – 16:30",
+          "title": "TIỆC HOÀNG HÔN TRÊN SUndeck",
+          "text": "TIỆC HOÀNG HÔN TRÊN SUndeck Du thuyền quay trở về Cảng Tuần Châu. Trong lúc tàu di chuyển, quý khách có thể thư giãn trên boong tàu, tham gia tiệc hoàng hôn với trà, bánh ngọt, nghe nhạc, tắm nắng và tận hưởng khung cảnh thiên nhiên tuyệt đẹp của Vịnh Hạ Long."
+        },
+        {
+          "time": "17:45",
+          "title": "LÊN XE VỀ HÀ NỘI",
+          "text": "LÊN XE VỀ HÀ NỘI Tàu cập bến, quý khách lên xe trở về Hà Nội theo tuyến cao tốc. Trên đường sẽ dừng nghỉ khoảng 20–30 phút."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH TẠI KHÁCH SẠN",
+          "text": "TRẢ KHÁCH TẠI KHÁCH SẠN Về đến khách sạn trong khu vực Phố Cổ Hà Nội. Kết thúc chương trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "CHECK IN CRUISE",
+          "text": "CHECK IN CRUISE Arrive at Tuan Chau Harbor. Welcome to our Cruise."
+        },
+        {
+          "time": "11:30",
+          "title": "BUFFET LUNCH ON BOARD",
+          "text": "BUFFET LUNCH ON BOARD Have a Buffet Lunch. We will take you on a 6.5-hours journey via route 2, which is renowned for its striking passages; uninhabited islets and outcrops have been given imaginative names by the locals due to their perceived shapes while having lunch on cruise. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "VISITING SURPRISING CAVE",
+          "text": "VISITING SURPRISING CAVE Visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea life."
+        },
+        {
+          "time": "14:15-14:30",
+          "title": "EXPLORE LUON CAVE",
+          "text": "EXPLORE LUON CAVE Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "15:15",
+          "title": "VISITING TITOV ISLAND",
+          "text": "VISITING TITOV ISLAND Visit Titov Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "16:15-16:30",
+          "title": "SUNSET PARTY ON SUNDECK",
+          "text": "SUNSET PARTY ON SUNDECK Cruising back to Tuan Chau harbour. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "17:45",
+          "title": "GET BACK ON BUS",
+          "text": "GET BACK ON BUS Arrive at Harbor then get on bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21:00",
+          "title": "HOTEL DROP-OFF",
+          "text": "HOTEL DROP-OFF Arrive at the hotel in Hanoi Old Quarter. The trip ends."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Limousine hoặc xe Shuttle đưa đón khứ hồi theo tuyến cao tốc.",
+        "Đồ uống chào mừng.",
+        "Tham quan Hang Sửng Sốt.",
+        "Chèo kayak hoặc đi thuyền nan tại Hang Luồn.",
+        "Tắm biển và leo núi tại Đảo Titop.",
+        "Sử dụng bể sục Jacuzzi và khăn tắm.",
+        "Vé tham quan theo chương trình.",
+        "Hướng dẫn viên tiếng Anh.",
+        "chai nước trên xe.",
+        "Bữa trưa buffet với các món ăn chay và không chay.",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Tiệc hoàng hôn gồm trà, bánh ngọt, bánh phồng tôm, trái cây tươi và các món ăn nhẹ khác."
+      ],
+      "servicesIncludedEn": [
+        "Expressway Transfer Round Trip by Limousine Bus / Shuttle bus",
+        "Welcome drink",
+        "Visiting Surprising Cave",
+        "Kayaking or Bamboo Boat at Luon cave",
+        "Swimming & hiking at Titov island",
+        "Jacuzzi & towel",
+        "Entrance & sightseeing fees",
+        "English Speaking Tour Guide",
+        "1 Bottle of water on the Bus",
+        "Buffet Lunch with non/vegetarian food",
+        "The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet.",
+        "Sunset Party: Tea, Cakes, Shrimp Chips, Fresh Fruits, …",
+        "Holiday surcharges"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT.",
+        "Đồ uống.",
+        "Chi phí cá nhân.",
+        "Tiền tip cho hướng dẫn viên, lái xe và thủy thủ đoàn.",
+        "Các dịch vụ không được đề cập trong mục \"Giá tour bao gồm\"."
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Personal expenses",
+        "Tips for guide, driver, crews"
+      ],
+      "serviceNote": "Khách lựa chọn thực đơn Ấn Độ (Indian Set Menu) vui lòng thông báo trước khi khởi hành.",
+      "serviceNoteEn": "Guests selecting the Indian Set Menu please inform in advance before departure.",
+      "offers": [
+        "Hang Sửng Sốt & Đảo Titov",
+        "Buffet hải sản + Thực đơn Ấn",
+        "Tiệc hoàng hôn Sunset Party"
+      ],
+      "offersEn": [
+        "Sung Sot Cave & Titov Island",
+        "Seafood buffet & Indian menu",
+        "Sundeck Sunset Party"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe đưa đón",
+        "baseRateEn": "All-inclusive quote with 5-star cruise & transfer",
+        "options": [
+          {
+            "name": "Nâng cấp xe đưa đón Thaco Limousine cao cấp",
+            "nameEn": "Upgrade to Thaco Limousine transfer",
+            "price": "+100.000đ / khách",
+            "priceEn": "+100,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ (Indian Set Menu)",
+            "nameEn": "Indian Set Menu meal option",
+            "price": "Miễn phí đăng ký trước",
+            "priceEn": "Complimentary on request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 0–4 tuổi trên xe Limousine",
+            "nameEn": "Separate seat for child 0–4 on Limousine",
+            "price": "300.000đ / trẻ",
+            "priceEn": "300,000 VND / child"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 0–4 tuổi trên xe Shuttle Bus",
+            "nameEn": "Separate seat for child 0–4 on Shuttle Bus",
+            "price": "200.000đ / trẻ",
+            "priceEn": "200,000 VND / child"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–4 tuổi",
+            "nameEn": "Children 0–4 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child accompanied by 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, dịch vụ như người lớn)",
+            "descEn": "75% of tour price (separate meal, full adult services)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-sea-lion-premium-1d",
+      "destination": "ha-long",
+      "featured": false,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Sea Lion Premium – Vịnh Hạ Long Tuyến 2 (1 Ngày)",
+      "nameEn": "Sea Lion Premium 5★ Cruise – Halong Bay Classic Route 2 (1 Day)",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_1.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_1.jpg",
+          "alt": "Du thuyền Sea Lion Premium 5 sao",
+          "altEn": "Sea Lion Premium 5-star yacht"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_.jpg",
+          "alt": "Toàn cảnh du thuyền Sea Lion trên vịnh",
+          "altEn": "Panoramic Sea Lion cruise view"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/buffet-lunch/HALONG_DAYTRIP_menu.jpg",
+          "alt": "Thực đơn buffet trưa trên tàu",
+          "altEn": "Buffet lunch onboard menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/halong-sea-lion-premium/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ tiêu chuẩn",
+          "altEn": "Indian set menu"
+        }
+      ],
+      "cardLine": "Hành trình 1 ngày cùng du thuyền Sea Lion Premium 5 sao qua các danh thắng kỳ vĩ nhất vịnh Hạ Long: hang Sửng Sốt kỳ ảo, chèo thuyền Hang Luồn, bơi lội đảo Titov.",
+      "cardLineEn": "A full-day 5-star voyage on Sea Lion Premium Cruise through Halong's top landmarks: magical Sung Sot Cave, Luon Cave kayaking, and Titov Island swimming.",
+      "description": [
+        "DU THUYỀN 5-SAO SEA LION PREMIUM CRUISE",
+        "THĂM QUAN TUYẾN 2: HANG SỬNG SỐT - ĐẢO TITOV - CHÈO KAYAK HOẶC ĐỎ TAY TẠI HANG LUỒN",
+        "Phương tiện di chuyển: Xe thường (30-32 chỗ) / Xe Limousine (17-22 chỗ)",
+        "Từ trên cao nhìn xuống, Vịnh Hạ Long như một bức tranh khổng lồ vô cùng sống động. Ði giữa Hạ Long, ta ngỡ như lạc vào một thế giới cổ tích bị hoá đá, đảo thì giống hình một người đang đứng hướng về đất liền (hòn Ðầu Người), đảo thì giống như một con rồng đang bay lượn trên mặt nước (hòn Rồng), đảo thì giống như một ông lão đang ngồi câu cá (hòn Ông Lã Vọng), hòn Cánh Buồm, hòn Cặp Gà, hòn Lư Hương…"
+      ],
+      "descriptionEn": [
+        "SEA LION PREMIUM HALONG BAY 5-STAR DAY CRUISE",
+        "ROUTE 2: SURPRISING CAVE - TITOV ISLAND - KAYAKING/BAMBOO BOAT IN LUON CAVE",
+        "Duration: 1 Day | Transportation: Limousine Bus/Shuttle Bus"
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00 – 11:15",
+          "title": "LÊN DU THUYỀN",
+          "text": "LÊN DU THUYỀN Đến Cảng Tuần Châu và làm thủ tục lên du thuyền. Chào mừng quý khách lên tàu."
+        },
+        {
+          "time": "11:30",
+          "title": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN",
+          "text": "THƯỞNG THỨC BUFFET TRÊN DU THUYỀN Quý khách dùng bữa trưa buffet trên tàu trong khi bắt đầu hành trình tham quan kéo dài khoảng 6,5 giờ theo tuyến tham quan số 2 – nổi tiếng với những cảnh quan ngoạn mục, các đảo đá và núi đá vôi mang nhiều hình thù độc đáo được người dân địa phương đặt tên theo trí tưởng tượng. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ với lựa chọn ăn chay và không chay (có thịt). Khách đăng ký thực đơn bữa trưa kiểu Ấn Độ sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "THAM QUAN HANG SỬNG SỐT",
+          "text": "THAM QUAN HANG SỬNG SỐT Khám phá Hang Sửng Sốt – một trong những hang động đẹp nhất Vịnh Hạ Long với vô số nhũ đá và măng đá có hình dạng độc đáo, gợi liên tưởng đến nhiều sinh vật biển."
+        },
+        {
+          "time": "14:15 – 14:30",
+          "title": "KHÁM PHÁ HANG LUỒN",
+          "text": "KHÁM PHÁ HANG LUỒN Trải nghiệm chèo kayak hoặc đi thuyền nan để khám phá vẻ đẹp yên bình của đầm nước bên trong Hang Luồn."
+        },
+        {
+          "time": "15:15",
+          "title": "THAM QUAN ĐẢO TITOP",
+          "text": "THAM QUAN ĐẢO TITOP Đến Đảo Titop, nơi có bãi biển cát trắng tuyệt đẹp. Quý khách có thể tắm biển hoặc leo lên đỉnh Titop để chiêm ngưỡng toàn cảnh Vịnh Hạ Long từ trên cao."
+        },
+        {
+          "time": "16:15 – 16:30",
+          "title": "TIỆC HOÀNG HÔN TRÊN SUndeck",
+          "text": "TIỆC HOÀNG HÔN TRÊN SUndeck Du thuyền quay trở về Cảng Tuần Châu. Trong lúc tàu di chuyển, quý khách có thể thư giãn trên boong tàu, tham gia tiệc hoàng hôn với trà, bánh ngọt, nghe nhạc, tắm nắng và tận hưởng khung cảnh thiên nhiên tuyệt đẹp của Vịnh Hạ Long."
+        },
+        {
+          "time": "17:45",
+          "title": "LÊN XE VỀ HÀ NỘI",
+          "text": "LÊN XE VỀ HÀ NỘI Tàu cập bến, quý khách lên xe trở về Hà Nội theo tuyến cao tốc. Trên đường sẽ dừng nghỉ khoảng 20–30 phút."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH TẠI KHÁCH SẠN",
+          "text": "TRẢ KHÁCH TẠI KHÁCH SẠN Về đến khách sạn trong khu vực Phố Cổ Hà Nội. Kết thúc chương trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:07",
+          "title": "10–07:45",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points:"
+        },
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "CHECK IN CRUISE",
+          "text": "CHECK IN CRUISE Arrive at Tuan Chau Harbor. Welcome to our Cruise."
+        },
+        {
+          "time": "11:30",
+          "title": "BUFFET LUNCH ON BOARD",
+          "text": "BUFFET LUNCH ON BOARD Have a Buffet Lunch. We will take you on a 6.5-hours journey via route 2, which is renowned for its striking passages; uninhabited islets and outcrops have been given imaginative names by the locals due to their perceived shapes while having lunch on cruise. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:45",
+          "title": "VISITING SURPRISING CAVE",
+          "text": "VISITING SURPRISING CAVE Visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea life."
+        },
+        {
+          "time": "14:15-14:30",
+          "title": "EXPLORE LUON CAVE",
+          "text": "EXPLORE LUON CAVE Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "15:15",
+          "title": "VISITING TITOV ISLAND",
+          "text": "VISITING TITOV ISLAND Visit Titov Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "16:15-16:30",
+          "title": "SUNSET PARTY ON SUNDECK",
+          "text": "SUNSET PARTY ON SUNDECK Cruising back to Tuan Chau harbour. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "17:45",
+          "title": "GET BACK ON BUS",
+          "text": "GET BACK ON BUS Arrive at Harbor then get on bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21:00",
+          "title": "HOTEL DROP-OFF",
+          "text": "HOTEL DROP-OFF Arrive at the hotel in Hanoi Old Quarter. The trip ends."
+        }
+      ],
+      "servicesIncluded": [
+        "Xe Limousine hoặc xe Shuttle đưa đón khứ hồi theo tuyến cao tốc.",
+        "Đồ uống chào mừng.",
+        "Tham quan Hang Sửng Sốt.",
+        "Chèo kayak hoặc đi thuyền nan tại Hang Luồn.",
+        "Tắm biển và leo núi tại Đảo Titop.",
+        "Sử dụng bể sục Jacuzzi và khăn tắm.",
+        "Vé tham quan theo chương trình.",
+        "Hướng dẫn viên tiếng Anh.",
+        "chai nước trên xe.",
+        "Bữa trưa buffet với các món ăn chay và không chay.",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Tiệc hoàng hôn gồm trà, bánh ngọt, bánh phồng tôm, trái cây tươi và các món ăn nhẹ khác."
+      ],
+      "servicesIncludedEn": [
+        "Expressway Transfer Round Trip by Limousine Bus / Shuttle bus",
+        "Welcome drink",
+        "Visiting Surprising Cave",
+        "Kayaking or Bamboo Boat at Luon cave",
+        "Swimming & hiking at Titov island",
+        "Jacuzzi & towel",
+        "Entrance & sightseeing fees",
+        "English Speaking Tour Guide",
+        "1 Bottle of water on the Bus",
+        "Buffet Lunch with non/vegetarian food",
+        "The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet.",
+        "Sunset Party: Tea, Cakes, Shrimp Chips, Fresh Fruits, …",
+        "Holiday surcharges"
+      ],
+      "servicesExcluded": [
+        "Thuế VAT.",
+        "Đồ uống.",
+        "Chi phí cá nhân.",
+        "Tiền tip cho hướng dẫn viên, lái xe và thủy thủ đoàn.",
+        "Các dịch vụ không được đề cập trong mục \"Giá tour bao gồm\"."
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Personal expenses",
+        "Tips for guide, driver, crews"
+      ],
+      "serviceNote": "Hỗ trợ đoàn khách có nhu cầu ẩm thực chay, Halal hoặc Ấn Độ.",
+      "serviceNoteEn": "Vegetarian, Halal and Indian meal options supported upon booking.",
+      "offers": [
+        "Hang Sửng Sốt & Hang Luồn",
+        "Bữa trưa buffet hải sản phong phú",
+        "Đảo Titov & ngắm toàn cảnh"
+      ],
+      "offersEn": [
+        "Sung Sot Cave & Luon Cave",
+        "Abundant seafood buffet",
+        "Titov Island panoramic view"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe đưa đón",
+        "baseRateEn": "All-inclusive quote with 5-star cruise & transfer",
+        "options": [
+          {
+            "name": "Nâng cấp xe đưa đón Thaco Limousine cao cấp",
+            "nameEn": "Upgrade to Thaco Limousine transfer",
+            "price": "+100.000đ / khách",
+            "priceEn": "+100,000 VND / guest"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–4 tuổi",
+            "nameEn": "Children 0–4 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child accompanied by 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (ăn suất riêng, dịch vụ như người lớn)",
+            "descEn": "75% of tour price (separate meal, full adult services)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ha-long-lan-ha-tropical-cruise-1d",
+      "destination": "ha-long",
+      "featured": true,
+      "stars": 5,
+      "name": "Du Thuyền 5★ Tropical Cruise – Vịnh Lan Hạ & Đảo Cát Bà (7 Tiếng)",
+      "nameEn": "Tropical Cruise 5★ – Lan Ha Bay & Cat Ba Island Odyssey (7 Hours)",
+      "durationLabel": "1 ngày (7 tiếng)",
+      "durationLabelEn": "1 day (7 hours)",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
+          "alt": "Du thuyền Tropical Cruise 5 sao trên vịnh Lan Hạ",
+          "altEn": "5-star Tropical Cruise in Lan Ha Bay"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_04_.jpg",
+          "alt": "Bể sục Jacuzzi và máng trượt nước ngoài trời",
+          "altEn": "Onboard Jacuzzi and water slide"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_07.jpg",
+          "alt": "Chèo kayak giữa làn nước xanh biếc Lan Hạ",
+          "altEn": "Kayaking in turquoise Lan Ha waters"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/anh/Tropical_-_12.jpg",
+          "alt": "Xe điện xuyên rừng quốc gia Cát Bà",
+          "altEn": "Electric cart in Cat Ba national park"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/buffet-lunch/TROPICAL_DAYTRIP_menu_.jpg",
+          "alt": "Thực đơn Buffet hải sản Cát Bà",
+          "altEn": "Cat Ba seafood buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/lanha-tropical-cruise/indian-set-menu/Indian_Set_Menu.jpg",
+          "alt": "Thực đơn món Ấn Độ riêng",
+          "altEn": "Dedicated Indian set menu"
+        }
+      ],
+      "cardLine": "Chuyến hải trình 7 tiếng độc bản trên vịnh Lan Hạ và đảo Cát Bà: đi xe điện xuyên rừng quốc gia, khám phá Động Trung Trang, bể sục Jacuzzi, máng trượt nước và kayak giữa biển xanh.",
+      "cardLineEn": "An exclusive 7-hour odyssey across Lan Ha Bay and Cat Ba Island: electric jungle cart, Trung Trang Cave, onboard Jacuzzi, water slide, and ocean kayaking.",
+      "description": [
+        "Giới thiệu Vịnh Lan Hạ & Đảo Cát Bà :",
+        "Hành trình “ĐỘC BẢN”, tham quan Vịnh Lan Hạ - Đảo Cát Bà 1 Ngày – 7 tiếng trên du thuyền 5 sao – TROPICAL CRUISE.",
+        "Không chỉ là một chuyến tham quan, đây là hành trình nghỉ dưỡng đẳng cấp giữa thiên nhiên – nơi du khách được tận hưởng cảm giác thư giãn tuyệt đối trên du thuyền sang trọng, kết hợp trải nghiệm chưa từng có: khám phá đảo Cát Bà bằng xe điện xuyên rừng, thăm hang động kỳ vĩ, chèo kayak giữa vịnh Lan Hạ hoang sơ, bơi lội – cầu trượt nước – bể sục Jacuzzi trên boong tàu và thưởng thức tiệc hoàng hôn đầy lãng mạn.",
+        "Đây không chỉ là một tour, mà là chuyến du ngoạn đỉnh cao dành riêng cho những ai yêu thích sự khác biệt.",
+        "Trải nghiệm ngồi xe điện xuyên rừng đảo Cát Bà – Một trong những cung đường xuyên rừng đẹp nhất Việt Nam.",
+        "Tham quan Hang Động Trung Trang – Hang động kỳ ảo và đẹp nhất đảo Cát Bà.",
+        "Tham quan Bảo Tàng thiên nhiên Vườn Quốc Gia Cát Bà – Nơi trưng bày các hiện vật giá trị và là bằng chứng sống giúp chúng ta hiểu rõ hơn về các loại động vật quý hiếm của vườn quốc gia.",
+        "Chèo xuồng Kayak giữa làn nước trong xanh, vẻ đẹp hoang sơ, tĩnh lặng của Vịnh Lan Hạ chạm đến trái tim của du khách.",
+        "Thỏa thích ngâm mình trong bể Jacuzzi, bơi lội tự do, trượt nước, và vui chơi tại khu phao nổi khổng lồ giữa vịnh.",
+        "Thưởng thức tiệc Sunset Party dưới ánh hoàng hôn lãng mạn cùng điệu nhạc, hòa mình vào thiên nhiên, đất trời trong khi tàu quay về bến."
+      ],
+      "descriptionEn": [
+        "LAN HA BAY & CAT BA ISLAND DAY TOUR",
+        "The “UNIQUE” Journey – Lan Ha Bay & Cat Ba Island 1-Day Tour – 7 Hours on a 5-Star Cruise – TROPICAL CRUISE",
+        "More than just a sightseeing trip, this is a luxury retreat amidst nature – where you can indulge in absolute relaxation on an elegant cruise, combined with exciting activities and memorable experiences while exploring the beauty of Lan Ha Bay and Cat Ba Island.",
+        "This is not just a tour but a premium voyage crafted for those who seek something truly different.",
+        "Highlight Tour Lan Ha Bay– Cat Ba Island 1 day:",
+        "Experience an electric car ride through Cat Ba’s Forest – one of the most beautiful jungle routes in Vietnam.",
+        "Visit Trung Trang Cave – the most magnificent and mysterious cave on Cat Ba Island.",
+        "Explore the Cat Ba National Park Natural History Museum – home to valuable exhibits and living evidence of the island’s rare flora and fauna specimens.",
+        "Paddle a Kayak on the emerald waters of Lan Ha Bay, where the pristine and tranquil beauty touches every traveler’s heart.",
+        "Relax in the Jacuzzi, enjoy free swimming, slide into the sea, and have fun at the giant inflatable playground on the bay.",
+        "Join a Sunset Party under the romantic glow of twilight, with music, wine, and nature blending seamlessly as the cruise comes back to the harbor."
+      ],
+      "itinerary": [
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH"
+        },
+        {
+          "time": "07:10–07:45",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h10 4B Tràng Thi 22 Tràng Thi Giờ đón 7h20 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h30 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h40 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h45 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Vịnh Hạ Long theo tuyến cao tốc."
+        },
+        {
+          "time": "09:30",
+          "title": "DỪNG CHÂN NGHỈ",
+          "text": "DỪNG CHÂN NGHỈ Nghỉ khoảng 30 phút để thư giãn."
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "BẾN CẢNG TUẦN CHÂU",
+          "text": "BẾN CẢNG TUẦN CHÂU Du khách đến bến cảng Tuần Châu – Check-in tàu Tropical, thưởng thức đồ uống chào mừng."
+        },
+        {
+          "time": "11:20",
+          "title": "ĂN TRƯA BUFFET",
+          "text": "ĂN TRƯA BUFFET Thưởng thức bữa trưa buffet 5 sao trên tàu với thực đơn hải sản và ẩm thực đa dạng, phong phú trong khi tàu di chuyển đưa du khách tham quan Vịnh Lan Hạ - Đảo Cát Bà. Lưu ý: Có phục vụ thực đơn bữa trưa kiểu Ấn Độ tại bàn với lựa chọn ăn chay hoặc không chay (có thịt). Khách đăng ký thực đơn này sẽ không sử dụng bữa trưa buffet."
+        },
+        {
+          "time": "12:15",
+          "title": "ĐẢO CÁT BÀ – XE ĐIỆN XUYÊN RỪNG",
+          "text": "ĐẢO CÁT BÀ – XE ĐIỆN XUYÊN RỪNG Tàu đến đảo Cát Bà, du khách ngồi xe điện để trải nghiệm một trong những cung đường xuyên rừng đẹp nhất Việt Nam, cảnh vật núi non hùng vĩ, mùa hoa rừng nở hai ven đường, du khách sẽ có cơ hội ngắm nhìn những đàn bướm rừng tung tăng bay lượn rợp cả một vùng trời."
+        },
+        {
+          "time": "12:45",
+          "title": "ĐỘNG TRUNG TRANG",
+          "text": "ĐỘNG TRUNG TRANG Du khách đến tham quan Động Trung Trang – hang động kỳ ảo và đẹp nhất đảo Cát Bà. Với hệ thống nhũ đá, măng đá hàng triệu năm, nơi đây được ví như bảo tàng địa chất sống."
+        },
+        {
+          "time": "13:30",
+          "title": "BẢO TÀNG THIÊN NHIÊN VƯỜN QUỐC GIA CÁT BÀ",
+          "text": "BẢO TÀNG THIÊN NHIÊN VƯỜN QUỐC GIA CÁT BÀ Xe điện tiếp tục đưa du khách tới Vườn Quốc Gia Cát Bà – Khu dự trữ sinh quyển của thế giới. Tại đây, du khách sẽ có cơ hội chụp ảnh và tham quan Bảo Tàng Thiên Nhiên Vườn Quốc Gia Cát Bà, nơi trưng bày những hiện vật quý giá, giúp du khách hiểu rõ hơn về các loài sinh vật quý hiếm và kho báu thiên nhiên của hòn đảo."
+        },
+        {
+          "time": "14:00",
+          "title": "XE ĐIỆN XUYÊN RỪNG",
+          "text": "XE ĐIỆN XUYÊN RỪNG Du khách lên xe điện trở lại tàu để tiếp tục hành trình tham quan vịnh Lan Hạ."
+        },
+        {
+          "time": "14:30",
+          "title": "VỊNH LAN HẠ",
+          "text": "VỊNH LAN HẠ Tàu đưa du khách đến khu vực Trà Báu - vùng lõi di sản Vịnh Lan Hạ để ngắm nhìn và chụp ảnh những đảo núi đá vôi hùng vĩ dưới làn nước trong xanh, giống như một bức tranh thủy mặc giữa chốn trần gian."
+        },
+        {
+          "time": "15:15",
+          "title": "KHU VỰC TRÀ BÁU",
+          "text": "KHU VỰC TRÀ BÁU Du khách trải nghiệm các hoạt động độc đáo và thú vị trên Vịnh Lan Hạ - Khu vực Trà Báu: - Chèo xuồng kayak len lỏi qua các vách núi, hang nhỏ đầy kỳ thú. - Tự do bơi lội, thả mình vào làn nước trong xanh trên vịnh. - Trải nghiệm cảm giác mạnh bằng cách chơi cầu trượt nước. - Tận hưởng niềm vui bất tận với bể bơi phao khí khổng lồ trên biển."
+        },
+        {
+          "time": "16:45",
+          "title": "TIỆC HOÀNG HÔN",
+          "text": "TIỆC HOÀNG HÔN Du khách trở lại tàu, thư giãn trong bể sục Jacuzzi trên boong tàu. Khép lại ngày tuyệt vời với tiệc Sunset Party: Nước hoa quả, trà, hoa quả, bánh ngọt, âm nhạc vang lên, cùng nhau nhảy theo điệu nhạc trong không khí hân hoan và hoàng hôn dần buông xuống đầy lãng mạn trên Vịnh Lan Hạ trong khi tàu hành trình quay về bến."
+        },
+        {
+          "time": "18:00",
+          "title": "BẾN CẢNG TUẦN CHÂU",
+          "text": "BẾN CẢNG TUẦN CHÂU Tàu về bến Tuần Châu. Xe đưa Quý khách trở lại Hà Nội."
+        },
+        {
+          "time": "21:00",
+          "title": "TRẢ KHÁCH",
+          "text": "TRẢ KHÁCH Xe về tới khách sạn tại Phố Cổ, kết thúc hành trình."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:45",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:10 AM 4B Trang Thi Street 22 Trang Thi Street 07:20 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:30 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:40 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:45 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ha Long Bay via the Expressway."
+        },
+        {
+          "time": "9:30",
+          "title": "SHORT BREAK",
+          "text": "SHORT BREAK Have a short break for 30 minutes to relax"
+        },
+        {
+          "time": "11:00-11:15",
+          "title": "TUAN CHAU HARBOR",
+          "text": "TUAN CHAU HARBOR Arrive at Tuan Chau Harbor – check in to the Tropical Cruise. You will be greeted with a refreshing welcome drink."
+        },
+        {
+          "time": "11:20",
+          "title": "BUFFET LUNCH",
+          "text": "BUFFET LUNCH Enjoy a 5-star buffet lunch on board, featuring a wide variety of fresh seafood and delicacies, while the cruise sails through Lan Ha Bay – Cat Ba Island. Note: Indian Vegetarian/Non-Vegetarian Set Menu Lunch is available. Guests who book Indian Vegetarian/Non-Vegetarian Set Menu Lunch will not take Buffet."
+        },
+        {
+          "time": "12:15",
+          "title": "CAT BA ISLAND – ELECTRIC CAR",
+          "text": "CAT BA ISLAND – ELECTRIC CAR Arrive at Cat Ba Island. Take an electric car ride along one of the most scenic forest roads in Vietnam."
+        },
+        {
+          "time": "12:45",
+          "title": "TRUNG TRANG CAVE",
+          "text": "TRUNG TRANG CAVE Visit Trung Trang Cave – the most magnificent cave on Cat Ba Island. With millions of years of stalactites and stalagmites, the cave is often described as a “living geological museum.”"
+        },
+        {
+          "time": "13:30",
+          "title": "CAT BA NATIONAL PARK NATUARAL HISTORY MUSEUM",
+          "text": "CAT BA NATIONAL PARK NATUARAL HISTORY MUSEUM Continue by electric car to Cat Ba National Park – a UNESCO World Biosphere Reserve. You can have chance to take photos and visit the Natural History Museum, where valuable exhibits provide deeper insights into the rare species and natural treasures of the island."
+        },
+        {
+          "time": "14:00",
+          "title": "ELECTRIC CAR",
+          "text": "ELECTRIC CAR Return by electric car to the cruise and continue exploring Lan Ha Bay."
+        },
+        {
+          "time": "14:30",
+          "title": "LAN HA BAY",
+          "text": "LAN HA BAY The cruise sails deeper into Tra Bau area - the heart of Lan Ha Bay, where towering limestone mountains rise from emerald waters – a landscape resembling a breathtaking ink-painting masterpiece."
+        },
+        {
+          "time": "15:15",
+          "title": "TRA BAU AREA",
+          "text": "TRA BAU AREA Activities on Lan Ha Bay – Tra Bau Area Kayak through limestone cliffs and mysterious hidden caves. Swim freely in the crystal-clear waters. Slide down the water slide for a thrilling experience. Have endless fun with the giant floating inflatable playground on the bay."
+        },
+        {
+          "time": "16:45",
+          "title": "SUNSET PARTY",
+          "text": "SUNSET PARTY Return to the cruise and relax in the Jacuzzi on the sundeck. End your day with a lively Sunset Party: Juice, Tea, Fresh Fruits, Sweet Cakes, Music, and Dancing as the Sun sets romantically over Lan Ha Bay, while the cruise comes back to the Harbor."
+        },
+        {
+          "time": "18:00",
+          "title": "TUAN CHAU HARBOR",
+          "text": "TUAN CHAU HARBOR The cruise arrives at Tuan Chau Harbor. Transfer back to Hanoi."
+        },
+        {
+          "time": "21:00",
+          "title": "DROP OFF",
+          "text": "DROP OFF Arrive at your hotel in the Old Quarter. End of tour. INCLUSSIONS: Admission to attractions: Trung Trang Cave, Cat Ba National Park Museum, Lan Ha Bay English / Vietnamese-speaking guide Buffet Lunch on the Cruise The Indian Set Menu Lunch is available in both vegetarian and non-vegetarian options. Guests who choose the Indian meal will not be served from the buffet. Round-trip transfers to and from your hotel in Hanoi Old Quarter or Hanoi Opera House Kayaking, swimming experience Sunset party Welcome drink One bottle of water/person on the bus Kayaking, swimming pool, Jacuzzi, water slide Electric car rides Entrance tickets Freshwater shower Giant inflatable swimming pool (subject to operational conditions) EXCLUSSIONS: Other personal expenses Tips and gratuities Drinks at bar Drinks on meal Holiday surcharges"
+        }
+      ],
+      "servicesIncluded": [
+        "Vé tham quan các điểm: Động Trung Trang, Bảo Tàng Thiên Nhiên Vườn Quốc gia Cát Bà, Vịnh Lan Hạ",
+        "Hướng dẫn viên nói tiếng Anh/Việt",
+        "Bữa trưa Buffet trên du thuyền",
+        "Thực đơn bữa trưa kiểu Ấn Độ có cả lựa chọn ăn chay và không chay (có thịt). Khách lựa chọn thực đơn Ấn Độ sẽ không sử dụng bữa trưa buffet.",
+        "Xe đưa đón khứ hồi từ/đến khách sạn tại Phố Cổ Hà Nội hoặc Nhà Hát Lớn",
+        "Trải nghiệm chèo kayak, bơi lội",
+        "Tiệc hoàng hôn (Sunset Party)",
+        "Đồ uống chào mừng",
+        "chai nước/người trên xe",
+        "Chèo kayak, bể bơi, Jacuzzi, cầu trượt nước",
+        "Xe điện tham quan đảo Cát Bà",
+        "Vé thắng cảnh",
+        "Tắm nước ngọt trên tàu",
+        "Bể bơi phao khổng lồ trên biển (tùy thuộc vào điều kiện vận hành)"
+      ],
+      "servicesIncludedEn": [],
+      "servicesExcluded": [
+        "Chi phí cá nhân",
+        "Tiền tip và bồi dưỡng",
+        "Đồ uống tại quầy bar",
+        "Đồ uống trong bữa ăn"
+      ],
+      "servicesExcludedEn": [],
+      "serviceNote": "Quý khách nên chuẩn bị đồ bơi, kem chống nắng và kính râm để tận hưởng máng trượt nước và bể Jacuzzi.",
+      "serviceNoteEn": "Swimwear, sunglasses and sunscreen recommended to enjoy onboard Jacuzzi and water slide.",
+      "offers": [
+        "Xe điện xuyên rừng & Động Trung Trang",
+        "Bể Jacuzzi & Cầu trượt nước",
+        "Buffet trưa & Menu Ấn Độ"
+      ],
+      "offersEn": [
+        "Jungle cart & Trung Trang Cave",
+        "Jacuzzi & Water Slide",
+        "Lunch buffet & Indian menu"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói du thuyền 5 sao & xe điện Cát Bà",
+        "baseRateEn": "All-inclusive quote for 5-star cruise & Cat Ba island transfer",
+        "options": [
+          {
+            "name": "Trải nghiệm máng trượt nước & Bể sục Jacuzzi ngoài trời",
+            "nameEn": "Water slide & outdoor Jacuzzi experience",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Xe điện xuyên rừng quốc gia Cát Bà",
+            "nameEn": "Electric cart ride through Cat Ba National Park",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
+          },
+          {
+            "name": "Lựa chọn thực đơn Ấn Độ (Indian Set Menu)",
+            "nameEn": "Indian Set Menu meal option",
+            "price": "Miễn phí đăng ký trước",
+            "priceEn": "Complimentary on request"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Phụ thu các ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 0–5 tuổi",
+            "nameEn": "Children 0–5 years",
+            "desc": "Miễn phí (tối đa 1 trẻ đi kèm 2 người lớn; từ trẻ thứ 2 tính 50%)",
+            "descEn": "Free (max 1 child with 2 adults; 2nd child charged 50%)"
+          },
+          {
+            "name": "Trẻ em từ 6 tuổi trở lên",
+            "nameEn": "Children 6+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-mua-1d",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tam Cốc – Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu – Tam Coc – Mua Cave",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/tam-coc-boat.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-boat.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tam Cốc – Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu – Tam Coc – Mua Cave - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Khám phá cố đô Hoa Lư nghìn năm lịch sử, ngồi thuyền nan xuôi dòng sông Ngô Đồng qua Tam Cốc và chinh phục 500 bậc đá đỉnh Hang Múa ngắm toàn cảnh thung lũng lúa.",
+      "cardLineEn": "Explore historic Hoa Lu ancient capital, take a peaceful Tam Coc sampan boat ride, and conquer 500 stone steps to Mua Cave summit for panoramic valley views.",
+      "description": [
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TAM COC – MUA CAVE – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\".",
+          "text": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century.",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”.",
+          "text": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”."
+        },
+        {
+          "time": "16h00-16:30",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Tam Coc or Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đỉnh Hang Múa ngoạn mục",
+        "Đi thuyền nan Tam Cốc",
+        "Cố đô Hoa Lư lịch sử"
+      ],
+      "offersEn": [
+        "Breathtaking Mua Cave",
+        "Tam Coc sampan boat ride",
+        "Historic Hoa Lu Capital"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-trangan-mua-1d",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tràng An – Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu – Trang An – Mua Cave",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/trang-an-boat.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Hoa Lư – Tràng An – Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu – Trang An – Mua Cave - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình khám phá di sản thế giới Tràng An bằng thuyền nan luồn qua các hang động kỳ ảo, thăm đền vua Đinh - Tiền Lê tại Hoa Lư và ngắm nhìn hoàng hôn trên đỉnh Hang Múa.",
+      "cardLineEn": "Discover UNESCO World Heritage Trang An by sampan boat through magical river caves, visit King Dinh-Le temples at Hoa Lu, and catch the sunset on Mua Cave peak.",
+      "description": [
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TRANG AN – MUA CAVE – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century.",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00-16:30",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends !"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Tam Coc or Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Quần thể di sản Tràng An",
+        "Cố đô Hoa Lư",
+        "Đỉnh Hang Múa check-in"
+      ],
+      "offersEn": [
+        "UNESCO Trang An caves",
+        "Hoa Lu Ancient Temples",
+        "Mua Cave summit viewpoint"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đạp Xe & Đi Thuyền Tam Cốc",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Cycling & Tam Coc Boat",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đạp Xe & Đi Thuyền Tam Cốc - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Cycling & Tam Coc Boat - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chuyến đi nhẹ nhàng thư thái: viếng cố đô Hoa Lư, thưởng thức buffet đặc sản và thong dong đạp xe xuyên qua những ngôi làng cổ kính dưới chân núi đá vôi Tam Cốc.",
+      "cardLineEn": "A relaxing cultural day: visit Hoa Lu capital, savor local buffet cuisine, and leisurely cycle through picturesque villages beneath Tam Coc's limestone karsts.",
+      "description": [
+        "TOUR 2. HOA LƯ-TAM CỐC - ĐẠP XE",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TAM COC – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\".",
+          "text": "Tham quan Tam Cốc bằng thuyền khoảng 1,5 giờ. Trong suốt chuyến đi, quý khách sẽ ngạc nhiên trước vẻ đẹp quyến rũ nơi đây với những cánh đồng lúa, sông, nước, mây, trời và hệ thống hang động tuyệt đẹp. Tất cả tạo nên một kiệt tác mà người Việt Nam gọi là \"Vịnh Hạ Long trên cạn\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”.",
+          "text": "Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive back to Hanoi and drop off at the hotel . The trip ends!",
+          "text": "Arrive back to Hanoi and drop off at the hotel . The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Trang An or Tam Coc",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đi thuyền Tam Cốc",
+        "Thong dong đạp xe làng quê",
+        "Buffet đặc sản Ninh Bình"
+      ],
+      "offersEn": [
+        "Tam Coc boat ride",
+        "Countryside cycling",
+        "Authentic buffet lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-trangan-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đi Thuyền Di Sản Tràng An",
+      "nameEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Trang An Boat Trip",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/hoa-lu.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/hoa-lu.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Cố Đô Hoa Lư – Đi Thuyền Di Sản Tràng An - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Hoa Lu Ancient Capital – Trang An Boat Trip - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình trọn vẹn khám phá vùng đất địa linh nhân kiệt: thăm đền thờ hai vị vua triều Đinh - Lê và ngồi thuyền khám phá 4 hang động kỳ vĩ tại quần thể Tràng An.",
+      "cardLineEn": "Complete heritage journey: visit historic Dinh-Le dynastic temples and embark on a scenic sampan boat expedition through Trang An's subterranean river caves.",
+      "description": [
+        "TOUR 2. HOA LƯ- TRÀNG AN - ĐẠP XE",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Hoa Lư là vùng bán sơn địa, có nhiều cảnh quan thiên nhiên như khu hang động Tràng An, Tam Cốc - Bích Động bên cạnh các di tích thuộc quần thể di tích Cố đô Hoa Lư được hình thành và lưu giữ từ hơn 1000 năm trước. Tam Cốc - Bích Động, còn được biết đến với những cái tên nổi tiếng như \"vịnh Hạ Long trên cạn\" được công nhận là một khu du lịch trọng điểm quốc gia Việt Nam."
+      ],
+      "descriptionEn": [
+        "HOA LU – TRANG AN – CYCLING",
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h00-9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods. Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive back to Hanoi and drop off at the hotel . The trip ends!",
+          "text": "Arrive back to Hanoi and drop off at the hotel . The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "English Speaking Guide",
+        "All Entrance fees & sharing boat at Trang An or Tam Coc",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Cycling activity",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Du thuyền di sản Tràng An",
+        "Đền Vua Đinh - Vua Lê",
+        "Ăn trưa buffet phong phú"
+      ],
+      "offersEn": [
+        "Trang An heritage boat",
+        "King Dinh & Le Temples",
+        "Generous buffet lunch"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-baidinh-trangan-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Đại Tượng Phật Chùa Bái Đính – Di Sản Tràng An",
+      "nameEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An Ecotourism",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/tours/ninh-binh-bai-dinh.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh-bai-dinh.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Đại Tượng Phật Chùa Bái Đính – Di Sản Tràng An - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An Ecotourism - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chiêm bái ngôi chùa Bái Đính giữ nhiều kỷ lục nhất Đông Nam Á và du ngoạn bằng thuyền nan khám phá hệ thống hang động nước ngầm lung linh tại Tràng An.",
+      "cardLineEn": "Visit Southeast Asia's most record-holding Buddhist complex at Bai Dinh and cruise through the tranquil emerald waterways of Trang An.",
+      "description": [
+        "TOUR 4. BÁI ĐÍNH-TRÀNG AN",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Du lịch Bái Đính - Tràng An đang là lựa chọn lý tưởng của rất nhiều du khách Việt, Nằm trong quần thể di tích Cố đô Hoa Lư, Đến với khu du lịch sinh thái Tràng An du khách như lạc vào động tiên huyền ảo, cảnh sắc thiên nhiên, núi rừng, sông nước hiền hòa, một bức tranh sơn thủy hữu tình. Các công trình kiến trúc trong quần thể du lịch này chắc chắn sẽ làm Quý khách ngỡ ngàng khi về lại cố đô xưa…"
+      ],
+      "descriptionEn": [
+        "Duration : 1 Day / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…",
+          "text": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…"
+        },
+        {
+          "time": "12h30",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "18h00 - 18h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet Lunch for Shuttle bus / Thaco Limousine option Buffet lunch is served in a modern and elegant atmosphere with many local foods Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet style"
+        },
+        {
+          "time": "13h30 – 13h45",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "Entrance fee & sharing boat at Trang An",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Chùa Bái Đính đồ sộ",
+        "Thuyền nan hang động Tràng An",
+        "Xe điện Bái Đính 2 chiều"
+      ],
+      "offersEn": [
+        "Monumental Bai Dinh Pagoda",
+        "Trang An Cave sampan",
+        "Round-trip electric cart"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-baidinh-trangan-mua-1d",
+      "destination": "ninh-binh",
+      "featured": false,
+      "stars": 5,
+      "name": "Tour Ninh Bình 1 Ngày: Bái Đính – Tràng An – Chinh Phục Hang Múa",
+      "nameEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An – Mua Cave Summit",
+      "durationLabel": "1 ngày",
+      "durationLabelEn": "1 day",
+      "nightsOffset": 0,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/mua-cave-peak.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/mua-cave-peak.jpg",
+          "alt": "Tour Ninh Bình 1 Ngày: Bái Đính – Tràng An – Chinh Phục Hang Múa - The Dahlia Hanoi",
+          "altEn": "Ninh Binh Day Tour: Bai Dinh Pagoda – Trang An – Mua Cave Summit - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Hành trình kết hợp tam giác danh thắng hàng đầu Ninh Bình: viếng quần thể tâm linh Bái Đính, đi thuyền xuyên lòng hang Tràng An và leo 500 bậc đá lên Vạn Lý Trường Thành thu nhỏ.",
+      "cardLineEn": "The quintessential Ninh Binh trifecta: spiritual wonders at Bai Dinh, subterranean boat voyage through Trang An, and breathtaking dragon-ridge hike atop Mua Cave.",
+      "description": [
+        "TOUR 3. BÁI ĐÍNH-TRÀNG AN-HANG MÚA",
+        "Thời gian : 1 Ngày / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine/ Xe Luxury D-Car",
+        "Du lịch Bái Đính - Tràng An đang là lựa chọn lý tưởng của rất nhiều du khách Việt, Nằm trong quần thể di tích Cố đô Hoa Lư, Đến với khu du lịch sinh thái Tràng An du khách như lạc vào động tiên huyền ảo, cảnh sắc thiên nhiên, núi rừng, sông nước hiền hòa, một bức tranh sơn thủy hữu tình. Các công trình kiến trúc trong quần thể du lịch này chắc chắn sẽ làm Quý khách ngỡ ngàng khi về lại cố đô xưa…"
+      ],
+      "descriptionEn": [
+        "BAI DINH – TRANG AN – MUA CAVE",
+        "Duration : 1 Day/ / Departure : Daily",
+        "Transportation: Shuttle Bus/ Thaco Limousine/ Luxury D-Car"
+      ],
+      "itinerary": [
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…",
+          "text": "Tham quan chùa Bái Đính - ngôi chùa nổi tiếng và lớn nhất Đông Nam Á với nhiều kỷ lục được thiết lập như 500 bức tượng La Hán bằng đá, Chuông đồng 36 tấn, Tượng Phật 100 tấn…"
+        },
+        {
+          "time": "12h30",
+          "title": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": "Ăn trưa tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh núi non và sông nước thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon. Bữa trưa sẽ được phục vụ theo dịch vụ mà quý khách chọn: - Deluxe Set Menu: ở tầng 2 nếu bạn chọn đi bằng xe Luxury D-car. Bữa trưa Deluxe Set Menu được phục vụ trong không gian riêng tư và ấm cúng. Đồ ăn được trang trí ấn tượng trên bàn. - Buffet: ở tầng 3 nếu bạn chọn đi bằng Xe Thường/Thaco Limousine. Bữa trưa Buffet được phục vụ trong không gian hiện đại và thanh lịch với nhiều món ăn địa phương. Lưu ý: Đồ ăn chay luôn có sẵn trên cả Deluxe Set Menu và Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\".",
+          "text": "Tham quan Tràng An, Di sản thế giới được UNESCO công nhận năm 2014. Tại đây, quý khách có thể dành 1,5 - 2 giờ đi thuyền để tận hưởng vẻ đẹp của nơi này, nơi có hệ thống hang động đường hầm tuyệt đẹp và xuất hiện trong Phiên bản mới của Kong năm 2016 - \"Đảo Đầu Lâu\"."
+        },
+        {
+          "time": "16h00",
+          "title": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây.",
+          "text": "Lên xe buýt để đến Hang Múa. Đi bộ lên gần 500 bậc thang, bạn có thể lên đến đỉnh Núi Ngọa Longvà ngắm toàn cảnh Tam Cốc tuyệt đẹp từ đây."
+        },
+        {
+          "time": "17h00 - 17h30",
+          "title": "Lên xe để trở về Hà Nội",
+          "text": "Lên xe để trở về Hà Nội"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!",
+          "text": "Đến Hà Nội, xe và hướng dẫn viên trả quý khách tại Khách sạn. Chuyến đi kết thúc!"
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15",
+          "title": "1030 : Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "1030 : Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Lunch will be served in accordance to service you choose: - Deluxe Set Menu style: on the 2nd floor if you choose the Luxury D-car option. Deluxe Set Menu lunch is served in a private and cozy atmosphere. Foods are decorated impressively on the table. - Buffet style: on the 3rd floor if you choose the Shuttle Bus/ Thaco Limousine option. Buffet lunch is served in a modern and elegant atmosphere with many local foods Note: Vegetarian foods are always available on both Deluxe Set Menu and Buffet"
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 - 2 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.",
+          "text": "Get on the bus to go to Mua Cave ( Dancing Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here."
+        },
+        {
+          "time": "17h00 – 17h30",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách)/ Xe Luxury D-Car (9-11 khách) khứ hồi",
+        "Hướng dẫn viên nói tiếng Anh/ tiếng Việt",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Limousine Thaco/ Xe Luxury D-Car",
+        "Bữa trưa Buffet nếu quý khách chọn đi xe Shuttle bus/Xe Limousine Thaco",
+        "Bữa trưa Set Menu nếu quý khách chọn đi xe Luxury D-Car",
+        "Hoạt động đạp xe",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine(17-22 Pax)/ Luxury D-Car (9-11 Pax) round trip",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "All Entrance fees and sharing boat at Trang an",
+        "Free Wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine/ Luxury D-Car",
+        "Buffet Lunch for Shuttle bus / Thaco Limousine option",
+        "Deluxe Set Menu Lunch for Luxury D-Car option",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đại tự Bái Đính",
+        "Di sản Tràng An",
+        "Đỉnh Ngọa Long Hang Múa"
+      ],
+      "offersEn": [
+        "Grand Bai Dinh Pagoda",
+        "Trang An Grottoes",
+        "Dragon Ridge Mua Cave"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-hoalu-tamcoc-mua-baidinh-trangan-2d1n",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Ninh Bình Trọn Vẹn 2N1Đ: Hoa Lư – Tam Cốc – Múa – Bái Đính – Tràng An",
+      "nameEn": "Complete Ninh Binh 2D1N: Hoa Lu – Tam Coc – Mua Cave – Bai Dinh – Trang An",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/trang-an-cave.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/trang-an-cave.jpg",
+          "alt": "Tour Ninh Bình Trọn Vẹn 2N1Đ: Hoa Lư – Tam Cốc – Múa – Bái Đính – Tràng An - The Dahlia Hanoi",
+          "altEn": "Complete Ninh Binh 2D1N: Hoa Lu – Tam Coc – Mua Cave – Bai Dinh – Trang An - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Tour 2 ngày 1 đêm lưu trú khách sạn/bungalow thơ mộng, trải nghiệm đầy đủ tất cả danh lam thắng cảnh bậc nhất Ninh Bình: Tam Cốc, Tràng An, Hang Múa, Bái Đính và Hoa Lư.",
+      "cardLineEn": "A comprehensive 2D1N getaway with charming bungalow/hotel stay, covering every hallmark wonder of Ninh Binh: Tam Coc, Trang An, Mua Cave, Bai Dinh, and Hoa Lu.",
+      "description": [
+        "TOUR 5. HOA LƯ-TAM CỐC- HANG MÚA-BÁI ĐÍNH-TRÀNG AN 2 NGÀY",
+        "Thời gian : 2 Ngày 1 Đêm / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine"
+      ],
+      "descriptionEn": [
+        "TOUR 5: HOA LU – TAM COC – MUA CAVE - BAI DINH – TRANG AN",
+        "Duration : 2 Days 1 Night / Stay at : Hotel/Bungalow / Departure : Daily",
+        "Transportation: Shuttle Bus/Thaco Limousine"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "title": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "text": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)"
+        },
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h00 - 13h30",
+          "title": "Visit Tam Coc, by 1.5 hours on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people called “ Halong Bay on land”.",
+          "text": "Visit Tam Coc, by 1.5 hours on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people called “ Halong Bay on land”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc.",
+          "text": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc."
+        },
+        {
+          "time": "17h00",
+          "title": "The minivan will transfer you to Hotel/ Bungalow",
+          "text": "The minivan will transfer you to Hotel/ Bungalow"
+        },
+        {
+          "time": "17h30",
+          "title": "Check in the room.",
+          "text": "Check in the room."
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Have dinner at a Hotel/ Bungalow or Restaurant nearby.",
+          "text": "Have dinner at a Hotel/ Bungalow or Restaurant nearby. Day 2 : BAI DINH PAGODA – TRANG AN BOAT TRIP – HANOI ( B, L )"
+        },
+        {
+          "time": "7h30",
+          "title": "Have breakfast at the Hotel/ Bungalow then be ready for the trip.",
+          "text": "Have breakfast at the Hotel/ Bungalow then be ready for the trip."
+        },
+        {
+          "time": "9h30 – 9h45",
+          "title": "Get picked up by minivan from Hotel/ Bungalow and join our group at Cozy Vietnam Restaurant.",
+          "text": "Get picked up by minivan from Hotel/ Bungalow and join our group at Cozy Vietnam Restaurant."
+        },
+        {
+          "time": "10h30",
+          "title": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…",
+          "text": "Visit Bai Dinh Pagoda – the most famous & biggest Pagoda in Southeast Asia with many records set such as 500 Stone – Arhat Statues , 36 ton – bronze Bell, 100 ton – Buddha Statue…"
+        },
+        {
+          "time": "12h30",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h30 - 13h45",
+          "title": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”.",
+          "text": "Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the Bus to return to Hanoi",
+          "text": "Get on the Bus to return to Hanoi"
+        },
+        {
+          "time": "18h00 – 18h30",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!!"
+        }
+      ],
+      "servicesIncluded": [
+        "bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách) khứ hồi",
+        "đêm tại khách sạn/ Bungalow",
+        "chiều xe điện Bái Đính",
+        "Hướng dẫn viên tiếng Anh/ tiếng Việt",
+        "Hoạt động đạp xe",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Thaco Limousine",
+        "Miễn phí sử dụng áo mưa và nón lá trong suốt chuyến đi"
+      ],
+      "servicesIncludedEn": [
+        "buffet lunches; 1 dinner:1 breakfast",
+        "Full transfers Hanoi - Ninh Binh - Hanoi by Shuttle Bus (30-32 Pax)/ Thaco Limousine (17-22 Pax) round trip",
+        "Accommodation: 1 night at Hotel/ Bungalow",
+        "Two-way electric car in Bai Dinh Pagoda",
+        "English Speaking Guide",
+        "Bicycle activity",
+        "Entrance fee & sharing boat at Tam Coc and Trang An",
+        "Hanoi - Ninh Binh - Hanoi Shuttle bus/ Thaco Limousine round trip",
+        "Free wifi, 01 bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine",
+        "Free usage of rain-coat and conical hat during the trip"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Đủ 5 điểm danh thắng lớn",
+        "Nghỉ đêm Bungalow/Khách sạn",
+        "Đạp xe ngắm hoàng hôn"
+      ],
+      "offersEn": [
+        "All 5 top landmarks",
+        "Cozy Bungalow/Hotel night",
+        "Sunset countryside ride"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    },
+    {
+      "id": "ninh-binh-halong-2d1n",
+      "destination": "ninh-binh",
+      "featured": true,
+      "stars": 5,
+      "name": "Tour Liên Tuyến 2N1Đ: Ninh Bình (Hoa Lư – Tam Cốc / Tràng An) – Vịnh Hạ Long",
+      "nameEn": "2D1N Combo Tour: Ninh Binh (Hoa Lu – Tam Coc / Trang An) & Halong Bay Cruise",
+      "durationLabel": "2 ngày 1 đêm",
+      "durationLabelEn": "2 days 1 night",
+      "nightsOffset": 1,
+      "price": 0,
+      "priceNote": "Liên hệ",
+      "priceNoteEn": "Contact",
+      "image": "img/destinations/ninh-binh/tam-coc-rice.jpg",
+      "media": [
+        {
+          "type": "image",
+          "src": "img/destinations/ninh-binh/tam-coc-rice.jpg",
+          "alt": "Tour Liên Tuyến 2N1Đ: Ninh Bình (Hoa Lư – Tam Cốc / Tràng An) – Vịnh Hạ Long - The Dahlia Hanoi",
+          "altEn": "2D1N Combo Tour: Ninh Binh (Hoa Lu – Tam Coc / Trang An) & Halong Bay Cruise - The Dahlia Hanoi"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
+          "alt": "Đạp xe ngắm cảnh đồng lúa làng quê",
+          "altEn": "Scenic countryside cycling tour"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hangnha-hang-buffet-t3/Cozy-NinhBinh-03.jpg",
+          "alt": "Nhà hàng Buffet đặc sản Ninh Bình",
+          "altEn": "Local specialty buffet restaurant"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/nha-hang-buffet-an/Indian_Buffet_Menu.jpg",
+          "alt": "Thực đơn Buffet Ấn Độ phong phú",
+          "altEn": "Rich Indian buffet menu"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/ninh-binh/menu-halal/Halal_Food_01.jpg",
+          "alt": "Thực đơn món Halal có chứng chỉ",
+          "altEn": "Halal certified food options"
+        },
+        {
+          "type": "image",
+          "src": "img/fleet/limousine-bus/Thaco_Limousine_2.jpg",
+          "alt": "Xe Thaco Limousine đưa đón cao cấp",
+          "altEn": "Premium Thaco Limousine transfer"
+        }
+      ],
+      "cardLine": "Chuyến đi kết hợp hoàn hảo hai di sản hàng đầu miền Bắc: 1 ngày khám phá cố đô và hang động Ninh Bình, 1 ngày du ngoạn vịnh Hạ Long kỳ quan thế giới.",
+      "cardLineEn": "A seamless 2-day dual-heritage combination: day 1 amidst ancient capitals and karst rivers in Ninh Binh, followed by day 2 cruising Halong Bay's wonder seascape.",
+      "description": [
+        "HOA LƯ – TRÀNG AN/ TAM CỐC – HANG MÚA – VỊNH HẠ LONG",
+        "Thời gian : 2 Ngày 1 Đêm / Khởi hành: Hàng Ngày",
+        "Phương tiện: Xe thường/ Xe Thaco Limousine"
+      ],
+      "descriptionEn": [
+        "TOUR 8: HOA LU – TRANG AN/TAM COC- MUA CAVE – HALONG BAY",
+        "Duration :2 Days 1 Night / Stay at: Hotel/ Bungalow / Departure: Daily",
+        "Transportation: Shuttle Bus/Thaco Limousine"
+      ],
+      "itinerary": [
+        {
+          "time": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "title": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)",
+          "text": "NGÀY 1: HOA LƯ - TRÀNG AN - HANG MÚA (Bữa trưa, Bữa tối)"
+        },
+        {
+          "time": "07:00–07:40",
+          "title": "ĐÓN KHÁCH",
+          "text": "ĐÓN KHÁCH Hướng dẫn viên và lái xe sẽ đón quý khách tại 01 trong các điểm hẹn sau: Giờ đón 7h00 4B Tràng Thi 22 Tràng Thi Giờ đón 7h10 174 Phùng Hưng 1 Đường Thành 2 Lê Văn Linh Giờ đón 7h20 6 Ô Quan Chưởng Techcombank Cho Gao 2-4 Nguyễn Hữu Huân Giờ đón 7h30 160 Trần Quang Khải 204 Trần Quang Khải Giờ đón 7h40 Nhà Hát Lớn Hà Nội Quý khách vui lòng có mặt đúng giờ tại điểm hẹn đã chọn để tránh lỡ chuyến. Vì đây là tour ghép đoàn, xe chỉ chờ tối đa 05 phút tại mỗi điểm đón. Hướng dẫn viên sẽ chủ động liên hệ vào buổi tối trước ngày khởi hành để xác nhận lại điểm đón và giờ đón. Sau khi đón khách, đoàn khởi hành đi Ninh Bình theo tuyến cao tốc."
+        },
+        {
+          "time": "9h15",
+          "title": "Nghỉ dừng chân 20 phút",
+          "text": "Nghỉ dừng chân 20 phút"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17.",
+          "text": "Đến nhà hàng Cozy Vietnam và bắt đầu đạp xe 20 phút đến cố đô Hoa Lư, sau đó gửi xe và đi bộ đến thăm Hoa Lư. Đây là kinh đô đầu tiên của Việt Nam, quý khách sẽ ấn tượng với kiến ​​trúc nổi bật khi vào đền vua Đinh và vua Lê, vị hoàng đế đầu tiên và thứ hai của Việt Nam cổ đại, được xây dựng vào thế kỷ 17. (Nếu bạn không thích đạp xe, chúng tôi sẽ đưa bạn bằng xe buýt đến Hoa Lư, nơi hướng dẫn viên của chúng tôi sẽ gặp bạn và hướng dẫn bạn đến các ngôi đền. Sau chuyến tham quan, chúng tôi sẽ đưa bạn trở lại Nhà hàng Cozy Vietnam)"
+        },
+        {
+          "time": "11h30",
+          "title": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam.",
+          "text": "Tiếp tục đạp xe thêm 30 phút quanh làng để khám phá cuộc sống của người dân địa phương và trở lại nhà hàng Cozy Vietnam."
+        },
+        {
+          "time": "12h00",
+          "title": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon.",
+          "text": ": Ăn trưa Buffet tại Nhà hàng Cozy Vietnam được thiết kế theo phong cách 5 sao. Bạn có thể ngắm toàn cảnh phong cảnh sông núi thơ mộng của Ninh Bình trong khi thưởng thức những món ăn ngon."
+        }
+      ],
+      "itineraryEn": [
+        {
+          "time": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)",
+          "title": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)",
+          "text": "DAY 1: HANOI - HOA LU - TRANG AN/TAM COC – MUA CAVE (L/D)"
+        },
+        {
+          "time": "07:10–07:40",
+          "title": "PICK-UP",
+          "text": "PICK-UP Our tour guide and driver will pick you up at one of the following nine designated meeting points: 07:00 AM 4B Trang Thi Street 22 Trang Thi Street 07:10 AM 174 Phung Hung Street 1 Duong Thanh Street 2 Le Van Linh Street 07:20 AM 24–26 Tran Nhat Duat Street 6 O Quan Chuong Street Techcombank Cho Gao street 2–4 Nguyen Huu Huan Street 07:30 AM 160 Tran Quang Khai Street 204 Tran Quang Khai Street 07:40 AM Hanoi Opera House Please arrive at your selected meeting point on time to avoid missing the departure. As this is a shared group tour, the vehicle will wait for a maximum of 5 minutes at each pick-up point. Our tour guide will contact you on the evening before departure to reconfirm your selected pick-up point and pick-up time. After the pickup, depart for Ninh Binh via the Expressway."
+        },
+        {
+          "time": "9h15",
+          "title": "Have a short break for 20 minutes to relax",
+          "text": "Have a short break for 20 minutes to relax"
+        },
+        {
+          "time": "10h15-10h30",
+          "title": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)",
+          "text": "Arrive Cozy Vietnam restaurant and start cycling 20 minutes to Hoa Lu ancient capital, then park the bicycle and walk to visit Hoa Lu. This is the first capital of Vietnam, you will be impressed by the outstanding architecture when entering temples of King Dinh and King Le, the first and second emperors of ancient Vietnam, built in the 17th century. (If you prefer not to cycle, we will transfer you by bus to Hoa Lu, where our tour guide will meet you and guide you to the temples. After the visit, we will transfer you back to Cozy Vietnam Restaurant)"
+        },
+        {
+          "time": "11h30",
+          "title": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant.",
+          "text": "Continue cycling tour 30 minutes more around the village to discover the life of local people and come back to Cozy Vietnam restaurant."
+        },
+        {
+          "time": "12h00",
+          "title": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods.",
+          "text": "Have Buffet Lunch at Cozy Vietnam Restaurant designed in a 5-star style. You can have a panoramic view of the poetic mountain and river scenery of Ninh Binh while enjoying the delicious foods. Note: Vegetarian food is always available at the buffet lunch."
+        },
+        {
+          "time": "13h00 – 13h30",
+          "title": "",
+          "text": " Option 1: Visit Tam Coc by 1.5- hour on the boat ride. During the boat trip, you will be surprised by the charming beauty here with paddy fields, river, water, cloud, sky and stunning cave system. All make a masterpiece which Vietnamese people call “Halong Bay on land”. Option 2: Visit Trang An, a World Heritage Site recognized by UNESCO in 2014. There, you can spend 1.5 hours on the boat ride to enjoy the beauty of this place, which has a beautiful tunnel cave system and appears in the New Version of Kong in 2016 – “Skull Island”."
+        },
+        {
+          "time": "16h00",
+          "title": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc..",
+          "text": "Get on the bus to go to Mua Cave (Dancing Cave). After a short ride, you'll walk up nearly 500 steps to reach the summit of Lying Dragon Mountain. Once at the top, you'll be rewarded with breathtaking panoramic views of Tam Coc.."
+        },
+        {
+          "time": "17h00",
+          "title": "The minivan will transfer you to Hotel/ Bungalow",
+          "text": "The minivan will transfer you to Hotel/ Bungalow"
+        },
+        {
+          "time": "17h30",
+          "title": "Check in the room.",
+          "text": "Check in the room."
+        },
+        {
+          "time": "19h00 - 19h30",
+          "title": "Have dinner at a Hotel/ Bungalow or Restaurant nearby.",
+          "text": "Have dinner at a Hotel/ Bungalow or Restaurant nearby."
+        },
+        {
+          "time": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L )",
+          "title": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L )",
+          "text": "DAY 2: NINH BINH – HALONG BAY – SUNG SOT – KAYAKING – TITOP ISLAND – HANOI ( B/L ) Breakfast at the Bungalow Transfer no escort Tour guide"
+        },
+        {
+          "time": "7h00",
+          "title": "Shuttle bus/ Limousine Bus will pick up from Ninh Binh and transfer to Halong Bay for a full day tour. Enjoy a full-day trip to Halong Bay and get immersed in the beauty of the stone mountains, caves, sandy beach, and more. Board a vehicle from the hotel and enjoy a scenic drive through the green fields.",
+          "text": "Shuttle bus/ Limousine Bus will pick up from Ninh Binh and transfer to Halong Bay for a full day tour. Enjoy a full-day trip to Halong Bay and get immersed in the beauty of the stone mountains, caves, sandy beach, and more. Board a vehicle from the hotel and enjoy a scenic drive through the green fields."
+        },
+        {
+          "time": "11h45- 12h00",
+          "title": "Arrive at Tuan Chau Harbor. Welcome to Cozy Bay Premium Cruise. Have a Buffet Lunch.",
+          "text": "Arrive at Tuan Chau Harbor. Welcome to Cozy Bay Premium Cruise. Have a Buffet Lunch. We will take you on a 5-6 hour journey via route 2 which is renowned for its striking passages, uninhabited islets and outcrops have been given imaginative names by the locals, due to their perceived shapes while having lunch on boat."
+        },
+        {
+          "time": "14h00",
+          "title": "You will visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea lives",
+          "text": "You will visit Surprising Cave to see a lot of stalagmites and stalactites with different shapes of sea lives"
+        },
+        {
+          "time": "15h00",
+          "title": ". Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon",
+          "text": ". Do kayaking or bamboo boat in Luon Cave to discover the beautiful Lagoon"
+        },
+        {
+          "time": "16h00",
+          "title": ". Visit Titop Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise",
+          "text": ". Visit Titop Island with sandy beach to the towering limestone mountain with excellent backdrop of the Bay, and climb up Titop Peak for a panoramic view of the bay like paradise"
+        },
+        {
+          "time": "17h00",
+          "title": "Back to our Cruise and enjoy Sunset party. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery.",
+          "text": "Back to our Cruise and enjoy Sunset party. There is a lot of time for enjoying a sunset party with tea, cakes, sunbathing on the upper deck with music and enjoying great fun of group touring fellows among world iconic natural scenery."
+        },
+        {
+          "time": "18h00-18h30",
+          "title": "Back to Halong Harbor and get on the bus back to Hanoi by Expressway, have a short break for 20-30 minutes.",
+          "text": "Back to Halong Harbor and get on the bus back to Hanoi by Expressway, have a short break for 20-30 minutes."
+        },
+        {
+          "time": "21h00",
+          "title": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!",
+          "text": "Arrive in Hanoi and get dropped off at the Hotel. The trip ends!"
+        }
+      ],
+      "servicesIncluded": [
+        "bữa sáng, 2 bữa trưa, 1 bữa tối",
+        "Xe đưa đón trọn gói Hà Nội - Ninh Bình - Hạ Long - Hà Nội Xe Thường (30-32 khách)/ Xe Thaco Limousine (17-22 khách) khứ hồi",
+        "đêm tại khách sạn/ Bungalow",
+        "Hướng dẫn viên tiếng Anh/ tiếng Việt",
+        "Wifi miễn phí, 01 chai nước khoáng/1 chiều trên xe Xe Thường /Xe Thaco Limousine",
+        "Hoạt động đạp xe",
+        "Tất cả phí vào cửa & đi chung thuyền tại Tam Cốc hoặc Tràng An"
+      ],
+      "servicesIncludedEn": [
+        "Buffet lunches + 1 dinner + 1 breakfast",
+        "Full transfers by Shuttle Bus/ Thaco Limousine Hanoi - Ninh Binh - Halong - Hanoi",
+        "Accommodation: 1 night at Hotel/ Bungalow",
+        "English Speaking Guide",
+        "bottle of mineral water/1 way on the Shuttle bus/Thaco Limousine",
+        "Cycling activity",
+        "Entrance fee & sharing boat at Trang An/Tam Coc boat trip, kayaking/bamboo boat",
+        "Free usage of rain-coat and conical hat"
+      ],
+      "servicesExcluded": [
+        "VAT",
+        "Đồ uống",
+        "Tiền boa cho hướng dẫn viên & tài xế và chi phí cá nhân",
+        "Phụ phí ngày lễ",
+        "Bất kỳ khoản nào không được đề cập ở trên"
+      ],
+      "servicesExcludedEn": [
+        "VAT",
+        "Drinks",
+        "Tips for tour guide & driver and personal expenses",
+        "Holiday surcharges",
+        "All services and items not mentioned specifically in the list above",
+        "THINGS YOU SHOULD BRING",
+        "Hat, umbrella, shoes",
+        "Sun cream, sun glasses",
+        "Mosquito spray",
+        "Camera"
+      ],
+      "serviceNote": "Có thực đơn Halal (kèm chứng chỉ chính thức) và thực đơn Buffet Ấn Độ cho khách có yêu cầu.",
+      "serviceNoteEn": "Certified Halal menu and Indian buffet options available on request.",
+      "offers": [
+        "Kết hợp Ninh Bình & Hạ Long",
+        "1 đêm khách sạn tiện nghi",
+        "Xe đưa đón khứ hồi trọn gói"
+      ],
+      "offersEn": [
+        "Dual Heritage combo",
+        "Comfortable hotel stay",
+        "Seamless transfers included"
+      ],
+      "pricingTable": {
+        "baseRate": "Báo giá trọn gói xe đưa đón & vé tham quan",
+        "baseRateEn": "All-inclusive quote with transfers & admission tickets",
+        "options": [
+          {
+            "name": "Nâng cấp xe Thaco Limousine cao cấp (17–22 chỗ)",
+            "nameEn": "Upgrade to Thaco Limousine (17–22 seats)",
+            "price": "+250.000đ / khách",
+            "priceEn": "+250,000 VND / guest"
+          },
+          {
+            "name": "Nâng cấp xe Luxury D-Car VIP thương gia",
+            "nameEn": "Upgrade to Luxury D-Car VIP",
+            "price": "+350.000đ / khách",
+            "priceEn": "+350,000 VND / guest"
+          },
+          {
+            "name": "Lựa chọn thực đơn Halal (Có chứng chỉ) hoặc Món Ấn",
+            "nameEn": "Certified Halal Menu or Indian Buffet meal option",
+            "price": "Đăng ký khi đặt tour",
+            "priceEn": "Available on request"
+          },
+          {
+            "name": "Hoạt động đạp xe xuyên làng quê",
+            "nameEn": "Village cycling experience",
+            "price": "Miễn phí",
+            "priceEn": "Included"
+          }
+        ],
+        "surcharges": [
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Luxury D-Car",
+            "nameEn": "Separate seat for child 1–4 on Luxury D-Car",
+            "price": "350.000đ / ghế",
+            "priceEn": "350,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe Thaco Limousine",
+            "nameEn": "Separate seat for child 1–4 on Thaco Limousine",
+            "price": "250.000đ / ghế",
+            "priceEn": "250,000 VND / seat"
+          },
+          {
+            "name": "Ghế riêng cho trẻ 1–4 tuổi trên xe thường",
+            "nameEn": "Separate seat for child 1–4 on Standard bus",
+            "price": "150.000đ / ghế",
+            "priceEn": "150,000 VND / seat"
+          },
+          {
+            "name": "Phụ thu ngày lễ / Tết",
+            "nameEn": "Public holiday / Tet surcharge",
+            "price": "100.000đ / khách",
+            "priceEn": "100,000 VND / guest"
+          }
+        ],
+        "childPolicy": [
+          {
+            "name": "Trẻ em 1–4 tuổi",
+            "nameEn": "Children 1–4 years",
+            "desc": "Miễn phí (ngồi chung ghế với bố mẹ; phụ thu ghế riêng nếu yêu cầu)",
+            "descEn": "Free (sharing seat with parents; surcharge if separate seat requested)"
+          },
+          {
+            "name": "Trẻ em 5–8 tuổi",
+            "nameEn": "Children 5–8 years",
+            "desc": "Tính 75% giá tour (áp dụng cho 1 trẻ; trẻ thứ 2 tính 100%)",
+            "descEn": "75% of adult price (applies to 1st child; 2nd child charged 100%)"
+          },
+          {
+            "name": "Trẻ em từ 9 tuổi trở lên",
+            "nameEn": "Children 9+ years",
+            "desc": "Tính 100% tiêu chuẩn người lớn",
+            "descEn": "Charged 100% as adult"
+          }
+        ]
+      },
+      "operatorId": "heritage"
+    }
+  ]
+};
+
+  function clone(v) {
+    return JSON.parse(JSON.stringify(v));
+  }
+
+  function normalize(raw) {
+    var data = clone(raw || {});
+    data.site = data.site || {};
+    data.hero = data.hero || { interval: 10000, slides: [] };
+    data.destinations = data.destinations || {};
+    data.tours = Array.isArray(data.tours) ? data.tours : [];
+    if (!Array.isArray(data.operators) || !data.operators.length) {
+      var legacy = data.partner || {};
+      data.operators = [{
+        id: "heritage",
+        name: legacy.name || "Heritage Vietnam Travel",
+        nameEn: legacy.nameEn || legacy.name || "Heritage Vietnam Travel",
+        hotline: legacy.hotline || "",
+        hotlineHref: legacy.hotlineHref || "",
+        website: legacy.website || "",
+        address: legacy.address || "",
+        active: true,
+        childrenPolicy: [],
+        childrenPolicyEn: []
+      }];
+    }
+    data.operators.forEach(function (op) {
+      op.childrenPolicy = Array.isArray(op.childrenPolicy) ? op.childrenPolicy : [];
+      op.childrenPolicyEn = Array.isArray(op.childrenPolicyEn) ? op.childrenPolicyEn : [];
+      if (op.active == null) op.active = true;
+    });
+    var fallbackId = data.operators[0].id;
+    data.tours.forEach(function (tour) {
+      if (!tour.operatorId) tour.operatorId = fallbackId;
+    });
+    var primary = null;
+    for (var i = 0; i < data.operators.length; i++) {
+      if (data.operators[i].active !== false) {
+        primary = data.operators[i];
+        break;
+      }
+    }
+    primary = primary || data.operators[0];
+    data.partner = {
+      id: primary.id,
+      name: primary.name || "",
+      hotline: primary.hotline || "",
+      hotlineHref: primary.hotlineHref || "",
+      website: primary.website || "",
+      address: primary.address || ""
+    };
+    data.email = data.site.email || data.email || "";
+    data.phone = data.site.phone || data.phone || "";
+    data.bank = data.site.bank || data.bank || {};
+    return data;
+  }
+
+  window.__CATALOGUE_RAW__ = RAW;
+  window.TOUR_DATA = normalize(RAW);
+  window.DAHLIA = window.DAHLIA || {
+    hotel: {
+      name: "The Dahlia Hanoi",
+      email: window.TOUR_DATA.email,
+      phone: window.TOUR_DATA.phone,
+      phoneHref: "tel:+84902271396",
+      phoneAlt: "0934 587 078",
+      phoneAltHref: "tel:+84934587078",
+      address: "23 Lâm Du, Bồ Đề, Hà Nội",
+      line: "Đến một nơi mới. Sống một trải nghiệm khác."
+    },
+    rooms: [],
+    tours: []
+  };
+})();

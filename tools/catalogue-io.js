@@ -160,6 +160,12 @@ function writeCatalogue(catalogue) {
   }
   fs.writeFileSync(JSON_PATH, JSON.stringify(catalogue, null, 2) + "\n", "utf8");
   fs.writeFileSync(DATA_JS_PATH, renderDataJs(catalogue), "utf8");
+
+  const wwwShared = path.join(ROOT, "wwwroot", "shared");
+  if (fs.existsSync(wwwShared)) {
+    fs.writeFileSync(path.join(wwwShared, "catalogue.json"), JSON.stringify(catalogue, null, 2) + "\n", "utf8");
+    fs.writeFileSync(path.join(wwwShared, "data.js"), renderDataJs(catalogue), "utf8");
+  }
 }
 
 module.exports = { writeCatalogue, validate, renderDataJs, JSON_PATH, DATA_JS_PATH, ROOT };

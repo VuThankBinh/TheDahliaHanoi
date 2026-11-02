@@ -1,8 +1,9 @@
 /**
- * Máy chủ local: trang Voyage + API ghi đè catalogue.
+ * Máy chủ local: trang Web The Dahlia (wwwroot) + API ghi đè catalogue + Quản trị admin.
  * Chỉ lắng nghe 127.0.0.1. Chạy: npm start
  */
 const http = require("http");
+const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { writeCatalogue, ROOT } = require("./tools/catalogue-io");
@@ -10,10 +11,11 @@ const { writeCatalogue, ROOT } = require("./tools/catalogue-io");
 const PORT = Number(process.env.PORT) || 4173;
 const HOST = process.env.HOST || "127.0.0.1";
 const root = path.resolve(ROOT);
+const WWWROOT = path.join(root, "wwwroot");
 const MAX_CATALOGUE = 8 * 1024 * 1024;
 const MAX_UPLOAD = 12 * 1024 * 1024;
 const MAX_IMAGE = 8 * 1024 * 1024;
-const IMG_ROOT = path.join(root, "voyage", "img");
+const IMG_ROOT = path.join(WWWROOT, "img");
 const FOLDER_RE = /^(tours|venues|food|fleet|experiences|destinations\/[a-z0-9][a-z0-9-]{0,80}|menus\/[a-z0-9][a-z0-9-]{0,80})$/;
 
 const MIME = {
@@ -118,12 +120,84 @@ function saveImage(payload) {
 
 function resolveFile(urlPath) {
   let rel = decodeURIComponent(urlPath.split("?")[0]);
-  if (rel === "/") rel = "/index.html";
+  if (rel === "/" || rel === "") rel = "/index.html";
   if (rel.endsWith("/")) rel += "index.html";
-  const file = path.resolve(root, "." + rel);
-  const fromRoot = path.relative(root, file);
-  if (fromRoot.startsWith("..") || path.isAbsolute(fromRoot)) return null;
-  return file;
+
+  // Backward-compatibility: rewrite legacy /voyage/... to /...
+  if (rel.startsWith("/voyage/")) {
+    rel = rel.substring(7);
+  }
+
+  // 1. Check in WWWROOT first
+  const fileInWww = path.resolve(WWWROOT, "." + rel);
+  const fromWww = path.relative(WWWROOT, fileInWww);
+  if (!fromWww.startsWith("..") && !path.isAbsolute(fromWww) && fs.existsSync(fileInWww)) {
+    return fileInWww;
+  }
+
+  // 2. Check in ROOT for /admin/, etc.
+  const fileInRoot = path.resolve(root, "." + rel);
+  const fromRoot = path.relative(root, fileInRoot);
+  if (!fromRoot.startsWith("..") && !path.isAbsolute(fromRoot) && fs.existsSync(fileInRoot)) {
+    return fileInRoot;
+  }
+
+  return null;
+}
+
+function forwardToFormSubmit(booking, targetEmail) {
+  return new Promise(function (resolve) {
+    const payload = JSON.stringify({
+      _subject: "[ĐẶT TOUR MỚI] " + (booking.tourName || "Tour") + " - Khách: " + (booking.name || "") + " (" + (booking.totalGuests || booking.guests || 2) + " khách)",
+      _replyto: booking.email || "",
+      _captcha: "false",
+      _template: "table",
+      "1. Họ và tên khách (Guest Name)": booking.name,
+      "2. Số điện thoại / WhatsApp": booking.phone,
+      "3. Email liên hệ": booking.email,
+      "4. Tour đã chọn": booking.tourName,
+      "5. Ngày khởi hành": booking.date,
+      "6. Số người lớn (Adults)": booking.adults || 2,
+      "7. Số trẻ em (Children)": booking.children || 0,
+      "8. Tổng số người tham gia": booking.totalGuests || booking.guests || 2,
+      "9. Ghi chú của khách": booking.note || "(Không có)",
+      "10. Báo giá tạm tính": booking.totalStr || "Liên hệ",
+      "11. Thời gian gửi": new Date().toLocaleString("vi-VN"),
+      "--- MẪU EMAIL PHẢN HỒI GỬI KHÁCH ---": booking.replyTemplate || ""
+    });
+
+    const req = https.request("https://formsubmit.co/ajax/" + encodeURIComponent(targetEmail), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://thedahliahanoi.com",
+        "Referer": "https://thedahliahanoi.com/",
+        "Content-Length": Buffer.byteLength(payload)
+      }
+    }, function (res) {
+      let data = "";
+      res.on("data", function (chunk) { data += chunk; });
+      res.on("end", function () {
+        try {
+          const parsed = JSON.parse(data);
+          console.log("[Email Dispatch] Sent to", targetEmail, "-> Status:", res.statusCode, parsed);
+          resolve(parsed);
+        } catch (e) {
+          console.log("[Email Dispatch] Raw response:", data);
+          resolve({ ok: res.statusCode === 200 });
+        }
+      });
+    });
+
+    req.on("error", function (err) {
+      console.error("[Email Dispatch] Error forwarding to FormSubmit:", err.message);
+      resolve({ ok: false, error: err.message });
+    });
+
+    req.write(payload);
+    req.end();
+  });
 }
 
 const server = http.createServer(function (req, res) {
@@ -179,6 +253,60 @@ const server = http.createServer(function (req, res) {
     return;
   }
 
+  if (url.pathname === "/api/book" && req.method === "POST") {
+    readBody(req, 1024 * 1024).then(function (raw) {
+      try {
+        const payload = JSON.parse(raw.toString("utf8"));
+        payload.id = "BK-" + Date.now();
+        payload.receivedAt = new Date().toISOString();
+        
+        // Save to shared/bookings.json
+        const bookingFiles = [
+          path.join(root, "shared", "bookings.json"),
+          path.join(WWWROOT, "shared", "bookings.json")
+        ];
+        
+        bookingFiles.forEach(function (bookingFile) {
+          try {
+            const dir = path.dirname(bookingFile);
+            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+            let list = [];
+            if (fs.existsSync(bookingFile)) {
+              try { list = JSON.parse(fs.readFileSync(bookingFile, "utf8")); } catch (e) {}
+            }
+            list.unshift(payload);
+            fs.writeFileSync(bookingFile, JSON.stringify(list.slice(0, 500), null, 2), "utf8");
+          } catch (e) {}
+        });
+
+        // Determine destination email from catalogue
+        let targetEmail = "linhfromhanam03@gmail.com";
+        try {
+          const cat = JSON.parse(fs.readFileSync(path.join(root, "shared", "catalogue.json"), "utf8"));
+          if (cat.site && cat.site.email) targetEmail = cat.site.email;
+        } catch (e) {}
+
+        // Forward email directly with verified origin
+        forwardToFormSubmit(payload, targetEmail).then(function (result) {
+          console.log("[Booking Dispatch Result]:", result);
+        });
+
+        send(res, 200, JSON.stringify({ ok: true, id: payload.id }), {
+          "Content-Type": "application/json; charset=utf-8"
+        });
+      } catch (err) {
+        send(res, 400, JSON.stringify({ ok: false, error: err.message }), {
+          "Content-Type": "application/json; charset=utf-8"
+        });
+      }
+    }).catch(function (err) {
+      send(res, 413, JSON.stringify({ ok: false, error: err.message }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+    });
+    return;
+  }
+
   if (url.pathname === "/api/catalogue" && req.method === "GET") {
     fs.readFile(path.join(root, "shared", "catalogue.json"), function (err, data) {
       if (err) return send(res, 404, "Not found");
@@ -205,6 +333,6 @@ const server = http.createServer(function (req, res) {
 
 server.listen(PORT, HOST, function () {
   const shown = HOST === "0.0.0.0" || HOST === "::" ? "127.0.0.1" : HOST;
-  console.log("Quản trị: http://" + shown + ":" + PORT + "/admin/");
-  console.log("Trang tour: http://" + shown + ":" + PORT + "/voyage/");
+  console.log("Trang chủ: http://" + shown + ":" + PORT + "/");
+  console.log("Quản trị:  http://" + shown + ":" + PORT + "/admin/");
 });

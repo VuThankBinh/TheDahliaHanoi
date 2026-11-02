@@ -9,4 +9,4 @@ services:
       PORT: 4173
     volumes:
       - ./shared:/app/shared
-      - ./voyage/img:/app/voyage/img
+      - ./wwwroot/img:/app/wwwroot/img

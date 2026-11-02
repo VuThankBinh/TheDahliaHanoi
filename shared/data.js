@@ -6,7 +6,7 @@
   var RAW = {
   "version": 2,
   "site": {
-    "email": "thedahliatour@gmail.com",
+    "email": "linhfromhanam03@gmail.com",
     "phone": "0902 271 396",
     "phoneAlt": "0934 587 078",
     "address": "23 Lâm Du, Bồ Đề, Hà Nội",
@@ -8225,7 +8225,6 @@
           "altEn": "Dedicated Indian set menu"
         }
       ],
-      "video": "img/tours/lanha-tropical-cruise/video/TROPICAL_CRUISE_2.mp4",
       "cardLine": "Chuyến hải trình 7 tiếng độc bản trên vịnh Lan Hạ và đảo Cát Bà: đi xe điện xuyên rừng quốc gia, khám phá Động Trung Trang, bể sục Jacuzzi, máng trượt nước và kayak giữa biển xanh.",
       "cardLineEn": "An exclusive 7-hour odyssey across Lan Ha Bay and Cat Ba Island: electric jungle cart, Trung Trang Cave, onboard Jacuzzi, water slide, and ocean kayaking.",
       "description": [

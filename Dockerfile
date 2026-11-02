@@ -11,7 +11,7 @@ COPY tools ./tools
 COPY shared ./shared
 COPY admin ./admin
 COPY assets ./assets
-COPY voyage ./voyage
+COPY wwwroot ./wwwroot
 
 EXPOSE 4173
 

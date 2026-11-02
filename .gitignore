@@ -38,3 +38,6 @@ raw_docs/
 # Python cache & build junk
 __pycache__/
 *.pyc
+
+# Local booking records
+shared/bookings.json

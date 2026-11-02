@@ -570,7 +570,15 @@
     (root || document).querySelectorAll("img:not(.logo):not(.logo-partner)").forEach(function (img) {
       if (img.dataset.bound) return;
       img.dataset.bound = "1";
-      img.addEventListener("error", function () { img.remove(); });
+      img.addEventListener("error", function () {
+        if (img.closest && (img.closest(".film-frame") || img.closest(".hero-slide"))) {
+          img.style.opacity = "0";
+          var parent = img.parentElement;
+          if (parent) parent.classList.add("img-load-failed");
+        } else {
+          img.remove();
+        }
+      });
     });
   }
 
