@@ -331,6 +331,18 @@ const server = http.createServer(function (req, res) {
   });
 });
 
+server.on("error", function (err) {
+  if (err.code === "EADDRINUSE") {
+    console.error("\n[LỖI] Cổng " + PORT + " đang bị một server cũ chiếm dụng!");
+    console.error("Cách giải phóng cổng trên PowerShell:");
+    console.error("  Stop-Process -Id (Get-NetTCPConnection -LocalPort " + PORT + ").OwningProcess -Force");
+    console.error("Hoặc chạy cổng khác: $env:PORT=4174; npm start\n");
+    process.exit(1);
+  } else {
+    throw err;
+  }
+});
+
 server.listen(PORT, HOST, function () {
   const shown = HOST === "0.0.0.0" || HOST === "::" ? "127.0.0.1" : HOST;
   console.log("Trang chủ: http://" + shown + ":" + PORT + "/");
