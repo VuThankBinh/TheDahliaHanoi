@@ -975,20 +975,11 @@
 
   function tourCardHtml(tour, href) {
     var unit = unitPrice(tour);
-    var noteText = field(tour, "priceNote");
-    var note = (unit && tour.price > 0 && noteText)
-      ? '<p class="price-note">' + U.escapeHtml(noteText) + "</p>"
-      : "";
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
     var opName = operatorLabel(tour);
-    var contactLabel = noteText || t("contact");
-    var priceBadge = unit
-      ? '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + "</span>"
-      : '<span class="price-badge">' + U.escapeHtml(contactLabel) + "</span>";
-    var priceFoot = unit
-      ? '<span class="price">' + formatPrice(unit.amount, unit.currency) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>"
-      : '<span class="price">' + U.escapeHtml(contactLabel) + "</span>";
+    var priceBadge = '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + "</span>";
+    var priceFoot = '<span class="price">' + formatPrice(unit.amount, unit.currency) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>";
 
     return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
@@ -1009,7 +1000,6 @@
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
       '<p class="desc is-lines" data-card-line="' + U.escapeHtml(line) + '">' +
       formatCardLineHtml(line) + "</p>" +
-      note +
       '<div class="foot-row">' + priceFoot +
       '<div class="card-btn-group">' +
       '<span class="link-more" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + '</span>' +
@@ -1759,19 +1749,11 @@
 
   function unitPrice(tour) {
     if (!tour) return null;
-    if (tour.price > 0) return { amount: tour.price, currency: "vnd" };
     var pt = tour.pricingTable || {};
-    var texts = [pt.baseRate, pt.baseRateEn, tour.cardLine, tour.cardLineEn];
-    var i;
-    for (i = 0; i < texts.length; i++) {
-      var vnd = parseVnd(texts[i]);
-      if (vnd) return { amount: vnd, currency: "vnd" };
-    }
-    for (i = 0; i < texts.length; i++) {
-      var usd = parseUsd(texts[i]);
-      if (usd) return { amount: usd, currency: "usd" };
-    }
-    return null;
+    var blob = [tour.id, tour.name, tour.cardLine, tour.cardLineEn, pt.baseRate, pt.baseRateEn].join(" ");
+    var usd = parseUsd(blob);
+    var premium = usd >= 100 || (tour.nightsOffset || 0) >= 1 || /signature/i.test(tour.id || "");
+    return { amount: premium ? 119 : 99, currency: "usd" };
   }
 
   function childPercent(tour) {
@@ -1806,13 +1788,8 @@
   }
 
   function priceLineHtml(tour) {
-    var note = field(tour, "priceNote");
     var unit = unitPrice(tour);
-    if (unit) {
-      return '<strong>' + formatPrice(unit.amount, unit.currency) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
-        (tour.price > 0 && note ? " · " + U.escapeHtml(note) : "");
-    }
-    return '<strong>' + U.escapeHtml(note || t("contact")) + "</strong> " + contactIconsHtml();
+    return '<strong>' + formatPrice(unit.amount, unit.currency) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>";
   }
 
   function bookingFormHtml(tour, opts) {
@@ -1829,10 +1806,7 @@
       childOptions += '<option value="' + c + '"' + (c === children ? " selected" : "") + ">" + c + " " + t("guest.children") + "</option>";
     }
     var unit = unitPrice(tour);
-    var note = field(tour, "priceNote") ? " · " + U.escapeHtml(field(tour, "priceNote")) : "";
-    var unitLine = unit
-      ? '<p class="unit">' + U.escapeHtml(t("book.unit")) + formatPrice(unit.amount, unit.currency) + U.escapeHtml(t("perGuest")) + (tour.price > 0 ? note : "") + "</p>"
-      : '<p class="unit"><strong>' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + "</strong></p>";
+    var unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) + formatPrice(unit.amount, unit.currency) + U.escapeHtml(t("perGuest")) + "</p>";
 
     return '<form class="book-form" id="book-form" novalidate>' +
       "<h2>" + U.escapeHtml(t("book.h")) + "</h2>" +
