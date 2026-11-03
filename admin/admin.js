@@ -7,7 +7,10 @@
     destId: null,
     dirty: false,
     folders: { media: "tours", menu: "menus/menu" },
-    folderTour: null
+    folderTour: null,
+    tourOpFilter: "all",
+    tourQuery: "",
+    tourChecked: {}
   };
 
   var panel = document.getElementById("panel");
@@ -569,11 +572,28 @@
     var tour = findTour(state.tourId) || tours()[0];
     state.tourId = tour ? tour.id : null;
     if (tour) rememberFolders(tour);
+    var opFilterOptions = '<option value="all"' + (state.tourOpFilter === "all" ? " selected" : "") + ">Tất cả đơn vị</option>" +
+      ops().map(function (op) {
+        var count = tours().filter(function (item) { return item.operatorId === op.id; }).length;
+        return '<option value="' + esc(op.id) + '"' + (state.tourOpFilter === op.id ? " selected" : "") + ">" +
+          esc(op.name || op.id) + " (" + count + ")</option>";
+      }).join("");
+    var bulkOpOptions = '<option value="">Đơn vị — không đổi</option>' +
+      ops().map(function (op) {
+        return '<option value="' + esc(op.id) + '">' + esc(op.name || op.id) + "</option>";
+      }).join("");
+    var bulkDestOptions = '<option value="">Điểm đến — không đổi</option>' +
+      destEntries().map(function (entry) {
+        return '<option value="' + esc(entry.id) + '">' + esc(entry.dest.name || entry.id) + "</option>";
+      }).join("");
     var list = tours().map(function (item) {
       var op = findOp(item.operatorId);
-      return '<button type="button" class="pick' + (item.id === state.tourId ? " is-on" : "") + '" data-tour="' + esc(item.id) + '">' +
+      var checked = state.tourChecked[item.id] ? " checked" : "";
+      return '<div class="pick-row" data-tour-row="' + esc(item.id) + '" data-op="' + esc(item.operatorId || "") + '">' +
+        '<input class="tour-check" type="checkbox" data-check="' + esc(item.id) + '"' + checked + ' aria-label="Chọn ' + esc(item.name || item.id) + '">' +
+        '<button type="button" class="pick' + (item.id === state.tourId ? " is-on" : "") + '" data-tour="' + esc(item.id) + '">' +
         esc(item.name || item.id) +
-        "<small>" + esc((op && op.name) || item.operatorId || "Chưa gắn đơn vị") + "</small></button>";
+        "<small>" + esc((op && op.name) || item.operatorId || "Chưa gắn đơn vị") + "</small></button></div>";
     }).join("");
     var opOptions = ops().map(function (op) {
       return '<option value="' + esc(op.id) + '"' + (tour && tour.operatorId === op.id ? " selected" : "") + ">" + esc(op.name) + "</option>";
@@ -627,7 +647,18 @@
     }
     panel.innerHTML =
       '<div class="split"><aside class="list"><div class="list-head"><h2>Tour</h2><button type="button" class="btn" id="add-tour">Thêm</button></div>' +
-      '<input id="tour-q" placeholder="Tìm tour hoặc đơn vị" style="margin-bottom:8px">' +
+      '<div class="tour-tools">' +
+      '<label>Lọc đơn vị<select id="tour-op-filter">' + opFilterOptions + "</select></label>" +
+      '<input id="tour-q" placeholder="Tìm trong danh sách" value="' + esc(state.tourQuery) + '">' +
+      '<div class="tour-tool-row">' +
+      '<button type="button" class="btn ghost" id="tour-check-visible">Chọn đang hiện</button>' +
+      '<button type="button" class="btn ghost" id="tour-uncheck">Bỏ chọn</button>' +
+      "</div>" +
+      '<label>Gán đơn vị<select id="bulk-op">' + bulkOpOptions + "</select></label>" +
+      '<label>Gán điểm đến<select id="bulk-dest">' + bulkDestOptions + "</select></label>" +
+      '<button type="button" class="btn" id="bulk-apply">Áp cho tour đã chọn</button>' +
+      '<p class="hint">Sửa từng tour hoặc chọn nhiều tour rồi gán đơn vị / điểm đến. Mọi thay đổi nằm trong bộ nhớ. Bấm Lưu và ghi đè một lần để ghi JSON.</p>' +
+      "</div>" +
       '<div class="picks" id="tour-picks">' + (list || "<p class=\"hint\">Chưa có tour.</p>") + "</div></aside>" +
       form + "</div>";
   }
@@ -711,9 +742,20 @@
     render();
   }
 
+  function applyTourListFilter() {
+    var q = String(state.tourQuery || "").trim().toLowerCase();
+    var op = state.tourOpFilter || "all";
+    panel.querySelectorAll(".pick-row").forEach(function (row) {
+      var text = row.textContent.toLowerCase();
+      var opOk = op === "all" || row.dataset.op === op;
+      var textOk = !q || text.indexOf(q) !== -1;
+      row.hidden = !(opOk && textOk);
+    });
+  }
+
   function bind() {
     panel.querySelectorAll("input, textarea, select").forEach(function (el) {
-      if (el.id === "tour-q") return;
+      if (el.id === "tour-q" || el.id === "tour-op-filter" || el.id === "bulk-op" || el.id === "bulk-dest" || el.classList.contains("tour-check")) return;
       el.addEventListener("input", markDirty);
       el.addEventListener("change", markDirty);
     });
@@ -767,12 +809,69 @@
     var search = document.getElementById("tour-q");
     if (search) {
       search.addEventListener("input", function () {
-        var q = search.value.trim().toLowerCase();
-        panel.querySelectorAll("[data-tour]").forEach(function (btn) {
-          btn.hidden = q && btn.textContent.toLowerCase().indexOf(q) === -1;
-        });
+        state.tourQuery = search.value;
+        applyTourListFilter();
       });
     }
+    var opFilter = document.getElementById("tour-op-filter");
+    if (opFilter) {
+      opFilter.addEventListener("change", function () {
+        state.tourOpFilter = opFilter.value;
+        applyTourListFilter();
+      });
+    }
+    panel.querySelectorAll(".tour-check").forEach(function (box) {
+      box.addEventListener("change", function () {
+        if (box.checked) state.tourChecked[box.dataset.check] = true;
+        else delete state.tourChecked[box.dataset.check];
+      });
+    });
+    var checkVisible = document.getElementById("tour-check-visible");
+    if (checkVisible) checkVisible.addEventListener("click", function () {
+      panel.querySelectorAll(".pick-row").forEach(function (row) {
+        if (row.hidden) return;
+        var id = row.dataset.tourRow;
+        state.tourChecked[id] = true;
+        var box = row.querySelector(".tour-check");
+        if (box) box.checked = true;
+      });
+    });
+    var uncheck = document.getElementById("tour-uncheck");
+    if (uncheck) uncheck.addEventListener("click", function () {
+      state.tourChecked = {};
+      panel.querySelectorAll(".tour-check").forEach(function (box) { box.checked = false; });
+    });
+    var bulkApply = document.getElementById("bulk-apply");
+    if (bulkApply) bulkApply.addEventListener("click", function () {
+      if (!commit()) return;
+      var ids = Object.keys(state.tourChecked);
+      if (!ids.length) {
+        setStatus("Chọn ít nhất một tour trong danh sách.", true);
+        return;
+      }
+      var nextOp = (document.getElementById("bulk-op") || {}).value || "";
+      var nextDest = (document.getElementById("bulk-dest") || {}).value || "";
+      if (!nextOp && !nextDest) {
+        setStatus("Chọn đơn vị hoặc điểm đến để gán.", true);
+        return;
+      }
+      if (nextOp && !findOp(nextOp)) {
+        setStatus("Đơn vị không hợp lệ.", true);
+        return;
+      }
+      var changed = 0;
+      ids.forEach(function (id) {
+        var tour = findTour(id);
+        if (!tour) return;
+        if (nextOp) tour.operatorId = nextOp;
+        if (nextDest) tour.destination = nextDest;
+        changed += 1;
+      });
+      markDirty();
+      setStatus("Đã sửa " + changed + " tour trong bộ nhớ. Bấm Lưu và ghi đè một lần để ghi JSON.");
+      render();
+    });
+    applyTourListFilter();
     var addOp = document.getElementById("add-op");
     if (addOp) addOp.addEventListener("click", function () {
       if (!commit()) return;
@@ -816,7 +915,9 @@
       var id = uniqueId("tour-moi", tours().map(function (tour) { return tour.id; }));
       var tour = {
         id: id,
-        operatorId: state.operatorId && findOp(state.operatorId) ? state.operatorId : ops()[0].id,
+        operatorId: state.tourOpFilter !== "all" && findOp(state.tourOpFilter)
+          ? state.tourOpFilter
+          : (state.operatorId && findOp(state.operatorId) ? state.operatorId : ops()[0].id),
         destination: dests[0],
         featured: false,
         stars: 5,

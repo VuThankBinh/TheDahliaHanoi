@@ -6,7 +6,7 @@
   var RAW = {
   "version": 2,
   "site": {
-    "email": "linhfromhanam03@gmail.com",
+    "email": "thedahliatour@gmail.com",
     "phone": "0902 271 396",
     "phoneAlt": "0934 587 078",
     "address": "23 Lâm Du, Bồ Đề, Hà Nội",

@@ -81,7 +81,7 @@ a.btn { text-decoration: none; display: inline-flex; align-items: center; }
 .tabs button.is-on { background: var(--brown); color: var(--bg); }
 .split {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 320px minmax(0, 1fr);
   gap: 16px;
   align-items: start;
 }
@@ -123,8 +123,21 @@ button.pick {
   padding: 8px 10px;
 }
 button.pick small { display: block; color: var(--body); font-weight: 500; }
-button.pick.is-on { background: var(--brown); color: var(--bg); border-color: var(--brown); }
-button.pick.is-on small { color: #efe6da; }
+.pick-row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+.pick-row .tour-check {
+  width: auto;
+  margin: 12px 0 0;
+  flex: 0 0 auto;
+}
+.pick-row button.pick { flex: 1; min-width: 0; }
+.tour-tools { display: grid; gap: 8px; margin-bottom: 10px; }
+.tour-tool-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.tour-tool-row .btn { padding: 8px 12px; font-size: 13px; }
+.tour-tools > .btn { justify-self: start; }
 .form, .site-form { display: grid; gap: 14px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 label { display: grid; gap: 4px; font-size: 13px; font-weight: 700; color: var(--body); }
