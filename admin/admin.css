@@ -128,6 +128,7 @@ button.pick small { display: block; color: var(--body); font-weight: 500; }
   gap: 6px;
   align-items: flex-start;
 }
+.pick-row[hidden] { display: none; }
 .pick-row .tour-check {
   width: auto;
   margin: 12px 0 0;

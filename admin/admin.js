@@ -589,7 +589,7 @@
     var list = tours().map(function (item) {
       var op = findOp(item.operatorId);
       var checked = state.tourChecked[item.id] ? " checked" : "";
-      return '<div class="pick-row" data-tour-row="' + esc(item.id) + '" data-op="' + esc(item.operatorId || "") + '">' +
+      return '<div class="pick-row" data-tour-row="' + esc(item.id) + '" data-operator="' + esc(item.operatorId || "") + '">' +
         '<input class="tour-check" type="checkbox" data-check="' + esc(item.id) + '"' + checked + ' aria-label="Chọn ' + esc(item.name || item.id) + '">' +
         '<button type="button" class="pick' + (item.id === state.tourId ? " is-on" : "") + '" data-tour="' + esc(item.id) + '">' +
         esc(item.name || item.id) +
@@ -747,7 +747,7 @@
     var op = state.tourOpFilter || "all";
     panel.querySelectorAll(".pick-row").forEach(function (row) {
       var text = row.textContent.toLowerCase();
-      var opOk = op === "all" || row.dataset.op === op;
+      var opOk = op === "all" || row.dataset.operator === op;
       var textOk = !q || text.indexOf(q) !== -1;
       row.hidden = !(opOk && textOk);
     });
