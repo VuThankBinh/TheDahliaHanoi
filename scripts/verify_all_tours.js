@@ -21,36 +21,25 @@ let errors = [];
 tourData.tours.forEach(t => {
   counts[t.destination] = (counts[t.destination] || 0) + 1;
 
-  // Check Ha Long & Lan Ha tours
-  if (t.destination === 'ha-long') {
-    if (!t.pricingTable) errors.push(`Ha Long tour ${t.id} missing pricingTable`);
-    if (!fs.existsSync(path.join(WWWROOT_DIR, t.image))) {
-      errors.push(`Ha Long tour ${t.id} image missing in wwwroot: ${t.image}`);
-    }
+  // Check image exists in wwwroot
+  if (!fs.existsSync(path.join(WWWROOT_DIR, t.image))) {
+    errors.push(`Tour ${t.id} image missing in wwwroot: ${t.image}`);
   }
 
-  // Check Ninh Binh tours
-  if (t.destination === 'ninh-binh') {
-    if (!t.pricingTable) errors.push(`Ninh Binh tour ${t.id} missing pricingTable`);
-    if (!fs.existsSync(path.join(WWWROOT_DIR, t.image))) {
-      errors.push(`Ninh Binh tour ${t.id} image missing in wwwroot: ${t.image}`);
+  // Check all media items exist
+  (t.media || []).forEach((m, idx) => {
+    if (!fs.existsSync(path.join(WWWROOT_DIR, m.src))) {
+      errors.push(`Tour ${t.id} media[${idx}] missing: ${m.src}`);
     }
-  }
+  });
 
-  // Check Sapa tours
-  if (t.destination === 'sapa') {
-    if (!t.pricingTable) errors.push(`Sapa tour ${t.id} missing pricingTable`);
-    if (!fs.existsSync(path.join(WWWROOT_DIR, t.image))) {
-      errors.push(`Sapa tour ${t.id} image missing in wwwroot: ${t.image}`);
-    }
-  }
-
-  // Check Ha Noi tours
-  if (t.destination === 'ha-noi') {
-    if (!t.pricingTable) errors.push(`Ha Noi tour ${t.id} missing pricingTable`);
-    if (!fs.existsSync(path.join(WWWROOT_DIR, t.image))) {
-      errors.push(`Ha Noi tour ${t.id} image missing in wwwroot: ${t.image}`);
-    }
+  // Check menuGallery items exist if present
+  if (t.menuGallery && t.menuGallery.images) {
+    t.menuGallery.images.forEach((m, idx) => {
+      if (!fs.existsSync(path.join(WWWROOT_DIR, m.src))) {
+        errors.push(`Tour ${t.id} menuGallery[${idx}] missing: ${m.src}`);
+      }
+    });
   }
 });
 
