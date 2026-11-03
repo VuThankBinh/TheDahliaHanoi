@@ -10,7 +10,7 @@
     return !op || op.active !== false;
   });
   function getSiteEmail() {
-    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "linhfromhanam03@gmail.com";
+    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "thedahliatour@gmail.com";
   }
   function getWeb3FormsKey() {
     return (DATA && DATA.site && DATA.site.web3formsKey) || "";
