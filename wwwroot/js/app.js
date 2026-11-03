@@ -953,10 +953,11 @@
 
   function priceOk(tour, band) {
     if (band === "all") return true;
-    if (!tour.price || tour.price <= 0) return true;
-    if (band === "under") return tour.price < 1000000;
-    if (band === "mid") return tour.price >= 1000000 && tour.price <= 2500000;
-    if (band === "over") return tour.price > 2500000;
+    var unit = unitPrice(tour);
+    if (!unit || unit.currency !== "vnd") return true;
+    if (band === "under") return unit.amount < 1000000;
+    if (band === "mid") return unit.amount >= 1000000 && unit.amount <= 2500000;
+    if (band === "over") return unit.amount > 2500000;
     return true;
   }
 
@@ -973,20 +974,20 @@
   }
 
   function tourCardHtml(tour, href) {
-    var isContact = !tour.price || tour.price <= 0;
+    var unit = unitPrice(tour);
     var noteText = field(tour, "priceNote");
-    var note = (!isContact && noteText)
+    var note = (unit && tour.price > 0 && noteText)
       ? '<p class="price-note">' + U.escapeHtml(noteText) + "</p>"
       : "";
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
     var opName = operatorLabel(tour);
     var contactLabel = noteText || t("contact");
-    var priceBadge = !isContact
-      ? '<span class="price-badge">' + U.money(tour.price) + "</span>"
+    var priceBadge = unit
+      ? '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + "</span>"
       : '<span class="price-badge">' + U.escapeHtml(contactLabel) + "</span>";
-    var priceFoot = !isContact
-      ? '<span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>"
+    var priceFoot = unit
+      ? '<span class="price">' + formatPrice(unit.amount, unit.currency) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>"
       : '<span class="price">' + U.escapeHtml(contactLabel) + "</span>";
 
     return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
@@ -1726,6 +1727,94 @@
     return { count: count, total: total };
   }
 
+  function contactIconsHtml() {
+    return '<span class="contact-icons">' +
+      '<a class="soc soc-zalo" href="https://zalo.me/0902271396" target="_blank" rel="noopener" aria-label="Zalo" title="Zalo">Zalo</a>' +
+      '<a class="soc soc-wa" href="https://wa.me/84902271396" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">' +
+      '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.33 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.92c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.24-.26.64-.38.86-.38.21 0 .43 0 .62.01.2.01.46-.07.72.55.26.64.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.32.33-.14.64.19.31.83 1.37 1.78 2.22 1.22 1.09 2.25 1.43 2.57 1.59.32.16.5.13.69-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.26.72-.16.29.1 1.84.87 2.16 1.03.32.16.53.24.61.37.08.13.08.75-.16 1.43z"/></svg>' +
+      "</a></span>";
+  }
+
+  function parseVnd(text) {
+    var match = String(text || "").match(/(\d{1,3}(?:[.,\s]\d{3})+|\d+)\s*(?:đ|vnd)/i);
+    if (!match) return 0;
+    var amount = parseInt(match[1].replace(/[.,\s]/g, ""), 10);
+    return amount > 0 ? amount : 0;
+  }
+
+  function parseUsd(text) {
+    var match = String(text || "").match(/\$\s*(\d+(?:\.\d+)?)/);
+    if (!match) return 0;
+    var amount = parseFloat(match[1]);
+    return amount > 0 ? amount : 0;
+  }
+
+  function formatPrice(amount, currency) {
+    if (currency === "usd") {
+      var n = Math.round(amount * 100) / 100;
+      return "$" + (n % 1 === 0 ? String(n) : n.toFixed(2));
+    }
+    return U.money(amount);
+  }
+
+  function unitPrice(tour) {
+    if (!tour) return null;
+    if (tour.price > 0) return { amount: tour.price, currency: "vnd" };
+    var pt = tour.pricingTable || {};
+    var texts = [pt.baseRate, pt.baseRateEn, tour.cardLine, tour.cardLineEn];
+    var i;
+    for (i = 0; i < texts.length; i++) {
+      var vnd = parseVnd(texts[i]);
+      if (vnd) return { amount: vnd, currency: "vnd" };
+    }
+    for (i = 0; i < texts.length; i++) {
+      var usd = parseUsd(texts[i]);
+      if (usd) return { amount: usd, currency: "usd" };
+    }
+    return null;
+  }
+
+  function childPercent(tour) {
+    var rows = (tour.pricingTable && tour.pricingTable.childPolicy) || [];
+    var found = null;
+    rows.forEach(function (row) {
+      if (found != null) return;
+      var desc = String(row.desc || "") + " " + String(row.descEn || "");
+      var match = desc.match(/(\d+)\s*%/);
+      if (!match) return;
+      var pct = parseInt(match[1], 10);
+      if (pct > 0 && pct < 100) found = pct;
+    });
+    return found == null ? 100 : found;
+  }
+
+  function quoteAmount(tour, adults, children) {
+    var unit = unitPrice(tour);
+    if (!unit) return null;
+    var pct = childPercent(tour);
+    var total = adults * unit.amount + children * unit.amount * pct / 100;
+    if (unit.currency === "vnd") total = Math.round(total);
+    else total = Math.round(total * 100) / 100;
+    return {
+      unit: unit.amount,
+      currency: unit.currency,
+      pct: pct,
+      total: total,
+      adults: adults,
+      children: children
+    };
+  }
+
+  function priceLineHtml(tour) {
+    var note = field(tour, "priceNote");
+    var unit = unitPrice(tour);
+    if (unit) {
+      return '<strong>' + formatPrice(unit.amount, unit.currency) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" +
+        (tour.price > 0 && note ? " · " + U.escapeHtml(note) : "");
+    }
+    return '<strong>' + U.escapeHtml(note || t("contact")) + "</strong> " + contactIconsHtml();
+  }
+
   function bookingFormHtml(tour, opts) {
     opts = opts || {};
     var adults = opts.adults || opts.guests || 2;
@@ -1739,9 +1828,10 @@
     for (var c = 0; c <= 8; c++) {
       childOptions += '<option value="' + c + '"' + (c === children ? " selected" : "") + ">" + c + " " + t("guest.children") + "</option>";
     }
+    var unit = unitPrice(tour);
     var note = field(tour, "priceNote") ? " · " + U.escapeHtml(field(tour, "priceNote")) : "";
-    var unitLine = tour.price > 0
-      ? '<p class="unit">' + U.escapeHtml(t("book.unit")) + U.money(tour.price) + U.escapeHtml(t("perGuest")) + note + "</p>"
+    var unitLine = unit
+      ? '<p class="unit">' + U.escapeHtml(t("book.unit")) + formatPrice(unit.amount, unit.currency) + U.escapeHtml(t("perGuest")) + (tour.price > 0 ? note : "") + "</p>"
       : '<p class="unit"><strong>' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + "</strong></p>";
 
     return '<form class="book-form" id="book-form" novalidate>' +
@@ -1761,6 +1851,7 @@
       '<label><span>' + U.escapeHtml(t("book.note")) + '</span><textarea id="book-note" name="note" rows="2" placeholder="' + U.escapeHtml(t("ph.note")) + '"></textarea></label>' +
       '<p id="sum-math" class="math"></p>' +
       '<p class="sum" aria-live="polite"><span>' + U.escapeHtml(t("book.total")) + '</span> <strong id="tour-total"></strong></p>' +
+      '<p class="sum sum-contact"><span>' + U.escapeHtml(t("contact")) + "</span>" + contactIconsHtml() + "</p>" +
       '<p id="form-error" class="form-error" role="alert" hidden></p>' +
       '<button class="btn block btn-submit-booking" type="submit" id="book-submit-btn">' +
         '<span class="btn-text">' + U.escapeHtml(t("btn.hold")) + '</span>' +
@@ -1802,17 +1893,19 @@
 
     function quote() {
       var counts = getGuestCounts();
-      if (tour.price > 0) {
-        var totalAmount = counts.adults * tour.price;
-        var mathText = counts.adults + " × " + U.money(tour.price);
-        if (counts.children > 0) mathText += " + " + counts.children + " " + t("guest.children");
-        totalEl.textContent = U.money(totalAmount);
-        totalEl.dataset.amount = String(totalAmount);
+      var priced = quoteAmount(tour, counts.adults, counts.children);
+      if (priced) {
+        var mathText = counts.adults + " × " + formatPrice(priced.unit, priced.currency);
+        if (counts.children > 0) mathText += " + " + counts.children + " × " + priced.pct + "%";
+        totalEl.textContent = formatPrice(priced.total, priced.currency);
+        totalEl.classList.remove("is-rate");
+        totalEl.dataset.amount = String(priced.total);
         mathEl.textContent = mathText;
       } else {
-        totalEl.textContent = U.escapeHtml(field(tour, "priceNote") || t("contact"));
+        totalEl.textContent = field(tour, "priceNote") || t("contact");
+        totalEl.classList.remove("is-rate");
         totalEl.dataset.amount = "0";
-        mathEl.textContent = U.escapeHtml(t("price.onDemand"));
+        mathEl.textContent = t("price.onDemand");
       }
       syncEnd();
       return { counts: counts, totalStr: totalEl.textContent };
@@ -2512,7 +2605,6 @@
       var excluded = field(tour, "servicesExcluded") || [];
       var offers = field(tour, "offers") || [];
       var serviceNote = field(tour, "serviceNote");
-      var priceNote = field(tour, "priceNote");
       var destInfo = destMeta(tour.destination);
 
       detail.innerHTML =
@@ -2526,11 +2618,7 @@
         (destInfo.lead ? '<p class="detail-dest-lead">' + U.escapeHtml(destInfo.lead) + "</p>" : "") +
         '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
         starsHtml(tour, { showTier: true, className: "detail-stars" }) +
-        '<p class="price-line">' +
-        (tour.price > 0
-          ? '<strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>" + (priceNote ? " · " + U.escapeHtml(priceNote) : "")
-          : '<strong>' + U.escapeHtml(priceNote || t("contact")) + "</strong>") +
-        "</p>" +
+        '<p class="price-line">' + priceLineHtml(tour) + "</p>" +
         "</div>" +
         "</div>" +
         detailSlideshowHtml(tour) +
@@ -2659,11 +2747,7 @@
         "<h1>" + U.escapeHtml(field(tour, "name")) + "</h1>" +
         '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         "<p>" + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
-        '<p class="price-line">' +
-        (tour.price > 0
-          ? '<strong>' + U.money(tour.price) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>"
-          : '<strong>' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + "</strong>") +
-        "</p>" +
+        '<p class="price-line">' + priceLineHtml(tour) + "</p>" +
         '<div class="when">' +
         "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
         "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
@@ -2866,6 +2950,10 @@
                 '<span>' + U.escapeHtml(t("book.total")) + ':</span>' +
                 '<strong id="modal-price-val">Liên hệ</strong>' +
               '</div>' +
+              '<div class="modal-pricing-preview sum-contact">' +
+                '<span>' + U.escapeHtml(t("contact")) + ':</span>' +
+                contactIconsHtml() +
+              '</div>' +
               '<p id="modal-form-error" class="form-error" role="alert" hidden></p>' +
               '<button class="btn block btn-submit-booking" type="submit" id="modal-submit-btn">' +
                 '<span class="btn-text">' + U.escapeHtml(t("btn.hold")) + '</span>' +
@@ -2944,15 +3032,20 @@
         return;
       }
       var adults = parseInt(adultsSelect.value || "2", 10);
-      if (tour.price > 0) {
-        priceVal.textContent = U.money(tour.price * adults);
+      var children = parseInt(childrenSelect.value || "0", 10);
+      var priced = quoteAmount(tour, adults, children);
+      if (priced) {
+        priceVal.textContent = formatPrice(priced.total, priced.currency);
+        priceVal.classList.remove("is-rate");
       } else {
-        priceVal.textContent = U.escapeHtml(field(tour, "priceNote") || t("contact"));
+        priceVal.textContent = field(tour, "priceNote") || t("contact");
+        priceVal.classList.remove("is-rate");
       }
     }
 
     tourSelect.addEventListener("change", updateModalQuote);
     adultsSelect.addEventListener("change", updateModalQuote);
+    childrenSelect.addEventListener("change", updateModalQuote);
 
     function closeModal() {
       modal.classList.remove("is-open");

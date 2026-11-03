@@ -1433,6 +1433,14 @@ select option { color: var(--ink); background: #fff; }
   margin: 4px 0 0; font-weight: 600; color: var(--body);
 }
 .book-form .sum strong { font-size: 24px; color: var(--brown); }
+.book-form .sum strong.is-rate,
+.price-line strong.is-rate,
+.modal-pricing-preview strong.is-rate {
+  font-size: 15px; font-weight: 700; line-height: 1.35; text-align: right;
+}
+.contact-icons { display: inline-flex; gap: 8px; align-items: center; }
+.price-line .contact-icons { margin-left: 8px; vertical-align: middle; }
+.sum-contact { align-items: center; }
 .btn.block { width: 100%; justify-content: center; }
 .confirm-panel { display: grid; gap: 12px; }
 .confirm-box {
