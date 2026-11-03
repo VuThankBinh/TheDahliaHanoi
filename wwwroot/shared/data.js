@@ -137,36 +137,44 @@
     "interval": 10000,
     "slides": [
       {
-        "type": "image",
-        "place": "ha-noi",
-        "poster": "img/tours/dest-hanoi-1.jpg",
-        "src": "img/tours/dest-hanoi-1.jpg",
-        "alt": "Hà Nội ngàn năm văn hiến",
-        "altEn": "Hanoi thousand years of culture"
-      },
-      {
-        "type": "image",
+        "type": "video",
         "place": "ha-long",
         "poster": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
-        "src": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
-        "alt": "Du thuyền Hạ Long & Lan Hạ",
-        "altEn": "Ha Long & Lan Ha Cruise"
+        "alt": "Highlight Hạ Long",
+        "altEn": "Ha Long highlight",
+        "sources": [
+          "img/video/2169880-hd_1280_720_30fps.mp4"
+        ]
       },
       {
-        "type": "image",
+        "type": "video",
         "place": "ninh-binh",
-        "poster": "img/destinations/ninh-binh/trang-an-boat.jpg",
-        "src": "img/destinations/ninh-binh/trang-an-boat.jpg",
-        "alt": "Quần thể danh thắng Tràng An Ninh Bình",
-        "altEn": "Trang An Landscape Complex Ninh Binh"
+        "poster": "img/destinations/ninh-binh/hoa-lu.jpg",
+        "alt": "Highlight Ninh Bình",
+        "altEn": "Ninh Binh highlight",
+        "sources": [
+          "img/video/3571264-hd_1280_720_30fps.mp4"
+        ]
       },
       {
-        "type": "image",
+        "type": "video",
+        "place": "ha-noi",
+        "poster": "img/destinations/hanoi/tran-quoc-pagoda.jpg",
+        "alt": "Highlight Hà Nội",
+        "altEn": "Hanoi highlight",
+        "sources": [
+          "img/video/16092120_2560_1440_30fps.mp4"
+        ]
+      },
+      {
+        "type": "video",
         "place": "sapa",
-        "poster": "img/tours/sapa-placeholder.jpg",
-        "src": "img/tours/sapa-placeholder.jpg",
+        "poster": "img/tours/sapa/muong-hoa.jpg",
         "alt": "Highlight Sa Pa",
-        "altEn": "Sapa highlight"
+        "altEn": "Sapa highlight",
+        "sources": [
+          "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4"
+        ]
       }
     ]
   },
@@ -269,7 +277,7 @@
       "titleEn": "Sapa – Misty Mountain Town & Northwest Villages",
       "lead": "Chinh phục Nóc nhà Đông Dương Fansipan, thung lũng Mường Hoa, chợ phiên Bắc Hà và trải nghiệm homestay bản làng người H'Mông, Giáy, Dao Đỏ.",
       "leadEn": "Conquer Fansipan summit, explore Muong Hoa valley, Bac Ha ethnic market, and authentic homestay experiences with local hill tribes.",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4",
       "media": [
         {
           "type": "image",

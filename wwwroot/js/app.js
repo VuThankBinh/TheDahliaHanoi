@@ -202,7 +202,7 @@
     "fleet.shuttle.f3": { vi: "Đón trả đúng lịch trình, an toàn tuyệt đối mọi hành trình", en: "On-time pickup and drop-off, with a safe trip throughout" },
     "fleet.shuttle.f4": { vi: "Lựa chọn tối ưu ngân sách cho các bạn trẻ và nhóm đông", en: "A practical choice for younger travellers and large groups" },
     "nav.pay": { vi: "Hướng dẫn thanh toán", en: "Payment Guide" },
-    "vo.payguide.title": { vi: "Hướng dẫn thanh toán — LocalPay", en: "Payment Guide — LocalPay" },
+    "vo.payguide.title": { vi: "Hướng dẫn thanh toán — The Dahlia Hanoi", en: "Payment Guide — The Dahlia Hanoi" },
     "payguide.close": { vi: "Đóng quảng cáo LocalPay", en: "Close LocalPay ad" },
     "payguide.rail": { vi: "LocalPay — quét QR thanh toán tại Việt Nam", en: "LocalPay — scan QR to pay in Vietnam" },
     "contact.map.k": { vi: "Vị trí", en: "Location" },
@@ -210,12 +210,12 @@
     "contact.map.p": { vi: "Văn phòng The Dahlia — mở Google Maps để chỉ đường.", en: "The Dahlia office — open Google Maps for directions." },
     "contact.map.dir": { vi: "Chỉ đường Google Maps", en: "Directions on Google Maps" },
     "contact.map.open": { vi: "Mở trên Google Maps", en: "Open in Google Maps" },
-    "vo.tours.title": { vi: "Tour — The Sinh Tourist", en: "Tours — The Sinh Tourist" },
+    "vo.tours.title": { vi: "Tour — The Dahlia Hanoi", en: "Tours — The Dahlia Hanoi" },
     "vo.tours.page": { vi: "Chọn điểm đến, giữ chỗ", en: "Pick a destination, hold a place" },
     "vo.tours.lede": { vi: "Lọc theo điểm đến, hạng sao và giá. Mỗi địa điểm có tiêu đề riêng ở đầu nhóm tour.", en: "Filter by destination, star tier, and price. Each place opens with its own title above the tours." },
-    "vo.book.title": { vi: "Đặt tour — The Sinh Tourist", en: "Book a tour — The Sinh Tourist" },
+    "vo.book.title": { vi: "Đặt tour — The Dahlia Hanoi", en: "Book a tour — The Dahlia Hanoi" },
     "vo.book.h": { vi: "Chọn tour rồi giữ chỗ", en: "Choose a tour, then hold a place" },
-    "vo.contact.title": { vi: "Liên hệ — The Sinh Tourist", en: "Contact — The Sinh Tourist" },
+    "vo.contact.title": { vi: "Liên hệ — The Dahlia Hanoi", en: "Contact — The Dahlia Hanoi" },
     "vo.contact.h": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
     "vo.contact.lede": { vi: "Form mở thư tới linhfromhanam03@gmail.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to linhfromhanam03@gmail.com. Fill it in so we can answer quickly." },
     "vo.contact.hours": { vi: "Chỉ đặt tour · phản hồi trong giờ hành chính", en: "Tours only · replies in business hours" },
@@ -248,8 +248,8 @@
     "confirm.title": { vi: "Đã ghi nhận đặt tour", en: "Tour request recorded" },
     "confirm.body": { vi: "Thư đã được mở sẵn tới linhfromhanam03@gmail.com. Trang này không thu tiền — chúng tôi sẽ liên hệ để xác nhận tour.", en: "A draft opens to linhfromhanam03@gmail.com. This page does not take payment — we will contact you to confirm the tour." },
     "confirm.back": { vi: "Xem thêm tour", en: "See more tours" },
-    "mail.tourBook": { vi: "Đặt tour — The Sinh Tourist", en: "Tour booking — The Sinh Tourist" },
-    "mail.tour": { vi: "Yêu cầu tour — The Sinh Tourist", en: "Tour request — The Sinh Tourist" },
+    "mail.tourBook": { vi: "Đặt tour — The Dahlia Hanoi", en: "Tour booking — The Dahlia Hanoi" },
+    "mail.tour": { vi: "Yêu cầu tour — The Dahlia Hanoi", en: "Tour request — The Dahlia Hanoi" },
     "btn.send": { vi: "Gửi yêu cầu", en: "Send request" },
     "err.send": { vi: "Chưa gửi được. Kiểm tra mạng rồi thử lại.", en: "Could not send. Check your connection and try again." },
     "perGuest": { vi: "/ khách", en: "/ guest" },
@@ -1133,6 +1133,14 @@
           alt: mediaAlt(item, name)
         });
       });
+      if (tour.video && !slides.some(function (slide) { return slide.src === tour.video; })) {
+        slides.push({
+          type: "video",
+          src: tour.video,
+          poster: tour.image,
+          alt: name
+        });
+      }
       return slides;
     }
     var pack = DEST_MEDIA[resolveDestId(tour.destination)] || { images: [], video: "", media: [] };
@@ -1155,6 +1163,14 @@
       slides.push({
         type: "video",
         src: pack.video,
+        poster: tour.image,
+        alt: name
+      });
+    }
+    if (tour.video && !slides.some(function (slide) { return slide.src === tour.video; })) {
+      slides.push({
+        type: "video",
+        src: tour.video,
         poster: tour.image,
         alt: name
       });
