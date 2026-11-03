@@ -5951,13 +5951,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/bac-ha-market.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa – Chợ Phiên Bắc Hà 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
-          "altEn": "Sapa – Bac Ha Market Tour 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/bac-ha-market.jpg",
+          "alt": "Chợ phiên Bắc Hà. Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Bac Ha market. Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bac_Ha_market_day%2C_Vietnam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
         }
       ],
       "cardLine": "Khám phá bản Cát Cát thơ mộng và trải nghiệm không gian văn hóa rực rỡ sắc màu tại chợ phiên Bắc Hà họp vào chủ nhật hàng tuần.",
@@ -6176,13 +6194,39 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/bac-ha-market.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa – Núi Hàm Rồng – Chợ Phiên Bắc Hà 3N2Đ (Khách Sạn) - The Dahlia Hanoi",
-          "altEn": "Sapa – Ham Rong Mountain – Bac Ha Market 3 Days 2 Nights (Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/bac-ha-market.jpg",
+          "alt": "Chợ phiên Bắc Hà. Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Bac Ha market. Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Peter Olshevsky · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bac_Ha_market_day%2C_Vietnam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/fansipan.jpg",
+          "alt": "Cáp treo Fansipan. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Fansipan cable car. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Fansipan_cable_car_aerial_view_terraced_rice_fields_Sa_Pa_Viet_Nam.jpg"
         }
       ],
       "cardLine": "Hành trình 3 ngày trọn vẹn: trekking bản Cát Cát, ngắm hoa tại núi Hàm Rồng, cáp treo Fansipan và phiên chợ vùng cao Bắc Hà.",
@@ -6447,13 +6491,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/fansipan.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa – Bản Cát Cát – Cáp Treo Fansipan 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
-          "altEn": "Sapa – Cat Cat Village – Fansipan Peak 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/fansipan.jpg",
+          "alt": "Cáp treo Fansipan. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Fansipan cable car. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Fansipan_cable_car_aerial_view_terraced_rice_fields_Sa_Pa_Viet_Nam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
         }
       ],
       "cardLine": "Chinh phục Nóc nhà Đông Dương Fansipan hùng vĩ bằng cáp treo và tàu Mường Hoa, hòa mình vào bản làng Cát Cát của người H'Mông.",
@@ -6679,13 +6741,23 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/cat-cat.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa – Bản Cát Cát – Núi Hàm Rồng 2N1Đ (Khách Sạn) - The Dahlia Hanoi",
-          "altEn": "Sapa – Cat Cat Village – Ham Rong Mountain 2 Days 1 Night (Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
         }
       ],
       "cardLine": "Tour Sa Pa truyền thống 2N1Đ nhẹ nhàng, tham quan thác Cát Cát và ngắm nhìn toàn cảnh thị trấn Sa Pa từ đài quan sát núi Hàm Rồng.",
@@ -6909,13 +6981,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/ta-van.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa Ngủ Bản 2N1Đ Homestay (Ý Linh Hồ – Lao Chải – Tả Van) - The Dahlia Hanoi",
-          "altEn": "Sapa Homestay Trekking Tour 2 Days 1 Night (Y Linh Ho – Lao Chai – Ta Van) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/y-linh-ho.jpg",
+          "alt": "Hồ Ý Linh. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Y Linh Ho. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Vietnam-Sapa-Y_Linh_Ho_village-P1070238.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
         }
       ],
       "cardLine": "Trekking qua thung lũng Mường Hoa, ngắm ruộng bậc thang ngoạn mục và trải nghiệm nghỉ đêm ấm cúng tại homestay bản Giáy Tả Van.",
@@ -7153,13 +7243,23 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/cat-cat.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm (Khách Sạn Cát Cát – Hàm Rồng) - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus Tour (Cat Cat – Ham Rong Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
         }
       ],
       "cardLine": "Tiết kiệm tối đa thời gian với xe giường nằm đêm từ Hà Nội, có trọn vẹn 2 ngày khám phá bản Cát Cát và đỉnh Hàm Rồng.",
@@ -7404,13 +7504,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/ta-van.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa Ngủ Bản 2N2Đ Xe Giường Nằm (Homestay Tả Van) - The Dahlia Hanoi",
-          "altEn": "Sapa Homestay Trekking 2 Days 2 Nights Sleeper Bus (Ta Van Village) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Khởi hành đêm từ Hà Nội, trekking sâu vào các bản Ý Linh Hồ, Lao Chải, Tả Van, Giàng Tả Chải và nghỉ đêm tại homestay.",
@@ -7674,13 +7792,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/ta-van.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N2Đ Homestay Ngủ Bản Kết Hợp Cáp Treo Fansipan - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 2 Nights Homestay & Fansipan Peak Tour - The Dahlia Hanoi"
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Sự kết hợp hoàn hảo giữa trải nghiệm văn hóa bản địa mộc mạc tại homestay và kỳ quan cáp treo Fansipan hiện đại.",
@@ -7946,13 +8082,23 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/cat-cat.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N2Đ Khách Sạn – Cát Cát – Lao Chải Tả Van – Fansipan - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 2 Nights Hotel – Fansipan – Cat Cat – Lao Chai Ta Van - The Dahlia Hanoi"
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
         }
       ],
       "cardLine": "Chuyến đi trọn gói cao cấp tại khách sạn Sa Pa: chinh phục đỉnh Fansipan hùng vĩ, tham quan bản Cát Cát và thung lũng Lao Chải Tả Van.",
@@ -8199,13 +8345,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/fansipan.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 3N2Đ Khách Sạn (Cát Cát – Núi Hàm Rồng) - The Dahlia Hanoi",
-          "altEn": "Sapa 3 Days 2 Nights Hotel Tour (Cat Cat – Ham Rong) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/fansipan.jpg",
+          "alt": "Cáp treo Fansipan. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Fansipan cable car. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Fansipan_cable_car_aerial_view_terraced_rice_fields_Sa_Pa_Viet_Nam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/tien-sa.jpg",
+          "alt": "Thác Tiên Sa. Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "altEn": "Tien Sa waterfall. Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "credit": "Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Rapids_near_Tien_Sa_Waterfall.JPG"
         }
       ],
       "cardLine": "Kỳ nghỉ 3 ngày thư thái tại thị trấn sương mờ Sa Pa: khám phá vườn lan Hàm Rồng, bản Cát Cát và thời gian tự do mua sắm đặc sản.",
@@ -8454,13 +8618,23 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/fansipan.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 3N2Đ Khách Sạn – Cát Cát – Hàm Rồng – Cáp Treo Fansipan - The Dahlia Hanoi",
-          "altEn": "Sapa 3 Days 2 Nights Hotel – Cat Cat – Ham Rong – Fansipan Peak - The Dahlia Hanoi"
+          "src": "img/tours/sapa/fansipan.jpg",
+          "alt": "Cáp treo Fansipan. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Fansipan cable car. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Fansipan_cable_car_aerial_view_terraced_rice_fields_Sa_Pa_Viet_Nam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
         }
       ],
       "cardLine": "Chương trình tour Sa Pa đầy đủ và được yêu thích nhất: Cát Cát, Hàm Rồng, vé tàu Mường Hoa và cáp treo lên đỉnh Fansipan 3.143m.",
@@ -8710,13 +8884,47 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/muong-hoa.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 3N2Đ Trải Nghiệm (01 Đêm Khách Sạn + 01 Đêm Homestay Bản) - The Dahlia Hanoi",
-          "altEn": "Sapa 3 Days 2 Nights Combo (01 Night Hotel + 01 Night Homestay) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Combo trải nghiệm tuyệt vời: đêm 1 tiện nghi tại khách sạn trung tâm Sa Pa, đêm 2 ngủ bản Tả Van giữa khung cảnh ruộng bậc thang yên bình.",
@@ -9007,13 +9215,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/fansipan.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 3N3Đ Xe Giường Nằm (Khách Sạn Hàm Rồng – Fansipan – Cát Cát) - The Dahlia Hanoi",
-          "altEn": "Sapa 3 Days 3 Nights Sleeper Bus (Ham Rong – Fansipan – Cat Cat Hotel) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/fansipan.jpg",
+          "alt": "Cáp treo Fansipan. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Fansipan cable car. Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "Vivu Vietnam · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Fansipan_cable_car_aerial_view_terraced_rice_fields_Sa_Pa_Viet_Nam.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/tien-sa.jpg",
+          "alt": "Thác Tiên Sa. Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "altEn": "Tien Sa waterfall. Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "credit": "Dragfyre · Wikimedia Commons · CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Rapids_near_Tien_Sa_Waterfall.JPG"
         }
       ],
       "cardLine": "Chuyến hành trình 3 ngày 3 đêm trọn gói: xe giường nằm đêm khứ hồi Hà Nội, 2 đêm khách sạn Sa Pa, khám phá Hàm Rồng, Fansipan và Cát Cát.",
@@ -9298,13 +9524,47 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/muong-hoa.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 3N3Đ (01 Đêm Khách Sạn + 01 Đêm Bản Tả Van + Xe Giường Nằm) - The Dahlia Hanoi",
-          "altEn": "Sapa 3 Days 3 Nights (01 Night Hotel + 01 Night Homestay + Sleeper Bus) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat.jpg",
+          "alt": "Bản Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat village. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Water_wheels_in_Cat_Cat_village%2C_Sa_Pa%2C_Vietnam%2C_20240126_1140_3535.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/cat-cat-waterfall.jpg",
+          "alt": "Thác Cát Cát. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Cat Cat waterfall. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cat_Cat_Waterfalls%2C_Sa_Pa%2C_Vietnam%2C_20240126_1236_3645.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Tour Sa Pa 3N3Đ kết hợp ngủ khách sạn và ngủ bản: di chuyển xe giường nằm, tham quan Cát Cát, trekking Lao Chải – Tả Van – Giàng Tả Chải.",
@@ -9610,13 +9870,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/muong-hoa.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa Trekking 1 Ngày (Ý Linh Hồ – Lao Chải – Tả Van) - The Dahlia Hanoi",
-          "altEn": "Sapa 1-Day Trekking Tour (Y Linh Ho – Lao Chai – Ta Van) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/y-linh-ho.jpg",
+          "alt": "Hồ Ý Linh. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Y Linh Ho. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Vietnam-Sapa-Y_Linh_Ho_village-P1070238.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
         }
       ],
       "cardLine": "Hành trình trekking 10km tuyệt đẹp qua thung lũng Mường Hoa, tiếp xúc với đồng bào dân tộc H'Mông Đen và Giáy, ăn trưa tại bản.",
@@ -9764,13 +10042,39 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/y-linh-ho.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N1Đ Xe Máy & Trekking Bản Làng (Homestay) - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 1 Night by Motorbike and Trekking (Homestay) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/y-linh-ho.jpg",
+          "alt": "Hồ Ý Linh. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Y Linh Ho. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Vietnam-Sapa-Y_Linh_Ho_village-P1070238.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Khám phá Sa Pa độc đáo: 1 ngày phượt xe máy qua đèo Ô Quy Hồ, bản Khoang, Tả Phìn và 1 ngày trekking ruộng bậc thang Mường Hoa.",
@@ -9975,13 +10279,39 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/y-linh-ho.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N1Đ Phượt Xe Máy Khám Phá Các Bản (Homestay) - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 1 Night Motorbike Tour Across Villages (Homestay) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/y-linh-ho.jpg",
+          "alt": "Hồ Ý Linh. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Y Linh Ho. mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "mmmmngai@rogers.com · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Vietnam-Sapa-Y_Linh_Ho_village-P1070238.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/muong-hoa.jpg",
+          "alt": "Ruộng bậc thang Sa Pa. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Sa Pa rice terraces. Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "credit": "Jakub Hałun · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Road_and_paddy_fields_in_Sa_Pa%2C_Vietnam%2C_20240126_1203_3590.jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
         }
       ],
       "cardLine": "Trọn vẹn 2 ngày khám phá các bản làng người H'Mông, Dao Đỏ, Tày, Giáy bằng xe máy có tài xế địa phương dày dặn kinh nghiệm.",
@@ -10206,13 +10536,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/ta-van.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Xe Máy & Trekking (Homestay) - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike & Trekking (Homestay) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/seo-my-ty.jpg",
+          "alt": "Bản Seo Mỹ Tỷ. NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Seo My Ty village. NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:SeoMyTy.jpg"
         }
       ],
       "cardLine": "Xe giường nằm đêm xuất phát từ Hà Nội, kết hợp 1 ngày phượt xe máy ngắm đại ngàn Tây Bắc và 1 ngày trekking suối Mường Hoa.",
@@ -10397,13 +10745,31 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa-placeholder.jpg",
+      "image": "img/tours/sapa/ta-van.jpg",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Tour Sa Pa 2N2Đ Xe Giường Nằm – Phượt Xe Máy Các Bản Làng (Homestay) - The Dahlia Hanoi",
-          "altEn": "Sapa 2 Days 2 Nights Sleeper Bus – Motorbike Village Adventure (Homestay) - The Dahlia Hanoi"
+          "src": "img/tours/sapa/ta-van.jpg",
+          "alt": "Bản Tả Van. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "altEn": "Ta Van village. Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "credit": "Andre Hospers · Wikimedia Commons · CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ta_Van_Muong_Ha_vallei_(88660).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/hmong.jpg",
+          "alt": "Người H'Mông ở Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "altEn": "Hmong people in Sa Pa. Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "credit": "Rod Waddington from Kergunyah, Australia · Wikimedia Commons · CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hmong_Child_(47246049541).jpg"
+        },
+        {
+          "type": "image",
+          "src": "img/tours/sapa/seo-my-ty.jpg",
+          "alt": "Bản Seo Mỹ Tỷ. NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "altEn": "Seo My Ty village. NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "credit": "NKSTTSSHNVN · Wikimedia Commons · CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:SeoMyTy.jpg"
         }
       ],
       "cardLine": "Khởi hành xe giường nằm từ Hà Nội, trải nghiệm 2 ngày cưỡi xe máy uốn lượn qua Bản Hồ, Nậm Toóng, Nậm Sài, Nậm Cang sâu trong núi.",
