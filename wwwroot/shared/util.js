@@ -131,7 +131,7 @@
     "success.long": { vi: "Đã nhận yêu cầu. Thư đã được mở sẵn tới thedahliatour@gmail.com — hãy bấm gửi trong ứng dụng mail. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này hoặc gọi 0902 271 396.", en: "Request received. A draft is ready for thedahliatour@gmail.com — press send in your mail app. If it doesn’t open, write to that address or call 0902 271 396." },
     "success.mail": { vi: "Thư đã được mở sẵn tới thedahliatour@gmail.com — hãy bấm gửi trong ứng dụng mail. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này hoặc gọi 0902 271 396.", en: "A draft is ready for thedahliatour@gmail.com — press send in your mail app. If it doesn’t open, write to that address or call 0902 271 396." },
     "success.call": { vi: "Thư đã được mở sẵn tới thedahliatour@gmail.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này hoặc gọi 0902 271 396.", en: "A draft is ready for thedahliatour@gmail.com. If your mail app doesn’t open, write to that address or call 0902 271 396." },
-    "success.plain": { vi: "Thư đã được mở sẵn tới thedahliatour@gmail.com. Nếu cửa sổ thư không hiện, gửi trực tiếp tới địa chỉ này.", en: "A draft is ready for thedahliatour@gmail.com. If your mail app doesn’t open, write to that address directly." },
+    "success.plain": { vi: "Đã nhận lời nhắn từ form. Chúng tôi sẽ trả lời qua email bạn vừa điền.", en: "We received your note from the form and will reply to the email you entered." },
     "guest.1": { vi: "1 khách", en: "1 guest" },
     "guest.2": { vi: "2 khách", en: "2 guests" },
     "guest.3": { vi: "3 khách", en: "3 guests" },

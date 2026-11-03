@@ -152,7 +152,7 @@
     "vo.book.lede": { vi: "Tour Heritage: Hạ Long, Ninh Bình, Hà Nội. Chọn một thẻ để mở form đặt.", en: "Heritage tours: Ha Long, Ninh Binh, Hanoi. Open a card to book." },
     "vo.ask.k": { vi: "Liên hệ nhanh", en: "A quick note" },
     "vo.ask.h": { vi: "Hỏi trước khi đặt tour.", en: "Ask before you book a tour." },
-    "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — gửi một dòng, chúng tôi mở sẵn thư tới linhfromhanam03@gmail.com.", en: "A private tour, a date change, or a larger group — send a line. A draft opens to linhfromhanam03@gmail.com." },
+    "vo.ask.p": { vi: "Tour riêng tư, đổi ngày, hoặc nhóm lớn — điền họ tên, email và lời nhắn. Form được gửi đi và chúng tôi trả lời qua email của bạn.", en: "A private tour, a date change, or a larger group — enter your name, email, and a note. The form is sent and we reply to your email." },
     "ph.name": { vi: "VD: Nguyễn Lan Anh", en: "e.g. Nguyen Lan Anh" },
     "ph.email": { vi: "VD: lananh@email.com", en: "e.g. lananh@email.com" },
     "ph.phone": { vi: "VD: 09xx xxx xxx", en: "e.g. 09xx xxx xxx" },
@@ -226,7 +226,8 @@
     "confirm.back": { vi: "Xem thêm tour", en: "See more tours" },
     "mail.tourBook": { vi: "Đặt tour — The Dahlia Voyage", en: "Tour booking — The Dahlia Voyage" },
     "mail.tour": { vi: "Yêu cầu tour — The Dahlia Voyage", en: "Tour request — The Dahlia Voyage" },
-    "mail.home": { vi: "Lời nhắn từ Mixi Voyage — The Dahlia", en: "A note from Mixi Voyage — The Dahlia" },
+    "btn.send": { vi: "Gửi yêu cầu", en: "Send request" },
+    "err.send": { vi: "Chưa gửi được. Kiểm tra mạng rồi thử lại.", en: "Could not send. Check your connection and try again." },
     "perGuest": { vi: "/ khách", en: "/ guest" },
     "link.see": { vi: "Xem", en: "View" },
     "link.book": { vi: "Đặt", en: "Book" },
@@ -2186,13 +2187,33 @@
         if (!U.isEmail(email)) return showErr(err, "err.email");
         if (message.length < 4) return showErr(err, "err.msg");
         err.hidden = true;
-        sendMail(t("mail.home"), [
-          t("mail.name") + ": " + name,
-          t("mail.email") + ": " + email,
-          t("mail.note") + ": " + message
-        ]);
-        form.classList.add("is-sent");
-        form.querySelector(".form-success").classList.add("is-on");
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = t("btn.sending");
+        }
+        sendBookingEmail({
+          tourId: "",
+          tourName: "Liên hệ nhanh",
+          name: name,
+          phone: "",
+          email: email,
+          date: "",
+          adults: "",
+          children: 0,
+          note: message,
+          totalStr: "Lời nhắn từ form trang chủ"
+        }).then(function (result) {
+          if (!result || result.ok === false) throw new Error("send");
+          form.classList.add("is-sent");
+          form.querySelector(".form-success").classList.add("is-on");
+        }).catch(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = t("btn.send");
+          }
+          showErr(err, "err.send");
+        });
       });
     }
 
