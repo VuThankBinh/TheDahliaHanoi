@@ -2651,7 +2651,7 @@ html:not([data-lang="en"]) .lp-en { display: none; }
 .fleet-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0;
   flex-grow: 1;
 }
 .fleet-features li {
