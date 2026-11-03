@@ -1,6 +1,6 @@
 (function () {
   var U = window.Dahlia;
-  var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "linhfromhanam03@gmail.com" };
+  var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "thedahliatour@gmail.com" };
   var tours = (DATA.tours || []).filter(function (tour) {
     var list = DATA.operators || [];
     var op = null;
@@ -10,7 +10,7 @@
     return !op || op.active !== false;
   });
   function getSiteEmail() {
-    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "linhfromhanam03@gmail.com";
+    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "thedahliatour@gmail.com";
   }
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
@@ -127,7 +127,7 @@
     "vo.lede": { vi: "Hạ Long Luxury & Signature, Ninh Bình Heritage Premium, Hà Nội City Tour. Chọn ngày và số khách, rồi đặt trong vài bước.", en: "Ha Long Luxury & Signature, Ninh Binh Heritage Premium, Hanoi City Tour. Pick a date and guests, then book in a few steps." },
     "vo.trust": { vi: "Vì sao chọn Dahlia", en: "Why Dahlia" },
     "vo.t1": { vi: "Tour nổi bật", en: "Featured tours" },
-    "vo.t1p": { vi: "Hạ Long, Ninh Bình, Hà Nội — đối tác Heritage.", en: "Ha Long, Ninh Binh, Hanoi — Heritage partner." },
+    "vo.t1p": { vi: "Hạ Long, Ninh Bình, Hà Nội ", en: "Ha Long, Ninh Binh, Hanoi — Heritage partner." },
     "vo.t2": { vi: "Ngày đi", en: "Trip length" },
     "vo.t2p": { vi: "Trong ngày hoặc 2 ngày 1 đêm Ninh Bình.", en: "Day trips or Ninh Binh 2 days 1 night." },
     "vo.t3": { vi: "Buffet trên tour", en: "Buffet on tour" },
@@ -217,7 +217,7 @@
     "vo.book.h": { vi: "Chọn tour rồi giữ chỗ", en: "Choose a tour, then hold a place" },
     "vo.contact.title": { vi: "Liên hệ — The Dahlia Hanoi", en: "Contact — The Dahlia Hanoi" },
     "vo.contact.h": { vi: "Gửi yêu cầu đặt tour", en: "Send a tour request" },
-    "vo.contact.lede": { vi: "Form mở thư tới linhfromhanam03@gmail.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to linhfromhanam03@gmail.com. Fill it in so we can answer quickly." },
+    "vo.contact.lede": { vi: "Form mở thư tới thedahliatour@gmail.com. Điền đủ để chúng tôi phản hồi nhanh.", en: "The form opens a letter to thedahliatour@gmail.com. Fill it in so we can answer quickly." },
     "vo.contact.hours": { vi: "Chỉ đặt tour · phản hồi trong giờ hành chính", en: "Tours only · replies in business hours" },
     "vo.contact.h2": { vi: "Yêu cầu tour của bạn", en: "Your tour request" },
     "vo.contact.hint": { vi: "Chọn tour, ngày đi và số khách — rồi gửi lời nhắn.", en: "Choose a tour, date, and guests — then send a note." },
@@ -246,7 +246,7 @@
     "err.bookName": { vi: "Vui lòng điền họ tên.", en: "Please enter your name." },
     "err.bookWa": { vi: "Nhập số WhatsApp.", en: "Enter a WhatsApp number." },
     "confirm.title": { vi: "Đã ghi nhận đặt tour", en: "Tour request recorded" },
-    "confirm.body": { vi: "Thư đã được mở sẵn tới linhfromhanam03@gmail.com. Trang này không thu tiền — chúng tôi sẽ liên hệ để xác nhận tour.", en: "A draft opens to linhfromhanam03@gmail.com. This page does not take payment — we will contact you to confirm the tour." },
+    "confirm.body": { vi: "Thư đã được mở sẵn tới thedahliatour@gmail.com. Trang này không thu tiền — chúng tôi sẽ liên hệ để xác nhận tour.", en: "A draft opens to thedahliatour@gmail.com. This page does not take payment — we will contact you to confirm the tour." },
     "confirm.back": { vi: "Xem thêm tour", en: "See more tours" },
     "mail.tourBook": { vi: "Đặt tour — The Dahlia Hanoi", en: "Tour booking — The Dahlia Hanoi" },
     "mail.tour": { vi: "Yêu cầu tour — The Dahlia Hanoi", en: "Tour request — The Dahlia Hanoi" },
@@ -575,78 +575,33 @@
       replyTemplate: replyTemplate
     };
 
-    var formSubmitPayload = {
-      _subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - Khách: " + data.name + " (" + totalGuests + " khách)",
-      _replyto: data.email,
-      _captcha: "false",
-      _template: "table",
-      "1. Họ và tên khách (Guest Name)": data.name,
-      "2. Số điện thoại / WhatsApp": data.phone,
-      "3. Email liên hệ": data.email,
-      "4. Tour đã chọn": data.tourName,
-      "5. Ngày khởi hành mong muốn": data.date,
-      "6. Số người lớn (Adults)": adults,
-      "7. Số trẻ em (Children)": children,
-      "8. Tổng số người tham gia": totalGuests,
-      "9. Ghi chú / Yêu cầu đặc biệt": data.note || "(Không có)",
-      "10. Báo giá tạm tính": data.totalStr || "Liên hệ",
-      "11. Thời gian gửi": new Date().toLocaleString("vi-VN"),
-      "--- MẪU EMAIL PHẢN HỒI GỬI KHÁCH (CHỦ TOUR COPY HOẶC BẤM REPLY) ---": replyTemplate
-    };
+    sendMail(t("mail.tourBook") + " — " + (data.tourName || data.name || ""), [
+      "Họ tên: " + (data.name || ""),
+      "Điện thoại: " + (data.phone || ""),
+      "Email khách: " + (data.email || ""),
+      "Tour: " + (data.tourName || ""),
+      "Ngày: " + (data.date || ""),
+      "Người lớn: " + adults,
+      "Trẻ em: " + children,
+      "Tạm tính: " + (data.totalStr || ""),
+      "Ghi chú: " + (data.note || "")
+    ]);
 
-    // If on http/https, use /api/book which handles both local logging and server-side verified email dispatch
-    if (location.protocol.startsWith("http")) {
-      return fetch("/api/book", {
+    var staticHost = /(^|\.)github\.io$/i.test(location.hostname);
+    if (!staticHost && location.protocol.indexOf("http") === 0) {
+      fetch("/api/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData)
-      }).then(function (res) {
-        if (!res.ok) throw new Error("Server response " + res.status);
-        return res.json();
-      }).then(function (resData) {
-        return { ok: true, id: resData.id };
-      }).catch(function (err) {
-        return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(targetEmail), {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formSubmitPayload)
-        }).then(function (res) {
-          return res.json().catch(function () { return { ok: true }; });
-        }).then(function (result) {
-          return { ok: true, result: result };
-        });
-      });
+      }).catch(function () {});
     }
 
-    // Direct browser FormSubmit if browsed via file:/// or other scheme
-    return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(targetEmail), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(formSubmitPayload)
-    }).then(function (res) {
-      return res.json().catch(function () { return { ok: true }; });
-    }).then(function (result) {
-      return { ok: true, result: result };
-    }).catch(function (err) {
-      return { ok: true, fallback: true, error: err };
-    });
+    return Promise.resolve({ ok: true, mailto: true, email: targetEmail });
   }
 
   function sendMail(subject, lines) {
     var email = getSiteEmail();
-    var href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
-    var a = document.createElement("a");
-    a.href = href;
-    a.setAttribute("hidden", "");
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
   }
 
   function showErr(el, key) {
@@ -981,7 +936,8 @@
     var priceBadge = '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + "</span>";
     var priceFoot = '<span class="price">' + formatPrice(unit.amount, unit.currency) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>";
 
-    return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
+    return '<article class="v-card reveal">' +
+      '<a class="v-card-hit" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
       '<div class="media">' +
       '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
       (tourStars(tour)
@@ -1000,12 +956,12 @@
       "<h3>" + U.escapeHtml(field(tour, "name")) + "</h3>" +
       '<p class="desc is-lines" data-card-line="' + U.escapeHtml(line) + '">' +
       formatCardLineHtml(line) + "</p>" +
-      '<div class="foot-row">' + priceFoot +
+      "</div></a>" +
+      '<div class="foot-row card-actions">' + priceFoot +
       '<div class="card-btn-group">' +
-      '<span class="link-more" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + '</span>' +
+      '<a class="link-more" href="' + href + '" style="min-height:36px;padding:0 12px;font-size:13px">' + U.escapeHtml(t("link.see")) + '</a>' +
       '<button type="button" class="btn-card-book js-quick-book" data-tour-id="' + U.escapeHtml(tour.id) + '">' + U.escapeHtml(t("btn.bookTour")) + '</button>' +
-      '</div></div>' +
-      "</div></a>";
+      "</div></div></article>";
   }
 
   function listHtml(items) {

@@ -280,7 +280,7 @@ const server = http.createServer(function (req, res) {
         });
 
         // Determine destination email from catalogue
-        let targetEmail = "linhfromhanam03@gmail.com";
+        let targetEmail = "thedahliatour@gmail.com";
         try {
           const cat = JSON.parse(fs.readFileSync(path.join(root, "shared", "catalogue.json"), "utf8"));
           if (cat.site && cat.site.email) targetEmail = cat.site.email;

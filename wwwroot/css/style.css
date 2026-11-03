@@ -851,6 +851,8 @@ select option { color: var(--ink); background: #fff; }
   color: inherit; display: flex; flex-direction: column;
   transition: transform .4s ease, box-shadow .4s ease;
 }
+.v-card-hit { color: inherit; display: flex; flex-direction: column; flex: 1; }
+.v-card > .card-actions { padding: 0 18px 18px; }
 .v-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .v-card .media { aspect-ratio: 16 / 10; }
 .v-card .body { padding: 16px 18px 18px; display: grid; gap: 6px; flex: 1; }
