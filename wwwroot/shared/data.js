@@ -6,7 +6,8 @@
   var RAW = {
   "version": 2,
   "site": {
-    "email": "thedahliatour@gmail.com",
+    "email": "linhfromhanam03@gmail.com",
+    "web3formsKey": "",
     "phone": "0902 271 396",
     "phoneAlt": "0934 587 078",
     "address": "23 Lâm Du, Bồ Đề, Hà Nội",
@@ -16,7 +17,8 @@
       "accountNumber": "226456789",
       "note": "Bản mẫu, chưa thanh toán thật",
       "noteEn": "Sample only — not a real payment"
-    }
+    },
+    "googleScriptUrl": "https://script.google.com/macros/s/AKfycbx9P2RiDYSy6WG80KsUVz6Q-pn7Z7xdq4DSs7URoYG4UBr3UvxeF9H5yMZj68r_Mumi/exec"
   },
   "operators": [
     {

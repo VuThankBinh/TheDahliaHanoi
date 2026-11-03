@@ -8,9 +8,13 @@ console.log("=== TESTING BOOKING FEATURE IN APP.JS ===");
 
 const checks = [
   { name: "getSiteEmail dynamic helper", check: appCode.includes("function getSiteEmail") },
+  { name: "getWeb3FormsKey helper", check: appCode.includes("function getWeb3FormsKey") },
+  { name: "getGoogleScriptUrl helper", check: appCode.includes("function getGoogleScriptUrl") },
+  { name: "Google Apps Script dispatch call", check: appCode.includes("googleScriptUrl") },
+  { name: "Web3Forms endpoint", check: appCode.includes("https://api.web3forms.com/submit") },
   { name: "generateReplyTemplate function", check: appCode.includes("function generateReplyTemplate") },
   { name: "sendBookingEmail function", check: appCode.includes("function sendBookingEmail") },
-  { name: "thedahliatour@gmail.com target", check: appCode.includes("thedahliatour@gmail.com") },
+  { name: "linhfromhanam03@gmail.com / target email", check: appCode.includes("linhfromhanam03@gmail.com") },
   { name: "FormSubmit endpoint", check: appCode.includes("https://formsubmit.co/ajax/") },
   { name: "Quick Book Modal function", check: appCode.includes("function initQuickBookModal") },
   { name: "Quick Book button in tour cards", check: appCode.includes("btn-card-book js-quick-book") },
@@ -34,7 +38,7 @@ function extractTemplateGen(code) {
   const match = code.match(/function generateReplyTemplate\(data\) \{([\s\S]*?)\n  \}/);
   if (!match) throw new Error("Could not extract generateReplyTemplate");
   const fn = new Function('data', 'getSiteEmail', match[1]);
-  return (data) => fn(data, () => "thedahliatour@gmail.com");
+  return (data) => fn(data, () => "linhfromhanam03@gmail.com");
 }
 
 const templateFn = extractTemplateGen(appCode);
@@ -55,7 +59,7 @@ console.log(sampleOutput);
 if (!sampleOutput.includes("Dear John Doe,") ||
     !sampleOutput.includes("Tour name: Tour Du Thuyền 5 Sao Tropical Cruise") ||
     !sampleOutput.includes("Number of adults: 2") ||
-    !sampleOutput.includes("Email: thedahliatour@gmail.com") ||
+    !sampleOutput.includes("Email: linhfromhanam03@gmail.com") ||
     !sampleOutput.includes("Number of children (if any): 1")) {
   console.error("Template output missing expected fields!");
   allPassed = false;

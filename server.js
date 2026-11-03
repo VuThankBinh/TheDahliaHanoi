@@ -145,6 +145,74 @@ function resolveFile(urlPath) {
   return null;
 }
 
+function forwardToGoogleScript(booking, scriptUrl) {
+  return new Promise(function (resolve) {
+    const payload = JSON.stringify(booking);
+    const parsedUrl = new URL(scriptUrl);
+    const req = https.request(scriptUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+        "Content-Length": Buffer.byteLength(payload)
+      }
+    }, function (res) {
+      resolve({ ok: res.statusCode === 200 || res.statusCode === 302 });
+    });
+    req.on("error", function (err) { resolve({ ok: false, error: err.message }); });
+    req.write(payload);
+    req.end();
+  });
+}
+
+function forwardToWeb3Forms(booking, accessKey) {
+  return new Promise(function (resolve) {
+    const payload = JSON.stringify({
+      access_key: accessKey,
+      subject: "[ĐẶT TOUR MỚI] " + (booking.tourName || "Tour") + " - Khách: " + (booking.name || "") + " (" + (booking.totalGuests || booking.guests || 2) + " khách)",
+      from_name: "The Dahlia Hanoi Booking",
+      replyto: booking.email || "",
+      "Khách hàng": booking.name,
+      "Điện thoại / WhatsApp": booking.phone,
+      "Email": booking.email,
+      "Tour đã chọn": booking.tourName,
+      "Ngày khởi hành": booking.date,
+      "Số người lớn": booking.adults || 2,
+      "Số trẻ em": booking.children || 0,
+      "Tổng số khách": booking.totalGuests || booking.guests || 2,
+      "Ghi chú": booking.note || "(Không có)",
+      "Báo giá": booking.totalStr || "Liên hệ",
+      "Mẫu phản hồi": booking.replyTemplate || ""
+    });
+
+    const req = https.request("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Content-Length": Buffer.byteLength(payload)
+      }
+    }, function (res) {
+      let data = "";
+      res.on("data", function (chunk) { data += chunk; });
+      res.on("end", function () {
+        try {
+          const parsed = JSON.parse(data);
+          resolve(parsed);
+        } catch (e) {
+          resolve({ ok: res.statusCode === 200 });
+        }
+      });
+    });
+
+    req.on("error", function (err) {
+      resolve({ ok: false, error: err.message });
+    });
+
+    req.write(payload);
+    req.end();
+  });
+}
+
 function forwardToFormSubmit(booking, targetEmail) {
   return new Promise(function (resolve) {
     const payload = JSON.stringify({

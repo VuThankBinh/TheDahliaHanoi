@@ -10,7 +10,13 @@
     return !op || op.active !== false;
   });
   function getSiteEmail() {
-    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "thedahliatour@gmail.com";
+    return (DATA && (DATA.email || (DATA.site && DATA.site.email))) || "linhfromhanam03@gmail.com";
+  }
+  function getWeb3FormsKey() {
+    return (DATA && DATA.site && DATA.site.web3formsKey) || "";
+  }
+  function getGoogleScriptUrl() {
+    return (DATA && DATA.site && DATA.site.googleScriptUrl) || "";
   }
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
@@ -575,28 +581,72 @@
       replyTemplate: replyTemplate
     };
 
-    sendMail(t("mail.tourBook") + " — " + (data.tourName || data.name || ""), [
-      "Họ tên: " + (data.name || ""),
-      "Điện thoại: " + (data.phone || ""),
-      "Email khách: " + (data.email || ""),
-      "Tour: " + (data.tourName || ""),
-      "Ngày: " + (data.date || ""),
-      "Người lớn: " + adults,
-      "Trẻ em: " + children,
-      "Tạm tính: " + (data.totalStr || ""),
-      "Ghi chú: " + (data.note || "")
-    ]);
+    var formSubmitPayload = {
+      _subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || "") + " (" + totalGuests + " khách)",
+      _replyto: data.email || "",
+      _captcha: "false",
+      _template: "table",
+      "Khách hàng": data.name,
+      "Điện thoại / WhatsApp": data.phone,
+      "Email": data.email,
+      "Tour đã chọn": data.tourName,
+      "Ngày khởi hành": data.date,
+      "Số người lớn": adults,
+      "Số trẻ em": children,
+      "Ghi chú": data.note || "(Không có)",
+      "Báo giá": data.totalStr || "Liên hệ",
+      "Mẫu phản hồi": replyTemplate
+    };
 
-    var staticHost = /(^|\.)github\.io$/i.test(location.hostname);
-    if (!staticHost && location.protocol.indexOf("http") === 0) {
-      fetch("/api/book", {
+    var calls = [];
+    if (location.protocol.indexOf("http") === 0) {
+      calls.push(fetch("/api/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData)
-      }).catch(function () {});
+      }).catch(function () {}));
     }
 
-    return Promise.resolve({ ok: true, mailto: true, email: targetEmail });
+    var web3Key = getWeb3FormsKey();
+    if (web3Key) {
+      calls.push(fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: web3Key,
+          subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || "") + " (" + totalGuests + " khách)",
+          from_name: "The Dahlia Hanoi Booking",
+          replyto: data.email || "",
+          "Khách hàng": data.name,
+          "Điện thoại / WhatsApp": data.phone,
+          "Email": data.email,
+          "Tour đã chọn": data.tourName,
+          "Ngày khởi hành": data.date,
+          "Số người lớn": adults,
+          "Số trẻ em": children,
+          "Tổng số khách": totalGuests,
+          "Ghi chú": data.note || "(Không có)",
+          "Báo giá": data.totalStr || "Liên hệ",
+          "Mẫu phản hồi gửi khách": replyTemplate
+        })
+      }).catch(function () {}));
+    }
+
+    calls.push(fetch("https://formsubmit.co/ajax/" + encodeURIComponent(targetEmail), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formSubmitPayload)
+    }).catch(function () {}));
+
+    return Promise.all(calls).then(function () {
+      return { ok: true, email: targetEmail };
+    });
   }
 
   function sendMail(subject, lines) {
