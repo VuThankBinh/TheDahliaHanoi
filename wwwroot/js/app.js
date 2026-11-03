@@ -16,7 +16,7 @@
     return (DATA && DATA.site && DATA.site.web3formsKey) || "";
   }
   function getGoogleScriptUrl() {
-    return (DATA && DATA.site && DATA.site.googleScriptUrl) || "";
+    return (DATA && ((DATA.site && DATA.site.googleScriptUrl) || DATA.googleScriptUrl)) || "https://script.google.com/macros/s/AKfycbx9P2RiDYSy6WG80KsUVz6Q-pn7Z7xdq4DSs7URoYG4UBr3UvxeF9H5yMZj68r_Mumi/exec";
   }
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
@@ -599,6 +599,20 @@
     };
 
     var calls = [];
+    // 1. Always send to Google Apps Script (Stores to Google Sheets + sends Email permanently)
+    var gasUrl = getGoogleScriptUrl();
+    if (gasUrl) {
+      calls.push(fetch(gasUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(bookingData)
+      }).catch(function (err) {
+        console.warn("[GAS Dispatch Warning]", err);
+      }));
+    }
+
+    // 2. Send to local Node.js server if running
     if (location.protocol.indexOf("http") === 0) {
       calls.push(fetch("/api/book", {
         method: "POST",
