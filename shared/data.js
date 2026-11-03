@@ -18,7 +18,7 @@
       "note": "Bản mẫu, chưa thanh toán thật",
       "noteEn": "Sample only — not a real payment"
     },
-    "googleScriptUrl": "https://script.google.com/macros/s/AKfycbx9P2RiDYSy6WG80KsUVz6Q-pn7Z7xdq4DSs7URoYG4UBr3UvxeF9H5yMZj68r_Mumi/exec"
+    "googleScriptUrl": "https://script.google.com/macros/s/AKfycbzqMCe2uCFk2WaUKkjlsrmJSsyystIuSbdjLB-ZkIKXl2fJLxzaEUpW6i1khUNeh5k1/exec"
   },
   "operators": [
     {
