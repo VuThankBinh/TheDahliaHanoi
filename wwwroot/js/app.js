@@ -103,50 +103,52 @@
     "hint.mailTour": { vi: "Yêu cầu được gửi về mail qua ứng dụng thư của bạn.", en: "The request opens in your mail app." },
     "footer.voyage": { vi: "The Dahlia Hanoi · chỉ tour, không phòng.", en: "The Dahlia Hanoi · tours only, no rooms." },
     "reviews.k": { vi: "KHÁCH ĐÃ ĐI", en: "TRAVELLERS WHO WENT" },
-    "reviews.h": { vi: "Những ngày thật trên vịnh, trong hang, giữa phố cổ.", en: "Real days on the water, in the caves, in the old quarter." },
+    "reviews.h": { vi: "Khách nói gì về chuyến đi?", en: "What our guests say" },
     "reviews.p": { vi: "Giờ giấc rõ ràng, món ăn cụ thể, cảm nhận chân thật từ khách đã trải nghiệm.", en: "Exact times, exact dishes, honest notes. Told by guests who were there." },
     "reviews.rating": { vi: "4.6", en: "4.6" },
     "reviews.ratingSub": { vi: "Điểm trung bình 5 chuyến gần nhất", en: "Average of 5 recent trips" },
     "reviews.honestNote": { vi: "Góc nhìn thật", en: "Honest note" },
+    "rev.prev": { vi: "Đánh giá trước", en: "Previous review" },
+    "rev.next": { vi: "Đánh giá sau", en: "Next review" },
 
-    "rev.quan.name": { vi: "Quân", en: "Quan" },
+    "rev.quan.name": { vi: "James", en: "James" },
     "rev.quan.meta": { vi: "Heritage Signature · Tháng 3/2026", en: "Heritage Signature · March 2026" },
     "rev.quan.title": { vi: "“Tiệc hoàng hôn có bánh phồng tôm. Sundeck có quầy bar riêng.”", en: "“Sunset party had prawn crackers. The sundeck had a bar.”" },
-    "rev.quan.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm, về khách sạn khoảng 20h40.", en: "Signature felt roomier. Afternoon kayak at Luon then Titov: steep steps but a clear bay view. Hotel drop-off came around 20:40." },
+    "rev.quan.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm. Ghế ngoài boong lúc 17h còn trống, ngồi thêm một lúc chụp mấy tàu gỗ quanh vịnh trước khi về khách sạn khoảng 20h40.", en: "Signature felt roomier, and the sundeck had a bar. Afternoon kayak at Luon then Titov: steep steps but a clear bay view. The sunset party had prawn crackers. A deck chair was still free at 17:00, so we sat a while and photographed the wooden boats before the hotel drop-off around 20:40." },
 
-    "rev.lan.name": { vi: "Lan", en: "Lan" },
+    "rev.lan.name": { vi: "Sophie", en: "Sophie" },
     "rev.lan.time": { vi: "Tuần trước", en: "Last week" },
     "rev.lan.tour": { vi: "Heritage Luxury Day Cruise", en: "Heritage Luxury Day Cruise" },
     "rev.lan.title": { vi: "Đợi tàu ở bến Tuần Châu gần 40 phút.", en: "Waited nearly 40 minutes at Tuan Chau." },
-    "rev.lan.body": { vi: "Hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế; jacuzzi ngoài boong thì mát thật.", en: "The guide only texted \"almost docking.\" On board, the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool." },
+    "rev.lan.body": { vi: "Hướng dẫn chỉ nhắn “sắp vào bến”. Đợi ở Tuần Châu gần 40 phút thì hơi sốt ruột. Lên rồi buffet có tôm hấp bia và nem rế; jacuzzi ngoài boong thì mát thật, chỗ ngồi cũng không bị chen.", en: "The guide only texted \"almost docking.\" Waiting nearly 40 minutes at Tuan Chau got a bit restless. On board, the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool, and the seats were not packed." },
 
-    "rev.ha.name": { vi: "Hà", en: "Ha" },
+    "rev.ha.name": { vi: "Emma", en: "Emma" },
     "rev.ha.time": { vi: "Tháng trước", en: "Last month" },
     "rev.ha.tour": { vi: "Hoa Lư – Tam Cốc – Hang Múa", en: "Hoa Lu, Tam Coc, Mua Cave" },
     "rev.ha.title": { vi: "Hang Múa 500 bậc — mệt nhưng view sông đẹp.", en: "Mua Cave's 500 steps were hard." },
-    "rev.ha.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Leo lên đỉnh nhìn xuống dòng sông rất rõ.", en: "About ninety minutes on Tam Coc, rice still green. Buffet at Heritage Garden had steamed goat. The river view from the top was clear." },
+    "rev.ha.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Hang Múa 500 bậc, nghỉ hai lần mới lên đỉnh, nhìn xuống dòng sông rất rõ. Trưa buffet tại Heritage Garden có dê hấp, kịp ngồi ăn trước 12h30.", en: "About ninety minutes on Tam Coc, rice still green. Mua Cave is 500 steps; we rested twice before the top, and the river below was clear. Lunch buffet at Heritage Garden had steamed goat, and we sat down before 12:30." },
 
-    "rev.linh.name": { vi: "Linh", en: "Linh" },
+    "rev.linh.name": { vi: "Chloe", en: "Chloe" },
     "rev.linh.time": { vi: "Tháng 2/2026", en: "February 2026" },
     "rev.linh.tour": { vi: "Hà Nội City Tour", en: "Hanoi City Tour" },
     "rev.linh.title": { vi: "Xe trả đúng trước khách sạn lúc 16h20.", en: "Drop-off right at the hotel at 16:20." },
-    "rev.linh.body": { vi: "Sáng Trấn Quốc và Lăng Bác; trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách quốc tế.", en: "Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch with fried spring rolls and mac khen chicken." },
+    "rev.linh.body": { vi: "Xe đón đúng trước khách sạn lúc 8h. Sáng Trấn Quốc và Lăng Bác; trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách quốc tế, xe trả lại cửa khách sạn lúc 16h20.", en: "The car picked us up at the hotel at 8:00 sharp. Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch with fried spring rolls and mac khen chicken. The Temple of Literature was busy in the afternoon, and we were dropped back at the hotel door at 16:20." },
 
-    "rev.duc.name": { vi: "Đức", en: "Duc" },
+    "rev.duc.name": { vi: "Daniel", en: "Daniel" },
     "rev.duc.time": { vi: "Cuối tuần trước", en: "Last weekend" },
     "rev.duc.tour": { vi: "Làng hương & Hà Nội", en: "Incense village and Hanoi" },
     "rev.duc.title": { vi: "Họ cho thử nhuộm một que.", en: "They let us dye one stick." },
-    "rev.duc.body": { vi: "Quang Phú Cầu lúc 10 giờ: bó hương đỏ vàng xếp thành tường. Về nội thành ăn Mesdames Linh rồi Hỏa Lò, đúng lịch brochure.", en: "Quang Phu Cau at 10: red and yellow incense stacked like walls. Back in the city for Mesdames Linh then Hoa Lo, matched the brochure." },
-    "rev1.meta": { vi: "Lan · Heritage Luxury Day Cruise · tuần trước", en: "Lan · Heritage Luxury Day Cruise · last week" },
-    "rev1.body": { vi: "Đợi tàu ở bến Tuần Châu gần 40 phút, hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế, jacuzzi ngoài boong thì mát thật.", en: "Waited nearly 40 minutes at Tuan Chau; the guide only texted “almost docking.” On board the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool." },
-    "rev2.meta": { vi: "Quân · Heritage Signature · tháng 3/2026", en: "Quan · Heritage Signature · March 2026" },
-    "rev2.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm, về khách sạn khoảng 20h40.", en: "Signature felt roomier, sundeck had a bar. Afternoon kayak at Luon then Titov — steep steps but a clear bay view. Sunset party had prawn crackers; hotel around 20:40." },
-    "rev3.meta": { vi: "Hà · Hoa Lư – Tam Cốc – Hang Múa · tháng trước", en: "Ha · Hoa Lu – Tam Coc – Mua Cave · last month" },
-    "rev3.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Hang Múa 500 bậc — mệt nhưng nhìn xuống sông rõ.", en: "About ninety minutes on Tam Coc, rice still green. Buffet at Heritage Garden had steamed goat. Mua Cave’s 500 steps were hard, but the river view from the top was clear." },
-    "rev4.meta": { vi: "Linh · Hà Nội City Tour · tháng 2/2026", en: "Linh · Hanoi City Tour · February 2026" },
-    "rev4.body": { vi: "Sáng Trấn Quốc và Lăng Bác, trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách nước ngoài. Xe trả đúng trước khách sạn lúc 16h20.", en: "Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch — fried spring rolls and mac khen chicken. Temple of Literature busy with foreigners. Drop-off right at the hotel at 16:20." },
-    "rev5.meta": { vi: "Đức · Làng hương & Hà Nội · cuối tuần trước", en: "Duc · Incense village & Hanoi · last weekend" },
-    "rev5.body": { vi: "Quang Phú Cầu lúc 10 giờ, bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que. Về nội thành ăn Mesdames Linh rồi Hoa Lò — đúng lịch brochure.", en: "Quang Phu Cau at 10 — red and yellow incense stacked like walls. They let us dye one stick. Back in the city for Mesdames Linh then Hoa Lo — matched the brochure." },
+    "rev.duc.body": { vi: "Quang Phú Cầu lúc 10 giờ: bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que, tay dính màu nhưng lau được. Về nội thành ăn Mesdames Linh rồi Hỏa Lò khoảng 40 phút, đúng lịch brochure.", en: "Quang Phu Cau at 10: red and yellow incense stacked like walls. They let us dye one stick; the dye got on our hands but wiped off. Back in the city for Mesdames Linh, then about 40 minutes at Hoa Lo, matching the brochure." },
+    "rev1.meta": { vi: "Sophie · Heritage Luxury Day Cruise · tuần trước", en: "Sophie · Heritage Luxury Day Cruise · last week" },
+    "rev1.body": { vi: "Hướng dẫn chỉ nhắn “sắp vào bến”. Đợi ở Tuần Châu gần 40 phút thì hơi sốt ruột. Lên rồi buffet có tôm hấp bia và nem rế; jacuzzi ngoài boong thì mát thật, chỗ ngồi cũng không bị chen.", en: "The guide only texted \"almost docking.\" Waiting nearly 40 minutes at Tuan Chau got a bit restless. On board, the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool, and the seats were not packed." },
+    "rev2.meta": { vi: "James · Heritage Signature · tháng 3/2026", en: "James · Heritage Signature · March 2026" },
+    "rev2.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm. Ghế ngoài boong lúc 17h còn trống, ngồi thêm một lúc chụp mấy tàu gỗ quanh vịnh trước khi về khách sạn khoảng 20h40.", en: "Signature felt roomier, and the sundeck had a bar. Afternoon kayak at Luon then Titov: steep steps but a clear bay view. The sunset party had prawn crackers. A deck chair was still free at 17:00, so we sat a while and photographed the wooden boats before the hotel drop-off around 20:40." },
+    "rev3.meta": { vi: "Emma · Hoa Lư – Tam Cốc – Hang Múa · tháng trước", en: "Emma · Hoa Lu – Tam Coc – Mua Cave · last month" },
+    "rev3.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Hang Múa 500 bậc, nghỉ hai lần mới lên đỉnh, nhìn xuống dòng sông rất rõ. Trưa buffet tại Heritage Garden có dê hấp, kịp ngồi ăn trước 12h30.", en: "About ninety minutes on Tam Coc, rice still green. Mua Cave is 500 steps; we rested twice before the top, and the river below was clear. Lunch buffet at Heritage Garden had steamed goat, and we sat down before 12:30." },
+    "rev4.meta": { vi: "Chloe · Hà Nội City Tour · tháng 2/2026", en: "Chloe · Hanoi City Tour · February 2026" },
+    "rev4.body": { vi: "Xe đón đúng trước khách sạn lúc 8h. Sáng Trấn Quốc và Lăng Bác; trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách quốc tế, xe trả lại cửa khách sạn lúc 16h20.", en: "The car picked us up at the hotel at 8:00 sharp. Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch with fried spring rolls and mac khen chicken. The Temple of Literature was busy in the afternoon, and we were dropped back at the hotel door at 16:20." },
+    "rev5.meta": { vi: "Daniel · Làng hương & Hà Nội · cuối tuần trước", en: "Daniel · Incense village & Hanoi · last weekend" },
+    "rev5.body": { vi: "Quang Phú Cầu lúc 10 giờ: bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que, tay dính màu nhưng lau được. Về nội thành ăn Mesdames Linh rồi Hỏa Lò khoảng 40 phút, đúng lịch brochure.", en: "Quang Phu Cau at 10: red and yellow incense stacked like walls. They let us dye one stick; the dye got on our hands but wiped off. Back in the city for Mesdames Linh, then about 40 minutes at Hoa Lo, matching the brochure." },
     "itin.h": { vi: "Lịch trình", en: "Itinerary" },
     "stars.label": { vi: "Hạng", en: "Tier" },
     "stars.of": { vi: "{n} trên 5 sao", en: "{n} out of 5 stars" },
@@ -3312,7 +3314,49 @@
     window.openQuickBookModal = openModalWithTour;
   }
 
-    mountPayLinks();
+    function initReviewSlider() {
+    var root = document.querySelector("[data-review-slider]");
+    if (!root) return;
+    var track = root.querySelector(".review-track");
+    var slides = root.querySelectorAll(".review-slide");
+    if (!track || !slides.length) return;
+    var index = 0;
+    var timer = null;
+    function go(next) {
+      index = (next + slides.length) % slides.length;
+      track.style.transform = "translateX(" + (-index * 100) + "%)";
+    }
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+    function play() {
+      stop();
+      if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      timer = setInterval(function () { go(index + 1); }, 5500);
+    }
+    var prev = root.querySelector(".review-nav.prev");
+    var next = root.querySelector(".review-nav.next");
+    if (prev) prev.addEventListener("click", function () { go(index - 1); play(); });
+    if (next) next.addEventListener("click", function () { go(index + 1); play(); });
+    var startX = 0;
+    var view = root.querySelector(".review-viewport");
+    if (view) {
+      view.addEventListener("pointerdown", function (e) { startX = e.clientX; });
+      view.addEventListener("pointerup", function (e) {
+        var dx = e.clientX - startX;
+        if (Math.abs(dx) < 40) return;
+        go(index + (dx < 0 ? 1 : -1));
+        play();
+      });
+    }
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", play);
+    go(0);
+    play();
+  }
+
+  mountPayLinks();
   mountPayRail();
   applyVoI18n(document);
   upgradeLangFlags();
@@ -3327,6 +3371,7 @@
   U.initSolidHeader();
   upgradeLangFlags();
   initQuickBookModal();
+  initReviewSlider();
   U.bindImages(document);
   U.initMotion();
 })();
