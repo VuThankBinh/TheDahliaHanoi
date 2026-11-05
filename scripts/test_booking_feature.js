@@ -58,9 +58,8 @@ console.log(sampleOutput);
 
 if (!sampleOutput.includes("Dear John Doe,") ||
     !sampleOutput.includes("Tour name: Tour Du Thuyền 5 Sao Tropical Cruise") ||
-    !sampleOutput.includes("Number of adults: 2") ||
-    !sampleOutput.includes("Email: thedahliatour@gmail.com") ||
-    !sampleOutput.includes("Number of children (if any): 1")) {
+    !sampleOutput.includes("Quotation / Rate:") ||
+    !sampleOutput.includes("Email: thedahliatour@gmail.com")) {
   console.error("Template output missing expected fields!");
   allPassed = false;
 }

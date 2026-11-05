@@ -96,15 +96,6 @@
           <label><span data-i18n="label.date">Ngày đi</span>
             <input type="date" name="date">
           </label>
-          <label><span data-i18n="label.guests">Số khách</span>
-            <select name="guests">
-              <option value="1" data-i18n="guest.1">1 khách</option>
-              <option value="2" selected data-i18n="guest.2">2 khách</option>
-              <option value="3" data-i18n="guest.3">3 khách</option>
-              <option value="4" data-i18n="guest.4">4 khách</option>
-              <option value="6" data-i18n="guest.6">6 khách</option>
-            </select>
-          </label>
           <button class="btn" type="submit" data-i18n="btn.viewTours">Xem tour</button>
         </div>
         <p class="form-error" hidden style="padding:0 8px 4px;margin:0;color:#6B4A32;font-size:13px;font-weight:600"></p>
@@ -152,6 +143,119 @@
     </section>
 
     <div id="dest-sections"></div>
+
+    <section class="section wrap reviews" aria-labelledby="reviews-heading">
+      <div class="reviews-header-row">
+        <div class="reviews-title-block">
+          <p class="eyebrow" data-i18n="reviews.k">KHÁCH ĐÃ ĐI</p>
+          <h2 id="reviews-heading" data-i18n="reviews.h">Những ngày thật trên vịnh, trong hang, giữa phố cổ.</h2>
+          <p class="reviews-subhead" data-i18n="reviews.p">Giờ giấc rõ ràng, món ăn cụ thể, cảm nhận chân thật từ khách đã trải nghiệm.</p>
+        </div>
+        <div class="reviews-score-card">
+          <div class="score-num" data-i18n="reviews.rating">4.6</div>
+          <div class="score-stars">
+            <p class="stars" aria-label="5 trên 5 sao"><span aria-hidden="true">★★★★★</span></p>
+            <span class="score-label" data-i18n="reviews.ratingSub">Điểm trung bình 5 chuyến gần nhất</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-showcase">
+        <!-- Big Featured Card: Quan -->
+        <article class="review-featured-card reveal">
+          <div class="featured-media">
+            <img src="img/experiences/sunset-party.jpg" alt="Tiệc hoàng hôn trên sundeck du thuyền" loading="lazy">
+          </div>
+          <div class="featured-body">
+            <div class="featured-user-row">
+              <div class="user-info">
+                <img class="review-avatar" src="img/avatars/quan.jpg" alt="Quân" width="46" height="46" loading="lazy">
+                <div>
+                  <strong class="user-name" data-i18n="rev.quan.name">Quân</strong>
+                  <span class="user-meta" data-i18n="rev.quan.meta">Heritage Signature · Tháng 3/2026</span>
+                </div>
+              </div>
+              <p class="stars" aria-label="5 trên 5 sao"><span aria-hidden="true">★★★★★</span></p>
+            </div>
+            <h3 class="featured-quote" data-i18n="rev.quan.title">“Tiệc hoàng hôn có bánh phồng tôm. Sundeck có quầy bar riêng.”</h3>
+            <p class="featured-text" data-i18n="rev.quan.body">Tàu Signature rộng rãi hơn. Buổi chiều kayak hang Luồn rồi leo Titov: bậc dốc nhưng nhìn trọn vịnh. Xe trả về khách sạn khoảng 20h40.</p>
+          </div>
+        </article>
+
+        <!-- Right 2x2 Subgrid -->
+        <div class="review-subgrid">
+          <!-- Card 1: Lan -->
+          <article class="review-card-item reveal">
+            <div class="card-user-row">
+              <img class="review-avatar" src="img/avatars/lan.jpg" alt="Lan" width="40" height="40" loading="lazy">
+              <div>
+                <strong class="user-name" data-i18n="rev.lan.name">Lan</strong>
+                <span class="user-time" data-i18n="rev.lan.time">Tuần trước</span>
+              </div>
+            </div>
+            <div class="card-rating-row">
+              <p class="stars" aria-label="4 trên 5 sao"><span aria-hidden="true">★★★★<span class="star-off">★</span></span></p>
+              <span class="badge-honest" data-i18n="reviews.honestNote">Góc nhìn thật</span>
+            </div>
+            <span class="tour-tag" data-i18n="rev.lan.tour">Heritage Luxury Day Cruise</span>
+            <h4 class="card-quote" data-i18n="rev.lan.title">Đợi tàu ở bến Tuần Châu gần 40 phút.</h4>
+            <p class="card-text" data-i18n="rev.lan.body">Hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế; jacuzzi ngoài boong thì mát thật.</p>
+          </article>
+
+          <!-- Card 2: Ha -->
+          <article class="review-card-item reveal">
+            <div class="card-user-row">
+              <img class="review-avatar" src="img/avatars/ha.jpg" alt="Hà" width="40" height="40" loading="lazy">
+              <div>
+                <strong class="user-name" data-i18n="rev.ha.name">Hà</strong>
+                <span class="user-time" data-i18n="rev.ha.time">Tháng trước</span>
+              </div>
+            </div>
+            <div class="card-rating-row">
+              <p class="stars" aria-label="4 trên 5 sao"><span aria-hidden="true">★★★★<span class="star-off">★</span></span></p>
+              <span class="badge-honest" data-i18n="reviews.honestNote">Góc nhìn thật</span>
+            </div>
+            <span class="tour-tag" data-i18n="rev.ha.tour">Hoa Lư – Tam Cốc – Hang Múa</span>
+            <h4 class="card-quote" data-i18n="rev.ha.title">Hang Múa 500 bậc — mệt nhưng view sông đẹp.</h4>
+            <p class="card-text" data-i18n="rev.ha.body">Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Leo lên đỉnh nhìn xuống dòng sông rất rõ.</p>
+          </article>
+
+          <!-- Card 3: Linh -->
+          <article class="review-card-item reveal">
+            <div class="card-user-row">
+              <img class="review-avatar" src="img/avatars/linh.jpg" alt="Linh" width="40" height="40" loading="lazy">
+              <div>
+                <strong class="user-name" data-i18n="rev.linh.name">Linh</strong>
+                <span class="user-time" data-i18n="rev.linh.time">Tháng 2/2026</span>
+              </div>
+            </div>
+            <div class="card-rating-row">
+              <p class="stars" aria-label="5 trên 5 sao"><span aria-hidden="true">★★★★★</span></p>
+            </div>
+            <span class="tour-tag" data-i18n="rev.linh.tour">Hà Nội City Tour</span>
+            <h4 class="card-quote" data-i18n="rev.linh.title">Xe trả đúng trước khách sạn lúc 16h20.</h4>
+            <p class="card-text" data-i18n="rev.linh.body">Sáng Trấn Quốc và Lăng Bác; trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách quốc tế.</p>
+          </article>
+
+          <!-- Card 4: Duc -->
+          <article class="review-card-item reveal">
+            <div class="card-user-row">
+              <img class="review-avatar" src="img/avatars/duc.jpg" alt="Đức" width="40" height="40" loading="lazy">
+              <div>
+                <strong class="user-name" data-i18n="rev.duc.name">Đức</strong>
+                <span class="user-time" data-i18n="rev.duc.time">Cuối tuần trước</span>
+              </div>
+            </div>
+            <div class="card-rating-row">
+              <p class="stars" aria-label="5 trên 5 sao"><span aria-hidden="true">★★★★★</span></p>
+            </div>
+            <span class="tour-tag" data-i18n="rev.duc.tour">Làng hương &amp; Hà Nội</span>
+            <h4 class="card-quote" data-i18n="rev.duc.title">Họ cho thử nhuộm một que.</h4>
+            <p class="card-text" data-i18n="rev.duc.body">Quang Phú Cầu lúc 10 giờ: bó hương đỏ vàng xếp thành tường. Về nội thành ăn Mesdames Linh rồi Hỏa Lò, đúng lịch brochure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- Đội Xe Đưa Đón Cao Cấp — The Dahlia Fleet -->
     <section class="section wrap fleet-section" id="fleet" aria-labelledby="fleet-heading">
@@ -214,68 +318,6 @@
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="section wrap reviews" aria-labelledby="reviews-heading">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow" data-i18n="reviews.k">Đánh giá</p>
-          <h2 id="reviews-heading" data-i18n="reviews.h">Khách đã đi</h2>
-          <p data-i18n="reviews.p">Một vài chuyến gần đây — chi tiết cụ thể, không lời khen chung chung.</p>
-        </div>
-      </div>
-      <ul class="review-grid">
-        <li class="review-card reveal">
-          <div class="review-top">
-            <span class="avatar" aria-hidden="true">L</span>
-            <div>
-              <p class="stars" aria-label="4 trên 5 sao" data-i18n-aria="star.4"><span aria-hidden="true">★★★★<span class="star-off">★</span></span></p>
-              <p class="review-meta" data-i18n="rev1.meta">Lan · Heritage Luxury Day Cruise · tuần trước</p>
-            </div>
-          </div>
-          <blockquote data-i18n="rev1.body">Đợi tàu ở bến Tuần Châu gần 40 phút, hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế, jacuzzi ngoài boong thì mát thật.</blockquote>
-        </li>
-        <li class="review-card reveal">
-          <div class="review-top">
-            <span class="avatar" aria-hidden="true">Q</span>
-            <div>
-              <p class="stars" aria-label="5 trên 5 sao" data-i18n-aria="star.5"><span aria-hidden="true">★★★★★</span></p>
-              <p class="review-meta" data-i18n="rev2.meta">Quân · Heritage Signature · tháng 3/2026</p>
-            </div>
-          </div>
-          <blockquote data-i18n="rev2.body">Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm, về khách sạn khoảng 20h40.</blockquote>
-        </li>
-        <li class="review-card reveal">
-          <div class="review-top">
-            <span class="avatar" aria-hidden="true">H</span>
-            <div>
-              <p class="stars" aria-label="4 trên 5 sao" data-i18n-aria="star.4"><span aria-hidden="true">★★★★<span class="star-off">★</span></span></p>
-              <p class="review-meta" data-i18n="rev3.meta">Hà · Hoa Lư – Tam Cốc – Hang Múa · tháng trước</p>
-            </div>
-          </div>
-          <blockquote data-i18n="rev3.body">Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Hang Múa 500 bậc — mệt nhưng nhìn xuống sông rõ.</blockquote>
-        </li>
-        <li class="review-card reveal">
-          <div class="review-top">
-            <span class="avatar" aria-hidden="true">Li</span>
-            <div>
-              <p class="stars" aria-label="5 trên 5 sao" data-i18n-aria="star.5"><span aria-hidden="true">★★★★★</span></p>
-              <p class="review-meta" data-i18n="rev4.meta">Linh · Hà Nội City Tour · tháng 2/2026</p>
-            </div>
-          </div>
-          <blockquote data-i18n="rev4.body">Sáng Trấn Quốc và Lăng Bác, trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách nước ngoài. Xe trả đúng trước khách sạn lúc 16h20.</blockquote>
-        </li>
-        <li class="review-card reveal">
-          <div class="review-top">
-            <span class="avatar" aria-hidden="true">Đ</span>
-            <div>
-              <p class="stars" aria-label="5 trên 5 sao" data-i18n-aria="star.5"><span aria-hidden="true">★★★★★</span></p>
-              <p class="review-meta" data-i18n="rev5.meta">Đức · Làng hương &amp; Hà Nội · cuối tuần trước</p>
-            </div>
-          </div>
-          <blockquote data-i18n="rev5.body">Quang Phú Cầu lúc 10 giờ, bó hương đỏ vàng xếp thành tường. Họ cho thử nhuộm một que. Về nội thành ăn Mesdames Linh rồi Hoa Lò — đúng lịch brochure.</blockquote>
-        </li>
-      </ul>
     </section>
 
     <section class="section wrap">

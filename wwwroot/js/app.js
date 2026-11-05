@@ -2,6 +2,7 @@
   var U = window.Dahlia;
   var DATA = window.TOUR_DATA || { tours: [], operators: [], email: "thedahliatour@gmail.com" };
   var tours = (DATA.tours || []).filter(function (tour) {
+    if (tour.active === false) return false;
     var list = DATA.operators || [];
     var op = null;
     for (var i = 0; i < list.length; i++) {
@@ -66,6 +67,10 @@
   }
 
   var VO = {
+    "label.transport": { vi: "Phương tiện di chuyển", en: "Transport Option" },
+    "label.cabin": { vi: "Hạng phòng du thuyền", en: "Cabin Type" },
+    "label.option": { vi: "Tùy chọn", en: "Option" },
+    "hint.cabinCapacity": { vi: "Tối đa 2 người lớn / phòng", en: "Max 2 adults per cabin" },
     "book.adults": { vi: "Người lớn", en: "Adults" },
     "book.children": { vi: "Trẻ em (nếu có)", en: "Children (if any)" },
     "guest.adult": { vi: "người lớn", en: "adult" },
@@ -97,9 +102,41 @@
     "empty.toursMore": { vi: "Không có tour khớp bộ lọc này. Thử bỏ bớt điều kiện.", en: "No tour matches. Try removing a filter." },
     "hint.mailTour": { vi: "Yêu cầu được gửi về mail qua ứng dụng thư của bạn.", en: "The request opens in your mail app." },
     "footer.voyage": { vi: "The Dahlia Hanoi · chỉ tour, không phòng.", en: "The Dahlia Hanoi · tours only, no rooms." },
-    "reviews.k": { vi: "Đánh giá", en: "Reviews" },
-    "reviews.h": { vi: "Khách đã đi", en: "Guests who went" },
-    "reviews.p": { vi: "Một vài chuyến gần đây — chi tiết cụ thể, không lời khen chung chung.", en: "A few recent trips — specific notes, not generic praise." },
+    "reviews.k": { vi: "KHÁCH ĐÃ ĐI", en: "TRAVELLERS WHO WENT" },
+    "reviews.h": { vi: "Những ngày thật trên vịnh, trong hang, giữa phố cổ.", en: "Real days on the water, in the caves, in the old quarter." },
+    "reviews.p": { vi: "Giờ giấc rõ ràng, món ăn cụ thể, cảm nhận chân thật từ khách đã trải nghiệm.", en: "Exact times, exact dishes, honest notes. Told by guests who were there." },
+    "reviews.rating": { vi: "4.6", en: "4.6" },
+    "reviews.ratingSub": { vi: "Điểm trung bình 5 chuyến gần nhất", en: "Average of 5 recent trips" },
+    "reviews.honestNote": { vi: "Góc nhìn thật", en: "Honest note" },
+
+    "rev.quan.name": { vi: "Quân", en: "Quan" },
+    "rev.quan.meta": { vi: "Heritage Signature · Tháng 3/2026", en: "Heritage Signature · March 2026" },
+    "rev.quan.title": { vi: "“Tiệc hoàng hôn có bánh phồng tôm. Sundeck có quầy bar riêng.”", en: "“Sunset party had prawn crackers. The sundeck had a bar.”" },
+    "rev.quan.body": { vi: "Tàu Signature rộng hơn, sundeck có bar. Buổi chiều kayak hang Luồn rồi lên Titov — bậc dốc nhưng view vịnh rõ. Tiệc hoàng hôn có bánh phồng tôm, về khách sạn khoảng 20h40.", en: "Signature felt roomier. Afternoon kayak at Luon then Titov: steep steps but a clear bay view. Hotel drop-off came around 20:40." },
+
+    "rev.lan.name": { vi: "Lan", en: "Lan" },
+    "rev.lan.time": { vi: "Tuần trước", en: "Last week" },
+    "rev.lan.tour": { vi: "Heritage Luxury Day Cruise", en: "Heritage Luxury Day Cruise" },
+    "rev.lan.title": { vi: "Đợi tàu ở bến Tuần Châu gần 40 phút.", en: "Waited nearly 40 minutes at Tuan Chau." },
+    "rev.lan.body": { vi: "Hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế; jacuzzi ngoài boong thì mát thật.", en: "The guide only texted \"almost docking.\" On board, the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool." },
+
+    "rev.ha.name": { vi: "Hà", en: "Ha" },
+    "rev.ha.time": { vi: "Tháng trước", en: "Last month" },
+    "rev.ha.tour": { vi: "Hoa Lư – Tam Cốc – Hang Múa", en: "Hoa Lu, Tam Coc, Mua Cave" },
+    "rev.ha.title": { vi: "Hang Múa 500 bậc — mệt nhưng view sông đẹp.", en: "Mua Cave's 500 steps were hard." },
+    "rev.ha.body": { vi: "Thuyền Tam Cốc khoảng một giờ rưỡi, lúa hai bên còn xanh. Trưa buffet tại Heritage Garden có dê hấp. Leo lên đỉnh nhìn xuống dòng sông rất rõ.", en: "About ninety minutes on Tam Coc, rice still green. Buffet at Heritage Garden had steamed goat. The river view from the top was clear." },
+
+    "rev.linh.name": { vi: "Linh", en: "Linh" },
+    "rev.linh.time": { vi: "Tháng 2/2026", en: "February 2026" },
+    "rev.linh.tour": { vi: "Hà Nội City Tour", en: "Hanoi City Tour" },
+    "rev.linh.title": { vi: "Xe trả đúng trước khách sạn lúc 16h20.", en: "Drop-off right at the hotel at 16:20." },
+    "rev.linh.body": { vi: "Sáng Trấn Quốc và Lăng Bác; trưa set menu Mesdames Linh — nem rán và gà mắc khén. Chiều Văn Miếu đông khách quốc tế.", en: "Morning Tran Quoc and the Mausoleum; Mesdames Linh set lunch with fried spring rolls and mac khen chicken." },
+
+    "rev.duc.name": { vi: "Đức", en: "Duc" },
+    "rev.duc.time": { vi: "Cuối tuần trước", en: "Last weekend" },
+    "rev.duc.tour": { vi: "Làng hương & Hà Nội", en: "Incense village and Hanoi" },
+    "rev.duc.title": { vi: "Họ cho thử nhuộm một que.", en: "They let us dye one stick." },
+    "rev.duc.body": { vi: "Quang Phú Cầu lúc 10 giờ: bó hương đỏ vàng xếp thành tường. Về nội thành ăn Mesdames Linh rồi Hỏa Lò, đúng lịch brochure.", en: "Quang Phu Cau at 10: red and yellow incense stacked like walls. Back in the city for Mesdames Linh then Hoa Lo, matched the brochure." },
     "rev1.meta": { vi: "Lan · Heritage Luxury Day Cruise · tuần trước", en: "Lan · Heritage Luxury Day Cruise · last week" },
     "rev1.body": { vi: "Đợi tàu ở bến Tuần Châu gần 40 phút, hướng dẫn chỉ nhắn “sắp vào bến”. Lên rồi buffet có tôm hấp bia và nem rế, jacuzzi ngoài boong thì mát thật.", en: "Waited nearly 40 minutes at Tuan Chau; the guide only texted “almost docking.” On board the buffet had beer-steamed shrimp and nem re; the deck jacuzzi was genuinely cool." },
     "rev2.meta": { vi: "Quân · Heritage Signature · tháng 3/2026", en: "Quan · Heritage Signature · March 2026" },
@@ -438,16 +475,6 @@
     var about = field(op, "about");
     var note = field(op, "note");
     var gallery = Array.isArray(op.gallery) ? op.gallery.filter(function (item) { return item && item.src; }) : [];
-    var facts = [];
-    if (op.address) facts.push("<li>" + U.escapeHtml(op.address) + "</li>");
-    if (op.hotline) {
-      var tel = op.hotlineHref || ("tel:" + String(op.hotline).replace(/\s/g, ""));
-      facts.push('<li><a href="' + U.escapeHtml(tel) + '">' + U.escapeHtml(op.hotline) + "</a></li>");
-    }
-    if (op.website) {
-      var site = String(op.website).replace(/^https?:\/\//, "").replace(/\/$/, "");
-      facts.push('<li><a href="' + U.escapeHtml(op.website) + '" target="_blank" rel="noopener">' + U.escapeHtml(site) + "</a></li>");
-    }
     var shots = gallery.map(function (item, i) {
       var alt = mediaAlt(item, field(op, "name"));
       return "<figure><img src=\"" + U.escapeHtml(item.src) + "\" alt=\"" + U.escapeHtml(alt) + "\"" +
@@ -462,10 +489,7 @@
       '<p class="eyebrow">' + U.escapeHtml(t("label.operator")) + "</p>" +
       "<h1>" + U.escapeHtml(field(op, "name")) + "</h1>" +
       (about ? '<p class="lede">' + U.escapeHtml(about) + "</p>" : "") +
-      (note ? '<p class="op-note">' + U.escapeHtml(note) +
-        (op.hotline ? ' <a href="' + U.escapeHtml(op.hotlineHref || ("tel:" + String(op.hotline).replace(/\s/g, ""))) + '">' + U.escapeHtml(op.hotline) + "</a>." : "") +
-        "</p>" : "") +
-      (facts.length ? '<ul class="op-facts">' + facts.join("") + "</ul>" : "") +
+      (note ? '<p class="op-note">' + U.escapeHtml(note) + "</p>" : "") +
       '<p class="op-count">' + U.escapeHtml(t("op.tours", { n: count })) + "</p>" +
       "</div>" +
       "<div>" +
@@ -526,26 +550,22 @@
     var email = data.email || "[Email]";
     var tourName = data.tourName || "[Tour Name]";
     var date = data.date || "[Preferred Date]";
-    var adults = data.adults != null ? data.adults : "2";
-    var children = data.children != null ? data.children : "0";
-    var totalGuests = (parseInt(adults, 10) || 0) + (parseInt(children, 10) || 0) || (data.guests || 2);
+    var totalStr = data.totalStr || "[Quotation / Rate]";
 
     return "Dear " + name + ",\n\n" +
       "Thank you for choosing our tour service in Vietnam! We are delighted to assist you and look forward to making your trip a wonderful experience.\n\n" +
-      "To complete your tour reservation, could you please provide the following information?\n\n" +
+      "To complete your tour reservation, could you please confirm the following details?\n\n" +
       "1. Guest Information\n\n" +
       "Full name (as shown on your passport): " + name + "\n\n" +
-      "Number of participants: " + totalGuests + "\n\n" +
       "Nationality:\n\n" +
       "Contact number (WhatsApp preferred): " + phone + "\n\n" +
       "Email address: " + email + "\n\n" +
       "2. Tour Details\n\n" +
       "Tour name: " + tourName + "\n\n" +
       "Preferred tour date: " + date + "\n\n" +
-      "Number of adults: " + adults + "\n\n" +
-      "Number of children (if any): " + (children > 0 ? children : "None") + "\n\n" +
+      "Quotation / Rate: " + totalStr + "\n\n" +
       "Preferred departure time (if applicable):\n\n" +
-      "5. Payment Information\n\n" +
+      "3. Payment Information\n\n" +
       "Preferred payment method: Bank Transfer / Credit Card / Cash\n\n" +
       "Payment status (if already paid): Pending confirmation\n\n" +
       "Any special billing requirements:\n\n" +
@@ -562,9 +582,6 @@
   function sendBookingEmail(data) {
     var targetEmail = getSiteEmail();
     var replyTemplate = generateReplyTemplate(data);
-    var adults = data.adults != null ? data.adults : (data.guests || 2);
-    var children = data.children != null ? data.children : 0;
-    var totalGuests = (parseInt(adults, 10) || 0) + (parseInt(children, 10) || 0) || (data.guests || 2);
 
     var bookingData = {
       name: data.name,
@@ -573,16 +590,14 @@
       tourId: data.tourId,
       tourName: data.tourName,
       date: data.date,
-      adults: adults,
-      children: children,
-      totalGuests: totalGuests,
+      option: data.option || "",
       note: data.note,
       totalStr: data.totalStr,
       replyTemplate: replyTemplate
     };
 
     var formSubmitPayload = {
-      _subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || "") + " (" + totalGuests + " khách)",
+      _subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || ""),
       _replyto: data.email || "",
       _captcha: "false",
       _template: "table",
@@ -591,10 +606,8 @@
       "Email": data.email,
       "Tour đã chọn": data.tourName,
       "Ngày khởi hành": data.date,
-      "Số người lớn": adults,
-      "Số trẻ em": children,
+      "Báo giá tham khảo": data.totalStr || "Liên hệ",
       "Ghi chú": data.note || "(Không có)",
-      "Báo giá": data.totalStr || "Liên hệ",
       "Mẫu phản hồi": replyTemplate
     };
 
@@ -631,7 +644,7 @@
         },
         body: JSON.stringify({
           access_key: web3Key,
-          subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || "") + " (" + totalGuests + " khách)",
+          subject: "[ĐẶT TOUR MỚI] " + (data.tourName || "Tour") + " - " + (data.name || ""),
           from_name: "The Dahlia Hanoi Booking",
           replyto: data.email || "",
           "Khách hàng": data.name,
@@ -639,11 +652,8 @@
           "Email": data.email,
           "Tour đã chọn": data.tourName,
           "Ngày khởi hành": data.date,
-          "Số người lớn": adults,
-          "Số trẻ em": children,
-          "Tổng số khách": totalGuests,
+          "Báo giá tham khảo": data.totalStr || "Liên hệ",
           "Ghi chú": data.note || "(Không có)",
-          "Báo giá": data.totalStr || "Liên hệ",
           "Mẫu phản hồi gửi khách": replyTemplate
         })
       }).catch(function () {}));
@@ -997,8 +1007,22 @@
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
     var opName = operatorLabel(tour);
-    var priceBadge = '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + "</span>";
-    var priceFoot = '<span class="price">' + formatPrice(unit.amount, unit.currency) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>";
+    var priceBadge = "";
+    var priceFoot = "";
+
+    if (unit) {
+      if (unit.original && unit.original > unit.amount) {
+        priceBadge = '<span class="price-badge"><del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> <span class="price-val">' + formatPrice(unit.amount, unit.currency) + '</span></span>';
+        priceFoot = '<span class="price"><del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> <strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span class="price-unit">' + U.escapeHtml(t("perGuest")) + '</span></span>';
+      } else {
+        priceBadge = '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + '</span>';
+        priceFoot = '<span class="price"><strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span class="price-unit">' + U.escapeHtml(t("perGuest")) + '</span></span>';
+      }
+    } else {
+      var note = field(tour, "priceNote") || t("contact");
+      priceBadge = '<span class="price-badge">' + U.escapeHtml(note) + '</span>';
+      priceFoot = '<span class="price"><strong class="price-val">' + U.escapeHtml(note) + '</strong></span>';
+    }
 
     return '<article class="v-card reveal">' +
       '<a class="v-card-hit" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
@@ -1769,11 +1793,31 @@
 
   function unitPrice(tour) {
     if (!tour) return null;
+    var isEn = U.lang() === "en";
+    if (isEn) {
+      if (typeof tour.priceEn === "number" && tour.priceEn > 0) {
+        return {
+          amount: tour.priceEn,
+          original: tour.priceOriginalEn || 0,
+          currency: "usd"
+        };
+      }
+    } else {
+      if (typeof tour.price === "number" && tour.price > 0) {
+        return {
+          amount: tour.price,
+          original: tour.priceOriginal || 0,
+          currency: "vnd"
+        };
+      }
+    }
     var pt = tour.pricingTable || {};
     var blob = [tour.id, tour.name, tour.cardLine, tour.cardLineEn, pt.baseRate, pt.baseRateEn].join(" ");
     var usd = parseUsd(blob);
-    var premium = usd >= 100 || (tour.nightsOffset || 0) >= 1 || /signature/i.test(tour.id || "");
-    return { amount: premium ? 119 : 99, currency: "usd" };
+    if (usd > 0) {
+      return { amount: usd, original: 0, currency: "usd" };
+    }
+    return null;
   }
 
   function childPercent(tour) {
@@ -1809,41 +1853,66 @@
 
   function priceLineHtml(tour) {
     var unit = unitPrice(tour);
-    return '<strong>' + formatPrice(unit.amount, unit.currency) + "</strong> <span>" + U.escapeHtml(t("perGuest")) + "</span>";
+    if (!unit) {
+      return '<strong class="price-val">' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + '</strong>';
+    }
+    var html = "";
+    if (unit.original && unit.original > unit.amount) {
+      html += '<del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> ';
+    }
+    html += '<strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span>' + U.escapeHtml(t("perGuest")) + '</span>';
+    return html;
   }
 
   function bookingFormHtml(tour, opts) {
     opts = opts || {};
-    var adults = opts.adults || opts.guests || 2;
-    var children = opts.children || 0;
     var date = opts.date || U.isoOffset(1);
-    var adultOptions = "";
-    for (var n = 1; n <= 15; n++) {
-      adultOptions += '<option value="' + n + '"' + (n === adults ? " selected" : "") + ">" + n + " " + (n === 1 ? t("guest.adult") : t("guest.adults")) + "</option>";
-    }
-    var childOptions = "";
-    for (var c = 0; c <= 8; c++) {
-      childOptions += '<option value="' + c + '"' + (c === children ? " selected" : "") + ">" + c + " " + t("guest.children") + "</option>";
-    }
+    var isEn = U.lang() === "en";
     var unit = unitPrice(tour);
-    var unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) + formatPrice(unit.amount, unit.currency) + U.escapeHtml(t("perGuest")) + "</p>";
+    var unitLine = "";
+    if (unit) {
+      if (unit.original && unit.original > unit.amount) {
+        unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) +
+          '<del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> ' +
+          '<strong class="price-val" id="book-unit-display">' + formatPrice(unit.amount, unit.currency) + '</strong> ' +
+          U.escapeHtml(t("perGuest")) + '</p>';
+      } else {
+        unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) +
+          '<strong class="price-val" id="book-unit-display">' + formatPrice(unit.amount, unit.currency) + '</strong> ' +
+          U.escapeHtml(t("perGuest")) + '</p>';
+      }
+    }
+
+    var optionsHtml = "";
+    if (tour.cabinOptions && tour.cabinOptions.length) {
+      var cabinOpts = tour.cabinOptions.map(function (cb) {
+        var cbName = isEn && cb.nameEn ? cb.nameEn : cb.name;
+        var cbPrice = isEn ? ("$" + cb.priceEn) : U.money(cb.price);
+        return '<option value="' + U.escapeHtml(cb.id) + '">' + U.escapeHtml(cbName) + ' (' + cbPrice + ')</option>';
+      }).join("");
+      optionsHtml = '<label><span>' + U.escapeHtml(t("label.cabin")) + '</span><select id="book-cabin-select" name="cabin">' + cabinOpts + '</select></label>' +
+        '<p class="cabin-capacity-hint">' + U.escapeHtml(t("hint.cabinCapacity")) + '</p>';
+    } else if (tour.transportOptions && tour.transportOptions.length) {
+      var transOpts = tour.transportOptions.map(function (tr) {
+        var trName = isEn && tr.nameEn ? tr.nameEn : tr.name;
+        var trPrice = isEn ? ("$" + tr.priceEn) : U.money(tr.price);
+        return '<option value="' + U.escapeHtml(tr.id) + '">' + U.escapeHtml(trName) + ' (' + trPrice + ')</option>';
+      }).join("");
+      optionsHtml = '<label><span>' + U.escapeHtml(t("label.transport")) + '</span><select id="book-transport-select" name="transport">' + transOpts + '</select></label>';
+    }
 
     return '<form class="book-form" id="book-form" novalidate>' +
       "<h2>" + U.escapeHtml(t("book.h")) + "</h2>" +
       '<div class="book-tour-selected"><span>' + U.escapeHtml(t("label.tour")) + ':</span> <strong>' + U.escapeHtml(field(tour, "name")) + '</strong></div>' +
       unitLine +
+      optionsHtml +
       '<label><span>' + U.escapeHtml(t("book.date")) + ' *</span><input id="book-date" name="date" type="date" value="' + U.escapeHtml(date) + '" min="' + U.isoOffset(0) + '" required></label>' +
       '<div class="book-grid-2">' +
         '<label><span>' + U.escapeHtml(t("book.name")) + ' *</span><input id="book-name" name="name" type="text" autocomplete="name" placeholder="' + U.escapeHtml(t("ph.name")) + '" required></label>' +
         '<label><span>' + U.escapeHtml(t("book.wa")) + ' *</span><input id="book-phone" name="phone" type="tel" autocomplete="tel" placeholder="' + U.escapeHtml(t("ph.phone")) + '" required></label>' +
       '</div>' +
       '<label><span>' + U.escapeHtml(t("book.email")) + ' *</span><input id="book-email" name="email" type="email" autocomplete="email" placeholder="' + U.escapeHtml(t("ph.email")) + '" required></label>' +
-      '<div class="book-grid-2">' +
-        '<label><span>' + U.escapeHtml(t("book.adults")) + '</span><select id="book-adults" name="adults">' + adultOptions + '</select></label>' +
-        '<label><span>' + U.escapeHtml(t("book.children")) + '</span><select id="book-children" name="children">' + childOptions + '</select></label>' +
-      '</div>' +
       '<label><span>' + U.escapeHtml(t("book.note")) + '</span><textarea id="book-note" name="note" rows="2" placeholder="' + U.escapeHtml(t("ph.note")) + '"></textarea></label>' +
-      '<p id="sum-math" class="math"></p>' +
       '<p class="sum" aria-live="polite"><span>' + U.escapeHtml(t("book.total")) + '</span> <strong id="tour-total"></strong></p>' +
       '<p class="sum sum-contact"><span>' + U.escapeHtml(t("contact")) + "</span>" + contactIconsHtml() + "</p>" +
       '<p id="form-error" class="form-error" role="alert" hidden></p>' +
@@ -1857,18 +1926,38 @@
     var form = document.getElementById("book-form");
     if (!form) return;
     var totalEl = document.getElementById("tour-total");
-    var mathEl = document.getElementById("sum-math");
     var errorEl = document.getElementById("form-error");
     var dateStart = document.getElementById("date-start");
     var dateEnd = document.getElementById("date-end");
-    var adultsSelect = document.getElementById("book-adults");
-    var childrenSelect = document.getElementById("book-children");
+    var cabinSelect = document.getElementById("book-cabin-select");
+    var transportSelect = document.getElementById("book-transport-select");
+    var unitDisplay = document.getElementById("book-unit-display");
     var submitBtn = document.getElementById("book-submit-btn");
 
-    function getGuestCounts() {
-      var a = parseInt((adultsSelect && adultsSelect.value) || "2", 10);
-      var c = parseInt((childrenSelect && childrenSelect.value) || "0", 10);
-      return { adults: a, children: c, total: a + c };
+    function getActiveUnitPrice() {
+      var isEn = U.lang() === "en";
+      var currency = isEn ? "usd" : "vnd";
+      if (cabinSelect && tour.cabinOptions) {
+        var cb = tour.cabinOptions.find(function (x) { return x.id === cabinSelect.value; }) || tour.cabinOptions[0];
+        if (cb) {
+          return {
+            amount: isEn ? cb.priceEn : cb.price,
+            original: isEn ? tour.priceOriginalEn : tour.priceOriginal,
+            currency: currency
+          };
+        }
+      }
+      if (transportSelect && tour.transportOptions) {
+        var tr = tour.transportOptions.find(function (x) { return x.id === transportSelect.value; }) || tour.transportOptions[0];
+        if (tr) {
+          return {
+            amount: isEn ? tr.priceEn : tr.price,
+            original: isEn ? tour.priceOriginalEn : tour.priceOriginal,
+            currency: currency
+          };
+        }
+      }
+      return unitPrice(tour);
     }
 
     function syncEnd() {
@@ -1886,23 +1975,28 @@
     }
 
     function quote() {
-      var counts = getGuestCounts();
-      var priced = quoteAmount(tour, counts.adults, counts.children);
-      if (priced) {
-        var mathText = counts.adults + " × " + formatPrice(priced.unit, priced.currency);
-        if (counts.children > 0) mathText += " + " + counts.children + " × " + priced.pct + "%";
-        totalEl.textContent = formatPrice(priced.total, priced.currency);
+      var activeUnit = getActiveUnitPrice();
+      if (unitDisplay && activeUnit) {
+        unitDisplay.textContent = formatPrice(activeUnit.amount, activeUnit.currency);
+      }
+      if (activeUnit) {
+        if (activeUnit.original && activeUnit.original > activeUnit.amount) {
+          totalEl.innerHTML = '<del class="price-old">' + formatPrice(activeUnit.original, activeUnit.currency) + '</del> <strong class="price-val">' + formatPrice(activeUnit.amount, activeUnit.currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+        } else {
+          totalEl.innerHTML = '<strong class="price-val">' + formatPrice(activeUnit.amount, activeUnit.currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+        }
         totalEl.classList.remove("is-rate");
-        totalEl.dataset.amount = String(priced.total);
-        mathEl.textContent = mathText;
+        totalEl.dataset.amount = String(activeUnit.amount);
       } else {
-        totalEl.textContent = field(tour, "priceNote") || t("contact");
+        totalEl.innerHTML = '<strong class="price-val">' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + '</strong>';
         totalEl.classList.remove("is-rate");
         totalEl.dataset.amount = "0";
-        mathEl.textContent = t("price.onDemand");
       }
       syncEnd();
-      return { counts: counts, totalStr: totalEl.textContent };
+      var optName = "";
+      if (cabinSelect && cabinSelect.options[cabinSelect.selectedIndex]) optName = cabinSelect.options[cabinSelect.selectedIndex].text;
+      else if (transportSelect && transportSelect.options[transportSelect.selectedIndex]) optName = transportSelect.options[transportSelect.selectedIndex].text;
+      return { totalStr: totalEl.textContent.replace(/\s+/g, " ").trim(), option: optName };
     }
 
     form.addEventListener("input", function () {
@@ -1943,10 +2037,11 @@
         phone: phone,
         email: email,
         date: dateRange,
-        adults: q.counts.adults,
-        children: q.counts.children,
-        guests: q.counts.total,
-        note: noteText,
+        adults: 2,
+        children: 0,
+        guests: 2,
+        option: q.option,
+        note: (q.option ? ("[" + q.option + "] ") : "") + noteText,
         totalStr: q.totalStr
       };
 
@@ -1957,10 +2052,11 @@
           "- SĐT: " + phone,
           "- Email: " + email,
           "- Ngày: " + dateRange,
-          "- Số khách: " + q.counts.adults + " người lớn" + (q.counts.children ? ", " + q.counts.children + " trẻ em" : ""),
-          "- Tạm tính: " + q.totalStr,
+          (q.option ? ("- Tùy chọn: " + q.option) : ""),
+          "- Giá tham khảo: " + q.totalStr,
+          (noteText ? ("- Lời nhắn: " + noteText) : ""),
           "Nhờ bên mình xác nhận giúp tôi nhé!"
-        ];
+        ].filter(Boolean);
         var waMessage = waLines.join("\n");
         var waUrl = "https://wa.me/84902271396?text=" + encodeURIComponent(waMessage);
 
@@ -1972,7 +2068,8 @@
           '<div class="success-booking-summary">' +
             '<p><strong>' + U.escapeHtml(t("label.tour")) + ':</strong> ' + U.escapeHtml(tourName) + '</p>' +
             '<p><strong>' + U.escapeHtml(t("book.name")) + ':</strong> ' + U.escapeHtml(name) + ' · ' + U.escapeHtml(phone) + '</p>' +
-            '<p><strong>' + U.escapeHtml(t("book.date")) + ':</strong> ' + U.escapeHtml(dateRange) + ' (' + q.counts.total + ' ' + U.escapeHtml(t("book.guests")) + ')</p>' +
+            '<p><strong>' + U.escapeHtml(t("book.date")) + ':</strong> ' + U.escapeHtml(dateRange) + '</p>' +
+            (q.option ? ('<p><strong>' + U.escapeHtml(t("label.option")) + ':</strong> ' + U.escapeHtml(q.option) + '</p>') : '') +
           '</div>' +
           '<div class="success-cta-row">' +
             '<a class="btn btn-wa-chat" href="' + waUrl + '" target="_blank" rel="noopener">' +
@@ -1988,30 +2085,32 @@
     quote();
   }
 
-  var FEATURED_IDS = ["ha-long", "ha-long-signature", "ninh-binh"];
+  var FEATURED_IDS = ["ha-long", "ha-long-sea-lion-premium-1d", "ninh-binh"];
 
   function featuredTours() {
     var pinned = FEATURED_IDS.map(tourById).filter(Boolean);
-    if (!tourById("ninh-binh")) {
-      var ninhBinh = tours.filter(function (tour) {
-        return tour.featured && tour.destination === "ninh-binh" && tour.operatorId === "heritage";
-      })[0];
-      if (ninhBinh) pinned.push(ninhBinh);
-    }
-    var rest = tours.filter(function (tour) {
-      return tour.featured && pinned.indexOf(tour) === -1;
-    });
-    return pinned.concat(rest).slice(0, 3);
+    return pinned.slice(0, 3);
   }
 
   function toursForDestination(dest) {
     var destId = resolveDestId(dest);
     var list = tours
       .filter(function (tour) { return resolveDestId(tour.destination) === destId; })
-      .slice()
-      .sort(function (a, b) { return tourStars(b) - tourStars(a); });
-    // Homepage teaser: keep three cards; Ninh Binh has a full catalog on tours.html
-    return list.slice(0, destId === "ninh-binh" ? 6 : 3);
+      .slice();
+    if (destId === "ninh-binh") {
+      var topIds = ["ninh-binh-bai-dinh-trang-an", "ninh-binh", "ninh-binh-2d1n-pagoda"];
+      list.sort(function (a, b) {
+        var idxA = topIds.indexOf(a.id);
+        var idxB = topIds.indexOf(b.id);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+        return tourStars(b) - tourStars(a);
+      });
+      return list.slice(0, 6);
+    }
+    list.sort(function (a, b) { return tourStars(b) - tourStars(a); });
+    return list.slice(0, 3);
   }
 
   function destMediaSlides(destKey) {
@@ -2238,13 +2337,13 @@
     var saved = readSearch();
     prepDates(bar);
     fillDestSelect(destSelect, saved.destination || "");
-    if (saved.date) bar.date.value = saved.date;
-    if (saved.guests) bar.guests.value = saved.guests;
+    if (saved.date && bar.date) bar.date.value = saved.date;
+    if (saved.guests && bar.guests) bar.guests.value = saved.guests;
 
     var q = U.query();
     if (q.get("dest")) destSelect.value = resolveDestId(q.get("dest"));
-    if (q.get("date")) bar.date.value = q.get("date");
-    if (q.get("guests")) bar.guests.value = q.get("guests");
+    if (q.get("date") && bar.date) bar.date.value = q.get("date");
+    if (q.get("guests") && bar.guests) bar.guests.value = q.get("guests");
 
     enhanceSearchSelects(bar);
     initHeroSlideshow();
@@ -2254,8 +2353,8 @@
       var destId = resolveDestId(destSelect.value || "");
       writeSearch({
         destination: destId,
-        date: bar.date.value,
-        guests: bar.guests.value
+        date: (bar.date && bar.date.value) || "",
+        guests: (bar.guests && bar.guests.value) || ""
       });
       paint();
       var dest = destId;
@@ -2306,40 +2405,44 @@
     if (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var name = form.name.value.trim();
-        var email = form.email.value.trim();
-        var message = form.message.value.trim();
+        var nameInput = form.querySelector('input[name="name"]') || form.elements["name"];
+        var emailInput = form.querySelector('input[name="email"]') || form.elements["email"];
+        var msgInput = form.querySelector('textarea[name="message"]') || form.elements["message"];
+        var name = (nameInput && nameInput.value.trim()) || "";
+        var email = (emailInput && emailInput.value.trim()) || "";
+        var message = (msgInput && msgInput.value.trim()) || "";
         var err = form.querySelector(".form-error");
         if (!name) return showErr(err, "err.name");
         if (!U.isEmail(email)) return showErr(err, "err.email");
         if (message.length < 4) return showErr(err, "err.msg");
-        err.hidden = true;
+        if (err) err.hidden = true;
         var submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.textContent = t("btn.sending");
         }
         sendBookingEmail({
-          tourId: "",
-          tourName: "Liên hệ nhanh",
+          tourId: "inquiry",
+          tourName: "Hỏi trước khi đặt tour",
           name: name,
-          phone: "",
+          phone: "(Khách không để lại SĐT)",
           email: email,
-          date: "",
-          adults: "",
-          children: 0,
+          date: "Linh hoạt / Tư vấn",
+          option: "",
           note: message,
           totalStr: "Lời nhắn từ form trang chủ"
         }).then(function (result) {
           if (!result || result.ok === false) throw new Error("send");
           form.classList.add("is-sent");
-          form.querySelector(".form-success").classList.add("is-on");
-        }).catch(function () {
+          var successEl = form.querySelector(".form-success");
+          if (successEl) successEl.classList.add("is-on");
+        }).catch(function (error) {
+          console.error("[Inquiry Form Error]", error);
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.textContent = t("btn.send");
           }
-          showErr(err, "err.send");
+          if (err) showErr(err, "err.send");
         });
       });
     }
@@ -2609,7 +2712,6 @@
         "</div>" +
         '<div class="detail-show-caption">' +
         '<p class="eyebrow detail-dest-title">' + U.escapeHtml(destInfo.title) + "</p>" +
-        (destInfo.lead ? '<p class="detail-dest-lead">' + U.escapeHtml(destInfo.lead) + "</p>" : "") +
         '<h1 class="detail-title">' + U.escapeHtml(field(tour, "name")) + "</h1>" +
         starsHtml(tour, { showTier: true, className: "detail-stars" }) +
         '<p class="price-line">' + priceLineHtml(tour) + "</p>" +
@@ -2891,6 +2993,13 @@
                 '<span>' + U.escapeHtml(t("label.tour")) + ' *</span>' +
                 '<select id="modal-tour-select" name="tour" required></select>' +
               '</label>' +
+              '<div id="modal-option-wrapper" hidden>' +
+                '<label>' +
+                  '<span id="modal-option-title">' + U.escapeHtml(t("label.option")) + '</span>' +
+                  '<select id="modal-option-select" name="option"></select>' +
+                '</label>' +
+                '<p id="modal-option-hint" class="cabin-capacity-hint" hidden>' + U.escapeHtml(t("hint.cabinCapacity")) + '</p>' +
+              '</div>' +
               '<div class="book-grid-2">' +
                 '<label>' +
                   '<span>' + U.escapeHtml(t("book.name")) + ' *</span>' +
@@ -2911,38 +3020,13 @@
                   '<input id="modal-book-date" name="date" type="date" required>' +
                 '</label>' +
               '</div>' +
-              '<div class="book-grid-2">' +
-                '<label>' +
-                  '<span>' + U.escapeHtml(t("book.adults")) + '</span>' +
-                  '<select id="modal-book-adults" name="adults">' +
-                    '<option value="1">1 ' + t("guest.adult") + '</option>' +
-                    '<option value="2" selected>2 ' + t("guest.adults") + '</option>' +
-                    '<option value="3">3 ' + t("guest.adults") + '</option>' +
-                    '<option value="4">4 ' + t("guest.adults") + '</option>' +
-                    '<option value="5">5 ' + t("guest.adults") + '</option>' +
-                    '<option value="6">6 ' + t("guest.adults") + '</option>' +
-                    '<option value="8">8 ' + t("guest.adults") + '</option>' +
-                    '<option value="10">10+ ' + t("guest.adults") + '</option>' +
-                  '</select>' +
-                '</label>' +
-                '<label>' +
-                  '<span>' + U.escapeHtml(t("book.children")) + '</span>' +
-                  '<select id="modal-book-children" name="children">' +
-                    '<option value="0" selected>0 ' + t("guest.children") + '</option>' +
-                    '<option value="1">1 ' + t("guest.child") + '</option>' +
-                    '<option value="2">2 ' + t("guest.children") + '</option>' +
-                    '<option value="3">3 ' + t("guest.children") + '</option>' +
-                    '<option value="4">4+ ' + t("guest.children") + '</option>' +
-                  '</select>' +
-                '</label>' +
-              '</div>' +
               '<label>' +
                 '<span>' + U.escapeHtml(t("book.note")) + '</span>' +
                 '<textarea id="modal-book-note" name="note" rows="2" placeholder="' + U.escapeHtml(t("ph.note")) + '"></textarea>' +
               '</label>' +
               '<div class="modal-pricing-preview">' +
                 '<span>' + U.escapeHtml(t("book.total")) + ':</span>' +
-                '<strong id="modal-price-val">Liên hệ</strong>' +
+                '<div id="modal-price-val" style="display:inline-flex;align-items:center;gap:6px;"><strong class="price-val">Liên hệ</strong></div>' +
               '</div>' +
               '<div class="modal-pricing-preview sum-contact">' +
                 '<span>' + U.escapeHtml(t("contact")) + ':</span>' +
@@ -2978,8 +3062,10 @@
     var form = document.getElementById("modal-book-form");
     var tourSelect = document.getElementById("modal-tour-select");
     var dateInput = document.getElementById("modal-book-date");
-    var adultsSelect = document.getElementById("modal-book-adults");
-    var childrenSelect = document.getElementById("modal-book-children");
+    var optionWrapper = document.getElementById("modal-option-wrapper");
+    var optionTitle = document.getElementById("modal-option-title");
+    var optionSelect = document.getElementById("modal-option-select");
+    var optionHint = document.getElementById("modal-option-hint");
     var priceVal = document.getElementById("modal-price-val");
     var errorEl = document.getElementById("modal-form-error");
     var successBox = document.getElementById("modal-book-success");
@@ -3019,27 +3105,87 @@
     }
     tourSelect.innerHTML = selectHtml;
 
-    function updateModalQuote() {
-      var tour = tourById(tourSelect.value);
-      if (!tour) {
-        priceVal.textContent = t("contact");
-        return;
-      }
-      var adults = parseInt(adultsSelect.value || "2", 10);
-      var children = parseInt(childrenSelect.value || "0", 10);
-      var priced = quoteAmount(tour, adults, children);
-      if (priced) {
-        priceVal.textContent = formatPrice(priced.total, priced.currency);
-        priceVal.classList.remove("is-rate");
+    function syncModalOptions(tour) {
+      if (!optionWrapper || !optionSelect) return;
+      var isEn = U.lang() === "en";
+      if (tour && tour.cabinOptions && tour.cabinOptions.length) {
+        optionWrapper.hidden = false;
+        optionTitle.textContent = t("label.cabin");
+        optionHint.hidden = false;
+        optionHint.textContent = t("hint.cabinCapacity");
+        optionSelect.innerHTML = tour.cabinOptions.map(function (cb) {
+          var cbName = isEn && cb.nameEn ? cb.nameEn : cb.name;
+          var cbPrice = isEn ? ("$" + cb.priceEn) : U.money(cb.price);
+          return '<option value="' + U.escapeHtml(cb.id) + '">' + U.escapeHtml(cbName) + ' (' + cbPrice + ')</option>';
+        }).join("");
+      } else if (tour && tour.transportOptions && tour.transportOptions.length) {
+        optionWrapper.hidden = false;
+        optionTitle.textContent = t("label.transport");
+        optionHint.hidden = true;
+        optionSelect.innerHTML = tour.transportOptions.map(function (tr) {
+          var trName = isEn && tr.nameEn ? tr.nameEn : tr.name;
+          var trPrice = isEn ? ("$" + tr.priceEn) : U.money(tr.price);
+          return '<option value="' + U.escapeHtml(tr.id) + '">' + U.escapeHtml(trName) + ' (' + trPrice + ')</option>';
+        }).join("");
       } else {
-        priceVal.textContent = field(tour, "priceNote") || t("contact");
-        priceVal.classList.remove("is-rate");
+        optionWrapper.hidden = true;
+        optionHint.hidden = true;
+        optionSelect.innerHTML = "";
       }
     }
 
-    tourSelect.addEventListener("change", updateModalQuote);
-    adultsSelect.addEventListener("change", updateModalQuote);
-    childrenSelect.addEventListener("change", updateModalQuote);
+    function updateModalQuote() {
+      var tour = tourById(tourSelect.value);
+      if (!tour) {
+        priceVal.innerHTML = '<strong class="price-val">' + U.escapeHtml(t("contact")) + '</strong>';
+        return;
+      }
+      var isEn = U.lang() === "en";
+      var currency = isEn ? "usd" : "vnd";
+      var finalPrice = null;
+      var origPrice = null;
+      var optVal = optionSelect ? optionSelect.value : "";
+
+      if (tour.cabinOptions && tour.cabinOptions.length) {
+        var cb = tour.cabinOptions.find(function (x) { return x.id === optVal; }) || tour.cabinOptions[0];
+        if (cb) {
+          finalPrice = isEn ? cb.priceEn : cb.price;
+          origPrice = isEn ? tour.priceOriginalEn : tour.priceOriginal;
+        }
+      } else if (tour.transportOptions && tour.transportOptions.length) {
+        var tr = tour.transportOptions.find(function (x) { return x.id === optVal; }) || tour.transportOptions[0];
+        if (tr) {
+          finalPrice = isEn ? tr.priceEn : tr.price;
+          origPrice = isEn ? tour.priceOriginalEn : tour.priceOriginal;
+        }
+      } else {
+        var unit = unitPrice(tour);
+        if (unit) {
+          finalPrice = unit.amount;
+          origPrice = unit.original;
+          currency = unit.currency;
+        }
+      }
+
+      if (finalPrice != null && finalPrice > 0) {
+        if (origPrice && origPrice > finalPrice) {
+          priceVal.innerHTML = '<del class="price-old">' + formatPrice(origPrice, currency) + '</del> <strong class="price-val">' + formatPrice(finalPrice, currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+        } else {
+          priceVal.innerHTML = '<strong class="price-val">' + formatPrice(finalPrice, currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+        }
+      } else {
+        priceVal.innerHTML = '<strong class="price-val">' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + '</strong>';
+      }
+    }
+
+    tourSelect.addEventListener("change", function () {
+      var t = tourById(tourSelect.value);
+      syncModalOptions(t);
+      updateModalQuote();
+    });
+    if (optionSelect) {
+      optionSelect.addEventListener("change", updateModalQuote);
+    }
 
     function closeModal() {
       modal.classList.remove("is-open");
@@ -3062,6 +3208,8 @@
       if (tourId) {
         tourSelect.value = tourId;
       }
+      var t = tourById(tourSelect.value);
+      syncModalOptions(t);
       updateModalQuote();
       var nameInput = document.getElementById("modal-book-name");
       if (nameInput) setTimeout(function () { nameInput.focus(); }, 150);
@@ -3104,8 +3252,6 @@
       var email = document.getElementById("modal-book-email").value.trim();
       var date = dateInput.value;
       var note = document.getElementById("modal-book-note").value.trim();
-      var adults = parseInt(adultsSelect.value || "2", 10);
-      var children = parseInt(childrenSelect.value || "0", 10);
 
       if (!tour) return showErr(errorEl, "modal.tourChoose");
       if (!name) return showErr(errorEl, "err.bookName");
@@ -3115,8 +3261,10 @@
       errorEl.hidden = true;
 
       var tourName = field(tour, "name");
-      var totalStr = priceVal.textContent;
-      var totalGuests = adults + children;
+      var totalStr = priceVal.textContent.replace(/\s+/g, " ").trim();
+      var chosenOption = (!optionWrapper.hidden && optionSelect && optionSelect.options[optionSelect.selectedIndex])
+        ? optionSelect.options[optionSelect.selectedIndex].text
+        : "";
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -3131,21 +3279,30 @@
         phone: phone,
         email: email,
         date: showVN(date),
-        adults: adults,
-        children: children,
-        guests: totalGuests,
-        note: note,
+        adults: 2,
+        children: 0,
+        guests: 2,
+        option: chosenOption,
+        note: (chosenOption ? ("[" + chosenOption + "] ") : "") + note,
         totalStr: totalStr
       };
 
       sendBookingEmail(bookingData).then(function () {
-        var waMessage = "Xin chào The Dahlia, tôi vừa gửi đăng ký tour *" + tourName + "*:\n- Khách: " + name + "\n- SĐT: " + phone + "\n- Email: " + email + "\n- Ngày: " + showVN(date) + "\n- Số khách: " + adults + " người lớn" + (children ? ", " + children + " trẻ em" : "") + "\n- Tạm tính: " + totalStr + "\nNhờ bên mình xác nhận giúp tôi nhé!";
+        var waMessage = "Xin chào The Dahlia, tôi vừa gửi đăng ký tour *" + tourName + "*:\n" +
+          "- Khách: " + name + "\n" +
+          "- SĐT: " + phone + "\n" +
+          "- Email: " + email + "\n" +
+          "- Ngày: " + showVN(date) + "\n" +
+          (chosenOption ? ("- Tùy chọn: " + chosenOption + "\n") : "") +
+          "- Giá tham khảo: " + totalStr + "\n" +
+          "Nhờ bên mình liên hệ xác nhận giúp tôi nhé!";
         waLink.href = "https://wa.me/84902271396?text=" + encodeURIComponent(waMessage);
 
         successSummary.innerHTML =
           '<p><strong>' + U.escapeHtml(t("label.tour")) + ':</strong> ' + U.escapeHtml(tourName) + '</p>' +
           '<p><strong>' + U.escapeHtml(t("book.name")) + ':</strong> ' + U.escapeHtml(name) + ' · ' + U.escapeHtml(phone) + '</p>' +
-          '<p><strong>' + U.escapeHtml(t("book.date")) + ':</strong> ' + U.escapeHtml(showVN(date)) + ' (' + totalGuests + ' ' + U.escapeHtml(t("book.guests")) + ')</p>';
+          '<p><strong>' + U.escapeHtml(t("book.date")) + ':</strong> ' + U.escapeHtml(showVN(date)) + '</p>' +
+          (chosenOption ? ('<p><strong>' + U.escapeHtml(t("label.option")) + ':</strong> ' + U.escapeHtml(chosenOption) + '</p>') : '');
 
         form.hidden = true;
         successBox.hidden = false;

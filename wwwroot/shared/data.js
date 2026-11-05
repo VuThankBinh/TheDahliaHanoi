@@ -25,10 +25,10 @@
       "id": "heritage",
       "name": "Heritage Vietnam Travel",
       "nameEn": "Heritage Vietnam Travel",
-      "hotline": "0879 818 386",
-      "hotlineHref": "tel:+84879818386",
-      "website": "https://heritagevietnamtravel.com",
-      "address": "186 Hồng Tiến, Bồ Đề, Long Biên, Hà Nội",
+      "hotline": "",
+      "hotlineHref": "",
+      "website": "",
+      "address": "",
       "active": true,
       "childrenPolicy": [
         "1–4 tuổi: miễn phí 1 trẻ khi đi cùng đủ 2 người lớn, ngồi chung chỗ.",
@@ -66,8 +66,8 @@
       "id": "may",
       "name": "Sapa May Travel",
       "nameEn": "Sapa May Travel",
-      "hotline": "0902 271 396",
-      "hotlineHref": "tel:+84902271396",
+      "hotline": "",
+      "hotlineHref": "",
       "website": "",
       "address": "",
       "active": true,
@@ -187,8 +187,8 @@
       "nameEn": "Ha Long – Lan Ha Bay",
       "title": "Hạ Long & Lan Hạ – Kỳ quan vịnh biển & Du thuyền đẳng cấp",
       "titleEn": "Ha Long & Lan Ha – Marine Wonders & Luxury Cruises",
-      "lead": "Trải nghiệm du thuyền ngủ đêm 4 sao Cozy Bay Grand, siêu du thuyền 5 sao Cozy Bay Premium & Sea Lion, và hải trình độc bản 7 tiếng Tropical Cruise khám phá vịnh Lan Hạ, đảo Cát Bà.",
-      "leadEn": "Experience 4-star Cozy Bay Grand overnight cruise, 5-star day cruises Cozy Bay Premium & Sea Lion, and exclusive 7-hour Tropical Cruise across Lan Ha Bay and Cat Ba Island.",
+      "lead": "Khám phá kỳ quan thiên nhiên thế giới vịnh Hạ Long và vịnh Lan Hạ trên các hải trình du thuyền trong ngày và ngủ đêm đẳng cấp 4-5 sao.",
+      "leadEn": "Explore UNESCO World Heritage Ha Long Bay and Lan Ha Bay on luxury 4-5 star day cruises and overnight voyages.",
       "video": "img/video/16092120_2560_1440_30fps.mp4",
       "media": [
         {
@@ -301,9 +301,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1400000,
+      "priceNote": "1.400.000đ",
+      "priceNoteEn": "$55",
       "image": "img/tours/ha-long.jpg",
       "media": [
         {
@@ -355,8 +355,8 @@
           "altEn": "Limousine transfer from Hanoi"
         }
       ],
-      "cardLine": "Du thuyền một ngày Heritage Luxury trên vịnh Hạ Long. Buffet trưa, hang Sửng Sốt, kayak hang Luồn, đảo Titop và tiệc hoàng hôn trên sundeck. Limousine khứ hồi Hà Nội, hướng dẫn tiếng Anh. Giá 2.450.000đ/khách — $99/khách.",
-      "cardLineEn": "A Heritage Luxury day cruise on Ha Long Bay. Lunch buffet, Surprising Cave, kayak at Luon Cave, Titop Island, and a sunset party on the sundeck. Round-trip limousine from Hanoi and an English-speaking guide. 2,450,000đ per guest — $99/guest.",
+      "cardLine": "Du thuyền một ngày Heritage Luxury trên vịnh Hạ Long. Buffet trưa cao cấp, hang Sửng Sốt, chèo kayak hang Luồn, đảo Titop và tiệc hoàng hôn sundeck. Xe đưa đón khứ hồi từ phố cổ Hà Nội.",
+      "cardLineEn": "A Heritage Luxury day cruise on Ha Long Bay. Premium lunch buffet, Sung Sot Cave, kayak at Luon Cave, Titop Island, and sunset party on the sundeck. Round-trip limousine transfer from Hanoi Old Quarter.",
       "description": [
         "Tàu Heritage Luxury Day Cruise — capacity 99 khách, 3 boong, jacuzzi và sundeck.",
         "Lịch trình: Sửng Sốt → hang Luồn → Titov, tiệc hoàng hôn trên đường về Tuần Châu.",
@@ -565,21 +565,24 @@
         "Age 9 and over: 100% of the adult fare.",
         "Age is taken from the year of birth on the passport."
       ],
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceOriginal": 2550000,
+      "priceOriginalEn": 99,
+      "priceEn": 55
     },
     {
       "id": "ha-long-signature",
       "destination": "ha-long",
-      "featured": true,
+      "featured": false,
       "stars": 5,
       "name": "Heritage Signature Day Cruise",
       "nameEn": "Heritage Signature Day Cruise",
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1550000,
+      "priceNote": "1.550.000đ",
+      "priceNoteEn": "$60",
       "image": "img/tours/ha-long-signature.jpg",
       "media": [
         {
@@ -619,8 +622,8 @@
           "altEn": "Sunset party on the sundeck"
         }
       ],
-      "cardLine": "Du thuyền 5 sao Heritage Signature (ra mắt 2026): 168 khách, buffet hoặc set Ấn Độ, jacuzzi bốn mùa và bar sundeck. Lịch hang Luồn, Sửng Sốt, Titov và tiệc hoàng hôn. Limousine 19–22 chỗ $119 hoặc shuttle 30 chỗ $109.",
-      "cardLineEn": "Heritage Signature 5-star day cruise (launched 2026): 168 guests, buffet or Indian set menus, four-season jacuzzi, and sundeck bar. Luon Cave, Surprising Cave, Titov, and sunset party. Limousine 19–22 seats $119 or shuttle bus 30 seats $109.",
+      "cardLine": "Du thuyền 5 sao Heritage Signature đẳng cấp: buffet hải sản hoặc set menu Ấn Độ, bể sục jacuzzi bốn mùa và sky bar sundeck. Khám phá hang Luồn, hang Sửng Sốt, đảo Titov và tiệc trà chiều hoàng hôn.",
+      "cardLineEn": "5-star Heritage Signature day cruise: luxury seafood buffet or Indian set menu, four-season jacuzzi, and sundeck sky bar. Explore Luon Cave, Sung Sot Cave, Titov Island, and sunset tea party.",
       "description": [
         "Tàu thép Heritage Signature — dài 50m, 3 boong, sức chứa 168 khách.",
         "Buffet hoặc set menu chay / không chay kiểu Ấn (từ 2 khách).",
@@ -813,21 +816,24 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceOriginal": 3000000,
+      "priceOriginalEn": 119,
+      "priceEn": 60
     },
     {
       "id": "ninh-binh",
       "destination": "ninh-binh",
       "featured": true,
       "stars": 5,
-      "name": "Hoa Lư – Tam Cốc/Tràng An – Hang Múa",
-      "nameEn": "Hoa Lu – Tam Coc/Trang An – Mua Cave",
+      "name": "Hoa Lư – Tam Cốc – Hang Múa",
+      "nameEn": "Hoa Lu – Tam Coc – Mua Cave",
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1200000,
+      "priceNote": "1.200.000đ",
+      "priceNoteEn": "$47",
       "image": "img/tours/ninh-binh.jpg",
       "media": [
         {
@@ -879,8 +885,8 @@
           "altEn": "Ninh Binh specialties"
         }
       ],
-      "cardLine": "Tour Ninh Bình Heritage Premium cả ngày: cố đô Hoa Lư, đạp xe 30 phút hoặc thư giãn tại Trang An Heritage Garden, thuyền Tam Cốc hoặc Tràng An, leo Hang Múa. Buffet/set lunch đặc sản. Limousine nhóm $79/khách.",
-      "cardLineEn": "Full-day Ninh Binh Heritage Premium: Hoa Lu ancient capital, 30-minute cycling or relax at Trang An Heritage Garden, boat at Tam Coc or Trang An, climb Mua Cave. Local specialty lunch. Limousine group from $79/guest.",
+      "cardLine": "Tour Ninh Bình Heritage Premium: cố đô Hoa Lư, đạp xe thư giãn tại Trang An Heritage Garden, chèo thuyền Tam Cốc hoặc Tràng An, chinh phục đỉnh Hang Múa. Thưởng thức buffet đặc sản dê núi.",
+      "cardLineEn": "Ninh Binh Heritage Premium full-day tour: Hoa Lu ancient capital, relaxing cycling at Trang An Heritage Garden, scenic boat ride at Tam Coc or Trang An, and hike to Mua Cave viewpoint.",
       "description": [
         "Chọn thuyền Tam Cốc (Hạ Long trên cạn) hoặc Tràng An UNESCO.",
         "Ăn trưa tại Trang An Heritage Garden — có lựa chọn chay.",
@@ -1055,7 +1061,27 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "featuredNinhBinh": true,
+      "priceEn": 47,
+      "priceOriginal": 1800000,
+      "priceOriginalEn": 69,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 1200000,
+          "priceEn": 47
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 1800000,
+          "priceEn": 69
+        }
+      ]
     },
     {
       "id": "ninh-binh-tam-coc",
@@ -1063,13 +1089,13 @@
       "featured": false,
       "stars": 5,
       "name": "Hoa Lư – Tam Cốc/Tràng An",
-      "nameEn": "Hoa Lu – Tam Coc/Trang An",
+      "nameEn": "Hoa Lu – Tam Coc / Trang An",
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1050000,
+      "priceNote": "1.050.000đ",
+      "priceNoteEn": "$40",
       "image": "img/tours/ninh-binh-tam-coc.jpg",
       "media": [
         {
@@ -1109,8 +1135,8 @@
           "altEn": "Limousine Hanoi – Ninh Binh"
         }
       ],
-      "cardLine": "Cùng khung Hoa Lư và thuyền Tam Cốc hoặc Tràng An, không leo Hang Múa — về Hà Nội sớm hơn. Đạp xe, buffet/set lunch tại Trang An Heritage Garden. Limousine $73/khách.",
-      "cardLineEn": "Same Hoa Lu and Tam Coc or Trang An boat day, without Mua Cave — earlier return to Hanoi. Cycling and lunch at Trang An Heritage Garden. Limousine from $73/guest.",
+      "cardLine": "Khám phá cố đô Hoa Lư lịch sử và xuôi thuyền nan ngắm cảnh Tam Cốc tuyệt đẹp. Đạp xe xuyên làng quê thanh bình và thưởng thức bữa trưa đặc sản tại Trang An Heritage Garden.",
+      "cardLineEn": "Explore historic Hoa Lu ancient capital and embark on a scenic sampan boat ride along Tam Coc. Enjoy peaceful village cycling and specialty lunch at Trang An Heritage Garden.",
       "description": [
         "Phù hợp ai muốn thuyền và cố đô mà không leo 500 bậc Hang Múa.",
         "Về khách sạn khoảng 18:30–19:00.",
@@ -1271,7 +1297,26 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 40,
+      "priceOriginal": 1650000,
+      "priceOriginalEn": 63,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 1050000,
+          "priceEn": 40
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 1650000,
+          "priceEn": 63
+        }
+      ]
     },
     {
       "id": "ninh-binh-bai-dinh",
@@ -1283,9 +1328,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1300000,
+      "priceNote": "1.300.000đ",
+      "priceNoteEn": "$50",
       "image": "img/tours/ninh-binh-bai-dinh.jpg",
       "media": [
         {
@@ -1319,8 +1364,8 @@
           "altEn": "Trang An Heritage Garden"
         }
       ],
-      "cardLine": "Chùa Bái Đính với xe điện hai chiều, thuyền Tràng An UNESCO và leo Hang Múa. Ăn trưa đặc sản tại Trang An Heritage Garden. Limousine $83/khách.",
-      "cardLineEn": "Bai Dinh Pagoda with round-trip electric car, UNESCO Trang An boat, and Mua Cave climb. Specialty lunch at Trang An Heritage Garden. Limousine from $83/guest.",
+      "cardLine": "Chiêm bái quần thể chùa Bái Đính với xe điện khứ hồi, du ngoạn danh thắng Tràng An di sản UNESCO và leo 500 bậc ngắm toàn cảnh Hang Múa. Bữa trưa buffet đặc sản Ninh Bình.",
+      "cardLineEn": "Visit magnificent Bai Dinh Pagoda with round-trip electric car, cruise UNESCO World Heritage Trang An, and climb 500 stone steps at Mua Cave. Savor Ninh Binh specialty buffet.",
       "description": [
         "Bái Đính: 500 tượng La Hán đá, chuông đồng lớn, tượng Quan Âm.",
         "Thuyền Tràng An khoảng 1,5 giờ qua hệ thống hang.",
@@ -1481,7 +1526,26 @@
             "altEn": "Restaurant space"
           }
         ]
-      }
+      },
+      "priceEn": 50,
+      "priceOriginal": 1900000,
+      "priceOriginalEn": 73,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 1300000,
+          "priceEn": 50
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 1900000,
+          "priceEn": 73
+        }
+      ]
     },
     {
       "id": "ninh-binh-2d1n",
@@ -1493,9 +1557,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 3000000,
+      "priceNote": "3.000.000đ",
+      "priceNoteEn": "$115",
       "image": "img/tours/ninh-binh-2d1n.jpg",
       "media": [
         {
@@ -1541,8 +1605,8 @@
           "altEn": "Ninh Binh specialty buffet"
         }
       ],
-      "cardLine": "Hai ngày một đêm tại Trang An Heritage Garden: ngày 1 Bái Đính – Tràng An, nghỉ đêm và hồ bơi; ngày 2 Hoa Lư – đạp xe – Tam Cốc – Hang Múa. Limousine từ $169/khách (2 khách trở lên).",
-      "cardLineEn": "Two days one night at Trang An Heritage Garden: day 1 Bai Dinh – Trang An, overnight with pool; day 2 Hoa Lu – cycling – Tam Coc – Mua Cave. Limousine from $169/guest (from 2 guests).",
+      "cardLine": "Hành trình trọn vẹn 2 ngày 1 đêm: Bái Đính, Tràng An, Hoa Lư, đạp xe làng quê, Tam Cốc và Hang Múa. Nghỉ dưỡng tại Trang An Heritage Garden với hồ bơi và không gian xanh mát.",
+      "cardLineEn": "Complete 2-day 1-night journey: Bai Dinh, Trang An, Hoa Lu, countryside cycling, Tam Coc, and Mua Cave. Relax at Trang An Heritage Garden featuring swimming pool and lush greenery.",
       "description": [
         "Nghỉ 1 đêm tại Trang An Heritage Garden (2–3 khách/phòng).",
         "Gồm 2 buffet trưa, 1 set tối, 1 bữa sáng.",
@@ -1747,7 +1811,26 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 115,
+      "priceOriginal": 4100000,
+      "priceOriginalEn": 159,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 3000000,
+          "priceEn": 115
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 4100000,
+          "priceEn": 159
+        }
+      ]
     },
     {
       "id": "ninh-binh-bai-dinh-trang-an",
@@ -1759,9 +1842,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1150000,
+      "priceNote": "1.150.000đ",
+      "priceNoteEn": "$44",
       "image": "img/tours/ninh-binh-bai-dinh-trang-an.jpg",
       "media": [
         {
@@ -1795,8 +1878,8 @@
           "altEn": "Shuttle bus transfer"
         }
       ],
-      "cardLine": "Chùa Bái Đính (xe điện hai chiều) và thuyền Tràng An UNESCO — không leo Hang Múa, về Hà Nội sớm hơn. Buffet trưa tại Trang An Heritage Garden. Limousine $76/khách.",
-      "cardLineEn": "Bai Dinh Pagoda (round-trip electric car) and UNESCO Trang An boat — no Mua Cave climb, earlier return to Hanoi. Buffet lunch at Trang An Heritage Garden. Limousine from $76/guest.",
+      "cardLine": "Chiêm bái chùa Bái Đính nguy nga (bao gồm xe điện 2 chiều) và ngồi thuyền nan khám phá quần thể danh thắng Tràng An di sản UNESCO. Thưởng thức buffet trưa đặc sản địa phương.",
+      "cardLineEn": "Visit grand Bai Dinh Pagoda (includes round-trip electric car) and cruise scenic waterways of UNESCO Trang An. Enjoy a delicious local specialty buffet lunch.",
       "description": [
         "Bái Đính: tượng La Hán đá, chuông đồng lớn, tượng Quan Âm.",
         "Thuyền Tràng An khoảng 1,5 giờ qua hệ thống hang.",
@@ -1947,22 +2030,42 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "featuredNinhBinh": true,
+      "priceEn": 44,
+      "priceOriginal": 1700000,
+      "priceOriginalEn": 66,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 1150000,
+          "priceEn": 44
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 1700000,
+          "priceEn": 66
+        }
+      ]
     },
     {
       "id": "ninh-binh-2d1n-pagoda",
       "destination": "ninh-binh",
       "featured": false,
       "stars": 5,
-      "name": "Cố đô & chùa Ninh Bình 2N1Đ",
-      "nameEn": "Ancient capital & pagodas 2D1N",
+      "name": "Cố đô & Thung Nham",
+      "nameEn": "CoDo & ThungNham Bird Valley",
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
-      "image": "img/tours/ninh-binh-2d1n-pagoda.jpg",
+      "price": 3250000,
+      "priceNote": "3.250.000đ",
+      "priceNoteEn": "$126",
+      "image": "img/tours/ninh-binh-thung-nham.jpg",
       "media": [
         {
           "type": "image",
@@ -2001,8 +2104,8 @@
           "altEn": "Overnight at Heritage Garden"
         }
       ],
-      "cardLine": "Ngày 1: Hoa Lư – thuyền Tam Cốc/Tràng An – Hang Múa, nghỉ Trang An Heritage Garden. Ngày 2: đền Thái Vi, chùa Bích Động, thung chim Thung Nham. Limousine từ $189/khách.",
-      "cardLineEn": "Day 1: Hoa Lu – Tam Coc/Trang An boat – Mua Cave, overnight at Trang An Heritage Garden. Day 2: Thai Vi temple, Bich Dong pagoda, Thung Nham bird valley. Limousine from $189/guest.",
+      "cardLine": "Hành trình khám phá cố đô Hoa Lư, ngồi thuyền Tam Cốc, Hang Múa, đền Thái Vi, chùa Bích Động và du ngoạn thung chim Thung Nham. Nghỉ đêm tại Trang An Heritage Garden.",
+      "cardLineEn": "Discover historic Hoa Lu, Tam Coc boat tour, Mua Cave, Thai Vi Temple, Bich Dong Pagoda, and Thung Nham Bird Valley. Overnight at Trang An Heritage Garden.",
       "description": [
         "Đêm tại Trang An Heritage Garden (2–3 khách/phòng).",
         "Ngày 2 có thuyền Thung Nham (10–12 khách/thuyền).",
@@ -2159,7 +2262,27 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "featuredNinhBinh": true,
+      "priceEn": 126,
+      "priceOriginal": 4650000,
+      "priceOriginalEn": 179,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 3250000,
+          "priceEn": 126
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 4650000,
+          "priceEn": 179
+        }
+      ]
     },
     {
       "id": "ninh-binh-2d1n-cuc-phuong",
@@ -2171,9 +2294,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 3500000,
+      "priceNote": "3.500.000đ",
+      "priceNoteEn": "$135",
       "image": "img/tours/ninh-binh-2d1n-cuc-phuong.jpg",
       "media": [
         {
@@ -2213,8 +2336,8 @@
           "altEn": "Primary forest trekking"
         }
       ],
-      "cardLine": "Ngày 1: Hoa Lư – thuyền – Hang Múa, nghỉ Heritage Garden. Ngày 2: Vườn quốc gia Cúc Phương — trung tâm cứu hộ linh trưởng & rùa, cây nghìn năm, hang người tiền sử. Limousine từ $195/khách.",
-      "cardLineEn": "Day 1: Hoa Lu – boat – Mua Cave, overnight Heritage Garden. Day 2: Cuc Phuong National Park — primate & turtle rescue centers, thousand-year trees, prehistoric cave. Limousine from $195/guest.",
+      "cardLine": "Kết hợp di sản Ninh Bình và thiên nhiên hoang sơ: Hoa Lư, thuyền Tam Cốc, Hang Múa và khám phá Vườn quốc gia Cúc Phương, trung tâm cứu hộ linh trưởng, cây chò ngàn năm.",
+      "cardLineEn": "Combine Ninh Binh heritage and wild nature: Hoa Lu, Tam Coc boat, Mua Cave, and Cuc Phuong National Park exploration with primate rescue center and ancient thousand-year trees.",
       "description": [
         "Ngày 2 trekking nhẹ trong rừng nguyên sinh Cúc Phương.",
         "Nên mang mũ, giày, kem chống nắng và thuốc chống côn trùng.",
@@ -2369,7 +2492,26 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 135,
+      "priceOriginal": 4800000,
+      "priceOriginalEn": 189,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 3500000,
+          "priceEn": 135
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 4800000,
+          "priceEn": 189
+        }
+      ]
     },
     {
       "id": "ninh-binh-2d1n-halong",
@@ -2381,9 +2523,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 3700000,
+      "priceNote": "3.700.000đ",
+      "priceNoteEn": "$143",
       "image": "img/tours/ninh-binh-2d1n-halong.jpg",
       "media": [
         {
@@ -2423,8 +2565,8 @@
           "altEn": "Sunset party on the bay"
         }
       ],
-      "cardLine": "Ngày 1 Ninh Bình: Hoa Lư – thuyền – Hang Múa, nghỉ Heritage Garden. Ngày 2 du thuyền Heritage Luxury trên vịnh Hạ Long (buffet, Sửng Sốt, Luồn, Titov, tiệc hoàng hôn), về Hà Nội tối. Từ $199/khách.",
-      "cardLineEn": "Day 1 Ninh Binh: Hoa Lu – boat – Mua Cave, overnight Heritage Garden. Day 2 Heritage Luxury day cruise on Ha Long Bay (buffet, Surprising Cave, Luon, Titov, sunset party), back to Hanoi at night. From $199/guest.",
+      "cardLine": "Hải trình liên tuyến đỉnh cao: Ngày 1 khám phá Ninh Bình (Hoa Lư, Tràng An/Tam Cốc, Hang Múa), Ngày 2 du thuyền Heritage Luxury khám phá kỳ quan vịnh Hạ Long trọn gói.",
+      "cardLineEn": "Signature two-destination voyage: Day 1 exploring Ninh Binh (Hoa Lu, Trang An/Tam Coc, Mua Cave), Day 2 luxury cruise across World Wonder Ha Long Bay.",
       "description": [
         "Kết hợp cố đô Ninh Bình và du thuyền Hạ Long một ngày.",
         "Ngày 2 khởi hành sớm từ Heritage Garden sang Tuần Châu (~3,5–4 giờ).",
@@ -2561,7 +2703,26 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 143,
+      "priceOriginal": 5150000,
+      "priceOriginalEn": 199,
+      "transportOptions": [
+        {
+          "id": "shuttle",
+          "name": "Shuttle Bus",
+          "nameEn": "Shuttle Bus",
+          "price": 3700000,
+          "priceEn": 143
+        },
+        {
+          "id": "limousine",
+          "name": "Xe Limousine VIP",
+          "nameEn": "VIP Limousine",
+          "price": 5150000,
+          "priceEn": 199
+        }
+      ]
     },
     {
       "id": "ninh-binh-thung-nham",
@@ -2779,7 +2940,8 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "active": false
     },
     {
       "id": "ninh-binh-incense",
@@ -2993,7 +3155,8 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "active": false
     },
     {
       "id": "ha-noi",
@@ -3005,9 +3168,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 900000,
+      "priceNote": "900.000đ",
+      "priceNoteEn": "$35",
       "image": "img/tours/ha-noi.jpg",
       "media": [
         {
@@ -3059,8 +3222,8 @@
           "altEn": "Inner-city limousine"
         }
       ],
-      "cardLine": "Tour 1 Hanoi Heritage Premium: Trấn Quốc, Lăng Bác & nhà sàn, Một Cột, Bảo tàng Dân tộc học, set lunch Mesdames Linh, Văn Miếu và Hỏa Lò. Limousine nhóm $76 · Dcar $86. Private từ $119/2 khách.",
-      "cardLineEn": "Tour 1 Hanoi Heritage Premium: Tran Quoc, Ho Chi Minh complex & stilt house, One Pillar, Ethnology Museum, Mesdames Linh set lunch, Temple of Literature and Hoa Lo. Group limousine $76 · Dcar $86. Private from $119/2 guests.",
+      "cardLine": "Tour khám phá trọn vẹn thủ đô: chùa Trấn Quốc, quần thể Lăng Bác & nhà sàn, chùa Một Cột, Bảo tàng Dân tộc học, Văn Miếu Quốc Tử Giám và nhà tù Hỏa Lò. Bữa trưa set menu Mesdames Linh.",
+      "cardLineEn": "Comprehensive capital discovery: Tran Quoc Pagoda, Ho Chi Minh Mausoleum complex, One Pillar Pagoda, Ethnology Museum, Temple of Literature, and Hoa Lo Prison. Mesdames Linh set menu lunch.",
       "description": [
         "Mesdames Linh Cuisine — fusion cổ điển & hiện đại; set Việt truyền thống là món nên thử.",
         "Thứ Hai Bảo tàng Dân tộc học đóng cửa — thay bằng Bảo tàng Phụ nữ.",
@@ -3232,7 +3395,10 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 35,
+      "priceOriginal": 1950000,
+      "priceOriginalEn": 76
     },
     {
       "id": "ha-noi-half",
@@ -3244,9 +3410,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 800000,
+      "priceNote": "800.000đ",
+      "priceNoteEn": "$31",
       "image": "img/tours/ha-noi-half.jpg",
       "media": [
         {
@@ -3280,8 +3446,8 @@
           "altEn": "Small-group Dcar"
         }
       ],
-      "cardLine": "Tour 1 nửa ngày — chọn buổi sáng hoặc chiều. Limousine $59 · Dcar $69. Có thể thêm set Mesdames Linh (+/- theo lịch). Không lunch mặc định trừ 10$ so với full day có lunch.",
-      "cardLineEn": "Tour 1 half day — morning or afternoon. Limousine $59 · Dcar $69. Mesdames Linh set can be added. Default without lunch (full day without lunch is −$10).",
+      "cardLine": "Hành trình nửa ngày linh hoạt buổi sáng hoặc chiều: viếng thăm các di tích biểu tượng lịch sử và văn hóa ngàn năm của thủ đô Hà Nội với xe đưa đón tiện nghi và hướng dẫn viên tận tâm.",
+      "cardLineEn": "Flexible half-day morning or afternoon tour: visit iconic historical and cultural landmarks of Hanoi with comfortable transfer and knowledgeable tour guide.",
       "description": [
         "Khách chọn buổi sáng hoặc buổi chiều.",
         "Điểm chính theo khung giờ mở cửa: Trấn Quốc / Lăng Bác / Văn Miếu / Hỏa Lò…",
@@ -3372,7 +3538,10 @@
         "Morning or afternoon",
         "Limousine or Dcar"
       ],
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 31,
+      "priceOriginal": 1550000,
+      "priceOriginalEn": 59
     },
     {
       "id": "ha-noi-incense",
@@ -3384,9 +3553,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1300000,
+      "priceNote": "1.300.000đ",
+      "priceNoteEn": "$51",
       "image": "img/tours/ha-noi-incense.jpg",
       "media": [
         {
@@ -3426,8 +3595,8 @@
           "altEn": "Hanoi spring rolls"
         }
       ],
-      "cardLine": "Tour 2: sáng làng hương Quang Phú Cầu (hơn 100 năm), trưa Mesdames Linh, chiều Văn Miếu và Hỏa Lò. Chỉ Dcar nhóm nhỏ $86 — không limousine 19–20 chỗ. Private từ $125/2 khách.",
-      "cardLineEn": "Tour 2: morning Quang Phu Cau incense village (100+ years), Mesdames Linh lunch, afternoon Temple of Literature and Hoa Lo. Small-group Dcar only $86 — no 19–20 limousine. Private from $125/2 guests.",
+      "cardLine": "Khám phá sắc màu làng nghề làm hương truyền thống Quảng Phú Cầu hơn 100 năm tuổi, thưởng thức bữa trưa đặc sản Mesdames Linh và tham quan Văn Miếu Quốc Tử Giám, nhà tù Hỏa Lò.",
+      "cardLineEn": "Discover vibrant century-old Quang Phu Cau incense craft village, savor traditional Mesdames Linh lunch, and visit Temple of Literature and historic Hoa Lo Prison.",
       "description": [
         "Làng hương thủ công: nhuộm que, bó hương nhiều màu, gặp gia đình thợ, mua quà tại chỗ.",
         "Group chỉ mở Dcar 7–9 chỗ ($86). Limousine 19–20 chỗ: N/A.",
@@ -3597,7 +3766,10 @@
           }
         ]
       },
-      "operatorId": "heritage"
+      "operatorId": "heritage",
+      "priceEn": 51,
+      "priceOriginal": 2250000,
+      "priceOriginalEn": 86
     },
     {
       "id": "ha-noi-city-craft-1d",
@@ -3609,9 +3781,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 800000,
+      "priceNote": "800.000đ",
+      "priceNoteEn": "$31",
       "image": "img/tours/hanoi-craft/S1.jpg",
       "media": [
         {
@@ -4051,7 +4223,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 31,
+      "priceOriginal": 1200000,
+      "priceOriginalEn": 47
     },
     {
       "id": "ha-noi-craft-half-morning",
@@ -4063,9 +4238,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 700000,
+      "priceNote": "700.000đ",
+      "priceNoteEn": "$27",
       "image": "img/tours/hanoi-craft/S2.jpg",
       "media": [
         {
@@ -4420,7 +4595,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 27,
+      "priceOriginal": 1000000,
+      "priceOriginalEn": 39
     },
     {
       "id": "ha-noi-craft-half-afternoon",
@@ -4432,9 +4610,9 @@
       "durationLabel": "Nửa ngày",
       "durationLabelEn": "Half day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 700000,
+      "priceNote": "700.000đ",
+      "priceNoteEn": "$27",
       "image": "img/tours/hanoi-craft/S3.jpg",
       "media": [
         {
@@ -4781,7 +4959,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 27,
+      "priceOriginal": 1000000,
+      "priceOriginalEn": 39
     },
     {
       "id": "ha-noi-traditional-1d",
@@ -4793,9 +4974,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 800000,
+      "priceNote": "800.000đ",
+      "priceNoteEn": "$31",
       "image": "img/tours/hanoi-traditional/Activities_1.jpg",
       "media": [
         {
@@ -5189,7 +5370,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 31,
+      "priceOriginal": 1200000,
+      "priceOriginalEn": 47
     },
     {
       "id": "ha-noi-traditional-half-morning",
@@ -5201,9 +5385,9 @@
       "durationLabel": "Buổi sáng",
       "durationLabelEn": "Morning",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 700000,
+      "priceNote": "700.000đ",
+      "priceNoteEn": "$27",
       "image": "img/tours/hanoi-traditional/Activities_2.jpg",
       "media": [
         {
@@ -5550,7 +5734,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 27,
+      "priceOriginal": 1100000,
+      "priceOriginalEn": 42
     },
     {
       "id": "ha-noi-traditional-half-afternoon",
@@ -5562,9 +5749,9 @@
       "durationLabel": "Buổi chiều",
       "durationLabelEn": "Afternoon",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 700000,
+      "priceNote": "700.000đ",
+      "priceNoteEn": "$27",
       "image": "img/tours/hanoi-traditional/Activities_3.jpg",
       "media": [
         {
@@ -5951,7 +6138,10 @@
           }
         ]
       },
-      "operatorId": "cozy"
+      "operatorId": "cozy",
+      "priceEn": 27,
+      "priceOriginal": 1100000,
+      "priceOriginalEn": 42
     },
     {
       "id": "sapa-bac-ha-2d1n",
@@ -11026,9 +11216,9 @@
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 2850000,
+      "priceNote": "2.850.000đ",
+      "priceNoteEn": "$110",
       "image": "img/tours/halong-cozy-bay-grand/overview-sundeck/Overview_0.JPG",
       "media": [
         {
@@ -11428,7 +11618,48 @@
             "altEn": "Indian Vegetarian Menu"
           }
         ]
-      }
+      },
+      "priceEn": 110,
+      "priceOriginal": 4150000,
+      "priceOriginalEn": 160,
+      "cabinOptions": [
+        {
+          "id": "deluxe-window",
+          "name": "Deluxe Double/Twin with window",
+          "nameEn": "Deluxe Double/Twin with window",
+          "price": 2850000,
+          "priceEn": 110,
+          "priceOriginal": 4150000,
+          "priceOriginalEn": 160,
+          "maxGuests": 2,
+          "note": "1 phòng tối đa 2 người lớn",
+          "noteEn": "1 room maximum 2 adults"
+        },
+        {
+          "id": "deluxe-balcony",
+          "name": "Deluxe Double/Twin With Private Balcony",
+          "nameEn": "Deluxe Double/Twin With Private Balcony",
+          "price": 3110000,
+          "priceEn": 120,
+          "priceOriginal": 4410000,
+          "priceOriginalEn": 170,
+          "maxGuests": 2,
+          "note": "1 phòng tối đa 2 người lớn (+10$)",
+          "noteEn": "1 room maximum 2 adults (+10$)"
+        },
+        {
+          "id": "premium-terrace",
+          "name": "Premium Double/Twin With Terrace",
+          "nameEn": "Premium Double/Twin With Terrace",
+          "price": 3370000,
+          "priceEn": 130,
+          "priceOriginal": 4670000,
+          "priceOriginalEn": 180,
+          "maxGuests": 2,
+          "note": "1 phòng tối đa 2 người lớn (+20$)",
+          "noteEn": "1 room maximum 2 adults (+20$)"
+        }
+      ]
     },
     {
       "id": "ha-long-cozy-bay-premium-1d",
@@ -11440,9 +11671,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1400000,
+      "priceNote": "1.400.000đ",
+      "priceNoteEn": "$55",
       "image": "img/tours/halong-cozy-bay-premium/anh-tau/Over_View_1.jpg",
       "media": [
         {
@@ -11739,21 +11970,24 @@
             "altEn": "Authentic Indian set menu"
           }
         ]
-      }
+      },
+      "priceEn": 55,
+      "priceOriginal": 2550000,
+      "priceOriginalEn": 99
     },
     {
       "id": "ha-long-sea-lion-premium-1d",
       "destination": "ha-long",
-      "featured": false,
+      "featured": true,
       "stars": 5,
       "name": "Du Thuyền 5★ Sea Lion Premium – Vịnh Hạ Long Tuyến 2 (1 Ngày)",
       "nameEn": "Sea Lion Premium 5★ Cruise – Halong Bay Classic Route 2 (1 Day)",
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1400000,
+      "priceNote": "1.400.000đ",
+      "priceNoteEn": "$55",
       "image": "img/tours/halong-sea-lion-premium/anh-tau/Over_View_1.jpg",
       "media": [
         {
@@ -12031,7 +12265,10 @@
             "altEn": "Standard Indian set menu"
           }
         ]
-      }
+      },
+      "priceEn": 55,
+      "priceOriginal": 2550000,
+      "priceOriginalEn": 99
     },
     {
       "id": "ha-long-lan-ha-tropical-cruise-1d",
@@ -12043,9 +12280,9 @@
       "durationLabel": "1 ngày (7 tiếng)",
       "durationLabelEn": "1 day (7 hours)",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1550000,
+      "priceNote": "1.550.000đ",
+      "priceNoteEn": "$60",
       "image": "img/tours/lanha-tropical-cruise/anh/Tropical_-_00.jpg",
       "media": [
         {
@@ -12267,14 +12504,34 @@
         "Tắm nước ngọt trên tàu",
         "Bể bơi phao khổng lồ trên biển (tùy thuộc vào điều kiện vận hành)"
       ],
-      "servicesIncludedEn": [],
+      "servicesIncludedEn": [
+        "Sightseeing tickets: Trung Trang Cave, Cat Ba National Park Natural History Museum, Lan Ha Bay",
+        "Professional English and Vietnamese speaking guide",
+        "Buffet lunch served on cruise",
+        "Indian set menu available (vegetarian & non-vegetarian options, served upon request instead of buffet)",
+        "Round-trip transfer from/to hotels in Hanoi Old Quarter or Hanoi Opera House",
+        "Kayaking and swimming experience",
+        "Sunset Party with complimentary tea and light snacks",
+        "Welcome drink upon boarding",
+        "Complimentary bottled water per guest on bus",
+        "Kayaking, swimming pool, jacuzzi, and ocean water slide access",
+        "Electric car sightseeing transfer across Cat Ba Island",
+        "All entrance and scenic area tickets",
+        "Freshwater shower on board",
+        "Giant ocean floating water park (subject to operating and weather conditions)"
+      ],
       "servicesExcluded": [
         "Chi phí cá nhân",
         "Tiền tip và bồi dưỡng",
         "Đồ uống tại quầy bar",
         "Đồ uống trong bữa ăn"
       ],
-      "servicesExcludedEn": [],
+      "servicesExcludedEn": [
+        "Personal expenses",
+        "Tips and gratuities",
+        "Beverages from the bar",
+        "Drinks during meals"
+      ],
       "serviceNote": "Quý khách nên chuẩn bị đồ bơi, kem chống nắng và kính râm để tận hưởng máng trượt nước và bể Jacuzzi.",
       "serviceNoteEn": "Swimwear, sunglasses and sunscreen recommended to enjoy onboard Jacuzzi and water slide.",
       "offers": [
@@ -12349,7 +12606,10 @@
             "altEn": "Authentic Indian set menu"
           }
         ]
-      }
+      },
+      "priceEn": 60,
+      "priceOriginal": 2800000,
+      "priceOriginalEn": 110
     },
     {
       "id": "ninh-binh-hoalu-tamcoc-mua-1d",
@@ -12361,9 +12621,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1150000,
+      "priceNote": "1.150.000đ",
+      "priceNoteEn": "$45",
       "image": "img/destinations/ninh-binh/tam-coc-boat.jpg",
       "media": [
         {
@@ -12673,7 +12933,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 45,
+      "priceOriginal": 1800000,
+      "priceOriginalEn": 69
     },
     {
       "id": "ninh-binh-hoalu-trangan-mua-1d",
@@ -12685,9 +12948,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1150000,
+      "priceNote": "1.150.000đ",
+      "priceNoteEn": "$45",
       "image": "img/destinations/ninh-binh/trang-an-boat.jpg",
       "media": [
         {
@@ -13002,7 +13265,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 45,
+      "priceOriginal": 1800000,
+      "priceOriginalEn": 69
     },
     {
       "id": "ninh-binh-hoalu-tamcoc-1d",
@@ -13014,9 +13280,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1050000,
+      "priceNote": "1.050.000đ",
+      "priceNoteEn": "$40",
       "image": "img/tours/ninh-binh/xe-ap/Cozy-NinhBinh-01.jpg",
       "media": [
         {
@@ -13316,7 +13582,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 40,
+      "priceOriginal": 1650000,
+      "priceOriginalEn": 63
     },
     {
       "id": "ninh-binh-hoalu-trangan-1d",
@@ -13328,9 +13597,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1050000,
+      "priceNote": "1.050.000đ",
+      "priceNoteEn": "$40",
       "image": "img/destinations/ninh-binh/hoa-lu.jpg",
       "media": [
         {
@@ -13624,7 +13893,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 40,
+      "priceOriginal": 1650000,
+      "priceOriginalEn": 63
     },
     {
       "id": "ninh-binh-baidinh-trangan-1d",
@@ -13636,9 +13908,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1050000,
+      "priceNote": "1.050.000đ",
+      "priceNoteEn": "$40",
       "image": "img/tours/ninh-binh-bai-dinh.jpg",
       "media": [
         {
@@ -13920,7 +14192,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 40,
+      "priceOriginal": 1650000,
+      "priceOriginalEn": 63
     },
     {
       "id": "ninh-binh-baidinh-trangan-mua-1d",
@@ -13932,9 +14207,9 @@
       "durationLabel": "1 ngày",
       "durationLabelEn": "1 day",
       "nightsOffset": 0,
-      "price": 0,
-      "priceNote": "Liên hệ",
-      "priceNoteEn": "Contact",
+      "price": 1250000,
+      "priceNote": "1.250.000đ",
+      "priceNoteEn": "$48",
       "image": "img/destinations/ninh-binh/mua-cave-peak.jpg",
       "media": [
         {
@@ -14234,7 +14509,10 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "priceEn": 48,
+      "priceOriginal": 1900000,
+      "priceOriginalEn": 73
     },
     {
       "id": "ninh-binh-hoalu-tamcoc-mua-baidinh-trangan-2d1n",
@@ -14597,7 +14875,8 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "active": false
     },
     {
       "id": "ninh-binh-halong-2d1n",
@@ -14971,7 +15250,8 @@
             "altEn": "Official Halal certification"
           }
         ]
-      }
+      },
+      "active": false
     }
   ]
 };
