@@ -2107,7 +2107,7 @@
         if (idxB !== -1) return 1;
         return tourStars(b) - tourStars(a);
       });
-      return list.slice(0, 6);
+      return list.slice(0, 3);
     }
     list.sort(function (a, b) { return tourStars(b) - tourStars(a); });
     return list.slice(0, 3);

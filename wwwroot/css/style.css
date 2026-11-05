@@ -1337,6 +1337,10 @@ select option { color: var(--ink); background: #fff; }
   align-content: start;
   min-width: 0;
 }
+.detail-copy > * {
+  min-width: 0;
+  max-width: 100%;
+}
 .detail-title { margin: 0; line-height: 1.15; }
 .book-aside .book-form > h2 {
   margin: 0;
@@ -1383,10 +1387,11 @@ select option { color: var(--ink); background: #fff; }
 }
 .itin-list li {
   display: grid;
-  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr);
   gap: 10px 14px;
   padding: 0 0 16px 16px;
   position: relative;
+  min-width: 0;
 }
 .itin-list li::before {
   content: "";
@@ -1397,6 +1402,15 @@ select option { color: var(--ink); background: #fff; }
   height: 8px;
   border-radius: 50%;
   background: var(--brown);
+}
+.itin-time,
+.itin-body,
+.itin-body strong,
+.itin-body p {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .itin-time {
   font-size: 12px;
