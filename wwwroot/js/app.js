@@ -510,6 +510,12 @@
     return field(op, "name");
   }
 
+  function tourListLabel(tour) {
+    var name = field(tour, "name");
+    var op = operatorLabel(tour);
+    return op ? op + " - " + name : name;
+  }
+
   function operatorInfoHtml(op) {
     if (!op) return "";
     var about = field(op, "about");
@@ -1169,10 +1175,14 @@
     return '<section class="itinerary" aria-label="' + U.escapeHtml(t("itin.h")) + '">' +
       "<h2>" + U.escapeHtml(t("itin.h")) + "</h2>" +
       '<ol class="itin-list">' + items.map(function (step) {
+        var title = step.title || "";
+        var text = step.text || "";
+        if (text && /(?:…|\.\.\.)\s*$/.test(title)) title = "";
         return "<li>" +
           (step.time ? '<span class="itin-time">' + U.escapeHtml(step.time) + "</span>" : "") +
-          '<div class="itin-body"><strong>' + U.escapeHtml(step.title || "") + "</strong>" +
-          (step.text ? "<p>" + U.escapeHtml(step.text) + "</p>" : "") +
+          '<div class="itin-body">' +
+          (title ? "<strong>" + U.escapeHtml(title) + "</strong>" : "") +
+          (text ? "<p>" + U.escapeHtml(text) + "</p>" : "") +
           "</div></li>";
       }).join("") + "</ol></section>";
   }
@@ -2917,7 +2927,7 @@
       var tourVal = form.tour.value || q.get("id") || q.get("tour") || "";
       form.tour.innerHTML = '<option value="">' + U.escapeHtml(t("choose.tour")) + "</option>" +
         tours.map(function (item) {
-          return '<option value="' + item.id + '">' + U.escapeHtml(field(item, "name")) + "</option>";
+          return '<option value="' + item.id + '">' + U.escapeHtml(tourListLabel(item)) + "</option>";
         }).join("");
       if (tourVal) form.tour.value = tourVal;
       form.querySelectorAll("select").forEach(enhanceCustomSelect);
@@ -3127,7 +3137,7 @@
       if (g.tours.length) {
         selectHtml += '<optgroup label="' + U.escapeHtml(g.label) + '">';
         g.tours.forEach(function (item) {
-          selectHtml += '<option value="' + item.id + '">' + U.escapeHtml(field(item, "name")) + '</option>';
+          selectHtml += '<option value="' + item.id + '">' + U.escapeHtml(tourListLabel(item)) + '</option>';
         });
         selectHtml += '</optgroup>';
       }

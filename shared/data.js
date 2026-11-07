@@ -175,7 +175,7 @@
         "alt": "Highlight Sapa",
         "altEn": "Sapa highlight",
         "sources": [
-          "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4"
+          "img/video/thumbnailSapa.mp4"
         ]
       }
     ]
@@ -203,21 +203,7 @@
           "alt": "Du thuyền Tropical Cruise vịnh Lan Hạ",
           "altEn": "Tropical Cruise Lan Ha Bay"
         }
-      ],
-      "byOperator": {
-        "heritage": {
-          "title": "Hạ Long – Du thuyền trong ngày Heritage",
-          "titleEn": "Ha Long – Heritage Day Cruises",
-          "lead": "Hải trình trong ngày trên vịnh Hạ Long với du thuyền Heritage Luxury và Heritage Signature. Đón và trả khách ở phố cổ.",
-          "leadEn": "Day cruises on Ha Long Bay with Heritage Luxury and Heritage Signature. Old Quarter pickup and drop-off."
-        },
-        "cozy": {
-          "title": "Hạ Long & Lan Hạ – Du thuyền Cozy",
-          "titleEn": "Ha Long & Lan Ha – Cozy Cruises",
-          "lead": "Ngủ đêm trên Cozy Bay Grand, Hạ Long một ngày với Cozy Bay Premium và Sea Lion, cùng Tropical Cruise vịnh Lan Hạ.",
-          "leadEn": "Overnight on Cozy Bay Grand, day cruises with Cozy Bay Premium and Sea Lion, and the Lan Ha Tropical Cruise."
-        }
-      }
+      ]
     },
     "ninh-binh": {
       "id": "ninh-binh",
@@ -241,21 +227,7 @@
           "alt": "Đạp xe làng quê Ninh Bình",
           "altEn": "Ninh Binh countryside cycling"
         }
-      ],
-      "byOperator": {
-        "heritage": {
-          "title": "Ninh Bình – Tour Heritage",
-          "titleEn": "Ninh Binh – Heritage Tours",
-          "lead": "Hoa Lư, Tam Cốc, Tràng An, Bái Đính, Hang Múa, Thung Nham và Cúc Phương, với điểm nghỉ Trang An Heritage Garden.",
-          "leadEn": "Hoa Lu, Tam Coc, Trang An, Bai Dinh, Mua Cave, Thung Nham and Cuc Phuong, with a stop at Trang An Heritage Garden."
-        },
-        "cozy": {
-          "title": "Ninh Bình – Tour Cozy",
-          "titleEn": "Ninh Binh – Cozy Tours",
-          "lead": "Hoa Lư, Tam Cốc, Tràng An, Hang Múa, Bái Đính, đạp xe làng quê, và hành trình nối với vịnh Hạ Long.",
-          "leadEn": "Hoa Lu, Tam Coc, Trang An, Mua Cave, Bai Dinh, countryside cycling, and the journey on to Ha Long Bay."
-        }
-      }
+      ]
     },
     "ha-noi": {
       "id": "ha-noi",
@@ -265,7 +237,7 @@
       "titleEn": "Hanoi – City Tour & Craft Villages",
       "lead": "Thăm quan nội thành và các làng nghề quanh Hà Nội.",
       "leadEn": "City sightseeing and the craft villages around Hanoi.",
-      "video": "https://videos.pexels.com/video-files/2491284/2491284-uhd_2560_1440_24fps.mp4",
+      "video": "img/video/16092120_2560_1440_30fps.mp4",
       "media": [
         {
           "type": "image",
@@ -297,21 +269,7 @@
           "alt": "Mesdames Linh Cuisine",
           "altEn": "Mesdames Linh Cuisine"
         }
-      ],
-      "byOperator": {
-        "heritage": {
-          "title": "Hanoi Heritage Premium Daily Tour",
-          "titleEn": "Hanoi Heritage Premium Daily Tour",
-          "lead": "City Tour cả ngày và nửa ngày, làng hương Quang Phú Cầu và set lunch Mesdames Linh Cuisine. Đón và trả ở phố cổ.",
-          "leadEn": "Full-day and half-day City Tour, Quang Phu Cau incense village, and the Mesdames Linh Cuisine set lunch. Old Quarter pickup and drop-off."
-        },
-        "cozy": {
-          "title": "Hà Nội – Thăm quan & làng nghề Cozy",
-          "titleEn": "Hanoi – Cozy Sightseeing & Craft Villages",
-          "lead": "Thăm quan Hà Nội cả ngày và nửa ngày, làng hương Quảng Phú Cầu và làng nón Chuông.",
-          "leadEn": "Full-day and half-day Hanoi sightseeing, Quang Phu Cau incense village, and Chuong conical-hat village."
-        }
-      }
+      ]
     },
     "sapa": {
       "id": "sapa",
@@ -321,13 +279,19 @@
       "titleEn": "Sapa – Misty Mountain Town & Northwest Villages",
       "lead": "Fansipan, thung lũng Mường Hoa, bản Cát Cát, núi Hàm Rồng và homestay bản làng.",
       "leadEn": "Fansipan, Muong Hoa valley, Cat Cat village, Ham Rong mountain, and village homestays.",
-      "video": "https://videos.pexels.com/video-files/34208500/14498555_3840_2160_30fps.mp4",
+      "video": "img/video/thumbnailSapa.mp4",
       "media": [
         {
           "type": "image",
-          "src": "img/tours/sapa-placeholder.jpg",
-          "alt": "Toàn cảnh Sapa",
-          "altEn": "Panoramic Sapa view"
+          "src": "img/destinations/sapa/sapa1.png",
+          "alt": "sapa1",
+          "altEn": "sapa1"
+        },
+        {
+          "type": "image",
+          "src": "img/destinations/sapa/sapa2.png",
+          "alt": "sapa2",
+          "altEn": "sapa2"
         }
       ]
     }
