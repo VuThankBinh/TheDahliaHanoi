@@ -2425,19 +2425,13 @@
         if (dest) dests = dests.filter(function (d) { return d === dest; });
         host.innerHTML = dests.map(function (d) {
           var items = toursForDestination(d);
-          return '<div class="dest-split" id="dest-' + U.escapeHtml(d) + '">' +
-            groupByOperator(items).map(function (group) {
-              var more = "tours.html?dest=" + encodeURIComponent(d) +
-                (group.operatorId ? "&op=" + encodeURIComponent(group.operatorId) : "");
-              return '<section class="section wrap dest-block">' +
-                destHeadHtml(d, { operatorId: group.operatorId, moreHref: more }) +
-                '<div class="card-grid card-grid--3">' +
-                group.tours.map(function (tour) {
-                  return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
-                }).join("") +
-                "</div></section>";
+          return '<section class="section wrap dest-block" id="dest-' + U.escapeHtml(d) + '">' +
+            destHeadHtml(d, { moreHref: "tours.html?dest=" + encodeURIComponent(d) }) +
+            '<div class="card-grid card-grid--3">' +
+            items.map(function (tour) {
+              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
             }).join("") +
-            "</div>";
+            "</div></section>";
         }).join("");
         U.bindImages(host);
         U.initMotion(host);
