@@ -160,9 +160,9 @@
     "dest.eyebrow": { vi: "Điểm đến", en: "Destination" },
     "star.4": { vi: "4 trên 5 sao", en: "4 out of 5 stars" },
     "star.5": { vi: "5 trên 5 sao", en: "5 out of 5 stars" },
-    "detail.start": { vi: "Ngày bắt đầu", en: "Start date" },
-    "detail.end": { vi: "Ngày kết thúc", en: "End date" },
-    "detail.default": { vi: "mặc định", en: "default" },
+    // "detail.start": { vi: "Ngày bắt đầu", en: "Start date" },
+    // "detail.end": { vi: "Ngày kết thúc", en: "End date" },
+    // "detail.default": { vi: "mặc định", en: "default" },
     "vo.home.title": { vi: "The Dahlia Hanoi", en: "The Dahlia Hanoi" },
     "vo.desc": { vi: "Đặt tour Việt Nam với The Dahlia Hanoi.", en: "Book Vietnam tours with The Dahlia Hanoi." },
     "vo.hero.aria": { vi: "Mở đầu", en: "Opening" },
@@ -302,6 +302,7 @@
     "link.book": { vi: "Đặt", en: "Book" },
     "back.arrow": { vi: "← Quay lại danh sách", en: "← Back to the list" },
     "price.each": { vi: "Giá mỗi khách", en: "Per guest" },
+    "price.was": { vi: "Giá gốc", en: "Was" },
     "price.sample": { vi: "Giá minh họa.", en: "Sample rate." },
     "choose.tour": { vi: "Chọn tour", en: "Choose a tour" },
     "price.table": { vi: "Bảng giá chi tiết & Dịch vụ tùy chọn", en: "Pricing Details & Optional Add-ons" },
@@ -1057,13 +1058,8 @@
     var priceFoot = "";
 
     if (unit) {
-      if (unit.original && unit.original > unit.amount) {
-        priceBadge = '<span class="price-badge"><del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> <span class="price-val">' + formatPrice(unit.amount, unit.currency) + '</span></span>';
-        priceFoot = '<span class="price"><del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> <strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span class="price-unit">' + U.escapeHtml(t("perGuest")) + '</span></span>';
-      } else {
-        priceBadge = '<span class="price-badge">' + formatPrice(unit.amount, unit.currency) + '</span>';
-        priceFoot = '<span class="price"><strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span class="price-unit">' + U.escapeHtml(t("perGuest")) + '</span></span>';
-      }
+      priceBadge = '<span class="price-badge">' + salePriceHtml(unit.amount, unit.original, unit.currency) + "</span>";
+      priceFoot = '<span class="price">' + salePriceHtml(unit.amount, unit.original, unit.currency, { unit: t("perGuest") }) + "</span>";
     } else {
       var note = field(tour, "priceNote") || t("contact");
       priceBadge = '<span class="price-badge">' + U.escapeHtml(note) + '</span>';
@@ -1843,6 +1839,27 @@
     return U.money(amount);
   }
 
+  function salePriceHtml(amount, original, currency, opts) {
+    opts = opts || {};
+    var idAttr = opts.id ? ' id="' + opts.id + '"' : "";
+    var now = '<strong class="price-val"' + idAttr + ">" + formatPrice(amount, currency) + "</strong>";
+    var unit = opts.unit ? '<span class="price-unit">' + U.escapeHtml(opts.unit) + "</span>" : "";
+    var onSale = original && original > amount;
+    if (!onSale) {
+      return '<span class="price-pair"><span class="price-now">' + now + unit + "</span></span>";
+    }
+    var pct = Math.round((1 - amount / original) * 100);
+    var off = pct >= 1 ? '<span class="price-off">−' + pct + "%</span>" : "";
+    return '<span class="price-pair">' +
+      '<span class="price-was">' +
+        '<span class="price-was-tag">' + U.escapeHtml(t("price.was")) + "</span>" +
+        '<del class="price-old">' + formatPrice(original, currency) + "</del>" +
+        off +
+      "</span>" +
+      '<span class="price-now">' + now + unit + "</span>" +
+    "</span>";
+  }
+
   function unitPrice(tour) {
     if (!tour) return null;
     var isEn = U.lang() === "en";
@@ -1908,12 +1925,7 @@
     if (!unit) {
       return '<strong class="price-val">' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + '</strong>';
     }
-    var html = "";
-    if (unit.original && unit.original > unit.amount) {
-      html += '<del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> ';
-    }
-    html += '<strong class="price-val">' + formatPrice(unit.amount, unit.currency) + '</strong> <span>' + U.escapeHtml(t("perGuest")) + '</span>';
-    return html;
+    return salePriceHtml(unit.amount, unit.original, unit.currency, { unit: t("perGuest") });
   }
 
   function bookingFormHtml(tour, opts) {
@@ -1923,16 +1935,9 @@
     var unit = unitPrice(tour);
     var unitLine = "";
     if (unit) {
-      if (unit.original && unit.original > unit.amount) {
-        unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) +
-          '<del class="price-old">' + formatPrice(unit.original, unit.currency) + '</del> ' +
-          '<strong class="price-val" id="book-unit-display">' + formatPrice(unit.amount, unit.currency) + '</strong> ' +
-          U.escapeHtml(t("perGuest")) + '</p>';
-      } else {
-        unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) +
-          '<strong class="price-val" id="book-unit-display">' + formatPrice(unit.amount, unit.currency) + '</strong> ' +
-          U.escapeHtml(t("perGuest")) + '</p>';
-      }
+      unitLine = '<p class="unit">' + U.escapeHtml(t("book.unit")) +
+        salePriceHtml(unit.amount, unit.original, unit.currency, { unit: t("perGuest"), id: "book-unit-display" }) +
+        "</p>";
     }
 
     var optionsHtml = "";
@@ -2028,15 +2033,13 @@
 
     function quote() {
       var activeUnit = getActiveUnitPrice();
-      if (unitDisplay && activeUnit) {
-        unitDisplay.textContent = formatPrice(activeUnit.amount, activeUnit.currency);
+      var unitHost = form.querySelector(".unit");
+      if (unitHost && activeUnit) {
+        unitHost.innerHTML = U.escapeHtml(t("book.unit")) +
+          salePriceHtml(activeUnit.amount, activeUnit.original, activeUnit.currency, { unit: t("perGuest"), id: "book-unit-display" });
       }
       if (activeUnit) {
-        if (activeUnit.original && activeUnit.original > activeUnit.amount) {
-          totalEl.innerHTML = '<del class="price-old">' + formatPrice(activeUnit.original, activeUnit.currency) + '</del> <strong class="price-val">' + formatPrice(activeUnit.amount, activeUnit.currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
-        } else {
-          totalEl.innerHTML = '<strong class="price-val">' + formatPrice(activeUnit.amount, activeUnit.currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
-        }
+        totalEl.innerHTML = salePriceHtml(activeUnit.amount, activeUnit.original, activeUnit.currency, { unit: t("perGuest") });
         totalEl.classList.remove("is-rate");
         totalEl.dataset.amount = String(activeUnit.amount);
       } else {
@@ -3208,9 +3211,9 @@
 
       if (finalPrice != null && finalPrice > 0) {
         if (origPrice && origPrice > finalPrice) {
-          priceVal.innerHTML = '<del class="price-old">' + formatPrice(origPrice, currency) + '</del> <strong class="price-val">' + formatPrice(finalPrice, currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+          priceVal.innerHTML = salePriceHtml(finalPrice, origPrice, currency, { unit: t("perGuest") });
         } else {
-          priceVal.innerHTML = '<strong class="price-val">' + formatPrice(finalPrice, currency) + '</strong> <span style="font-weight:400;font-size:13px;color:var(--body)">' + U.escapeHtml(t("perGuest")) + '</span>';
+          priceVal.innerHTML = salePriceHtml(finalPrice, 0, currency, { unit: t("perGuest") });
         }
       } else {
         priceVal.innerHTML = '<strong class="price-val">' + U.escapeHtml(field(tour, "priceNote") || t("contact")) + '</strong>';
