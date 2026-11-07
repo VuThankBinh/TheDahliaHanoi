@@ -780,6 +780,17 @@ select option { color: var(--ink); background: #fff; }
   font-weight: 600;
   color: var(--ink);
 }
+.dest-op-name {
+  margin: 0 0 4px;
+  color: var(--brown);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.dest-split {
+  display: grid;
+  gap: 8px;
+}
 .op-info {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
@@ -1911,7 +1922,7 @@ body.menu-lb-open { overflow: hidden; }
   z-index: 90;
   display: grid;
   place-items: center;
-  padding: 18px;
+  padding: 12px 56px 64px;
 }
 .menu-lightbox[hidden] { display: none !important; }
 .menu-lb-backdrop {
@@ -1926,19 +1937,20 @@ body.menu-lb-open { overflow: hidden; }
 .menu-lb-frame {
   position: relative;
   z-index: 1;
-  width: min(880px, 94vw);
-  max-height: calc(100vh - 36px);
+  width: calc(100vw - 24px);
+  height: calc(100vh - 24px);
+  max-height: none;
   display: grid;
   place-items: center;
 }
 .menu-lb-viewport {
-  width: min(880px, 94vw);
-  height: min(86vh, 860px);
+  width: calc(100vw - 24px);
+  height: calc(100vh - 24px);
   overflow: hidden;
-  border-radius: 12px;
-  background: #FAF8F5;
-  border: 1px solid var(--cream);
-  box-shadow: 0 16px 48px rgba(60, 42, 30, 0.16);
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   touch-action: none;
   cursor: grab;
   display: grid;
@@ -1947,8 +1959,8 @@ body.menu-lb-open { overflow: hidden; }
 .menu-lb-viewport.is-zoomed { cursor: grab; }
 .menu-lb-viewport.is-zoomed:active { cursor: grabbing; }
 .menu-lb-img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: calc(100vw - 88px);
+  max-height: calc(100vh - 96px);
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1956,7 +1968,7 @@ body.menu-lb-open { overflow: hidden; }
   transition: transform .08s linear;
   user-select: none;
   -webkit-user-drag: none;
-  background: #fff;
+  background: transparent;
 }
 .menu-lb-close {
   position: absolute;
@@ -2036,7 +2048,10 @@ body.menu-lb-open { overflow: hidden; }
   .menu-lb-prev { left: 4px; }
   .menu-lb-next { right: 4px; }
   .menu-lb-nav { width: 40px; height: 40px; }
-  .menu-lb-viewport { height: min(70vh, 640px); }
+  .menu-lightbox { padding: 8px 44px 56px; }
+  .menu-lb-viewport,
+  .menu-lb-frame { width: calc(100vw - 8px); height: calc(100vh - 8px); }
+  .menu-lb-img { max-width: calc(100vw - 64px); max-height: calc(100vh - 72px); }
 }
 .menu-thumbs {
   display: flex;

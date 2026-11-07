@@ -1,5 +1,5 @@
 /**
- * Gắn ảnh Sa Pa vào catalogue.
+ * Gắn ảnh Sapa vào catalogue.
  * File Catalogue tour sapa.docx và Catalogue Sapa May Travel.pdf chỉ là trang ảnh,
  * không có lớp chữ, nên script không ghi đè lịch trình đang có.
  * Ảnh lấy từ Wikimedia Commons, chỉ giấy phép được dùng trên web thương mại
@@ -18,23 +18,23 @@ const CATALOGUE = path.join(ROOT, "shared", "catalogue.json");
 const UA = "TheDahliaHanoiCatalogue/1.0 (local Sapa image import; educational tour site)";
 
 const SHOTS = [
-  { code: "town", file: "town.jpg", query: "Sa Pa town market street", require: [["sa pa", "sapa", "chapa"], ["town", "market", "church", "street", "centre"]], not: ["paddy", "terrace", "rice", "ledziny"], alt: "Thị trấn Sa Pa", altEn: "Sa Pa town" },
-  { code: "sleeper", file: "sleeper-bus.jpg", query: "sleeper bus Hanoi Sapa", must: ["bus"], alt: "Xe giường nằm Hà Nội – Sa Pa", altEn: "Hanoi–Sapa sleeper bus" },
-  { code: "catcat", file: "cat-cat.jpg", query: "Cat Cat village Sa Pa", must: ["cat cat", "catcat"], alt: "Bản Cát Cát", altEn: "Cat Cat village" },
-  { code: "catcat-falls", file: "cat-cat-waterfall.jpg", query: "Cat Cat waterfall Sa Pa", must: ["cat"], alt: "Thác Cát Cát", altEn: "Cat Cat waterfall" },
-  { code: "hamrong", file: "ham-rong.jpg", query: "Ham Rong mountain Sa Pa view", must: ["ham rong", "hàm rồng"], not: ["ql.4d", "ta phin", "horse", "statue"], alt: "Núi Hàm Rồng", altEn: "Ham Rong mountain" },
+  { code: "town", file: "town.jpg", query: "Sapa town market street", require: [["Sapa", "sapa", "chapa"], ["town", "market", "church", "street", "centre"]], not: ["paddy", "terrace", "rice", "ledziny"], alt: "Thị trấn Sapa", altEn: "Sapa town" },
+  { code: "sleeper", file: "sleeper-bus.jpg", query: "sleeper bus Hanoi Sapa", must: ["bus"], alt: "Xe giường nằm Hà Nội – Sapa", altEn: "Hanoi–Sapa sleeper bus" },
+  { code: "catcat", file: "cat-cat.jpg", query: "Cat Cat village Sapa", must: ["cat cat", "catcat"], alt: "Bản Cát Cát", altEn: "Cat Cat village" },
+  { code: "catcat-falls", file: "cat-cat-waterfall.jpg", query: "Cat Cat waterfall Sapa", must: ["cat"], alt: "Thác Cát Cát", altEn: "Cat Cat waterfall" },
+  { code: "hamrong", file: "ham-rong.jpg", query: "Ham Rong mountain Sapa view", must: ["ham rong", "hàm rồng"], not: ["ql.4d", "ta phin", "horse", "statue"], alt: "Núi Hàm Rồng", altEn: "Ham Rong mountain" },
   { code: "fansipan", file: "fansipan.jpg", query: "Fansipan cable car", must: ["fansipan"], alt: "Cáp treo Fansipan", altEn: "Fansipan cable car" },
   { code: "bachha", file: "bac-ha-market.jpg", query: "Bac Ha market", must: ["bac ha", "bắc hà"], alt: "Chợ phiên Bắc Hà", altEn: "Bac Ha market" },
-  { code: "terraces", file: "muong-hoa.jpg", query: "Rice terraces in Sa Pa", must: ["terrace", "rice", "paddy"], alt: "Ruộng bậc thang Sa Pa", altEn: "Sa Pa rice terraces" },
-  { code: "ylinh", file: "y-linh-ho.jpg", query: "Y Linh Ho Sa Pa", must: ["linh"], alt: "Hồ Ý Linh", altEn: "Y Linh Ho" },
-  { code: "laochai", file: "lao-chai.jpg", query: "Lao Chai village Sa Pa", must: ["lao chai", "lao chải"], alt: "Bản Lao Chải", altEn: "Lao Chai village" },
-  { code: "tavan", file: "ta-van.jpg", query: "Ta Van village Sa Pa", must: ["ta van", "tả van"], alt: "Bản Tả Van", altEn: "Ta Van village" },
-  { code: "hmong", file: "hmong.jpg", query: "Hmong people Sa Pa", must: ["hmong", "h'mong", "h mong"], alt: "Người H'Mông ở Sa Pa", altEn: "Hmong people in Sa Pa" },
-  { code: "giangta", file: "giang-ta-chai.jpg", query: "Giang Ta Chai Sa Pa", must: ["giang"], alt: "Bản Giàng Tả Chải", altEn: "Giang Ta Chai village" },
-  { code: "motorbike", file: "motorbike.jpg", query: "motorcycle Sa Pa rice", must: ["motor", "bike"], alt: "Xe máy trên đường Sa Pa", altEn: "Motorbike on a Sa Pa road" },
-  { code: "seomyty", file: "seo-my-ty.jpg", query: "Seo My Ty Sa Pa", must: ["seo"], alt: "Bản Seo Mỹ Tỷ", altEn: "Seo My Ty village" },
-  { code: "waterfall", file: "waterfall.jpg", query: "waterfall Sa Pa", must: ["waterfall", "thác", "falls"], alt: "Thác ở Sa Pa", altEn: "A waterfall near Sa Pa" },
-  { code: "tiensa", file: "tien-sa.jpg", query: "Tien Sa waterfall Sa Pa", must: ["tien", "tiên", "waterfall"], alt: "Thác Tiên Sa", altEn: "Tien Sa waterfall" }
+  { code: "terraces", file: "muong-hoa.jpg", query: "Rice terraces in Sapa", must: ["terrace", "rice", "paddy"], alt: "Ruộng bậc thang Sapa", altEn: "Sapa rice terraces" },
+  { code: "ylinh", file: "y-linh-ho.jpg", query: "Y Linh Ho Sapa", must: ["linh"], alt: "Hồ Ý Linh", altEn: "Y Linh Ho" },
+  { code: "laochai", file: "lao-chai.jpg", query: "Lao Chai village Sapa", must: ["lao chai", "lao chải"], alt: "Bản Lao Chải", altEn: "Lao Chai village" },
+  { code: "tavan", file: "ta-van.jpg", query: "Ta Van village Sapa", must: ["ta van", "tả van"], alt: "Bản Tả Van", altEn: "Ta Van village" },
+  { code: "hmong", file: "hmong.jpg", query: "Hmong people Sapa", must: ["hmong", "h'mong", "h mong"], alt: "Người H'Mông ở Sapa", altEn: "Hmong people in Sapa" },
+  { code: "giangta", file: "giang-ta-chai.jpg", query: "Giang Ta Chai Sapa", must: ["giang"], alt: "Bản Giàng Tả Chải", altEn: "Giang Ta Chai village" },
+  { code: "motorbike", file: "motorbike.jpg", query: "motorcycle Sapa rice", must: ["motor", "bike"], alt: "Xe máy trên đường Sapa", altEn: "Motorbike on a Sapa road" },
+  { code: "seomyty", file: "seo-my-ty.jpg", query: "Seo My Ty Sapa", must: ["seo"], alt: "Bản Seo Mỹ Tỷ", altEn: "Seo My Ty village" },
+  { code: "waterfall", file: "waterfall.jpg", query: "waterfall Sapa", must: ["waterfall", "thác", "falls"], alt: "Thác ở Sapa", altEn: "A waterfall near Sapa" },
+  { code: "tiensa", file: "tien-sa.jpg", query: "Tien Sa waterfall Sapa", must: ["tien", "tiên", "waterfall"], alt: "Thác Tiên Sa", altEn: "Tien Sa waterfall" }
 ];
 
 const TOURS = {

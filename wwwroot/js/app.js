@@ -23,9 +23,9 @@
   var SEARCH_KEY = "dahliaVoyageSearch";
 
   var DEST_LABEL = {
-    "sapa": { vi: "Sa Pa", en: "Sapa" },
-    "Sa Pa": { vi: "Sa Pa", en: "Sapa" },
-    "Sapa": { vi: "Sa Pa", en: "Sapa" },
+    "sapa": { vi: "Sapa", en: "Sapa" },
+    "Sapa": { vi: "Sapa", en: "Sapa" },
+    "Sapa": { vi: "Sapa", en: "Sapa" },
     "ha-long": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
     "lan-ha": { vi: "Hạ Long – Lan Hạ", en: "Ha Long – Lan Ha" },
     "ninh-binh": { vi: "Ninh Bình", en: "Ninh Binh" },
@@ -38,7 +38,7 @@
   };
 
   var DEST_NAME_TO_ID = {
-    "Sa Pa": "sapa",
+    "Sapa": "sapa",
     "Sapa": "sapa",
     "Hạ Long": "ha-long",
     "Hạ Long – Lan Hạ": "ha-long",
@@ -221,7 +221,7 @@
     "nav.fleet": { vi: "Đội xe", en: "Fleet" },
     "fleet.k": { vi: "Đội xe di chuyển · The Dahlia Fleet", en: "Transport Fleet · The Dahlia Fleet" },
     "fleet.h": { vi: "Dịch vụ xe đưa đón cao cấp", en: "Luxury Fleet & Transfer Services" },
-    "fleet.p": { vi: "Đội xe du lịch đời mới phục vụ tuyến Hà Nội – Hạ Long, Ninh Bình, Sa Pa. Lái xe chuyên nghiệp, đón trả tận nơi an toàn và đúng giờ.", en: "Modern luxury transport fleet serving Hanoi – Ha Long, Ninh Binh, Sa Pa routes. Professional drivers, punctual and safe door-to-door transfers." },
+    "fleet.p": { vi: "Đội xe du lịch đời mới phục vụ tuyến Hà Nội – Hạ Long, Ninh Bình, Sapa. Lái xe chuyên nghiệp, đón trả tận nơi an toàn và đúng giờ.", en: "Modern luxury transport fleet serving Hanoi – Ha Long, Ninh Binh, Sapa routes. Professional drivers, punctual and safe door-to-door transfers." },
     "fleet.dcar.alt": { vi: "Xe Luxury D-Car 9 chỗ cao cấp", en: "Luxury 9-seat D-Car" },
     "fleet.dcar.badge": { vi: "VIP 9 Chỗ", en: "VIP 9 seats" },
     "fleet.dcar.h": { vi: "Xe Luxury D-Car (VIP 9 Chỗ)", en: "Luxury D-Car (VIP 9 seats)" },
@@ -374,12 +374,14 @@
     return U.lang() === "en" ? row.en : row.vi;
   }
 
-  function destMeta(key) {
+  function destMeta(key, operatorId) {
     var id = resolveDestId(key);
     var meta = destRecord(id);
-    var title = U.lang() === "en" && meta.titleEn ? meta.titleEn : (meta.title || destLabel(id));
-    var lead = U.lang() === "en" && meta.leadEn ? meta.leadEn : (meta.lead || "");
-    return { id: id, title: title, lead: lead };
+    var pack = operatorId && meta.byOperator && meta.byOperator[operatorId];
+    var source = pack || meta;
+    var title = U.lang() === "en" && source.titleEn ? source.titleEn : (source.title || destLabel(id));
+    var lead = U.lang() === "en" && source.leadEn ? source.leadEn : (source.lead || "");
+    return { id: id, title: title, lead: lead, operatorId: pack ? operatorId : "" };
   }
 
   function tourStars(tour) {
@@ -410,7 +412,9 @@
 
   function destHeadHtml(destKey, opts) {
     opts = opts || {};
-    var meta = destMeta(destKey);
+    var meta = destMeta(destKey, opts.operatorId);
+    var op = meta.operatorId ? operatorById(meta.operatorId) : null;
+    var opName = op ? field(op, "name") : "";
     var more = opts.moreHref
       ? '<a class="link-more" href="' + U.escapeHtml(opts.moreHref) + '">' +
         U.escapeHtml(t("vo.dest.more")) + "</a>"
@@ -418,10 +422,47 @@
     return '<div class="section-head dest-head">' +
       "<div>" +
       '<p class="eyebrow">' + U.escapeHtml(t("dest.eyebrow")) + "</p>" +
+      (opName ? '<p class="dest-op-name">' + U.escapeHtml(opName) + "</p>" : "") +
       "<h2>" + U.escapeHtml(meta.title) + "</h2>" +
       (meta.lead ? "<p>" + U.escapeHtml(meta.lead) + "</p>" : "") +
       "</div>" + more +
       "</div>";
+  }
+
+  function groupByOperator(list) {
+    var buckets = {};
+    list.forEach(function (tour) {
+      var id = tour.operatorId || "";
+      if (!buckets[id]) buckets[id] = [];
+      buckets[id].push(tour);
+    });
+    var ordered = [];
+    operators().forEach(function (op) {
+      if (buckets[op.id]) ordered.push(op.id);
+    });
+    Object.keys(buckets).forEach(function (id) {
+      if (ordered.indexOf(id) === -1) ordered.push(id);
+    });
+    return ordered.map(function (id) {
+      return { operatorId: id, tours: buckets[id] };
+    });
+  }
+
+  function destGroupsHtml(destKey, list, opts) {
+    opts = opts || {};
+    return groupByOperator(list).map(function (group) {
+      var more = opts.moreHref || "";
+      if (more && group.operatorId) {
+        more += (more.indexOf("?") === -1 ? "?" : "&") + "op=" + encodeURIComponent(group.operatorId);
+      }
+      return '<section class="dest-group' + (opts.reveal === false ? "" : " reveal") + '">' +
+        destHeadHtml(destKey, { operatorId: group.operatorId, moreHref: more }) +
+        '<div class="card-grid card-grid--3">' +
+        group.tours.map(function (tour) {
+          return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
+        }).join("") +
+        "</div></section>";
+    }).join("");
   }
 
   function destinations() {
@@ -445,9 +486,6 @@
   }
 
   function tourById(id) {
-    if (id === "ha-noi") id = "ha-noi-traditional-1d";
-    else if (id === "ha-noi-half") id = "ha-noi-traditional-half-morning";
-    else if (id === "ha-noi-incense") id = "ha-noi-city-craft-1d";
     for (var i = 0; i < tours.length; i++) {
       if (tours[i].id === id) return tours[i];
     }
@@ -1748,7 +1786,9 @@
 
     thumbs.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        setActive(parseInt(btn.getAttribute("data-index"), 10) || 0, true);
+        var next = parseInt(btn.getAttribute("data-index"), 10) || 0;
+        setActive(next, true);
+        openLightbox(next);
       });
     });
     if (openBtn) {
@@ -2137,8 +2177,8 @@
     return slides;
   }
 
-  function destHeroHtml(destKey) {
-    var meta = destMeta(destKey);
+  function destHeroHtml(destKey, operatorId) {
+    var meta = destMeta(destKey, operatorId);
     var slides = destMediaSlides(destKey);
     if (!slides.length) return "";
     var slidesHtml = slides.map(function (slide, i) {
@@ -2385,13 +2425,19 @@
         if (dest) dests = dests.filter(function (d) { return d === dest; });
         host.innerHTML = dests.map(function (d) {
           var items = toursForDestination(d);
-          return '<section class="section wrap dest-block" id="dest-' + U.escapeHtml(d) + '">' +
-            destHeadHtml(d, { moreHref: "tours.html?dest=" + encodeURIComponent(d) }) +
-            '<div class="card-grid card-grid--3">' +
-            items.map(function (tour) {
-              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
+          return '<div class="dest-split" id="dest-' + U.escapeHtml(d) + '">' +
+            groupByOperator(items).map(function (group) {
+              var more = "tours.html?dest=" + encodeURIComponent(d) +
+                (group.operatorId ? "&op=" + encodeURIComponent(group.operatorId) : "");
+              return '<section class="section wrap dest-block">' +
+                destHeadHtml(d, { operatorId: group.operatorId, moreHref: more }) +
+                '<div class="card-grid card-grid--3">' +
+                group.tours.map(function (tour) {
+                  return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
+                }).join("") +
+                "</div></section>";
             }).join("") +
-            "</div></section>";
+            "</div>";
         }).join("");
         U.bindImages(host);
         U.initMotion(host);
@@ -2540,13 +2586,14 @@
       main.classList.add("has-dest-hero");
       if (intro) intro.hidden = true;
       if (destToolbar) destToolbar.hidden = false;
-      if (lastHeroDest === state.dest && heroHost.querySelector("#dest-hero-slideshow")) {
+      var heroKey = state.dest + "|" + state.operator + "|" + U.lang();
+      if (lastHeroDest === heroKey && heroHost.querySelector("#dest-hero-slideshow")) {
         heroHost.hidden = false;
         return;
       }
-      lastHeroDest = state.dest;
+      lastHeroDest = heroKey;
       heroHost.hidden = false;
-      heroHost.innerHTML = destHeroHtml(state.dest);
+      heroHost.innerHTML = destHeroHtml(state.dest, state.operator !== "all" ? state.operator : "");
       bindHeroSlideshow(document.getElementById("dest-hero-slideshow"));
       U.bindImages(heroHost);
     }
@@ -2638,15 +2685,7 @@
         destinations().forEach(function (d) {
           var chunk = items.filter(function (tour) { return resolveDestId(tour.destination) === d; });
           if (!chunk.length) return;
-          groups.push(
-            '<section class="dest-group reveal">' +
-            destHeadHtml(d) +
-            '<div class="card-grid card-grid--3">' +
-            chunk.map(function (tour) {
-              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
-            }).join("") +
-            "</div></section>"
-          );
+          groups.push('<div class="dest-split" id="dest-' + U.escapeHtml(d) + '">' + destGroupsHtml(d, chunk) + "</div>");
         });
         cards.className = "tour-groups";
         cards.innerHTML = groups.join("");
@@ -2655,13 +2694,7 @@
         if (!items.length) {
           cards.innerHTML = "";
         } else {
-          cards.innerHTML =
-            '<section class="dest-group reveal">' +
-            '<div class="card-grid card-grid--3">' +
-            items.map(function (tour) {
-              return tourCardHtml(tour, "tours.html?id=" + encodeURIComponent(tour.id));
-            }).join("") +
-            "</div></section>";
+          cards.innerHTML = destGroupsHtml(state.dest, items);
         }
       }
       U.bindImages(cards);
@@ -3083,7 +3116,7 @@
       "ha-long": { label: "Hạ Long – Lan Hạ", tours: [] },
       "ninh-binh": { label: "Ninh Bình", tours: [] },
       "ha-noi": { label: "Hà Nội City", tours: [] },
-      "sapa": { label: "Sa Pa", tours: [] }
+      "sapa": { label: "Sapa", tours: [] }
     };
     tours.forEach(function (t) {
       var d = resolveDestId(t.destination);

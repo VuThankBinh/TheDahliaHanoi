@@ -43,7 +43,7 @@ function field(tour, key) {
 }
 
 function destLabel(d) {
-  const map = { 'ha-noi': 'Hà Nội', sapa: 'Sa Pa', 'ha-long': 'Hạ Long', 'ninh-binh': 'Ninh Bình' };
+  const map = { 'ha-noi': 'Hà Nội', sapa: 'Sapa', 'ha-long': 'Hạ Long', 'ninh-binh': 'Ninh Bình' };
   return map[d] || d;
 }
 
