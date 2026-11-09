@@ -2770,10 +2770,6 @@
         '<p class="lede seq card-line is-lines" data-card-line="' + U.escapeHtml(field(tour, "cardLine")) + '">' +
         formatCardLineHtml(field(tour, "cardLine")) + "</p>" +
         desc.map(function (line) { return "<p>" + U.escapeHtml(line) + "</p>"; }).join("") +
-        '<div class="when">' +
-        "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
-        "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
-        "</div>" +
         itineraryHtml(tour) +
         pricingTableHtml(tour) +
         "<h2>" + U.escapeHtml(t("svc.h")) + "</h2>" +
@@ -2886,10 +2882,6 @@
         '<p class="meta">' + U.escapeHtml(field(tour, "durationLabel")) + "</p>" +
         "<p>" + U.escapeHtml(field(tour, "cardLine")) + "</p>" +
         '<p class="price-line">' + priceLineHtml(tour) + "</p>" +
-        '<div class="when">' +
-        "<p><span>" + U.escapeHtml(t("detail.start")) + '</span> <strong id="date-start" data-iso="' + U.escapeHtml(date) + '">' + U.escapeHtml(showVN(date)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
-        "<p><span>" + U.escapeHtml(t("detail.end")) + '</span> <strong id="date-end" data-iso="' + U.escapeHtml(end) + '">' + U.escapeHtml(showVN(end)) + "</strong> <em>" + U.escapeHtml(t("detail.default")) + "</em></p>" +
-        "</div>" +
         '<a class="link-more" href="tours.html?id=' + encodeURIComponent(tour.id) + '">' + U.escapeHtml(t("link.see")) + "</a>" +
         "</div>" +
         '<aside class="stay-panel">' + bookingFormHtml(tour, { guests: guests, date: date }) +
