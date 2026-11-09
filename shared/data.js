@@ -6197,7 +6197,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/fansipan.jpg",
+      "image": "img/tours/screenshot-2026-11-09-182844.png",
       "media": [
         {
           "type": "image",
@@ -6471,7 +6471,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/cat-cat.jpg",
+      "image": "img/tours/screenshot-2026-11-09-183155.png",
       "media": [
         {
           "type": "image",
@@ -6720,7 +6720,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/ta-van.jpg",
+      "image": "img/tours/screenshot-2026-11-09-184819.png",
       "media": [
         {
           "type": "image",
@@ -6996,7 +6996,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/fansipan.jpg",
+      "image": "img/tours/screenshot-2026-11-09-183105.png",
       "media": [
         {
           "type": "image",
@@ -7287,7 +7287,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/fansipan.jpg",
+      "image": "img/tours/screenshot-2026-11-09-183455.png",
       "media": [
         {
           "type": "image",
@@ -7577,7 +7577,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/muong-hoa.jpg",
+      "image": "img/tours/screenshot-2026-11-09-184544.png",
       "media": [
         {
           "type": "image",
@@ -7922,7 +7922,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/y-linh-ho.jpg",
+      "image": "img/tours/screenshot-2026-11-09-185004.png",
       "media": [
         {
           "type": "image",
@@ -8167,7 +8167,7 @@
       "price": 0,
       "priceNote": "Liên hệ",
       "priceNoteEn": "Contact",
-      "image": "img/tours/sapa/y-linh-ho.jpg",
+      "image": "img/tours/screenshot-2026-11-09-185102.png",
       "media": [
         {
           "type": "image",
