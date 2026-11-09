@@ -1054,15 +1054,12 @@
     var line = field(tour, "cardLine");
     var stars = starsHtml(tour);
     var opName = operatorLabel(tour);
-    var priceBadge = "";
     var priceFoot = "";
 
     if (unit) {
-      priceBadge = '<span class="price-badge">' + salePriceHtml(unit.amount, unit.original, unit.currency) + "</span>";
       priceFoot = '<span class="price">' + salePriceHtml(unit.amount, unit.original, unit.currency, { unit: t("perGuest") }) + "</span>";
     } else {
       var note = field(tour, "priceNote") || t("contact");
-      priceBadge = '<span class="price-badge">' + U.escapeHtml(note) + '</span>';
       priceFoot = '<span class="price"><strong class="price-val">' + U.escapeHtml(note) + '</strong></span>';
     }
 
@@ -1074,7 +1071,6 @@
         ? '<span class="stars-badge" aria-label="' + U.escapeHtml(t("stars.of", { n: tourStars(tour) })) + '">' +
           "★".repeat(tourStars(tour)) + "</span>"
         : "") +
-      priceBadge +
       '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
       "</div>" +
       '<div class="body">' +

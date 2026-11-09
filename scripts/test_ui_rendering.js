@@ -59,9 +59,6 @@ function tourCardHtml(tour, href) {
   var line = field(tour, "cardLine");
   var stars = starsHtml(tour);
   var contactLabel = noteText || t("contact");
-  var priceBadge = !isContact
-    ? '<span class="price-badge">' + U.money(tour.price) + "</span>"
-    : '<span class="price-badge">' + U.escapeHtml(contactLabel) + "</span>";
   var priceFoot = !isContact
     ? '<span class="price">' + U.money(tour.price) + " <span>" + U.escapeHtml(t("perGuest")) + "</span></span>"
     : '<span class="price">' + U.escapeHtml(contactLabel) + "</span>";
@@ -69,7 +66,6 @@ function tourCardHtml(tour, href) {
   return '<a class="v-card reveal" href="' + href + '" title="' + U.escapeHtml(field(tour, "name")) + '">' +
     '<div class="media">' +
     '<span class="tag-badge">' + U.escapeHtml(destLabel(tour.destination)) + "</span>" +
-    priceBadge +
     '<img src="' + U.escapeHtml(tour.image) + '" alt="' + U.escapeHtml(field(tour, "name")) + '" title="' + U.escapeHtml(field(tour, "name")) + '" loading="lazy">' +
     "</div>" +
     '<div class="body">' +
