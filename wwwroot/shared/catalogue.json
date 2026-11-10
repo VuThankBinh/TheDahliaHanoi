@@ -6184,8 +6184,8 @@
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa – Bản Cát Cát – Cáp Treo Fansipan 2N1Đ (Khách Sạn)",
-      "nameEn": "Sapa – Cat Cat Village – Fansipan Peak 2 Days 1 Night (Hotel)",
+      "name": "Tour Sapa 2 ngày 1 đêm Cát Cát – Hàm Rồng/Lao Chải Tả Van ( HomeStay )",
+      "nameEn": "Sapa 2 Days 1 Night Tour: Cat Cat – Ham Rong / Lao Chai Ta Van (Homestay)",
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
@@ -6243,8 +6243,8 @@
           "altEn": "Screenshot 2026 11 09 182433"
         }
       ],
-      "cardLine": "Chinh phục Nóc nhà Đông Dương Fansipan hùng vĩ bằng cáp treo và tàu Mường Hoa, hòa mình vào bản làng Cát Cát của người H'Mông.",
-      "cardLineEn": "Conquer the Roof of Indochina via Fansipan cable car and Muong Hoa train, combined with H'mong culture in Cat Cat village.",
+      "cardLine": "Trải nghiệm bản làng mộc mạc, thăm Cát Cát, ngắm Núi Hàm Rồng hoặc thung lũng Lao Chải Tả Van và nghỉ đêm homestay ấm cúng.",
+      "cardLineEn": "Authentic village experience visiting Cat Cat, Ham Rong or Lao Chai Ta Van with a cozy homestay overnight.",
       "description": [
         "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
         "GIÁ TRỌN GÓI CHO 01 KHÁCH:",
@@ -6262,48 +6262,53 @@
         },
         {
           "time": "Ngày 1 · 13:00–13:30",
-          "title": "Đến Sapa – Nhận phòng & Ăn trưa",
-          "text": "Xe tới thị trấn Sapa. Xe trung chuyển đón quý khách tại bến xe về khách sạn dùng bữa trưa và nhận phòng nghỉ ngơi."
+          "title": "Đến Sapa – Ăn trưa & Chuẩn bị",
+          "text": "Xe tới thị trấn Sapa. Xe trung chuyển đón quý khách tới nhà hàng dùng bữa trưa và chuẩn bị hành lý nhẹ để đi bản."
         },
         {
           "time": "Ngày 1 · 14:00–14:30",
           "title": "Tham quan bản Cát Cát",
-          "text": "Hướng dẫn viên cùng quý khách đi bộ tham quan bản Cát Cát, tìm hiểu đời sống văn hóa của đồng bào H'Mông, ngắm thác Tiên Sa và thung lũng Mường Hoa."
+          "text": "Hướng dẫn viên cùng quý khách đi bộ tham quan bản Cát Cát, tìm hiểu đời sống người H'Mông, chiêm ngưỡng thác Tiên Sa và thung lũng thơ mộng."
+        },
+        {
+          "time": "Ngày 1 · 17:00–17:30",
+          "title": "Về homestay bản Tả Van – Nhận phòng",
+          "text": "Xe đưa quý khách về bản Tả Van, nhận phòng homestay và nghỉ ngơi ngắm cảnh núi non suối nguồn thanh bình."
         },
         {
           "time": "Ngày 1 · 19:00",
-          "title": "Bữa tối & Dạo chơi phố đêm",
-          "text": "Đoàn dùng bữa tối tại nhà hàng. Tự do dạo chơi thị trấn Sapa về đêm, ngắm Nhà thờ Đá và thưởng thức đồ nướng đặc sản vùng cao. Nghỉ đêm tại khách sạn Sapa."
+          "title": "Bữa tối tại homestay & Giao lưu văn hóa",
+          "text": "Thưởng thức bữa tối ấm cúng cùng gia đình người bản địa với các món đặc sản Tây Bắc. Nghỉ đêm tại homestay Tả Van."
         },
         {
           "time": "Ngày 2 · 07:00",
-          "title": "Bữa sáng & Trả phòng khách sạn",
-          "text": "Quý khách dùng bữa sáng tại nhà hàng. Sau đó làm thủ tục trả phòng và gửi hành lý tại quầy lễ tân."
+          "title": "Bữa sáng tại homestay",
+          "text": "Quý khách thức dậy đón bình minh trong lành của bản làng và thưởng thức bữa sáng tại homestay."
         },
         {
-          "time": "Ngày 2 · 08:00–08:30",
-          "title": "Chinh phục đỉnh Fansipan",
-          "text": "Quý khách khởi hành chinh phục Nóc nhà Đông Dương Fansipan (3.143m) bằng tàu hỏa leo núi Mường Hoa và hệ thống cáp treo hiện đại 3 dây."
+          "time": "Ngày 2 · 08:30–09:00",
+          "title": "Khám phá Hàm Rồng hoặc Lao Chải – Tả Van",
+          "text": "Quý khách lựa chọn khám phá Khu du lịch Núi Hàm Rồng (Vườn Lan, Cổng Trời) hoặc trải nghiệm trekking các cung đường ruộng bậc thang Lao Chải – Tả Van tuyệt đẹp."
         },
         {
-          "time": "Ngày 2 · 12:00–12:30",
-          "title": "Bữa trưa tại thị trấn Sapa",
-          "text": "Quý khách quay lại trung tâm thị trấn Sapa và dùng bữa trưa ngon miệng tại nhà hàng."
+          "time": "Ngày 2 · 12:00",
+          "title": "Bữa trưa tại nhà hàng địa phương",
+          "text": "Quý khách dùng bữa trưa ngon miệng tại nhà hàng địa phương và nghỉ ngơi."
         },
         {
-          "time": "Ngày 2 · Buổi chiều",
-          "title": "Tự do tham quan & Chợ Sapa",
-          "text": "Quý khách tự do dạo phố, chụp ảnh và mua sắm nông thổ sản, quà lưu niệm đặc sản Tây Bắc tại chợ trung tâm Sapa."
+          "time": "Ngày 2 · 13:30–14:00",
+          "title": "Xe đón về lại thị trấn Sapa",
+          "text": "Xe đón quý khách về lại trung tâm thị trấn Sapa, tự do dạo chơi chụp ảnh tại Nhà thờ Đá hoặc chợ trung tâm."
         },
         {
           "time": "Ngày 2 · 15:00–15:30",
           "title": "Lên xe khởi hành về Hà Nội",
-          "text": "Đoàn lên xe khởi hành về Hà Nội. Trên đường về xe có thể dừng trả khách tại Sân bay Nội Bài nếu có yêu cầu trước."
+          "text": "Đoàn lên xe khởi hành về Hà Nội theo đường cao tốc. Xe có thể dừng trả khách tại sân bay Nội Bài nếu có yêu cầu."
         },
         {
           "time": "Ngày 2 · 22:00–22:30",
           "title": "Về đến Hà Nội – Trả khách",
-          "text": "Xe về đến Hà Nội, trả quý khách tại phố Trần Quang Khải / Lý Thái Tổ. Chia tay quý khách và kết thúc hành trình!"
+          "text": "Xe về đến phố cổ Hà Nội, trả khách tại điểm hẹn ban đầu. Kết thúc chuyến đi nhiều kỷ niệm đáng nhớ!"
         }
       ],
       "itineraryEn": [
@@ -6314,48 +6319,53 @@
         },
         {
           "time": "Day 1 · 13:00–13:30",
-          "title": "Arrive in Sapa – Check-in & Lunch",
-          "text": "Arrive in Sapa town. Transfer car picks you up from the bus station to hotel for lunch and cabin check-in."
+          "title": "Arrive in Sapa – Lunch & Prep",
+          "text": "Arrive in Sapa town. Transfer to restaurant for lunch and prep daypacks for the village journey."
         },
         {
           "time": "Day 1 · 14:00–14:30",
           "title": "Visit Cat Cat Village",
-          "text": "Walk with your guide to explore Cat Cat village, discover Black H'mong culture, handicrafts, Tien Sa waterfall and Muong Hoa valley."
+          "text": "Guided walking tour through Cat Cat village of the Black H'mong, Tien Sa waterfall and lush valley views."
+        },
+        {
+          "time": "Day 1 · 17:00–17:30",
+          "title": "Transfer to Ta Van Homestay – Check-in",
+          "text": "Transfer to Ta Van village. Check in to homestay and enjoy peaceful mountain views."
         },
         {
           "time": "Day 1 · 19:00",
-          "title": "Dinner & Sapa Night Market",
-          "text": "Enjoy dinner at the restaurant. Free evening to stroll around Sapa Stone Church and town. Overnight at Sapa hotel."
+          "title": "Homestay Dinner & Culture Exchange",
+          "text": "Enjoy a warm dinner with your local host family featuring authentic Northwest dishes. Overnight at Ta Van homestay."
         },
         {
           "time": "Day 2 · 07:00",
-          "title": "Breakfast & Hotel Check-out",
-          "text": "Have breakfast at the hotel restaurant, check out and store luggage at reception."
+          "title": "Breakfast at Homestay",
+          "text": "Wake up to fresh mountain air and enjoy breakfast at the homestay."
         },
         {
-          "time": "Day 2 · 08:00–08:30",
-          "title": "Conquer Mount Fansipan",
-          "text": "Conquer the 'Roof of Indochina' (3,143m) by Muong Hoa mountain train and the modern 3-rope cable car system."
+          "time": "Day 2 · 08:30–09:00",
+          "title": "Explore Ham Rong Mountain or Lao Chai – Ta Van",
+          "text": "Choose between discovering Ham Rong Mountain (Orchid Garden, Heaven's Gate) or scenic trekking along Lao Chai – Ta Van terraced fields."
         },
         {
-          "time": "Day 2 · 12:00–12:30",
-          "title": "Lunch in Sapa Town",
-          "text": "Return to Sapa town center and enjoy lunch at a local restaurant."
+          "time": "Day 2 · 12:00",
+          "title": "Lunch at Local Restaurant",
+          "text": "Enjoy a delicious lunch at a local restaurant and take time to rest."
         },
         {
-          "time": "Day 2 · Afternoon",
-          "title": "Free Time & Sapa Market",
-          "text": "Free time to stroll through Sapa town, explore local handicraft shops and buy Northwest specialties at Sapa market."
+          "time": "Day 2 · 13:30–14:00",
+          "title": "Transfer Back to Sapa Town",
+          "text": "Car transfers you back to Sapa town center. Free time to stroll around Sapa Stone Church and market."
         },
         {
           "time": "Day 2 · 15:00–15:30",
           "title": "Board Bus Back to Hanoi",
-          "text": "Board the bus back to Hanoi. Drop-off at Noi Bai Airport available upon request."
+          "text": "Board the expressway bus back to Hanoi. Drop-off at Noi Bai Airport available on request."
         },
         {
           "time": "Day 2 · 22:00–22:30",
           "title": "Arrive in Hanoi – Drop-off",
-          "text": "Arrive back in Hanoi Old Quarter. Farewell and end of an unforgettable trip!"
+          "text": "Arrive in Hanoi Old Quarter. Farewell and end of an unforgettable tour!"
         }
       ],
       "servicesIncluded": [
@@ -6400,14 +6410,32 @@
         "Central Sapa hotel"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
-        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
-            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
-            "price": "Theo lịch trình tour",
-            "priceEn": "Per itinerary"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
           }
         ],
         "surcharges": [
@@ -6451,15 +6479,16 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "sapa-catcat-hamrong-2d1n",
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa – Bản Cát Cát – Núi Hàm Rồng 2N1Đ (Khách Sạn)",
-      "nameEn": "Sapa – Cat Cat Village – Ham Rong Mountain 2 Days 1 Night (Hotel)",
+      "name": "Tour Sapa 2 ngày 1 đêm Cát Cát – Hàm Rồng/Lao Chải Tả Van ( Khách Sạn )",
+      "nameEn": "Sapa 2 Days 1 Night Tour: Cat Cat – Ham Rong / Lao Chai Ta Van (Hotel)",
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
@@ -6509,8 +6538,8 @@
           "altEn": "Screenshot 2026 11 09 183241"
         }
       ],
-      "cardLine": "Tour Sapa truyền thống 2N1Đ nhẹ nhàng, tham quan thác Cát Cát và ngắm nhìn toàn cảnh thị trấn Sapa từ đài quan sát núi Hàm Rồng.",
-      "cardLineEn": "Classic leisure 2D1N tour: Cat Cat waterfall and panoramic Sapa town views from Ham Rong mountain observatory.",
+      "cardLine": "Khám phá bản Cát Cát của người H'Mông, ngắm toàn cảnh thị trấn Sapa từ đỉnh Hàm Rồng hoặc trekking Lao Chải – Tả Van, nghỉ đêm khách sạn tiện nghi.",
+      "cardLineEn": "Discover Cat Cat village, enjoy panoramic views from Ham Rong Mountain or trek Lao Chai – Ta Van, staying at comfortable hotels.",
       "description": [
         "Xin hân hạnh giới thiệu chương trình du lịch tham quan:"
       ],
@@ -6649,14 +6678,32 @@
         "Family friendly"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
-        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
-            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
-            "price": "Theo lịch trình tour",
-            "priceEn": "Per itinerary"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
           }
         ],
         "surcharges": [
@@ -6700,15 +6747,16 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "sapa-homestay-2d1n",
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa Ngủ Bản 2N1Đ Homestay (Ý Linh Hồ – Lao Chải – Tả Van)",
-      "nameEn": "Sapa Homestay Trekking Tour 2 Days 1 Night (Y Linh Ho – Lao Chai – Ta Van)",
+      "name": "Tour Sapa 2N1Đ Trekking Bản Làng (Homestay)",
+      "nameEn": "Sapa 2D1N Trekking Tour to Villages (Homestay)",
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
@@ -6766,8 +6814,8 @@
           "altEn": "Screenshot 2026 11 09 182844"
         }
       ],
-      "cardLine": "Trekking qua thung lũng Mường Hoa, ngắm ruộng bậc thang ngoạn mục và trải nghiệm nghỉ đêm ấm cúng tại homestay bản Giáy Tả Van.",
-      "cardLineEn": "Trek through Muong Hoa valley with breathtaking terraced rice fields and enjoy an authentic overnight homestay in Ta Van.",
+      "cardLine": "Hải trình trekking qua thung lũng Mường Hoa, Ý Linh Hồ, Lao Chải – Tả Van và ngủ đêm homestay bản địa ấm cúng.",
+      "cardLineEn": "Scenic trekking through Muong Hoa valley, Y Linh Ho, Lao Chai – Ta Van with cozy local homestay stay.",
       "description": [
         "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
         "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
@@ -6925,14 +6973,32 @@
         "Giay traditional cuisine"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
-        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
-            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
-            "price": "Theo lịch trình tour",
-            "priceEn": "Per itinerary"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
           }
         ],
         "surcharges": [
@@ -6976,15 +7042,16 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "sapa-hotel-3d2n",
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa 3N2Đ Khách Sạn (Cát Cát – Núi Hàm Rồng)",
-      "nameEn": "Sapa 3 Days 2 Nights Hotel Tour (Cat Cat – Ham Rong)",
+      "name": "Tour Sapa 3 ngày 2 đêm Cát Cát – Hàm Rồng/Lao Chải Tả Van - Ỷ Linh Hồ ( Khách Sạn )",
+      "nameEn": "Sapa 3 Days 2 Nights Tour: Cat Cat – Ham Rong / Lao Chai Ta Van - Y Linh Ho (Hotel)",
       "durationLabel": "3 ngày 2 đêm",
       "durationLabelEn": "3 days 2 nights",
       "nightsOffset": 2,
@@ -7036,8 +7103,8 @@
           "altEn": "Screenshot 2026 11 09 182844"
         }
       ],
-      "cardLine": "Kỳ nghỉ 3 ngày thư thái tại thị trấn sương mờ Sapa: khám phá vườn lan Hàm Rồng, bản Cát Cát và thời gian tự do mua sắm đặc sản.",
-      "cardLineEn": "A leisurely 3-day holiday in misty Sapa: orchid garden on Ham Rong, Cat Cat village, and free time for local delicacies.",
+      "cardLine": "Hành trình 3N2Đ nghỉ dưỡng khách sạn, khám phá Núi Hàm Rồng, bản Cát Cát, thung lũng Mường Hoa và bản Ý Linh Hồ – Lao Chải – Tả Van.",
+      "cardLineEn": "Comprehensive 3D2N hotel holiday exploring Ham Rong mountain, Cat Cat village, Muong Hoa valley and Y Linh Ho – Lao Chai – Ta Van.",
       "description": [
         "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
         "(Giá áp dụng cho nhóm từ 02 khách)"
@@ -7216,14 +7283,32 @@
         "Free time in town"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
-        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
-            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
-            "price": "Theo lịch trình tour",
-            "priceEn": "Per itinerary"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
           }
         ],
         "surcharges": [
@@ -7267,7 +7352,8 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "sapa-catcat-hamrong-fansipan-3d2n",
@@ -7557,15 +7643,16 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": false
     },
     {
       "id": "sapa-hotel-homestay-3d2n",
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa 3N2Đ Trải Nghiệm (01 Đêm Khách Sạn + 01 Đêm Homestay Bản)",
-      "nameEn": "Sapa 3 Days 2 Nights Combo (01 Night Hotel + 01 Night Homestay)",
+      "name": "Tour Sapa 3 ngày 2 đêm Cát Cát – Hàm Rồng/Lao Chải Tả Van - Ỷ Linh Hồ ( HomeStay )",
+      "nameEn": "Sapa 3 Days 2 Nights Tour: Cat Cat – Ham Rong / Lao Chai Ta Van - Y Linh Ho (Homestay)",
       "durationLabel": "3 ngày 2 đêm",
       "durationLabelEn": "3 days 2 nights",
       "nightsOffset": 2,
@@ -7639,8 +7726,8 @@
           "altEn": "Screenshot 2026 11 09 184338"
         }
       ],
-      "cardLine": "Combo trải nghiệm tuyệt vời: đêm 1 tiện nghi tại khách sạn trung tâm Sapa, đêm 2 ngủ bản Tả Van giữa khung cảnh ruộng bậc thang yên bình.",
-      "cardLineEn": "The ultimate combo: first night in comfortable town hotel, second night at a serene village homestay in Ta Van.",
+      "cardLine": "Hành trình 3N2Đ ngủ bản homestay, trekking Mường Hoa, Ý Linh Hồ, Lao Chải – Tả Van và khám phá bản Cát Cát, núi Hàm Rồng.",
+      "cardLineEn": "Deep 3D2N homestay journey exploring Cat Cat, Ham Rong, trekking Muong Hoa, Y Linh Ho, Lao Chai – Ta Van and Giang Ta Chai.",
       "description": [
         "Xin hân hạnh giới thiệu chương trình du lịch tham quan:",
         "GIÁ TRỌN GÓI CHO 01 KHÁCH:"
@@ -7851,14 +7938,32 @@
         "Cultural interaction"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 2*–5* hoặc Homestay)",
-        "baseRateEn": "Custom quote based on accommodation tier (2*–5* Hotel or Homestay)",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Vé cáp treo Fansipan & Tàu hỏa Mường Hoa",
-            "nameEn": "Fansipan cable car & Muong Hoa mountain train",
-            "price": "Theo lịch trình tour",
-            "priceEn": "Per itinerary"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
+            "price": "Đã bao gồm",
+            "priceEn": "Included"
           }
         ],
         "surcharges": [
@@ -7902,7 +8007,8 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "sapa-motorbike-trekking-2d1n",
@@ -8147,15 +8253,16 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": false
     },
     {
       "id": "sapa-motorbike-2d1n",
       "destination": "sapa",
       "featured": false,
       "stars": 5,
-      "name": "Tour Sapa 2N1Đ Phượt Xe Máy Khám Phá Các Bản (Homestay)",
-      "nameEn": "Sapa 2 Days 1 Night Motorbike Tour Across Villages (Homestay)",
+      "name": "Tour Sapa 2N1Đ Phượt xe máy khám phá các làng  (Homestay)",
+      "nameEn": "Sapa 2D1N Motorbike Tour Across Villages (Homestay)",
       "durationLabel": "2 ngày 1 đêm",
       "durationLabelEn": "2 days 1 night",
       "nightsOffset": 1,
@@ -8221,8 +8328,8 @@
           "altEn": "Screenshot 2026 11 09 184918"
         }
       ],
-      "cardLine": "Trọn vẹn 2 ngày khám phá các bản làng người H'Mông, Dao Đỏ, Tày, Giáy bằng xe máy có tài xế địa phương dày dặn kinh nghiệm.",
-      "cardLineEn": "Two full days exploring H'mong, Red Dao, Tay, and Giay villages on motorbikes with experienced local riders.",
+      "cardLine": "Chinh phục cung đèo Ô Quy Hồ, vi vu xe máy khám phá các bản làng hoang sơ Bản Khoang, Tả Phìn, Tả Van, Nậm Sài.",
+      "cardLineEn": "Conquer O Quy Ho pass and ride motorbikes across authentic ethnic villages: Ta Phin, Ta Van, Nam Sai.",
       "description": [
         "Trọn vẹn 2 ngày khám phá các bản làng người H'Mông, Dao Đỏ, Tày, Giáy bằng xe máy có tài xế địa phương dày dặn kinh nghiệm."
       ],
@@ -8383,18 +8490,30 @@
         "Homestay cooking class"
       ],
       "pricingTable": {
-        "baseRate": "Báo giá trọn gói xe máy & homestay theo số lượng khách",
-        "baseRateEn": "All-inclusive motorbike & homestay quote based on group size",
+        "baseRate": "Báo giá theo tiêu chuẩn lưu trú (Khách sạn 3*–5* hoặc Homestay)",
+        "baseRateEn": "Custom quote based on accommodation tier (Hotel 3*–5* or Homestay)",
         "options": [
           {
-            "name": "Xe máy và tài xế bản địa suốt hành trình",
-            "nameEn": "Motorbike with local rider throughout the tour",
-            "price": "Đã bao gồm",
-            "priceEn": "Included"
+            "name": "Lựa chọn tiêu chuẩn lưu trú: Khách sạn 3★ / 4★ / 5★ hoặc Homestay",
+            "nameEn": "Accommodation standard: Hotel 3★ / 4★ / 5★ or Homestay",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
           },
           {
-            "name": "Trải nghiệm lớp nấu ăn truyền thống tại homestay",
-            "nameEn": "Traditional homestay cooking class experience",
+            "name": "Vé cáp treo Fansipan (Khứ hồi)",
+            "nameEn": "Fansipan Cable Car Ticket (Round-trip)",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Vé tàu hỏa leo núi Mường Hoa",
+            "nameEn": "Muong Hoa Mountain Funicular Train",
+            "price": "Tùy chọn khi đặt",
+            "priceEn": "Selectable on booking"
+          },
+          {
+            "name": "Hướng dẫn viên bản địa tiếng Việt & Tiếng Anh suốt tuyến",
+            "nameEn": "Local Vietnamese & English-speaking tour guide throughout",
             "price": "Đã bao gồm",
             "priceEn": "Included"
           }
@@ -8428,7 +8547,8 @@
           }
         ]
       },
-      "operatorId": "may"
+      "operatorId": "may",
+      "active": true
     },
     {
       "id": "ha-long-cozy-bay-grand-2d1n",

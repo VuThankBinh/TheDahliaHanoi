@@ -311,7 +311,19 @@
     "price.surcharges": { vi: "Phụ thu ngày lễ & Dịch vụ", en: "Surcharges & Extra Services" },
     "price.childPolicy": { vi: "Chính sách giá trẻ em", en: "Child Pricing Policy" },
     "price.onDemand": { vi: "Báo giá theo lịch trình và số khách", en: "Quote based on itinerary and guests" },
-    "contact": { vi: "Liên hệ", en: "Contact" }
+    "contact": { vi: "Liên hệ", en: "Contact" },
+    "sapa.stayLabel": { vi: "Tiêu chuẩn lưu trú", en: "Accommodation Standard" },
+    "sapa.hotel3": { vi: "Khách sạn 3★", en: "3★ Hotel" },
+    "sapa.hotel4": { vi: "Khách sạn 4★", en: "4★ Hotel" },
+    "sapa.hotel5": { vi: "Khách sạn 5★", en: "5★ Hotel" },
+    "sapa.homestay": { vi: "Homestay bản địa", en: "Local Homestay" },
+    "sapa.addonLabel": { vi: "Dịch vụ thêm Sapa (Bấm để chọn)", en: "Sapa Optional Add-ons (Click to select)" },
+    "sapa.optFansipan": { vi: "Vé cáp treo Fansipan", en: "Fansipan Cable Car Ticket" },
+    "sapa.optFansipanSub": { vi: "Cáp treo khứ hồi đỉnh Fansipan", en: "Round-trip cable car to the peak" },
+    "sapa.optTrain": { vi: "Vé tàu hỏa leo núi Mường Hoa", en: "Muong Hoa Mountain Train" },
+    "sapa.optTrainSub": { vi: "Tàu hỏa ngắm toàn cảnh thung lũng", en: "Panoramic valley railway ticket" },
+    "sapa.badgeSelected": { vi: "✓ Đã chọn", en: "✓ Selected" },
+    "sapa.badgeAdd": { vi: "+ Chọn", en: "+ Select" }
   };
 
   var _sharedT = U.t;
@@ -1924,6 +1936,160 @@
     return salePriceHtml(unit.amount, unit.original, unit.currency, { unit: t("perGuest") });
   }
 
+  function sapaBookingHtml(tour, prefix) {
+    if (!tour || resolveDestId(tour.destination) !== "sapa") return "";
+    var isEn = U.lang() === "en";
+    var isHomestayTour = (tour.name && /homestay/i.test(tour.name)) ||
+      (tour.nameEn && /homestay/i.test(tour.nameEn));
+
+    var hotelOptions = [];
+    if (isHomestayTour) {
+      hotelOptions = [
+        { id: "homestay", nameVi: "Homestay bản địa", nameEn: "Local Homestay", default: true },
+        { id: "3star", nameVi: "Khách sạn 3★", nameEn: "3★ Hotel" },
+        { id: "4star", nameVi: "Khách sạn 4★", nameEn: "4★ Hotel" },
+        { id: "5star", nameVi: "Khách sạn 5★", nameEn: "5★ Hotel" }
+      ];
+    } else {
+      hotelOptions = [
+        { id: "3star", nameVi: "Khách sạn 3★", nameEn: "3★ Hotel", default: true },
+        { id: "4star", nameVi: "Khách sạn 4★", nameEn: "4★ Hotel" },
+        { id: "5star", nameVi: "Khách sạn 5★", nameEn: "5★ Hotel" }
+      ];
+    }
+
+    var defaultHotel = hotelOptions.find(function (h) { return h.default; }) || hotelOptions[0];
+    var defaultHotelName = isEn ? defaultHotel.nameEn : defaultHotel.nameVi;
+
+    var chipsHtml = hotelOptions.map(function (h) {
+      var activeClass = h.default ? " is-active" : "";
+      var ariaChecked = h.default ? ' aria-checked="true"' : ' aria-checked="false"';
+      var label = isEn ? h.nameEn : h.nameVi;
+      return '<button type="button" class="sapa-chip-btn' + activeClass + '" data-tier-id="' + U.escapeHtml(h.id) + '" data-tier-name="' + U.escapeHtml(label) + '" role="radio"' + ariaChecked + '>' +
+        '<span class="chip-radio" aria-hidden="true"></span>' +
+        '<span class="chip-text">' + U.escapeHtml(label) + '</span>' +
+        '</button>';
+    }).join("");
+
+    var fansipanTitle = isEn ? "Fansipan Cable Car Ticket" : "Vé cáp treo Fansipan";
+    var fansipanDesc = isEn ? "Round-trip cable car to Fansipan Peak" : "Cáp treo khứ hồi đỉnh Fansipan";
+    var trainTitle = isEn ? "Muong Hoa Mountain Train" : "Vé tàu hỏa leo núi Mường Hoa";
+    var trainDesc = isEn ? "Panoramic valley funicular railway" : "Tàu hỏa ngắm toàn cảnh thung lũng";
+    var badgeSelectText = isEn ? "+ Select" : "+ Chọn";
+
+    return '<div class="sapa-booking-box" id="' + prefix + '-sapa-box">' +
+      '<div class="sapa-opt-section">' +
+        '<label class="sapa-label"><span>' + U.escapeHtml(t("sapa.stayLabel")) + ' *</span></label>' +
+        '<div class="sapa-chips-group" id="' + prefix + '-sapa-hotel-group" role="radiogroup" aria-label="' + U.escapeHtml(t("sapa.stayLabel")) + '">' +
+          chipsHtml +
+        '</div>' +
+        '<input type="hidden" id="' + prefix + '-sapa-hotel-val" name="sapa_hotel" value="' + U.escapeHtml(defaultHotelName) + '">' +
+      '</div>' +
+      '<div class="sapa-opt-section">' +
+        '<label class="sapa-label"><span>' + U.escapeHtml(t("sapa.addonLabel")) + '</span></label>' +
+        '<div class="sapa-addons-group">' +
+          '<button type="button" class="sapa-addon-toggle" id="' + prefix + '-sapa-fansipan-btn" data-addon="fansipan" aria-pressed="false">' +
+            '<span class="addon-icon" aria-hidden="true">🏔️</span>' +
+            '<span class="addon-info">' +
+              '<strong class="addon-title">' + U.escapeHtml(fansipanTitle) + '</strong>' +
+              '<span class="addon-desc">' + U.escapeHtml(fansipanDesc) + '</span>' +
+            '</span>' +
+            '<span class="addon-badge" aria-hidden="true">' + U.escapeHtml(badgeSelectText) + '</span>' +
+          '</button>' +
+          '<button type="button" class="sapa-addon-toggle" id="' + prefix + '-sapa-train-btn" data-addon="train" aria-pressed="false">' +
+            '<span class="addon-icon" aria-hidden="true">🚂</span>' +
+            '<span class="addon-info">' +
+              '<strong class="addon-title">' + U.escapeHtml(trainTitle) + '</strong>' +
+              '<span class="addon-desc">' + U.escapeHtml(trainDesc) + '</span>' +
+            '</span>' +
+            '<span class="addon-badge" aria-hidden="true">' + U.escapeHtml(badgeSelectText) + '</span>' +
+          '</button>' +
+        '</div>' +
+        '<input type="hidden" id="' + prefix + '-sapa-fansipan-val" name="sapa_fansipan" value="0">' +
+        '<input type="hidden" id="' + prefix + '-sapa-train-val" name="sapa_train" value="0">' +
+      '</div>' +
+    '</div>';
+  }
+
+  function wireSapaButtons(prefix, onStateChange) {
+    var box = document.getElementById(prefix + "-sapa-box");
+    if (!box) return;
+    var isEn = U.lang() === "en";
+    var hotelVal = document.getElementById(prefix + "-sapa-hotel-val");
+    var fansipanVal = document.getElementById(prefix + "-sapa-fansipan-val");
+    var trainVal = document.getElementById(prefix + "-sapa-train-val");
+    var fansipanBtn = document.getElementById(prefix + "-sapa-fansipan-btn");
+    var trainBtn = document.getElementById(prefix + "-sapa-train-btn");
+
+    box.querySelectorAll(".sapa-chip-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        box.querySelectorAll(".sapa-chip-btn").forEach(function (b) {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-checked", "false");
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-checked", "true");
+        if (hotelVal) hotelVal.value = btn.getAttribute("data-tier-name") || "";
+        if (typeof onStateChange === "function") onStateChange();
+      });
+    });
+
+    if (fansipanBtn) {
+      fansipanBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var wasActive = fansipanBtn.classList.contains("is-active");
+        var nowActive = !wasActive;
+        fansipanBtn.classList.toggle("is-active", nowActive);
+        fansipanBtn.setAttribute("aria-pressed", nowActive ? "true" : "false");
+        var badge = fansipanBtn.querySelector(".addon-badge");
+        if (badge) badge.textContent = nowActive ? (isEn ? "✓ Selected" : "✓ Đã chọn") : (isEn ? "+ Select" : "+ Chọn");
+        if (fansipanVal) fansipanVal.value = nowActive ? "1" : "0";
+        if (typeof onStateChange === "function") onStateChange();
+      });
+    }
+
+    if (trainBtn) {
+      trainBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var wasActive = trainBtn.classList.contains("is-active");
+        var nowActive = !wasActive;
+        trainBtn.classList.toggle("is-active", nowActive);
+        trainBtn.setAttribute("aria-pressed", nowActive ? "true" : "false");
+        var badge = trainBtn.querySelector(".addon-badge");
+        if (badge) badge.textContent = nowActive ? (isEn ? "✓ Selected" : "✓ Đã chọn") : (isEn ? "+ Select" : "+ Chọn");
+        if (trainVal) trainVal.value = nowActive ? "1" : "0";
+        if (typeof onStateChange === "function") onStateChange();
+      });
+    }
+  }
+
+  function getSapaOptionsSummary(prefix) {
+    var box = document.getElementById(prefix + "-sapa-box");
+    if (!box) return null;
+    var isEn = U.lang() === "en";
+    var hotelVal = document.getElementById(prefix + "-sapa-hotel-val");
+    var fansipanVal = document.getElementById(prefix + "-sapa-fansipan-val");
+    var trainVal = document.getElementById(prefix + "-sapa-train-val");
+
+    var stayName = hotelVal ? hotelVal.value : "";
+    var hasFansipan = fansipanVal && fansipanVal.value === "1";
+    var hasTrain = trainVal && trainVal.value === "1";
+
+    var parts = [];
+    if (stayName) parts.push(stayName);
+    if (hasFansipan) parts.push(isEn ? "Fansipan Cable Car" : "Cáp treo Fansipan");
+    if (hasTrain) parts.push(isEn ? "Muong Hoa Mountain Train" : "Tàu hỏa Mường Hoa");
+
+    return {
+      stay: stayName,
+      fansipan: hasFansipan,
+      train: hasTrain,
+      summary: parts.join(" · "),
+      parts: parts
+    };
+  }
+
   function bookingFormHtml(tour, opts) {
     opts = opts || {};
     var date = opts.date || U.isoOffset(1);
@@ -1952,6 +2118,8 @@
         return '<option value="' + U.escapeHtml(tr.id) + '">' + U.escapeHtml(trName) + ' (' + trPrice + ')</option>';
       }).join("");
       optionsHtml = '<label><span>' + U.escapeHtml(t("label.transport")) + '</span><select id="book-transport-select" name="transport">' + transOpts + '</select></label>';
+    } else if (resolveDestId(tour.destination) === "sapa") {
+      optionsHtml = sapaBookingHtml(tour, "book");
     }
 
     return '<form class="book-form" id="book-form" novalidate>' +
@@ -2045,9 +2213,18 @@
       }
       syncEnd();
       var optName = "";
-      if (cabinSelect && cabinSelect.options[cabinSelect.selectedIndex]) optName = cabinSelect.options[cabinSelect.selectedIndex].text;
+      if (resolveDestId(tour.destination) === "sapa") {
+        var sapaOpt = getSapaOptionsSummary("book");
+        if (sapaOpt && sapaOpt.summary) optName = sapaOpt.summary;
+      } else if (cabinSelect && cabinSelect.options[cabinSelect.selectedIndex]) optName = cabinSelect.options[cabinSelect.selectedIndex].text;
       else if (transportSelect && transportSelect.options[transportSelect.selectedIndex]) optName = transportSelect.options[transportSelect.selectedIndex].text;
       return { totalStr: totalEl.textContent.replace(/\s+/g, " ").trim(), option: optName };
+    }
+
+    if (resolveDestId(tour.destination) === "sapa") {
+      wireSapaButtons("book", function () {
+        quote();
+      });
     }
 
     form.addEventListener("input", function () {
@@ -3030,6 +3207,7 @@
                 '</label>' +
                 '<p id="modal-option-hint" class="cabin-capacity-hint" hidden>' + U.escapeHtml(t("hint.cabinCapacity")) + '</p>' +
               '</div>' +
+              '<div id="modal-sapa-wrapper" hidden></div>' +
               '<div class="book-grid-2">' +
                 '<label>' +
                   '<span>' + U.escapeHtml(t("book.name")) + ' *</span>' +
@@ -3138,29 +3316,47 @@
     function syncModalOptions(tour) {
       if (!optionWrapper || !optionSelect) return;
       var isEn = U.lang() === "en";
-      if (tour && tour.cabinOptions && tour.cabinOptions.length) {
-        optionWrapper.hidden = false;
-        optionTitle.textContent = t("label.cabin");
-        optionHint.hidden = false;
-        optionHint.textContent = t("hint.cabinCapacity");
-        optionSelect.innerHTML = tour.cabinOptions.map(function (cb) {
-          var cbName = isEn && cb.nameEn ? cb.nameEn : cb.name;
-          var cbPrice = isEn ? ("$" + cb.priceEn) : U.money(cb.price);
-          return '<option value="' + U.escapeHtml(cb.id) + '">' + U.escapeHtml(cbName) + ' (' + cbPrice + ')</option>';
-        }).join("");
-      } else if (tour && tour.transportOptions && tour.transportOptions.length) {
-        optionWrapper.hidden = false;
-        optionTitle.textContent = t("label.transport");
-        optionHint.hidden = true;
-        optionSelect.innerHTML = tour.transportOptions.map(function (tr) {
-          var trName = isEn && tr.nameEn ? tr.nameEn : tr.name;
-          var trPrice = isEn ? ("$" + tr.priceEn) : U.money(tr.price);
-          return '<option value="' + U.escapeHtml(tr.id) + '">' + U.escapeHtml(trName) + ' (' + trPrice + ')</option>';
-        }).join("");
-      } else {
+      var sapaWrapper = document.getElementById("modal-sapa-wrapper");
+      if (tour && resolveDestId(tour.destination) === "sapa") {
         optionWrapper.hidden = true;
         optionHint.hidden = true;
         optionSelect.innerHTML = "";
+        if (sapaWrapper) {
+          sapaWrapper.hidden = false;
+          sapaWrapper.innerHTML = sapaBookingHtml(tour, "modal");
+          wireSapaButtons("modal", function () {
+            updateModalQuote();
+          });
+        }
+      } else {
+        if (sapaWrapper) {
+          sapaWrapper.hidden = true;
+          sapaWrapper.innerHTML = "";
+        }
+        if (tour && tour.cabinOptions && tour.cabinOptions.length) {
+          optionWrapper.hidden = false;
+          optionTitle.textContent = t("label.cabin");
+          optionHint.hidden = false;
+          optionHint.textContent = t("hint.cabinCapacity");
+          optionSelect.innerHTML = tour.cabinOptions.map(function (cb) {
+            var cbName = isEn && cb.nameEn ? cb.nameEn : cb.name;
+            var cbPrice = isEn ? ("$" + cb.priceEn) : U.money(cb.price);
+            return '<option value="' + U.escapeHtml(cb.id) + '">' + U.escapeHtml(cbName) + ' (' + cbPrice + ')</option>';
+          }).join("");
+        } else if (tour && tour.transportOptions && tour.transportOptions.length) {
+          optionWrapper.hidden = false;
+          optionTitle.textContent = t("label.transport");
+          optionHint.hidden = true;
+          optionSelect.innerHTML = tour.transportOptions.map(function (tr) {
+            var trName = isEn && tr.nameEn ? tr.nameEn : tr.name;
+            var trPrice = isEn ? ("$" + tr.priceEn) : U.money(tr.price);
+            return '<option value="' + U.escapeHtml(tr.id) + '">' + U.escapeHtml(trName) + ' (' + trPrice + ')</option>';
+          }).join("");
+        } else {
+          optionWrapper.hidden = true;
+          optionHint.hidden = true;
+          optionSelect.innerHTML = "";
+        }
       }
     }
 
@@ -3292,9 +3488,13 @@
 
       var tourName = field(tour, "name");
       var totalStr = priceVal.textContent.replace(/\s+/g, " ").trim();
-      var chosenOption = (!optionWrapper.hidden && optionSelect && optionSelect.options[optionSelect.selectedIndex])
-        ? optionSelect.options[optionSelect.selectedIndex].text
-        : "";
+      var chosenOption = "";
+      if (tour && resolveDestId(tour.destination) === "sapa") {
+        var sapaOpt = getSapaOptionsSummary("modal");
+        if (sapaOpt && sapaOpt.summary) chosenOption = sapaOpt.summary;
+      } else if (!optionWrapper.hidden && optionSelect && optionSelect.options[optionSelect.selectedIndex]) {
+        chosenOption = optionSelect.options[optionSelect.selectedIndex].text;
+      }
 
       if (submitBtn) {
         submitBtn.disabled = true;
