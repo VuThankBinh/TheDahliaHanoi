@@ -21,6 +21,7 @@
   }
   var page = document.body.dataset.page;
   var SEARCH_KEY = "dahliaVoyageSearch";
+  var TOUR_FILTER_KEY = "dahliaTourFilter";
 
   var DEST_LABEL = {
     "sapa": { vi: "Sapa", en: "Sapa" },
@@ -599,6 +600,20 @@
   function writeSearch(obj) {
     try {
       sessionStorage.setItem(SEARCH_KEY, JSON.stringify(obj || {}));
+    } catch (err) {}
+  }
+
+  function readTourFilter() {
+    try {
+      return JSON.parse(sessionStorage.getItem(TOUR_FILTER_KEY) || "{}") || {};
+    } catch (err) {
+      return {};
+    }
+  }
+
+  function writeTourFilter(filterState) {
+    try {
+      sessionStorage.setItem(TOUR_FILTER_KEY, JSON.stringify(filterState || {}));
     } catch (err) {}
   }
 
@@ -2693,11 +2708,28 @@
     var currentId = null;
     var lastHeroDest = null;
     var saved = readSearch();
+    var savedFilter = readTourFilter();
     var q = U.query();
+
     if (q.get("dest")) state.dest = resolveDestId(q.get("dest"));
+    else if (savedFilter.dest) state.dest = resolveDestId(savedFilter.dest);
     else if (saved.destination) state.dest = resolveDestId(saved.destination);
+
     if (q.get("stars")) state.stars = q.get("stars");
+    else if (savedFilter.stars) state.stars = savedFilter.stars;
+
     if (q.get("op")) state.operator = q.get("op");
+    else if (savedFilter.operator) state.operator = savedFilter.operator;
+
+    if (q.get("price")) state.price = q.get("price");
+    else if (savedFilter.price) state.price = savedFilter.price;
+
+    writeTourFilter({
+      dest: state.dest,
+      operator: state.operator,
+      stars: state.stars,
+      price: state.price
+    });
 
     function hideBookFloat() {
       if (!bookFloat) return;
@@ -2743,6 +2775,7 @@
       if (state.dest !== "all") params.set("dest", state.dest);
       if (state.stars !== "all") params.set("stars", state.stars);
       if (state.operator !== "all") params.set("op", state.operator);
+      if (state.price !== "all") params.set("price", state.price);
       var qs = params.toString();
       return qs ? "tours.html?" + qs : "tours.html";
     }
@@ -2987,6 +3020,12 @@
       state[group] = chip.dataset.value;
       chip.parentElement.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("is-on"); });
       chip.classList.add("is-on");
+      writeTourFilter({
+        dest: state.dest,
+        operator: state.operator,
+        stars: state.stars,
+        price: state.price
+      });
       renderCards();
     });
 
@@ -2995,10 +3034,31 @@
       if (id) openTour(id, false);
       else {
         var next = U.query();
+        var sf = readTourFilter();
+        var hasQuery = !!(next.get("dest") || next.get("stars") || next.get("op") || next.get("price"));
+
         if (next.get("dest")) state.dest = resolveDestId(next.get("dest"));
-        else state.dest = "all";
+        else if (hasQuery) state.dest = "all";
+        else state.dest = sf.dest ? resolveDestId(sf.dest) : "all";
+
         if (next.get("stars")) state.stars = next.get("stars");
-        state.operator = next.get("op") || "all";
+        else if (hasQuery) state.stars = "all";
+        else state.stars = sf.stars || "all";
+
+        if (next.get("op")) state.operator = next.get("op");
+        else if (hasQuery) state.operator = "all";
+        else state.operator = sf.operator || "all";
+
+        if (next.get("price")) state.price = next.get("price");
+        else if (hasQuery) state.price = "all";
+        else state.price = sf.price || "all";
+
+        writeTourFilter({
+          dest: state.dest,
+          operator: state.operator,
+          stars: state.stars,
+          price: state.price
+        });
         showList(false);
       }
     });
